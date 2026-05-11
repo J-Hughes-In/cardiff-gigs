@@ -87,7 +87,6 @@ async function scrapeDepot(browser) {
   console.log('Scraping Depot...');
   const page = await browser.newPage();
   await page.goto('https://depotcardiff.com/events/', { waitUntil: 'networkidle', timeout: 60000 });
-  // Scroll to trigger lazy loading
   await page.evaluate(async () => {
     for (let i = 0; i < 10; i++) {
       window.scrollBy(0, 600);
@@ -193,3 +192,5 @@ async function scrapeAll() {
   fs.writeFileSync('events.json', JSON.stringify(allEvents, null, 2));
   console.log(`\nTotal: ${allEvents.length} events saved to events.json`);
 }
+
+scrapeAll().catch(console.error);
