@@ -268,14 +268,44 @@ async function fetchPageEnrichment(page, url) {
     }
 
     const ogDesc = meta('meta[property="og:description"]') || meta('meta[name="description"]');
-    const ogImage = meta('meta[property="og:image"]');
+    const ogImageRaw = meta('meta[property="og:image"]');
+    const twitterImageRaw =
+      meta('meta[name="twitter:image"]') || meta('meta[property="twitter:image"]') || '';
     const ogTitle = meta('meta[property="og:title"]');
+
+    function absolutizeImageUrl(u) {
+      const s = String(u || '').trim();
+      if (!s || s.startsWith('data:')) return '';
+      if (s.startsWith('//')) return `https:${s}`;
+      try {
+        return new URL(s, document.baseURI || location.href).href;
+      } catch {
+        return s;
+      }
+    }
+
+    function collectLdImageUrls(val, bucket) {
+      if (val == null) return;
+      if (typeof val === 'string') {
+        const a = absolutizeImageUrl(val);
+        if (a) bucket.push(a);
+        return;
+      }
+      if (Array.isArray(val)) {
+        for (const x of val) collectLdImageUrls(x, bucket);
+        return;
+      }
+      if (typeof val === 'object') {
+        if (typeof val.url === 'string') collectLdImageUrls(val.url, bucket);
+        if (typeof val.contentUrl === 'string') collectLdImageUrls(val.contentUrl, bucket);
+      }
+    }
 
     let description = '';
     let genre = '';
     let startDate = '';
     let endDate = '';
-    let imageUrl = ogImage || '';
+    const imageCandidateList = [];
     let offersFromEvent = null;
     let eventKeywords = '';
     let musicGenresFromSchema = [];
@@ -322,14 +352,28 @@ async function fetchPageEnrichment(page, url) {
       }
       if (best.startDate) startDate = String(best.startDate);
       if (best.endDate) endDate = String(best.endDate);
-      const img = best.image;
-      if (!imageUrl && img) {
-        if (typeof img === 'string') imageUrl = img;
-        else if (Array.isArray(img) && img[0]) imageUrl = typeof img[0] === 'string' ? img[0] : img[0].url || '';
-        else if (img?.url) imageUrl = img.url;
-      }
+      collectLdImageUrls(best.image, imageCandidateList);
       offersFromEvent = best.offers || null;
     }
+
+    if (ogImageRaw) {
+      const u = absolutizeImageUrl(ogImageRaw);
+      if (u) imageCandidateList.push(u);
+    }
+    if (twitterImageRaw) {
+      const u = absolutizeImageUrl(twitterImageRaw);
+      if (u) imageCandidateList.push(u);
+    }
+
+    const imageSeen = new Set();
+    const imageUrls = [];
+    for (const u of imageCandidateList) {
+      const key = String(u).toLowerCase();
+      if (imageSeen.has(key)) continue;
+      imageSeen.add(key);
+      imageUrls.push(u);
+    }
+    const imageUrl = imageUrls[0] || '';
 
     if (!startDate) {
       const t =
@@ -366,8 +410,8 @@ async function fetchPageEnrichment(page, url) {
       shortDescription: ogDesc || '',
       genre,
       musicGenresFromSchema,
-      imageUrl: imageUrl || '',
-      imageUrls: [],
+      imageUrl,
+      imageUrls,
       startDate,
       endDate,
       offersFromEvent,
@@ -868,6 +912,82 @@ async function fetchMusicBrainzGenresForArtistName(artistName, cacheByKey, mbUse
   return p;
 }
 
+const IMAGE_TRACKING_PARAMS = new Set([
+  'utm_source',
+  'utm_medium',
+  'utm_campaign',
+  'utm_content',
+  'utm_term',
+  'utm_id',
+  'fbclid',
+  'gclid',
+  'mc_cid',
+  'mc_eid',
+  'msclkid',
+  '_ga',
+  'ref',
+]);
+
+function normalizeHotlinkImageUrl(raw) {
+  if (!raw || typeof raw !== 'string') return '';
+  let s = raw.trim();
+  if (!s || s.startsWith('data:')) return '';
+  if (s.startsWith('//')) s = `https:${s}`;
+  try {
+    const u = new URL(s);
+    if (u.protocol !== 'http:' && u.protocol !== 'https:') return '';
+    for (const k of [...u.searchParams.keys()]) {
+      const lk = k.toLowerCase();
+      if (IMAGE_TRACKING_PARAMS.has(lk) || lk.startsWith('utm_')) u.searchParams.delete(k);
+    }
+    u.hash = '';
+    return u.toString();
+  } catch {
+    return s;
+  }
+}
+
+function dedupeHotlinkImageUrls(urls) {
+  const out = [];
+  const seen = new Set();
+  for (const raw of urls || []) {
+    const n = normalizeHotlinkImageUrl(raw);
+    if (!n) continue;
+    const k = n.toLowerCase();
+    if (seen.has(k)) continue;
+    seen.add(k);
+    out.push(n);
+  }
+  return out;
+}
+
+/** Prefer ticket-page (enrichment) images; keep listing thumbnails when detail has none. */
+function mergeHotlinkImagesIntoEvent(ev, en) {
+  const listingPool = [];
+  if (ev.imageUrl) listingPool.push(ev.imageUrl);
+  if (Array.isArray(ev.imageUrls)) listingPool.push(...ev.imageUrls);
+
+  const detailPool = [];
+  if (en?.imageUrl) detailPool.push(en.imageUrl);
+  if (Array.isArray(en?.imageUrls)) detailPool.push(...en.imageUrls);
+
+  const listing = dedupeHotlinkImageUrls(listingPool);
+  const detail = dedupeHotlinkImageUrls(detailPool);
+
+  const out = { ...ev };
+  if (detail.length) {
+    out.imageUrl = detail[0];
+    out.imageUrls = dedupeHotlinkImageUrls([...detail, ...listing]).slice(0, 16);
+    return out;
+  }
+  if (listing.length) {
+    if (!String(out.imageUrl || '').trim()) out.imageUrl = listing[0];
+    out.imageUrls = listing.slice(0, 16);
+    return out;
+  }
+  return out;
+}
+
 function mergeEnrichmentIntoEvent(ev, en) {
   if (!en) return ev;
   let out = { ...ev };
@@ -888,11 +1008,7 @@ function mergeEnrichmentIntoEvent(ev, en) {
     if (merged.length) out.musicGenres = merged;
   }
 
-  const img = (en.imageUrl || '').trim();
-  if (img) {
-    out.imageUrl = img;
-    out.imageUrls = [img];
-  }
+  out = mergeHotlinkImagesIntoEvent(out, en);
 
   if (en.startDate) out.eventStartDate = en.startDate;
   if (en.endDate) out.eventEndDate = en.endDate;
@@ -987,6 +1103,8 @@ function finalizeEvent(ev) {
         : `${sym}${next.ticketPriceFrom}`;
   }
 
+  next = mergeHotlinkImagesIntoEvent(next, null);
+
   return next;
 }
 
@@ -1080,13 +1198,31 @@ async function scrapeGlobe(context) {
   const page = await context.newPage();
   await gotoAndSettle(page, 'https://www.globecardiff.co.uk/listings/', 'article.elementor-post');
   const events = await page.evaluate(() => {
-    return Array.from(document.querySelectorAll('article.elementor-post')).map(item => ({
-      title: item.querySelector('h3.elementor-post__title a')?.innerText.trim() || '',
-      details: item.querySelector('.elementor-post__excerpt p')?.innerText.trim() || '',
-      url: item.querySelector('h3.elementor-post__title a')?.href || '',
-      venue: 'The Globe Cardiff',
-      scrapedAt: new Date().toISOString()
-    })).filter(e => e.title);
+    return Array.from(document.querySelectorAll('article.elementor-post')).map((item) => {
+      let imageUrl = '';
+      const img = item.querySelector(
+        '.elementor-post__thumbnail img, .elementor-post__card img, figure img, img[src], img[data-src], img[data-lazy-src]'
+      );
+      if (img) {
+        const raw =
+          img.getAttribute('src') || img.getAttribute('data-src') || img.getAttribute('data-lazy-src') || '';
+        if (raw && !raw.startsWith('data:')) {
+          try {
+            imageUrl = new URL(raw, location.href).href;
+          } catch {
+            imageUrl = raw.trim();
+          }
+        }
+      }
+      return {
+        title: item.querySelector('h3.elementor-post__title a')?.innerText.trim() || '',
+        details: item.querySelector('.elementor-post__excerpt p')?.innerText.trim() || '',
+        url: item.querySelector('h3.elementor-post__title a')?.href || '',
+        venue: 'The Globe Cardiff',
+        scrapedAt: new Date().toISOString(),
+        ...(imageUrl ? { imageUrl } : {}),
+      };
+    }).filter((e) => e.title);
   });
   await page.close();
   console.log(`  Globe: ${events.length} events`);
@@ -1098,13 +1234,29 @@ async function scrapeWMC(context) {
   const page = await context.newPage();
   await gotoAndSettle(page, 'https://www.wmc.org.uk/en/whats-on/events', 'div.production-card');
   const events = await page.evaluate(() => {
-    return Array.from(document.querySelectorAll('div.production-card')).map(item => ({
-      title: item.querySelector('h4.production-card__title')?.innerText.trim() || '',
-      date: item.querySelector('p.production-card__date')?.innerText.trim() || '',
-      url: item.querySelector('a.production-card__link-overlay')?.href || '',
-      venue: 'Wales Millennium Centre',
-      scrapedAt: new Date().toISOString()
-    })).filter(e => e.title);
+    return Array.from(document.querySelectorAll('div.production-card')).map((item) => {
+      let imageUrl = '';
+      const img = item.querySelector('img[src], img[data-src], img[data-lazy-src]');
+      if (img) {
+        const raw =
+          img.getAttribute('src') || img.getAttribute('data-src') || img.getAttribute('data-lazy-src') || '';
+        if (raw && !raw.startsWith('data:')) {
+          try {
+            imageUrl = new URL(raw, location.href).href;
+          } catch {
+            imageUrl = raw.trim();
+          }
+        }
+      }
+      return {
+        title: item.querySelector('h4.production-card__title')?.innerText.trim() || '',
+        date: item.querySelector('p.production-card__date')?.innerText.trim() || '',
+        url: item.querySelector('a.production-card__link-overlay')?.href || '',
+        venue: 'Wales Millennium Centre',
+        scrapedAt: new Date().toISOString(),
+        ...(imageUrl ? { imageUrl } : {}),
+      };
+    }).filter((e) => e.title);
   });
   await page.close();
   console.log(`  WMC: ${events.length} events`);
@@ -1167,6 +1319,20 @@ async function scrapeNewTheatre(context) {
       if (!title || !date) continue;
       seen.add(url);
 
+      let imageUrl = '';
+      const imgEl = a.querySelector('img[src], img[data-src], img[data-lazy-src]');
+      if (imgEl) {
+        const raw =
+          imgEl.getAttribute('src') || imgEl.getAttribute('data-src') || imgEl.getAttribute('data-lazy-src') || '';
+        if (raw && !raw.startsWith('data:')) {
+          try {
+            imageUrl = new URL(raw, location.href).href;
+          } catch {
+            imageUrl = raw.trim();
+          }
+        }
+      }
+
       const row = {
         title,
         date,
@@ -1174,6 +1340,7 @@ async function scrapeNewTheatre(context) {
         venue: 'New Theatre Cardiff',
         scrapedAt: new Date().toISOString(),
       };
+      if (imageUrl) row.imageUrl = imageUrl;
       if (category) row.category = category;
       if (ticketPriceFrom != null && !Number.isNaN(ticketPriceFrom)) {
         row.ticketPriceFrom = ticketPriceFrom;
@@ -1217,6 +1384,11 @@ async function scrapeNewTheatre(context) {
     if (obj.subVenue) row.subVenue = obj.subVenue;
     if (obj.promoter) row.promoter = obj.promoter;
     if (cats.length === 1 && cats[0] && !row.genre) row.genre = cats[0];
+    let metaImg = '';
+    if (typeof obj.image === 'string' && obj.image.trim()) metaImg = obj.image.trim();
+    else if (typeof obj.imageUrl === 'string' && obj.imageUrl.trim()) metaImg = obj.imageUrl.trim();
+    else if (typeof obj.heroImage === 'string' && obj.heroImage.trim()) metaImg = obj.heroImage.trim();
+    if (metaImg && !row.imageUrl) row.imageUrl = metaImg;
   }
 
   for (const row of domEvents) {
@@ -1252,13 +1424,31 @@ async function scrapeTramshed(context) {
   const page = await context.newPage();
   await gotoAndSettle(page, 'https://www.tramshedcardiff.com/', 'article.elementor-post');
   const events = await page.evaluate(() => {
-    return Array.from(document.querySelectorAll('article.elementor-post')).map(item => ({
-      title: item.querySelector('h3.elementor-post__title a')?.innerText.trim() || '',
-      details: item.querySelector('.elementor-post__excerpt p')?.innerText.trim() || '',
-      url: item.querySelector('h3.elementor-post__title a')?.href || '',
-      venue: 'Tramshed Cardiff',
-      scrapedAt: new Date().toISOString()
-    })).filter(e => e.title);
+    return Array.from(document.querySelectorAll('article.elementor-post')).map((item) => {
+      let imageUrl = '';
+      const img = item.querySelector(
+        '.elementor-post__thumbnail img, .elementor-post__card img, figure img, img[src], img[data-src], img[data-lazy-src]'
+      );
+      if (img) {
+        const raw =
+          img.getAttribute('src') || img.getAttribute('data-src') || img.getAttribute('data-lazy-src') || '';
+        if (raw && !raw.startsWith('data:')) {
+          try {
+            imageUrl = new URL(raw, location.href).href;
+          } catch {
+            imageUrl = raw.trim();
+          }
+        }
+      }
+      return {
+        title: item.querySelector('h3.elementor-post__title a')?.innerText.trim() || '',
+        details: item.querySelector('.elementor-post__excerpt p')?.innerText.trim() || '',
+        url: item.querySelector('h3.elementor-post__title a')?.href || '',
+        venue: 'Tramshed Cardiff',
+        scrapedAt: new Date().toISOString(),
+        ...(imageUrl ? { imageUrl } : {}),
+      };
+    }).filter((e) => e.title);
   });
   await page.close();
   console.log(`  Tramshed: ${events.length} events`);
@@ -1290,6 +1480,19 @@ async function scrapeUtilitaArena(context) {
 
     return rows.map((li) => {
       const title = li.querySelector('h4.MuiTypography-header4')?.innerText?.trim() || '';
+      let imageUrl = '';
+      const img = li.querySelector('img[src], img[data-src], img[data-lazy-src]');
+      if (img) {
+        const raw =
+          img.getAttribute('src') || img.getAttribute('data-src') || img.getAttribute('data-lazy-src') || '';
+        if (raw && !raw.startsWith('data:')) {
+          try {
+            imageUrl = new URL(raw, location.href).href;
+          } catch {
+            imageUrl = raw.trim();
+          }
+        }
+      }
       let date =
         li.querySelector('[data-testid="aedp-event-information-block-times"]')?.innerText?.replace(/\s+/g, ' ').trim() ||
         '';
@@ -1312,6 +1515,7 @@ async function scrapeUtilitaArena(context) {
         url,
         venue: 'Utilita Arena Cardiff',
         scrapedAt: new Date().toISOString(),
+        ...(imageUrl ? { imageUrl } : {}),
       };
     }).filter((e) => e.title && e.url);
   });
@@ -1332,13 +1536,29 @@ async function scrapeDepot(context) {
   });
   await new Promise(r => setTimeout(r, 1_000));
   const events = await page.evaluate(() => {
-    return Array.from(document.querySelectorAll('li.fusion-layout-column')).map(item => ({
-      title: item.querySelector('h2 a')?.innerText.trim() || '',
-      date: item.querySelector('.fusion-text p')?.innerText.trim() || '',
-      url: item.querySelector('a[href*="/event/"]')?.href || '',
-      venue: 'Depot Cardiff',
-      scrapedAt: new Date().toISOString()
-    })).filter(e => e.title);
+    return Array.from(document.querySelectorAll('li.fusion-layout-column')).map((item) => {
+      let imageUrl = '';
+      const img = item.querySelector('.fusion-imageframe img, .fusion-featured-image img, img[src], img[data-src]');
+      if (img) {
+        const raw =
+          img.getAttribute('src') || img.getAttribute('data-src') || img.getAttribute('data-lazy-src') || '';
+        if (raw && !raw.startsWith('data:')) {
+          try {
+            imageUrl = new URL(raw, location.href).href;
+          } catch {
+            imageUrl = raw.trim();
+          }
+        }
+      }
+      return {
+        title: item.querySelector('h2 a')?.innerText.trim() || '',
+        date: item.querySelector('.fusion-text p')?.innerText.trim() || '',
+        url: item.querySelector('a[href*="/event/"]')?.href || '',
+        venue: 'Depot Cardiff',
+        scrapedAt: new Date().toISOString(),
+        ...(imageUrl ? { imageUrl } : {}),
+      };
+    }).filter((e) => e.title);
   });
   await page.close();
   console.log(`  Depot: ${events.length} events`);
@@ -1350,14 +1570,29 @@ async function scrapeCardiffSU(context) {
   const page = await context.newPage();
   await gotoAndSettle(page, 'https://www.cardiffstudents.com/whatson/live-music/', 'div.event_item, .msl_eventlist');
   const events = await page.evaluate(() => {
-    return Array.from(document.querySelectorAll('div.event_item')).map(item => ({
-      title: item.querySelector('a.msl_event_name')?.innerText.trim() || '',
-      date: item.querySelector('dd.msl_event_time')?.innerText.trim() || '',
-      location: item.querySelector('dd.msl_event_location')?.innerText.trim() || '',
-      url: 'https://www.cardiffstudents.com' + (item.querySelector('a.msl_event_name')?.getAttribute('href') || ''),
-      venue: 'Cardiff SU',
-      scrapedAt: new Date().toISOString()
-    })).filter(e => e.title);
+    return Array.from(document.querySelectorAll('div.event_item')).map((item) => {
+      let imageUrl = '';
+      const img = item.querySelector('img[src], img[data-src]');
+      if (img) {
+        const raw = img.getAttribute('src') || img.getAttribute('data-src') || '';
+        if (raw && !raw.startsWith('data:')) {
+          try {
+            imageUrl = new URL(raw, location.href).href;
+          } catch {
+            imageUrl = raw.trim();
+          }
+        }
+      }
+      return {
+        title: item.querySelector('a.msl_event_name')?.innerText.trim() || '',
+        date: item.querySelector('dd.msl_event_time')?.innerText.trim() || '',
+        location: item.querySelector('dd.msl_event_location')?.innerText.trim() || '',
+        url: 'https://www.cardiffstudents.com' + (item.querySelector('a.msl_event_name')?.getAttribute('href') || ''),
+        venue: 'Cardiff SU',
+        scrapedAt: new Date().toISOString(),
+        ...(imageUrl ? { imageUrl } : {}),
+      };
+    }).filter((e) => e.title);
   });
   await page.close();
   console.log(`  Cardiff SU: ${events.length} events`);
@@ -1409,15 +1644,34 @@ async function scrapeClwb(context) {
   const page = await context.newPage();
   await gotoAndSettle(page, 'https://clwb.net/whats-on/', '#eventsListings li.grid-item');
   const events = await page.evaluate(() => {
-    return Array.from(document.querySelectorAll('#eventsListings li.grid-item')).map(item => ({
-      title: item.querySelector('h3.grid-item-title')?.innerText.trim() || '',
-      date: item.querySelector('p.grid-item-support.date-translate, p.date-translate')?.innerText.trim() || '',
-      details: Array.from(item.querySelectorAll('p.grid-item-support:not(.date-translate)')).map(p => p.innerText.trim()).join(' • '),
-      url: item.querySelector('a.tickets-button, a[href*="seetickets"], a[href*="fatsoma"], figure a, .grid-item-image a')?.href
-        || item.querySelector('a[href^="http"]')?.href || '',
-      venue: 'Clwb Ifor Bach',
-      scrapedAt: new Date().toISOString()
-    })).filter(e => e.title);
+    return Array.from(document.querySelectorAll('#eventsListings li.grid-item')).map((item) => {
+      let imageUrl = '';
+      const img = item.querySelector('figure img, .grid-item-image img, img[src], img[data-src]');
+      if (img) {
+        const raw =
+          img.getAttribute('src') || img.getAttribute('data-src') || img.getAttribute('data-lazy-src') || '';
+        if (raw && !raw.startsWith('data:')) {
+          try {
+            imageUrl = new URL(raw, location.href).href;
+          } catch {
+            imageUrl = raw.trim();
+          }
+        }
+      }
+      return {
+        title: item.querySelector('h3.grid-item-title')?.innerText.trim() || '',
+        date: item.querySelector('p.grid-item-support.date-translate, p.date-translate')?.innerText.trim() || '',
+        details: Array.from(item.querySelectorAll('p.grid-item-support:not(.date-translate)'))
+          .map((p) => p.innerText.trim())
+          .join(' • '),
+        url:
+          item.querySelector('a.tickets-button, a[href*="seetickets"], a[href*="fatsoma"], figure a, .grid-item-image a')
+            ?.href || item.querySelector('a[href^="http"]')?.href || '',
+        venue: 'Clwb Ifor Bach',
+        scrapedAt: new Date().toISOString(),
+        ...(imageUrl ? { imageUrl } : {}),
+      };
+    }).filter((e) => e.title);
   });
   await page.close();
   console.log(`  Clwb: ${events.length} events`);
