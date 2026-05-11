@@ -59,6 +59,13 @@ function inferPrimaryCategory(ev) {
   return 'Other';
 }
 
+function numPrice(v) {
+  if (v == null) return NaN;
+  if (typeof v === 'number' && !Number.isNaN(v)) return v;
+  const n = Number(String(v).replace(/[^0-9.]/g, ''));
+  return Number.isNaN(n) ? NaN : n;
+}
+
 function normalizeOffers(offers) {
   if (!offers) return {};
   const list = Array.isArray(offers) ? offers : [offers];
@@ -70,16 +77,38 @@ function normalizeOffers(offers) {
   for (const o of list) {
     if (!o || typeof o !== 'object') continue;
     const typ = o['@type'];
-    if (typ === 'AggregateOffer') {
-      if (o.lowPrice != null) low = Number(o.lowPrice);
-      if (o.highPrice != null) high = Number(o.highPrice);
+    const types = Array.isArray(typ) ? typ : typ ? [typ] : [];
+    if (types.includes('AggregateOffer') || typ === 'AggregateOffer') {
+      if (o.lowPrice != null) {
+        const lp = numPrice(o.lowPrice);
+        if (!Number.isNaN(lp)) low = low == null ? lp : Math.min(low, lp);
+      }
+      if (o.highPrice != null) {
+        const hp = numPrice(o.highPrice);
+        if (!Number.isNaN(hp)) high = high == null ? hp : Math.max(high, hp);
+      }
       currency = o.priceCurrency || currency;
     }
-    if (o.price != null && !Number.isNaN(Number(o.price))) {
-      const p = Number(o.price);
-      low = low == null ? p : Math.min(low, p);
-      high = high == null ? p : Math.max(high, p);
-      currency = o.priceCurrency || currency;
+    const ps = o.priceSpecification;
+    if (ps) {
+      const pss = Array.isArray(ps) ? ps : [ps];
+      for (const spec of pss) {
+        if (!spec || typeof spec !== 'object') continue;
+        const p = numPrice(spec.price);
+        if (!Number.isNaN(p)) {
+          low = low == null ? p : Math.min(low, p);
+          high = high == null ? p : Math.max(high, p);
+          currency = spec.priceCurrency || o.priceCurrency || currency;
+        }
+      }
+    }
+    if (o.price != null) {
+      const p = numPrice(o.price);
+      if (!Number.isNaN(p)) {
+        low = low == null ? p : Math.min(low, p);
+        high = high == null ? p : Math.max(high, p);
+        currency = o.priceCurrency || currency;
+      }
     }
     if (o.name && /sale|ticket|price/i.test(o.name)) labelParts.push(o.name);
   }
@@ -88,7 +117,11 @@ function normalizeOffers(offers) {
 
 function scrapePriceFromVisibleText(text) {
   if (!text || text.length > 25_000) return {};
-  const from = text.match(/from\s*£\s*(\d+(?:\.\d+)?)/i);
+  const from =
+    text.match(/\b(?:tickets?|entry|admission|price|from)\s*:?\s*from\s*£\s*(\d+(?:\.\d+)?)/i) ||
+    text.match(/\bfrom\s*£\s*(\d+(?:\.\d+)?)/i) ||
+    text.match(/\bstarting\s+at\s*£\s*(\d+(?:\.\d+)?)/i) ||
+    text.match(/\b(?:tickets?|prices?)\s+from\s*£\s*(\d+(?:\.\d+)?)/i);
   if (from) return { label: `from £${from[1]}`, low: Number(from[1]), currency: 'GBP' };
   const range = text.match(/£\s*(\d+(?:\.\d+)?)\s*[-–]\s*£\s*(\d+(?:\.\d+)?)/);
   if (range) return { label: `£${range[1]}–£${range[2]}`, low: Number(range[1]), high: Number(range[2]), currency: 'GBP' };
@@ -113,44 +146,96 @@ async function fetchPageEnrichment(page, url) {
   return page.evaluate(() => {
     const meta = (sel) => document.querySelector(sel)?.getAttribute('content')?.trim() || '';
 
-    const scripts = [...document.querySelectorAll('script[type="application/ld+json"]')];
-    const events = [];
-    for (const s of scripts) {
-      let j;
-      try {
-        j = JSON.parse(s.textContent);
-      } catch {
-        continue;
+    const eventTypes = new Set([
+      'Event',
+      'MusicEvent',
+      'TheaterEvent',
+      'TheatreEvent',
+      'ComedyEvent',
+      'Festival',
+      'SportsEvent',
+      'DanceEvent',
+    ]);
+
+    function typesOf(node) {
+      const t = node['@type'];
+      return Array.isArray(t) ? t : t ? [t] : [];
+    }
+
+    const eventNodes = [];
+    const graphOfferNodes = [];
+    const breadcrumbTrails = [];
+    const VISIT_CAP = 900;
+    let visits = 0;
+
+    function walk(node, depth) {
+      if (!node || typeof node !== 'object' || depth > 18 || visits >= VISIT_CAP) return;
+      visits++;
+      if (Array.isArray(node)) {
+        for (const x of node) walk(x, depth + 1);
+        return;
       }
-      const acc = [];
-      const visit = (node) => {
-        if (!node || typeof node !== 'object') return;
-        if (Array.isArray(node)) {
-          node.forEach(visit);
-          return;
+      const types = typesOf(node);
+      if (types.some((x) => eventTypes.has(x))) eventNodes.push(node);
+      if (types.some((x) => x === 'Offer' || x === 'AggregateOffer')) {
+        const name = String(node.name || '').toLowerCase();
+        if (!/merch|t[-]?shirt|hoodie|programme|parking|bundle\s+only|poster|vinyl|cd\b/.test(name)) {
+          graphOfferNodes.push(node);
         }
-        const t = node['@type'];
-        const types = Array.isArray(t) ? t : t ? [t] : [];
-        const eventTypes = new Set([
-          'Event',
-          'MusicEvent',
-          'TheaterEvent',
-          'TheatreEvent',
-          'ComedyEvent',
-          'Festival',
-          'SportsEvent',
-          'DanceEvent',
-        ]);
-        if (types.some((x) => eventTypes.has(x))) acc.push(node);
-        if (node['@graph']) visit(node['@graph']);
-      };
-      visit(j);
-      events.push(...acc);
+      }
+      if (types.includes('BreadcrumbList') && node.itemListElement) {
+        const names = [];
+        const els = Array.isArray(node.itemListElement) ? node.itemListElement : [node.itemListElement];
+        for (const el of els) {
+          if (!el || typeof el !== 'object') continue;
+          let n = '';
+          if (el.name) n = String(el.name).trim();
+          else if (el.item && typeof el.item === 'object' && el.item.name) n = String(el.item.name).trim();
+          if (n) names.push(n);
+        }
+        if (names.length >= 2) breadcrumbTrails.push(names.join(' > '));
+      }
+      for (const k of Object.keys(node)) {
+        if (k === '@context') continue;
+        const v = node[k];
+        if (v && typeof v === 'object') walk(v, depth + 1);
+      }
+    }
+
+    const scripts = [...document.querySelectorAll('script[type="application/ld+json"]')];
+    for (const s of scripts) {
+      try {
+        walk(JSON.parse(s.textContent), 0);
+      } catch {
+        /* ignore invalid JSON-LD */
+      }
     }
 
     const score = (e) =>
       [e.description, e.startDate, e.endDate, e.image, e.offers, e.location, e.performer].filter(Boolean).length;
-    const best = events.sort((a, b) => score(b) - score(a))[0] || null;
+    const best = eventNodes.sort((a, b) => score(b) - score(a))[0] || null;
+
+    function performerGenresOf(evLike) {
+      if (!evLike) return '';
+      const perf = evLike.performer;
+      const list = Array.isArray(perf) ? perf : perf ? [perf] : [];
+      const g = [];
+      for (const p of list) {
+        if (!p || typeof p !== 'object') continue;
+        if (p.genre) {
+          if (Array.isArray(p.genre)) {
+            for (const x of p.genre) {
+              const s = String(x || '').trim();
+              if (s) g.push(s);
+            }
+          } else {
+            const s = String(p.genre || '').trim();
+            if (s) g.push(s);
+          }
+        }
+      }
+      return [...new Set(g)].join(', ');
+    }
 
     const ogDesc = meta('meta[property="og:description"]') || meta('meta[name="description"]');
     const ogImage = meta('meta[property="og:image"]');
@@ -161,12 +246,27 @@ async function fetchPageEnrichment(page, url) {
     let startDate = '';
     let endDate = '';
     let imageUrl = ogImage || '';
-    let offersRaw = null;
+    let offersFromEvent = null;
+    let eventKeywords = '';
 
     if (best) {
       if (typeof best.description === 'string') description = best.description.trim();
       const g = best.genre;
       genre = Array.isArray(g) ? g.filter(Boolean).join(', ') : typeof g === 'string' ? g.trim() : '';
+      const pg = performerGenresOf(best);
+      if (pg) {
+        const parts = [
+          ...new Set(
+            [...genre.split(/,\s*/), ...pg.split(/,\s*/)]
+              .map((s) => s.trim())
+              .filter(Boolean)
+          ),
+        ];
+        genre = parts.join(', ');
+      }
+      if (typeof best.keywords === 'string' && best.keywords.trim()) {
+        eventKeywords = best.keywords.trim().slice(0, 220);
+      }
       if (best.startDate) startDate = String(best.startDate);
       if (best.endDate) endDate = String(best.endDate);
       const img = best.image;
@@ -175,7 +275,7 @@ async function fetchPageEnrichment(page, url) {
         else if (Array.isArray(img) && img[0]) imageUrl = typeof img[0] === 'string' ? img[0] : img[0].url || '';
         else if (img?.url) imageUrl = img.url;
       }
-      offersRaw = best.offers || null;
+      offersFromEvent = best.offers || null;
     }
 
     if (!startDate) {
@@ -187,6 +287,25 @@ async function fetchPageEnrichment(page, url) {
       if (raw) startDate = String(raw).trim();
     }
 
+    let breadcrumbTrail = '';
+    for (const tr of breadcrumbTrails) {
+      if (tr.length > breadcrumbTrail.length) breadcrumbTrail = tr;
+    }
+
+    let microLow = null;
+    let microHigh = null;
+    let microCur = '';
+    for (const el of document.querySelectorAll('[itemprop="price"]')) {
+      const raw = el.getAttribute('content') || el.textContent || '';
+      const n = parseFloat(String(raw).replace(/[^0-9.]/g, ''));
+      if (!Number.isNaN(n) && n > 0) {
+        microLow = microLow == null ? n : Math.min(microLow, n);
+        microHigh = microHigh == null ? n : Math.max(microHigh, n);
+      }
+    }
+    const curEl = document.querySelector('[itemprop="priceCurrency"]');
+    if (curEl) microCur = (curEl.getAttribute('content') || '').trim();
+
     const bodyText = (document.body?.innerText || '').slice(0, 20_000);
 
     return {
@@ -197,7 +316,14 @@ async function fetchPageEnrichment(page, url) {
       imageUrls: [],
       startDate,
       endDate,
-      offersRaw,
+      offersFromEvent,
+      offersFromGraph: graphOfferNodes.slice(0, 48),
+      breadcrumbTrail,
+      eventKeywords,
+      microdataPrice:
+        microLow != null && !Number.isNaN(microLow)
+          ? { low: microLow, high: microHigh != null && !Number.isNaN(microHigh) ? microHigh : microLow, currency: microCur || 'GBP' }
+          : null,
       ogTitle,
       bodySnippet: bodyText,
     };
@@ -208,10 +334,36 @@ function mergeOffersIntoEvent(ev, offersRaw) {
   if (!offersRaw) return ev;
   const { low, high, currency } = normalizeOffers(offersRaw);
   const out = { ...ev };
-  if (low != null && !Number.isNaN(low)) out.ticketPriceFrom = low;
-  if (high != null && !Number.isNaN(high)) out.ticketPriceTo = high;
+  if (low != null && !Number.isNaN(low)) {
+    out.ticketPriceFrom =
+      out.ticketPriceFrom == null || Number.isNaN(out.ticketPriceFrom)
+        ? low
+        : Math.min(out.ticketPriceFrom, low);
+  }
+  if (high != null && !Number.isNaN(high)) {
+    out.ticketPriceTo =
+      out.ticketPriceTo == null || Number.isNaN(out.ticketPriceTo)
+        ? high
+        : Math.max(out.ticketPriceTo, high);
+  }
   if (currency) out.ticketCurrency = currency;
   return out;
+}
+
+function mergeAllOfferBlobsIntoEvent(ev, blobs) {
+  const flat = [];
+  for (const b of blobs) {
+    if (b == null) continue;
+    if (Array.isArray(b)) {
+      for (const x of b) {
+        if (x != null && typeof x === 'object') flat.push(x);
+      }
+    } else if (typeof b === 'object') {
+      flat.push(b);
+    }
+  }
+  if (!flat.length) return ev;
+  return mergeOffersIntoEvent(ev, flat);
 }
 
 /** Calendar day in local time (noon avoids DST edge cases). */
@@ -533,6 +685,44 @@ function deriveHumanEventDate(ev) {
   return '';
 }
 
+function tidyBreadcrumbTrail(raw) {
+  let t = String(raw || '').trim();
+  if (!t) return '';
+  const noise = /^(home|events|what'?s\s*on|ticket(s)?|shop|store)\s*>\s*/i;
+  for (let i = 0; i < 6 && noise.test(t); i++) t = t.replace(noise, '');
+  return t.replace(/^>\s*|\s*>$/g, '').trim();
+}
+
+const GENERIC_LISTING_CATEGORIES = new Set([
+  "what's on",
+  'whats on',
+  'events',
+  'home',
+  'tickets',
+  'ticket',
+  'box office',
+  'venue',
+  'live music',
+  'music',
+  'whatson',
+  'what’s on',
+]);
+
+function categoryAsGenreHint(raw) {
+  const c = String(raw || '').trim();
+  if (!c) return '';
+  const low = c.toLowerCase().replace(/\s+/g, ' ');
+  if (GENERIC_LISTING_CATEGORIES.has(low)) return '';
+  return c;
+}
+
+/** Semicolon-separated listing sub-types (e.g. New Theatre); not long breadcrumb trails. */
+function subcategoryLineAsGenreHint(raw) {
+  const s = String(raw || '').trim();
+  if (!s || s.length > 72 || />/.test(s)) return '';
+  return s.split(';')[0].trim();
+}
+
 function mergeEnrichmentIntoEvent(ev, en) {
   if (!en) return ev;
   let out = { ...ev };
@@ -555,7 +745,21 @@ function mergeEnrichmentIntoEvent(ev, en) {
   if (en.startDate) out.eventStartDate = en.startDate;
   if (en.endDate) out.eventEndDate = en.endDate;
 
-  out = mergeOffersIntoEvent(out, en.offersRaw);
+  out = mergeAllOfferBlobsIntoEvent(out, [en.offersFromEvent, en.offersFromGraph]);
+
+  if (en.microdataPrice && en.microdataPrice.low != null && !Number.isNaN(en.microdataPrice.low)) {
+    const low = en.microdataPrice.low;
+    const high = en.microdataPrice.high;
+    if (out.ticketPriceFrom == null || Number.isNaN(out.ticketPriceFrom)) {
+      out.ticketPriceFrom = low;
+      if (high != null && !Number.isNaN(high) && high !== low) out.ticketPriceTo = high;
+      out.ticketCurrency = en.microdataPrice.currency || out.ticketCurrency || 'GBP';
+    }
+  }
+
+  const trail = tidyBreadcrumbTrail(en.breadcrumbTrail);
+  if (trail && !out.subcategory) out.subcategory = trail;
+  if (en.eventKeywords && !out.eventKeywords) out.eventKeywords = String(en.eventKeywords).trim();
 
   if (out.ticketPriceFrom == null && en.bodySnippet) {
     const vis = scrapePriceFromVisibleText(en.bodySnippet);
@@ -570,8 +774,28 @@ function mergeEnrichmentIntoEvent(ev, en) {
   return out;
 }
 
+function tryAttachPriceFromListingText(ev) {
+  if (ev.ticketPriceFrom != null && !Number.isNaN(ev.ticketPriceFrom)) return ev;
+  const blob = [ev.details, ev.description, ev.shortDescription, ev.title].filter(Boolean).join('\n');
+  const vis = scrapePriceFromVisibleText(blob);
+  if (vis.low == null) return ev;
+  return {
+    ...ev,
+    ticketPriceFrom: vis.low,
+    ...(vis.high != null ? { ticketPriceTo: vis.high } : {}),
+    ticketCurrency: vis.currency || ev.ticketCurrency || 'GBP',
+    ticketPriceLabel: vis.label || ev.ticketPriceLabel,
+  };
+}
+
 function finalizeEvent(ev) {
-  const genre = (ev.genre || ev.subcategory || inferGenreFromTitle(ev.title) || '').trim();
+  const genre = (
+    ev.genre ||
+    subcategoryLineAsGenreHint(ev.subcategory) ||
+    categoryAsGenreHint(ev.category) ||
+    inferGenreFromTitle(ev.title) ||
+    ''
+  ).trim();
   const primaryCategory = inferPrimaryCategory({ ...ev, genre });
   const description =
     (ev.description || '').trim() ||
@@ -579,12 +803,17 @@ function finalizeEvent(ev) {
     (ev.details || '').trim() ||
     '';
 
-  const next = {
+  let next = {
     ...ev,
     primaryCategory,
     ...(genre ? { genre } : {}),
     ...(description ? { description } : {}),
   };
+
+  const date = deriveHumanEventDate(next);
+  if (date) next.date = date;
+
+  next = tryAttachPriceFromListingText(next);
 
   if (next.ticketPriceFrom != null && !next.ticketPriceLabel) {
     const cur = next.ticketCurrency || 'GBP';
@@ -594,9 +823,6 @@ function finalizeEvent(ev) {
         ? `${sym}${next.ticketPriceFrom}–${sym}${next.ticketPriceTo}`
         : `${sym}${next.ticketPriceFrom}`;
   }
-
-  const date = deriveHumanEventDate(next);
-  if (date) next.date = date;
 
   return next;
 }
