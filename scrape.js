@@ -4,7 +4,7 @@ const fs = require('fs');
 async function scrapeGlobe(browser) {
   console.log('Scraping The Globe...');
   const page = await browser.newPage();
-  await page.goto('https://www.globecardiff.co.uk/listings/', { waitUntil: 'networkidle' });
+  await page.goto('https://www.globecardiff.co.uk/listings/', { waitUntil: 'networkidle', timeout: 60000 });
   const events = await page.evaluate(() => {
     return Array.from(document.querySelectorAll('article.elementor-post')).map(item => ({
       title: item.querySelector('h3.elementor-post__title a')?.innerText.trim() || '',
@@ -22,7 +22,7 @@ async function scrapeGlobe(browser) {
 async function scrapeWMC(browser) {
   console.log('Scraping WMC...');
   const page = await browser.newPage();
-  await page.goto('https://www.wmc.org.uk/en/whats-on/events', { waitUntil: 'networkidle' });
+  await page.goto('https://www.wmc.org.uk/en/whats-on/events', { waitUntil: 'networkidle', timeout: 60000 });
   const events = await page.evaluate(() => {
     return Array.from(document.querySelectorAll('div.production-card')).map(item => ({
       title: item.querySelector('h4.production-card__title')?.innerText.trim() || '',
@@ -40,7 +40,7 @@ async function scrapeWMC(browser) {
 async function scrapeNewTheatre(browser) {
   console.log('Scraping New Theatre...');
   const page = await browser.newPage();
-  await page.goto('https://trafalgartickets.com/new-theatre-cardiff/en-GB/whats-on', { waitUntil: 'networkidle' });
+  await page.goto('https://trafalgartickets.com/new-theatre-cardiff/en-GB/whats-on', { waitUntil: 'networkidle', timeout: 60000 });
   const html = await page.content();
   await page.close();
   const matches = html.matchAll(/\{\\?"eventGroupId\\?":\d+.*?\}/g);
@@ -68,7 +68,7 @@ async function scrapeNewTheatre(browser) {
 async function scrapeTramshed(browser) {
   console.log('Scraping Tramshed...');
   const page = await browser.newPage();
-  await page.goto('https://www.tramshedcardiff.com/', { waitUntil: 'networkidle' });
+  await page.goto('https://www.tramshedcardiff.com/', { waitUntil: 'networkidle', timeout: 60000 });
   const events = await page.evaluate(() => {
     return Array.from(document.querySelectorAll('article.elementor-post')).map(item => ({
       title: item.querySelector('h3.elementor-post__title a')?.innerText.trim() || '',
@@ -86,7 +86,7 @@ async function scrapeTramshed(browser) {
 async function scrapeDepot(browser) {
   console.log('Scraping Depot...');
   const page = await browser.newPage();
-  await page.goto('https://depotcardiff.com/events/', { waitUntil: 'networkidle' });
+  await page.goto('https://depotcardiff.com/events/', { waitUntil: 'networkidle', timeout: 60000 });
   // Scroll to trigger lazy loading
   await page.evaluate(async () => {
     for (let i = 0; i < 10; i++) {
@@ -112,7 +112,7 @@ async function scrapeDepot(browser) {
 async function scrapeCardiffSU(browser) {
   console.log('Scraping Cardiff SU...');
   const page = await browser.newPage();
-  await page.goto('https://www.cardiffstudents.com/whatson/live-music/', { waitUntil: 'networkidle' });
+  await page.goto('https://www.cardiffstudents.com/whatson/live-music/', { waitUntil: 'networkidle', timeout: 60000 });
   const events = await page.evaluate(() => {
     return Array.from(document.querySelectorAll('div.event_item')).map(item => ({
       title: item.querySelector('a.msl_event_name')?.innerText.trim() || '',
@@ -131,7 +131,7 @@ async function scrapeCardiffSU(browser) {
 async function scrapeTheGate(browser) {
   console.log('Scraping The Gate...');
   const page = await browser.newPage();
-  await page.goto('https://www.thegate.org.uk/whats-on', { waitUntil: 'networkidle' });
+  await page.goto('https://www.thegate.org.uk/whats-on', { waitUntil: 'networkidle', timeout: 60000 });
   const events = await page.evaluate(() => {
     return Array.from(document.querySelectorAll('.sqs-html-content')).map(block => ({
       title: block.querySelector('h2, h4')?.innerText.trim() || '',
@@ -149,7 +149,7 @@ async function scrapeTheGate(browser) {
 async function scrapeClwb(browser) {
   console.log('Scraping Clwb Ifor Bach...');
   const page = await browser.newPage();
-  await page.goto('https://clwb.net/whats-on/', { waitUntil: 'networkidle' });
+  await page.goto('https://clwb.net/whats-on/', { waitUntil: 'networkidle', timeout: 60000 });
   const events = await page.evaluate(() => {
     return Array.from(document.querySelectorAll('li.grid-item')).map(item => ({
       title: item.querySelector('h3.grid-item-title')?.innerText.trim() || '',
@@ -165,18 +165,27 @@ async function scrapeClwb(browser) {
   return events;
 }
 
+async function safeScrap(fn, name) {
+  try {
+    return await fn();
+  } catch (e) {
+    console.log(`  ${name} failed: ${e.message.split('\n')[0]}`);
+    return [];
+  }
+}
+
 async function scrapeAll() {
   const browser = await chromium.launch();
 
   const allEvents = [
-    ...await scrapeGlobe(browser),
-    ...await scrapeWMC(browser),
-    ...await scrapeNewTheatre(browser),
-    ...await scrapeTramshed(browser),
-    ...await scrapeDepot(browser),
-    ...await scrapeCardiffSU(browser),
-    ...await scrapeTheGate(browser),
-    ...await scrapeClwb(browser),
+    ...await safeScrap(() => scrapeGlobe(browser), 'Globe'),
+    ...await safeScrap(() => scrapeWMC(browser), 'WMC'),
+    ...await safeScrap(() => scrapeNewTheatre(browser), 'New Theatre'),
+    ...await safeScrap(() => scrapeTramshed(browser), 'Tramshed'),
+    ...await safeScrap(() => scrapeDepot(browser), 'Depot'),
+    ...await safeScrap(() => scrapeCardiffSU(browser), 'Cardiff SU'),
+    ...await safeScrap(() => scrapeTheGate(browser), 'The Gate'),
+    ...await safeScrap(() => scrapeClwb(browser), 'Clwb'),
   ];
 
   await browser.close();
@@ -184,5 +193,3 @@ async function scrapeAll() {
   fs.writeFileSync('events.json', JSON.stringify(allEvents, null, 2));
   console.log(`\nTotal: ${allEvents.length} events saved to events.json`);
 }
-
-scrapeAll().catch(console.error);
