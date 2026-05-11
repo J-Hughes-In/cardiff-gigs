@@ -1018,6 +1018,105 @@ async function safeScrap(fn, name, retries = 2) {
   return [];
 }
 
+/** Strip tracking params / fragments so the same ticket page maps to one key. */
+function normalizeUrlForDedupe(raw) {
+  if (!raw || typeof raw !== 'string') return '';
+  const s = raw.trim();
+  if (!s) return '';
+  try {
+    const u = new URL(s);
+    u.hash = '';
+    u.search = '';
+    const path = (u.pathname || '/').replace(/\/+$/, '') || '/';
+    return `${u.protocol}//${u.hostname.toLowerCase()}${path}`.toLowerCase();
+  } catch {
+    return s.split('?')[0].split('#')[0].replace(/\/+$/, '').trim().toLowerCase();
+  }
+}
+
+function normalizeTitleForDedupe(t) {
+  return String(t || '')
+    .toLowerCase()
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+/** URLs reused for every row on a listing (not per-event); must not define dedupe identity. */
+const GENERIC_LISTING_URLS = new Set([
+  normalizeUrlForDedupe('https://www.thegate.org.uk/whats-on'),
+]);
+
+function eventDedupeKey(ev) {
+  const url = typeof ev.url === 'string' ? ev.url.trim() : '';
+  const nu = normalizeUrlForDedupe(url);
+  if (nu && /^https?:\/\//i.test(url) && !GENERIC_LISTING_URLS.has(nu)) return `url:${nu}`;
+  const title = normalizeTitleForDedupe(ev.title);
+  const date = String(ev.date || ev.eventStartDate || '').trim().toLowerCase();
+  const venue = String(ev.venue || '').trim().toLowerCase();
+  return `meta:${title}|${date}|${venue}`;
+}
+
+function findDuplicateEventGroups(events) {
+  if (!Array.isArray(events)) return [];
+  const map = new Map();
+  for (let i = 0; i < events.length; i++) {
+    const k = eventDedupeKey(events[i]);
+    if (!map.has(k)) map.set(k, []);
+    map.get(k).push(i);
+  }
+  return [...map.entries()]
+    .filter(([, idxs]) => idxs.length > 1)
+    .map(([key, indices]) => ({ key, indices }));
+}
+
+function summarizeEventLine(ev, index) {
+  const bits = [
+    typeof index === 'number' ? `[${index}]` : '',
+    (ev.title || '(no title)').slice(0, 80),
+    ev.date ? `— ${String(ev.date).slice(0, 60)}` : '',
+    ev.venue ? `@ ${ev.venue}` : '',
+    ev.url ? `<${String(ev.url).slice(0, 90)}${String(ev.url).length > 90 ? '…' : ''}>` : '',
+  ];
+  return bits.filter(Boolean).join(' ');
+}
+
+function printDuplicateReview(events) {
+  const groups = findDuplicateEventGroups(events);
+  if (!groups.length) {
+    console.log(`No duplicates among ${events.length} events (by URL, or title+date+venue when URL is missing).`);
+    return { groups: [], redundant: 0 };
+  }
+  let redundant = 0;
+  console.log(`\nDuplicate review: ${groups.length} group(s) among ${events.length} events\n`);
+  for (let g = 0; g < groups.length; g++) {
+    const { key, indices } = groups[g];
+    redundant += indices.length - 1;
+    console.log(`--- Group ${g + 1} (${indices.length} rows) ${key.slice(0, 120)}${key.length > 120 ? '…' : ''}`);
+    for (const i of indices) {
+      console.log(`  ${summarizeEventLine(events[i], i)}`);
+    }
+    console.log('');
+  }
+  console.log(`Summary: ${redundant} redundant row(s) could be dropped (first row per group kept).`);
+  return { groups, redundant };
+}
+
+function dedupeEventsPreservingOrder(events) {
+  const seen = new Set();
+  const out = [];
+  let dropped = 0;
+  for (const ev of events) {
+    const k = eventDedupeKey(ev);
+    if (seen.has(k)) {
+      dropped++;
+      continue;
+    }
+    seen.add(k);
+    out.push(ev);
+  }
+  return { events: out, dropped };
+}
+
 async function scrapeAll() {
   const browser = await chromium.launch({
     args: ['--disable-dev-shm-usage'],
@@ -1044,8 +1143,13 @@ async function scrapeAll() {
 
   await browser.close();
 
-  fs.writeFileSync('events.json', JSON.stringify(allEvents, null, 2));
-  console.log(`\nTotal: ${allEvents.length} events saved to events.json`);
+  const dupBefore = findDuplicateEventGroups(allEvents).length;
+  const { events: deduped, dropped } = dedupeEventsPreservingOrder(allEvents);
+  if (dropped > 0) {
+    console.log(`\nRemoved ${dropped} duplicate event row(s) before save (${dupBefore} duplicate group(s)).`);
+  }
+  fs.writeFileSync('events.json', JSON.stringify(deduped, null, 2));
+  console.log(`\nTotal: ${deduped.length} events saved to events.json`);
 }
 
 if (require.main === module && process.argv.includes('--dates-only')) {
@@ -1056,6 +1160,41 @@ if (require.main === module && process.argv.includes('--dates-only')) {
   console.log(`--dates-only: wrote ${out.length} events (${missing} still missing date)`);
   if (missing) {
     console.log('Re-run `node scrape.js` to scrape fresh listing URLs and enrich detail pages.');
+  }
+} else if (require.main === module && process.argv.includes('--review-duplicates')) {
+  const eventsFile = 'events.json';
+  if (!fs.existsSync(eventsFile)) {
+    console.error(`Missing ${eventsFile}. Run a scrape first or add the file.`);
+    process.exit(1);
+  }
+  const list = JSON.parse(fs.readFileSync(eventsFile, 'utf8'));
+  if (!Array.isArray(list)) {
+    console.error('events.json must be a JSON array of events.');
+    process.exit(1);
+  }
+  printDuplicateReview(list);
+  if (process.argv.includes('--strict') && findDuplicateEventGroups(list).length) {
+    process.exit(1);
+  }
+} else if (require.main === module && process.argv.includes('--dedupe-events')) {
+  const eventsFile = 'events.json';
+  if (!fs.existsSync(eventsFile)) {
+    console.error(`Missing ${eventsFile}.`);
+    process.exit(1);
+  }
+  const list = JSON.parse(fs.readFileSync(eventsFile, 'utf8'));
+  if (!Array.isArray(list)) {
+    console.error('events.json must be a JSON array of events.');
+    process.exit(1);
+  }
+  const finalized = list.map((ev) => finalizeEvent(ev));
+  printDuplicateReview(finalized);
+  const { events: deduped, dropped } = dedupeEventsPreservingOrder(finalized);
+  if (dropped > 0) {
+    fs.writeFileSync(eventsFile, JSON.stringify(deduped, null, 2));
+    console.log(`\n--dedupe-events: wrote ${deduped.length} events (removed ${dropped}).`);
+  } else {
+    console.log('\n--dedupe-events: nothing to remove.');
   }
 } else if (require.main === module) {
   scrapeAll().catch(console.error);
