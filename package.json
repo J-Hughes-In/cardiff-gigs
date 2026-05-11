@@ -1,0 +1,18 @@
+{
+  "name": "cardiff-gigs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "scrape": "node scrape.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "axios": "^1.16.0",
+    "cheerio": "^1.2.0",
+    "playwright": "^1.59.1"
+  }
+}
