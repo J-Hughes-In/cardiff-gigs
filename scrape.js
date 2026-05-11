@@ -178,6 +178,15 @@ async function fetchPageEnrichment(page, url) {
       offersRaw = best.offers || null;
     }
 
+    if (!startDate) {
+      const t =
+        document.querySelector('time[datetime]') ||
+        document.querySelector('[itemprop="startDate"][datetime]') ||
+        document.querySelector('meta[itemprop="startDate"]');
+      const raw = t?.getAttribute?.('datetime') || t?.getAttribute?.('content') || '';
+      if (raw) startDate = String(raw).trim();
+    }
+
     const bodyText = (document.body?.innerText || '').slice(0, 20_000);
 
     return {
@@ -203,6 +212,325 @@ function mergeOffersIntoEvent(ev, offersRaw) {
   if (high != null && !Number.isNaN(high)) out.ticketPriceTo = high;
   if (currency) out.ticketCurrency = currency;
   return out;
+}
+
+/** Calendar day in local time (noon avoids DST edge cases). */
+function localNoon(y, m0, d) {
+  return new Date(y, m0, d, 12, 0, 0);
+}
+
+function startOfLocalDay(d) {
+  return new Date(d.getFullYear(), d.getMonth(), d.getDate());
+}
+
+/** When month/year are missing, pick a sensible year vs scrape time (forward listings). */
+function inferYearForMonthDay(scrapedAt, month0, day) {
+  const ref = scrapedAt ? new Date(scrapedAt) : new Date();
+  const r0 = startOfLocalDay(ref);
+  let y = ref.getFullYear();
+  let cand = startOfLocalDay(localNoon(y, month0, day));
+  if (cand < r0) {
+    const daysPast = (r0 - cand) / 86400000;
+    if (daysPast <= 31) return y;
+    return y + 1;
+  }
+  return y;
+}
+
+function parseMonthToken(tok) {
+  if (!tok) return -1;
+  const t = String(tok).toLowerCase().replace(/\./g, '');
+  const map = {
+    jan: 0,
+    feb: 1,
+    mar: 2,
+    apr: 3,
+    may: 4,
+    jun: 5,
+    jul: 6,
+    aug: 7,
+    sep: 8,
+    oct: 9,
+    nov: 10,
+    dec: 11,
+  };
+  const k = t.length >= 3 ? t.slice(0, 3) : t;
+  if (map[k] != null) return map[k];
+  const full = [
+    'january',
+    'february',
+    'march',
+    'april',
+    'may',
+    'june',
+    'july',
+    'august',
+    'september',
+    'october',
+    'november',
+    'december',
+  ];
+  for (let i = 0; i < 12; i++) {
+    if (full[i].startsWith(t)) return i;
+  }
+  return -1;
+}
+
+function formatUkLongDate(d) {
+  if (!(d instanceof Date) || Number.isNaN(d.getTime())) return '';
+  try {
+    return d.toLocaleDateString('en-GB', {
+      weekday: 'long',
+      day: 'numeric',
+      month: 'long',
+      year: 'numeric',
+      timeZone: 'Europe/London',
+    });
+  } catch {
+    return '';
+  }
+}
+
+function tryParseIsoToDate(iso) {
+  if (!iso || typeof iso !== 'string') return null;
+  const d = new Date(iso);
+  return Number.isNaN(d.getTime()) ? null : d;
+}
+
+/** "Mon 11 May 2026" / "Monday 11 May 2026" (single day). */
+function tryParseShortUkDayMonYear(s) {
+  const m = String(s).match(
+    /\b(Mon|Tue|Wed|Thu|Fri|Sat|Sun)(?:day)?\s+(\d{1,2})\s+(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*\s+(\d{4})\b/i
+  );
+  if (!m) return null;
+  const mo = parseMonthToken(m[3]);
+  if (mo < 0) return null;
+  const d = localNoon(Number(m[4]), mo, Number(m[2]));
+  return Number.isNaN(d.getTime()) ? null : d;
+}
+
+/** "Tue 12 - Sat 16 May 2026" style range. */
+function tryParseUkRangeTwoDaysOneMonthYear(s) {
+  const m = String(s).match(
+    /\b(Mon|Tue|Wed|Thu|Fri|Sat|Sun)(?:day)?\s+(\d{1,2})\s*[-–]\s*(Mon|Tue|Wed|Thu|Fri|Sat|Sun)(?:day)?\s+(\d{1,2})\s+(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*\s+(\d{4})\b/i
+  );
+  if (!m) return null;
+  const mo = parseMonthToken(m[5]);
+  if (mo < 0) return null;
+  const y = Number(m[6]);
+  const d1 = localNoon(y, mo, Number(m[2]));
+  const d2 = localNoon(y, mo, Number(m[4]));
+  if (Number.isNaN(d1.getTime()) || Number.isNaN(d2.getTime())) return null;
+  return { start: d1, end: d2 };
+}
+
+/** DD/MM/YYYY anywhere in string. */
+function tryParseDdMmYyyy(s) {
+  const m = String(s).match(/\b(\d{1,2})\/(\d{1,2})\/(\d{4})\b/);
+  if (!m) return null;
+  const d = localNoon(Number(m[3]), Number(m[2]) - 1, Number(m[1]));
+  return Number.isNaN(d.getTime()) ? null : d;
+}
+
+/** "WEDNESDAY 13TH MAY" or "Saturday 17th April" (no year). */
+function tryParseDayOrdinalMonthNoYear(line, scrapedAt) {
+  const m = String(line)
+    .trim()
+    .match(/^([a-z]+)\s+(\d{1,2})(?:st|nd|rd|th)?\s+([a-z]+)\s*$/i);
+  if (!m) return null;
+  const mo = parseMonthToken(m[3]);
+  if (mo < 0) return null;
+  const day = Number(m[2]);
+  const y = inferYearForMonthDay(scrapedAt, mo, day);
+  const d = localNoon(y, mo, day);
+  return Number.isNaN(d.getTime()) ? null : d;
+}
+
+/** "19th May noon" / "12th June 2025 7pm" */
+function tryParseOrdinalMonthOptionalYear(s, scrapedAt) {
+  const m = String(s).match(
+    /\b(\d{1,2})(?:st|nd|rd|th)?\s+(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec|January|February|March|April|May|June|July|August|September|October|November|December)[a-z]*(?:\s+(\d{4}))?\b/i
+  );
+  if (!m) return null;
+  const mo = parseMonthToken(m[2]);
+  if (mo < 0) return null;
+  const day = Number(m[1]);
+  const y = m[3] ? Number(m[3]) : inferYearForMonthDay(scrapedAt, mo, day);
+  const d = localNoon(y, mo, day);
+  return Number.isNaN(d.getTime()) ? null : d;
+}
+
+/** "May 30 @ 17:00" / "June 3 @ ..." */
+function tryParseMonthDayAtTime(s, scrapedAt) {
+  const m = String(s).match(
+    /\b(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec|January|February|March|April|May|June|July|August|September|October|November|December)[a-z]*\s+(\d{1,2})\b/i
+  );
+  if (!m) return null;
+  const mo = parseMonthToken(m[1]);
+  if (mo < 0) return null;
+  const day = Number(m[2]);
+  const y = inferYearForMonthDay(scrapedAt, mo, day);
+  const d = localNoon(y, mo, day);
+  return Number.isNaN(d.getTime()) ? null : d;
+}
+
+/** "21 April - 19 May 2026" (WMC-style; allows surrounding text). */
+function tryParseDayMonthRangeYear(s) {
+  const m = String(s).match(/(\d{1,2})\s+([A-Za-z]+)\s*[-–]\s*(\d{1,2})\s+([A-Za-z]+)\s+(\d{4})/i);
+  if (!m) return null;
+  const m1 = parseMonthToken(m[2]);
+  const m2 = parseMonthToken(m[4]);
+  const y = Number(m[5]);
+  if (m1 < 0 || m2 < 0) return null;
+  const d1 = localNoon(y, m1, Number(m[1]));
+  const d2 = localNoon(y, m2, Number(m[3]));
+  if (Number.isNaN(d1.getTime()) || Number.isNaN(d2.getTime())) return null;
+  return { start: d1, end: d2 };
+}
+
+/** "12 – 13 May 2026" */
+function tryParseSameMonthDayRange(s) {
+  const m = String(s).match(/(\d{1,2})\s*[-–]\s*(\d{1,2})\s+([A-Za-z]+)\s+(\d{4})/i);
+  if (!m) return null;
+  const mo = parseMonthToken(m[3]);
+  const y = Number(m[4]);
+  if (mo < 0) return null;
+  const d1 = localNoon(y, mo, Number(m[1]));
+  const d2 = localNoon(y, mo, Number(m[2]));
+  if (Number.isNaN(d1.getTime()) || Number.isNaN(d2.getTime())) return null;
+  return { start: d1, end: d2 };
+}
+
+/** "Saturday 23rd May 2026" (The Gate and similar). */
+function tryParseWeekdayOrdinalMonthYear(s) {
+  const m = String(s).match(
+    /\b(Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday)\s+(\d{1,2})(?:st|nd|rd|th)?\s+([A-Za-z]+)\s+(\d{4})\b/i
+  );
+  if (!m) return null;
+  const mo = parseMonthToken(m[3]);
+  if (mo < 0) return null;
+  const d = localNoon(Number(m[4]), mo, Number(m[2]));
+  return Number.isNaN(d.getTime()) ? null : d;
+}
+
+function firstMeaningfulLine(text) {
+  if (!text) return '';
+  const line = String(text).split(/\r?\n/).map((l) => l.trim()).find(Boolean);
+  return line || '';
+}
+
+function formatRangeLong(a, b) {
+  const fa = formatUkLongDate(a);
+  const fb = formatUkLongDate(b);
+  if (!fa || !fb) return fa || fb;
+  if (a.getTime() === b.getTime()) return fa;
+  return `${fa} – ${fb}`;
+}
+
+/** e.g. Trafalgar slug `…-21-may-2026-tickets` or `…-21-may-tickets`. */
+function tryParseDateFromListingUrl(url, scrapedAt) {
+  if (!url || typeof url !== 'string') return null;
+  const u = url.toLowerCase();
+  const m1 = u.match(/(\d{1,2})-(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)-(\d{4})\b/);
+  if (m1) {
+    const mo = parseMonthToken(m1[2]);
+    if (mo < 0) return null;
+    const d = localNoon(Number(m1[3]), mo, Number(m1[1]));
+    return Number.isNaN(d.getTime()) ? null : d;
+  }
+  const m2 = u.match(/(\d{1,2})-(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)(?:-tickets|-[a-z0-9-]*tickets)/);
+  if (m2) {
+    const mo = parseMonthToken(m2[2]);
+    if (mo < 0) return null;
+    const day = Number(m2[1]);
+    const y = inferYearForMonthDay(scrapedAt, mo, day);
+    const d = localNoon(y, mo, day);
+    return Number.isNaN(d.getTime()) ? null : d;
+  }
+  return null;
+}
+
+/**
+ * Human-readable date: weekday, day, month, year (ranges use an en-dash between two full dates).
+ */
+function deriveHumanEventDate(ev) {
+  const scrapedAt = ev.scrapedAt || '';
+  const rawDate = ev.date != null ? String(ev.date).trim() : '';
+  const weakListingDate = rawDate && !/\d{4}/.test(rawDate);
+  const blobs = [
+    ev.eventStartDate,
+    ...(weakListingDate ? [] : rawDate ? [rawDate] : []),
+    firstMeaningfulLine(ev.details),
+    firstMeaningfulLine(ev.description),
+    firstMeaningfulLine(ev.shortDescription),
+    ...(weakListingDate ? [rawDate] : []),
+  ].filter(Boolean);
+
+  const isoStart = tryParseIsoToDate(ev.eventStartDate);
+  const isoEnd = tryParseIsoToDate(ev.eventEndDate);
+  if (isoStart) {
+    if (isoEnd && isoEnd.getTime() !== isoStart.getTime()) {
+      const s0 = startOfLocalDay(isoStart);
+      const s1 = startOfLocalDay(isoEnd);
+      if (s0.getTime() !== s1.getTime()) return formatRangeLong(isoStart, isoEnd);
+    }
+    return formatUkLongDate(isoStart);
+  }
+
+  const urlDate = tryParseDateFromListingUrl(ev.url, scrapedAt);
+  if (urlDate) return formatUkLongDate(urlDate);
+
+  for (const raw of blobs) {
+    const s = String(raw).trim();
+    if (!s) continue;
+
+    const r1 = tryParseUkRangeTwoDaysOneMonthYear(s.replace(/\s+/g, ' '));
+    if (r1) return formatRangeLong(r1.start, r1.end);
+
+    const r2 = tryParseDayMonthRangeYear(s);
+    if (r2) return formatRangeLong(r2.start, r2.end);
+
+    const r3 = tryParseSameMonthDayRange(s);
+    if (r3) return formatRangeLong(r3.start, r3.end);
+
+    const dShort = tryParseShortUkDayMonYear(s);
+    if (dShort) return formatUkLongDate(dShort);
+
+    const dSlash = tryParseDdMmYyyy(s);
+    if (dSlash) return formatUkLongDate(dSlash);
+
+    const gateDt = tryParseWeekdayOrdinalMonthYear(s);
+    if (gateDt) return formatUkLongDate(gateDt);
+
+    const dOrd = tryParseOrdinalMonthOptionalYear(s, scrapedAt);
+    if (dOrd) return formatUkLongDate(dOrd);
+
+    const dMonDay = tryParseMonthDayAtTime(s, scrapedAt);
+    if (dMonDay) return formatUkLongDate(dMonDay);
+
+    const dLine = tryParseDayOrdinalMonthNoYear(firstMeaningfulLine(s) || s, scrapedAt);
+    if (dLine) return formatUkLongDate(dLine);
+  }
+
+  for (const raw of blobs) {
+    const s = String(raw).trim();
+    if (/\d{4}/.test(s) && s.length >= 8) return s;
+  }
+
+  const hay = [ev.title, rawDate, ev.details, ev.description, ev.shortDescription].filter(Boolean).join('\n');
+  const h = hay.replace(/\s+/g, ' ');
+  const rRange = tryParseUkRangeTwoDaysOneMonthYear(h);
+  if (rRange) return formatRangeLong(rRange.start, rRange.end);
+  const rDm = tryParseDayMonthRangeYear(hay);
+  if (rDm) return formatRangeLong(rDm.start, rDm.end);
+  const rSame = tryParseSameMonthDayRange(hay);
+  if (rSame) return formatRangeLong(rSame.start, rSame.end);
+  const dS = tryParseShortUkDayMonYear(h);
+  if (dS) return formatUkLongDate(dS);
+  const dSlash = tryParseDdMmYyyy(h);
+  if (dSlash) return formatUkLongDate(dSlash);
+
+  return '';
 }
 
 function mergeEnrichmentIntoEvent(ev, en) {
@@ -266,6 +594,9 @@ function finalizeEvent(ev) {
         ? `${sym}${next.ticketPriceFrom}–${sym}${next.ticketPriceTo}`
         : `${sym}${next.ticketPriceFrom}`;
   }
+
+  const date = deriveHumanEventDate(next);
+  if (date) next.date = date;
 
   return next;
 }
@@ -361,40 +692,136 @@ async function scrapeNewTheatre(context) {
   console.log('Scraping New Theatre...');
   const page = await context.newPage();
   await gotoAndSettle(page, 'https://trafalgartickets.com/new-theatre-cardiff/en-GB/whats-on', 'body');
-  await new Promise(r => setTimeout(r, 2_000));
+  await new Promise((r) => setTimeout(r, 2_000));
+
+  const domEvents = await page.evaluate(() => {
+    const seen = new Set();
+    const out = [];
+    const anchors = [...document.querySelectorAll('a[href*="/new-theatre-cardiff/en-GB/event/"]')];
+    for (const a of anchors) {
+      const href = a.getAttribute('href') || '';
+      const url = (href.startsWith('http') ? href : `https://trafalgartickets.com${href}`).split('?')[0];
+      if (seen.has(url)) continue;
+
+      const t = (a.innerText || '').replace(/\u00a0/g, ' ');
+      const fromIdx = t.search(/\bfrom\s+£/i);
+      const head = fromIdx >= 0 ? t.slice(0, fromIdx) : t;
+
+      const ti = head.indexOf('###');
+      let category = '';
+      let title = '';
+      if (ti >= 0) {
+        category = head.slice(0, ti).replace(/\s+/g, ' ').trim();
+        title = head
+          .slice(ti + 3)
+          .replace(/\s+/g, ' ')
+          .trim();
+      } else {
+        title = a.querySelector('h2, h3, h4')?.innerText?.replace(/\s+/g, ' ').trim() || '';
+      }
+
+      const compact = head.replace(/\s+/g, ' ').trim();
+      let date = '';
+      const rangeM = compact.match(
+        /\b((?:Mon|Tue|Wed|Thu|Fri|Sat|Sun)(?:day)?\s+\d{1,2}\s*[-–]\s*(?:Mon|Tue|Wed|Thu|Fri|Sat|Sun)(?:day)?\s+\d{1,2}\s+(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*\s+\d{4})\b/i
+      );
+      if (rangeM) date = rangeM[1];
+      if (!date) {
+        const singleM = compact.match(
+          /\b((?:Mon|Tue|Wed|Thu|Fri|Sat|Sun)(?:day)?\s+\d{1,2}\s+(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*\s+\d{4})\b/i
+        );
+        if (singleM) date = singleM[1];
+      }
+
+      let ticketPriceFrom = null;
+      let ticketPriceLabel = '';
+      const pm = t.match(/from\s+£\s*([\d.]+)/i);
+      if (pm) {
+        ticketPriceFrom = Number(pm[1]);
+        ticketPriceLabel = `from £${pm[1]}`;
+      }
+
+      if (!title || !date) continue;
+      seen.add(url);
+
+      const row = {
+        title,
+        date,
+        url,
+        venue: 'New Theatre Cardiff',
+        scrapedAt: new Date().toISOString(),
+      };
+      if (category) row.category = category;
+      if (ticketPriceFrom != null && !Number.isNaN(ticketPriceFrom)) {
+        row.ticketPriceFrom = ticketPriceFrom;
+        row.ticketCurrency = 'GBP';
+        row.ticketPriceLabel = ticketPriceLabel;
+      }
+      out.push(row);
+    }
+    return out;
+  });
+
   const html = await page.content();
   await page.close();
-  const matches = html.matchAll(/\{\\?"eventGroupId\\?":\d+.*?\}/g);
-  const events = [];
-  const seen = new Set();
-  for (const match of matches) {
+
+  const metaByGroupId = new Map();
+  for (const match of html.matchAll(/\{\\?"eventGroupId\\?":\d+.*?\}/g)) {
     try {
       const obj = JSON.parse(match[0].replace(/\\"/g, '"').replace(/\\u0026/g, '&'));
-      if (obj.eventGroupId && obj.name && !seen.has(obj.eventGroupId)) {
-        seen.add(obj.eventGroupId);
-        const cats = Array.isArray(obj.categories) ? obj.categories.filter(Boolean) : [];
-        const row = {
-          title: obj.name,
-          category: cats[0] || '',
-          url: `https://trafalgartickets.com/new-theatre-cardiff/en-GB/event/${obj.eventGroupId}`,
-          venue: 'New Theatre Cardiff',
-          scrapedAt: new Date().toISOString(),
-        };
-        if (cats.length > 1) row.subcategory = cats.slice(1).join('; ');
-        if (obj.price != null && !Number.isNaN(Number(obj.price))) {
-          row.ticketPriceFrom = Number(obj.price);
-          row.ticketCurrency = 'GBP';
-          row.ticketPriceLabel = `from £${obj.price}`;
-        }
-        if (obj.subVenue) row.subVenue = obj.subVenue;
-        if (obj.promoter) row.promoter = obj.promoter;
-        if (cats.length === 1 && cats[0]) row.genre = cats[0];
-        events.push(row);
-      }
-    } catch (e) {}
+      if (obj.eventGroupId == null || !obj.name) continue;
+      const prev = metaByGroupId.get(obj.eventGroupId) || {};
+      const next = { ...prev, ...obj };
+      metaByGroupId.set(obj.eventGroupId, next);
+    } catch (_) {}
   }
-  console.log(`  New Theatre: ${events.length} events`);
-  return events;
+
+  const slugToId = new Map();
+  for (const [gid, obj] of metaByGroupId) {
+    const slug = (obj.slugUrl || obj.urlSlug || '').toString();
+    if (slug) slugToId.set(slug, gid);
+  }
+
+  function applyNewTheatreMeta(row, obj) {
+    const cats = Array.isArray(obj.categories) ? obj.categories.filter(Boolean) : [];
+    if (cats.length && !row.category) row.category = cats[0];
+    if (cats.length > 1) row.subcategory = cats.slice(1).join('; ');
+    if (obj.price != null && !Number.isNaN(Number(obj.price)) && row.ticketPriceFrom == null) {
+      row.ticketPriceFrom = Number(obj.price);
+      row.ticketCurrency = 'GBP';
+      row.ticketPriceLabel = `from £${obj.price}`;
+    }
+    if (obj.subVenue) row.subVenue = obj.subVenue;
+    if (obj.promoter) row.promoter = obj.promoter;
+    if (cats.length === 1 && cats[0] && !row.genre) row.genre = cats[0];
+  }
+
+  for (const row of domEvents) {
+    const mid = row.url.match(/\/event\/(\d+)(?:\?|$)/);
+    if (mid) {
+      const o = metaByGroupId.get(Number(mid[1]));
+      if (o) applyNewTheatreMeta(row, o);
+    }
+    const tail = row.url.split('/event/')[1];
+    if (tail) {
+      const slugKey = tail.split('?')[0];
+      const gid = slugToId.get(slugKey);
+      if (gid != null) {
+        const o = metaByGroupId.get(gid);
+        if (o) applyNewTheatreMeta(row, o);
+      }
+    }
+    const byName = [...metaByGroupId.values()].find(
+      (o) =>
+        o.name &&
+        row.title &&
+        String(o.name).trim().toLowerCase() === String(row.title).trim().toLowerCase()
+    );
+    if (byName) applyNewTheatreMeta(row, byName);
+  }
+
+  console.log(`  New Theatre: ${domEvents.length} events`);
+  return domEvents;
 }
 
 async function scrapeTramshed(context) {
@@ -440,7 +867,17 @@ async function scrapeUtilitaArena(context) {
 
     return rows.map((li) => {
       const title = li.querySelector('h4.MuiTypography-header4')?.innerText?.trim() || '';
-      const date = li.querySelector('[data-testid="aedp-event-information-block-times"]')?.innerText?.trim() || '';
+      let date =
+        li.querySelector('[data-testid="aedp-event-information-block-times"]')?.innerText?.replace(/\s+/g, ' ').trim() ||
+        '';
+      if (!/\d{4}/.test(date)) {
+        const blob = (li.innerText || '').replace(/\s+/g, ' ');
+        const m =
+          blob.match(
+            /\b((?:Mon|Tue|Wed|Thu|Fri|Sat|Sun)(?:day)?\s+\d{1,2}\s+(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*\s+\d{4})\b/i
+          ) || blob.match(/\b(\d{1,2}\s+(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*\s+\d{4})\b/i);
+        if (m) date = m[1];
+      }
       const support =
         li.querySelector('[data-testid="aedp-event-information-support-artists"]')?.innerText?.trim() || '';
       const url =
@@ -611,4 +1048,15 @@ async function scrapeAll() {
   console.log(`\nTotal: ${allEvents.length} events saved to events.json`);
 }
 
-scrapeAll().catch(console.error);
+if (require.main === module && process.argv.includes('--dates-only')) {
+  const list = JSON.parse(fs.readFileSync('events.json', 'utf8'));
+  const out = list.map((ev) => finalizeEvent(ev));
+  fs.writeFileSync('events.json', JSON.stringify(out, null, 2));
+  const missing = out.filter((e) => !e.date || !String(e.date).trim()).length;
+  console.log(`--dates-only: wrote ${out.length} events (${missing} still missing date)`);
+  if (missing) {
+    console.log('Re-run `node scrape.js` to scrape fresh listing URLs and enrich detail pages.');
+  }
+} else if (require.main === module) {
+  scrapeAll().catch(console.error);
+}
