@@ -38,7 +38,10 @@
     "primaryCategory": "Music",
     "genre": "DJ / club",
     "description": "FRIDAY 22ND MAY\n19:00 | 14+ (UNDER 16S TO BE ACCOMPANIED BY AN ADULT)",
-    "date": "Friday, 22 May 2026"
+    "date": "Friday, 22 May 2026",
+    "musicGenres": [
+      "DJ / club"
+    ]
   },
   {
     "title": "THE 9075 – A TRIBUTE TO THE 1975",
@@ -49,7 +52,10 @@
     "primaryCategory": "Music",
     "genre": "Tribute / covers",
     "description": "SATURDAY 23RD MAY\n19:00| 14+ (UNDER 16S TO BE ACCOMPANIED BY AN ADULT)",
-    "date": "Saturday, 23 May 2026"
+    "date": "Saturday, 23 May 2026",
+    "musicGenres": [
+      "Tribute / covers"
+    ]
   },
   {
     "title": "PORKPIE",
@@ -70,7 +76,10 @@
     "primaryCategory": "Music",
     "genre": "Tribute / covers",
     "description": "SATURDAY 30TH MAY\n19:30 | 14+ (UNDER 16S TO BE ACCOMPANIED BY AN ADULT)",
-    "date": "Saturday, 30 May 2026"
+    "date": "Saturday, 30 May 2026",
+    "musicGenres": [
+      "Tribute / covers"
+    ]
   },
   {
     "title": "REGGAETON PARTY",
@@ -131,7 +140,10 @@
     "primaryCategory": "Music",
     "genre": "Tribute / covers",
     "description": "SATURDAY 6TH JUNE\n7:00PM | 14+ (UNDER 16S MUST BE ACCOMPANIED BY AN ADULT)",
-    "date": "Saturday, 6 June 2026"
+    "date": "Saturday, 6 June 2026",
+    "musicGenres": [
+      "Tribute / covers"
+    ]
   },
   {
     "title": "JULIAN MARLEY",
@@ -152,7 +164,10 @@
     "primaryCategory": "Music",
     "genre": "DJ / club",
     "description": "SATURDAY 13TH JUNE\n19:00 | 18+",
-    "date": "Saturday, 13 June 2026"
+    "date": "Saturday, 13 June 2026",
+    "musicGenres": [
+      "DJ / club"
+    ]
   },
   {
     "title": "QUO CONNECTION",
@@ -173,7 +188,10 @@
     "primaryCategory": "Music",
     "genre": "Tribute / covers",
     "description": "FRIDAY 3RD JULY\n19:00 | 14+ (UNDER 16S TO BE ACCOMPANIED BY AN ADULT)",
-    "date": "Friday, 3 July 2026"
+    "date": "Friday, 3 July 2026",
+    "musicGenres": [
+      "Tribute / covers"
+    ]
   },
   {
     "title": "CASH – A TRIBUTE TO JOHNNY CASH",
@@ -184,7 +202,10 @@
     "primaryCategory": "Music",
     "genre": "Tribute / covers",
     "description": "SATURDAY 11TH JULY\n19:00 | 14+ (UNDER 16S TO BE ACCOMPANIED BY AN ADULT)",
-    "date": "Saturday, 11 July 2026"
+    "date": "Saturday, 11 July 2026",
+    "musicGenres": [
+      "Tribute / covers"
+    ]
   },
   {
     "title": "RED HOT CHILI PEPPERS EXPERIENCE",
@@ -195,7 +216,10 @@
     "primaryCategory": "Music",
     "genre": "Tribute / covers",
     "description": "SATURDAY 18TH JULY\n19:30 | 14+ (UNDER 16S TO BE ACCOMPANIED BY AN ADULT)",
-    "date": "Saturday, 18 July 2026"
+    "date": "Saturday, 18 July 2026",
+    "musicGenres": [
+      "Tribute / covers"
+    ]
   },
   {
     "title": "MY CHEMICAL HOEMANCE",
@@ -236,7 +260,10 @@
     "primaryCategory": "Music",
     "genre": "Tribute / covers",
     "description": "FRIDAY 7TH AUGUST\n19:30 | 14+ (UNDER 16S TO BE ACCOMPANIED BY AN ADULT)",
-    "date": "Friday, 7 August 2026"
+    "date": "Friday, 7 August 2026",
+    "musicGenres": [
+      "Tribute / covers"
+    ]
   },
   {
     "title": "THE FLEETWOOD MACK EXPERIENCE",
@@ -247,7 +274,10 @@
     "primaryCategory": "Music",
     "genre": "Tribute / covers",
     "description": "SATURDAY 8TH AUGUST\n19:00 | 14+ (UNDER 16S TO BE ACCOMPANIED BY AN ADULT)",
-    "date": "Saturday, 8 August 2026"
+    "date": "Saturday, 8 August 2026",
+    "musicGenres": [
+      "Tribute / covers"
+    ]
   },
   {
     "title": "FOREVER SPRINGSTEEN",
@@ -268,7 +298,10 @@
     "primaryCategory": "Music",
     "genre": "Tribute / covers",
     "description": "SATURDAY 22ND AUGUST\n19:30 | 14+ (UNDER 16S TO BE ACCOMPANIED BY AN ADULT)",
-    "date": "Saturday, 22 August 2026"
+    "date": "Saturday, 22 August 2026",
+    "musicGenres": [
+      "Tribute / covers"
+    ]
   },
   {
     "title": "ELDER EMO SUMMER DAY PARTY",
@@ -393,7 +426,10 @@
     "primaryCategory": "Music",
     "genre": "DJ / club",
     "description": "SATURDAY 10TH OCTOBER\n19:00 | 14+ (UNDER 16S TO BE ACCOMPANIED BY AN ADULT)",
-    "date": "Saturday, 10 October 2026"
+    "date": "Saturday, 10 October 2026",
+    "musicGenres": [
+      "DJ / club"
+    ]
   },
   {
     "title": "CABARET VOLTAIRE’S FINAL UK TOUR",
@@ -464,7 +500,10 @@
     "primaryCategory": "Music",
     "genre": "Tribute / covers",
     "description": "FRIDAY 23RD OCTOBER\n19:00 | 14+ (UNDER 16S TO BE ACCOMPANIED BY AN ADULT)",
-    "date": "Friday, 23 October 2026"
+    "date": "Friday, 23 October 2026",
+    "musicGenres": [
+      "Tribute / covers"
+    ]
   },
   {
     "title": "ALMOST GAGA",
@@ -485,7 +524,10 @@
     "primaryCategory": "Music",
     "genre": "Tribute / covers",
     "description": "SATURDAY 31ST OCTOBER\n18:00 | 14+ (UNDER 16S TO BE ACCOMPANIED BY AN ADULT, UNTIL 10PM , AFTER 10PM 18+ ONLY)",
-    "date": "Saturday, 31 October 2026"
+    "date": "Saturday, 31 October 2026",
+    "musicGenres": [
+      "Tribute / covers"
+    ]
   },
   {
     "title": "JOSHUA IDEHEN",
@@ -506,7 +548,10 @@
     "primaryCategory": "Music",
     "genre": "Tribute / covers",
     "description": "SATURDAY 7TH NOVEMBER\n19:00 | 14+ (UNDER 16S TO BE ACCOMPANIED BY AN ADULT)",
-    "date": "Saturday, 7 November 2026"
+    "date": "Saturday, 7 November 2026",
+    "musicGenres": [
+      "Tribute / covers"
+    ]
   },
   {
     "title": "REPUBLICA – 30 YEARS OF READY TO GO!",
@@ -537,7 +582,10 @@
     "primaryCategory": "Music",
     "genre": "Tribute / covers",
     "description": "FRIDAY 20TH NOVEMBER\n19:00 | 14+ (UNDER 16S TO BE ACCOMPANIED BY AN ADULT)",
-    "date": "Friday, 20 November 2026"
+    "date": "Friday, 20 November 2026",
+    "musicGenres": [
+      "Tribute / covers"
+    ]
   },
   {
     "title": "DAN PATLANSKY",
@@ -598,7 +646,10 @@
     "primaryCategory": "Music",
     "genre": "Tribute / covers",
     "description": "SATURDAY 12TH DECEMBER\n19:00 | 14+ (UNDER 16S TO BE ACCOMPANIED BY AN ADULT)",
-    "date": "Saturday, 12 December 2026"
+    "date": "Saturday, 12 December 2026",
+    "musicGenres": [
+      "Tribute / covers"
+    ]
   },
   {
     "title": "MOMENTS OF PLEASURE: THE MUSIC OF KATE BUSH",
@@ -690,11 +741,14 @@
     "ticketPriceFrom": 18,
     "ticketPriceLabel": "from £18",
     "primaryCategory": "Theatre",
-    "genre": "Classical"
+    "genre": "Classical",
+    "musicGenres": [
+      "Classical"
+    ]
   },
   {
     "title": "BUDDY – THE BUDDY HOLLY STORY",
-    "date": "Thursday, 14 May 2026 – Monday, 18 May 2026",
+    "date": "Thursday, 14 May 2026 – Sunday, 17 May 2026",
     "url": "https://www.wmc.org.uk/en/whats-on/2026/buddy-the-buddy-holly-story",
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-05-11T17:39:34.133Z",
@@ -878,7 +932,10 @@
     "ticketPriceFrom": 18,
     "ticketPriceLabel": "£18",
     "primaryCategory": "Comedy",
-    "genre": "Comedy"
+    "genre": "Comedy",
+    "musicGenres": [
+      "Comedy"
+    ]
   },
   {
     "title": "ODYSSEY",
@@ -947,7 +1004,7 @@
   },
   {
     "title": "SUNNY AFTERNOON",
-    "date": "Tuesday, 26 May 2026 – Sunday, 31 May 2026",
+    "date": "Tuesday, 26 May 2026 – Saturday, 30 May 2026",
     "url": "https://www.wmc.org.uk/en/whats-on/2026/sunny-afternoon",
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-05-11T17:39:34.133Z",
@@ -981,7 +1038,7 @@
   },
   {
     "title": "NOWISWHENWEARE (THE STARS)",
-    "date": "Wednesday, 27 May 2026 – Saturday, 27 June 2026",
+    "date": "Wednesday, 27 May 2026 – Friday, 26 June 2026",
     "url": "https://www.wmc.org.uk/en/whats-on/2026/nowiswhenweare-the-stars",
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-05-11T17:39:34.133Z",
@@ -998,7 +1055,7 @@
   },
   {
     "title": "COLORED (NOIRE) - THE UNSUNG LIFE OF CLAUDETTE COLVIN",
-    "date": "Wednesday, 27 May 2026 – Saturday, 27 June 2026",
+    "date": "Wednesday, 27 May 2026 – Friday, 26 June 2026",
     "url": "https://www.wmc.org.uk/en/whats-on/2026/colored-noire",
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-05-11T17:39:34.133Z",
@@ -1049,7 +1106,7 @@
   },
   {
     "title": "SEASONS & STORIES",
-    "date": "Thursday, 28 May 2026 – Thursday, 29 May 2025",
+    "date": "Thursday, 28 May 2026 – Wednesday, 28 May 2025",
     "url": "https://www.wmc.org.uk/en/whats-on/2026/seasons-and-stories",
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-05-11T17:39:34.133Z",
@@ -1134,7 +1191,7 @@
   },
   {
     "title": "MISS SAIGON",
-    "date": "Tuesday, 2 June 2026 – Sunday, 7 June 2026",
+    "date": "Tuesday, 2 June 2026 – Saturday, 6 June 2026",
     "url": "https://www.wmc.org.uk/en/whats-on/2026/miss-saigon",
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-05-11T17:39:34.133Z",
@@ -1250,7 +1307,10 @@
     "ticketPriceFrom": 25,
     "ticketPriceLabel": "£25",
     "primaryCategory": "Theatre",
-    "genre": "Classical"
+    "genre": "Classical",
+    "musicGenres": [
+      "Classical"
+    ]
   },
   {
     "title": "WAITRESS",
@@ -1285,7 +1345,10 @@
     "ticketPriceFrom": 15,
     "ticketPriceLabel": "£15",
     "primaryCategory": "Theatre",
-    "genre": "Musical theatre"
+    "genre": "Musical theatre",
+    "musicGenres": [
+      "Musical theatre"
+    ]
   },
   {
     "title": "ALISON JIEAR",
@@ -1337,11 +1400,14 @@
     "ticketPriceFrom": 20,
     "ticketPriceLabel": "£20",
     "primaryCategory": "Comedy",
-    "genre": "Comedy"
+    "genre": "Comedy",
+    "musicGenres": [
+      "Comedy"
+    ]
   },
   {
     "title": "LEGALLY BLONDE",
-    "date": "Tuesday, 16 June 2026 – Sunday, 21 June 2026",
+    "date": "Tuesday, 16 June 2026 – Saturday, 20 June 2026",
     "url": "https://www.wmc.org.uk/en/whats-on/2026/legally-blonde",
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-05-11T17:39:34.133Z",
@@ -1423,11 +1489,14 @@
     "ticketPriceFrom": 25,
     "ticketPriceLabel": "from £25",
     "primaryCategory": "Theatre",
-    "genre": "Musical theatre"
+    "genre": "Musical theatre",
+    "musicGenres": [
+      "Musical theatre"
+    ]
   },
   {
     "title": "FAWLTY TOWERS THE PLAY",
-    "date": "Tuesday, 23 June 2026 – Sunday, 28 June 2026",
+    "date": "Tuesday, 23 June 2026 – Saturday, 27 June 2026",
     "url": "https://www.wmc.org.uk/en/whats-on/2026/fawlty-towers-the-play",
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-05-11T17:39:34.133Z",
@@ -1549,7 +1618,7 @@
   },
   {
     "title": "JAMES ACASTER",
-    "date": "Friday, 3 July 2026 – Sunday, 5 July 2026",
+    "date": "Friday, 3 July 2026",
     "url": "https://www.wmc.org.uk/en/whats-on/2026/james-acaster",
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-05-11T17:39:34.133Z",
@@ -1703,7 +1772,10 @@
     "ticketPriceFrom": 18,
     "ticketPriceLabel": "£18",
     "primaryCategory": "Comedy",
-    "genre": "Comedy"
+    "genre": "Comedy",
+    "musicGenres": [
+      "Comedy"
+    ]
   },
   {
     "title": "STEPH WEBBER - GLITTERING NIGHTS",
@@ -1732,7 +1804,7 @@
   },
   {
     "title": "THE BODYGUARD",
-    "date": "Monday, 20 July 2026 – Sunday, 26 July 2026",
+    "date": "Monday, 20 July 2026 – Saturday, 25 July 2026",
     "url": "https://www.wmc.org.uk/en/whats-on/2026/the-bodyguard",
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-05-11T17:39:34.133Z",
@@ -1782,7 +1854,7 @@
   },
   {
     "title": "THE KARATE KID",
-    "date": "Tuesday, 28 July 2026 – Saturday, 1 August 2026",
+    "date": "Tuesday, 28 July 2026",
     "url": "https://www.wmc.org.uk/en/whats-on/2026/the-karate-kid",
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-05-11T17:39:34.134Z",
@@ -1795,7 +1867,10 @@
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-05-11T17:39:34.134Z",
     "primaryCategory": "Theatre",
-    "genre": "Classical"
+    "genre": "Classical",
+    "musicGenres": [
+      "Classical"
+    ]
   },
   {
     "title": "QUARTEY & BLAYNEY",
@@ -1832,7 +1907,7 @@
   },
   {
     "title": "JERSEY BOYS",
-    "date": "Tuesday, 11 August 2026 – Saturday, 22 August 2026",
+    "date": "Tuesday, 11 August 2026",
     "url": "https://www.wmc.org.uk/en/whats-on/2026/jersey-boys",
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-05-11T17:39:34.134Z",
@@ -1857,7 +1932,7 @@
   },
   {
     "title": "CALON",
-    "date": "Thursday, 27 August 2026 – Saturday, 29 August 2026",
+    "date": "Thursday, 27 August 2026",
     "url": "https://www.wmc.org.uk/en/whats-on/2026/calon",
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-05-11T17:39:34.134Z",
@@ -1865,7 +1940,7 @@
   },
   {
     "title": "BURLESQUE",
-    "date": "Tuesday, 1 September 2026 – Sunday, 6 September 2026",
+    "date": "Tuesday, 1 September 2026 – Saturday, 5 September 2026",
     "url": "https://www.wmc.org.uk/en/whats-on/2026/burlesque",
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-05-11T17:39:34.134Z",
@@ -1915,7 +1990,7 @@
   },
   {
     "title": "GALIFREY CABARET",
-    "date": "Thursday, 10 September 2026 – Saturday, 12 September 2026",
+    "date": "Thursday, 10 September 2026",
     "url": "https://www.wmc.org.uk/en/whats-on/2026/galifrey-cabaret",
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-05-11T17:39:34.134Z",
@@ -1944,7 +2019,10 @@
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-05-11T17:39:34.134Z",
     "primaryCategory": "Theatre",
-    "genre": "Classical"
+    "genre": "Classical",
+    "musicGenres": [
+      "Classical"
+    ]
   },
   {
     "title": "WELSH NATIONAL OPERA: LA BOHÈME",
@@ -1953,7 +2031,10 @@
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-05-11T17:39:34.134Z",
     "primaryCategory": "Theatre",
-    "genre": "Classical"
+    "genre": "Classical",
+    "musicGenres": [
+      "Classical"
+    ]
   },
   {
     "title": "WELSH NATIONAL OPERA: FAMILY CONCERT",
@@ -1962,7 +2043,10 @@
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-05-11T17:39:34.134Z",
     "primaryCategory": "Theatre",
-    "genre": "Classical"
+    "genre": "Classical",
+    "musicGenres": [
+      "Classical"
+    ]
   },
   {
     "title": "MICHAEL AKADIRI: DON’T CALL ME UNCLE!",
@@ -2019,7 +2103,10 @@
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-05-11T17:39:34.134Z",
     "primaryCategory": "Theatre",
-    "genre": "Musical theatre"
+    "genre": "Musical theatre",
+    "musicGenres": [
+      "Musical theatre"
+    ]
   },
   {
     "title": "JAMES BARR",
@@ -2031,7 +2118,7 @@
   },
   {
     "title": "DIRTY DANCING",
-    "date": "Tuesday, 20 October 2026 – Saturday, 24 October 2026",
+    "date": "Tuesday, 20 October 2026",
     "url": "https://www.wmc.org.uk/en/whats-on/2026/dirty-dancing",
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-05-11T17:39:34.134Z",
@@ -2139,16 +2226,19 @@
   },
   {
     "title": "MAMMA MIA!",
-    "date": "Monday, 30 November 2026 – Saturday, 5 December 2026",
+    "date": "Monday, 30 November 2026",
     "url": "https://www.wmc.org.uk/en/whats-on/2026/mamma-mia",
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-05-11T17:39:34.134Z",
     "primaryCategory": "Sports",
-    "genre": "Sports"
+    "genre": "Sports",
+    "musicGenres": [
+      "Sports"
+    ]
   },
   {
     "title": "CAMILLE O'SULLIVAN - LOVELETTER",
-    "date": "Thursday, 3 December 2026 – Saturday, 5 December 2026",
+    "date": "Thursday, 3 December 2026",
     "url": "https://www.wmc.org.uk/en/whats-on/2026/camille-osullivan-loveletter",
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-05-11T17:39:34.134Z",
@@ -2164,16 +2254,19 @@
   },
   {
     "title": "MATILDA THE MUSICAL",
-    "date": "Tuesday, 26 January 2027 – Sunday, 17 January 2027",
+    "date": "Tuesday, 26 January 2027",
     "url": "https://www.wmc.org.uk/en/whats-on/2026/matilda-the-musical",
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-05-11T17:39:34.134Z",
     "primaryCategory": "Theatre",
-    "genre": "Musical theatre"
+    "genre": "Musical theatre",
+    "musicGenres": [
+      "Musical theatre"
+    ]
   },
   {
     "title": "PARANORMAL ACTIVITY",
-    "date": "Tuesday, 19 January 2027 – Saturday, 23 January 2027",
+    "date": "Tuesday, 19 January 2027",
     "url": "https://www.wmc.org.uk/en/whats-on/2027/paranormalactivity",
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-05-11T17:39:34.134Z",
@@ -2181,16 +2274,19 @@
   },
   {
     "title": "TRAINSPOTTING: THE MUSICAL",
-    "date": "Monday, 25 January 2027 – Saturday, 30 January 2027",
+    "date": "Monday, 25 January 2027",
     "url": "https://www.wmc.org.uk/en/whats-on/2027/trainspotting-the-musical",
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-05-11T17:39:34.134Z",
     "primaryCategory": "Theatre",
-    "genre": "Musical theatre"
+    "genre": "Musical theatre",
+    "musicGenres": [
+      "Musical theatre"
+    ]
   },
   {
     "title": "THE FULL MONTY",
-    "date": "Tuesday, 2 February 2027 – Saturday, 6 February 2027",
+    "date": "Tuesday, 2 February 2027",
     "url": "https://www.wmc.org.uk/en/whats-on/2027/the-full-monty-2027",
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-05-11T17:39:34.134Z",
@@ -2198,7 +2294,7 @@
   },
   {
     "title": "BLOOD BROTHERS",
-    "date": "Tuesday, 16 February 2027 – Saturday, 20 February 2027",
+    "date": "Tuesday, 16 February 2027",
     "url": "https://www.wmc.org.uk/en/whats-on/2027/blood-brothers",
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-05-11T17:39:34.134Z",
@@ -2219,7 +2315,10 @@
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-05-11T17:39:34.134Z",
     "primaryCategory": "Theatre",
-    "genre": "Classical"
+    "genre": "Classical",
+    "musicGenres": [
+      "Classical"
+    ]
   },
   {
     "title": "WELSH NATIONAL OPERA: JASON AND THE ARGONAUTS",
@@ -2228,11 +2327,14 @@
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-05-11T17:39:34.134Z",
     "primaryCategory": "Theatre",
-    "genre": "Classical"
+    "genre": "Classical",
+    "musicGenres": [
+      "Classical"
+    ]
   },
   {
     "title": "MATTHEW BOURNE'S CINDERELLA",
-    "date": "Tuesday, 16 March 2027 – Saturday, 20 March 2027",
+    "date": "Tuesday, 16 March 2027",
     "url": "https://www.wmc.org.uk/en/whats-on/2027/matthew-bournes-cinderella",
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-05-11T17:39:34.134Z",
@@ -2240,7 +2342,7 @@
   },
   {
     "title": "MRS DOUBTFIRE",
-    "date": "Tuesday, 23 March 2027 – Sunday, 11 April 2027",
+    "date": "Tuesday, 23 March 2027",
     "url": "https://www.wmc.org.uk/en/whats-on/2027/mrs-doubtfire",
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-05-11T17:39:34.134Z",
@@ -2248,16 +2350,19 @@
   },
   {
     "title": "JUST FOR ONE DAY: THE LIVE AID MUSICAL",
-    "date": "Tuesday, 20 April 2027 – Saturday, 24 April 2027",
+    "date": "Tuesday, 20 April 2027",
     "url": "https://www.wmc.org.uk/en/whats-on/2027/just-for-one-day",
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-05-11T17:39:34.134Z",
     "primaryCategory": "Theatre",
-    "genre": "Musical theatre"
+    "genre": "Musical theatre",
+    "musicGenres": [
+      "Musical theatre"
+    ]
   },
   {
     "title": "THE CURIOUS INCIDENT OF THE DOG IN THE NIGHT-TIME",
-    "date": "Tuesday, 27 April 2027 – Saturday, 1 May 2027",
+    "date": "Tuesday, 27 April 2027",
     "url": "https://www.wmc.org.uk/en/whats-on/2027/the-curious-incident-of-the-dog-in-the-night-time",
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-05-11T17:39:34.134Z",
@@ -2265,7 +2370,7 @@
   },
   {
     "title": "GREASE",
-    "date": "Monday, 3 May 2027 – Saturday, 8 May 2027",
+    "date": "Monday, 3 May 2027",
     "url": "https://www.wmc.org.uk/en/whats-on/2027/grease",
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-05-11T17:39:34.134Z",
@@ -2273,7 +2378,7 @@
   },
   {
     "title": "HEDD WYN: EISTEDDFOD ATOMIG",
-    "date": "Tuesday, 18 May 2027 – Saturday, 22 May 2027",
+    "date": "Tuesday, 18 May 2027",
     "url": "https://www.wmc.org.uk/en/whats-on/2027/hedd-wyn-eisteddfod-atomig",
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-05-11T17:39:34.134Z",
@@ -2298,7 +2403,7 @@
   },
   {
     "title": "EVERYBODY'S TALKING ABOUT JAMIE",
-    "date": "Tuesday, 1 June 2027 – Sunday, 6 June 2027",
+    "date": "Tuesday, 1 June 2027 – Saturday, 5 June 2027",
     "url": "https://www.wmc.org.uk/en/whats-on/2027/everybodys-talking-about-jamie",
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-05-11T17:39:34.134Z",
@@ -2315,7 +2420,7 @@
   },
   {
     "title": "PRETTY WOMAN",
-    "date": "Tuesday, 8 June 2027 – Sunday, 13 June 2027",
+    "date": "Tuesday, 8 June 2027 – Saturday, 12 June 2027",
     "url": "https://www.wmc.org.uk/en/whats-on/2027/pretty-woman",
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-05-11T17:39:34.134Z",
@@ -2332,7 +2437,7 @@
   },
   {
     "title": "BACK TO THE FUTURE",
-    "date": "Tuesday, 19 October 2027 – Saturday, 13 November 2027",
+    "date": "Tuesday, 19 October 2027",
     "url": "https://www.wmc.org.uk/en/whats-on/2027/back-to-the-future",
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-05-11T17:39:34.134Z",
@@ -2360,7 +2465,10 @@
     "eventStartDate": "2026-05-11T18:30:00.000Z",
     "eventEndDate": "2026-05-11T21:00:00.000Z",
     "ticketPriceTo": 36,
-    "primaryCategory": "Theatre"
+    "primaryCategory": "Theatre",
+    "musicGenres": [
+      "Other"
+    ]
   },
   {
     "title": "The Boy at the Back of the Class",
@@ -2384,7 +2492,10 @@
     "eventStartDate": "2026-05-12T18:00:00.000Z",
     "eventEndDate": "2026-05-16T21:00:00.000Z",
     "ticketPriceTo": 18,
-    "primaryCategory": "Theatre"
+    "primaryCategory": "Theatre",
+    "musicGenres": [
+      "Family"
+    ]
   },
   {
     "title": "David Olusoga: A Gun Through Time",
@@ -2408,7 +2519,10 @@
     "eventStartDate": "2026-05-19T18:30:00.000Z",
     "eventEndDate": "2026-05-19T21:00:00.000Z",
     "ticketPriceTo": 37,
-    "primaryCategory": "Theatre"
+    "primaryCategory": "Theatre",
+    "musicGenres": [
+      "Other"
+    ]
   },
   {
     "title": "Walk Right Back",
@@ -2432,7 +2546,10 @@
     "eventStartDate": "2026-05-20T18:30:00.000Z",
     "eventEndDate": "2026-05-20T21:00:00.000Z",
     "ticketPriceTo": 29,
-    "primaryCategory": "Theatre"
+    "primaryCategory": "Theatre",
+    "musicGenres": [
+      "Music"
+    ]
   },
   {
     "title": "Jasper Carrott",
@@ -2456,7 +2573,10 @@
     "eventStartDate": "2026-05-21T18:30:00.000Z",
     "eventEndDate": "2026-05-21T21:00:00.000Z",
     "ticketPriceTo": 35,
-    "primaryCategory": "Comedy"
+    "primaryCategory": "Comedy",
+    "musicGenres": [
+      "Comedy"
+    ]
   },
   {
     "title": "The Rocket Man : A Tribute To Elton John",
@@ -2480,7 +2600,10 @@
     "eventStartDate": "2026-05-22T18:30:00.000Z",
     "eventEndDate": "2026-05-22T21:00:00.000Z",
     "ticketPriceTo": 38,
-    "primaryCategory": "Theatre"
+    "primaryCategory": "Theatre",
+    "musicGenres": [
+      "Music"
+    ]
   },
   {
     "title": "The Enormous Crocodile",
@@ -2504,7 +2627,10 @@
     "eventStartDate": "2026-05-28T10:00:00.000Z",
     "eventEndDate": "2026-05-30T13:55:00.000Z",
     "ticketPriceTo": 17.5,
-    "primaryCategory": "Theatre"
+    "primaryCategory": "Theatre",
+    "musicGenres": [
+      "Family"
+    ]
   },
   {
     "title": "Alfie Boe",
@@ -2528,7 +2654,10 @@
     "eventStartDate": "2026-05-31T18:00:00.000Z",
     "eventEndDate": "2026-05-31T21:00:00.000Z",
     "ticketPriceTo": 45.25,
-    "primaryCategory": "Theatre"
+    "primaryCategory": "Theatre",
+    "musicGenres": [
+      "Music"
+    ]
   },
   {
     "title": "The Rocky Horror Show",
@@ -2552,7 +2681,10 @@
     "eventStartDate": "2026-06-01T19:00:00.000Z",
     "eventEndDate": "2026-06-06T21:30:00.000Z",
     "ticketPriceTo": 28.5,
-    "primaryCategory": "Theatre"
+    "primaryCategory": "Theatre",
+    "musicGenres": [
+      "Musical"
+    ]
   },
   {
     "title": "The Magic Of Motown",
@@ -2576,7 +2708,10 @@
     "eventStartDate": "2026-06-07T18:30:00.000Z",
     "eventEndDate": "2026-06-07T21:00:00.000Z",
     "ticketPriceTo": 39,
-    "primaryCategory": "Theatre"
+    "primaryCategory": "Theatre",
+    "musicGenres": [
+      "Music"
+    ]
   },
   {
     "title": "GABRIELLE APLIN – ENGLISH RAIN 2026",
@@ -2607,7 +2742,10 @@
     "primaryCategory": "Music",
     "genre": "Tribute / covers",
     "description": "SATURDAY 16TH MAY\n18:30 | 14+ (UNDER 16S TO BE ACCOMPANIED BY AN ADULT)",
-    "date": "Saturday, 16 May 2026"
+    "date": "Saturday, 16 May 2026",
+    "musicGenres": [
+      "Tribute / covers"
+    ]
   },
   {
     "title": "KIEFER SUTHERLAND",
@@ -2678,7 +2816,10 @@
     "primaryCategory": "Music",
     "genre": "Tribute / covers",
     "description": "SATURDAY 20TH JUNE\n17:00 | 18+",
-    "date": "Saturday, 20 June 2026"
+    "date": "Saturday, 20 June 2026",
+    "musicGenres": [
+      "Tribute / covers"
+    ]
   },
   {
     "title": "AIRBOURNE",
@@ -2749,7 +2890,10 @@
     "primaryCategory": "Music",
     "genre": "Tribute / covers",
     "description": "SATURDAY 8TH AUGUST\n19:00 | 14+ (UNDER 16S TO BE ACCOMPANIED BY AN ADULT)",
-    "date": "Saturday, 8 August 2026"
+    "date": "Saturday, 8 August 2026",
+    "musicGenres": [
+      "Tribute / covers"
+    ]
   },
   {
     "title": "COVER GIRL : TRIBUTE FESTIVAL",
@@ -2760,7 +2904,10 @@
     "primaryCategory": "Music",
     "genre": "Tribute / covers",
     "description": "SATURDAY 22ND AUGUST\n15:30 | 18+",
-    "date": "Saturday, 22 August 2026"
+    "date": "Saturday, 22 August 2026",
+    "musicGenres": [
+      "Tribute / covers"
+    ]
   },
   {
     "title": "FAYE WEBSTER",
@@ -2801,7 +2948,10 @@
     "primaryCategory": "Music",
     "genre": "Tribute / covers",
     "description": "FRIDAY 18TH SEPTEMBER\n19:00 | 14+ (UNDER 16S TO BE ACCOMPANIED BY AN ADULT)",
-    "date": "Friday, 18 September 2026"
+    "date": "Friday, 18 September 2026",
+    "musicGenres": [
+      "Tribute / covers"
+    ]
   },
   {
     "title": "THE BIG INDIE FESTIVAL COMES TO CARDIFF!",
@@ -3012,7 +3162,10 @@
     "primaryCategory": "Music",
     "genre": "Tribute / covers",
     "description": "FRIDAY 27TH NOVEMBER\n19:00 | 14+ (UNDER 16S TO BE ACCOMPANIED BY AN ADULT)",
-    "date": "Friday, 27 November 2026"
+    "date": "Friday, 27 November 2026",
+    "musicGenres": [
+      "Tribute / covers"
+    ]
   },
   {
     "title": "EMBRACE",
@@ -3192,7 +3345,10 @@
     "eventStartDate": "2026-06-20",
     "eventEndDate": "2026-06-20",
     "primaryCategory": "Sports",
-    "genre": "Sports"
+    "genre": "Sports",
+    "musicGenres": [
+      "Sports"
+    ]
   },
   {
     "title": "Lily Allen: Performs West End Girl",
@@ -3483,7 +3639,10 @@
     "eventStartDate": "2026-10-22",
     "eventEndDate": "2026-10-22",
     "primaryCategory": "Music",
-    "genre": "Classical"
+    "genre": "Classical",
+    "musicGenres": [
+      "Classical"
+    ]
   },
   {
     "title": "The Reytons",
@@ -3815,7 +3974,10 @@
     "eventStartDate": "2026-12-11",
     "eventEndDate": "2026-12-11",
     "primaryCategory": "Music",
-    "genre": "Tribute / covers"
+    "genre": "Tribute / covers",
+    "musicGenres": [
+      "Tribute / covers"
+    ]
   },
   {
     "title": "Queen of the Night - A Tribute to Whitney Houston",
@@ -3832,7 +3994,10 @@
     "eventStartDate": "2026-12-12T19:30:00Z",
     "eventEndDate": "2026-12-12",
     "primaryCategory": "Music",
-    "genre": "Tribute / covers"
+    "genre": "Tribute / covers",
+    "musicGenres": [
+      "Tribute / covers"
+    ]
   },
   {
     "title": "The Darkness",
@@ -3898,7 +4063,10 @@
     "eventStartDate": "2026-12-20",
     "eventEndDate": "2026-12-20",
     "primaryCategory": "Music",
-    "genre": "Classical"
+    "genre": "Classical",
+    "musicGenres": [
+      "Classical"
+    ]
   },
   {
     "title": "Paul Smith: Happy",
@@ -4753,7 +4921,10 @@
     "venue": "Cardiff SU",
     "scrapedAt": "2026-05-11T17:40:18.877Z",
     "primaryCategory": "Sports",
-    "genre": "Sports"
+    "genre": "Sports",
+    "musicGenres": [
+      "Sports"
+    ]
   },
   {
     "title": "Allah-Las",
@@ -4772,7 +4943,10 @@
     "venue": "Cardiff SU",
     "scrapedAt": "2026-05-11T17:40:18.877Z",
     "primaryCategory": "Sports",
-    "genre": "Sports"
+    "genre": "Sports",
+    "musicGenres": [
+      "Sports"
+    ]
   },
   {
     "title": "The Beast UK",
@@ -4800,7 +4974,10 @@
     "venue": "Cardiff SU",
     "scrapedAt": "2026-05-11T17:40:18.877Z",
     "primaryCategory": "Music",
-    "genre": "Tribute / covers"
+    "genre": "Tribute / covers",
+    "musicGenres": [
+      "Tribute / covers"
+    ]
   },
   {
     "title": "Chris Williamson: Mostly Wise",
@@ -4900,7 +5077,10 @@
     "venue": "Cardiff SU",
     "scrapedAt": "2026-05-11T17:40:18.878Z",
     "primaryCategory": "Music",
-    "genre": "Tribute / covers"
+    "genre": "Tribute / covers",
+    "musicGenres": [
+      "Tribute / covers"
+    ]
   },
   {
     "title": "COLIN BLUNSTONE",
@@ -5115,7 +5295,10 @@
     "venue": "Clwb Ifor Bach",
     "scrapedAt": "2026-05-11T17:40:22.172Z",
     "primaryCategory": "Music",
-    "description": "7.00pm • £13 • 18+"
+    "description": "7.00pm • £13 • 18+",
+    "ticketPriceFrom": 13,
+    "ticketCurrency": "GBP",
+    "ticketPriceLabel": "£13"
   },
   {
     "title": "DISINTEGRATION",
@@ -5167,7 +5350,10 @@
     "venue": "Clwb Ifor Bach",
     "scrapedAt": "2026-05-11T17:40:22.172Z",
     "primaryCategory": "Music",
-    "description": "THE GENTLE GOOD • 7.00pm • £25 • 14+ (Under 16's accompanied by an adult)"
+    "description": "THE GENTLE GOOD • 7.00pm • £25 • 14+ (Under 16's accompanied by an adult)",
+    "ticketPriceFrom": 25,
+    "ticketCurrency": "GBP",
+    "ticketPriceLabel": "£25"
   },
   {
     "title": "TAYLOR MORE SWIFTLY",
@@ -5177,7 +5363,10 @@
     "venue": "Clwb Ifor Bach",
     "scrapedAt": "2026-05-11T17:40:22.172Z",
     "primaryCategory": "Music",
-    "description": "7.00pm • £15 • 18+"
+    "description": "7.00pm • £15 • 18+",
+    "ticketPriceFrom": 15,
+    "ticketCurrency": "GBP",
+    "ticketPriceLabel": "£15"
   },
   {
     "title": "HYPHEN",
@@ -5187,7 +5376,10 @@
     "venue": "Clwb Ifor Bach",
     "scrapedAt": "2026-05-11T17:40:22.172Z",
     "primaryCategory": "Music",
-    "description": "NATIVE JAMES | MUDRAT | GEN & THE DEGENERATES • 7.00pm • £15 • 18+"
+    "description": "NATIVE JAMES | MUDRAT | GEN & THE DEGENERATES • 7.00pm • £15 • 18+",
+    "ticketPriceFrom": 15,
+    "ticketCurrency": "GBP",
+    "ticketPriceLabel": "£15"
   },
   {
     "title": "RUSH",
@@ -5218,7 +5410,10 @@
     "venue": "Clwb Ifor Bach",
     "scrapedAt": "2026-05-11T17:40:22.172Z",
     "primaryCategory": "Music",
-    "description": "7.30pm • £24 • 14+"
+    "description": "7.30pm • £24 • 14+",
+    "ticketPriceFrom": 24,
+    "ticketCurrency": "GBP",
+    "ticketPriceLabel": "£24"
   },
   {
     "title": "DEAD DADS CLUB",
@@ -5228,7 +5423,10 @@
     "venue": "Clwb Ifor Bach",
     "scrapedAt": "2026-05-11T17:40:22.172Z",
     "primaryCategory": "Music",
-    "description": "7.30pm • £12.50 • 14+"
+    "description": "7.30pm • £12.50 • 14+",
+    "ticketPriceFrom": 12.5,
+    "ticketCurrency": "GBP",
+    "ticketPriceLabel": "£12.50"
   },
   {
     "title": "SGRECH FLÊR SHOWCASE",
@@ -5238,7 +5436,10 @@
     "venue": "Clwb Ifor Bach",
     "scrapedAt": "2026-05-11T17:40:22.172Z",
     "primaryCategory": "Music",
-    "description": "EÄDYTH | DJ DILYS + MWY • 7.00pm • £3 • 14+"
+    "description": "EÄDYTH | DJ DILYS + MWY • 7.00pm • £3 • 14+",
+    "ticketPriceFrom": 3,
+    "ticketCurrency": "GBP",
+    "ticketPriceLabel": "£3"
   },
   {
     "title": "ONE FOOT SKANKERS | JUNGLE, HARDCORE, TEKNO",
@@ -5269,7 +5470,10 @@
     "venue": "Clwb Ifor Bach",
     "scrapedAt": "2026-05-11T17:40:22.172Z",
     "primaryCategory": "Music",
-    "description": "MERYL STREEK | SHLUG • 7.00pm • £22 • 14+ (Under 16's accompanied by an adult)"
+    "description": "MERYL STREEK | SHLUG • 7.00pm • £22 • 14+ (Under 16's accompanied by an adult)",
+    "ticketPriceFrom": 22,
+    "ticketCurrency": "GBP",
+    "ticketPriceLabel": "£22"
   },
   {
     "title": "UNDERGRND",
@@ -5300,7 +5504,10 @@
     "venue": "Clwb Ifor Bach",
     "scrapedAt": "2026-05-11T17:40:22.172Z",
     "primaryCategory": "Music",
-    "description": "7.00pm • £20 • 18+"
+    "description": "7.00pm • £20 • 18+",
+    "ticketPriceFrom": 20,
+    "ticketCurrency": "GBP",
+    "ticketPriceLabel": "£20"
   },
   {
     "title": "TOODLES & THE HECTIC PITY",
@@ -5310,7 +5517,10 @@
     "venue": "Clwb Ifor Bach",
     "scrapedAt": "2026-05-11T17:40:22.172Z",
     "primaryCategory": "Music",
-    "description": "7.00pm • £10 • 18+"
+    "description": "7.00pm • £10 • 18+",
+    "ticketPriceFrom": 10,
+    "ticketCurrency": "GBP",
+    "ticketPriceLabel": "£10"
   },
   {
     "title": "RUSH",
@@ -5362,7 +5572,10 @@
     "venue": "Clwb Ifor Bach",
     "scrapedAt": "2026-05-11T17:40:22.172Z",
     "primaryCategory": "Music",
-    "description": "7.00pm • £13 • 18+"
+    "description": "7.00pm • £13 • 18+",
+    "ticketPriceFrom": 13,
+    "ticketCurrency": "GBP",
+    "ticketPriceLabel": "£13"
   },
   {
     "title": "JESCA HOOP @ THE GATE",
@@ -5372,7 +5585,10 @@
     "venue": "Clwb Ifor Bach",
     "scrapedAt": "2026-05-11T17:40:22.172Z",
     "primaryCategory": "Music",
-    "description": "HOT SPRINGS • 7.00pm • £20 • 14+"
+    "description": "HOT SPRINGS • 7.00pm • £20 • 14+",
+    "ticketPriceFrom": 20,
+    "ticketCurrency": "GBP",
+    "ticketPriceLabel": "£20"
   },
   {
     "title": "OFFICE DOG",
@@ -5382,7 +5598,10 @@
     "venue": "Clwb Ifor Bach",
     "scrapedAt": "2026-05-11T17:40:22.172Z",
     "primaryCategory": "Music",
-    "description": "7.00pm • £10 • 18+"
+    "description": "7.00pm • £10 • 18+",
+    "ticketPriceFrom": 10,
+    "ticketCurrency": "GBP",
+    "ticketPriceLabel": "£10"
   },
   {
     "title": "STARBURSTER",
@@ -5434,7 +5653,10 @@
     "venue": "Clwb Ifor Bach",
     "scrapedAt": "2026-05-11T17:40:22.172Z",
     "primaryCategory": "Music",
-    "description": "EM KOKO • 7.00pm • £13 • 18+"
+    "description": "EM KOKO • 7.00pm • £13 • 18+",
+    "ticketPriceFrom": 13,
+    "ticketCurrency": "GBP",
+    "ticketPriceLabel": "£13"
   },
   {
     "title": "TAKE ME OUT",
@@ -5486,7 +5708,10 @@
     "venue": "Clwb Ifor Bach",
     "scrapedAt": "2026-05-11T17:40:22.172Z",
     "primaryCategory": "Music",
-    "description": "7.30pm • £15 • 14+"
+    "description": "7.30pm • £15 • 14+",
+    "ticketPriceFrom": 15,
+    "ticketCurrency": "GBP",
+    "ticketPriceLabel": "£15"
   },
   {
     "title": "COURTNEY MARIE ANDREWS @ THE GATE",
@@ -5496,7 +5721,10 @@
     "venue": "Clwb Ifor Bach",
     "scrapedAt": "2026-05-11T17:40:22.172Z",
     "primaryCategory": "Music",
-    "description": "7.00pm • £25 • 14+"
+    "description": "7.00pm • £25 • 14+",
+    "ticketPriceFrom": 25,
+    "ticketCurrency": "GBP",
+    "ticketPriceLabel": "£25"
   },
   {
     "title": "TRASHPOP",
@@ -5527,7 +5755,10 @@
     "venue": "Clwb Ifor Bach",
     "scrapedAt": "2026-05-11T17:40:22.172Z",
     "primaryCategory": "Music",
-    "description": "SPIT HOOD | GWONSUN | POGRIFF • 7.00pm • £10 • 18+"
+    "description": "SPIT HOOD | GWONSUN | POGRIFF • 7.00pm • £10 • 18+",
+    "ticketPriceFrom": 10,
+    "ticketCurrency": "GBP",
+    "ticketPriceLabel": "£10"
   },
   {
     "title": "DIRTBAG",
@@ -5579,7 +5810,10 @@
     "venue": "Clwb Ifor Bach",
     "scrapedAt": "2026-05-11T17:40:22.172Z",
     "primaryCategory": "Music",
-    "description": "7.00pm • £10 • 18+"
+    "description": "7.00pm • £10 • 18+",
+    "ticketPriceFrom": 10,
+    "ticketCurrency": "GBP",
+    "ticketPriceLabel": "£10"
   },
   {
     "title": "RUSH",
@@ -5641,7 +5875,10 @@
     "venue": "Clwb Ifor Bach",
     "scrapedAt": "2026-05-11T17:40:22.172Z",
     "primaryCategory": "Music",
-    "description": "7.00pm • £12.50 • 14+"
+    "description": "7.00pm • £12.50 • 14+",
+    "ticketPriceFrom": 12.5,
+    "ticketCurrency": "GBP",
+    "ticketPriceLabel": "£12.50"
   },
   {
     "title": "BEN OTTEWELL (GOMEZ) & JAMES WALSH (STARSAILOR)",
@@ -5651,7 +5888,10 @@
     "venue": "Clwb Ifor Bach",
     "scrapedAt": "2026-05-11T17:40:22.172Z",
     "primaryCategory": "Music",
-    "description": "7.00pm • £28 • 18+"
+    "description": "7.00pm • £28 • 18+",
+    "ticketPriceFrom": 28,
+    "ticketCurrency": "GBP",
+    "ticketPriceLabel": "£28"
   },
   {
     "title": "2016 PARTY",
@@ -5682,7 +5922,10 @@
     "venue": "Clwb Ifor Bach",
     "scrapedAt": "2026-05-11T17:40:22.172Z",
     "primaryCategory": "Music",
-    "description": "7.00pm • £14 • 14+ (Under 16's accompanied by an adult)"
+    "description": "7.00pm • £14 • 14+ (Under 16's accompanied by an adult)",
+    "ticketPriceFrom": 14,
+    "ticketCurrency": "GBP",
+    "ticketPriceLabel": "£14"
   },
   {
     "title": "TRAMPOLENE",
@@ -5692,7 +5935,10 @@
     "venue": "Clwb Ifor Bach",
     "scrapedAt": "2026-05-11T17:40:22.172Z",
     "primaryCategory": "Music",
-    "description": "SLAK • 7.00pm • £12.50 • 18+"
+    "description": "SLAK • 7.00pm • £12.50 • 18+",
+    "ticketPriceFrom": 12.5,
+    "ticketCurrency": "GBP",
+    "ticketPriceLabel": "£12.50"
   },
   {
     "title": "TOOTH",
@@ -5702,7 +5948,10 @@
     "venue": "Clwb Ifor Bach",
     "scrapedAt": "2026-05-11T17:40:22.172Z",
     "primaryCategory": "Music",
-    "description": "7.00pm • £12.50 • 18+"
+    "description": "7.00pm • £12.50 • 18+",
+    "ticketPriceFrom": 12.5,
+    "ticketCurrency": "GBP",
+    "ticketPriceLabel": "£12.50"
   },
   {
     "title": "CIWB",
@@ -5712,7 +5961,10 @@
     "venue": "Clwb Ifor Bach",
     "scrapedAt": "2026-05-11T17:40:22.172Z",
     "primaryCategory": "Music",
-    "description": "7.00pm • £13 • 18+"
+    "description": "7.00pm • £13 • 18+",
+    "ticketPriceFrom": 13,
+    "ticketCurrency": "GBP",
+    "ticketPriceLabel": "£13"
   },
   {
     "title": "AIRBOURNE @ TRAMSHED",
@@ -5722,7 +5974,10 @@
     "venue": "Clwb Ifor Bach",
     "scrapedAt": "2026-05-11T17:40:22.172Z",
     "primaryCategory": "Music",
-    "description": "7.00pm • £27 • 14+ (under 16's must be accompanied by an adult)"
+    "description": "7.00pm • £27 • 14+ (under 16's must be accompanied by an adult)",
+    "ticketPriceFrom": 27,
+    "ticketCurrency": "GBP",
+    "ticketPriceLabel": "£27"
   },
   {
     "title": "THORNS",
@@ -5732,7 +5987,10 @@
     "venue": "Clwb Ifor Bach",
     "scrapedAt": "2026-05-11T17:40:22.172Z",
     "primaryCategory": "Music",
-    "description": "7.00pm • £12 • 18+"
+    "description": "7.00pm • £12 • 18+",
+    "ticketPriceFrom": 12,
+    "ticketCurrency": "GBP",
+    "ticketPriceLabel": "£12"
   },
   {
     "title": "THIS IS THE KIT",
@@ -5742,7 +6000,10 @@
     "venue": "Clwb Ifor Bach",
     "scrapedAt": "2026-05-11T17:40:22.172Z",
     "primaryCategory": "Music",
-    "description": "7.30pm • £26 • 14+"
+    "description": "7.30pm • £26 • 14+",
+    "ticketPriceFrom": 26,
+    "ticketCurrency": "GBP",
+    "ticketPriceLabel": "£26"
   },
   {
     "title": "HO99O9",
@@ -5752,7 +6013,10 @@
     "venue": "Clwb Ifor Bach",
     "scrapedAt": "2026-05-11T17:40:22.172Z",
     "primaryCategory": "Music",
-    "description": "7.00pm • £23 • 18+"
+    "description": "7.00pm • £23 • 18+",
+    "ticketPriceFrom": 23,
+    "ticketCurrency": "GBP",
+    "ticketPriceLabel": "£23"
   },
   {
     "title": "BAT SABBATH",
@@ -5762,7 +6026,10 @@
     "venue": "Clwb Ifor Bach",
     "scrapedAt": "2026-05-11T17:40:22.172Z",
     "primaryCategory": "Music",
-    "description": "7.30pm • £21.50 • 14+"
+    "description": "7.30pm • £21.50 • 14+",
+    "ticketPriceFrom": 21.5,
+    "ticketCurrency": "GBP",
+    "ticketPriceLabel": "£21.50"
   },
   {
     "title": "SELF ESTEEM @ CARDIFF CASTLE",
@@ -5772,7 +6039,10 @@
     "venue": "Clwb Ifor Bach",
     "scrapedAt": "2026-05-11T17:40:22.172Z",
     "primaryCategory": "Music",
-    "description": "KAE TEMPEST | JOSH IDEHAN • 5.00pm • £49.50 • 14+"
+    "description": "KAE TEMPEST | JOSH IDEHAN • 5.00pm • £49.50 • 14+",
+    "ticketPriceFrom": 49.5,
+    "ticketCurrency": "GBP",
+    "ticketPriceLabel": "£49.50"
   },
   {
     "title": "THE FLAMING LIPS @ DEPOT",
@@ -5782,7 +6052,10 @@
     "venue": "Clwb Ifor Bach",
     "scrapedAt": "2026-05-11T17:40:22.172Z",
     "primaryCategory": "Music",
-    "description": "7.00pm • £45 • 14+"
+    "description": "7.00pm • £45 • 14+",
+    "ticketPriceFrom": 45,
+    "ticketCurrency": "GBP",
+    "ticketPriceLabel": "£45"
   },
   {
     "title": "HOT 8 BRASS BAND @ CORN EXCHANGE",
@@ -5792,7 +6065,10 @@
     "venue": "Clwb Ifor Bach",
     "scrapedAt": "2026-05-11T17:40:22.172Z",
     "primaryCategory": "Music",
-    "description": "7.30pm • £25 • 16+"
+    "description": "7.30pm • £25 • 16+",
+    "ticketPriceFrom": 25,
+    "ticketCurrency": "GBP",
+    "ticketPriceLabel": "£25"
   },
   {
     "title": "NOASIS",
@@ -5802,7 +6078,10 @@
     "venue": "Clwb Ifor Bach",
     "scrapedAt": "2026-05-11T17:40:22.172Z",
     "primaryCategory": "Music",
-    "description": "7.00pm • £20 • 18+"
+    "description": "7.00pm • £20 • 18+",
+    "ticketPriceFrom": 20,
+    "ticketCurrency": "GBP",
+    "ticketPriceLabel": "£20"
   },
   {
     "title": "FAYE WEBSTER @ TRAMSHED",
@@ -5812,7 +6091,10 @@
     "venue": "Clwb Ifor Bach",
     "scrapedAt": "2026-05-11T17:40:22.172Z",
     "primaryCategory": "Music",
-    "description": "7.00pm • £26 • 14+ (under 16's must be accompanied by an adult)"
+    "description": "7.00pm • £26 • 14+ (under 16's must be accompanied by an adult)",
+    "ticketPriceFrom": 26,
+    "ticketCurrency": "GBP",
+    "ticketPriceLabel": "£26"
   },
   {
     "title": "TEEN MORTGAGE",
@@ -5822,7 +6104,10 @@
     "venue": "Clwb Ifor Bach",
     "scrapedAt": "2026-05-11T17:40:22.172Z",
     "primaryCategory": "Music",
-    "description": "COWBOY HUNTERS • 7.00pm • £20 • 18+"
+    "description": "COWBOY HUNTERS • 7.00pm • £20 • 18+",
+    "ticketPriceFrom": 20,
+    "ticketCurrency": "GBP",
+    "ticketPriceLabel": "£20"
   },
   {
     "title": "ALLAH-LAS @ Y PLAS",
@@ -5832,7 +6117,10 @@
     "venue": "Clwb Ifor Bach",
     "scrapedAt": "2026-05-11T17:40:22.172Z",
     "primaryCategory": "Music",
-    "description": "7.00pm • £22 • 14+"
+    "description": "7.00pm • £22 • 14+",
+    "ticketPriceFrom": 22,
+    "ticketCurrency": "GBP",
+    "ticketPriceLabel": "£22"
   },
   {
     "title": "CASEY @ THE GLOBE",
@@ -5842,7 +6130,10 @@
     "venue": "Clwb Ifor Bach",
     "scrapedAt": "2026-05-11T17:40:22.172Z",
     "primaryCategory": "Music",
-    "description": "DOWNSWING • 12.00am • £22.50 • 18+"
+    "description": "DOWNSWING • 12.00am • £22.50 • 18+",
+    "ticketPriceFrom": 22.5,
+    "ticketCurrency": "GBP",
+    "ticketPriceLabel": "£22.50"
   },
   {
     "title": "MARTHA",
@@ -5852,7 +6143,10 @@
     "venue": "Clwb Ifor Bach",
     "scrapedAt": "2026-05-11T17:40:22.172Z",
     "primaryCategory": "Music",
-    "description": "7.30pm • £16 • 14+ (Under 16's accompanied by an adult)"
+    "description": "7.30pm • £16 • 14+ (Under 16's accompanied by an adult)",
+    "ticketPriceFrom": 16,
+    "ticketCurrency": "GBP",
+    "ticketPriceLabel": "£16"
   },
   {
     "title": "ELLA LANGLEY UK",
@@ -5862,7 +6156,10 @@
     "venue": "Clwb Ifor Bach",
     "scrapedAt": "2026-05-11T17:40:22.172Z",
     "primaryCategory": "Music",
-    "description": "7.00pm • £15 • 18+"
+    "description": "7.00pm • £15 • 18+",
+    "ticketPriceFrom": 15,
+    "ticketCurrency": "GBP",
+    "ticketPriceLabel": "£15"
   },
   {
     "title": "FRANCIS OF DELIRIUM",
@@ -5872,7 +6169,10 @@
     "venue": "Clwb Ifor Bach",
     "scrapedAt": "2026-05-11T17:40:22.172Z",
     "primaryCategory": "Music",
-    "description": "7.00pm • £12.50 • 18+"
+    "description": "7.00pm • £12.50 • 18+",
+    "ticketPriceFrom": 12.5,
+    "ticketCurrency": "GBP",
+    "ticketPriceLabel": "£12.50"
   },
   {
     "title": "SWIM DEEP",
@@ -5882,7 +6182,10 @@
     "venue": "Clwb Ifor Bach",
     "scrapedAt": "2026-05-11T17:40:22.172Z",
     "primaryCategory": "Music",
-    "description": "7.00pm • £18 • 14+ (Under 16's accompanied by an adult)"
+    "description": "7.00pm • £18 • 14+ (Under 16's accompanied by an adult)",
+    "ticketPriceFrom": 18,
+    "ticketCurrency": "GBP",
+    "ticketPriceLabel": "£18"
   },
   {
     "title": "SPACE",
@@ -5892,7 +6195,10 @@
     "venue": "Clwb Ifor Bach",
     "scrapedAt": "2026-05-11T17:40:22.172Z",
     "primaryCategory": "Music",
-    "description": "7.00pm • £23.50 • 18+"
+    "description": "7.00pm • £23.50 • 18+",
+    "ticketPriceFrom": 23.5,
+    "ticketCurrency": "GBP",
+    "ticketPriceLabel": "£23.50"
   },
   {
     "title": "MAN/WOMAN/CHAINSAW @ THE GLOBE",
@@ -5902,7 +6208,10 @@
     "venue": "Clwb Ifor Bach",
     "scrapedAt": "2026-05-11T17:40:22.172Z",
     "primaryCategory": "Music",
-    "description": "7.00pm • £16 • 14+ (under 16's must be accompanied by an adult)"
+    "description": "7.00pm • £16 • 14+ (under 16's must be accompanied by an adult)",
+    "ticketPriceFrom": 16,
+    "ticketCurrency": "GBP",
+    "ticketPriceLabel": "£16"
   },
   {
     "title": "LADYLIKE",
@@ -5912,7 +6221,10 @@
     "venue": "Clwb Ifor Bach",
     "scrapedAt": "2026-05-11T17:40:22.172Z",
     "primaryCategory": "Music",
-    "description": "7.00pm • £10 • 18+"
+    "description": "7.00pm • £10 • 18+",
+    "ticketPriceFrom": 10,
+    "ticketCurrency": "GBP",
+    "ticketPriceLabel": "£10"
   },
   {
     "title": "IBIBIO SOUND MACHINE",
@@ -5922,7 +6234,10 @@
     "venue": "Clwb Ifor Bach",
     "scrapedAt": "2026-05-11T17:40:22.172Z",
     "primaryCategory": "Music",
-    "description": "7.00pm • £25 • 18+"
+    "description": "7.00pm • £25 • 18+",
+    "ticketPriceFrom": 25,
+    "ticketCurrency": "GBP",
+    "ticketPriceLabel": "£25"
   },
   {
     "title": "DONNY BENÉT @ TRAMSHED",
@@ -5932,7 +6247,10 @@
     "venue": "Clwb Ifor Bach",
     "scrapedAt": "2026-05-11T17:40:22.172Z",
     "primaryCategory": "Music",
-    "description": "7.00pm • £22.50 • 14+ (Under 16s to be accompanied by an adult)"
+    "description": "7.00pm • £22.50 • 14+ (Under 16s to be accompanied by an adult)",
+    "ticketPriceFrom": 22.5,
+    "ticketCurrency": "GBP",
+    "ticketPriceLabel": "£22.50"
   },
   {
     "title": "ARKAYLA",
@@ -5942,7 +6260,10 @@
     "venue": "Clwb Ifor Bach",
     "scrapedAt": "2026-05-11T17:40:22.172Z",
     "primaryCategory": "Music",
-    "description": "7.00pm • £14 • 18+"
+    "description": "7.00pm • £14 • 18+",
+    "ticketPriceFrom": 14,
+    "ticketCurrency": "GBP",
+    "ticketPriceLabel": "£14"
   },
   {
     "title": "SKATING POLLY",
@@ -5952,7 +6273,10 @@
     "venue": "Clwb Ifor Bach",
     "scrapedAt": "2026-05-11T17:40:22.172Z",
     "primaryCategory": "Music",
-    "description": "LORD FRIDAY THE 13TH • 7.30pm • £17 • 14+ (Under 16's accompanied by an adult)"
+    "description": "LORD FRIDAY THE 13TH • 7.30pm • £17 • 14+ (Under 16's accompanied by an adult)",
+    "ticketPriceFrom": 17,
+    "ticketCurrency": "GBP",
+    "ticketPriceLabel": "£17"
   },
   {
     "title": "ADULT DVD",
@@ -5962,7 +6286,10 @@
     "venue": "Clwb Ifor Bach",
     "scrapedAt": "2026-05-11T17:40:22.172Z",
     "primaryCategory": "Music",
-    "description": "TURNSPIT • 7.30pm • £15 • 14+"
+    "description": "TURNSPIT • 7.30pm • £15 • 14+",
+    "ticketPriceFrom": 15,
+    "ticketCurrency": "GBP",
+    "ticketPriceLabel": "£15"
   },
   {
     "title": "PANCHIKO @ TRAMSHED",
@@ -5972,7 +6299,10 @@
     "venue": "Clwb Ifor Bach",
     "scrapedAt": "2026-05-11T17:40:22.172Z",
     "primaryCategory": "Music",
-    "description": "ALISON'S HALO • 7.00pm • £26 • 14+ (under 16's must be accompanied by an adult)"
+    "description": "ALISON'S HALO • 7.00pm • £26 • 14+ (under 16's must be accompanied by an adult)",
+    "ticketPriceFrom": 26,
+    "ticketCurrency": "GBP",
+    "ticketPriceLabel": "£26"
   },
   {
     "title": "SWN FESTIVAL 2026",
@@ -5997,7 +6327,10 @@
     "venue": "Clwb Ifor Bach",
     "scrapedAt": "2026-05-11T17:40:22.172Z",
     "primaryCategory": "Music",
-    "description": "7.30pm • £18 • 14+"
+    "description": "7.30pm • £18 • 14+",
+    "ticketPriceFrom": 18,
+    "ticketCurrency": "GBP",
+    "ticketPriceLabel": "£18"
   },
   {
     "title": "HIGH FADE",
@@ -6007,7 +6340,10 @@
     "venue": "Clwb Ifor Bach",
     "scrapedAt": "2026-05-11T17:40:22.172Z",
     "primaryCategory": "Music",
-    "description": "7.30pm • £20 • 14+"
+    "description": "7.30pm • £20 • 14+",
+    "ticketPriceFrom": 20,
+    "ticketCurrency": "GBP",
+    "ticketPriceLabel": "£20"
   },
   {
     "title": "STU LARSEN",
@@ -6017,7 +6353,10 @@
     "venue": "Clwb Ifor Bach",
     "scrapedAt": "2026-05-11T17:40:22.172Z",
     "primaryCategory": "Music",
-    "description": "7.30pm • £16.50 • 14+"
+    "description": "7.30pm • £16.50 • 14+",
+    "ticketPriceFrom": 16.5,
+    "ticketCurrency": "GBP",
+    "ticketPriceLabel": "£16.50"
   },
   {
     "title": "THE ALLERGIES",
@@ -6027,7 +6366,10 @@
     "venue": "Clwb Ifor Bach",
     "scrapedAt": "2026-05-11T17:40:22.173Z",
     "primaryCategory": "Music",
-    "description": "7.00pm • £22.50 • 14+"
+    "description": "7.00pm • £22.50 • 14+",
+    "ticketPriceFrom": 22.5,
+    "ticketCurrency": "GBP",
+    "ticketPriceLabel": "£22.50"
   },
   {
     "title": "TEENAGE FANCLUB",
@@ -6037,7 +6379,10 @@
     "venue": "Clwb Ifor Bach",
     "scrapedAt": "2026-05-11T17:40:22.173Z",
     "primaryCategory": "Music",
-    "description": "7.00pm • £30 • 14+"
+    "description": "7.00pm • £30 • 14+",
+    "ticketPriceFrom": 30,
+    "ticketCurrency": "GBP",
+    "ticketPriceLabel": "£30"
   },
   {
     "title": "BLEECH 9:3",
@@ -6047,7 +6392,10 @@
     "venue": "Clwb Ifor Bach",
     "scrapedAt": "2026-05-11T17:40:22.173Z",
     "primaryCategory": "Music",
-    "description": "7.00pm • £17 • 18+"
+    "description": "7.00pm • £17 • 18+",
+    "ticketPriceFrom": 17,
+    "ticketCurrency": "GBP",
+    "ticketPriceLabel": "£17"
   },
   {
     "title": "RAMMLIED",
@@ -6057,6 +6405,9 @@
     "venue": "Clwb Ifor Bach",
     "scrapedAt": "2026-05-11T17:40:22.173Z",
     "primaryCategory": "Music",
-    "description": "7.00pm • £14 • 18+"
+    "description": "7.00pm • £14 • 18+",
+    "ticketPriceFrom": 14,
+    "ticketCurrency": "GBP",
+    "ticketPriceLabel": "£14"
   }
 ]

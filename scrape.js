@@ -1,5 +1,6 @@
 const { chromium } = require('playwright');
 const fs = require('fs');
+const axios = require('axios');
 
 const GOTO = { waitUntil: 'domcontentloaded', timeout: 90_000 };
 const SKIP_ENRICH = process.env.SCRAPE_NO_ENRICH === '1';
@@ -237,6 +238,35 @@ async function fetchPageEnrichment(page, url) {
       return [...new Set(g)].join(', ');
     }
 
+    function performerNamesOf(evLike) {
+      if (!evLike) return [];
+      const perf = evLike.performer;
+      const list = Array.isArray(perf) ? perf : perf ? [perf] : [];
+      const names = [];
+      for (const p of list) {
+        if (p == null) continue;
+        if (typeof p === 'string') {
+          const s = p.trim();
+          if (s) names.push(s);
+          continue;
+        }
+        if (typeof p === 'object' && p.name) {
+          const s = String(p.name).trim();
+          if (s) names.push(s);
+        }
+      }
+      // Dedupe (case-insensitive) while keeping first-seen casing.
+      const seen = new Set();
+      const out = [];
+      for (const n of names) {
+        const k = n.toLowerCase();
+        if (seen.has(k)) continue;
+        seen.add(k);
+        out.push(n);
+      }
+      return out;
+    }
+
     const ogDesc = meta('meta[property="og:description"]') || meta('meta[name="description"]');
     const ogImage = meta('meta[property="og:image"]');
     const ogTitle = meta('meta[property="og:title"]');
@@ -248,12 +278,35 @@ async function fetchPageEnrichment(page, url) {
     let imageUrl = ogImage || '';
     let offersFromEvent = null;
     let eventKeywords = '';
+    let musicGenresFromSchema = [];
+    let performerNames = [];
 
     if (best) {
       if (typeof best.description === 'string') description = best.description.trim();
       const g = best.genre;
       genre = Array.isArray(g) ? g.filter(Boolean).join(', ') : typeof g === 'string' ? g.trim() : '';
       const pg = performerGenresOf(best);
+
+      // musicGenresFromSchema is an array for better downstream merging/dedupe.
+      const musicSet = new Set();
+      const addFrom = (val) => {
+        if (val == null) return;
+        if (Array.isArray(val)) {
+          for (const x of val) addFrom(x);
+          return;
+        }
+        const s = String(val).trim();
+        if (!s) return;
+        for (const part of s.split(/[;,]/g)) {
+          const q = String(part || '').trim();
+          if (q) musicSet.add(q);
+        }
+      };
+      addFrom(g);
+      addFrom(pg);
+      musicGenresFromSchema = [...musicSet];
+      performerNames = performerNamesOf(best);
+
       if (pg) {
         const parts = [
           ...new Set(
@@ -312,6 +365,7 @@ async function fetchPageEnrichment(page, url) {
       description: description || '',
       shortDescription: ogDesc || '',
       genre,
+      musicGenresFromSchema,
       imageUrl: imageUrl || '',
       imageUrls: [],
       startDate,
@@ -320,6 +374,7 @@ async function fetchPageEnrichment(page, url) {
       offersFromGraph: graphOfferNodes.slice(0, 48),
       breadcrumbTrail,
       eventKeywords,
+      performerNames,
       microdataPrice:
         microLow != null && !Number.isNaN(microLow)
           ? { low: microLow, high: microHigh != null && !Number.isNaN(microHigh) ? microHigh : microLow, currency: microCur || 'GBP' }
@@ -723,6 +778,96 @@ function subcategoryLineAsGenreHint(raw) {
   return s.split(';')[0].trim();
 }
 
+function splitGenreStringToMusicGenres(genreString) {
+  if (!genreString || typeof genreString !== 'string') return [];
+  const parts = genreString
+    .split(/[,;]/g)
+    .map((s) => String(s || '').trim())
+    .filter(Boolean);
+  // Keep list short to avoid bloat.
+  return parts.slice(0, 12);
+}
+
+function unionMusicGenres(existing, incoming) {
+  const out = [];
+  const seen = new Set();
+  const add = (s) => {
+    if (s == null) return;
+    const str = String(s).trim();
+    if (!str) return;
+    const k = str.toLowerCase();
+    if (seen.has(k)) return;
+    seen.add(k);
+    out.push(str);
+  };
+  for (const s of existing || []) add(s);
+  for (const s of incoming || []) add(s);
+  return out;
+}
+
+function normalizeArtistNameForMb(name) {
+  if (!name) return '';
+  return String(name)
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+function extractMusicBrainzGenreNames(mbArtistJson) {
+  if (!mbArtistJson || typeof mbArtistJson !== 'object') return [];
+  const list = Array.isArray(mbArtistJson.genres)
+    ? mbArtistJson.genres
+    : Array.isArray(mbArtistJson.tags)
+      ? mbArtistJson.tags
+      : [];
+
+  const out = [];
+  const seen = new Set();
+  for (const g of list) {
+    if (g == null) continue;
+    const name = typeof g === 'string' ? g : g.name || g.genre || g.tag || '';
+    const s = String(name || '').trim();
+    if (!s) continue;
+    const k = s.toLowerCase();
+    if (seen.has(k)) continue;
+    seen.add(k);
+    out.push(s);
+  }
+  return out;
+}
+
+async function fetchMusicBrainzGenresForArtistName(artistName, cacheByKey, mbUserAgent) {
+  const raw = normalizeArtistNameForMb(artistName);
+  if (!raw) return [];
+
+  const key = raw.toLowerCase();
+  if (cacheByKey.has(key)) return cacheByKey.get(key);
+
+  const p = (async () => {
+    try {
+      const q = `artist:${raw}`;
+      const searchUrl = `https://musicbrainz.org/ws/2/artist/?query=${encodeURIComponent(q)}&fmt=json&limit=1`;
+      const searchRes = await axios.get(searchUrl, {
+        headers: { 'User-Agent': mbUserAgent },
+        timeout: 15_000,
+      });
+      const mbid = searchRes?.data?.artists?.[0]?.id;
+      if (!mbid) return [];
+
+      const artistUrl = `https://musicbrainz.org/ws/2/artist/${mbid}?inc=genres&fmt=json`;
+      const artistRes = await axios.get(artistUrl, {
+        headers: { 'User-Agent': mbUserAgent },
+        timeout: 15_000,
+      });
+      return extractMusicBrainzGenreNames(artistRes?.data);
+    } catch {
+      return [];
+    }
+  })();
+
+  cacheByKey.set(key, p);
+  return p;
+}
+
 function mergeEnrichmentIntoEvent(ev, en) {
   if (!en) return ev;
   let out = { ...ev };
@@ -735,6 +880,13 @@ function mergeEnrichmentIntoEvent(ev, en) {
     if (!out.description) out.description = shortD;
   }
   if (en.genre && !out.genre) out.genre = en.genre;
+
+  const schemaMusicGenres = Array.isArray(en.musicGenresFromSchema) ? en.musicGenresFromSchema : [];
+  if (schemaMusicGenres.length) {
+    const existing = Array.isArray(out.musicGenres) ? out.musicGenres : [];
+    const merged = unionMusicGenres(existing, schemaMusicGenres);
+    if (merged.length) out.musicGenres = merged;
+  }
 
   const img = (en.imageUrl || '').trim();
   if (img) {
@@ -789,13 +941,19 @@ function tryAttachPriceFromListingText(ev) {
 }
 
 function finalizeEvent(ev) {
+  const existingMusicGenres = Array.isArray(ev.musicGenres) ? ev.musicGenres : [];
+  let musicGenres = existingMusicGenres.length ? existingMusicGenres : [];
+
+  const musicGenreHint = musicGenres.length ? musicGenres.join(', ') : '';
   const genre = (
     ev.genre ||
+    musicGenreHint ||
     subcategoryLineAsGenreHint(ev.subcategory) ||
     categoryAsGenreHint(ev.category) ||
     inferGenreFromTitle(ev.title) ||
     ''
   ).trim();
+
   const primaryCategory = inferPrimaryCategory({ ...ev, genre });
   const description =
     (ev.description || '').trim() ||
@@ -803,11 +961,16 @@ function finalizeEvent(ev) {
     (ev.details || '').trim() ||
     '';
 
+  if (!musicGenres.length && genre) {
+    musicGenres = splitGenreStringToMusicGenres(genre);
+  }
+
   let next = {
     ...ev,
     primaryCategory,
     ...(genre ? { genre } : {}),
     ...(description ? { description } : {}),
+    ...(musicGenres.length ? { musicGenres } : {}),
   };
 
   const date = deriveHumanEventDate(next);
@@ -870,10 +1033,44 @@ async function enrichAllEvents(context, allEvents) {
 
   await Promise.all(Array.from({ length: ENRICH_CONCURRENCY }, () => worker()));
 
-  const merged = allEvents.map((ev) => {
-    const en = ev.url ? cache.get(ev.url) : null;
-    return finalizeEvent(mergeEnrichmentIntoEvent(ev, en));
-  });
+  const WANT_MUSICBRAINZ = process.env.SCRAPE_MUSICBRAINZ === '1';
+  const mbUserAgent =
+    process.env.SCRAPE_MUSICBRAINZ_USER_AGENT || 'cardiff-gigs/1.0 (music genre enrichment)';
+  const mbCacheByKey = new Map(); // key: normalized artist name -> Promise<string[]>
+
+  const merged = new Array(allEvents.length);
+  const MUSICBRAINZ_CONCURRENCY = 3;
+
+  let i = 0;
+  await Promise.all(
+    Array.from({ length: MUSICBRAINZ_CONCURRENCY }, async () => {
+      while (i < allEvents.length) {
+        const idx = i++;
+        const ev = allEvents[idx];
+        const en = ev.url ? cache.get(ev.url) : null;
+        let out = mergeEnrichmentIntoEvent(ev, en);
+
+        if (
+          WANT_MUSICBRAINZ &&
+          (!Array.isArray(out.musicGenres) || out.musicGenres.length === 0) &&
+          en &&
+          Array.isArray(en.performerNames) &&
+          en.performerNames.length
+        ) {
+          let mergedGenres = Array.isArray(out.musicGenres) ? out.musicGenres : [];
+          const names = en.performerNames.slice(0, 3);
+          for (const n of names) {
+            const genres = await fetchMusicBrainzGenresForArtistName(n, mbCacheByKey, mbUserAgent);
+            mergedGenres = unionMusicGenres(mergedGenres, genres);
+            if (mergedGenres.length >= 8) break;
+          }
+          if (mergedGenres.length) out.musicGenres = mergedGenres;
+        }
+
+        merged[idx] = finalizeEvent(out);
+      }
+    })
+  );
 
   return merged;
 }
@@ -1422,6 +1619,30 @@ if (require.main === module && process.argv.includes('--dates-only')) {
   } else {
     console.log('\n--dedupe-events: nothing to remove.');
   }
+} else if (require.main === module && process.argv.includes('--music-genre-stats')) {
+  const eventsFile = 'events.json';
+  if (!fs.existsSync(eventsFile)) {
+    console.error(`Missing ${eventsFile}.`);
+    process.exit(1);
+  }
+  const list = JSON.parse(fs.readFileSync(eventsFile, 'utf8'));
+  if (!Array.isArray(list)) {
+    console.error('events.json must be a JSON array of events.');
+    process.exit(1);
+  }
+
+  const total = list.length;
+  const musicGenresFilled = list.filter((e) => Array.isArray(e.musicGenres) && e.musicGenres.length > 0).length;
+  const genreFilled = list.filter((e) => typeof e.genre === 'string' && e.genre.trim()).length;
+  const genreSplitNeeded = list.filter(
+    (e) => (!Array.isArray(e.musicGenres) || e.musicGenres.length === 0) && typeof e.genre === 'string' && e.genre.trim()
+  ).length;
+
+  console.log(`--music-genre-stats`);
+  console.log(`  total events: ${total}`);
+  console.log(`  musicGenres filled: ${musicGenresFilled} (${total ? Math.round((musicGenresFilled / total) * 100) : 0}%)`);
+  console.log(`  genre filled: ${genreFilled}`);
+  console.log(`  musicGenres empty but genre present: ${genreSplitNeeded}`);
 } else if (require.main === module) {
   scrapeAll().catch(console.error);
 }
