@@ -6,7 +6,10 @@ const GOTO = { waitUntil: 'domcontentloaded', timeout: 90_000 };
 const SKIP_ENRICH = process.env.SCRAPE_NO_ENRICH === '1';
 const ENRICH_CONCURRENCY = Math.min(8, Math.max(1, Number(process.env.SCRAPE_ENRICH_CONCURRENCY || 3)));
 
-/** Avoid networkidle: it often never settles (analytics, SSE). Wait for real markup instead. */
+// ---------------------------------------------------------------------------
+// Page navigation helper
+// ---------------------------------------------------------------------------
+
 async function gotoAndSettle(page, url, contentSelector) {
   await page.goto(url, GOTO);
   await page.waitForLoadState('load').catch(() => {});
@@ -19,46 +22,147 @@ async function gotoAndSettle(page, url, contentSelector) {
   }
 }
 
+// ---------------------------------------------------------------------------
+// Genre / category inference
+// ---------------------------------------------------------------------------
+
+/**
+ * Text signals that map to a genre label.
+ * Order matters — more specific patterns first.
+ */
+const GENRE_SIGNALS = [
+  [/\bpunk\b/i, 'Punk'],
+  [/\bhip[- ]?hop\b/i, 'Hip-hop'],
+  [/\brap\b|\bgrime\b/i, 'Rap'],
+  [/\bmetal\b|\bheavy metal\b|\bdeath metal\b|\bblack metal\b/i, 'Metal'],
+  [/\bhard\s*rock\b/i, 'Hard Rock'],
+  [/\bfolk\b|\bacoustic\b/i, 'Folk'],
+  [/\bjazz\b/i, 'Jazz'],
+  [/\bsoul\b/i, 'Soul'],
+  [/\br\s*[&and]+\s*b\b/i, 'R&B'],
+  [/\belectronic\b|\btechno\b|\bhouse\s*music\b|\bdrum\s*[&and]+\s*bass\b|\bd[&']?n[&']?b\b/i, 'Electronic'],
+  [/\bcountry\b/i, 'Country'],
+  [/\bclassical\b|\borchestra\b|\bsymphony\b|\bphilharmonic\b|\bopera\b|\bchamber\b/i, 'Classical'],
+  [/\bregga[e]?\b|\bska\b/i, 'Reggae'],
+  [/\bblues\b/i, 'Blues'],
+  [/\bindier?\b/i, 'Indie'],
+  [/\bpop\b/i, 'Pop'],
+  [/\brock\b/i, 'Rock'],
+  [/\bambi[ae]nt\b/i, 'Ambient'],
+  [/\bgospel\b/i, 'Gospel'],
+  [/\bcountry\b/i, 'Country'],
+  [/\bworld\s*music\b/i, 'World Music'],
+];
+
+/**
+ * Extract genre labels from any block of text by scanning against GENRE_SIGNALS.
+ * Returns a deduplicated array.
+ */
+function extractGenreSignalsFromText(text) {
+  if (!text || typeof text !== 'string') return [];
+  const found = [];
+  const seen = new Set();
+  for (const [re, label] of GENRE_SIGNALS) {
+    if (re.test(text) && !seen.has(label)) {
+      seen.add(label);
+      found.push(label);
+    }
+  }
+  return found;
+}
+
+/**
+ * Infer a single genre string from the event title alone (legacy helper kept
+ * for the finalizeEvent fallback chain).
+ */
 function inferGenreFromTitle(title) {
   if (!title) return '';
   const t = title.toLowerCase();
   const pairs = [
-    [/tribute|experience|vs the|sound of |celebrating /, 'Tribute / covers'],
-    [/\bdj\b| vs | b2b |club night|retro electro/, 'DJ / club'],
+    [/tribute|experience|vs the|sound of |celebrating /, 'Tribute / Covers'],
+    [/\bdj\b| vs | b2b |club night|retro electro/, 'DJ / Club'],
     [/opera|ballet|orchestra|symphony|philharmonic/, 'Classical'],
     [/wrestling|wwe|mma|boxing|fc\b|rugby|match\b/, 'Sports'],
     [/comedy|stand[- ]?up|comedian/, 'Comedy'],
-    [/musical|panto|pantomime|broadway/, 'Musical theatre'],
+    [/musical|panto|pantomime|broadway/, 'Musical Theatre'],
   ];
   for (const [re, g] of pairs) if (re.test(t)) return g;
   return '';
 }
 
+/**
+ * Determine the single primary category for an event.
+ *
+ * Rules applied in priority order:
+ *   1. Explicit schema/listing category field (most reliable when present)
+ *   2. Content signals across all text blobs (description, title, details…)
+ *   3. Venue assumption as a last resort (least reliable)
+ *
+ * Default for music-first venues (Globe, Tramshed, Clwb, Depot, SU) = 'Music'.
+ * Default for everything else = 'Other'.
+ */
 function inferPrimaryCategory(ev) {
+  // --- 1. Explicit category field (New Theatre provides these via Trafalgar) ---
+  const cat = String(ev.category || '').toLowerCase().trim();
+  if (cat) {
+    if (/comedy/.test(cat)) return 'Comedy';
+    if (/musical/.test(cat)) return 'Musical Theatre';
+    if (/opera|ballet|dance/.test(cat)) return 'Theatre';
+    if (/play\b|drama|theatre/.test(cat)) return 'Theatre';
+    if (/film|cinema/.test(cat)) return 'Film';
+    if (/family/.test(cat)) return 'Family';
+    if (/sport|wrestling|boxing|mma/.test(cat)) return 'Sports';
+    if (/music/.test(cat)) return 'Music';
+    if (/other|talk|lecture|event/.test(cat)) return 'Other';
+  }
+
+  // --- 2. Content signals ---
   const blob = [
     ev.title,
-    ev.venue,
-    ev.category,
-    ev.genre,
-    ev.subcategory,
     ev.description,
     ev.shortDescription,
     ev.details,
+    ev.genre,
+    ev.subcategory,
+    ev.eventKeywords,
   ]
     .filter(Boolean)
     .join(' ')
     .toLowerCase();
 
-  const comedy = /comedy|stand[- ]?up|comedian|mock the week|live podcast|poetry slam/;
-  const theatre = /theatre|musical|opera|ballet|panto|drama|play\b|broadway|national theatre|graduation/;
-  const sport = /wwe|wrestling|mma|boxing|match\b|fc |rugby|arena football/;
-  if (sport.test(blob)) return 'Sports';
-  if (comedy.test(blob)) return 'Comedy';
-  if (theatre.test(blob)) return 'Theatre';
-  if (/new theatre|wmc|millennium centre|the gate/.test((ev.venue || '').toLowerCase())) return 'Theatre';
-  if (/arena|globe|tramshed|clwb|depot|su\b|live nation|music|tour|concert|band|festival/.test(blob)) return 'Music';
+  // Comedy — check before Theatre so stand-up at theatres is correct
+  if (/\bstand[- ]?up\b|\bcomedian\b|\bcomedy\s*(show|night|tour|gig|special)|\blive\s*comedy\b/.test(blob)) return 'Comedy';
+  if (/\bcomedy\b/.test(blob) && !/\bmusical\s*comedy\b/.test(blob)) return 'Comedy';
+
+  // Theatre / performing arts
+  if (/\bmusical\b|\bpanto\b|\bpantomime\b|\bbroadway\b|\bwest\s*end\b/.test(blob)) return 'Musical Theatre';
+  if (/\bopera\b|\bballet\b/.test(blob)) return 'Theatre';
+  if (/\bplay\b|\bdrama\b|\btheatre\s*company\b|\bstage\s*show\b/.test(blob)) return 'Theatre';
+
+  // Sports
+  if (/\bwrestling\b|\bwwe\b|\bmma\b|\bboxing\b|\bfc\b|\brugby\b/.test(blob)) return 'Sports';
+
+  // Film
+  if (/\bfilm\b|\bcinema\b|\bscreening\b/.test(blob)) return 'Film';
+
+  // Family
+  if (/\bfamily\s*(show|event|fun|friendly)\b|\bchildren['\u2019]?s\b|\bkids\b/.test(blob)) return 'Family';
+
+  // --- 3. Venue assumption (last resort) ---
+  const venue = String(ev.venue || '').toLowerCase();
+
+  // Music-first venues — default to Music
+  if (/globe\s*cardiff|tramshed|clwb\s*ifor|depot\s*cardiff|cardiff\s*su|utilita/.test(venue)) return 'Music';
+
+  // Arts/theatre venues — default to Theatre only if no music signals
+  if (/new\s*theatre|millennium\s*centre|wmc|the\s*gate/.test(venue)) return 'Theatre';
+
   return 'Other';
 }
+
+// ---------------------------------------------------------------------------
+// Price helpers
+// ---------------------------------------------------------------------------
 
 function numPrice(v) {
   if (v == null) return NaN;
@@ -73,7 +177,6 @@ function normalizeOffers(offers) {
   let low = null;
   let high = null;
   let currency = null;
-  let labelParts = [];
 
   for (const o of list) {
     if (!o || typeof o !== 'object') continue;
@@ -111,7 +214,6 @@ function normalizeOffers(offers) {
         currency = o.priceCurrency || currency;
       }
     }
-    if (o.name && /sale|ticket|price/i.test(o.name)) labelParts.push(o.name);
   }
   return { low, high, currency };
 }
@@ -131,15 +233,15 @@ function scrapePriceFromVisibleText(text) {
   return {};
 }
 
+// ---------------------------------------------------------------------------
+// Page enrichment (visits individual ticket pages)
+// ---------------------------------------------------------------------------
+
 async function fetchPageEnrichment(page, url) {
   await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 65_000 });
   await page.waitForLoadState('load').catch(() => {});
   const host = (() => {
-    try {
-      return new URL(url).hostname;
-    } catch {
-      return '';
-    }
+    try { return new URL(url).hostname; } catch { return ''; }
   })();
   if (host.includes('tixr.com')) await new Promise((r) => setTimeout(r, 5_000));
   else await new Promise((r) => setTimeout(r, 900));
@@ -148,14 +250,8 @@ async function fetchPageEnrichment(page, url) {
     const meta = (sel) => document.querySelector(sel)?.getAttribute('content')?.trim() || '';
 
     const eventTypes = new Set([
-      'Event',
-      'MusicEvent',
-      'TheaterEvent',
-      'TheatreEvent',
-      'ComedyEvent',
-      'Festival',
-      'SportsEvent',
-      'DanceEvent',
+      'Event', 'MusicEvent', 'TheaterEvent', 'TheatreEvent',
+      'ComedyEvent', 'Festival', 'SportsEvent', 'DanceEvent',
     ]);
 
     function typesOf(node) {
@@ -172,10 +268,7 @@ async function fetchPageEnrichment(page, url) {
     function walk(node, depth) {
       if (!node || typeof node !== 'object' || depth > 18 || visits >= VISIT_CAP) return;
       visits++;
-      if (Array.isArray(node)) {
-        for (const x of node) walk(x, depth + 1);
-        return;
-      }
+      if (Array.isArray(node)) { for (const x of node) walk(x, depth + 1); return; }
       const types = typesOf(node);
       if (types.some((x) => eventTypes.has(x))) eventNodes.push(node);
       if (types.some((x) => x === 'Offer' || x === 'AggregateOffer')) {
@@ -205,11 +298,7 @@ async function fetchPageEnrichment(page, url) {
 
     const scripts = [...document.querySelectorAll('script[type="application/ld+json"]')];
     for (const s of scripts) {
-      try {
-        walk(JSON.parse(s.textContent), 0);
-      } catch {
-        /* ignore invalid JSON-LD */
-      }
+      try { walk(JSON.parse(s.textContent), 0); } catch { /* ignore */ }
     }
 
     const score = (e) =>
@@ -225,10 +314,7 @@ async function fetchPageEnrichment(page, url) {
         if (!p || typeof p !== 'object') continue;
         if (p.genre) {
           if (Array.isArray(p.genre)) {
-            for (const x of p.genre) {
-              const s = String(x || '').trim();
-              if (s) g.push(s);
-            }
+            for (const x of p.genre) { const s = String(x || '').trim(); if (s) g.push(s); }
           } else {
             const s = String(p.genre || '').trim();
             if (s) g.push(s);
@@ -245,56 +331,31 @@ async function fetchPageEnrichment(page, url) {
       const names = [];
       for (const p of list) {
         if (p == null) continue;
-        if (typeof p === 'string') {
-          const s = p.trim();
-          if (s) names.push(s);
-          continue;
-        }
-        if (typeof p === 'object' && p.name) {
-          const s = String(p.name).trim();
-          if (s) names.push(s);
-        }
+        if (typeof p === 'string') { const s = p.trim(); if (s) names.push(s); continue; }
+        if (typeof p === 'object' && p.name) { const s = String(p.name).trim(); if (s) names.push(s); }
       }
-      // Dedupe (case-insensitive) while keeping first-seen casing.
       const seen = new Set();
       const out = [];
-      for (const n of names) {
-        const k = n.toLowerCase();
-        if (seen.has(k)) continue;
-        seen.add(k);
-        out.push(n);
-      }
+      for (const n of names) { const k = n.toLowerCase(); if (seen.has(k)) continue; seen.add(k); out.push(n); }
       return out;
     }
 
     const ogDesc = meta('meta[property="og:description"]') || meta('meta[name="description"]');
     const ogImageRaw = meta('meta[property="og:image"]');
-    const twitterImageRaw =
-      meta('meta[name="twitter:image"]') || meta('meta[property="twitter:image"]') || '';
+    const twitterImageRaw = meta('meta[name="twitter:image"]') || meta('meta[property="twitter:image"]') || '';
     const ogTitle = meta('meta[property="og:title"]');
 
     function absolutizeImageUrl(u) {
       const s = String(u || '').trim();
       if (!s || s.startsWith('data:')) return '';
       if (s.startsWith('//')) return `https:${s}`;
-      try {
-        return new URL(s, document.baseURI || location.href).href;
-      } catch {
-        return s;
-      }
+      try { return new URL(s, document.baseURI || location.href).href; } catch { return s; }
     }
 
     function collectLdImageUrls(val, bucket) {
       if (val == null) return;
-      if (typeof val === 'string') {
-        const a = absolutizeImageUrl(val);
-        if (a) bucket.push(a);
-        return;
-      }
-      if (Array.isArray(val)) {
-        for (const x of val) collectLdImageUrls(x, bucket);
-        return;
-      }
+      if (typeof val === 'string') { const a = absolutizeImageUrl(val); if (a) bucket.push(a); return; }
+      if (Array.isArray(val)) { for (const x of val) collectLdImageUrls(x, bucket); return; }
       if (typeof val === 'object') {
         if (typeof val.url === 'string') collectLdImageUrls(val.url, bucket);
         if (typeof val.contentUrl === 'string') collectLdImageUrls(val.contentUrl, bucket);
@@ -317,20 +378,13 @@ async function fetchPageEnrichment(page, url) {
       genre = Array.isArray(g) ? g.filter(Boolean).join(', ') : typeof g === 'string' ? g.trim() : '';
       const pg = performerGenresOf(best);
 
-      // musicGenresFromSchema is an array for better downstream merging/dedupe.
       const musicSet = new Set();
       const addFrom = (val) => {
         if (val == null) return;
-        if (Array.isArray(val)) {
-          for (const x of val) addFrom(x);
-          return;
-        }
+        if (Array.isArray(val)) { for (const x of val) addFrom(x); return; }
         const s = String(val).trim();
         if (!s) return;
-        for (const part of s.split(/[;,]/g)) {
-          const q = String(part || '').trim();
-          if (q) musicSet.add(q);
-        }
+        for (const part of s.split(/[;,]/g)) { const q = String(part || '').trim(); if (q) musicSet.add(q); }
       };
       addFrom(g);
       addFrom(pg);
@@ -338,13 +392,7 @@ async function fetchPageEnrichment(page, url) {
       performerNames = performerNamesOf(best);
 
       if (pg) {
-        const parts = [
-          ...new Set(
-            [...genre.split(/,\s*/), ...pg.split(/,\s*/)]
-              .map((s) => s.trim())
-              .filter(Boolean)
-          ),
-        ];
+        const parts = [...new Set([...genre.split(/,\s*/), ...pg.split(/,\s*/)].map((s) => s.trim()).filter(Boolean))];
         genre = parts.join(', ');
       }
       if (typeof best.keywords === 'string' && best.keywords.trim()) {
@@ -356,14 +404,8 @@ async function fetchPageEnrichment(page, url) {
       offersFromEvent = best.offers || null;
     }
 
-    if (ogImageRaw) {
-      const u = absolutizeImageUrl(ogImageRaw);
-      if (u) imageCandidateList.push(u);
-    }
-    if (twitterImageRaw) {
-      const u = absolutizeImageUrl(twitterImageRaw);
-      if (u) imageCandidateList.push(u);
-    }
+    if (ogImageRaw) { const u = absolutizeImageUrl(ogImageRaw); if (u) imageCandidateList.push(u); }
+    if (twitterImageRaw) { const u = absolutizeImageUrl(twitterImageRaw); if (u) imageCandidateList.push(u); }
 
     const imageSeen = new Set();
     const imageUrls = [];
@@ -385,9 +427,7 @@ async function fetchPageEnrichment(page, url) {
     }
 
     let breadcrumbTrail = '';
-    for (const tr of breadcrumbTrails) {
-      if (tr.length > breadcrumbTrail.length) breadcrumbTrail = tr;
-    }
+    for (const tr of breadcrumbTrails) { if (tr.length > breadcrumbTrail.length) breadcrumbTrail = tr; }
 
     let microLow = null;
     let microHigh = null;
@@ -429,21 +469,21 @@ async function fetchPageEnrichment(page, url) {
   });
 }
 
+// ---------------------------------------------------------------------------
+// Offer / price merging
+// ---------------------------------------------------------------------------
+
 function mergeOffersIntoEvent(ev, offersRaw) {
   if (!offersRaw) return ev;
   const { low, high, currency } = normalizeOffers(offersRaw);
   const out = { ...ev };
   if (low != null && !Number.isNaN(low)) {
-    out.ticketPriceFrom =
-      out.ticketPriceFrom == null || Number.isNaN(out.ticketPriceFrom)
-        ? low
-        : Math.min(out.ticketPriceFrom, low);
+    out.ticketPriceFrom = out.ticketPriceFrom == null || Number.isNaN(out.ticketPriceFrom)
+      ? low : Math.min(out.ticketPriceFrom, low);
   }
   if (high != null && !Number.isNaN(high)) {
-    out.ticketPriceTo =
-      out.ticketPriceTo == null || Number.isNaN(out.ticketPriceTo)
-        ? high
-        : Math.max(out.ticketPriceTo, high);
+    out.ticketPriceTo = out.ticketPriceTo == null || Number.isNaN(out.ticketPriceTo)
+      ? high : Math.max(out.ticketPriceTo, high);
   }
   if (currency) out.ticketCurrency = currency;
   return out;
@@ -453,28 +493,20 @@ function mergeAllOfferBlobsIntoEvent(ev, blobs) {
   const flat = [];
   for (const b of blobs) {
     if (b == null) continue;
-    if (Array.isArray(b)) {
-      for (const x of b) {
-        if (x != null && typeof x === 'object') flat.push(x);
-      }
-    } else if (typeof b === 'object') {
-      flat.push(b);
-    }
+    if (Array.isArray(b)) { for (const x of b) { if (x != null && typeof x === 'object') flat.push(x); } }
+    else if (typeof b === 'object') flat.push(b);
   }
   if (!flat.length) return ev;
   return mergeOffersIntoEvent(ev, flat);
 }
 
-/** Calendar day in local time (noon avoids DST edge cases). */
-function localNoon(y, m0, d) {
-  return new Date(y, m0, d, 12, 0, 0);
-}
+// ---------------------------------------------------------------------------
+// Date parsing helpers
+// ---------------------------------------------------------------------------
 
-function startOfLocalDay(d) {
-  return new Date(d.getFullYear(), d.getMonth(), d.getDate());
-}
+function localNoon(y, m0, d) { return new Date(y, m0, d, 12, 0, 0); }
+function startOfLocalDay(d) { return new Date(d.getFullYear(), d.getMonth(), d.getDate()); }
 
-/** When month/year are missing, pick a sensible year vs scrape time (forward listings). */
 function inferYearForMonthDay(scrapedAt, month0, day) {
   const ref = scrapedAt ? new Date(scrapedAt) : new Date();
   const r0 = startOfLocalDay(ref);
@@ -491,39 +523,11 @@ function inferYearForMonthDay(scrapedAt, month0, day) {
 function parseMonthToken(tok) {
   if (!tok) return -1;
   const t = String(tok).toLowerCase().replace(/\./g, '');
-  const map = {
-    jan: 0,
-    feb: 1,
-    mar: 2,
-    apr: 3,
-    may: 4,
-    jun: 5,
-    jul: 6,
-    aug: 7,
-    sep: 8,
-    oct: 9,
-    nov: 10,
-    dec: 11,
-  };
+  const map = { jan:0,feb:1,mar:2,apr:3,may:4,jun:5,jul:6,aug:7,sep:8,oct:9,nov:10,dec:11 };
   const k = t.length >= 3 ? t.slice(0, 3) : t;
   if (map[k] != null) return map[k];
-  const full = [
-    'january',
-    'february',
-    'march',
-    'april',
-    'may',
-    'june',
-    'july',
-    'august',
-    'september',
-    'october',
-    'november',
-    'december',
-  ];
-  for (let i = 0; i < 12; i++) {
-    if (full[i].startsWith(t)) return i;
-  }
+  const full = ['january','february','march','april','may','june','july','august','september','october','november','december'];
+  for (let i = 0; i < 12; i++) { if (full[i].startsWith(t)) return i; }
   return -1;
 }
 
@@ -531,15 +535,9 @@ function formatUkLongDate(d) {
   if (!(d instanceof Date) || Number.isNaN(d.getTime())) return '';
   try {
     return d.toLocaleDateString('en-GB', {
-      weekday: 'long',
-      day: 'numeric',
-      month: 'long',
-      year: 'numeric',
-      timeZone: 'Europe/London',
+      weekday: 'long', day: 'numeric', month: 'long', year: 'numeric', timeZone: 'Europe/London',
     });
-  } catch {
-    return '';
-  }
+  } catch { return ''; }
 }
 
 function tryParseIsoToDate(iso) {
@@ -548,11 +546,8 @@ function tryParseIsoToDate(iso) {
   return Number.isNaN(d.getTime()) ? null : d;
 }
 
-/** "Mon 11 May 2026" / "Monday 11 May 2026" (single day). */
 function tryParseShortUkDayMonYear(s) {
-  const m = String(s).match(
-    /\b(Mon|Tue|Wed|Thu|Fri|Sat|Sun)(?:day)?\s+(\d{1,2})\s+(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*\s+(\d{4})\b/i
-  );
+  const m = String(s).match(/\b(Mon|Tue|Wed|Thu|Fri|Sat|Sun)(?:day)?\s+(\d{1,2})\s+(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*\s+(\d{4})\b/i);
   if (!m) return null;
   const mo = parseMonthToken(m[3]);
   if (mo < 0) return null;
@@ -560,11 +555,8 @@ function tryParseShortUkDayMonYear(s) {
   return Number.isNaN(d.getTime()) ? null : d;
 }
 
-/** "Tue 12 - Sat 16 May 2026" style range. */
 function tryParseUkRangeTwoDaysOneMonthYear(s) {
-  const m = String(s).match(
-    /\b(Mon|Tue|Wed|Thu|Fri|Sat|Sun)(?:day)?\s+(\d{1,2})\s*[-–]\s*(Mon|Tue|Wed|Thu|Fri|Sat|Sun)(?:day)?\s+(\d{1,2})\s+(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*\s+(\d{4})\b/i
-  );
+  const m = String(s).match(/\b(Mon|Tue|Wed|Thu|Fri|Sat|Sun)(?:day)?\s+(\d{1,2})\s*[-–]\s*(Mon|Tue|Wed|Thu|Fri|Sat|Sun)(?:day)?\s+(\d{1,2})\s+(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*\s+(\d{4})\b/i);
   if (!m) return null;
   const mo = parseMonthToken(m[5]);
   if (mo < 0) return null;
@@ -575,7 +567,6 @@ function tryParseUkRangeTwoDaysOneMonthYear(s) {
   return { start: d1, end: d2 };
 }
 
-/** DD/MM/YYYY anywhere in string. */
 function tryParseDdMmYyyy(s) {
   const m = String(s).match(/\b(\d{1,2})\/(\d{1,2})\/(\d{4})\b/);
   if (!m) return null;
@@ -583,11 +574,8 @@ function tryParseDdMmYyyy(s) {
   return Number.isNaN(d.getTime()) ? null : d;
 }
 
-/** "WEDNESDAY 13TH MAY" or "Saturday 17th April" (no year). */
 function tryParseDayOrdinalMonthNoYear(line, scrapedAt) {
-  const m = String(line)
-    .trim()
-    .match(/^([a-z]+)\s+(\d{1,2})(?:st|nd|rd|th)?\s+([a-z]+)\s*$/i);
+  const m = String(line).trim().match(/^([a-z]+)\s+(\d{1,2})(?:st|nd|rd|th)?\s+([a-z]+)\s*$/i);
   if (!m) return null;
   const mo = parseMonthToken(m[3]);
   if (mo < 0) return null;
@@ -597,11 +585,8 @@ function tryParseDayOrdinalMonthNoYear(line, scrapedAt) {
   return Number.isNaN(d.getTime()) ? null : d;
 }
 
-/** "19th May noon" / "12th June 2025 7pm" */
 function tryParseOrdinalMonthOptionalYear(s, scrapedAt) {
-  const m = String(s).match(
-    /\b(\d{1,2})(?:st|nd|rd|th)?\s+(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec|January|February|March|April|May|June|July|August|September|October|November|December)[a-z]*(?:\s+(\d{4}))?\b/i
-  );
+  const m = String(s).match(/\b(\d{1,2})(?:st|nd|rd|th)?\s+(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec|January|February|March|April|May|June|July|August|September|October|November|December)[a-z]*(?:\s+(\d{4}))?\b/i);
   if (!m) return null;
   const mo = parseMonthToken(m[2]);
   if (mo < 0) return null;
@@ -611,11 +596,8 @@ function tryParseOrdinalMonthOptionalYear(s, scrapedAt) {
   return Number.isNaN(d.getTime()) ? null : d;
 }
 
-/** "May 30 @ 17:00" / "June 3 @ ..." */
 function tryParseMonthDayAtTime(s, scrapedAt) {
-  const m = String(s).match(
-    /\b(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec|January|February|March|April|May|June|July|August|September|October|November|December)[a-z]*\s+(\d{1,2})\b/i
-  );
+  const m = String(s).match(/\b(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec|January|February|March|April|May|June|July|August|September|October|November|December)[a-z]*\s+(\d{1,2})\b/i);
   if (!m) return null;
   const mo = parseMonthToken(m[1]);
   if (mo < 0) return null;
@@ -625,7 +607,6 @@ function tryParseMonthDayAtTime(s, scrapedAt) {
   return Number.isNaN(d.getTime()) ? null : d;
 }
 
-/** "21 April - 19 May 2026" (WMC-style; allows surrounding text). */
 function tryParseDayMonthRangeYear(s) {
   const m = String(s).match(/(\d{1,2})\s+([A-Za-z]+)\s*[-–]\s*(\d{1,2})\s+([A-Za-z]+)\s+(\d{4})/i);
   if (!m) return null;
@@ -639,7 +620,6 @@ function tryParseDayMonthRangeYear(s) {
   return { start: d1, end: d2 };
 }
 
-/** "12 – 13 May 2026" */
 function tryParseSameMonthDayRange(s) {
   const m = String(s).match(/(\d{1,2})\s*[-–]\s*(\d{1,2})\s+([A-Za-z]+)\s+(\d{4})/i);
   if (!m) return null;
@@ -652,11 +632,8 @@ function tryParseSameMonthDayRange(s) {
   return { start: d1, end: d2 };
 }
 
-/** "Saturday 23rd May 2026" (The Gate and similar). */
 function tryParseWeekdayOrdinalMonthYear(s) {
-  const m = String(s).match(
-    /\b(Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday)\s+(\d{1,2})(?:st|nd|rd|th)?\s+([A-Za-z]+)\s+(\d{4})\b/i
-  );
+  const m = String(s).match(/\b(Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday)\s+(\d{1,2})(?:st|nd|rd|th)?\s+([A-Za-z]+)\s+(\d{4})\b/i);
   if (!m) return null;
   const mo = parseMonthToken(m[3]);
   if (mo < 0) return null;
@@ -678,7 +655,6 @@ function formatRangeLong(a, b) {
   return `${fa} – ${fb}`;
 }
 
-/** e.g. Trafalgar slug `…-21-may-2026-tickets` or `…-21-may-tickets`. */
 function tryParseDateFromListingUrl(url, scrapedAt) {
   if (!url || typeof url !== 'string') return null;
   const u = url.toLowerCase();
@@ -701,9 +677,6 @@ function tryParseDateFromListingUrl(url, scrapedAt) {
   return null;
 }
 
-/**
- * Human-readable date: weekday, day, month, year (ranges use an en-dash between two full dates).
- */
 function deriveHumanEventDate(ev) {
   const scrapedAt = ev.scrapedAt || '';
   const rawDate = ev.date != null ? String(ev.date).trim() : '';
@@ -734,31 +707,22 @@ function deriveHumanEventDate(ev) {
   for (const raw of blobs) {
     const s = String(raw).trim();
     if (!s) continue;
-
     const r1 = tryParseUkRangeTwoDaysOneMonthYear(s.replace(/\s+/g, ' '));
     if (r1) return formatRangeLong(r1.start, r1.end);
-
     const r2 = tryParseDayMonthRangeYear(s);
     if (r2) return formatRangeLong(r2.start, r2.end);
-
     const r3 = tryParseSameMonthDayRange(s);
     if (r3) return formatRangeLong(r3.start, r3.end);
-
     const dShort = tryParseShortUkDayMonYear(s);
     if (dShort) return formatUkLongDate(dShort);
-
     const dSlash = tryParseDdMmYyyy(s);
     if (dSlash) return formatUkLongDate(dSlash);
-
     const gateDt = tryParseWeekdayOrdinalMonthYear(s);
     if (gateDt) return formatUkLongDate(gateDt);
-
     const dOrd = tryParseOrdinalMonthOptionalYear(s, scrapedAt);
     if (dOrd) return formatUkLongDate(dOrd);
-
     const dMonDay = tryParseMonthDayAtTime(s, scrapedAt);
     if (dMonDay) return formatUkLongDate(dMonDay);
-
     const dLine = tryParseDayOrdinalMonthNoYear(firstMeaningfulLine(s) || s, scrapedAt);
     if (dLine) return formatUkLongDate(dLine);
   }
@@ -784,6 +748,10 @@ function deriveHumanEventDate(ev) {
   return '';
 }
 
+// ---------------------------------------------------------------------------
+// Genre / music genre helpers
+// ---------------------------------------------------------------------------
+
 function tidyBreadcrumbTrail(raw) {
   let t = String(raw || '').trim();
   if (!t) return '';
@@ -793,18 +761,8 @@ function tidyBreadcrumbTrail(raw) {
 }
 
 const GENERIC_LISTING_CATEGORIES = new Set([
-  "what's on",
-  'whats on',
-  'events',
-  'home',
-  'tickets',
-  'ticket',
-  'box office',
-  'venue',
-  'live music',
-  'music',
-  'whatson',
-  'what’s on',
+  "what's on", 'whats on', 'events', 'home', 'tickets', 'ticket',
+  'box office', 'venue', 'live music', 'music', 'whatson', 'what\u2019s on',
 ]);
 
 function categoryAsGenreHint(raw) {
@@ -815,7 +773,6 @@ function categoryAsGenreHint(raw) {
   return c;
 }
 
-/** Semicolon-separated listing sub-types (e.g. New Theatre); not long breadcrumb trails. */
 function subcategoryLineAsGenreHint(raw) {
   const s = String(raw || '').trim();
   if (!s || s.length > 72 || />/.test(s)) return '';
@@ -824,11 +781,7 @@ function subcategoryLineAsGenreHint(raw) {
 
 function splitGenreStringToMusicGenres(genreString) {
   if (!genreString || typeof genreString !== 'string') return [];
-  const parts = genreString
-    .split(/[,;]/g)
-    .map((s) => String(s || '').trim())
-    .filter(Boolean);
-  // Keep list short to avoid bloat.
+  const parts = genreString.split(/[,;]/g).map((s) => String(s || '').trim()).filter(Boolean);
   return parts.slice(0, 12);
 }
 
@@ -849,21 +802,20 @@ function unionMusicGenres(existing, incoming) {
   return out;
 }
 
+// ---------------------------------------------------------------------------
+// MusicBrainz genre lookup
+// ---------------------------------------------------------------------------
+
 function normalizeArtistNameForMb(name) {
   if (!name) return '';
-  return String(name)
-    .replace(/\s+/g, ' ')
-    .trim();
+  return String(name).replace(/\s+/g, ' ').trim();
 }
 
 function extractMusicBrainzGenreNames(mbArtistJson) {
   if (!mbArtistJson || typeof mbArtistJson !== 'object') return [];
   const list = Array.isArray(mbArtistJson.genres)
     ? mbArtistJson.genres
-    : Array.isArray(mbArtistJson.tags)
-      ? mbArtistJson.tags
-      : [];
-
+    : Array.isArray(mbArtistJson.tags) ? mbArtistJson.tags : [];
   const out = [];
   const seen = new Set();
   for (const g of list) {
@@ -882,50 +834,31 @@ function extractMusicBrainzGenreNames(mbArtistJson) {
 async function fetchMusicBrainzGenresForArtistName(artistName, cacheByKey, mbUserAgent) {
   const raw = normalizeArtistNameForMb(artistName);
   if (!raw) return [];
-
   const key = raw.toLowerCase();
   if (cacheByKey.has(key)) return cacheByKey.get(key);
-
   const p = (async () => {
     try {
       const q = `artist:${raw}`;
       const searchUrl = `https://musicbrainz.org/ws/2/artist/?query=${encodeURIComponent(q)}&fmt=json&limit=1`;
-      const searchRes = await axios.get(searchUrl, {
-        headers: { 'User-Agent': mbUserAgent },
-        timeout: 15_000,
-      });
+      const searchRes = await axios.get(searchUrl, { headers: { 'User-Agent': mbUserAgent }, timeout: 15_000 });
       const mbid = searchRes?.data?.artists?.[0]?.id;
       if (!mbid) return [];
-
       const artistUrl = `https://musicbrainz.org/ws/2/artist/${mbid}?inc=genres&fmt=json`;
-      const artistRes = await axios.get(artistUrl, {
-        headers: { 'User-Agent': mbUserAgent },
-        timeout: 15_000,
-      });
+      const artistRes = await axios.get(artistUrl, { headers: { 'User-Agent': mbUserAgent }, timeout: 15_000 });
       return extractMusicBrainzGenreNames(artistRes?.data);
-    } catch {
-      return [];
-    }
+    } catch { return []; }
   })();
-
   cacheByKey.set(key, p);
   return p;
 }
 
+// ---------------------------------------------------------------------------
+// Image URL helpers
+// ---------------------------------------------------------------------------
+
 const IMAGE_TRACKING_PARAMS = new Set([
-  'utm_source',
-  'utm_medium',
-  'utm_campaign',
-  'utm_content',
-  'utm_term',
-  'utm_id',
-  'fbclid',
-  'gclid',
-  'mc_cid',
-  'mc_eid',
-  'msclkid',
-  '_ga',
-  'ref',
+  'utm_source','utm_medium','utm_campaign','utm_content','utm_term','utm_id',
+  'fbclid','gclid','mc_cid','mc_eid','msclkid','_ga','ref',
 ]);
 
 function normalizeHotlinkImageUrl(raw) {
@@ -942,9 +875,7 @@ function normalizeHotlinkImageUrl(raw) {
     }
     u.hash = '';
     return u.toString();
-  } catch {
-    return s;
-  }
+  } catch { return s; }
 }
 
 function dedupeHotlinkImageUrls(urls) {
@@ -961,19 +892,15 @@ function dedupeHotlinkImageUrls(urls) {
   return out;
 }
 
-/** Prefer ticket-page (enrichment) images; keep listing thumbnails when detail has none. */
 function mergeHotlinkImagesIntoEvent(ev, en) {
   const listingPool = [];
   if (ev.imageUrl) listingPool.push(ev.imageUrl);
   if (Array.isArray(ev.imageUrls)) listingPool.push(...ev.imageUrls);
-
   const detailPool = [];
   if (en?.imageUrl) detailPool.push(en.imageUrl);
   if (Array.isArray(en?.imageUrls)) detailPool.push(...en.imageUrls);
-
   const listing = dedupeHotlinkImageUrls(listingPool);
   const detail = dedupeHotlinkImageUrls(detailPool);
-
   const out = { ...ev };
   if (detail.length) {
     out.imageUrl = detail[0];
@@ -988,6 +915,10 @@ function mergeHotlinkImagesIntoEvent(ev, en) {
   return out;
 }
 
+// ---------------------------------------------------------------------------
+// Enrichment merging
+// ---------------------------------------------------------------------------
+
 function mergeEnrichmentIntoEvent(ev, en) {
   if (!en) return ev;
   let out = { ...ev };
@@ -1001,11 +932,20 @@ function mergeEnrichmentIntoEvent(ev, en) {
   }
   if (en.genre && !out.genre) out.genre = en.genre;
 
+  // Schema-derived music genres
   const schemaMusicGenres = Array.isArray(en.musicGenresFromSchema) ? en.musicGenresFromSchema : [];
   if (schemaMusicGenres.length) {
     const existing = Array.isArray(out.musicGenres) ? out.musicGenres : [];
     const merged = unionMusicGenres(existing, schemaMusicGenres);
     if (merged.length) out.musicGenres = merged;
+  }
+
+  // Text-signal genres extracted from description and body snippet
+  const textBlob = [en.shortDescription, en.description, en.bodySnippet].filter(Boolean).join(' ');
+  const textSignalGenres = extractGenreSignalsFromText(textBlob);
+  if (textSignalGenres.length) {
+    const existing = Array.isArray(out.musicGenres) ? out.musicGenres : [];
+    out.musicGenres = unionMusicGenres(existing, textSignalGenres);
   }
 
   out = mergeHotlinkImagesIntoEvent(out, en);
@@ -1056,10 +996,32 @@ function tryAttachPriceFromListingText(ev) {
   };
 }
 
-function finalizeEvent(ev) {
-  const existingMusicGenres = Array.isArray(ev.musicGenres) ? ev.musicGenres : [];
-  let musicGenres = existingMusicGenres.length ? existingMusicGenres : [];
+// ---------------------------------------------------------------------------
+// Event finalisation
+// ---------------------------------------------------------------------------
 
+function finalizeEvent(ev) {
+  // --- Build musicGenres array ---
+  let musicGenres = Array.isArray(ev.musicGenres) ? [...ev.musicGenres] : [];
+
+  // Supplement from genre string if musicGenres is empty
+  if (!musicGenres.length && ev.genre) {
+    musicGenres = splitGenreStringToMusicGenres(ev.genre);
+  }
+
+  // Supplement from title signals if still empty
+  if (!musicGenres.length) {
+    const titleSignals = extractGenreSignalsFromText(ev.title);
+    if (titleSignals.length) musicGenres = titleSignals;
+  }
+
+  // Also scan listing details text
+  if (ev.details) {
+    const detailSignals = extractGenreSignalsFromText(ev.details);
+    musicGenres = unionMusicGenres(musicGenres, detailSignals);
+  }
+
+  // --- Build genre string (human-readable) ---
   const musicGenreHint = musicGenres.length ? musicGenres.join(', ') : '';
   const genre = (
     ev.genre ||
@@ -1070,24 +1032,29 @@ function finalizeEvent(ev) {
     ''
   ).trim();
 
-  const primaryCategory = inferPrimaryCategory({ ...ev, genre });
+  // --- Primary category (uses the improved function) ---
+  const primaryCategory = inferPrimaryCategory({ ...ev, genre, musicGenres });
+
+  // For non-music events, clear musicGenres to avoid noise
+  // (e.g. a comedy show description mentioning "rock music" as context)
+  const cleanedMusicGenres = primaryCategory === 'Music' ? musicGenres : [];
+
   const description =
     (ev.description || '').trim() ||
     (ev.shortDescription || '').trim() ||
     (ev.details || '').trim() ||
     '';
 
-  if (!musicGenres.length && genre) {
-    musicGenres = splitGenreStringToMusicGenres(genre);
-  }
-
   let next = {
     ...ev,
     primaryCategory,
     ...(genre ? { genre } : {}),
     ...(description ? { description } : {}),
-    ...(musicGenres.length ? { musicGenres } : {}),
+    ...(cleanedMusicGenres.length ? { musicGenres: cleanedMusicGenres } : {}),
   };
+
+  // Remove musicGenres key entirely for non-music events to keep JSON clean
+  if (primaryCategory !== 'Music') delete next.musicGenres;
 
   const date = deriveHumanEventDate(next);
   if (date) next.date = date;
@@ -1107,6 +1074,10 @@ function finalizeEvent(ev) {
 
   return next;
 }
+
+// ---------------------------------------------------------------------------
+// Enrichment pipeline
+// ---------------------------------------------------------------------------
 
 async function enrichAllEvents(context, allEvents) {
   if (SKIP_ENRICH) {
@@ -1136,29 +1107,23 @@ async function enrichAllEvents(context, allEvents) {
         try {
           const raw = await fetchPageEnrichment(page, url);
           cache.set(url, raw);
-        } catch {
-          cache.set(url, null);
-        }
+        } catch { cache.set(url, null); }
         done++;
         if (done % 40 === 0 || done === uniqueUrls.length) {
           console.log(`  enriched ${done}/${uniqueUrls.length}`);
         }
       }
-    } finally {
-      await page.close();
-    }
+    } finally { await page.close(); }
   }
 
   await Promise.all(Array.from({ length: ENRICH_CONCURRENCY }, () => worker()));
 
   const WANT_MUSICBRAINZ = process.env.SCRAPE_MUSICBRAINZ === '1';
-  const mbUserAgent =
-    process.env.SCRAPE_MUSICBRAINZ_USER_AGENT || 'cardiff-gigs/1.0 (music genre enrichment)';
-  const mbCacheByKey = new Map(); // key: normalized artist name -> Promise<string[]>
-
-  const merged = new Array(allEvents.length);
+  const mbUserAgent = process.env.SCRAPE_MUSICBRAINZ_USER_AGENT || 'cardiff-gigs/1.0 (music genre enrichment)';
+  const mbCacheByKey = new Map();
   const MUSICBRAINZ_CONCURRENCY = 3;
 
+  const merged = new Array(allEvents.length);
   let i = 0;
   await Promise.all(
     Array.from({ length: MUSICBRAINZ_CONCURRENCY }, async () => {
@@ -1171,9 +1136,7 @@ async function enrichAllEvents(context, allEvents) {
         if (
           WANT_MUSICBRAINZ &&
           (!Array.isArray(out.musicGenres) || out.musicGenres.length === 0) &&
-          en &&
-          Array.isArray(en.performerNames) &&
-          en.performerNames.length
+          en && Array.isArray(en.performerNames) && en.performerNames.length
         ) {
           let mergedGenres = Array.isArray(out.musicGenres) ? out.musicGenres : [];
           const names = en.performerNames.slice(0, 3);
@@ -1193,6 +1156,10 @@ async function enrichAllEvents(context, allEvents) {
   return merged;
 }
 
+// ---------------------------------------------------------------------------
+// Venue scrapers
+// ---------------------------------------------------------------------------
+
 async function scrapeGlobe(context) {
   console.log('Scraping The Globe...');
   const page = await context.newPage();
@@ -1200,18 +1167,11 @@ async function scrapeGlobe(context) {
   const events = await page.evaluate(() => {
     return Array.from(document.querySelectorAll('article.elementor-post')).map((item) => {
       let imageUrl = '';
-      const img = item.querySelector(
-        '.elementor-post__thumbnail img, .elementor-post__card img, figure img, img[src], img[data-src], img[data-lazy-src]'
-      );
+      const img = item.querySelector('.elementor-post__thumbnail img, .elementor-post__card img, figure img, img[src], img[data-src], img[data-lazy-src]');
       if (img) {
-        const raw =
-          img.getAttribute('src') || img.getAttribute('data-src') || img.getAttribute('data-lazy-src') || '';
+        const raw = img.getAttribute('src') || img.getAttribute('data-src') || img.getAttribute('data-lazy-src') || '';
         if (raw && !raw.startsWith('data:')) {
-          try {
-            imageUrl = new URL(raw, location.href).href;
-          } catch {
-            imageUrl = raw.trim();
-          }
+          try { imageUrl = new URL(raw, location.href).href; } catch { imageUrl = raw.trim(); }
         }
       }
       return {
@@ -1238,14 +1198,9 @@ async function scrapeWMC(context) {
       let imageUrl = '';
       const img = item.querySelector('img[src], img[data-src], img[data-lazy-src]');
       if (img) {
-        const raw =
-          img.getAttribute('src') || img.getAttribute('data-src') || img.getAttribute('data-lazy-src') || '';
+        const raw = img.getAttribute('src') || img.getAttribute('data-src') || img.getAttribute('data-lazy-src') || '';
         if (raw && !raw.startsWith('data:')) {
-          try {
-            imageUrl = new URL(raw, location.href).href;
-          } catch {
-            imageUrl = raw.trim();
-          }
+          try { imageUrl = new URL(raw, location.href).href; } catch { imageUrl = raw.trim(); }
         }
       }
       return {
@@ -1277,66 +1232,42 @@ async function scrapeNewTheatre(context) {
       const href = a.getAttribute('href') || '';
       const url = (href.startsWith('http') ? href : `https://trafalgartickets.com${href}`).split('?')[0];
       if (seen.has(url)) continue;
-
       const t = (a.innerText || '').replace(/\u00a0/g, ' ');
       const fromIdx = t.search(/\bfrom\s+£/i);
       const head = fromIdx >= 0 ? t.slice(0, fromIdx) : t;
-
       const ti = head.indexOf('###');
       let category = '';
       let title = '';
       if (ti >= 0) {
         category = head.slice(0, ti).replace(/\s+/g, ' ').trim();
-        title = head
-          .slice(ti + 3)
-          .replace(/\s+/g, ' ')
-          .trim();
+        title = head.slice(ti + 3).replace(/\s+/g, ' ').trim();
       } else {
         title = a.querySelector('h2, h3, h4')?.innerText?.replace(/\s+/g, ' ').trim() || '';
       }
-
       const compact = head.replace(/\s+/g, ' ').trim();
       let date = '';
-      const rangeM = compact.match(
-        /\b((?:Mon|Tue|Wed|Thu|Fri|Sat|Sun)(?:day)?\s+\d{1,2}\s*[-–]\s*(?:Mon|Tue|Wed|Thu|Fri|Sat|Sun)(?:day)?\s+\d{1,2}\s+(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*\s+\d{4})\b/i
-      );
+      const rangeM = compact.match(/\b((?:Mon|Tue|Wed|Thu|Fri|Sat|Sun)(?:day)?\s+\d{1,2}\s*[-–]\s*(?:Mon|Tue|Wed|Thu|Fri|Sat|Sun)(?:day)?\s+\d{1,2}\s+(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*\s+\d{4})\b/i);
       if (rangeM) date = rangeM[1];
       if (!date) {
-        const singleM = compact.match(
-          /\b((?:Mon|Tue|Wed|Thu|Fri|Sat|Sun)(?:day)?\s+\d{1,2}\s+(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*\s+\d{4})\b/i
-        );
+        const singleM = compact.match(/\b((?:Mon|Tue|Wed|Thu|Fri|Sat|Sun)(?:day)?\s+\d{1,2}\s+(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*\s+\d{4})\b/i);
         if (singleM) date = singleM[1];
       }
-
       let ticketPriceFrom = null;
       let ticketPriceLabel = '';
       const pm = t.match(/from\s+£\s*([\d.]+)/i);
-      if (pm) {
-        ticketPriceFrom = Number(pm[1]);
-        ticketPriceLabel = `from £${pm[1]}`;
-      }
-
+      if (pm) { ticketPriceFrom = Number(pm[1]); ticketPriceLabel = `from £${pm[1]}`; }
       if (!title || !date) continue;
       seen.add(url);
-
       let imageUrl = '';
       const imgEl = a.querySelector('img[src], img[data-src], img[data-lazy-src]');
       if (imgEl) {
-        const raw =
-          imgEl.getAttribute('src') || imgEl.getAttribute('data-src') || imgEl.getAttribute('data-lazy-src') || '';
+        const raw = imgEl.getAttribute('src') || imgEl.getAttribute('data-src') || imgEl.getAttribute('data-lazy-src') || '';
         if (raw && !raw.startsWith('data:')) {
-          try {
-            imageUrl = new URL(raw, location.href).href;
-          } catch {
-            imageUrl = raw.trim();
-          }
+          try { imageUrl = new URL(raw, location.href).href; } catch { imageUrl = raw.trim(); }
         }
       }
-
       const row = {
-        title,
-        date,
-        url,
+        title, date, url,
         venue: 'New Theatre Cardiff',
         scrapedAt: new Date().toISOString(),
       };
@@ -1361,8 +1292,7 @@ async function scrapeNewTheatre(context) {
       const obj = JSON.parse(match[0].replace(/\\"/g, '"').replace(/\\u0026/g, '&'));
       if (obj.eventGroupId == null || !obj.name) continue;
       const prev = metaByGroupId.get(obj.eventGroupId) || {};
-      const next = { ...prev, ...obj };
-      metaByGroupId.set(obj.eventGroupId, next);
+      metaByGroupId.set(obj.eventGroupId, { ...prev, ...obj });
     } catch (_) {}
   }
 
@@ -1393,23 +1323,15 @@ async function scrapeNewTheatre(context) {
 
   for (const row of domEvents) {
     const mid = row.url.match(/\/event\/(\d+)(?:\?|$)/);
-    if (mid) {
-      const o = metaByGroupId.get(Number(mid[1]));
-      if (o) applyNewTheatreMeta(row, o);
-    }
+    if (mid) { const o = metaByGroupId.get(Number(mid[1])); if (o) applyNewTheatreMeta(row, o); }
     const tail = row.url.split('/event/')[1];
     if (tail) {
       const slugKey = tail.split('?')[0];
       const gid = slugToId.get(slugKey);
-      if (gid != null) {
-        const o = metaByGroupId.get(gid);
-        if (o) applyNewTheatreMeta(row, o);
-      }
+      if (gid != null) { const o = metaByGroupId.get(gid); if (o) applyNewTheatreMeta(row, o); }
     }
     const byName = [...metaByGroupId.values()].find(
-      (o) =>
-        o.name &&
-        row.title &&
+      (o) => o.name && row.title &&
         String(o.name).trim().toLowerCase() === String(row.title).trim().toLowerCase()
     );
     if (byName) applyNewTheatreMeta(row, byName);
@@ -1426,18 +1348,11 @@ async function scrapeTramshed(context) {
   const events = await page.evaluate(() => {
     return Array.from(document.querySelectorAll('article.elementor-post')).map((item) => {
       let imageUrl = '';
-      const img = item.querySelector(
-        '.elementor-post__thumbnail img, .elementor-post__card img, figure img, img[src], img[data-src], img[data-lazy-src]'
-      );
+      const img = item.querySelector('.elementor-post__thumbnail img, .elementor-post__card img, figure img, img[src], img[data-src], img[data-lazy-src]');
       if (img) {
-        const raw =
-          img.getAttribute('src') || img.getAttribute('data-src') || img.getAttribute('data-lazy-src') || '';
+        const raw = img.getAttribute('src') || img.getAttribute('data-src') || img.getAttribute('data-lazy-src') || '';
         if (raw && !raw.startsWith('data:')) {
-          try {
-            imageUrl = new URL(raw, location.href).href;
-          } catch {
-            imageUrl = raw.trim();
-          }
+          try { imageUrl = new URL(raw, location.href).href; } catch { imageUrl = raw.trim(); }
         }
       }
       return {
@@ -1452,75 +1367,6 @@ async function scrapeTramshed(context) {
   });
   await page.close();
   console.log(`  Tramshed: ${events.length} events`);
-  return events;
-}
-
-const UTILITA_ARENA_LN =
-  'https://www.livenation.co.uk/utilita-arena-cardiff-tickets-vdp3915';
-
-async function scrapeUtilitaArena(context) {
-  console.log('Scraping Utilita Arena (Live Nation)...');
-  const page = await context.newPage();
-  await gotoAndSettle(
-    page,
-    UTILITA_ARENA_LN,
-    'main li.MuiStack-root h4.MuiTypography-header4'
-  );
-  await new Promise((r) => setTimeout(r, 2_000));
-  const events = await page.evaluate(() => {
-    const isEventHref = (href) =>
-      href &&
-      href.includes('livenation.co.uk/event/') &&
-      !href.includes('/event/allevents');
-
-    const rows = [...document.querySelectorAll('li.MuiStack-root')].filter((li) => {
-      const a = li.querySelector('a[href*="/event/"]');
-      return a && isEventHref(a.href) && li.querySelector('h4.MuiTypography-header4');
-    });
-
-    return rows.map((li) => {
-      const title = li.querySelector('h4.MuiTypography-header4')?.innerText?.trim() || '';
-      let imageUrl = '';
-      const img = li.querySelector('img[src], img[data-src], img[data-lazy-src]');
-      if (img) {
-        const raw =
-          img.getAttribute('src') || img.getAttribute('data-src') || img.getAttribute('data-lazy-src') || '';
-        if (raw && !raw.startsWith('data:')) {
-          try {
-            imageUrl = new URL(raw, location.href).href;
-          } catch {
-            imageUrl = raw.trim();
-          }
-        }
-      }
-      let date =
-        li.querySelector('[data-testid="aedp-event-information-block-times"]')?.innerText?.replace(/\s+/g, ' ').trim() ||
-        '';
-      if (!/\d{4}/.test(date)) {
-        const blob = (li.innerText || '').replace(/\s+/g, ' ');
-        const m =
-          blob.match(
-            /\b((?:Mon|Tue|Wed|Thu|Fri|Sat|Sun)(?:day)?\s+\d{1,2}\s+(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*\s+\d{4})\b/i
-          ) || blob.match(/\b(\d{1,2}\s+(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*\s+\d{4})\b/i);
-        if (m) date = m[1];
-      }
-      const support =
-        li.querySelector('[data-testid="aedp-event-information-support-artists"]')?.innerText?.trim() || '';
-      const url =
-        [...li.querySelectorAll('a[href*="/event/"]')].find((a) => isEventHref(a.href))?.href || '';
-      return {
-        title,
-        date,
-        ...(support ? { support } : {}),
-        url,
-        venue: 'Utilita Arena Cardiff',
-        scrapedAt: new Date().toISOString(),
-        ...(imageUrl ? { imageUrl } : {}),
-      };
-    }).filter((e) => e.title && e.url);
-  });
-  await page.close();
-  console.log(`  Utilita Arena: ${events.length} events`);
   return events;
 }
 
@@ -1540,14 +1386,9 @@ async function scrapeDepot(context) {
       let imageUrl = '';
       const img = item.querySelector('.fusion-imageframe img, .fusion-featured-image img, img[src], img[data-src]');
       if (img) {
-        const raw =
-          img.getAttribute('src') || img.getAttribute('data-src') || img.getAttribute('data-lazy-src') || '';
+        const raw = img.getAttribute('src') || img.getAttribute('data-src') || img.getAttribute('data-lazy-src') || '';
         if (raw && !raw.startsWith('data:')) {
-          try {
-            imageUrl = new URL(raw, location.href).href;
-          } catch {
-            imageUrl = raw.trim();
-          }
+          try { imageUrl = new URL(raw, location.href).href; } catch { imageUrl = raw.trim(); }
         }
       }
       return {
@@ -1576,11 +1417,7 @@ async function scrapeCardiffSU(context) {
       if (img) {
         const raw = img.getAttribute('src') || img.getAttribute('data-src') || '';
         if (raw && !raw.startsWith('data:')) {
-          try {
-            imageUrl = new URL(raw, location.href).href;
-          } catch {
-            imageUrl = raw.trim();
-          }
+          try { imageUrl = new URL(raw, location.href).href; } catch { imageUrl = raw.trim(); }
         }
       }
       return {
@@ -1609,8 +1446,7 @@ async function scrapeTheGate(context) {
 
     function pickDate(block) {
       const trySelectors = [
-        'p strong u',
-        'p u strong',
+        'p strong u', 'p u strong',
         'p span[style*="text-decoration:underline"] strong',
         'p span[style*="text-decoration: underline"] strong',
       ];
@@ -1631,7 +1467,7 @@ async function scrapeTheGate(context) {
       date: pickDate(block),
       url: 'https://www.thegate.org.uk/whats-on',
       venue: 'The Gate Cardiff',
-      scrapedAt: new Date().toISOString()
+      scrapedAt: new Date().toISOString(),
     })).filter(e => e.title && e.date);
   });
   await page.close();
@@ -1648,25 +1484,19 @@ async function scrapeClwb(context) {
       let imageUrl = '';
       const img = item.querySelector('figure img, .grid-item-image img, img[src], img[data-src]');
       if (img) {
-        const raw =
-          img.getAttribute('src') || img.getAttribute('data-src') || img.getAttribute('data-lazy-src') || '';
+        const raw = img.getAttribute('src') || img.getAttribute('data-src') || img.getAttribute('data-lazy-src') || '';
         if (raw && !raw.startsWith('data:')) {
-          try {
-            imageUrl = new URL(raw, location.href).href;
-          } catch {
-            imageUrl = raw.trim();
-          }
+          try { imageUrl = new URL(raw, location.href).href; } catch { imageUrl = raw.trim(); }
         }
       }
       return {
         title: item.querySelector('h3.grid-item-title')?.innerText.trim() || '',
         date: item.querySelector('p.grid-item-support.date-translate, p.date-translate')?.innerText.trim() || '',
         details: Array.from(item.querySelectorAll('p.grid-item-support:not(.date-translate)'))
-          .map((p) => p.innerText.trim())
-          .join(' • '),
+          .map((p) => p.innerText.trim()).join(' • '),
         url:
-          item.querySelector('a.tickets-button, a[href*="seetickets"], a[href*="fatsoma"], figure a, .grid-item-image a')
-            ?.href || item.querySelector('a[href^="http"]')?.href || '',
+          item.querySelector('a.tickets-button, a[href*="seetickets"], a[href*="fatsoma"], figure a, .grid-item-image a')?.href ||
+          item.querySelector('a[href^="http"]')?.href || '',
         venue: 'Clwb Ifor Bach',
         scrapedAt: new Date().toISOString(),
         ...(imageUrl ? { imageUrl } : {}),
@@ -1678,24 +1508,10 @@ async function scrapeClwb(context) {
   return events;
 }
 
-async function safeScrap(fn, name, retries = 2) {
-  let lastErr;
-  for (let attempt = 0; attempt <= retries; attempt++) {
-    try {
-      return await fn();
-    } catch (e) {
-      lastErr = e;
-      if (attempt < retries) {
-        console.log(`  ${name}: attempt ${attempt + 1} failed (${e.message.split('\n')[0]}), retrying...`);
-        await new Promise(r => setTimeout(r, 3_000));
-      }
-    }
-  }
-  console.log(`  ${name} failed: ${lastErr.message.split('\n')[0]}`);
-  return [];
-}
+// ---------------------------------------------------------------------------
+// Deduplication
+// ---------------------------------------------------------------------------
 
-/** Strip tracking params / fragments so the same ticket page maps to one key. */
 function normalizeUrlForDedupe(raw) {
   if (!raw || typeof raw !== 'string') return '';
   const s = raw.trim();
@@ -1706,19 +1522,13 @@ function normalizeUrlForDedupe(raw) {
     u.search = '';
     const path = (u.pathname || '/').replace(/\/+$/, '') || '/';
     return `${u.protocol}//${u.hostname.toLowerCase()}${path}`.toLowerCase();
-  } catch {
-    return s.split('?')[0].split('#')[0].replace(/\/+$/, '').trim().toLowerCase();
-  }
+  } catch { return s.split('?')[0].split('#')[0].replace(/\/+$/, '').trim().toLowerCase(); }
 }
 
 function normalizeTitleForDedupe(t) {
-  return String(t || '')
-    .toLowerCase()
-    .replace(/\s+/g, ' ')
-    .trim();
+  return String(t || '').toLowerCase().replace(/\s+/g, ' ').trim();
 }
 
-/** URLs reused for every row on a listing (not per-event); must not define dedupe identity. */
 const GENERIC_LISTING_URLS = new Set([
   normalizeUrlForDedupe('https://www.thegate.org.uk/whats-on'),
 ]);
@@ -1733,6 +1543,19 @@ function eventDedupeKey(ev) {
   return `meta:${title}|${date}|${venue}`;
 }
 
+function dedupeEventsPreservingOrder(events) {
+  const seen = new Set();
+  const out = [];
+  let dropped = 0;
+  for (const ev of events) {
+    const k = eventDedupeKey(ev);
+    if (seen.has(k)) { dropped++; continue; }
+    seen.add(k);
+    out.push(ev);
+  }
+  return { events: out, dropped };
+}
+
 function findDuplicateEventGroups(events) {
   if (!Array.isArray(events)) return [];
   const map = new Map();
@@ -1741,9 +1564,7 @@ function findDuplicateEventGroups(events) {
     if (!map.has(k)) map.set(k, []);
     map.get(k).push(i);
   }
-  return [...map.entries()]
-    .filter(([, idxs]) => idxs.length > 1)
-    .map(([key, indices]) => ({ key, indices }));
+  return [...map.entries()].filter(([, idxs]) => idxs.length > 1).map(([key, indices]) => ({ key, indices }));
 }
 
 function summarizeEventLine(ev, index) {
@@ -1760,7 +1581,7 @@ function summarizeEventLine(ev, index) {
 function printDuplicateReview(events) {
   const groups = findDuplicateEventGroups(events);
   if (!groups.length) {
-    console.log(`No duplicates among ${events.length} events (by URL, or title+date+venue when URL is missing).`);
+    console.log(`No duplicates among ${events.length} events.`);
     return { groups: [], redundant: 0 };
   }
   let redundant = 0;
@@ -1768,48 +1589,45 @@ function printDuplicateReview(events) {
   for (let g = 0; g < groups.length; g++) {
     const { key, indices } = groups[g];
     redundant += indices.length - 1;
-    console.log(`--- Group ${g + 1} (${indices.length} rows) ${key.slice(0, 120)}${key.length > 120 ? '…' : ''}`);
-    for (const i of indices) {
-      console.log(`  ${summarizeEventLine(events[i], i)}`);
-    }
+    console.log(`--- Group ${g + 1} (${indices.length} rows) ${key.slice(0, 120)}`);
+    for (const i of indices) console.log(`  ${summarizeEventLine(events[i], i)}`);
     console.log('');
   }
-  console.log(`Summary: ${redundant} redundant row(s) could be dropped (first row per group kept).`);
+  console.log(`Summary: ${redundant} redundant row(s) could be dropped.`);
   return { groups, redundant };
 }
 
-function dedupeEventsPreservingOrder(events) {
-  const seen = new Set();
-  const out = [];
-  let dropped = 0;
-  for (const ev of events) {
-    const k = eventDedupeKey(ev);
-    if (seen.has(k)) {
-      dropped++;
-      continue;
-    }
-    seen.add(k);
-    out.push(ev);
-  }
-  return { events: out, dropped };
-}
+// ---------------------------------------------------------------------------
+// Main scrape orchestration
+// ---------------------------------------------------------------------------
 
 async function scrapeAll() {
-  const browser = await chromium.launch({
-    args: ['--disable-dev-shm-usage'],
-  });
+  const browser = await chromium.launch({ args: ['--disable-dev-shm-usage'] });
   const context = await browser.newContext({
-    userAgent:
-      'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36',
+    userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36',
     viewport: { width: 1365, height: 900 },
   });
+
+  async function safeScrap(fn, name, retries = 2) {
+    let lastErr;
+    for (let attempt = 0; attempt <= retries; attempt++) {
+      try { return await fn(); } catch (e) {
+        lastErr = e;
+        if (attempt < retries) {
+          console.log(`  ${name}: attempt ${attempt + 1} failed (${e.message.split('\n')[0]}), retrying...`);
+          await new Promise(r => setTimeout(r, 3_000));
+        }
+      }
+    }
+    console.log(`  ${name} failed: ${lastErr.message.split('\n')[0]}`);
+    return [];
+  }
 
   let allEvents = [
     ...await safeScrap(() => scrapeGlobe(context), 'Globe'),
     ...await safeScrap(() => scrapeWMC(context), 'WMC'),
     ...await safeScrap(() => scrapeNewTheatre(context), 'New Theatre'),
     ...await safeScrap(() => scrapeTramshed(context), 'Tramshed'),
-    ...await safeScrap(() => scrapeUtilitaArena(context), 'Utilita Arena'),
     ...await safeScrap(() => scrapeDepot(context), 'Depot'),
     ...await safeScrap(() => scrapeCardiffSU(context), 'Cardiff SU'),
     ...await safeScrap(() => scrapeTheGate(context), 'The Gate'),
@@ -1820,14 +1638,16 @@ async function scrapeAll() {
 
   await browser.close();
 
-  const dupBefore = findDuplicateEventGroups(allEvents).length;
   const { events: deduped, dropped } = dedupeEventsPreservingOrder(allEvents);
-  if (dropped > 0) {
-    console.log(`\nRemoved ${dropped} duplicate event row(s) before save (${dupBefore} duplicate group(s)).`);
-  }
+  if (dropped > 0) console.log(`\nRemoved ${dropped} duplicate event row(s).`);
+
   fs.writeFileSync('events.json', JSON.stringify(deduped, null, 2));
   console.log(`\nTotal: ${deduped.length} events saved to events.json`);
 }
+
+// ---------------------------------------------------------------------------
+// CLI entry points
+// ---------------------------------------------------------------------------
 
 if (require.main === module && process.argv.includes('--dates-only')) {
   const list = JSON.parse(fs.readFileSync('events.json', 'utf8'));
@@ -1835,68 +1655,33 @@ if (require.main === module && process.argv.includes('--dates-only')) {
   fs.writeFileSync('events.json', JSON.stringify(out, null, 2));
   const missing = out.filter((e) => !e.date || !String(e.date).trim()).length;
   console.log(`--dates-only: wrote ${out.length} events (${missing} still missing date)`);
-  if (missing) {
-    console.log('Re-run `node scrape.js` to scrape fresh listing URLs and enrich detail pages.');
-  }
 } else if (require.main === module && process.argv.includes('--review-duplicates')) {
-  const eventsFile = 'events.json';
-  if (!fs.existsSync(eventsFile)) {
-    console.error(`Missing ${eventsFile}. Run a scrape first or add the file.`);
-    process.exit(1);
-  }
-  const list = JSON.parse(fs.readFileSync(eventsFile, 'utf8'));
-  if (!Array.isArray(list)) {
-    console.error('events.json must be a JSON array of events.');
-    process.exit(1);
-  }
+  const list = JSON.parse(fs.readFileSync('events.json', 'utf8'));
+  if (!Array.isArray(list)) { console.error('events.json must be a JSON array.'); process.exit(1); }
   printDuplicateReview(list);
-  if (process.argv.includes('--strict') && findDuplicateEventGroups(list).length) {
-    process.exit(1);
-  }
+  if (process.argv.includes('--strict') && findDuplicateEventGroups(list).length) process.exit(1);
 } else if (require.main === module && process.argv.includes('--dedupe-events')) {
-  const eventsFile = 'events.json';
-  if (!fs.existsSync(eventsFile)) {
-    console.error(`Missing ${eventsFile}.`);
-    process.exit(1);
-  }
-  const list = JSON.parse(fs.readFileSync(eventsFile, 'utf8'));
-  if (!Array.isArray(list)) {
-    console.error('events.json must be a JSON array of events.');
-    process.exit(1);
-  }
+  const list = JSON.parse(fs.readFileSync('events.json', 'utf8'));
+  if (!Array.isArray(list)) { console.error('events.json must be a JSON array.'); process.exit(1); }
   const finalized = list.map((ev) => finalizeEvent(ev));
   printDuplicateReview(finalized);
   const { events: deduped, dropped } = dedupeEventsPreservingOrder(finalized);
   if (dropped > 0) {
-    fs.writeFileSync(eventsFile, JSON.stringify(deduped, null, 2));
+    fs.writeFileSync('events.json', JSON.stringify(deduped, null, 2));
     console.log(`\n--dedupe-events: wrote ${deduped.length} events (removed ${dropped}).`);
   } else {
     console.log('\n--dedupe-events: nothing to remove.');
   }
 } else if (require.main === module && process.argv.includes('--music-genre-stats')) {
-  const eventsFile = 'events.json';
-  if (!fs.existsSync(eventsFile)) {
-    console.error(`Missing ${eventsFile}.`);
-    process.exit(1);
-  }
-  const list = JSON.parse(fs.readFileSync(eventsFile, 'utf8'));
-  if (!Array.isArray(list)) {
-    console.error('events.json must be a JSON array of events.');
-    process.exit(1);
-  }
-
+  const list = JSON.parse(fs.readFileSync('events.json', 'utf8'));
+  if (!Array.isArray(list)) { console.error('events.json must be a JSON array.'); process.exit(1); }
   const total = list.length;
   const musicGenresFilled = list.filter((e) => Array.isArray(e.musicGenres) && e.musicGenres.length > 0).length;
   const genreFilled = list.filter((e) => typeof e.genre === 'string' && e.genre.trim()).length;
-  const genreSplitNeeded = list.filter(
-    (e) => (!Array.isArray(e.musicGenres) || e.musicGenres.length === 0) && typeof e.genre === 'string' && e.genre.trim()
-  ).length;
-
   console.log(`--music-genre-stats`);
   console.log(`  total events: ${total}`);
   console.log(`  musicGenres filled: ${musicGenresFilled} (${total ? Math.round((musicGenresFilled / total) * 100) : 0}%)`);
   console.log(`  genre filled: ${genreFilled}`);
-  console.log(`  musicGenres empty but genre present: ${genreSplitNeeded}`);
 } else if (require.main === module) {
   scrapeAll().catch(console.error);
 }
