@@ -3,13 +3,12 @@ name: Scrape Cardiff Gigs
 on:
   schedule:
     - cron: '0 8 * * *'
+    - cron: '0 14 * * *'
+    - cron: '0 20 * * *'
   workflow_dispatch:
-
-
 
 permissions:
   contents: write
-
 
 jobs:
   scrape:
@@ -38,3 +37,6 @@ jobs:
           git add events.json
           git diff --staged --quiet || git commit -m "Update events $(date -u +%Y-%m-%d)"
           git push origin HEAD:main
+
+      - name: Keepalive
+        uses: gautamkrishnar/keepalive-workflow@v2
