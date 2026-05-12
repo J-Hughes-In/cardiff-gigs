@@ -1224,6 +1224,36 @@ async function scrapeNewTheatre(context) {
   await gotoAndSettle(page, 'https://trafalgartickets.com/new-theatre-cardiff/en-GB/whats-on', 'body');
   await new Promise((r) => setTimeout(r, 2_000));
 
+  // Dismiss cookie banner if present
+  try {
+    const cookieBtn = await page.$('button:has-text("Accept Cookies"), button:has-text("Allow Cookies"), button:has-text("Accept All")');
+    if (cookieBtn && await cookieBtn.isVisible()) {
+      await cookieBtn.click();
+      await new Promise((r) => setTimeout(r, 1_000));
+      console.log('  New Theatre: dismissed cookie banner');
+    }
+  } catch (_) {}
+
+  // Click "Load more" repeatedly until it disappears
+  let loadMoreClicks = 0;
+  while (true) {
+    try {
+      const loadMoreBtn = await page.$('button:has-text("Load more")');
+      if (!loadMoreBtn) break;
+      const isVisible = await loadMoreBtn.isVisible();
+      if (!isVisible) break;
+      await loadMoreBtn.scrollIntoViewIfNeeded();
+      await new Promise((r) => setTimeout(r, 500));
+      await loadMoreBtn.click({ timeout: 10_000 });
+      await new Promise((r) => setTimeout(r, 1_500));
+      loadMoreClicks++;
+      if (loadMoreClicks > 20) break;
+    } catch (_) {
+      break; // button gone or unclickable — stop
+    }
+  }
+  if (loadMoreClicks > 0) console.log(`  New Theatre: clicked Load More ${loadMoreClicks} times`);
+
   const domEvents = await page.evaluate(() => {
     const seen = new Set();
     const out = [];
@@ -1367,6 +1397,57 @@ async function scrapeTramshed(context) {
   });
   await page.close();
   console.log(`  Tramshed: ${events.length} events`);
+  return events;
+}
+
+async function scrapeUtilitaArena(context) {
+  console.log('Scraping Utilita Arena...');
+  const page = await context.newPage();
+  await gotoAndSettle(
+    page,
+    'https://www.livenation.co.uk/utilita-arena-cardiff-tickets-vdp3915',
+    'li[data-testid="aedp-event"]'
+  );
+  await new Promise((r) => setTimeout(r, 2_000));
+
+  const events = await page.evaluate(() => {
+    return Array.from(document.querySelectorAll('li[data-testid="aedp-event"]')).map((item) => {
+      const titleEl = item.querySelector('h4[data-testid="aedp-event-information-block-venuedetails"]');
+      const timeEl = item.querySelector('time[datetime]');
+      const timesEl = item.querySelector('p[data-testid="aedp-event-information-block-times"]');
+      const supportEl = item.querySelector('p[data-testid="aedp-event-information-support-artists"]');
+      const linkEl = item.querySelector('a');
+
+      const title = titleEl?.innerText?.trim() || '';
+      const datetime = timeEl?.getAttribute('datetime') || '';
+      const times = timesEl?.innerText?.trim() || '';
+      const support = supportEl?.innerText?.trim() || '';
+      const href = linkEl?.getAttribute('href') || '';
+      const url = href.startsWith('http') ? href : `https://www.livenation.co.uk${href}`;
+
+      let imageUrl = '';
+      const img = item.querySelector('img[src], img[data-src]');
+      if (img) {
+        const raw = img.getAttribute('src') || img.getAttribute('data-src') || '';
+        if (raw && !raw.startsWith('data:')) {
+          try { imageUrl = new URL(raw, location.href).href; } catch { imageUrl = raw.trim(); }
+        }
+      }
+
+      return {
+        title,
+        date: datetime,
+        details: [times, support].filter(Boolean).join(' • '),
+        url,
+        venue: 'Utilita Arena Cardiff',
+        scrapedAt: new Date().toISOString(),
+        ...(imageUrl ? { imageUrl } : {}),
+      };
+    }).filter((e) => e.title && e.url);
+  });
+
+  await page.close();
+  console.log(`  Utilita Arena: ${events.length} events`);
   return events;
 }
 
@@ -1628,6 +1709,7 @@ async function scrapeAll() {
     ...await safeScrap(() => scrapeWMC(context), 'WMC'),
     ...await safeScrap(() => scrapeNewTheatre(context), 'New Theatre'),
     ...await safeScrap(() => scrapeTramshed(context), 'Tramshed'),
+    ...await safeScrap(() => scrapeUtilitaArena(context), 'Utilita Arena'),
     ...await safeScrap(() => scrapeDepot(context), 'Depot'),
     ...await safeScrap(() => scrapeCardiffSU(context), 'Cardiff SU'),
     ...await safeScrap(() => scrapeTheGate(context), 'The Gate'),
