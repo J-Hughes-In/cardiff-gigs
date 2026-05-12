@@ -1455,13 +1455,43 @@ async function scrapeDepot(context) {
   console.log('Scraping Depot...');
   const page = await context.newPage();
   await gotoAndSettle(page, 'https://depotcardiff.com/events/', 'li.fusion-layout-column');
-  await page.evaluate(async () => {
-    for (let i = 0; i < 10; i++) {
-      window.scrollBy(0, 600);
-      await new Promise(r => setTimeout(r, 300));
+
+  // Slow incremental scroll to trigger lazy loading
+  async function autoScroll() {
+    await page.evaluate(async () => {
+      await new Promise((resolve) => {
+        let totalHeight = 0;
+        const distance = 300;
+        const timer = setInterval(() => {
+          window.scrollBy(0, distance);
+          totalHeight += distance;
+          if (totalHeight >= document.body.scrollHeight) {
+            clearInterval(timer);
+            resolve();
+          }
+        }, 400);
+      });
+    });
+  }
+
+  let lastCount = 0;
+  let unchangedRounds = 0;
+  while (true) {
+    await autoScroll();
+    await new Promise(r => setTimeout(r, 3_000));
+    const count = await page.evaluate(() =>
+      document.querySelectorAll('li.fusion-layout-column').length
+    );
+    console.log(`  Depot scroll: events ${count}`);
+    if (count === lastCount) {
+      unchangedRounds++;
+      if (unchangedRounds >= 3) break;
+    } else {
+      unchangedRounds = 0;
     }
-  });
-  await new Promise(r => setTimeout(r, 1_000));
+    lastCount = count;
+  }
+
   const events = await page.evaluate(() => {
     return Array.from(document.querySelectorAll('li.fusion-layout-column')).map((item) => {
       let imageUrl = '';
@@ -1482,6 +1512,7 @@ async function scrapeDepot(context) {
       };
     }).filter((e) => e.title);
   });
+
   await page.close();
   console.log(`  Depot: ${events.length} events`);
   return events;
