@@ -37,6 +37,3 @@ jobs:
           git add events.json
           git diff --staged --quiet || git commit -m "Update events $(date -u +%Y-%m-%d)"
           git push origin HEAD:main
-
-      - name: Keepalive
-        uses: gautamkrishnar/keepalive-workflow@v2
