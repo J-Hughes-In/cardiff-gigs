@@ -1723,8 +1723,41 @@ async function scrapeAll() {
   const { events: deduped, dropped } = dedupeEventsPreservingOrder(allEvents);
   if (dropped > 0) console.log(`\nRemoved ${dropped} duplicate event row(s).`);
 
-  fs.writeFileSync('events.json', JSON.stringify(deduped, null, 2));
-  console.log(`\nTotal: ${deduped.length} events saved to events.json`);
+  // Preserve original scrapedAt for events we've seen before
+  let previousEvents = [];
+  if (fs.existsSync('events.json')) {
+    try {
+      previousEvents = JSON.parse(fs.readFileSync('events.json', 'utf8'));
+    } catch (_) {}
+  }
+
+  // Build a lookup of previous scrapedAt by dedupe key
+  const previousScrapedAt = new Map();
+  for (const ev of previousEvents) {
+    const k = eventDedupeKey(ev);
+    if (ev.scrapedAt && !previousScrapedAt.has(k)) {
+      previousScrapedAt.set(k, ev.scrapedAt);
+    }
+  }
+
+  // Apply: keep old scrapedAt if event existed before, otherwise it's new
+  const now = new Date().toISOString();
+  let newCount = 0;
+  const final = deduped.map(ev => {
+    const k = eventDedupeKey(ev);
+    const existing = previousScrapedAt.get(k);
+    if (existing) {
+      return { ...ev, scrapedAt: existing };
+    } else {
+      newCount++;
+      return { ...ev, scrapedAt: now };
+    }
+  });
+
+  if (newCount > 0) console.log(`\n${newCount} new event(s) detected since last scrape`);
+
+  fs.writeFileSync('events.json', JSON.stringify(final, null, 2));
+  console.log(`Total: ${final.length} events saved to events.json`);
 }
 
 // ---------------------------------------------------------------------------
