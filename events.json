@@ -961,7 +961,7 @@
     "ticketPriceFrom": 20,
     "ticketPriceTo": 20,
     "ticketCurrency": "GBP",
-    "subcategory": "Wales Millennium Centre > What's on > 2026 > Buddy – The Buddy Holly Story",
+    "subcategory": "Canolfan Mileniwm Cymru > Digwyddiadur > 2026 > Buddy – The Buddy Holly Story",
     "primaryCategory": "Theatre",
     "genre": "Classical, Rock",
     "ticketPriceLabel": "£20"
@@ -1400,29 +1400,6 @@
     "ticketPriceLabel": "£6"
   },
   {
-    "title": "JESS ROBINSON: ELTON REIMAGINED",
-    "date": "Thursday, 28 May 2026",
-    "url": "https://www.wmc.org.uk/en/whats-on/2026/jess-robinson-elton-reimagined",
-    "venue": "Wales Millennium Centre",
-    "scrapedAt": "2026-05-12T09:07:48.767Z",
-    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1765801688/WMC%20Content/Whats%20On/2026/Cabaret/JESS%20ROBINSON/Press_05_Jess_Robinson_Elton_John_credit_Chloe_Hashemi?_a=BAAAV6DQ",
-    "imageUrls": [
-      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1765801688/WMC%20Content/Whats%20On/2026/Cabaret/JESS%20ROBINSON/Press_05_Jess_Robinson_Elton_John_credit_Chloe_Hashemi?_a=BAAAV6DQ",
-      "http://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_630%2Cw_1200/f_auto/q_auto/v1765801688/WMC%20Content/Whats%20On/2026/Cabaret/JESS%20ROBINSON/Press_05_Jess_Robinson_Elton_John_credit_Chloe_Hashemi?_a=BAAAV6DQ",
-      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_512%2Cw_1024/f_auto/q_auto/v1765801688/WMC%20Content/Whats%20On/2026/Cabaret/JESS%20ROBINSON/Press_05_Jess_Robinson_Elton_John_credit_Chloe_Hashemi?_a=BAAAV6DQ",
-      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1765801688/WMC%20Content/Whats%20On/2026/Cabaret/JESS%20ROBINSON/Press_05_Jess_Robinson_Elton_John_credit_Chloe_Hashemi?_a=BAAAV6DQ"
-    ],
-    "eventStartDate": "2026-05-28 19:00:00",
-    "eventEndDate": "2026-05-28 22:00:00",
-    "ticketPriceFrom": 15,
-    "ticketPriceTo": 15,
-    "ticketCurrency": "GBP",
-    "subcategory": "Wales Millennium Centre > What's on > 2026 > Jess Robinson: Elton Reimagined",
-    "primaryCategory": "Theatre",
-    "genre": "Jazz, Classical, Blues, Pop",
-    "ticketPriceLabel": "£15"
-  },
-  {
     "title": "SEASONS & STORIES",
     "date": "Thursday, 28 May 2026 – Wednesday, 28 May 2025",
     "url": "https://www.wmc.org.uk/en/whats-on/2026/seasons-and-stories",
@@ -1443,6 +1420,29 @@
     "subcategory": "Wales Millennium Centre > What's on > 2026 > Seasons & Stories",
     "primaryCategory": "Theatre",
     "genre": "Classical, Reggae",
+    "ticketPriceLabel": "£15"
+  },
+  {
+    "title": "JESS ROBINSON: ELTON REIMAGINED",
+    "date": "Thursday, 28 May 2026",
+    "url": "https://www.wmc.org.uk/en/whats-on/2026/jess-robinson-elton-reimagined",
+    "venue": "Wales Millennium Centre",
+    "scrapedAt": "2026-05-12T09:07:48.767Z",
+    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1765801688/WMC%20Content/Whats%20On/2026/Cabaret/JESS%20ROBINSON/Press_05_Jess_Robinson_Elton_John_credit_Chloe_Hashemi?_a=BAAAV6DQ",
+    "imageUrls": [
+      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1765801688/WMC%20Content/Whats%20On/2026/Cabaret/JESS%20ROBINSON/Press_05_Jess_Robinson_Elton_John_credit_Chloe_Hashemi?_a=BAAAV6DQ",
+      "http://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_630%2Cw_1200/f_auto/q_auto/v1765801688/WMC%20Content/Whats%20On/2026/Cabaret/JESS%20ROBINSON/Press_05_Jess_Robinson_Elton_John_credit_Chloe_Hashemi?_a=BAAAV6DQ",
+      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_512%2Cw_1024/f_auto/q_auto/v1765801688/WMC%20Content/Whats%20On/2026/Cabaret/JESS%20ROBINSON/Press_05_Jess_Robinson_Elton_John_credit_Chloe_Hashemi?_a=BAAAV6DQ",
+      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1765801688/WMC%20Content/Whats%20On/2026/Cabaret/JESS%20ROBINSON/Press_05_Jess_Robinson_Elton_John_credit_Chloe_Hashemi?_a=BAAAV6DQ"
+    ],
+    "eventStartDate": "2026-05-28 20:00:00",
+    "eventEndDate": "2026-05-28 22:00:00",
+    "ticketPriceFrom": 15,
+    "ticketPriceTo": 15,
+    "ticketCurrency": "GBP",
+    "subcategory": "Wales Millennium Centre > What's on > 2026 > Jess Robinson: Elton Reimagined",
+    "primaryCategory": "Theatre",
+    "genre": "Jazz, Classical, Blues, Pop",
     "ticketPriceLabel": "£15"
   },
   {
@@ -2056,11 +2056,22 @@
     "url": "https://www.wmc.org.uk/en/whats-on/2026/oolas-cabaret-quiz",
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-05-12T09:07:48.767Z",
-    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1773242893/WMC%20Content/Whats%20On/2026/Cabaret/Cabaret%20Quiz/Oola_s_Cabaret_Quiz_June28th_What_s_on_Thumbnail_WMC_1200_x_900_px_1?_a=BAAAV6DQ",
+    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1773242893/WMC%20Content/Whats%20On/2026/Cabaret/Cabaret%20Quiz/Oola_s_Cabaret_Quiz_June28th_What_s_on_Thumbnail_WMC_1200_x_900_px_1?_a=BAAAV6DQ",
     "imageUrls": [
+      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1773242893/WMC%20Content/Whats%20On/2026/Cabaret/Cabaret%20Quiz/Oola_s_Cabaret_Quiz_June28th_What_s_on_Thumbnail_WMC_1200_x_900_px_1?_a=BAAAV6DQ",
+      "http://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_630%2Cw_1200/f_auto/q_auto/v1773242893/WMC%20Content/Whats%20On/2026/Cabaret/Cabaret%20Quiz/Oola_s_Cabaret_Quiz_June28th_What_s_on_Thumbnail_WMC_1200_x_900_px_1?_a=BAAAV6DQ",
+      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_512%2Cw_1024/f_auto/q_auto/v1773242893/WMC%20Content/Whats%20On/2026/Cabaret/Cabaret%20Quiz/Oola_s_Cabaret_Quiz_June28th_What_s_on_Thumbnail_WMC_1200_x_900_px_1?_a=BAAAV6DQ",
       "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1773242893/WMC%20Content/Whats%20On/2026/Cabaret/Cabaret%20Quiz/Oola_s_Cabaret_Quiz_June28th_What_s_on_Thumbnail_WMC_1200_x_900_px_1?_a=BAAAV6DQ"
     ],
-    "primaryCategory": "Theatre"
+    "eventStartDate": "2026-06-28 19:00:00",
+    "eventEndDate": "2026-06-28 21:00:00",
+    "ticketPriceFrom": 10,
+    "ticketPriceTo": 10,
+    "ticketCurrency": "GBP",
+    "subcategory": "Wales Millennium Centre > What's on > 2026 > OOLA’S CABARET QUIZ",
+    "primaryCategory": "Theatre",
+    "genre": "Jazz, Classical, Blues",
+    "ticketPriceLabel": "£10"
   },
   {
     "title": "UNITY FESTIVAL’S GRAND OPENING",
@@ -2068,22 +2079,11 @@
     "url": "https://www.wmc.org.uk/en/whats-on/2026/unity-festivals-grand-opening",
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-05-12T09:07:48.767Z",
-    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1778162619/WMC%20Content/Whats%20On/2026/Cabaret/Unity%20Festival%20Grand%20opening/1200_x_900?_a=BAAAV6DQ",
+    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1778162619/WMC%20Content/Whats%20On/2026/Cabaret/Unity%20Festival%20Grand%20opening/1200_x_900?_a=BAAAV6DQ",
     "imageUrls": [
-      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1778162619/WMC%20Content/Whats%20On/2026/Cabaret/Unity%20Festival%20Grand%20opening/1200_x_900?_a=BAAAV6DQ",
-      "http://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_630%2Cw_1200/f_auto/q_auto/v1778162619/WMC%20Content/Whats%20On/2026/Cabaret/Unity%20Festival%20Grand%20opening/1200_x_900?_a=BAAAV6DQ",
-      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_512%2Cw_1024/f_auto/q_auto/v1778162619/WMC%20Content/Whats%20On/2026/Cabaret/Unity%20Festival%20Grand%20opening/1200_x_900?_a=BAAAV6DQ",
       "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1778162619/WMC%20Content/Whats%20On/2026/Cabaret/Unity%20Festival%20Grand%20opening/1200_x_900?_a=BAAAV6DQ"
     ],
-    "eventStartDate": "2026-07-01 20:30:00",
-    "eventEndDate": "2026-07-01 23:00:00",
-    "ticketPriceFrom": 10,
-    "ticketPriceTo": 10,
-    "ticketCurrency": "GBP",
-    "subcategory": "Wales Millennium Centre > What's on > 2026 > Unity Festival’s Grand Opening",
-    "primaryCategory": "Theatre",
-    "genre": "Classical",
-    "ticketPriceLabel": "£10"
+    "primaryCategory": "Theatre"
   },
   {
     "title": "TRUNK OF FUNK",
@@ -2091,11 +2091,22 @@
     "url": "https://www.wmc.org.uk/en/whats-on/2026/trunk-of-funk",
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-05-12T09:07:48.767Z",
-    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1773829565/WMC%20Content/Whats%20On/2026/Cabaret/Trunk%20of%20Funk/Trunk_of_Funk?_a=BAAAV6DQ",
+    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1773829565/WMC%20Content/Whats%20On/2026/Cabaret/Trunk%20of%20Funk/Trunk_of_Funk?_a=BAAAV6DQ",
     "imageUrls": [
+      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1773829565/WMC%20Content/Whats%20On/2026/Cabaret/Trunk%20of%20Funk/Trunk_of_Funk?_a=BAAAV6DQ",
+      "http://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_630%2Cw_1200/f_auto/q_auto/v1773829565/WMC%20Content/Whats%20On/2026/Cabaret/Trunk%20of%20Funk/Trunk_of_Funk?_a=BAAAV6DQ",
+      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_512%2Cw_1024/f_auto/q_auto/v1773829565/WMC%20Content/Whats%20On/2026/Cabaret/Trunk%20of%20Funk/Trunk_of_Funk?_a=BAAAV6DQ",
       "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1773829565/WMC%20Content/Whats%20On/2026/Cabaret/Trunk%20of%20Funk/Trunk_of_Funk?_a=BAAAV6DQ"
     ],
-    "primaryCategory": "Theatre"
+    "eventStartDate": "2026-07-02 20:00:00",
+    "eventEndDate": "2026-07-02 22:00:00",
+    "ticketPriceFrom": 15,
+    "ticketPriceTo": 15,
+    "ticketCurrency": "GBP",
+    "subcategory": "Wales Millennium Centre > What's on > 2026 > Trunk of Funk",
+    "primaryCategory": "Theatre",
+    "genre": "Jazz, Classical, Blues",
+    "ticketPriceLabel": "£15"
   },
   {
     "title": "BABY BUMPS",
@@ -2103,11 +2114,22 @@
     "url": "https://www.wmc.org.uk/en/whats-on/2026/baby-bumps",
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-05-12T09:07:48.767Z",
-    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1776162513/WMC%20Content/Whats%20On/2026/Weston%20Studio/Unity%20Festoval/Baby_bumps_thumbnail?_a=BAAAV6DQ",
+    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1776162513/WMC%20Content/Whats%20On/2026/Weston%20Studio/Unity%20Festoval/Baby_bumps_thumbnail?_a=BAAAV6DQ",
     "imageUrls": [
+      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1776162513/WMC%20Content/Whats%20On/2026/Weston%20Studio/Unity%20Festoval/Baby_bumps_thumbnail?_a=BAAAV6DQ",
+      "http://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_630%2Cw_1200/f_auto/q_auto/v1776162513/WMC%20Content/Whats%20On/2026/Weston%20Studio/Unity%20Festoval/Baby_bumps_thumbnail?_a=BAAAV6DQ",
+      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_512%2Cw_1024/f_auto/q_auto/v1776162513/WMC%20Content/Whats%20On/2026/Weston%20Studio/Unity%20Festoval/Baby_bumps_thumbnail?_a=BAAAV6DQ",
       "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1776162513/WMC%20Content/Whats%20On/2026/Weston%20Studio/Unity%20Festoval/Baby_bumps_thumbnail?_a=BAAAV6DQ"
     ],
-    "primaryCategory": "Theatre"
+    "eventStartDate": "2026-07-02 20:00:00",
+    "eventEndDate": "2026-07-02 22:00:00",
+    "ticketPriceFrom": 16,
+    "ticketPriceTo": 16,
+    "ticketCurrency": "GBP",
+    "subcategory": "Wales Millennium Centre > What's on > 2026 > Baby Bumps",
+    "primaryCategory": "Theatre",
+    "genre": "Classical",
+    "ticketPriceLabel": "£16"
   },
   {
     "title": "JAMES ACASTER",
@@ -2138,22 +2160,11 @@
     "url": "https://www.wmc.org.uk/en/whats-on/2026/the-pearl-revue",
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-05-12T09:07:48.767Z",
-    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1773937228/WMC%20Content/Whats%20On/2026/Cabaret/Pearl%20Revue%20July/The_Pearl_Revue_July3_What_s_on_Thumbnail_WMC_1200_x_900_px?_a=BAAAV6DQ",
+    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1773937228/WMC%20Content/Whats%20On/2026/Cabaret/Pearl%20Revue%20July/The_Pearl_Revue_July3_What_s_on_Thumbnail_WMC_1200_x_900_px?_a=BAAAV6DQ",
     "imageUrls": [
-      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1773937228/WMC%20Content/Whats%20On/2026/Cabaret/Pearl%20Revue%20July/The_Pearl_Revue_July3_What_s_on_Thumbnail_WMC_1200_x_900_px?_a=BAAAV6DQ",
-      "http://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_630%2Cw_1200/f_auto/q_auto/v1773937228/WMC%20Content/Whats%20On/2026/Cabaret/Pearl%20Revue%20July/The_Pearl_Revue_July3_What_s_on_Thumbnail_WMC_1200_x_900_px?_a=BAAAV6DQ",
-      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_512%2Cw_1024/f_auto/q_auto/v1773937228/WMC%20Content/Whats%20On/2026/Cabaret/Pearl%20Revue%20July/The_Pearl_Revue_July3_What_s_on_Thumbnail_WMC_1200_x_900_px?_a=BAAAV6DQ",
       "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1773937228/WMC%20Content/Whats%20On/2026/Cabaret/Pearl%20Revue%20July/The_Pearl_Revue_July3_What_s_on_Thumbnail_WMC_1200_x_900_px?_a=BAAAV6DQ"
     ],
-    "eventStartDate": "2026-07-03 20:00:00",
-    "eventEndDate": "2026-07-03 22:30:00",
-    "ticketPriceFrom": 20,
-    "ticketPriceTo": 20,
-    "ticketCurrency": "GBP",
-    "subcategory": "Wales Millennium Centre > What's on > 2026 > The Pearl Revue",
-    "primaryCategory": "Theatre",
-    "genre": "Jazz, Classical, Blues",
-    "ticketPriceLabel": "£20"
+    "primaryCategory": "Theatre"
   },
   {
     "title": "THE DAY THE MAN STEPPED ON THE MOON",
@@ -2161,22 +2172,11 @@
     "url": "https://www.wmc.org.uk/en/whats-on/2026/the-day-the-man-stepped-on-the-moon",
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-05-12T09:07:48.767Z",
-    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1775901234/WMC%20Content/Whats%20On/2026/Weston%20Studio/Unity%20Festoval/moon_thumbnail?_a=BAAAV6DQ",
+    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1775901234/WMC%20Content/Whats%20On/2026/Weston%20Studio/Unity%20Festoval/moon_thumbnail?_a=BAAAV6DQ",
     "imageUrls": [
-      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1775901234/WMC%20Content/Whats%20On/2026/Weston%20Studio/Unity%20Festoval/moon_thumbnail?_a=BAAAV6DQ",
-      "http://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_630%2Cw_1200/f_auto/q_auto/v1775901234/WMC%20Content/Whats%20On/2026/Weston%20Studio/Unity%20Festoval/moon_thumbnail?_a=BAAAV6DQ",
-      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_512%2Cw_1024/f_auto/q_auto/v1775901234/WMC%20Content/Whats%20On/2026/Weston%20Studio/Unity%20Festoval/moon_thumbnail?_a=BAAAV6DQ",
       "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1775901234/WMC%20Content/Whats%20On/2026/Weston%20Studio/Unity%20Festoval/moon_thumbnail?_a=BAAAV6DQ"
     ],
-    "eventStartDate": "2026-07-03 20:00:00",
-    "eventEndDate": "2026-07-03 21:00:00",
-    "ticketPriceFrom": 16,
-    "ticketPriceTo": 16,
-    "ticketCurrency": "GBP",
-    "subcategory": "Wales Millennium Centre > What's on > 2026 > The Day the Man Stepped on the Moon",
-    "primaryCategory": "Theatre",
-    "genre": "Classical",
-    "ticketPriceLabel": "£16"
+    "primaryCategory": "Theatre"
   },
   {
     "title": "DOWN",
@@ -2184,22 +2184,11 @@
     "url": "https://www.wmc.org.uk/en/whats-on/2026/down-2",
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-05-12T09:07:48.767Z",
-    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1775644094/WMC%20Content/Whats%20On/2026/Weston%20Studio/Unity%20Festoval/Down_thumbnail?_a=BAAAV6DQ",
+    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1775644094/WMC%20Content/Whats%20On/2026/Weston%20Studio/Unity%20Festoval/Down_thumbnail?_a=BAAAV6DQ",
     "imageUrls": [
-      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1775644094/WMC%20Content/Whats%20On/2026/Weston%20Studio/Unity%20Festoval/Down_thumbnail?_a=BAAAV6DQ",
-      "http://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_630%2Cw_1200/f_auto/q_auto/v1775644094/WMC%20Content/Whats%20On/2026/Weston%20Studio/Unity%20Festoval/Down_thumbnail?_a=BAAAV6DQ",
-      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_512%2Cw_1024/f_auto/q_auto/v1775644094/WMC%20Content/Whats%20On/2026/Weston%20Studio/Unity%20Festoval/Down_thumbnail?_a=BAAAV6DQ",
       "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1775644094/WMC%20Content/Whats%20On/2026/Weston%20Studio/Unity%20Festoval/Down_thumbnail?_a=BAAAV6DQ"
     ],
-    "eventStartDate": "2026-07-04 20:00:00",
-    "eventEndDate": "2026-07-04 21:00:00",
-    "ticketPriceFrom": 16,
-    "ticketPriceTo": 16,
-    "ticketCurrency": "GBP",
-    "subcategory": "Wales Millennium Centre > What's on > 2026 > Down",
-    "primaryCategory": "Theatre",
-    "genre": "Classical",
-    "ticketPriceLabel": "£16"
+    "primaryCategory": "Theatre"
   },
   {
     "title": "UNITY FESTIVAL PARTY",
@@ -2300,22 +2289,11 @@
     "url": "https://www.wmc.org.uk/en/whats-on/2026/shelly-ann",
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-05-12T09:07:48.767Z",
-    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1773937510/WMC%20Content/Whats%20On/2026/Cabaret/Shelly%20Ann/Shellyann_Instagram_Post_45?_a=BAAAV6DQ",
+    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1773937510/WMC%20Content/Whats%20On/2026/Cabaret/Shelly%20Ann/Shellyann_Instagram_Post_45?_a=BAAAV6DQ",
     "imageUrls": [
-      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1773937510/WMC%20Content/Whats%20On/2026/Cabaret/Shelly%20Ann/Shellyann_Instagram_Post_45?_a=BAAAV6DQ",
-      "http://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_630%2Cw_1200/f_auto/q_auto/v1773937510/WMC%20Content/Whats%20On/2026/Cabaret/Shelly%20Ann/Shellyann_Instagram_Post_45?_a=BAAAV6DQ",
-      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_512%2Cw_1024/f_auto/q_auto/v1773937510/WMC%20Content/Whats%20On/2026/Cabaret/Shelly%20Ann/Shellyann_Instagram_Post_45?_a=BAAAV6DQ",
       "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1773937510/WMC%20Content/Whats%20On/2026/Cabaret/Shelly%20Ann/Shellyann_Instagram_Post_45?_a=BAAAV6DQ"
     ],
-    "eventStartDate": "2026-07-11 20:00:00",
-    "eventEndDate": "2026-07-11 23:59:00",
-    "ticketPriceFrom": 20,
-    "ticketPriceTo": 20,
-    "ticketCurrency": "GBP",
-    "subcategory": "Wales Millennium Centre > What's on > 2026 > Shelly Ann",
-    "primaryCategory": "Theatre",
-    "genre": "Jazz, Country, Classical, Blues, Pop",
-    "ticketPriceLabel": "£20"
+    "primaryCategory": "Theatre"
   },
   {
     "title": "COFFI A CYMRU",
@@ -2323,22 +2301,11 @@
     "url": "https://www.wmc.org.uk/en/whats-on/2026/cabaret-template-5",
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-05-12T09:07:48.767Z",
-    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1774875518/IMG-20260326-WA0003_002_naduib?_a=BAAAV6DQ",
+    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1774875518/IMG-20260326-WA0003_002_naduib?_a=BAAAV6DQ",
     "imageUrls": [
-      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1774875518/IMG-20260326-WA0003_002_naduib?_a=BAAAV6DQ",
-      "http://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_630%2Cw_1200/f_auto/q_auto/v1774875518/IMG-20260326-WA0003_002_naduib?_a=BAAAV6DQ",
-      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_512%2Cw_1024/f_auto/q_auto/v1774875518/IMG-20260326-WA0003_002_naduib?_a=BAAAV6DQ",
       "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1774875518/IMG-20260326-WA0003_002_naduib?_a=BAAAV6DQ"
     ],
-    "eventStartDate": "2026-07-14 18:30:00",
-    "eventEndDate": "2026-07-14 20:30:00",
-    "ticketPriceFrom": 0,
-    "ticketPriceTo": 0,
-    "ticketCurrency": "GBP",
-    "subcategory": "Wales Millennium Centre > What's on > 2026 > Coffi a Cymru",
-    "primaryCategory": "Theatre",
-    "genre": "Classical",
-    "ticketPriceLabel": "£0"
+    "primaryCategory": "Theatre"
   },
   {
     "title": "COWBOYS COMEDY",
@@ -2346,22 +2313,12 @@
     "url": "https://www.wmc.org.uk/en/whats-on/2026/cowboys-comedy-2",
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-05-12T09:07:48.767Z",
-    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1744640255/WMC%20Content/Whats%20On/2025/Cabaret/Cowboys/Cowboy_Thumb?_a=BAAAV6DQ",
+    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1744640255/WMC%20Content/Whats%20On/2025/Cabaret/Cowboys/Cowboy_Thumb?_a=BAAAV6DQ",
     "imageUrls": [
-      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1744640255/WMC%20Content/Whats%20On/2025/Cabaret/Cowboys/Cowboy_Thumb?_a=BAAAV6DQ",
-      "http://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_630%2Cw_1200/f_auto/q_auto/v1744640255/WMC%20Content/Whats%20On/2025/Cabaret/Cowboys/Cowboy_Thumb?_a=BAAAV6DQ",
-      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_512%2Cw_1024/f_auto/q_auto/v1744640255/WMC%20Content/Whats%20On/2025/Cabaret/Cowboys/Cowboy_Thumb?_a=BAAAV6DQ",
       "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1744640255/WMC%20Content/Whats%20On/2025/Cabaret/Cowboys/Cowboy_Thumb?_a=BAAAV6DQ"
     ],
-    "eventStartDate": "2026-07-17 20:00:00",
-    "eventEndDate": "2026-07-17 22:00:00",
-    "ticketPriceFrom": 18,
-    "ticketPriceTo": 18,
-    "ticketCurrency": "GBP",
-    "subcategory": "Wales Millennium Centre > What's on > 2026 > COWBOYS COMEDY",
     "primaryCategory": "Comedy",
-    "genre": "Jazz, Classical, Blues",
-    "ticketPriceLabel": "£18"
+    "genre": "Comedy"
   },
   {
     "title": "STEPH WEBBER - GLITTERING NIGHTS",
@@ -2440,11 +2397,22 @@
     "url": "https://www.wmc.org.uk/en/whats-on/2026/an-evening-with-sir-david-jason",
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-05-12T09:07:48.767Z",
-    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1764159789/WMC%20Content/Whats%20On/2026/Donald%20Gordon%20Theatre/Sir%20David%20Jason/WHATS_ON_THUMBNAIL?_a=BAAAV6DQ",
+    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1764159789/WMC%20Content/Whats%20On/2026/Donald%20Gordon%20Theatre/Sir%20David%20Jason/WHATS_ON_THUMBNAIL?_a=BAAAV6DQ",
     "imageUrls": [
+      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1764159789/WMC%20Content/Whats%20On/2026/Donald%20Gordon%20Theatre/Sir%20David%20Jason/WHATS_ON_THUMBNAIL?_a=BAAAV6DQ",
+      "http://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_630%2Cw_1200/f_auto/q_auto/v1764159789/WMC%20Content/Whats%20On/2026/Donald%20Gordon%20Theatre/Sir%20David%20Jason/WHATS_ON_THUMBNAIL?_a=BAAAV6DQ",
+      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_512%2Cw_1024/f_auto/q_auto/v1764159789/WMC%20Content/Whats%20On/2026/Donald%20Gordon%20Theatre/Sir%20David%20Jason/WHATS_ON_THUMBNAIL?_a=BAAAV6DQ",
       "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1764159789/WMC%20Content/Whats%20On/2026/Donald%20Gordon%20Theatre/Sir%20David%20Jason/WHATS_ON_THUMBNAIL?_a=BAAAV6DQ"
     ],
-    "primaryCategory": "Theatre"
+    "eventStartDate": "2026-07-26 19:30:00",
+    "eventEndDate": "2026-07-26 22:00:00",
+    "ticketPriceFrom": 50,
+    "ticketPriceTo": 50,
+    "ticketCurrency": "GBP",
+    "subcategory": "Wales Millennium Centre > What's on > 2026 > An Evening with Sir David Jason",
+    "primaryCategory": "Theatre",
+    "genre": "Classical",
+    "ticketPriceLabel": "£50"
   },
   {
     "title": "THE KARATE KID",
@@ -2452,11 +2420,22 @@
     "url": "https://www.wmc.org.uk/en/whats-on/2026/the-karate-kid",
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-05-12T09:07:48.767Z",
-    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1773228297/WMC%20Content/Whats%20On/2026/Donald%20Gordon%20Theatre/The%20Karate%20Kid/KK26036_1280x960pxls_CARDIFF?_a=BAAAV6DQ",
+    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1773228297/WMC%20Content/Whats%20On/2026/Donald%20Gordon%20Theatre/The%20Karate%20Kid/KK26036_1280x960pxls_CARDIFF?_a=BAAAV6DQ",
     "imageUrls": [
+      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1773228297/WMC%20Content/Whats%20On/2026/Donald%20Gordon%20Theatre/The%20Karate%20Kid/KK26036_1280x960pxls_CARDIFF?_a=BAAAV6DQ",
+      "http://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_630%2Cw_1200/f_auto/q_auto/v1773228297/WMC%20Content/Whats%20On/2026/Donald%20Gordon%20Theatre/The%20Karate%20Kid/KK26036_1280x960pxls_CARDIFF?_a=BAAAV6DQ",
+      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_512%2Cw_1024/f_auto/q_auto/v1773228297/WMC%20Content/Whats%20On/2026/Donald%20Gordon%20Theatre/The%20Karate%20Kid/KK26036_1280x960pxls_CARDIFF?_a=BAAAV6DQ",
       "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1773228297/WMC%20Content/Whats%20On/2026/Donald%20Gordon%20Theatre/The%20Karate%20Kid/KK26036_1280x960pxls_CARDIFF?_a=BAAAV6DQ"
     ],
-    "primaryCategory": "Theatre"
+    "eventStartDate": "2026-07-28 19:30:00",
+    "eventEndDate": "2026-08-01 22:00:00",
+    "ticketPriceFrom": 19,
+    "ticketPriceTo": 19,
+    "ticketCurrency": "GBP",
+    "subcategory": "Wales Millennium Centre > What's on > 2026 > The Karate Kid",
+    "primaryCategory": "Theatre",
+    "genre": "Classical",
+    "ticketPriceLabel": "£19"
   },
   {
     "title": "NATIONAL OPEN YOUTH ORCHESTRA WITH BBC NATIONAL ORCHESTRA OF WALES",
@@ -2464,22 +2443,12 @@
     "url": "https://www.wmc.org.uk/en/whats-on/2026/national-open-youth-orchestra-with-bbc-national-orchestra-of-wales",
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-05-12T09:07:48.767Z",
-    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1773747894/WMC%20Content/Whats%20On/2026/BBC%20NoW/NOYO/1200x900_-_Noyo_Thumbnails?_a=BAAAV6DQ",
+    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1773747894/WMC%20Content/Whats%20On/2026/BBC%20NoW/NOYO/1200x900_-_Noyo_Thumbnails?_a=BAAAV6DQ",
     "imageUrls": [
-      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1773747894/WMC%20Content/Whats%20On/2026/BBC%20NoW/NOYO/1200x900_-_Noyo_Thumbnails?_a=BAAAV6DQ",
-      "http://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_630%2Cw_1200/f_auto/q_auto/v1773747894/WMC%20Content/Whats%20On/2026/BBC%20NoW/NOYO/1200x900_-_Noyo_Thumbnails?_a=BAAAV6DQ",
-      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_512%2Cw_1024/f_auto/q_auto/v1773747894/WMC%20Content/Whats%20On/2026/BBC%20NoW/NOYO/1200x900_-_Noyo_Thumbnails?_a=BAAAV6DQ",
       "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1773747894/WMC%20Content/Whats%20On/2026/BBC%20NoW/NOYO/1200x900_-_Noyo_Thumbnails?_a=BAAAV6DQ"
     ],
-    "eventStartDate": "2026-07-30 15:00:00",
-    "eventEndDate": "2026-07-30 17:00:00",
-    "ticketPriceFrom": 0,
-    "ticketPriceTo": 0,
-    "ticketCurrency": "GBP",
-    "subcategory": "Wales Millennium Centre > What's on > 2026 > National Open Youth Orchestra with BBC National Orchestra of Wales",
     "primaryCategory": "Theatre",
-    "genre": "Electronic, Classical",
-    "ticketPriceLabel": "£0"
+    "genre": "Classical"
   },
   {
     "title": "QUARTEY & BLAYNEY",
@@ -2487,22 +2456,11 @@
     "url": "https://www.wmc.org.uk/en/whats-on/2026/quartey-and-blayney",
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-05-12T09:07:48.767Z",
-    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1775297777/WMC%20Content/Whats%20On/2026/Cabaret/Quartey%20and%20Blayney/Quartey_and_Blayney_Photo?_a=BAAAV6DQ",
+    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1775297777/WMC%20Content/Whats%20On/2026/Cabaret/Quartey%20and%20Blayney/Quartey_and_Blayney_Photo?_a=BAAAV6DQ",
     "imageUrls": [
-      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1775297777/WMC%20Content/Whats%20On/2026/Cabaret/Quartey%20and%20Blayney/Quartey_and_Blayney_Photo?_a=BAAAV6DQ",
-      "http://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_630%2Cw_1200/f_auto/q_auto/v1775297777/WMC%20Content/Whats%20On/2026/Cabaret/Quartey%20and%20Blayney/Quartey_and_Blayney_Photo?_a=BAAAV6DQ",
-      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_512%2Cw_1024/f_auto/q_auto/v1775297777/WMC%20Content/Whats%20On/2026/Cabaret/Quartey%20and%20Blayney/Quartey_and_Blayney_Photo?_a=BAAAV6DQ",
       "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1775297777/WMC%20Content/Whats%20On/2026/Cabaret/Quartey%20and%20Blayney/Quartey_and_Blayney_Photo?_a=BAAAV6DQ"
     ],
-    "eventStartDate": "2026-07-30 20:00:00",
-    "eventEndDate": "2026-07-30 22:00:00",
-    "ticketPriceFrom": 12.5,
-    "ticketPriceTo": 12.5,
-    "ticketCurrency": "GBP",
-    "subcategory": "Wales Millennium Centre > What's on > 2026 > Quartey & Blayney",
-    "primaryCategory": "Theatre",
-    "genre": "Jazz, Classical, Blues",
-    "ticketPriceLabel": "£12.5"
+    "primaryCategory": "Theatre"
   },
   {
     "title": "THE VAGUELY DEVIANT",
@@ -2723,22 +2681,12 @@
     "url": "https://www.wmc.org.uk/en/whats-on/2026/welsh-national-opera-family-concert",
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-05-12T09:07:48.767Z",
-    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1777634636/WMC%20Content/Whats%20On/2026/Donald%20Gordon%20Theatre/WNO%20Family%20Concert/WNO_FC_WMC_1280x960px?_a=BAAAV6DQ",
+    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1777634636/WMC%20Content/Whats%20On/2026/Donald%20Gordon%20Theatre/WNO%20Family%20Concert/WNO_FC_WMC_1280x960px?_a=BAAAV6DQ",
     "imageUrls": [
-      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1777634636/WMC%20Content/Whats%20On/2026/Donald%20Gordon%20Theatre/WNO%20Family%20Concert/WNO_FC_WMC_1280x960px?_a=BAAAV6DQ",
-      "http://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_630%2Cw_1200/f_auto/q_auto/v1777634636/WMC%20Content/Whats%20On/2026/Donald%20Gordon%20Theatre/WNO%20Family%20Concert/WNO_FC_WMC_1280x960px?_a=BAAAV6DQ",
-      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_512%2Cw_1024/f_auto/q_auto/v1777634636/WMC%20Content/Whats%20On/2026/Donald%20Gordon%20Theatre/WNO%20Family%20Concert/WNO_FC_WMC_1280x960px?_a=BAAAV6DQ",
       "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1777634636/WMC%20Content/Whats%20On/2026/Donald%20Gordon%20Theatre/WNO%20Family%20Concert/WNO_FC_WMC_1280x960px?_a=BAAAV6DQ"
     ],
-    "eventStartDate": "2026-09-30 18:30:00",
-    "eventEndDate": "2026-09-30 21:00:00",
-    "ticketPriceFrom": 20,
-    "ticketPriceTo": 20,
-    "ticketCurrency": "GBP",
-    "subcategory": "Wales Millennium Centre > What's on > 2026 > Welsh National Opera: Family Concert",
     "primaryCategory": "Theatre",
-    "genre": "Classical",
-    "ticketPriceLabel": "£20"
+    "genre": "Classical"
   },
   {
     "title": "MICHAEL AKADIRI: DON’T CALL ME UNCLE!",
@@ -2770,11 +2718,22 @@
     "url": "https://www.wmc.org.uk/en/whats-on/2026/katherine-jenkins-25-year-anniversary-tour",
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-05-12T09:07:48.767Z",
-    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1770982518/WMC%20Content/Whats%20On/2026/Donald%20Gordon%20Theatre/Katherine%20Jenkins/J3744_KJ_Car_1200x900?_a=BAAAV6DQ",
+    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1770982518/WMC%20Content/Whats%20On/2026/Donald%20Gordon%20Theatre/Katherine%20Jenkins/J3744_KJ_Car_1200x900?_a=BAAAV6DQ",
     "imageUrls": [
+      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1770982518/WMC%20Content/Whats%20On/2026/Donald%20Gordon%20Theatre/Katherine%20Jenkins/J3744_KJ_Car_1200x900?_a=BAAAV6DQ",
+      "http://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_630%2Cw_1200/f_auto/q_auto/v1770982518/WMC%20Content/Whats%20On/2026/Donald%20Gordon%20Theatre/Katherine%20Jenkins/J3744_KJ_Car_1200x900?_a=BAAAV6DQ",
+      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_512%2Cw_1024/f_auto/q_auto/v1770982518/WMC%20Content/Whats%20On/2026/Donald%20Gordon%20Theatre/Katherine%20Jenkins/J3744_KJ_Car_1200x900?_a=BAAAV6DQ",
       "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1770982518/WMC%20Content/Whats%20On/2026/Donald%20Gordon%20Theatre/Katherine%20Jenkins/J3744_KJ_Car_1200x900?_a=BAAAV6DQ"
     ],
-    "primaryCategory": "Theatre"
+    "eventStartDate": "2026-10-04 19:00:00",
+    "eventEndDate": "2026-10-04 23:00:00",
+    "ticketPriceFrom": 32.5,
+    "ticketPriceTo": 32.5,
+    "ticketCurrency": "GBP",
+    "subcategory": "Wales Millennium Centre > What's on > 2026 > Katherine Jenkins 25 Year Anniversary Tour",
+    "primaryCategory": "Theatre",
+    "genre": "Classical",
+    "ticketPriceLabel": "£32.5"
   },
   {
     "title": "AN EVENING WITH LIVERPOOL LEGEND IAN RUSH MBE",
@@ -2842,22 +2801,11 @@
     "url": "https://www.wmc.org.uk/en/whats-on/2026/james-barr",
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-05-12T09:07:48.767Z",
-    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1770387342/WMC%20Content/Whats%20On/2026/Cabaret/James%20Barr/Untitled_design_13?_a=BAAAV6DQ",
+    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1770387342/WMC%20Content/Whats%20On/2026/Cabaret/James%20Barr/Untitled_design_13?_a=BAAAV6DQ",
     "imageUrls": [
-      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1770387342/WMC%20Content/Whats%20On/2026/Cabaret/James%20Barr/Untitled_design_13?_a=BAAAV6DQ",
-      "http://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_630%2Cw_1200/f_auto/q_auto/v1770387342/WMC%20Content/Whats%20On/2026/Cabaret/James%20Barr/Untitled_design_13?_a=BAAAV6DQ",
-      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_512%2Cw_1024/f_auto/q_auto/v1770387342/WMC%20Content/Whats%20On/2026/Cabaret/James%20Barr/Untitled_design_13?_a=BAAAV6DQ",
       "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1770387342/WMC%20Content/Whats%20On/2026/Cabaret/James%20Barr/Untitled_design_13?_a=BAAAV6DQ"
     ],
-    "eventStartDate": "2026-10-18 19:00:00",
-    "eventEndDate": "2026-10-18 21:30:00",
-    "ticketPriceFrom": 16,
-    "ticketPriceTo": 16,
-    "ticketCurrency": "GBP",
-    "subcategory": "Wales Millennium Centre > What's on > 2026 > James Barr",
-    "primaryCategory": "Theatre",
-    "genre": "Jazz, Classical, Blues",
-    "ticketPriceLabel": "£16"
+    "primaryCategory": "Theatre"
   },
   {
     "title": "DIRTY DANCING",
@@ -2912,11 +2860,22 @@
     "url": "https://www.wmc.org.uk/en/whats-on/2026/harriet-kemsley",
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-05-12T09:07:48.767Z",
-    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1762257273/WMC%20Content/Whats%20On/2026/Cabaret/Harriet%20Kemsley/Harriet_Kemsley_Floozy_1200_1800_thumb?_a=BAAAV6DQ",
+    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1762257273/WMC%20Content/Whats%20On/2026/Cabaret/Harriet%20Kemsley/Harriet_Kemsley_Floozy_1200_1800_thumb?_a=BAAAV6DQ",
     "imageUrls": [
+      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1762257273/WMC%20Content/Whats%20On/2026/Cabaret/Harriet%20Kemsley/Harriet_Kemsley_Floozy_1200_1800_thumb?_a=BAAAV6DQ",
+      "http://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_630%2Cw_1200/f_auto/q_auto/v1762257273/WMC%20Content/Whats%20On/2026/Cabaret/Harriet%20Kemsley/Harriet_Kemsley_Floozy_1200_1800_thumb?_a=BAAAV6DQ",
+      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_512%2Cw_1024/f_auto/q_auto/v1762257273/WMC%20Content/Whats%20On/2026/Cabaret/Harriet%20Kemsley/Harriet_Kemsley_Floozy_1200_1800_thumb?_a=BAAAV6DQ",
       "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1762257273/WMC%20Content/Whats%20On/2026/Cabaret/Harriet%20Kemsley/Harriet_Kemsley_Floozy_1200_1800_thumb?_a=BAAAV6DQ"
     ],
-    "primaryCategory": "Theatre"
+    "eventStartDate": "2026-10-29 20:00:00",
+    "eventEndDate": "2026-10-29 22:00:00",
+    "ticketPriceFrom": 18,
+    "ticketPriceTo": 18,
+    "ticketCurrency": "GBP",
+    "subcategory": "Wales Millennium Centre > What's on > 2026 > HARRIET KEMSLEY",
+    "primaryCategory": "Theatre",
+    "genre": "Jazz, Classical, Blues",
+    "ticketPriceLabel": "£18"
   },
   {
     "title": "OWAIN & HENRY",
@@ -3030,22 +2989,11 @@
     "url": "https://www.wmc.org.uk/en/whats-on/2026/leroy-brito",
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-05-12T09:07:48.767Z",
-    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1768839695/WMC%20Content/Whats%20On/2026/Donald%20Gordon%20Theatre/Leroy%20Brito/Halftime_instagram_post_1280_x_960_px?_a=BAAAV6DQ",
+    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1768839695/WMC%20Content/Whats%20On/2026/Donald%20Gordon%20Theatre/Leroy%20Brito/Halftime_instagram_post_1280_x_960_px?_a=BAAAV6DQ",
     "imageUrls": [
-      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1768839695/WMC%20Content/Whats%20On/2026/Donald%20Gordon%20Theatre/Leroy%20Brito/Halftime_instagram_post_1280_x_960_px?_a=BAAAV6DQ",
-      "http://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_630%2Cw_1200/f_auto/q_auto/v1768839695/WMC%20Content/Whats%20On/2026/Donald%20Gordon%20Theatre/Leroy%20Brito/Halftime_instagram_post_1280_x_960_px?_a=BAAAV6DQ",
-      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_512%2Cw_1024/f_auto/q_auto/v1768839695/WMC%20Content/Whats%20On/2026/Donald%20Gordon%20Theatre/Leroy%20Brito/Halftime_instagram_post_1280_x_960_px?_a=BAAAV6DQ",
       "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1768839695/WMC%20Content/Whats%20On/2026/Donald%20Gordon%20Theatre/Leroy%20Brito/Halftime_instagram_post_1280_x_960_px?_a=BAAAV6DQ"
     ],
-    "eventStartDate": "2026-12-06 20:00:00",
-    "eventEndDate": "2026-12-06 22:00:00",
-    "ticketPriceFrom": 22.5,
-    "ticketPriceTo": 22.5,
-    "ticketCurrency": "GBP",
-    "subcategory": "Wales Millennium Centre > What's on > 2026 > Leroy Brito - Halftime",
-    "primaryCategory": "Theatre",
-    "genre": "Classical",
-    "ticketPriceLabel": "£22.5"
+    "primaryCategory": "Theatre"
   },
   {
     "title": "MATILDA THE MUSICAL",
@@ -3122,22 +3070,11 @@
     "url": "https://www.wmc.org.uk/en/whats-on/2027/the-full-monty-2027",
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-05-12T09:07:48.767Z",
-    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1771863935/WMC%20Content/Whats%20On/2027/Donald%20Gordon%20Theatre/The%20Full%20Monty/260216_FM_Cardiff_1200_x_900?_a=BAAAV6DQ",
+    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1771863935/WMC%20Content/Whats%20On/2027/Donald%20Gordon%20Theatre/The%20Full%20Monty/260216_FM_Cardiff_1200_x_900?_a=BAAAV6DQ",
     "imageUrls": [
-      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1771863935/WMC%20Content/Whats%20On/2027/Donald%20Gordon%20Theatre/The%20Full%20Monty/260216_FM_Cardiff_1200_x_900?_a=BAAAV6DQ",
-      "http://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_630%2Cw_1200/f_auto/q_auto/v1771863935/WMC%20Content/Whats%20On/2027/Donald%20Gordon%20Theatre/The%20Full%20Monty/260216_FM_Cardiff_1200_x_900?_a=BAAAV6DQ",
-      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_512%2Cw_1024/f_auto/q_auto/v1771863935/WMC%20Content/Whats%20On/2027/Donald%20Gordon%20Theatre/The%20Full%20Monty/260216_FM_Cardiff_1200_x_900?_a=BAAAV6DQ",
       "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1771863935/WMC%20Content/Whats%20On/2027/Donald%20Gordon%20Theatre/The%20Full%20Monty/260216_FM_Cardiff_1200_x_900?_a=BAAAV6DQ"
     ],
-    "eventStartDate": "2027-02-02 19:30:00",
-    "eventEndDate": "2027-02-06 23:00:00",
-    "ticketPriceFrom": 22,
-    "ticketPriceTo": 22,
-    "ticketCurrency": "GBP",
-    "subcategory": "Wales Millennium Centre > What's on > 2027 > The Full Monty",
-    "primaryCategory": "Theatre",
-    "genre": "Classical",
-    "ticketPriceLabel": "£22"
+    "primaryCategory": "Theatre"
   },
   {
     "title": "BLOOD BROTHERS",
@@ -3145,22 +3082,11 @@
     "url": "https://www.wmc.org.uk/en/whats-on/2027/blood-brothers",
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-05-12T09:07:48.767Z",
-    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1763984317/WMC%20Content/Whats%20On/2026/Donald%20Gordon%20Theatre/Blood%20Brothers/BB_Crdff_1280x960?_a=BAAAV6DQ",
+    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1763984317/WMC%20Content/Whats%20On/2026/Donald%20Gordon%20Theatre/Blood%20Brothers/BB_Crdff_1280x960?_a=BAAAV6DQ",
     "imageUrls": [
-      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1763984317/WMC%20Content/Whats%20On/2026/Donald%20Gordon%20Theatre/Blood%20Brothers/BB_Crdff_1280x960?_a=BAAAV6DQ",
-      "http://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_630%2Cw_1200/f_auto/q_auto/v1763984317/WMC%20Content/Whats%20On/2026/Donald%20Gordon%20Theatre/Blood%20Brothers/BB_Crdff_1280x960?_a=BAAAV6DQ",
-      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_512%2Cw_1024/f_auto/q_auto/v1763984317/WMC%20Content/Whats%20On/2026/Donald%20Gordon%20Theatre/Blood%20Brothers/BB_Crdff_1280x960?_a=BAAAV6DQ",
       "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1763984317/WMC%20Content/Whats%20On/2026/Donald%20Gordon%20Theatre/Blood%20Brothers/BB_Crdff_1280x960?_a=BAAAV6DQ"
     ],
-    "eventStartDate": "2027-02-16 19:30:00",
-    "eventEndDate": "2027-02-20 23:00:00",
-    "ticketPriceFrom": 19.5,
-    "ticketPriceTo": 19.5,
-    "ticketCurrency": "GBP",
-    "subcategory": "Wales Millennium Centre > What's on > 2027 > Blood Brothers",
-    "primaryCategory": "Theatre",
-    "genre": "Classical",
-    "ticketPriceLabel": "£19.5"
+    "primaryCategory": "Theatre"
   },
   {
     "title": "ANDREW BIRD - ON THE EDGE TOUR",
@@ -3176,26 +3102,16 @@
   },
   {
     "title": "WELSH NATIONAL OPERA: THE ANONYMOUS LOVER",
-    "date": "Thursday, 4 March 2027 – Friday, 12 March 2027",
+    "date": "Friday, 12 March 2027",
     "url": "https://www.wmc.org.uk/en/whats-on/2027/welsh-national-opera-the-anonymous-lover",
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-05-12T09:07:48.767Z",
-    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1777977697/WMC%20Content/Whats%20On/2027/Weston%20Studio/WNO:%20The%20Anonymous%20Lover/WNO_AL_WMC_1280x960px?_a=BAAAV6DQ",
+    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1777977697/WMC%20Content/Whats%20On/2027/Weston%20Studio/WNO:%20The%20Anonymous%20Lover/WNO_AL_WMC_1280x960px?_a=BAAAV6DQ",
     "imageUrls": [
-      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1777977697/WMC%20Content/Whats%20On/2027/Weston%20Studio/WNO:%20The%20Anonymous%20Lover/WNO_AL_WMC_1280x960px?_a=BAAAV6DQ",
-      "http://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_630%2Cw_1200/f_auto/q_auto/v1777977697/WMC%20Content/Whats%20On/2027/Weston%20Studio/WNO:%20The%20Anonymous%20Lover/WNO_AL_WMC_1280x960px?_a=BAAAV6DQ",
-      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_512%2Cw_1024/f_auto/q_auto/v1777977697/WMC%20Content/Whats%20On/2027/Weston%20Studio/WNO:%20The%20Anonymous%20Lover/WNO_AL_WMC_1280x960px?_a=BAAAV6DQ",
       "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1777977697/WMC%20Content/Whats%20On/2027/Weston%20Studio/WNO:%20The%20Anonymous%20Lover/WNO_AL_WMC_1280x960px?_a=BAAAV6DQ"
     ],
-    "eventStartDate": "2027-03-04 19:30:00",
-    "eventEndDate": "2027-03-12 21:00:00",
-    "ticketPriceFrom": 30,
-    "ticketPriceTo": 30,
-    "ticketCurrency": "GBP",
-    "subcategory": "Wales Millennium Centre > What's on > 2027 > Welsh National Opera: The Anonymous Lover",
     "primaryCategory": "Theatre",
-    "genre": "Classical",
-    "ticketPriceLabel": "£30"
+    "genre": "Classical"
   },
   {
     "title": "WELSH NATIONAL OPERA: JASON AND THE ARGONAUTS",
@@ -3321,11 +3237,22 @@
     "url": "https://www.wmc.org.uk/en/whats-on/2027/hedd-wyn-eisteddfod-atomig",
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-05-12T09:07:48.767Z",
-    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1777976527/WMC%20Content/Whats%20On/2027/Donald%20Gordon%20Theatre/WNO:%20Hedd%20Wyn/WNO_HW_WMC_1280x960px?_a=BAAAV6DQ",
+    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1777976527/WMC%20Content/Whats%20On/2027/Donald%20Gordon%20Theatre/WNO:%20Hedd%20Wyn/WNO_HW_WMC_1280x960px?_a=BAAAV6DQ",
     "imageUrls": [
+      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1777976527/WMC%20Content/Whats%20On/2027/Donald%20Gordon%20Theatre/WNO:%20Hedd%20Wyn/WNO_HW_WMC_1280x960px?_a=BAAAV6DQ",
+      "http://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_630%2Cw_1200/f_auto/q_auto/v1777976527/WMC%20Content/Whats%20On/2027/Donald%20Gordon%20Theatre/WNO:%20Hedd%20Wyn/WNO_HW_WMC_1280x960px?_a=BAAAV6DQ",
+      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_512%2Cw_1024/f_auto/q_auto/v1777976527/WMC%20Content/Whats%20On/2027/Donald%20Gordon%20Theatre/WNO:%20Hedd%20Wyn/WNO_HW_WMC_1280x960px?_a=BAAAV6DQ",
       "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1777976527/WMC%20Content/Whats%20On/2027/Donald%20Gordon%20Theatre/WNO:%20Hedd%20Wyn/WNO_HW_WMC_1280x960px?_a=BAAAV6DQ"
     ],
-    "primaryCategory": "Theatre"
+    "eventStartDate": "2027-05-18 19:30:00",
+    "eventEndDate": "2027-05-22 21:30:00",
+    "ticketPriceFrom": 25,
+    "ticketPriceTo": 25,
+    "ticketCurrency": "GBP",
+    "subcategory": "Wales Millennium Centre > What's on > 2027 > Hedd Wyn: Eisteddfod Atomig",
+    "primaryCategory": "Theatre",
+    "genre": "Classical",
+    "ticketPriceLabel": "£25"
   },
   {
     "title": "CATS",
@@ -3356,22 +3283,11 @@
     "url": "https://www.wmc.org.uk/en/whats-on/2027/everybodys-talking-about-jamie",
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-05-12T09:07:48.767Z",
-    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1773225252/WMC%20Content/Whats%20On/2027/Donald%20Gordon%20Theatre/Everybody%27s%20Talking%20About%20Jamie/260306_ETAJ_Cardiff_1280_x_960?_a=BAAAV6DQ",
+    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1773225252/WMC%20Content/Whats%20On/2027/Donald%20Gordon%20Theatre/Everybody%27s%20Talking%20About%20Jamie/260306_ETAJ_Cardiff_1280_x_960?_a=BAAAV6DQ",
     "imageUrls": [
-      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1773225252/WMC%20Content/Whats%20On/2027/Donald%20Gordon%20Theatre/Everybody%27s%20Talking%20About%20Jamie/260306_ETAJ_Cardiff_1280_x_960?_a=BAAAV6DQ",
-      "http://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_630%2Cw_1200/f_auto/q_auto/v1773225252/WMC%20Content/Whats%20On/2027/Donald%20Gordon%20Theatre/Everybody%27s%20Talking%20About%20Jamie/260306_ETAJ_Cardiff_1280_x_960?_a=BAAAV6DQ",
-      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_512%2Cw_1024/f_auto/q_auto/v1773225252/WMC%20Content/Whats%20On/2027/Donald%20Gordon%20Theatre/Everybody%27s%20Talking%20About%20Jamie/260306_ETAJ_Cardiff_1280_x_960?_a=BAAAV6DQ",
       "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1773225252/WMC%20Content/Whats%20On/2027/Donald%20Gordon%20Theatre/Everybody%27s%20Talking%20About%20Jamie/260306_ETAJ_Cardiff_1280_x_960?_a=BAAAV6DQ"
     ],
-    "eventStartDate": "2027-06-01 19:30:00",
-    "eventEndDate": "2027-06-05 23:00:00",
-    "ticketPriceFrom": 20,
-    "ticketPriceTo": 20,
-    "ticketCurrency": "GBP",
-    "subcategory": "Wales Millennium Centre > What's on > 2027 > Everybody's Talking About Jamie",
-    "primaryCategory": "Theatre",
-    "genre": "Classical, Pop",
-    "ticketPriceLabel": "£20"
+    "primaryCategory": "Theatre"
   },
   {
     "title": "PRETTY WOMAN",
@@ -3421,7 +3337,7 @@
   },
   {
     "title": "The Boy at the Back of the Class",
-    "date": "Thursday, 14 May 2026 – Saturday, 16 May 2026",
+    "date": "Friday, 15 May 2026 – Saturday, 16 May 2026",
     "url": "https://trafalgartickets.com/new-theatre-cardiff/en-GB/event/family/the-boy-at-the-back-of-the-class-tickets",
     "venue": "New Theatre Cardiff",
     "scrapedAt": "2026-05-12T09:07:48.767Z",
@@ -3441,7 +3357,7 @@
       "https://trafalgartickets.com/new-theatre-cardiff/en-GB/event/family/the-boy-at-the-back-of-the-class-tickets/opengraph-image?34a3bd89618fecf0",
       "https://images.ctfassets.net/le9bkneeoxws/5wTmywMq308veOZ4kp4fFh/429975dbcbec128358bec490bbe724e2/BoyBackClass_Cardiff_600x600.jpg?w=2048&fm=webp&q=75"
     ],
-    "eventStartDate": "2026-05-14T09:30:00.000Z",
+    "eventStartDate": "2026-05-15T09:30:00.000Z",
     "eventEndDate": "2026-05-16T21:00:00.000Z",
     "ticketPriceTo": 18,
     "primaryCategory": "Family"
@@ -3683,10 +3599,6 @@
     "ticketPriceFrom": 35,
     "ticketCurrency": "GBP",
     "ticketPriceLabel": "from £35",
-    "category": "Comedy",
-    "subVenue": "Main Auditorium",
-    "promoter": "Highfield Productions Ltd",
-    "genre": "Comedy",
     "description": "Book your tickets to  at New Theatre Cardiff at the official Trafalgar Tickets, New Theatre Cardiff box office.",
     "shortDescription": "Comedy legend Jasper Carrott in a night of comedy heaven with special guests Strictly ABBA \n\nWith a career that spans decades, the indefatigable Jasper continues to tour and leave audiences breathless with laughter. Rightly known as the godfather of British comedy, he brings to this show his trademark razor-sharp wit and charm. One not to be missed! \n\nJasper’s Special Guests, Strictly ABBA, add a touch of pure ABBA entertainment. Featuring all the best-loved ABBA songs, Dancing Queen, Waterloo, The Name of the Game, and many, many more!",
     "imageUrls": [
@@ -3830,6 +3742,10 @@
     "ticketPriceFrom": 37,
     "ticketCurrency": "GBP",
     "ticketPriceLabel": "from £37",
+    "category": "Dance",
+    "subVenue": "Main Auditorium",
+    "promoter": "Fiery Angel Entertainment",
+    "genre": "Dance",
     "description": "Book your tickets to  at New Theatre Cardiff at the official Trafalgar Tickets, New Theatre Cardiff box office.",
     "shortDescription": "Having made a stunning return to the Strictly dancefloor, Amy Dowden MBE, accompanied by fellow sensational Strictly Come Dancing star Carlos Gu, truly feels Reborn.  Back on stage following a triumphant and acclaimed debut season, Amy and Carlos share an intimate portrait of their lives and journeys, in which the inspirational and transformative power of dance shines through.   Featuring a dazzling cast of world-class dancers, amazing live vocalists, and a soundtrack of iconic anthems from across the decades, the show will take audiences on an emotional and uplifting journey through show-stopping routines.   Amy & Carlos: Reborn is a genuine testament to the joy of dancing.  Age guidance: 10+",
     "imageUrls": [
@@ -3841,8 +3757,7 @@
     "eventStartDate": "2026-06-13T14:00:00.000Z",
     "eventEndDate": "2026-06-13T21:30:00.000Z",
     "ticketPriceTo": 37,
-    "primaryCategory": "Theatre",
-    "genre": "Classical"
+    "primaryCategory": "Theatre"
   },
   {
     "title": "Anna Lapwood",
@@ -4189,17 +4104,8 @@
     "ticketPriceFrom": 37,
     "ticketCurrency": "GBP",
     "ticketPriceLabel": "from £37",
-    "category": "Music",
-    "subVenue": "Main Auditorium",
-    "promoter": "CBB Entertainments Ltd",
-    "genre": "Music",
     "description": "Book your tickets to  at New Theatre Cardiff at the official Trafalgar Tickets, New Theatre Cardiff box office.",
     "shortDescription": "The Chicago Blues Brothers are back – and they’re tearing the roof off the Country Bunker!  Celebrating 45 years of the legendary Blues Brothers legacy, this live concert delivers a high-energy night of electrifying blues, foot-stomping country classics, and a few unforgettable surprises along the way. From the iconic hits of the Blues Brothers movies to some of the greatest country anthems of all time, this is a musical mash-up like no other – all delivered with that unmistakable CBB swagger and a fresh twist that'll have you singing, clapping, and dancing in the aisles.  As seen at the Adelphi and Savoy Theatres in London’s glittering West End, this award-winning production guarantees non-stop energy, spectacular showmanship, and a whole lot of fun.  So grab your hat, dust off your boots, and get ready for a heel-tapping, heart-thumping, high-energy extravaganza that bursts off the stage and into your soul. Bold, brash, and unmissable – this is one night you won’t forget!",
-    "musicGenres": [
-      "Soul",
-      "Country",
-      "Blues"
-    ],
     "imageUrls": [
       "https://images.ctfassets.net/le9bkneeoxws/1EaAU1hKw1WtkvnHG3tkPH/1c1223bc4c319bc24d0afc3fce80ab07/CBB_1200x600.jpg",
       "https://images.ctfassets.net/le9bkneeoxws/3YcjoN2EqVd6BPAX0cYfUn/7847bea6445f76d0084716df2e30dfdc/CBB_600x600.jpg",
@@ -4209,7 +4115,8 @@
     "eventStartDate": "2026-07-04T18:30:00.000Z",
     "eventEndDate": "2026-07-04T21:00:00.000Z",
     "ticketPriceTo": 37,
-    "primaryCategory": "Music"
+    "primaryCategory": "Musical Theatre",
+    "genre": "Soul, Country, Blues"
   },
   {
     "title": "The Dinosaur That Pooped A Rock Show!",
@@ -4302,6 +4209,10 @@
     "ticketPriceFrom": 39.7,
     "ticketCurrency": "GBP",
     "ticketPriceLabel": "from £39.70",
+    "category": "Comedy",
+    "subVenue": "Main Auditorium",
+    "promoter": "Blue Book Artist Management",
+    "genre": "Comedy",
     "description": "Book your tickets to  at New Theatre Cardiff at the official Trafalgar Tickets, New Theatre Cardiff box office.",
     "shortDescription": "Shoot From The Hip bring their award-winning, TikTok-viral improvised comedy to the New Theatre! Featuring chaotic games, epic scenes, and ever-so-slightly unhinged performances, their Metro, Evening Standard, and Time Out-recommended shows are completely unscripted, unpredictable – and unforgettable. This is SFTH's biggest show yet, meaning they sadly won't be able to meet the whole audience before having to head home. However, if you'd like to attend a small exclusive meet and greet after the show, there are meet and greet tickets available, with a percentage of all sales going to the British Heart Foundation, helping those in need",
     "imageUrls": [
@@ -4697,15 +4608,8 @@
     "ticketPriceFrom": 26.5,
     "ticketCurrency": "GBP",
     "ticketPriceLabel": "from £26.50",
-    "category": "Music",
-    "subVenue": "Main Auditorium",
-    "promoter": "Kinda Dusty LTD",
-    "genre": "Music",
     "description": "Book your tickets to  at New Theatre Cardiff at the official Trafalgar Tickets, New Theatre Cardiff box office.",
     "shortDescription": "Meat Loaf By Candlelight returns to the New Theatre Cardiff!\n\nJoin us for an incredible night of Meat Loaf anthems, performed at the New Theatre, by candlelight. \n\nFeaturing a live cast of West End singers, including stars of the West End production of 'Bat Out of Hell', accompanied by an incredible live rock band, experience the ultimate tribute to Meat Loaf as you have never heard before. \n\nThis concert will feature some of the most iconic songs of all time including Anything For Love, Bat Out of Hell, Two Out of Three Ain't Bad, Dead Ringer for Love and many more! \n\nFor Crying Out Loud... book your tickets now! This unforgettable experience is guaranteed to make your Rock and Roll Dreams Come Through!",
-    "musicGenres": [
-      "Rock"
-    ],
     "imageUrls": [
       "https://images.ctfassets.net/le9bkneeoxws/3pxLkT0HEv2OmKhhOBiPN1/4f6582ff530cbbb55d98cd09ea5e4b1b/ml_1200_600.jpg",
       "https://images.ctfassets.net/le9bkneeoxws/11MytKV7SmHniAidt78Ncg/e6c94a52568d2c91a9993e284322fb61/web_square_copy_3_200x.png",
@@ -4715,7 +4619,8 @@
     "eventStartDate": "2026-08-13T18:30:00.000Z",
     "eventEndDate": "2026-08-13T21:00:00.000Z",
     "ticketPriceTo": 26.5,
-    "primaryCategory": "Music"
+    "primaryCategory": "Musical Theatre",
+    "genre": "Rock"
   },
   {
     "title": "Michael Flatley's Lord Of The Dance",
@@ -4815,8 +4720,17 @@
     "ticketPriceFrom": 38,
     "ticketCurrency": "GBP",
     "ticketPriceLabel": "from £38",
+    "category": "Music",
+    "subVenue": "Main Auditorium",
+    "promoter": "Entertainers Show Providers Limited",
+    "genre": "Music",
     "description": "Book your tickets to  at New Theatre Cardiff at the official Trafalgar Tickets, New Theatre Cardiff box office.",
     "shortDescription": "Direct from the West End - the Ultimate tribute to Neil Diamond. Direct from London’s Adelphi Theatre. . . it’s time for that night out you have been dreaming of!  As we invite you to celebrate the life and work of Neil Diamond - starring the renowned tribute artist Gary Ryan, as seen on Stars in Their Eyes. The show will take you for one special evening, back to where it began. A musical journey celebrating 50 years of some of the greatest songs ever written. From Brooklyn to Hollywood, Neil Diamond has left a legacy of great songs which have been covered by every great vocalist. Spanning all genres from the reggae of Red Red Wine, through the country of Cracklin’ Rosie, and the Hollywood music of The Jazz Singer. From the producers of Fastlove and The Magic of Motown, celebrate the music that has charmed six generations as we bring you all things Diamond with a sensational live show. Enjoy all the hits such as, Forever In Blue Jeans, America, Love On The Rocks, Song Sung Blue, Hello Again, Cracklin’ Rosie, I Am. . . I Said, Beautiful Noise and, of course, the unforgettable Sweet Caroline. The good times never seemed so good! Touring the Nation Tickets on sale now! “So good, so good!” This is a tribute show and is no way affiliated with any original artists/estates/management companies or similar shows. Promoter reserves the right to alter the programme.",
+    "musicGenres": [
+      "Jazz",
+      "Country",
+      "Reggae"
+    ],
     "imageUrls": [
       "https://images.ctfassets.net/le9bkneeoxws/26lMwYavWhkftVT65iKl5I/4ec350a627f1aae528f340cf9284e7f3/1200x600.jpg",
       "https://images.ctfassets.net/le9bkneeoxws/VcXMOQOsi3guKLE64Oms9/73c98242d4f2e2f50ceb612354fe3564/600x600.jpg",
@@ -4826,8 +4740,7 @@
     "eventStartDate": "2026-08-22T18:30:00.000Z",
     "eventEndDate": "2026-08-22T21:00:00.000Z",
     "ticketPriceTo": 38,
-    "primaryCategory": "Musical Theatre",
-    "genre": "Jazz, Country, Reggae"
+    "primaryCategory": "Music"
   },
   {
     "title": "'My First Concert' Featuring Baby Shark, Pinkfong & The Zoomies",
@@ -5178,10 +5091,6 @@
     "ticketPriceFrom": 28.5,
     "ticketCurrency": "GBP",
     "ticketPriceLabel": "from £28.50",
-    "category": "Comedy",
-    "subVenue": "Main Auditorium",
-    "promoter": "Avalon Entertainment",
-    "genre": "Comedy",
     "description": "Book your tickets to  at New Theatre Cardiff at the official Trafalgar Tickets, New Theatre Cardiff box office.",
     "shortDescription": "New stand-up tour show from Mike Wozniak in which a story about a bench will be prominent. Previous experience of or strong opinions about benches not required. Let Mike worry about that.  As seen on Taskmaster, Man Down and Junior Taskmaster. As heard on Three Bean Salad podcast.",
     "imageUrls": [
@@ -5288,6 +5197,10 @@
     "ticketPriceFrom": 20.5,
     "ticketCurrency": "GBP",
     "ticketPriceLabel": "from £20.50",
+    "category": "Film",
+    "subVenue": "Main Auditorium",
+    "promoter": "Banff Mountain Film Festival World Tour",
+    "genre": "Film",
     "description": "Book your tickets to  at New Theatre Cardiff at the official Trafalgar Tickets, New Theatre Cardiff box office.",
     "shortDescription": "Experience an unforgettable evening of thrilling adventure – up on the big screen!  The Banff Mountain Film Festival features a brand-new collection of short films filled with extreme journeys, untamed characters and captivating cinematography! Join the world’s top adventure filmmakers and thrill-seekers as they climb, ski, paddle and ride into the wildest corners of the planet!  With free prize giveaways, this is an unmissable event from the world’s most prestigious mountain festival – guaranteed to spark your passion for adventure, action and travel!  This is a screening of the 2026 Red Film Programme. See www.banff-uk.com for more. Age Guidance: 12A - Anyone under 12 must be accompanied by an adult 18+",
     "imageUrls": [
@@ -5668,10 +5581,6 @@
     "ticketPriceFrom": 31.5,
     "ticketCurrency": "GBP",
     "ticketPriceLabel": "from £31.50",
-    "category": "Other",
-    "subVenue": "Main Auditorium",
-    "promoter": "Live Nation",
-    "genre": "Other",
     "description": "Book your tickets to  at New Theatre Cardiff at the official Trafalgar Tickets, New Theatre Cardiff box office.",
     "shortDescription": "Join Serena Terry, creator of online sensation Mammy Banter, on her biggest UK & Ireland stand up tour to date.  Over the last 6 months, Serena has tried and tested 22 different types of therapy in a bid to improve her physical and mental health and calm the chaos that comes with being a busy mum on the cusp of turning 40, resulting in some diverse, embarrassing and hilarious outcomes. She'll take you through her journey of self improvement, hailing what worked, calling bullshit on the rest and revealing how in the midst of the madness, her new found search for solace has left her husband and children regularly bewildered.  Park your worries at the door and strap in for a night of honest hilarity that'll leave tears of laughter streaming down your face, providing a little bit of your own therapy in return. This event has been rescheduled from Mon 2 February 2026.",
     "imageUrls": [
@@ -5683,7 +5592,7 @@
     "eventStartDate": "2026-10-21T18:30:00.000Z",
     "eventEndDate": "2026-10-21T21:00:00.000Z",
     "ticketPriceTo": 31.5,
-    "primaryCategory": "Other"
+    "primaryCategory": "Comedy"
   },
   {
     "title": "Al Murray - All You Need Is Guv",
@@ -5775,8 +5684,15 @@
     "ticketPriceFrom": 26,
     "ticketCurrency": "GBP",
     "ticketPriceLabel": "from £26",
+    "category": "Music",
+    "subVenue": "Main Auditorium",
+    "promoter": "Cuffe & Taylor",
+    "genre": "Music",
     "description": "Book your tickets to  at New Theatre Cardiff at the official Trafalgar Tickets, New Theatre Cardiff box office.",
     "shortDescription": "Take a journey back in time to remember Michael Jackson – the man, the music and the magic.  Michael Starring Ben is a hit theatre production starring the UK's ultimate Michael Jackson tribute star, Ben Bowman. Not only does he look and sound like the King of Pop, but he's honed his routine so carefully that audiences truly believe they are watching Michael Jackson himself. The show features a live band, dazzling costumes and the performer's iconic dance routines. It also showcases the greatest hits of Michael Jackson and also of The Jackson 5 including Beat It, Billie Jean, Thriller and Man in the Mirror. Please note that this is a tribute production not associated with or endorsed by the Michael Jackson Estate.",
+    "musicGenres": [
+      "Pop"
+    ],
     "imageUrls": [
       "https://images.ctfassets.net/le9bkneeoxws/4BIW1NFDajzLx58QwYjZT9/c67f795311e8240d000f536eb1327499/1200x628_RAH.jpg",
       "https://images.ctfassets.net/le9bkneeoxws/wcw2m40IJk25XmjtjeFj1/0ec46bd44f253ec6489bff213b01346a/MSB-1000x1000.jpg",
@@ -5786,8 +5702,7 @@
     "eventStartDate": "2026-10-25T19:30:00.000Z",
     "eventEndDate": "2026-10-25T22:00:00.000Z",
     "ticketPriceTo": 26,
-    "primaryCategory": "Theatre",
-    "genre": "Pop"
+    "primaryCategory": "Music"
   },
   {
     "title": "Susan Calman: Tall Tales",
@@ -6127,15 +6042,8 @@
     "ticketPriceFrom": 54.25,
     "ticketCurrency": "GBP",
     "ticketPriceLabel": "from £54.25",
-    "category": "Music",
-    "subVenue": "Main Auditorium",
-    "promoter": "Crosstown Concerts",
-    "genre": "Music",
     "description": "Book your tickets to  at New Theatre Cardiff at the official Trafalgar Tickets, New Theatre Cardiff box office.",
     "shortDescription": "Bellowhead celebrate the 20th anniversary of their full-length debut album Burlesque in 2026. The 11-piece folk outfit made a watertight case for ‘big being beautiful’ with the release of Burlesque which features songs including London Town, Frog’s Legs and Dragon’s Teeth and Rigs of The Time.  Showcasing their unique blend of traditional English folk music with a modern big-band sound, Bellowhead went on after Burlesque to record another 4 studio albums (selling over a quarter of a million copies), were the proud recipients of 2 silver discs and won a staggering 8 BBC Radio 2 Folk Awards before calling it a day in 2016. After a hiatus and prompted by a record-breaking online stream during the pandemic, the band reunited for a joyous sold-out tour in 2022 and repeated the success in 2024 as they celebrated their own 20th anniversary. Both tours reaffirmed their status as one of the biggest and most in demand UK folk acts. Doors open 7pm. Please check website nearer show date for confirmed start time.\nUnder 16s must be accompanied by an adult 18+",
-    "musicGenres": [
-      "Folk"
-    ],
     "imageUrls": [
       "https://images.ctfassets.net/le9bkneeoxws/5G4A53QjG90rBzpdZbRKXt/70555b2132f5d11f0a18838643aae0c6/Bellowhead_1200x600.jpg",
       "https://images.ctfassets.net/le9bkneeoxws/eLVebDNS3Af01zAMXfmiR/f0743550d5bcaf1114917883d764a676/Bellowhead_600x600.jpg",
@@ -6145,7 +6053,8 @@
     "eventStartDate": "2026-11-22T19:00:00.000Z",
     "eventEndDate": "2026-11-22T22:00:00.000Z",
     "ticketPriceTo": 54.25,
-    "primaryCategory": "Music"
+    "primaryCategory": "Theatre",
+    "genre": "Folk"
   },
   {
     "title": "The Nutcracker Performed By The Imperial Classical Ballet",
@@ -6240,8 +6149,15 @@
     "ticketPriceFrom": 36,
     "ticketCurrency": "GBP",
     "ticketPriceLabel": "from £36",
+    "category": "Music",
+    "subVenue": "Main Auditorium",
+    "promoter": "Senbla Ltd",
+    "genre": "Music",
     "description": "Book your tickets to  at New Theatre Cardiff at the official Trafalgar Tickets, New Theatre Cardiff box office.",
     "shortDescription": "The Amy Winehouse Band - Amy’s original band who were with her from the very start throughout her meteoric rise - have announced a major UK tour celebrating the 20th anniversary of her defining album, Back to Black. Released in 2006, Back to Black became the album that transformed Amy Winehouse from a rising British talent into a global cultural force. It propelled her to unprecedented heights, culminating in five GRAMMY Award wins at the 2008 ceremony (Record of the Year, Song of the Year, Best Female Pop Vocal Performance, Best Pop Vocal Album, and Best New Artist), making her the first British woman to win that many in one night. Performing with her that evening, as they had since her earliest gigs in London pubs, was her band. Now, The Amy Winehouse Band continue to bring her catalogue to audiences around the world, keeping Amy’s musical legacy alive and giving new generations the chance to experience these modern classic songs performed live.  Led by Amy’s long‑time musical director and bass player Dale Davis, The Amy Winehouse Band features members who both toured and recorded with Amy throughout her career.",
+    "musicGenres": [
+      "Pop"
+    ],
     "imageUrls": [
       "https://images.ctfassets.net/le9bkneeoxws/4w7baaq4arHkbuxZkcZF3c/caea1843bffc4d5e76d4955031ac4b09/The_Amy_Winehouse_Band_Cardiff_600x600.jpg",
       "https://trafalgartickets.com/new-theatre-cardiff/en-GB/event/music/the-amy-winehouse-band-tickets/opengraph-image?34a3bd89618fecf0",
@@ -6250,8 +6166,7 @@
     "eventStartDate": "2026-11-26T19:30:00.000Z",
     "eventEndDate": "2026-11-26T22:00:00.000Z",
     "ticketPriceTo": 36,
-    "primaryCategory": "Musical Theatre",
-    "genre": "Pop"
+    "primaryCategory": "Music"
   },
   {
     "title": "Welsh Of The West End",
@@ -6398,6 +6313,36 @@
     "eventEndDate": "2027-01-08T22:00:00.000Z",
     "ticketPriceTo": 32,
     "primaryCategory": "Music"
+  },
+  {
+    "title": "The Celine Experience",
+    "date": "Sunday, 10 January 2027",
+    "url": "https://trafalgartickets.com/new-theatre-cardiff/en-GB/event/music/the-celine-experience-tickets",
+    "venue": "New Theatre Cardiff",
+    "scrapedAt": "2026-05-14T14:05:23.705Z",
+    "imageUrl": "https://images.ctfassets.net/le9bkneeoxws/3eJrMVDmVePEIdATlXF65P/2603d485f5b24ab90e4a3a7e697d63e4/The_Celine_Experience_1200x600.jpg",
+    "ticketPriceFrom": 39,
+    "ticketCurrency": "GBP",
+    "ticketPriceLabel": "from £39",
+    "category": "Music",
+    "subVenue": "Main Auditorium",
+    "promoter": "Entertainers Show Providers Limited",
+    "genre": "Music",
+    "description": "Book your tickets to  at New Theatre Cardiff at the official Trafalgar Tickets, New Theatre Cardiff box office.",
+    "shortDescription": "The Celine Experience Starring January Butler A stunning live concert celebrating the music of Celine Dion - brought to the stage in a bold, theatre-scale production. Starring acclaimed vocalist January Butler, The Celine Experience delivers the power, control and pure vocal brilliance that made Celine one of the greatest performers of all time. Backed by a sensational live band and complete with iconic costumes, this is a high-end show with real presence - big vocals, big moments, and just the right amount of drama. From heart-stopping ballads to full-throttle anthems, the show sparkles with the songs everyone knows and loves, including It’s All Coming Back to Me Now, I’m Alive, Think Twice, My Heart Will Go On, That’s the Way It Is, The Power of Love, River Deep, Mountain High and more. Confident, emotional and bold... Exactly how it should be!",
+    "imageUrls": [
+      "https://images.ctfassets.net/le9bkneeoxws/3eJrMVDmVePEIdATlXF65P/2603d485f5b24ab90e4a3a7e697d63e4/The_Celine_Experience_1200x600.jpg",
+      "https://images.ctfassets.net/le9bkneeoxws/4DOyNgguwTezz69vja4GBc/69c9b9d3c3524ed39bcceef670e8a1e7/The_Celine_Experience_600x600.jpg",
+      "https://trafalgartickets.com/new-theatre-cardiff/en-GB/event/music/the-celine-experience-tickets/opengraph-image?34a3bd89618fecf0",
+      "https://images.ctfassets.net/le9bkneeoxws/4DOyNgguwTezz69vja4GBc/69c9b9d3c3524ed39bcceef670e8a1e7/The_Celine_Experience_600x600.jpg?w=2048&fm=webp&q=70"
+    ],
+    "eventStartDate": "2027-01-10T19:30:00.000Z",
+    "eventEndDate": "2027-01-10T22:00:00.000Z",
+    "ticketPriceTo": 39,
+    "primaryCategory": "Music",
+    "musicGenres": [
+      "Music"
+    ]
   },
   {
     "title": "Radio Gaga",
@@ -6606,10 +6551,6 @@
     "ticketPriceFrom": 33,
     "ticketCurrency": "GBP",
     "ticketPriceLabel": "from £33",
-    "category": "Play",
-    "subVenue": "Main Auditorium",
-    "promoter": "Playing Around Tours Ltd",
-    "genre": "Play",
     "description": "Book your tickets to  at New Theatre Cardiff at the official Trafalgar Tickets, New Theatre Cardiff box office.",
     "shortDescription": "The Cornley Amateur Drama Society are back with tidings of chaos and joy, ready to tackle the Charles Dickens' classic, A Christmas Carol. \n\nThe sell-out West End smash hit production of CHRISTMAS CAROL GOES WRONG crashes into the New Theatre Cardiff. Don’t miss this guaranteed Christmas catastrophe from Mischief, the multi award-winning company behind The Play That Goes Wrong, Peter Pan Goes Wrong and The Comedy About a Bank Robbery. \n\nAs the Cornley crew hilariously battle miscommunication, delays to their set, actors missing in action and a growing feud over who will play the lead, it’s sure to be a disastrous take on the much-loved classic Christmas story of Ebenezer Scrooge. Will Cornley finally change their ways, or will their misfortunes wreak havoc with hysterical consequences. \n\nEnjoy a festive slice of pure escapism at the worst production in Christmas past, present and yet to come! Don’t be a Scrooge, book now.",
     "imageUrls": [
@@ -6621,7 +6562,7 @@
     "eventStartDate": "2027-02-09T19:30:00.000Z",
     "eventEndDate": "2027-02-13T22:00:00.000Z",
     "ticketPriceTo": 48,
-    "primaryCategory": "Theatre"
+    "primaryCategory": "Comedy"
   },
   {
     "title": "Wet Wet Wet - Celebrating 40 Years Of 'Popped In Souled Out'",
@@ -6743,6 +6684,10 @@
     "ticketPriceFrom": 34.5,
     "ticketCurrency": "GBP",
     "ticketPriceLabel": "from £34.50",
+    "category": "Comedy",
+    "subVenue": "Main Auditorium",
+    "promoter": "Fiery Angel Entertainment",
+    "genre": "Comedy",
     "description": "Book your tickets to  at New Theatre Cardiff at the official Trafalgar Tickets, New Theatre Cardiff box office.",
     "shortDescription": "Jon Culshaw is taking to the road with a brand-new show for 2027. Join the star of BBC Radio 4’s Dead Ringers as he takes you on a whistle stop tour through an array of famous voices in an evening of stand-up, stories, sketches and song!  Jon is one of Britains most critically acclaimed impressionists, comedians and actors with television credits ranging from such classic comedy series such as Spitting Image, The Impressions Show, and Newzoids, through to Channel 4’s award winning docudrama Partygate. On stage, in addition to his hugely successful solo comedy tour Imposter Syndrome, in recent years Jon has also played to packed houses in the one man play Les Dawson: Flying High, the Dead Ringers 25th Anniversary Tour, and the iconic London Palladium pantomime. Book now to see one of the country’s most renowned and diverse performers live! Presented by Fiery Entertainment by arrangement with Siren Talent.",
     "imageUrls": [
@@ -6754,8 +6699,7 @@
     "eventStartDate": "2027-03-31T18:30:00.000Z",
     "eventEndDate": "2027-03-31T21:00:00.000Z",
     "ticketPriceTo": 34.5,
-    "primaryCategory": "Comedy",
-    "genre": "Country"
+    "primaryCategory": "Comedy"
   },
   {
     "title": "Ed Gamble: Fresh Hell",
@@ -7067,10 +7011,6 @@
     "ticketPriceFrom": 33,
     "ticketCurrency": "GBP",
     "ticketPriceLabel": "from £33",
-    "category": "Musical",
-    "subVenue": "Main Auditorium",
-    "promoter": "JCTP Spring",
-    "genre": "Musical",
     "description": "Book your tickets to  at New Theatre Cardiff at the official Trafalgar Tickets, New Theatre Cardiff box office.",
     "shortDescription": "Jonathan Church Theatre Productions Presents  The Chichester Festival Theatre, Stage Entertainment and Sheffield Theatres Production of  Singin’ in the Rain  Based on the classic Metro-Goldwyn-Mayer film  Screenplay By Songs By  BETTY COMDEN and ADOLPH GREEN NACIO HERB BROWN and ARTHUR FREED  Performed by arrangement with  Music Theatre International  A smash-hit in the West End and across the UK, this irresistibly charming show comes to the New Theatre Cardiff to make a splash in August 2027!  Journey back to the glamour of Hollywood in the roaring 20’s with high-energy choreography and sumptuous set designs (including over 14,000 litres of water on stage), combined with all the romance and wit of one of the world’s best- loved films.  Beautiful, charismatic, and very much in love (if you believe what you read in the press), Hollywood’s golden couple, Don Lockwood and Lina Lamont have the world at their feet. But when “talkies” start to replace silent movies, and an aspiring actress is drafted in to save the day, life as they know it is turned upside down.  Singin’ in the Rain features the glorious MGM score including Good Morning, Make ‘em Laugh and the legendary Singin’ in the Rain.  Don’t save it for a rainy day, book your tickets now!",
     "imageUrls": [
@@ -7916,7 +7856,7 @@
   {
     "title": "Revenant",
     "date": "Friday, 19 June 2026",
-    "details": "Friday",
+    "details": "Friday • Death Cult Electric",
     "url": "https://www.livenation.co.uk/event/revenant-cardiff-tickets-edp1671045",
     "venue": "Utilita Arena Cardiff",
     "scrapedAt": "2026-05-12T09:07:48.767Z",
@@ -10358,7 +10298,7 @@
     "venue": "Depot Cardiff",
     "scrapedAt": "2026-05-12T11:37:05.275Z",
     "imageUrl": "https://depotcardiff.com/wp-content/uploads/2026/05/WEBDEPOT.jpg",
-    "description": "Fat Dog make their long-awaited return to Cardiff — and this time they&#8217;re stepping it up. Armed with brand new music and a headline European tour, the London five-piece descend on Depot for their biggest Welsh show yet. Known for their feverish live shows and a sound that refuses to sit still, Fat Dog have been building relentlessly since their debut. November 24th promises to be something special. 🎟️ TICKETS Presale Thursday 14th May at 10am General sale Friday 15th May at 10am SIGN UP FOR PRESALE ACCESS",
+    "description": "Fat Dog make their long-awaited return to Cardiff — and this time they&#8217;re stepping it up. Armed with brand new music and a headline European tour, the London five-piece descend on Depot for their biggest Welsh show yet. Known for their feverish live shows and a sound that refuses to sit still, Fat Dog have been building relentlessly since their debut. November 24th promises to be something special. 🎟️ TICKETS Presale Thursday 14th May at 10am General sale Friday 15th May at 10am",
     "shortDescription": "Fat Dog return to Cardiff this November at for their Depot biggest Welsh show yet. Brand new music, brand new tour.",
     "musicGenres": [
       "Reggae"
@@ -10881,7 +10821,7 @@
   {
     "title": "COLIN BLUNSTONE",
     "date": "Saturday, 23 May 2026",
-    "description": "The Voice of The Zombies, Believe In Miracles Tour Colin Blunstone, lead singer of The Zombies and acclaimed Solo Artist, returns to UK stages with the “Believe In Miracles” Tour, his first national solo outing in 7 years.  The tour title is a nod to Blunstone’s 1972 hit “I Don’t Believe In Miracles” (penned by Argent singer/guitarist Russ Ballard), but is also a reflection on his remarkable 7-decade career.  Blunstone relates, “I joined The Zombies as a teen thinking it would be a two or three year adventure.  Never in my wildest dreams could I have imagined it would lead to a lifetime in music…and that at the tender age of 80, I’d be the subject of a documentary, recording a new album and embarking on a major tour!”.  His career-spanning show will feature classics from The Zombies, favourites from his solo releases and collaborations, and debut new material from his forthcoming studio album.",
+    "description": "The Voice of The Zombies, Believe In Miracles Tour Colin Blunstone, lead singer of The Zombies and acclaimed Solo Artist, returns to UK stages with the “Believe In Miracles” Tour, his first national solo outing in 7 years. The tour title is a nod to Blunstone’s 1972 hit “I Don’t Believe In Miracles” (penned by Argent singer/guitarist Russ Ballard), but is also a reflection on his remarkable 7-decade career. Blunstone relates, “I joined The Zombies as a teen thinking it would be a two or three year adventure. Never in my wildest dreams could I have imagined it would lead to a lifetime in music…and that at the tender age of 80, I’d be the subject of a documentary, recording a new album and embarking on a major tour!”. His career-spanning show will feature classics from The Zombies, favourites from his solo releases and collaborations, and debut new material from his forthcoming studio album.",
     "imageUrl": "https://cdn2.gigantic.com/static/images/event/820x500/colin_blunstone-7588906340.jpg",
     "url": "https://thegate.gigantic.com/colin-blunstone-tickets/cardiff-the-gate/2026-05-23-19-00",
     "venue": "The Gate Cardiff",
@@ -10900,9 +10840,10 @@
     "ticketPriceLabel": "£33"
   },
   {
-    "title": "RICKIE LEE JONES",
+    "title": "WYNNE EVANS",
     "date": "Friday, 22 May 2026",
-    "description": "Hailed as the \"premiere song-stylist and songwriter of her generation\" by The New Yorker and dubbed \"The Duchess of Coolsville\" by Time magazine, Rickie Lee Jones has left an indelible mark on pop culture with her soulful melodies and evocative storytelling. With a career spanning decades, Jones continues to inspire audiences worldwide, garnering critical acclaim and a devoted following. In 2023, Jones mesmerised listeners with her Grammy-nominated album \"Pieces of Treasure,\" a remarkable reunion with Russ Titelman, the producer behind her first two records. Her celebrated memoir, \"Last Chance Texaco,\" received accolades including Book of the Year by MOJO and recognition as a Best Book of the Year by Pitchfork and NPR. As The Independent eloquently puts it, \"There has always been something defiant about Rickie Lee Jones... a voice from a dream, elusive yet familiar, transcendent, a messenger from another place.\" The upcoming tour promise an enchanting evening of music and storytelling, as Jones shares her timeless classics and personal favourites in these stunning venues. Fans can expect to be transported by Jones' soul-stirring vocals and masterful guitar work, experiencing her music in its purest form.",
+    "description": "*Wynne Evans is a Welsh operatic tenor, broadcaster, and television personality, widely recognized as the character of Gio Compario in the Go Compare insurance adverts. He studied at the Guildhall School of Music and Drama and the National Opera Studio, and has had a 25-year career performing at major opera houses like the Royal Opera House and Metropolitan Opera. Wynn joined the 2024 cast of Strictly Come Dancing, and hosted a popular daily show on BBC Radio Wales and a show on Radio 2, moving over to his own independently launched radio platform in 2025. Wynn has released two number-one classical albums, and won the 2023 Celebrity Masterchef title, which led to him becoming a partner at The Welsh House restaurant in Carmarthen, Wales, which serves dishes inspired by his time on Masterchef.",
+    "support": "Beyond Compare",
     "imageUrl": "https://cdn2.gigantic.com/static/images/event/820x500/wynne_evans-7631198885.png",
     "url": "https://thegate.gigantic.com/wynne-evans-tickets/cardiff-the-gate/2026-05-22-20-00",
     "venue": "The Gate Cardiff",
@@ -10922,10 +10863,9 @@
     "ticketPriceLabel": "£38.38–£80.1"
   },
   {
-    "title": "DELE SOSIMI",
+    "title": "THE HANDSOME FAMILY",
     "date": "Tuesday, 26 May 2026",
-    "description": "Dele Sosimi, the Nigerian-British Afrobeat Ambassador, Musician and Educator, has been at the heart of the global Afrobeat scene since relocating to the UK in December 1995. Having started his musical career with Fela Kuti's Egypt 80 band in his teens, he then teamed up with childhood friend Fela's son Femi Kuti (back in the late eighties) to kick start the Positive Force - touring, recording and performing worldwide. Over forty years later, he remains a tireless ambassador for the unique musical movement all over the world. His blend of complex funk grooves, traditional Nigerian music, African percussion and an underlying sense of jazz combines with his virtuoso keyboard skills and rhythmic singing to make him one of the most respected Afrobeat authorities of his era.",
-    "support": "From Fela Kuti's Egypt 80",
+    "description": "The Handsome Family’s new record began with a scream in the night. “It was a bleak winter during the middle of the pandemic,” says Brett Sparks. “One night around 4 a.m. Rennie started screaming in her sleep. She screamed, ‘Come into the circle Joseph! There’s no moon tonight.’ Scary as it was, I thought, man, that’s a good chorus!” The Handsome Family (songwriting and marriage partners Brett and Rennie Sparks) have been defining the dark end of americana for over 30 years. Brett writes the music and Rennie writes the words. Their work has been covered by many artists including Jeff Tweedy, Andrew Bird and most-recently Phoebe Bridgers. Their song “Far From Any Road” was the opening theme for HBO’s True Detective season one and still receives thousands of Shazams every week from all over the world. Handsome Family songs take place under overpasses and inside airports. Historical figures like George A. Custer and Nikola Tesla appear alongside a flying milkman and the whisper of an air conditioner against a plastic tree.",
     "imageUrl": "https://cdn2.gigantic.com/static/images/event/820x500/the_handsome_family-7689900912.jpg",
     "url": "https://thegate.gigantic.com/the-handsome-family-tickets/cardiff-the-gate/2026-05-26-19-00-44778",
     "venue": "The Gate Cardiff",
@@ -10939,13 +10879,13 @@
     "ticketPriceFrom": 28.5,
     "ticketPriceTo": 28.5,
     "ticketCurrency": "GBP",
-    "primaryCategory": "Musical Theatre",
+    "primaryCategory": "Theatre",
     "ticketPriceLabel": "£28.5"
   },
   {
-    "title": "10CC’S - GRAHAM GOULDMAN\n& HEART FULL OF SONGS",
+    "title": "RICKIE LEE JONES",
     "date": "Monday, 25 May 2026",
-    "description": "10cc founding member Graham Gouldman has announced an 18-date UK tour in 2026 for his highly acclaimed semi-acoustic band Heart Full of Songs. Featuring material from across Gouldman’s catalogue, the set includes 10cc classics I’m Not In Love and Dreadlock Holiday, alongside hits such as Bus Stop and Look Through Any Window (The Hollies), For Your Love and Heart Full of Soul (The Yardbirds), No Milk Today (Herman’s Hermits), Bridge To Your Heart (from his time in Wax with the late Andrew Gold), film soundtracks and songs from his solo albums.",
+    "description": "Hailed as the \"premiere song-stylist and songwriter of her generation\" by The New Yorker and dubbed \"The Duchess of Coolsville\" by Time magazine, Rickie Lee Jones has left an indelible mark on pop culture with her soulful melodies and evocative storytelling. With a career spanning decades, Jones continues to inspire audiences worldwide, garnering critical acclaim and a devoted following. In 2023, Jones mesmerised listeners with her Grammy-nominated album \"Pieces of Treasure,\" a remarkable reunion with Russ Titelman, the producer behind her first two records. Her celebrated memoir, \"Last Chance Texaco,\" received accolades including Book of the Year by MOJO and recognition as a Best Book of the Year by Pitchfork and NPR. As The Independent eloquently puts it, \"There has always been something defiant about Rickie Lee Jones... a voice from a dream, elusive yet familiar, transcendent, a messenger from another place.\" The upcoming tour promise an enchanting evening of music and storytelling, as Jones shares her timeless classics and personal favourites in these stunning venues. Fans can expect to be transported by Jones' soul-stirring vocals and masterful guitar work, experiencing her music in its purest form.",
     "imageUrl": "https://cdn2.gigantic.com/static/images/event/820x500/rickie_lee_jones-7646075628.jpg",
     "url": "https://thegate.gigantic.com/rickie-lee-jones-tickets/cardiff-the-gate/2026-05-25-19-00",
     "venue": "The Gate Cardiff",
@@ -10959,13 +10899,14 @@
     "ticketPriceFrom": 47.75,
     "ticketCurrency": "GBP",
     "ticketPriceLabel": "£47.75",
-    "primaryCategory": "Film",
+    "primaryCategory": "Theatre",
     "genre": "Soul, Pop"
   },
   {
-    "title": "HARRY BAKER: TENDER",
+    "title": "DELE SOSIMI",
     "date": "Wednesday, 20 May 2026",
-    "description": "Harry Baker: Tender\nAs in ripe for the taking.\nAs in a heart swelled to twice its size\nAs in soft. As in delicious. As in ready. World Poetry Slam Champion Harry Baker brings his characteristic warmth, wit and wonder to new parenthood. Tender contains poems from the first hundred days of new life and celebrates all of the euphoria, panic and vulnerability that come with it. Expect more laughter and tears than ever.",
+    "description": "Dele Sosimi, the Nigerian-British Afrobeat Ambassador, Musician and Educator, has been at the heart of the global Afrobeat scene since relocating to the UK in December 1995. Having started his musical career with Fela Kuti's Egypt 80 band in his teens, he then teamed up with childhood friend Fela's son Femi Kuti (back in the late eighties) to kick start the Positive Force - touring, recording and performing worldwide. Over forty years later, he remains a tireless ambassador for the unique musical movement all over the world. His blend of complex funk grooves, traditional Nigerian music, African percussion and an underlying sense of jazz combines with his virtuoso keyboard skills and rhythmic singing to make him one of the most respected Afrobeat authorities of his era.",
+    "support": "From Fela Kuti's Egypt 80",
     "imageUrl": "https://cdn2.gigantic.com/static/images/campaign/820x500/dele_sosimi-7502598010.png",
     "url": "https://thegate.gigantic.com/dele-sosimi-tickets/cardiff-the-gate/2026-05-20-19-00",
     "venue": "The Gate Cardiff",
@@ -10979,13 +10920,13 @@
     "ticketPriceFrom": 20.8,
     "ticketPriceTo": 20.8,
     "ticketCurrency": "GBP",
-    "primaryCategory": "Theatre",
+    "primaryCategory": "Musical Theatre",
     "ticketPriceLabel": "£20.8"
   },
   {
-    "title": "THIS FLIGHT TONIGHT -\nTHE SONGS OF JONI MITCHELL",
+    "title": "10CC’S - GRAHAM GOULDMAN & HEART FULL OF SONGS",
     "date": "Wednesday, 14 October 2026",
-    "description": "An intimate acoustic tribute to the music of JONI MITCHELL, With a full and comprehensive performance of Joni's most beloved album 'Blue' in its entirety. 'Blue' is regarded by audiences and critics as one of the greatest albums of all time. Mitchell's honesty, musical prowess and iconic voice invites the audience into Joni's experience of living and loving through the complex era of social change of the early 1970s. 'Blue' highlights the fallout of a decade of hedonism... 'A Case of You', a stunning declaration of intoxicating love. 'Little Green' Arguably one of Joni's most personal and brave songs. 'California', 'Carey', carefree love letters to Joni's travels and freedom.",
+    "description": "10cc founding member Graham Gouldman has announced an 18-date UK tour in 2026 for his highly acclaimed semi-acoustic band Heart Full of Songs. Featuring material from across Gouldman’s catalogue, the set includes 10cc classics I’m Not In Love and Dreadlock Holiday, alongside hits such as Bus Stop and Look Through Any Window (The Hollies), For Your Love and Heart Full of Soul (The Yardbirds), No Milk Today (Herman’s Hermits), Bridge To Your Heart (from his time in Wax with the late Andrew Gold), film soundtracks and songs from his solo albums.",
     "imageUrl": "https://cdn2.gigantic.com/static/images/event/820x500/graham_gouldman-7640700806.jpg",
     "url": "https://thegate.gigantic.com/graham-gouldman-tickets/cardiff-the-gate/2026-10-14-19-00",
     "venue": "The Gate Cardiff",
@@ -10999,13 +10940,13 @@
     "ticketPriceFrom": 37.85,
     "ticketPriceTo": 37.85,
     "ticketCurrency": "GBP",
-    "primaryCategory": "Musical Theatre",
+    "primaryCategory": "Film",
     "ticketPriceLabel": "£37.85"
   },
   {
-    "title": "JESCA HOOP",
+    "title": "HARRY BAKER: TENDER",
     "date": "Friday, 29 May 2026",
-    "description": "California-born but now based in Manchester, Jesca Hoop is what you'd call a musician's musician. Discovered by Tom Waits, and brought on tour by Peter Gabriel to sing in his band, it was a phone call from Elbow's Guy Garvey that saw her move to the UK. Her most recent album \"Stonechild\" - produced by John Parish (PJ Harvey, Aldous Harding, This is the Kit) - received huge acclaim from fans and critics alike, and it's easy to see why: her beautiful songs, rooted in the folk tradition are intricately detailed, acoustic-led pieces that teem with ideas.",
+    "description": "Harry Baker: Tender As in ripe for the taking. As in a heart swelled to twice its size As in soft. As in delicious. As in ready. World Poetry Slam Champion Harry Baker brings his characteristic warmth, wit and wonder to new parenthood. Tender contains poems from the first hundred days of new life and celebrates all of the euphoria, panic and vulnerability that come with it. Expect more laughter and tears than ever.",
     "imageUrl": "https://cdn2.gigantic.com/static/images/event/820x500/harry_baker_tender-7684718029.jpg",
     "url": "https://thegate.gigantic.com/harry-baker-tender-tickets/cardiff-the-gate/2026-05-29-19-00",
     "venue": "The Gate Cardiff",
@@ -11022,10 +10963,9 @@
     "primaryCategory": "Theatre"
   },
   {
-    "title": "JERRON PAXTON",
+    "title": "THIS FLIGHT TONIGHT - THE SONGS OF JONI MITCHELL",
     "date": "Saturday, 10 October 2026",
-    "description": "Acclaimed blues singer-songwriter and multi-instrumentalist Jerron Paxton returns to Europe this May for a run of headline dates across the Netherlands, Ireland and the UK, on sale now. A songwriter, inheritor of tradition and a true modern-day songster, Paxton builds a bridge between generations, embodying the blues, ragtime and old-time Black music of the 1920s and ’30s while speaking directly to the present day . His Smithsonian Folkways release Things Done Changed — his first album of entirely original material — was hailed as “a history-conscious blues album for our time” (Wall Street Journal), further cementing his reputation as one of the leading voices in contemporary roots music .",
-    "support": "Plus support from Lucca Mae",
+    "description": "An intimate acoustic tribute to the music of JONI MITCHELL, With a full and comprehensive performance of Joni's most beloved album 'Blue' in its entirety. 'Blue' is regarded by audiences and critics as one of the greatest albums of all time. Mitchell's honesty, musical prowess and iconic voice invites the audience into Joni's experience of living and loving through the complex era of social change of the early 1970s. 'Blue' highlights the fallout of a decade of hedonism... 'A Case of You', a stunning declaration of intoxicating love. 'Little Green' Arguably one of Joni's most personal and brave songs. 'California', 'Carey', carefree love letters to Joni's travels and freedom.",
     "imageUrl": "https://cdn2.gigantic.com/static/images/event/820x500/this_flight_tonight_the_songs_of_joni_mitchell-7677872670.jpg",
     "url": "https://thegate.gigantic.com/this-flight-tonight-tickets/cardiff-the-gate/2026-10-10-19-00",
     "venue": "The Gate Cardiff",
@@ -11039,14 +10979,14 @@
     "ticketPriceFrom": 28.5,
     "ticketPriceTo": 28.5,
     "ticketCurrency": "GBP",
-    "primaryCategory": "Theatre",
+    "primaryCategory": "Musical Theatre",
     "genre": "Folk, Jazz, Rock",
     "ticketPriceLabel": "£28.5"
   },
   {
-    "title": "FANNA-FI-ALLAH SUFI QAWWALI",
+    "title": "JESCA HOOP",
     "date": "Thursday, 21 May 2026",
-    "description": "Now in their 26th year of international touring, Fanna-Fi-Allah remains one of the foremost traditional Qawwali ensembles in the world today. With thousands of performances across 50+ countries, they carry the living spirit of Sufi shrine music to global audiences, offering a rare and powerful immersion into this devotional art form. Led by Tahir Qawwal and supported by a masterful ensemble of tabla, harmonium, and choral vocals, the group stays rooted in the classical Qawwali tradition—without fusion, electronics, or pop crossover.",
+    "description": "California-born but now based in Manchester, Jesca Hoop is what you'd call a musician's musician. Discovered by Tom Waits, and brought on tour by Peter Gabriel to sing in his band, it was a phone call from Elbow's Guy Garvey that saw her move to the UK. Her most recent album \"Stonechild\" - produced by John Parish (PJ Harvey, Aldous Harding, This is the Kit) - received huge acclaim from fans and critics alike, and it's easy to see why: her beautiful songs, rooted in the folk tradition are intricately detailed, acoustic-led pieces that teem with ideas.",
     "imageUrl": "https://cdn2.gigantic.com/static/images/campaign/820x500/jesca_hoop-6528849330.jpg",
     "url": "https://thegate.gigantic.com/jesca-hoop-tickets/cardiff-the-gate/2026-05-21-19-00",
     "venue": "The Gate Cardiff",
@@ -11064,9 +11004,10 @@
     "ticketPriceLabel": "£23"
   },
   {
-    "title": "GRAHAM PARKER",
+    "title": "JERRON PAXTON",
     "date": "Friday, 15 May 2026",
-    "description": "Celebrating the 50th anniversary of the classic albums Howlin' Wind and  Heat Treatment. Slinging his signature guitar and singing with inimitable soulful grit, Graham Parker has spent more than four decades carving out a singular place in rock and roll. A critics’ favorite and a songwriter’s songwriter, he emerged in the mid-1970s at a pivotal moment in British music. With his band The Rumour, Parker released a run of essential albums including Howlin’ Wind, Heat Treatment, and the undisputed classic Squeezing Out Sparks, records that fused literate songwriting with the raw energy that helped reshape rock in the late seventies.",
+    "description": "Acclaimed blues singer-songwriter and multi-instrumentalist Jerron Paxton returns to Europe this May for a run of headline dates across the Netherlands, Ireland and the UK, on sale now. A songwriter, inheritor of tradition and a true modern-day songster, Paxton builds a bridge between generations, embodying the blues, ragtime and old-time Black music of the 1920s and ’30s while speaking directly to the present day . His Smithsonian Folkways release Things Done Changed — his first album of entirely original material — was hailed as “a history-conscious blues album for our time” (Wall Street Journal), further cementing his reputation as one of the leading voices in contemporary roots music .",
+    "support": "Plus support from Lucca Mae",
     "imageUrl": "https://cdn2.gigantic.com/static/images/event/820x500/jerron_paxton-7706456771.jpg",
     "url": "https://thegate.gigantic.com/jerron-paxton-tickets/cardiff-the-gate/2026-05-15-19-00",
     "venue": "The Gate Cardiff",
@@ -11085,9 +11026,9 @@
     "ticketPriceLabel": "£25.75"
   },
   {
-    "title": "JAMIE DUFFY - FLÂNEUR",
+    "title": "FANNA-FI-ALLAH SUFI QAWWALI",
     "date": "Thursday, 17 September 2026",
-    "description": "Jamie Duffy: A Rising Star in the Music World \"Whether he decides to be Ireland’s answer to Hans Zimmer or the next Yo-Yo Ma, the future is most certainly bright.\" - The Irish Times 22-year-old musician and songwriter Jamie Duffy is a notable force in the music scene, known for seamlessly blending traditional, popular, and classical influences into a distinctive musical style that captivates with its beauty. Jamie's debut track, \"Solas,\" continues to break records, becoming the most streamed debut song by an Irish artist since Hozier's \"Take Me To Church,\" amassing over 155 million streams on Spotify. With over 1.9 million monthly listeners, Jamie is solidifying his place in the music world.",
+    "description": "Now in their 26th year of international touring, Fanna-Fi-Allah remains one of the foremost traditional Qawwali ensembles in the world today. With thousands of performances across 50+ countries, they carry the living spirit of Sufi shrine music to global audiences, offering a rare and powerful immersion into this devotional art form. Led by Tahir Qawwal and supported by a masterful ensemble of tabla, harmonium, and choral vocals, the group stays rooted in the classical Qawwali tradition—without fusion, electronics, or pop crossover.",
     "imageUrl": "https://cdn2.gigantic.com/static/images/event/820x500/fannafiallah_sufi_qawwali-7709962927.jpg",
     "url": "https://thegate.gigantic.com/fanna-fi-allah-sufi-qawwali-tickets/cardiff-the-gate/2026-09-17-19-00",
     "venue": "The Gate Cardiff",
@@ -11101,14 +11042,14 @@
     "ticketPriceFrom": 36.2,
     "ticketPriceTo": 78,
     "ticketCurrency": "GBP",
-    "primaryCategory": "Musical Theatre",
+    "primaryCategory": "Theatre",
     "genre": "Classical, Pop",
     "ticketPriceLabel": "£36.2–£78"
   },
   {
-    "title": "TOBY LEE",
+    "title": "GRAHAM PARKER",
     "date": "Thursday, 1 October 2026",
-    "description": "Toby Lee announces his 3rd UK headline tour with his brilliant band. They’ll be heading out for 18 shows in October & November this year. Still only 21, Toby’s already a three-time winner of Young Blues Artist of the Year but the virtuoso guitarist, singer, songwriter is only just getting started. He’s currently recording his first major label album for Fontana/Universal with producers Bad Sounds. “Out of this world… you’re going to love him.” - Jools Holland",
+    "description": "Celebrating the 50th anniversary of the classic albums Howlin' Wind and Heat Treatment. Slinging his signature guitar and singing with inimitable soulful grit, Graham Parker has spent more than four decades carving out a singular place in rock and roll. A critics’ favorite and a songwriter’s songwriter, he emerged in the mid-1970s at a pivotal moment in British music. With his band The Rumour, Parker released a run of essential albums including Howlin’ Wind, Heat Treatment, and the undisputed classic Squeezing Out Sparks, records that fused literate songwriting with the raw energy that helped reshape rock in the late seventies.",
     "imageUrl": "https://cdn2.gigantic.com/static/images/event/820x500/graham_parker-7728088278.jpg",
     "url": "https://thegate.gigantic.com/graham-parker-tickets/cardiff-the-gate/2026-10-01-19-00",
     "venue": "The Gate Cardiff",
@@ -11127,9 +11068,9 @@
     "ticketPriceLabel": "£36.75"
   },
   {
-    "title": "COURTNEY MARIE ANDREWS",
+    "title": "JAMIE DUFFY - FLÂNEUR",
     "date": "Tuesday, 24 November 2026",
-    "description": "Courtney Marie Andrews has returned with her first new song in three years - “Cons and Clowns” - a celebration of living authentically, and embracing our truest selves amidst the chaos of the current world. Showcasing the GRAMMY nominee’s “astonishingly beautiful” (Stereogum) vocal work, “Cons and Clowns” builds on a signature songwriting approach that “doesn’t just tell us truths; but makes us feel them poignantly, and right on time” (NPR Music). “Cons & Clowns is an ode to all the artists, outsiders, and shy loved ones you want to see shine!,” says Andrews. “In this world of growing sameness I wanted to write a love letter of encouragement to anyone who was afraid to be their wildest and weirdest self, especially amid the dark landscape of now. With a desire to embody the unencumbered playfulness of youth, I played the flute on this track, an instrument I haven’t played since my childhood.”",
+    "description": "Jamie Duffy: A Rising Star in the Music World \"Whether he decides to be Ireland’s answer to Hans Zimmer or the next Yo-Yo Ma, the future is most certainly bright.\" - The Irish Times 22-year-old musician and songwriter Jamie Duffy is a notable force in the music scene, known for seamlessly blending traditional, popular, and classical influences into a distinctive musical style that captivates with its beauty. Jamie's debut track, \"Solas,\" continues to break records, becoming the most streamed debut song by an Irish artist since Hozier's \"Take Me To Church,\" amassing over 155 million streams on Spotify. With over 1.9 million monthly listeners, Jamie is solidifying his place in the music world.",
     "imageUrl": "https://cdn2.gigantic.com/static/images/event/820x500/jamie_duffy-7776343575.png",
     "url": "https://thegate.gigantic.com/jamie-duffy-tickets/cardiff-the-gate/2026-11-24-19-00",
     "venue": "The Gate Cardiff",
@@ -11144,14 +11085,14 @@
     "ticketPriceFrom": 26.43,
     "ticketPriceTo": 26.43,
     "ticketCurrency": "GBP",
-    "primaryCategory": "Theatre",
+    "primaryCategory": "Musical Theatre",
     "genre": "Classical",
     "ticketPriceLabel": "£26.43"
   },
   {
-    "title": "OLIVE GRINTER & JOE SHRIMPLING",
+    "title": "TOBY LEE",
     "date": "Saturday, 3 October 2026",
-    "description": "Good friends Olive and Joe recently discovered their shared passion for songwriting and have come together to create a collection of songs telling tales of nostalgia, friendship and whimsy. Drawing influence from John Martyn and Nick Drake, Joe’s delicate and thoughtful fingerpicking style embraces Olive’s warm, sensitive vocals which are likened to Laura Marling and Norah Jones. It’s important to the pair that the narrative of their music is always developing while retaining a character that the listener can recognise from song to song.",
+    "description": "Toby Lee announces his 3rd UK headline tour with his brilliant band. They’ll be heading out for 18 shows in October & November this year. Still only 21, Toby’s already a three-time winner of Young Blues Artist of the Year but the virtuoso guitarist, singer, songwriter is only just getting started. He’s currently recording his first major label album for Fontana/Universal with producers Bad Sounds. “Out of this world… you’re going to love him.” - Jools Holland",
     "imageUrl": "https://cdn2.gigantic.com/static/images/campaign/820x500/toby_lee-7746279667.png",
     "url": "https://thegate.gigantic.com/toby-lee-tickets/cardiff-the-gate/2026-10-03-19-00",
     "venue": "The Gate Cardiff",
@@ -11169,9 +11110,9 @@
     "ticketPriceLabel": "£26.43"
   },
   {
-    "title": "GRACE PETRIE",
+    "title": "COURTNEY MARIE ANDREWS",
     "date": "Wednesday, 27 May 2026",
-    "description": "For a decade and a half, Grace Petrie has been one of the UK’s most urgent and passionate songwriters. Coming of age amidst the coalition government, her politically charged folk music quickly gained national attention and propelled her to the main stages of folk festivals from Cambridge to Vancouver to the Blue Mountains of Australia. Characterised by razor-sharp lyricism and the unmistakable passion of her stage presence, her live shows have become synonymous for fans with a unique atmosphere of hope and solidarity, while the LGBTQ anthem Black Tie has racked up 1.5 million streams and provided the soundtrack of expression for young queer folks all over the world.",
+    "description": "Courtney Marie Andrews has returned with her first new song in three years - “Cons and Clowns” - a celebration of living authentically, and embracing our truest selves amidst the chaos of the current world. Showcasing the GRAMMY nominee’s “astonishingly beautiful” (Stereogum) vocal work, “Cons and Clowns” builds on a signature songwriting approach that “doesn’t just tell us truths; but makes us feel them poignantly, and right on time” (NPR Music). “Cons & Clowns is an ode to all the artists, outsiders, and shy loved ones you want to see shine!,” says Andrews. “In this world of growing sameness I wanted to write a love letter of encouragement to anyone who was afraid to be their wildest and weirdest self, especially amid the dark landscape of now. With a desire to embody the unencumbered playfulness of youth, I played the flute on this track, an instrument I haven’t played since my childhood.”",
     "imageUrl": "https://cdn2.gigantic.com/static/images/campaign/820x500/courtney_marie_andrews_-7745207873.png",
     "url": "https://thegate.gigantic.com/courtney-marie-andrews-tickets/cardiff-the-gate/2026-05-27-19-00",
     "venue": "The Gate Cardiff",
@@ -11189,9 +11130,9 @@
     "ticketPriceLabel": "£28.5"
   },
   {
-    "title": "TENILLE TOWNES",
+    "title": "OLIVE GRINTER & JOE SHRIMPLING",
     "date": "Saturday, 6 June 2026",
-    "description": "Known for songs that illuminate the inner lives of others, singer-songwriter Tenille Townes Townes now enters a new chapter with The Acrobat, her forthcoming album due April 10, 2026. Written during a period of personal and professional transition, the record marks her most stripped-back and introspective work to date. Originally conceived as simple work tapes, the songs were written and recorded in solitude, capturing raw moments of uncertainty, resilience, and self-reclamation. Tenille Townes is a Canada-born, Nashville-based artist whose music centers on empathy, honesty, and emotional clarity. Over the past five years, her deeply human storytelling has earned her two JUNO Awards, two Academy of Country Music Awards, and 17 Canadian Country Music Association Awards, alongside tours with artists like Stevie Nicks, Miranda Lambert, Shania Twain, Keith Urban, Reba, and George Strait. With The Acrobat, Townes embraces imperfection and autonomy, offering songs that hold space for change, boundaries, and the courage it takes to choose yourself.",
+    "description": "Good friends Olive and Joe recently discovered their shared passion for songwriting and have come together to create a collection of songs telling tales of nostalgia, friendship and whimsy. Drawing influence from John Martyn and Nick Drake, Joe’s delicate and thoughtful fingerpicking style embraces Olive’s warm, sensitive vocals which are likened to Laura Marling and Norah Jones. It’s important to the pair that the narrative of their music is always developing while retaining a character that the listener can recognise from song to song.",
     "imageUrl": "https://cdn2.gigantic.com/static/images/event/820x500/olive_grinter__joe_shrimpling-7750585541.jpg",
     "url": "https://thegate.gigantic.com/olive-grinter-joe-shrimpling-tickets/cardiff-the-gate/2026-06-06-19-00",
     "venue": "The Gate Cardiff",
@@ -11209,9 +11150,9 @@
     "ticketPriceLabel": "£7.6–£17.5"
   },
   {
-    "title": "THE COURETTES",
+    "title": "GRACE PETRIE",
     "date": "Wednesday, 21 October 2026",
-    "description": "The Courettes is an explosive Wall of Sound group from Denmark and Brazil! Flavia Couri on vocals and guitar, Martin on loud drums and together they are the perfect blend of Wall of Sound, Girl Group Heartbreaks, Motown and R&B. Imagine The Ronettes meeting The Ramones at a wild party at the Hitsville echo chamber! The new album “The Soul Of The Fabulous Courettes” is out on legendary Damaged Goods Records, London and Rough Trade, London.",
+    "description": "For a decade and a half, Grace Petrie has been one of the UK’s most urgent and passionate songwriters. Coming of age amidst the coalition government, her politically charged folk music quickly gained national attention and propelled her to the main stages of folk festivals from Cambridge to Vancouver to the Blue Mountains of Australia. Characterised by razor-sharp lyricism and the unmistakable passion of her stage presence, her live shows have become synonymous for fans with a unique atmosphere of hope and solidarity, while the LGBTQ anthem Black Tie has racked up 1.5 million streams and provided the soundtrack of expression for young queer folks all over the world.",
     "imageUrl": "https://cdn2.gigantic.com/static/images/event/820x500/grace_petrie-7749468442.jpg",
     "url": "https://thegate.gigantic.com/grace-petrie-tickets/cardiff-the-gate/2026-10-21-19-00",
     "venue": "The Gate Cardiff",
@@ -11230,9 +11171,9 @@
     "ticketPriceLabel": "£20.8–£28.5"
   },
   {
-    "title": "DEVIN TOWNSEND",
+    "title": "TENILLE TOWNES",
     "date": "Tuesday, 29 September 2026",
-    "description": "Forging a career over four decades in countless genres, Devin Townsend has reached cult status in the progressive-metal world for his polymathic talent and continual pushing of the envelope. In 2025, after a career including iconic performances at Royal Albert Hall and multiple world tours, Townsend announced an indefinite hiatus from touring. Having then delivered the live debut in Groningen of ‘The Moth’, his most ambitious work to date, it was only natural to need a break. Townsend returned home to complete the studio album of ‘The Moth’ (out 29th May on InsideOut Music) and to rebuild himself in preparation for the next stage.",
+    "description": "Known for songs that illuminate the inner lives of others, singer-songwriter Tenille Townes Townes now enters a new chapter with The Acrobat, her forthcoming album due April 10, 2026. Written during a period of personal and professional transition, the record marks her most stripped-back and introspective work to date. Originally conceived as simple work tapes, the songs were written and recorded in solitude, capturing raw moments of uncertainty, resilience, and self-reclamation. Tenille Townes is a Canada-born, Nashville-based artist whose music centers on empathy, honesty, and emotional clarity. Over the past five years, her deeply human storytelling has earned her two JUNO Awards, two Academy of Country Music Awards, and 17 Canadian Country Music Association Awards, alongside tours with artists like Stevie Nicks, Miranda Lambert, Shania Twain, Keith Urban, Reba, and George Strait. With The Acrobat, Townes embraces imperfection and autonomy, offering songs that hold space for change, boundaries, and the courage it takes to choose yourself.",
     "imageUrl": "https://cdn2.gigantic.com/static/images/event/820x500/tenille_townes_-7762431815.png",
     "url": "https://thegate.gigantic.com/tenille-townes-tickets/cardiff-the-gate/2026-09-29-19-00",
     "venue": "The Gate Cardiff",
@@ -11252,9 +11193,9 @@
     "ticketPriceLabel": "£29.6–£31.8"
   },
   {
-    "title": "SEVEN WONDERS - THE SPIRIT OF FLEETWOOD MAC",
+    "title": "THE COURETTES",
     "date": "Tuesday, 8 September 2026",
-    "description": "Seven Wonders are a 7-piece, 100% live band, who have come together to pay tribute to the legacy of Fleetwood Mac. The band cover all eras of the Fleetwood Mac collection; from the timeless Peter Green years, through to the 80’s classic Tango in the night. Seven Wonders capture the Spirit of Fleetwood Mac and they do it with passion and appreciation for this classic band. Be prepared to sing and dance the night away to classics including: Go your own way, Don’t stop, The Chain, Everywhere, Rhiannon, Dreams, Little lies, Oh well, Edge of seventeen and many more….. “I didn’t expect to feel like I was watching Fleetwood Mac….amazing vocals and band” “Absolutely fantastic band, The best tribute I’ve ever seen” “If you get a chance to see them ,100% you won’t be disappointed”",
+    "description": "The Courettes is an explosive Wall of Sound group from Denmark and Brazil! Flavia Couri on vocals and guitar, Martin on loud drums and together they are the perfect blend of Wall of Sound, Girl Group Heartbreaks, Motown and R&B. Imagine The Ronettes meeting The Ramones at a wild party at the Hitsville echo chamber! The new album “The Soul Of The Fabulous Courettes” is out on legendary Damaged Goods Records, London and Rough Trade, London.",
     "imageUrl": "https://cdn2.gigantic.com/static/images/event/820x500/the_courettes-7763301469.png",
     "url": "https://thegate.gigantic.com/the-courettes-tickets/cardiff-the-gate/2026-09-08-19-00",
     "venue": "The Gate Cardiff",
@@ -11270,6 +11211,46 @@
     "ticketCurrency": "GBP",
     "primaryCategory": "Theatre",
     "genre": "Soul, R&B, Classical",
+    "ticketPriceLabel": "£20.25"
+  },
+  {
+    "title": "DEVIN TOWNSEND",
+    "date": "Friday, 2 October 2026",
+    "description": "Forging a career over four decades in countless genres, Devin Townsend has reached cult status in the progressive-metal world for his polymathic talent and continual pushing of the envelope. In 2025, after a career including iconic performances at Royal Albert Hall and multiple world tours, Townsend announced an indefinite hiatus from touring. Having then delivered the live debut in Groningen of ‘The Moth’, his most ambitious work to date, it was only natural to need a break. Townsend returned home to complete the studio album of ‘The Moth’ (out 29th May on InsideOut Music) and to rebuild himself in preparation for the next stage.",
+    "imageUrl": "https://cdn2.gigantic.com/static/images/campaign/820x500/devin_townsend-7776503608.jpg",
+    "url": "https://www.gigantic.com/devin-townsend-tickets/cardiff-the-gate/2026-10-02-18-30",
+    "venue": "The Gate Cardiff",
+    "scrapedAt": "2026-05-14T14:05:23.705Z",
+    "shortDescription": "Buy tickets and see event information for Devin Townsend.",
+    "imageUrls": [
+      "https://cdn2.gigantic.com/static/images/campaign/820x500/devin_townsend-7776503608.jpg",
+      "https://images.squarespace-cdn.com/content/v1/654cb4c138f6a96142426e33/b28d3563-59c7-4c6d-92e4-5d495bcebf08/WEB-DEVIN-TOWNSEND-2026-PRESS-PIC.jpg"
+    ],
+    "eventStartDate": "2026-10-02T19:00:00+01:00",
+    "ticketPriceFrom": 47,
+    "ticketCurrency": "GBP",
+    "ticketPriceLabel": "£47.00",
+    "primaryCategory": "Theatre",
+    "genre": "Metal, Hard Rock, Rock"
+  },
+  {
+    "title": "SEVEN WONDERS - THE SPIRIT OF FLEETWOOD MAC",
+    "date": "Friday, 23 April 2027",
+    "description": "Seven Wonders are a 7-piece, 100% live band, who have come together to pay tribute to the legacy of Fleetwood Mac. The band cover all eras of the Fleetwood Mac collection; from the timeless Peter Green years, through to the 80’s classic Tango in the night. Seven Wonders capture the Spirit of Fleetwood Mac and they do it with passion and appreciation for this classic band. Be prepared to sing and dance the night away to classics including: Go your own way, Don’t stop, The Chain, Everywhere, Rhiannon, Dreams, Little lies, Oh well, Edge of seventeen and many more….. “I didn’t expect to feel like I was watching Fleetwood Mac….amazing vocals and band” “Absolutely fantastic band, The best tribute I’ve ever seen” “If you get a chance to see them ,100% you won’t be disappointed”",
+    "imageUrl": "https://cdn2.gigantic.com/static/images/campaign/820x500/seven_wonders__the_spirit_of_fleetwood_mac-7627808299.jpg",
+    "url": "https://thegate.gigantic.com/seven-wonders-the-spirit-of-fleetwood-mac-tickets/cardiff-the-gate/2027-04-23-19-00",
+    "venue": "The Gate Cardiff",
+    "scrapedAt": "2026-05-14T14:05:23.705Z",
+    "shortDescription": "Buy tickets and see event information for Seven Wonders - The Spirit of Fleetwood Mac.",
+    "imageUrls": [
+      "https://cdn2.gigantic.com/static/images/campaign/820x500/seven_wonders__the_spirit_of_fleetwood_mac-7627808299.jpg",
+      "https://images.squarespace-cdn.com/content/v1/654cb4c138f6a96142426e33/8865fdc8-de3b-4596-8195-b1107ded31d7/Landscape+%284%29.jpg"
+    ],
+    "eventStartDate": "2027-04-23T19:00:00+01:00",
+    "ticketPriceFrom": 20.25,
+    "ticketPriceTo": 20.25,
+    "ticketCurrency": "GBP",
+    "primaryCategory": "Theatre",
     "ticketPriceLabel": "£20.25"
   },
   {
@@ -13140,25 +13121,6 @@
     "genre": "Country"
   },
   {
-    "title": "Mark Watson: Before It Overtakes Us",
-    "date": "Friday, 11 September 2026",
-    "description": "20 years in stand-up for the 'Taskmaster' cheeky texts icon, multi-award-winner, YouTube cult figure, Radio 4 favourite and recently 'Baby Reindeer' actor: Watson returns after seasons at the Adelaide, Melbourne, Sydney and Edinburgh comedy festivals.",
-    "category": "Comedy",
-    "url": "https://www.shermantheatre.co.uk/event/mark-watson-before-it-overtakes-us/",
-    "imageUrl": "https://www.shermantheatre.co.uk/wp-content/uploads/2025/06/Leading-IMAGE_MarkWatson_MattCrockett_2024_2249_RT-1272x954.jpg",
-    "venue": "Sherman Theatre",
-    "scrapedAt": "2026-05-14T10:10:02.799Z",
-    "imageUrls": [
-      "https://www.shermantheatre.co.uk/wp-content/uploads/2025/06/Leading-IMAGE_MarkWatson_MattCrockett_2024_2249_RT-1272x954.jpg"
-    ],
-    "subcategory": "Mark Watson: Before It Overtakes Us",
-    "ticketPriceFrom": 25,
-    "ticketCurrency": "GBP",
-    "ticketPriceLabel": "£25",
-    "primaryCategory": "Comedy",
-    "genre": "Mark Watson: Before It Overtakes Us"
-  },
-  {
     "title": "Ania Magliano: Peach Fuzz",
     "date": "Friday, 11 September 2026",
     "description": "Fresh from starring in the latest series of Taskmaster, Ania Magliano (Live At The Apollo, Edinburgh Comedy Awards Best Show Nominee) brings a brand-new show full of jokes, confessions, and occasionally unhinged observations to venues nationwide.",
@@ -13176,6 +13138,25 @@
     "ticketPriceLabel": "£22.50",
     "primaryCategory": "Comedy",
     "genre": "Ania Magliano: Peach Fuzz"
+  },
+  {
+    "title": "Mark Watson: Before It Overtakes Us",
+    "date": "Friday, 11 September 2026",
+    "description": "20 years in stand-up for the 'Taskmaster' cheeky texts icon, multi-award-winner, YouTube cult figure, Radio 4 favourite and recently 'Baby Reindeer' actor: Watson returns after seasons at the Adelaide, Melbourne, Sydney and Edinburgh comedy festivals.",
+    "category": "Comedy",
+    "url": "https://www.shermantheatre.co.uk/event/mark-watson-before-it-overtakes-us/",
+    "imageUrl": "https://www.shermantheatre.co.uk/wp-content/uploads/2025/06/Leading-IMAGE_MarkWatson_MattCrockett_2024_2249_RT-1272x954.jpg",
+    "venue": "Sherman Theatre",
+    "scrapedAt": "2026-05-14T10:10:02.799Z",
+    "imageUrls": [
+      "https://www.shermantheatre.co.uk/wp-content/uploads/2025/06/Leading-IMAGE_MarkWatson_MattCrockett_2024_2249_RT-1272x954.jpg"
+    ],
+    "subcategory": "Mark Watson: Before It Overtakes Us",
+    "ticketPriceFrom": 25,
+    "ticketCurrency": "GBP",
+    "ticketPriceLabel": "£25",
+    "primaryCategory": "Comedy",
+    "genre": "Mark Watson: Before It Overtakes Us"
   },
   {
     "title": "Mark Simmons: Jest to Impress",
@@ -13290,6 +13271,196 @@
     "ticketPriceLabel": "£16.50",
     "primaryCategory": "Comedy",
     "genre": "Li Jin Hao: Falling from a Moon"
+  },
+  {
+    "title": "Balloon Girl",
+    "date": "Monday, 12 October 2026 – Saturday, 24 October 2026",
+    "description": "Look up!",
+    "category": "Family",
+    "url": "https://www.shermantheatre.co.uk/event/balloon-girl/",
+    "imageUrl": "https://www.shermantheatre.co.uk/wp-content/uploads/2025/12/All-shows-Desktop_Balloon-Girl-Desktop-1272x954.png",
+    "venue": "Sherman Theatre",
+    "scrapedAt": "2026-05-14T14:05:23.705Z",
+    "imageUrls": [
+      "https://www.shermantheatre.co.uk/wp-content/uploads/2025/12/All-shows-Desktop_Balloon-Girl-Desktop-1272x954.png"
+    ],
+    "subcategory": "Balloon Girl",
+    "ticketPriceFrom": 18,
+    "ticketCurrency": "GBP",
+    "ticketPriceLabel": "from £18",
+    "primaryCategory": "Family",
+    "genre": "Balloon Girl"
+  },
+  {
+    "title": "Dan Schreiber: This Changes Everything",
+    "date": "Saturday, 17 October 2026",
+    "description": "In 'This Changes Everything,' Dan Schreiber (host of the QI podcast 'No Such Thing As A Fish' and award-winning author of 'The Theory Of Everything Else') presents an evening of astonishing facts and hilarious tales, as he showcases the findings of his latest investigations into the world of the weird.",
+    "category": "Comedy",
+    "url": "https://www.shermantheatre.co.uk/event/dan-schreiber-this-changes-everything/",
+    "imageUrl": "https://www.shermantheatre.co.uk/wp-content/uploads/2026/03/16-9_no_text-1272x954.jpg",
+    "venue": "Sherman Theatre",
+    "scrapedAt": "2026-05-14T14:05:23.705Z",
+    "imageUrls": [
+      "https://www.shermantheatre.co.uk/wp-content/uploads/2026/03/16-9_no_text-1272x954.jpg"
+    ],
+    "subcategory": "Dan Schreiber: This Changes Everything",
+    "ticketPriceFrom": 21,
+    "ticketCurrency": "GBP",
+    "ticketPriceLabel": "£21",
+    "primaryCategory": "Comedy",
+    "genre": "Dan Schreiber: This Changes Everything"
+  },
+  {
+    "title": "Wythnos Yng Nghymru Fydd",
+    "date": "Friday, 30 October 2026",
+    "description": "He’s seen the future. Twice.",
+    "category": "Drama",
+    "url": "https://www.shermantheatre.co.uk/event/wythnos-yng-nghymru-fydd/",
+    "imageUrl": "https://www.shermantheatre.co.uk/wp-content/uploads/2026/03/image011.jpg",
+    "venue": "Sherman Theatre",
+    "scrapedAt": "2026-05-14T14:05:23.705Z",
+    "imageUrls": [
+      "https://www.shermantheatre.co.uk/wp-content/uploads/2026/03/image011.jpg"
+    ],
+    "subcategory": "Wythnos Yng Nghymru Fydd",
+    "ticketPriceFrom": 16,
+    "ticketCurrency": "GBP",
+    "ticketPriceLabel": "£16",
+    "primaryCategory": "Theatre",
+    "genre": "Wythnos Yng Nghymru Fydd"
+  },
+  {
+    "title": "Mark Thomas: 40 in Stand-up Years",
+    "date": "Saturday, 31 October 2026",
+    "description": "What?! Mark Thomas has been ‘standing up’ for 40 years? Impossible!! But how old does that make you…? Alas it is true; one of our oldest surviving alternative comics celebrates 40 years at the mic.",
+    "category": "Comedy",
+    "url": "https://www.shermantheatre.co.uk/event/mark-thomas-40-in-stand-up-years/",
+    "imageUrl": "https://www.shermantheatre.co.uk/wp-content/uploads/2026/04/mt-40-landscape-1920x1080px-no-text-1272x954.png",
+    "venue": "Sherman Theatre",
+    "scrapedAt": "2026-05-14T14:05:23.705Z",
+    "imageUrls": [
+      "https://www.shermantheatre.co.uk/wp-content/uploads/2026/04/mt-40-landscape-1920x1080px-no-text-1272x954.png"
+    ],
+    "subcategory": "Mark Thomas: 40 in Stand-up Years",
+    "ticketPriceFrom": 21.5,
+    "ticketCurrency": "GBP",
+    "ticketPriceLabel": "£21.50",
+    "primaryCategory": "Comedy",
+    "genre": "Mark Thomas: 40 in Stand-up Years"
+  },
+  {
+    "title": "Daniel Foxx: How Lovely",
+    "date": "Thursday, 5 November 2026",
+    "description": "Daniel was determined to handle his Big Breakup with the grace of Julia Roberts. He didn’t. Join him as he navigates dating in your 30s, Le Creuset addiction and 12-step skincare routines, all while trying very hard to emanate love and light.",
+    "category": "Comedy",
+    "url": "https://www.shermantheatre.co.uk/event/daniel-foxx-how-lovely/",
+    "imageUrl": "https://www.shermantheatre.co.uk/wp-content/uploads/2026/03/DanielFoxx_HowLovely_1920x1080px-1272x954.jpg",
+    "venue": "Sherman Theatre",
+    "scrapedAt": "2026-05-14T14:05:23.705Z",
+    "imageUrls": [
+      "https://www.shermantheatre.co.uk/wp-content/uploads/2026/03/DanielFoxx_HowLovely_1920x1080px-1272x954.jpg"
+    ],
+    "subcategory": "Daniel Foxx: How Lovely",
+    "ticketPriceFrom": 22.5,
+    "ticketCurrency": "GBP",
+    "ticketPriceLabel": "£22.50",
+    "primaryCategory": "Comedy",
+    "genre": "Daniel Foxx: How Lovely"
+  },
+  {
+    "title": "John Kearns: Tilting at Windmills",
+    "date": "Friday, 6 November 2026",
+    "description": "Tilting at Windmills is the brand-new stand-up show from Taskmaster alumni and double Edinburgh Comedy Award Winner, John Kearns.",
+    "category": "Comedy",
+    "url": "https://www.shermantheatre.co.uk/event/john-kearns-tilting-at-windmills-2026/",
+    "imageUrl": "https://www.shermantheatre.co.uk/wp-content/uploads/2025/09/John-Kearns-Webs-Image-1280-x-562-px-1272x562.jpg",
+    "venue": "Sherman Theatre",
+    "scrapedAt": "2026-05-14T14:05:23.705Z",
+    "imageUrls": [
+      "https://www.shermantheatre.co.uk/wp-content/uploads/2025/09/John-Kearns-Webs-Image-1280-x-562-px-1272x562.jpg"
+    ],
+    "subcategory": "John Kearns: Tilting at Windmills",
+    "ticketPriceFrom": 27.5,
+    "ticketCurrency": "GBP",
+    "ticketPriceLabel": "£27.50",
+    "primaryCategory": "Comedy",
+    "genre": "John Kearns: Tilting at Windmills"
+  },
+  {
+    "title": "Pinocchio (In English)",
+    "date": "Tuesday, 26 January 2027 – Saturday, 2 January 2027",
+    "description": "A new version by Jennifer Lunn Welsh translation by Hanna Jarman",
+    "category": "Christmas",
+    "url": "https://www.shermantheatre.co.uk/event/pinocchio-2/",
+    "imageUrl": "https://www.shermantheatre.co.uk/wp-content/uploads/2025/12/All-shows-Desktop_Pinocchio-Desktop-1272x954.png",
+    "venue": "Sherman Theatre",
+    "scrapedAt": "2026-05-14T14:05:23.705Z",
+    "imageUrls": [
+      "https://www.shermantheatre.co.uk/wp-content/uploads/2025/12/All-shows-Desktop_Pinocchio-Desktop-1272x954.png"
+    ],
+    "subcategory": "Pinocchio (In English)",
+    "ticketPriceFrom": 10,
+    "ticketCurrency": "GBP",
+    "ticketPriceLabel": "£10",
+    "primaryCategory": "Other",
+    "genre": "Pinocchio (In English)"
+  },
+  {
+    "title": "Pinocchio (In Welsh)",
+    "date": "Tuesday, 26 January 2027 – Saturday, 2 January 2027",
+    "description": "A new version by Jennifer Lunn Welsh translation by Hanna Jarman",
+    "category": "Christmas",
+    "url": "https://www.shermantheatre.co.uk/event/pinocchio-2-copy/",
+    "imageUrl": "https://www.shermantheatre.co.uk/wp-content/uploads/2025/12/All-shows-Desktop_Pinocchio-Desktop-1272x954.png",
+    "venue": "Sherman Theatre",
+    "scrapedAt": "2026-05-14T14:05:23.705Z",
+    "imageUrls": [
+      "https://www.shermantheatre.co.uk/wp-content/uploads/2025/12/All-shows-Desktop_Pinocchio-Desktop-1272x954.png"
+    ],
+    "subcategory": "Pinocchio (In Welsh)",
+    "ticketPriceFrom": 10,
+    "ticketCurrency": "GBP",
+    "ticketPriceLabel": "£10",
+    "primaryCategory": "Other",
+    "genre": "Pinocchio (In Welsh)"
+  },
+  {
+    "title": "The Merry Adventures of Maid Marian",
+    "date": "Tuesday, 26 January 2027 – Saturday, 2 January 2027",
+    "description": "Experience exceptional festive entertainment that’s that little bit different in 2026.",
+    "category": "Christmas",
+    "url": "https://www.shermantheatre.co.uk/event/the-merry-adventures-of-maid-marian/",
+    "imageUrl": "https://www.shermantheatre.co.uk/wp-content/uploads/2025/12/Sherman-KK1251-Maid-Marian-web-banner-1280x562-1-1272x562.jpg",
+    "venue": "Sherman Theatre",
+    "scrapedAt": "2026-05-14T14:05:23.705Z",
+    "imageUrls": [
+      "https://www.shermantheatre.co.uk/wp-content/uploads/2025/12/Sherman-KK1251-Maid-Marian-web-banner-1280x562-1-1272x562.jpg"
+    ],
+    "subcategory": "The Merry Adventures of Maid Marian",
+    "ticketPriceFrom": 18,
+    "ticketCurrency": "GBP",
+    "ticketPriceLabel": "from £18",
+    "primaryCategory": "Other",
+    "genre": "The Merry Adventures of Maid Marian"
+  },
+  {
+    "title": "Amy Gledhill: Thanks For Having Me",
+    "date": "Saturday, 8 May 2027",
+    "description": "Amy Gledhill has appeared on the biggest comedy shows on TV, won the most prestigious award in live comedy AND starred in a Netflix blockbuster. Then why can't she nail just one first date, social interaction or trip to the spa? (She is now banned.)",
+    "category": "Comedy",
+    "url": "https://www.shermantheatre.co.uk/event/amy-gledhill-thanks-for-having-me/",
+    "imageUrl": "https://www.shermantheatre.co.uk/wp-content/uploads/2026/04/Amy-Gledhill-TFHM-1440_732-credit-Matt-Crockett-1272x732.jpg",
+    "venue": "Sherman Theatre",
+    "scrapedAt": "2026-05-14T14:05:23.705Z",
+    "imageUrls": [
+      "https://www.shermantheatre.co.uk/wp-content/uploads/2026/04/Amy-Gledhill-TFHM-1440_732-credit-Matt-Crockett-1272x732.jpg"
+    ],
+    "subcategory": "Amy Gledhill: Thanks For Having Me",
+    "ticketPriceFrom": 22.5,
+    "ticketCurrency": "GBP",
+    "ticketPriceLabel": "£22.50",
+    "primaryCategory": "Comedy",
+    "genre": "Country"
   },
   {
     "title": "PEOPLE, PLANET, PINT",

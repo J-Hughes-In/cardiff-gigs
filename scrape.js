@@ -1550,120 +1550,291 @@ async function scrapeCardiffSU(context) {
 
 async function scrapeTheGate(context) {
   console.log('Scraping The Gate...');
+
   const page = await context.newPage();
-  await gotoAndSettle(page, 'https://www.thegate.org.uk/whats-on', '.sqs-html-content');
+
+  await gotoAndSettle(
+    page,
+    'https://www.thegate.org.uk/whats-on',
+    '.sqs-html-content'
+  );
+
   const events = await page.evaluate(() => {
+
     const dateLike = (t) =>
-      t && /\b(Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday)\b/i.test(t) && /\d{4}/.test(t);
+      t &&
+      /\b(Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday)\b/i.test(t) &&
+      /\d{4}/.test(t);
+
+    function cleanText(t) {
+      return t?.replace(/\s+/g, ' ').trim() || '';
+    }
 
     function pickDate(block) {
       const trySelectors = [
-        'p strong u', 'p u strong',
+        'p strong u',
+        'p u strong',
         'p span[style*="text-decoration:underline"] strong',
         'p span[style*="text-decoration: underline"] strong',
       ];
+
       for (const sel of trySelectors) {
         const el = block.querySelector(sel);
-        const t = el?.innerText?.trim();
+        const t = cleanText(el?.innerText);
+
         if (dateLike(t)) return t;
       }
+
       for (const el of block.querySelectorAll('p.sqsrte-large strong')) {
-        const t = el.innerText.trim();
+        const t = cleanText(el.innerText);
+
         if (dateLike(t)) return t;
       }
+
       return '';
     }
 
     function pickDescription(block) {
-      // Get all non-empty paragraphs that aren't the date or support line
-      const paras = Array.from(block.querySelectorAll('p:not(.sqsrte-large)'))
-        .map(p => p.innerText.trim())
-        .filter(t => t && !dateLike(t) && t.length > 30);
+      const paras = Array.from(
+        block.querySelectorAll('p:not(.sqsrte-large)')
+      )
+        .map(p => cleanText(p.innerText))
+        .filter(t =>
+          t &&
+          !dateLike(t) &&
+          t.length > 30
+        );
+
       return paras.join(' ') || '';
     }
 
     function pickSupport(block) {
-      // Support act is usually in sqsrte-large but not a date
-      const paras = Array.from(block.querySelectorAll('p.sqsrte-large'))
-        .map(p => p.innerText.trim())
-        .filter(t => t && !dateLike(t));
+      const paras = Array.from(
+        block.querySelectorAll('p.sqsrte-large')
+      )
+        .map(p => cleanText(p.innerText))
+        .filter(t =>
+          t &&
+          !dateLike(t)
+        );
+
       return paras.join(', ') || '';
     }
 
-    function findNearbyImage(textBlock) {
-      // Walk up to the fe-block wrapper, then search siblings for an image block
-      let node = textBlock;
-      // Go up to the fe-block level (data-website-component-id parent)
-      for (let i = 0; i < 6; i++) {
-        if (!node.parentElement) break;
+    function getFeBlock(node) {
+      while (node && !node.classList?.contains('fe-block')) {
         node = node.parentElement;
-        if (node.classList.contains('fe-block')) break;
       }
 
-      // Now search nearby fe-block siblings (up to 3 before and after)
-      const parent = node.parentElement;
-      if (!parent) return '';
+      return node;
+    }
 
-      const siblings = Array.from(parent.children);
-      const idx = siblings.indexOf(node);
-      const searchRange = siblings.slice(Math.max(0, idx - 3), idx + 4);
+    function isEventStartBlock(sib) {
+      return !!sib.querySelector(
+        '.sqs-html-content h1, .sqs-html-content h2, .sqs-html-content h3, .sqs-html-content h4'
+      );
+    }
 
-      for (const sib of searchRange) {
-        // Look for squarespace image block
-        const img = sib.querySelector('img[data-src], img[src]');
-        if (img) {
-          const src = img.getAttribute('data-src') || img.getAttribute('src') || '';
-          if (src && !src.startsWith('data:')) return src;
+    function findAssociatedData(textBlock) {
+
+      const feBlock = getFeBlock(textBlock);
+
+      if (!feBlock || !feBlock.parentElement) {
+        return {
+          imageUrl: '',
+          url: 'https://www.thegate.org.uk/whats-on'
+        };
+      }
+
+      const siblings = Array.from(feBlock.parentElement.children);
+      const idx = siblings.indexOf(feBlock);
+
+      let imageUrl = '';
+      let url = '';
+
+      // Search FORWARD first
+      for (let i = idx; i < siblings.length; i++) {
+
+        const sib = siblings[i];
+
+        // Stop at next event
+        if (
+          i !== idx &&
+          isEventStartBlock(sib)
+        ) {
+          break;
+        }
+
+        // Find ticket URL
+        if (!url) {
+          const a = sib.querySelector(`
+            a[href*="gigantic"],
+            a[href*="ticketmaster"],
+            a[href*="seetickets"],
+            a[href*="eventbrite"]
+          `);
+
+          if (a?.href) {
+            url = a.href;
+          }
+        }
+
+        // Find image
+        if (!imageUrl) {
+
+          const img = sib.querySelector(
+            'img[data-src], img[src]'
+          );
+
+          if (img) {
+
+            const src =
+              img.getAttribute('data-src') ||
+              img.getAttribute('src') ||
+              '';
+
+            if (
+              src &&
+              !src.startsWith('data:')
+            ) {
+              imageUrl = src;
+            }
+          }
+
+          // Background image fallback
+          if (!imageUrl) {
+
+            const bgEl = sib.querySelector(
+              '[style*="background-image"]'
+            );
+
+            if (bgEl) {
+
+              const style =
+                bgEl.getAttribute('style') || '';
+
+              const match = style.match(
+                /background-image:\s*url\(["']?(.*?)["']?\)/
+              );
+
+              if (match?.[1]) {
+                imageUrl = match[1];
+              }
+            }
+          }
         }
       }
-      return '';
-    }
 
-    function findTicketUrl(textBlock) {
-      // Look for a gigantic or other ticket link nearby
-      let node = textBlock;
-      for (let i = 0; i < 6; i++) {
-        if (!node.parentElement) break;
-        node = node.parentElement;
-        if (node.classList.contains('fe-block')) break;
+      // Fallback backward search
+      if (!imageUrl || !url) {
+
+        for (let i = idx - 1; i >= 0; i--) {
+
+          const sib = siblings[i];
+
+          // Stop at previous event
+          if (isEventStartBlock(sib)) {
+            break;
+          }
+
+          if (!url) {
+
+            const a = sib.querySelector(`
+              a[href*="gigantic"],
+              a[href*="ticketmaster"],
+              a[href*="seetickets"],
+              a[href*="eventbrite"]
+            `);
+
+            if (a?.href) {
+              url = a.href;
+            }
+          }
+
+          if (!imageUrl) {
+
+            const img = sib.querySelector(
+              'img[data-src], img[src]'
+            );
+
+            if (img) {
+
+              const src =
+                img.getAttribute('data-src') ||
+                img.getAttribute('src') ||
+                '';
+
+              if (
+                src &&
+                !src.startsWith('data:')
+              ) {
+                imageUrl = src;
+              }
+            }
+          }
+        }
       }
-      const parent = node.parentElement;
-      if (!parent) return 'https://www.thegate.org.uk/whats-on';
-      const siblings = Array.from(parent.children);
-      const idx = siblings.indexOf(node);
-      const searchRange = siblings.slice(Math.max(0, idx - 3), idx + 4);
-      for (const sib of searchRange) {
-        const a = sib.querySelector('a[href*="gigantic"], a[href*="ticketmaster"], a[href*="seetickets"], a[href*="eventbrite"]');
-        if (a) return a.href;
-      }
-      return 'https://www.thegate.org.uk/whats-on';
-    }
-
-    return Array.from(document.querySelectorAll('.sqs-html-content')).map(block => {
-      const title = block.querySelector('h2, h3, h4')?.innerText.trim() || '';
-      const date = pickDate(block);
-      if (!title || !date) return null;
-
-      const description = pickDescription(block);
-      const support = pickSupport(block);
-      const imageUrl = findNearbyImage(block);
-      const url = findTicketUrl(block);
 
       return {
-        title,
-        date,
-        ...(description ? { description } : {}),
-        ...(support ? { support } : {}),
-        ...(imageUrl ? { imageUrl } : {}),
-        url,
-        venue: 'The Gate Cardiff',
-        scrapedAt: new Date().toISOString(),
+        imageUrl,
+        url: url || 'https://www.thegate.org.uk/whats-on'
       };
-    }).filter(e => e && e.title && e.date);
+    }
+
+    return Array.from(
+      document.querySelectorAll('.sqs-html-content')
+    )
+      .map(block => {
+
+        const title = cleanText(
+          block.querySelector('h2, h3, h4')?.innerText
+        );
+
+        const date = pickDate(block);
+
+        if (!title || !date) {
+          return null;
+        }
+
+        const description = pickDescription(block);
+
+        const support = pickSupport(block);
+
+        const {
+          imageUrl,
+          url
+        } = findAssociatedData(block);
+
+        return {
+          title,
+          date,
+
+          ...(description
+            ? { description }
+            : {}),
+
+          ...(support
+            ? { support }
+            : {}),
+
+          ...(imageUrl
+            ? { imageUrl }
+            : {}),
+
+          url,
+
+          venue: 'The Gate Cardiff',
+
+          scrapedAt: new Date().toISOString(),
+        };
+      })
+      .filter(e => e && e.title && e.date);
   });
 
   await page.close();
+
   console.log(`  The Gate: ${events.length} events`);
+
   return events;
 }
 
