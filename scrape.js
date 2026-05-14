@@ -152,7 +152,7 @@ function inferPrimaryCategory(ev) {
   const venue = String(ev.venue || '').toLowerCase();
 
   // Music-first venues — default to Music
-  if (/globe\s*cardiff|tramshed|clwb\s*ifor|depot\s*cardiff|cardiff\s*su|utilita/.test(venue)) return 'Music';
+  if (/globe\s*cardiff|tramshed|clwb\s*ifor|depot\s*cardiff|cardiff\s*su|utilita|fuel|gate/.test(venue)) return 'Music';
 
   // Arts/theatre venues — default to Theatre only if no music signals
   if (/new\s*theatre|millennium\s*centre|wmc|the\s*gate/.test(venue)) return 'Theatre';
