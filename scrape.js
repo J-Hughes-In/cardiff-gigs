@@ -1667,6 +1667,156 @@ async function scrapeTheGate(context) {
   return events;
 }
 
+async function scrapeFuel(context) {
+  console.log('Scraping Fuel Rock Club...');
+  const page = await context.newPage();
+  await gotoAndSettle(page, 'https://www.fuelrockclub.co.uk/events/', 'article.elementor-post');
+  await new Promise(r => setTimeout(r, 3_000));
+
+  const events = await page.evaluate(() => {
+    return Array.from(document.querySelectorAll('article.elementor-post')).filter(item => {
+      // Exclude past events
+      return !item.classList.contains('category-past-events');
+    }).map(item => {
+      const titleEl = item.querySelector('h3.elementor-post__title a');
+      const img = item.querySelector('.elementor-post__thumbnail img');
+      const raw = img?.getAttribute('src') || img?.getAttribute('data-src') || '';
+      const href = titleEl?.href || '';
+      // Derive title from URL slug as innerText is always empty on this site
+      const slugTitle = href
+        ? href.split('/').filter(Boolean).pop().replace(/-/g, ' ').toUpperCase()
+        : '';
+      return {
+        title: slugTitle,
+        url: href,
+        imageUrl: raw && !raw.startsWith('data:') ? raw : '',
+        venue: 'Fuel Rock Club',
+        scrapedAt: new Date().toISOString(),
+      };
+    }).filter(e => e.title && e.url);
+  });
+
+  await page.close();
+  console.log(`  Fuel: ${events.length} events`);
+  return events;
+}
+
+async function scrapePrincipality(context) {
+  console.log('Scraping Principality Stadium...');
+  const page = await context.newPage();
+  await gotoAndSettle(page, 'https://www.principalitystadium.wales/events-and-ticket-information/', 'div.event-aggregator-item');
+  await new Promise(r => setTimeout(r, 2_000));
+
+  const events = await page.evaluate(() => {
+    return Array.from(document.querySelectorAll('div.event-aggregator-item')).map(item => {
+      const titleEl = item.querySelector('.event-item-title h4 a');
+      const dateEl = item.querySelector('.event-item-info span');
+      const descEl = item.querySelector('.event-item-desc p');
+      const linkEl = item.querySelector('a.event-item-link');
+      const img = item.querySelector('img.sotic_images');
+      const raw = img?.getAttribute('src') || '';
+      const cats = Array.from(item.querySelectorAll('.event-item-category li a'))
+        .map(a => a.innerText.trim()).join(', ');
+      return {
+        title: titleEl?.innerText.trim() || '',
+        date: dateEl?.innerText.trim() || '',
+        description: descEl?.innerText.trim() || '',
+        category: cats,
+        url: linkEl?.href || titleEl?.href || '',
+        imageUrl: raw && !raw.startsWith('data:') ? raw : '',
+        venue: 'Principality Stadium',
+        scrapedAt: new Date().toISOString(),
+      };
+    }).filter(e => e.title);
+  });
+
+  await page.close();
+  console.log(`  Principality: ${events.length} events`);
+  return events;
+}
+
+async function scrapeSherman(context) {
+  console.log('Scraping Sherman Theatre...');
+  const page = await context.newPage();
+  await gotoAndSettle(page, 'https://www.shermantheatre.co.uk/whats-on/', 'div.card-event');
+  await new Promise(r => setTimeout(r, 2_000));
+
+  // Click "Show More" until it disappears
+  let clicks = 0;
+  while (true) {
+    try {
+      const btn = await page.$('a.load-more');
+      if (!btn || !(await btn.isVisible())) break;
+      await btn.scrollIntoViewIfNeeded();
+      await new Promise(r => setTimeout(r, 500));
+      await btn.click({ timeout: 10_000 });
+      await new Promise(r => setTimeout(r, 1_500));
+      clicks++;
+      if (clicks > 20) break;
+    } catch (_) { break; }
+  }
+  if (clicks > 0) console.log(`  Sherman: clicked Show More ${clicks} times`);
+
+  const events = await page.evaluate(() => {
+    return Array.from(document.querySelectorAll('div.card-event')).map(item => {
+      const titleEl = item.querySelector('h3.card-title');
+      const dateEl = item.querySelector('span.date');
+      const descEl = item.querySelector('.card-description');
+      const catEl = item.querySelector('.item-categories span');
+      const linkEl = item.querySelector('a.card-link');
+      const imgEl = item.querySelector('div.card-image[data-src]');
+      const raw = imgEl?.getAttribute('data-src') || '';
+      return {
+        title: titleEl?.innerText.trim() || '',
+        date: dateEl?.innerText.trim() || '',
+        description: descEl?.innerText.trim() || '',
+        category: catEl?.innerText.trim() || '',
+        url: linkEl?.href || '',
+        imageUrl: raw && !raw.startsWith('data:') ? raw : '',
+        venue: 'Sherman Theatre',
+        scrapedAt: new Date().toISOString(),
+      };
+    }).filter(e => e.title);
+  });
+
+  await page.close();
+  console.log(`  Sherman: ${events.length} events`);
+  return events;
+}
+
+async function scrapeCanopi(context) {
+  console.log('Scraping Canopi...');
+  const page = await context.newPage();
+  await gotoAndSettle(page, 'https://www.thecanopi.org/events', 'article.eventlist-event');
+  await new Promise(r => setTimeout(r, 2_000));
+
+  const events = await page.evaluate(() => {
+    return Array.from(document.querySelectorAll('article.eventlist-event')).filter(item => {
+      // Exclude past events
+      return !item.classList.contains('eventlist-event--past');
+    }).map(item => {
+      const titleEl = item.querySelector('h1.eventlist-title a, h2.eventlist-title a');
+      const dateEl = item.querySelector('time.event-date');
+      const excerptEl = item.querySelector('.eventlist-excerpt');
+      const img = item.querySelector('img[data-src], img[src]');
+      const raw = img?.getAttribute('data-src') || img?.getAttribute('src') || '';
+      return {
+        title: titleEl?.innerText.trim() || '',
+        date: dateEl?.getAttribute('datetime') || dateEl?.innerText.trim() || '',
+        description: excerptEl?.innerText.trim() || '',
+        url: titleEl?.href || '',
+        imageUrl: raw && !raw.startsWith('data:') ? raw : '',
+        venue: 'Canopi Cardiff',
+        scrapedAt: new Date().toISOString(),
+      };
+    }).filter(e => e.title);
+  });
+
+  await page.close();
+  console.log(`  Canopi: ${events.length} events`);
+  return events;
+}
+
 async function scrapeClwb(context) {
   console.log('Scraping Clwb Ifor Bach...');
   const page = await context.newPage();
@@ -1825,6 +1975,10 @@ async function scrapeAll() {
     ...await safeScrap(() => scrapeCardiffSU(context), 'Cardiff SU'),
     ...await safeScrap(() => scrapeTheGate(context), 'The Gate'),
     ...await safeScrap(() => scrapeClwb(context), 'Clwb'),
+    ...await safeScrap(() => scrapeFuel(context), 'Fuel'),
+    ...await safeScrap(() => scrapePrincipality(context), 'Principality'),
+    ...await safeScrap(() => scrapeSherman(context), 'Sherman'),
+    ...await safeScrap(() => scrapeCanopi(context), 'Canopi'),
   ];
 
   allEvents = await enrichAllEvents(context, allEvents);

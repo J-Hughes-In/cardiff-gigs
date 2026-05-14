@@ -8,112 +8,52 @@ async function scrape() {
   });
   const page = await context.newPage();
 
-  await page.goto('https://www.thegate.org.uk/whats-on', {
-    waitUntil: 'domcontentloaded',
+  await page.goto('https://www.fuelrockclub.co.uk/events/', {
+    waitUntil: 'networkidle',
     timeout: 60000
   });
-  await new Promise(r => setTimeout(r, 3000));
 
-  const events = await page.evaluate(() => {
-    const dateLike = (t) =>
-      t && /\b(Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday)\b/i.test(t) && /\d{4}/.test(t);
+  // Wait specifically for title text to appear
+  await page.waitForFunction(() => {
+    const el = document.querySelector('h3.elementor-post__title a');
+    return el && el.innerText.trim().length > 0;
+  }, { timeout: 15000 }).catch(() => console.log('title text never appeared'));
 
-    function pickDate(block) {
-      const trySelectors = [
-        'p strong u', 'p u strong',
-        'p span[style*="text-decoration:underline"] strong',
-        'p span[style*="text-decoration: underline"] strong',
-      ];
-      for (const sel of trySelectors) {
-        const el = block.querySelector(sel);
-        const t = el?.innerText?.trim();
-        if (dateLike(t)) return t;
-      }
-      for (const el of block.querySelectorAll('p.sqsrte-large strong')) {
-        const t = el.innerText.trim();
-        if (dateLike(t)) return t;
-      }
-      return '';
-    }
-
-    function pickDescription(block) {
-      const paras = Array.from(block.querySelectorAll('p:not(.sqsrte-large)'))
-        .map(p => p.innerText.trim())
-        .filter(t => t && !dateLike(t) && t.length > 30);
-      return paras.join(' ') || '';
-    }
-
-    function pickSupport(block) {
-      const paras = Array.from(block.querySelectorAll('p.sqsrte-large'))
-        .map(p => p.innerText.trim())
-        .filter(t => t && !dateLike(t));
-      return paras.join(', ') || '';
-    }
-
-    function findNearbyImage(textBlock) {
-      let node = textBlock;
-      for (let i = 0; i < 6; i++) {
-        if (!node.parentElement) break;
-        node = node.parentElement;
-        if (node.classList.contains('fe-block')) break;
-      }
-      const parent = node.parentElement;
-      if (!parent) return '';
-      const siblings = Array.from(parent.children);
-      const idx = siblings.indexOf(node);
-      const searchRange = siblings.slice(Math.max(0, idx - 3), idx + 4);
-      for (const sib of searchRange) {
-        const img = sib.querySelector('img[data-src], img[src]');
-        if (img) {
-          const src = img.getAttribute('data-src') || img.getAttribute('src') || '';
-          if (src && !src.startsWith('data:')) return src;
-        }
-      }
-      return '';
-    }
-
-    function findTicketUrl(textBlock) {
-      let node = textBlock;
-      for (let i = 0; i < 6; i++) {
-        if (!node.parentElement) break;
-        node = node.parentElement;
-        if (node.classList.contains('fe-block')) break;
-      }
-      const parent = node.parentElement;
-      if (!parent) return 'https://www.thegate.org.uk/whats-on';
-      const siblings = Array.from(parent.children);
-      const idx = siblings.indexOf(node);
-      const searchRange = siblings.slice(Math.max(0, idx - 3), idx + 4);
-      for (const sib of searchRange) {
-        const a = sib.querySelector('a[href*="gigantic"], a[href*="ticketmaster"], a[href*="seetickets"], a[href*="eventbrite"]');
-        if (a) return a.href;
-      }
-      return 'https://www.thegate.org.uk/whats-on';
-    }
-
-    return Array.from(document.querySelectorAll('.sqs-html-content')).map(block => {
-      const title = block.querySelector('h2, h3, h4')?.innerText.trim() || '';
-      const date = pickDate(block);
-      if (!title || !date) return null;
-      const description = pickDescription(block);
-      const support = pickSupport(block);
-      const imageUrl = findNearbyImage(block);
-      const url = findTicketUrl(block);
-      return {
-        title,
-        date,
-        ...(description ? { description } : {}),
-        ...(support ? { support } : {}),
-        ...(imageUrl ? { imageUrl } : {}),
-        url,
-        venue: 'The Gate Cardiff',
-        scrapedAt: new Date().toISOString(),
-      };
-    }).filter(e => e && e.title && e.date);
+  const info = await page.evaluate(() => {
+    const first = document.querySelector('article.elementor-post');
+    if (!first) return 'no articles found';
+    return {
+      h3LinkText: first.querySelector('h3 a')?.innerText?.trim(),
+      titleLinkHref: first.querySelector('.elementor-post__title a')?.href,
+      imgSrc: first.querySelector('img')?.getAttribute('src'),
+      allText: first.innerText?.slice(0, 300),
+    };
   });
 
-  console.log(JSON.stringify(events, null, 2));
-  console.log(`\nTotal: ${events.length} events`);
+  console.log(JSON.stringify(info, null, 2));
+
+  // Also try extracting all events
+  const events = await page.evaluate(() => {
+    return Array.from(document.querySelectorAll('article.elementor-post')).map(item => {
+      const titleEl = item.querySelector('h3.elementor-post__title a');
+      const img = item.querySelector('.elementor-post__thumbnail img');
+      const raw = img?.getAttribute('src') || img?.getAttribute('data-src') || '';
+      // Fallback: derive title from URL slug
+      const href = titleEl?.href || '';
+      const slugTitle = href
+        ? href.split('/').filter(Boolean).pop().replace(/-/g, ' ').toUpperCase()
+        : '';
+      return {
+        title: titleEl?.innerText?.trim() || slugTitle,
+        url: href,
+        imageUrl: raw && !raw.startsWith('data:') ? raw : '',
+        venue: 'Fuel Rock Club',
+      };
+    }).filter(e => e.title);
+  });
+
+  console.log(`\nEvents found: ${events.length}`);
+  console.log(JSON.stringify(events.slice(0, 3), null, 2));
 
   await browser.close();
 }
