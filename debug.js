@@ -1,225 +1,159 @@
 const { chromium } = require('playwright');
 
 async function scrape() {
-  const browser = await chromium.launch({ headless: false });
+  const browser = await chromium.launch({
+    headless: false
+  });
 
   const context = await browser.newContext({
     userAgent:
       'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36',
-    viewport: { width: 1365, height: 900 },
+
+    viewport: {
+      width: 1365,
+      height: 900
+    },
   });
 
   const page = await context.newPage();
 
-  await page.goto('https://www.thegate.org.uk/whats-on', {
-    waitUntil: 'domcontentloaded',
-    timeout: 60000,
-  });
+  console.log('Opening Fuel Rock Club events page...');
 
-  await new Promise((r) => setTimeout(r, 4000));
+  await page.goto(
+    'https://www.fuelrockclub.co.uk/events/',
+    {
+      waitUntil: 'networkidle',
+      timeout: 60000
+    }
+  );
 
-  const events = await page.evaluate(() => {
-    const dateLike = (t) =>
-      t &&
-      /\b(Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday)\b/i.test(t) &&
-      /\d{4}/.test(t);
+  console.log('Waiting for SociableKit iframe...');
+
+  await page.waitForSelector(
+    'iframe[src*="sociablekit"]',
+    {
+      timeout: 20000
+    }
+  );
+
+  const iframeElement = await page.$(
+    'iframe[src*="sociablekit"]'
+  );
+
+  if (!iframeElement) {
+    throw new Error('SociableKit iframe not found');
+  }
+
+  const frame = await iframeElement.contentFrame();
+
+  if (!frame) {
+    throw new Error('Could not access iframe content');
+  }
+
+  console.log('Waiting for event cards inside iframe...');
+
+  await frame.waitForSelector(
+    '.sk-event-item',
+    {
+      timeout: 20000
+    }
+  );
+
+  // Allow lazy content to finish rendering
+  await frame.waitForTimeout(3000);
+
+  const events = await frame.evaluate(() => {
 
     function cleanText(t) {
       return t?.replace(/\s+/g, ' ').trim() || '';
     }
 
-    function pickDate(block) {
-      const trySelectors = [
-        'p strong u',
-        'p u strong',
-        'p span[style*="text-decoration:underline"] strong',
-        'p span[style*="text-decoration: underline"] strong',
-      ];
-
-      for (const sel of trySelectors) {
-        const el = block.querySelector(sel);
-        const t = cleanText(el?.innerText);
-        if (dateLike(t)) return t;
-      }
-
-      for (const el of block.querySelectorAll('p.sqsrte-large strong')) {
-        const t = cleanText(el.innerText);
-        if (dateLike(t)) return t;
-      }
-
-      return '';
-    }
-
-    function pickDescription(block) {
-      return Array.from(block.querySelectorAll('p:not(.sqsrte-large)'))
-        .map((p) => cleanText(p.innerText))
-        .filter((t) => t && !dateLike(t) && t.length > 30)
-        .join(' ');
-    }
-
-    function pickSupport(block) {
-      return Array.from(block.querySelectorAll('p.sqsrte-large'))
-        .map((p) => cleanText(p.innerText))
-        .filter((t) => t && !dateLike(t))
-        .join(', ');
-    }
-
-    function getFeBlock(node) {
-      while (node && !node.classList?.contains('fe-block')) {
-        node = node.parentElement;
-      }
-      return node;
-    }
-
-    function isEventStartBlock(sib) {
-      return !!sib.querySelector(
-        '.sqs-html-content h1, .sqs-html-content h2, .sqs-html-content h3, .sqs-html-content h4'
-      );
-    }
-
-    function findAssociatedData(textBlock) {
-      const feBlock = getFeBlock(textBlock);
-
-      if (!feBlock?.parentElement) {
-        return {
-          imageUrl: '',
-          url: 'https://www.thegate.org.uk/whats-on',
-        };
-      }
-
-      const siblings = Array.from(feBlock.parentElement.children);
-      const idx = siblings.indexOf(feBlock);
-
-      let imageUrl = '';
-      let url = '';
-
-      // Forward search
-      for (let i = idx; i < siblings.length; i++) {
-        const sib = siblings[i];
-
-        if (i !== idx && isEventStartBlock(sib)) break;
-
-        if (!url) {
-          const a = sib.querySelector(`
-            a[href*="gigantic"],
-            a[href*="ticketmaster"],
-            a[href*="seetickets"],
-            a[href*="eventbrite"]
-          `);
-
-          if (a?.href) url = a.href;
-        }
-
-        if (!imageUrl) {
-          const img = sib.querySelector('img[data-src], img[src]');
-
-          if (img) {
-            const src =
-              img.getAttribute('data-src') ||
-              img.getAttribute('src') ||
-              '';
-
-            if (src && !src.startsWith('data:')) {
-              imageUrl = src;
-            }
-          }
-
-          if (!imageUrl) {
-            const bg = sib.querySelector(
-              '[style*="background-image"]'
-            );
-
-            if (bg) {
-              const style = bg.getAttribute('style') || '';
-              const match = style.match(
-                /background-image:\s*url\(["']?(.*?)["']?\)/
-              );
-
-              if (match?.[1]) imageUrl = match[1];
-            }
-          }
-        }
-      }
-
-      // Backward fallback
-      if (!imageUrl || !url) {
-        for (let i = idx - 1; i >= 0; i--) {
-          const sib = siblings[i];
-
-          if (isEventStartBlock(sib)) break;
-
-          if (!url) {
-            const a = sib.querySelector(`
-              a[href*="gigantic"],
-              a[href*="ticketmaster"],
-              a[href*="seetickets"],
-              a[href*="eventbrite"]
-            `);
-
-            if (a?.href) url = a.href;
-          }
-
-          if (!imageUrl) {
-            const img = sib.querySelector(
-              'img[data-src], img[src]'
-            );
-
-            if (img) {
-              const src =
-                img.getAttribute('data-src') ||
-                img.getAttribute('src') ||
-                '';
-
-              if (src && !src.startsWith('data:')) {
-                imageUrl = src;
-              }
-            }
-          }
-        }
-      }
-
-      return {
-        imageUrl,
-        url: url || 'https://www.thegate.org.uk/whats-on',
-      };
-    }
-
     return Array.from(
-      document.querySelectorAll('.sqs-html-content')
+      document.querySelectorAll('.sk-event-item')
     )
-      .map((block) => {
-        const title = cleanText(
-          block.querySelector('h2,h3,h4')?.innerText
-        );
+      .map(item => {
 
-        const date = pickDate(block);
+        const title =
+          cleanText(
+            item.querySelector(
+              '.sk-event-item-title'
+            )?.innerText
+          );
 
-        if (!title || !date) return null;
+        const url =
+          item.querySelector(
+            '.sk-event-item-fb-link'
+          )?.href ||
 
-        const description = pickDescription(block);
-        const support = pickSupport(block);
+          item.querySelector(
+            '.sk-event-item-gettickets'
+          )?.href ||
 
-        const { imageUrl, url } =
-          findAssociatedData(block);
+          '';
+
+        const rawImage =
+          item.querySelector('img')
+            ?.getAttribute('src') || '';
+
+        // THIS is the reliable date source
+        const timeEl =
+          item.querySelector(
+            '.sk-event-item-date time'
+          );
+
+        const rawDate =
+          cleanText(timeEl?.innerText);
+
+        const isoDate =
+          timeEl?.getAttribute('datetime') || '';
 
         return {
           title,
-          date,
-          ...(description ? { description } : {}),
-          ...(support ? { support } : {}),
-          ...(imageUrl ? { imageUrl } : {}),
+
+          date: rawDate,
+
+          eventStartDate: isoDate,
+
           url,
-          venue: 'The Gate Cardiff',
+
+          imageUrl:
+            rawImage &&
+            !rawImage.startsWith('data:')
+              ? rawImage
+              : '',
+
+          venue: 'Fuel Rock Club',
+
           scrapedAt: new Date().toISOString(),
+
+          primaryCategory: 'Music',
+
+          genre: 'Music',
+
+          // useful for debugging
+          rawDate,
+          isoDate
         };
       })
-      .filter(Boolean);
+      .filter(e => e.title && e.url);
   });
 
-  console.log(JSON.stringify(events, null, 2));
-  console.log(`\nTotal: ${events.length} events`);
+  console.log('\n========== RESULTS ==========\n');
+
+  console.log(
+    JSON.stringify(events, null, 2)
+  );
+
+  console.log(
+    `\nTotal events: ${events.length}`
+  );
+
+  await page.waitForTimeout(5000);
 
   await browser.close();
 }
 
-scrape().catch(console.error);
+scrape().catch(err => {
+  console.error(err);
+  process.exit(1);
+});

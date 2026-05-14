@@ -1840,99 +1840,57 @@ async function scrapeTheGate(context) {
 
 async function scrapeFuel(context) {
   console.log('Scraping Fuel Rock Club...');
-
   const page = await context.newPage();
+  await gotoAndSettle(page, 'https://www.fuelrockclub.co.uk/events/', 'iframe[src*="sociablekit"]');
 
-  await page.goto('https://www.fuelrockclub.co.uk/events/', {
-    waitUntil: 'networkidle',
-    timeout: 60000
-  });
+  // Wait for the SociableKit iframe to load
+  const iframeElement = await page.$('iframe[src*="sociablekit"]');
+  if (!iframeElement) {
+    console.log('  Fuel: SociableKit iframe not found');
+    await page.close();
+    return [];
+  }
 
-  // Wait for Elementor content to hydrate
-  await page.waitForFunction(() => {
-    return document.querySelectorAll(
-      'article.elementor-post'
-    ).length > 0;
-  }, {
-    timeout: 15000
-  });
+  const frame = await iframeElement.contentFrame();
+  if (!frame) {
+    console.log('  Fuel: could not access iframe content');
+    await page.close();
+    return [];
+  }
 
-  // Extra wait because this site renders slowly
-  await page.waitForTimeout(3000);
+  await frame.waitForSelector('.sk-event-item', { timeout: 20_000 });
+  await new Promise(r => setTimeout(r, 3_000));
 
-  const events = await page.evaluate(() => {
-
+  const events = await frame.evaluate(() => {
     function cleanText(t) {
       return t?.replace(/\s+/g, ' ').trim() || '';
     }
 
-    return Array.from(
-      document.querySelectorAll('article.elementor-post')
-    )
-      .map(item => {
+    return Array.from(document.querySelectorAll('.sk-event-item')).map(item => {
+      const title = cleanText(item.querySelector('.sk-event-item-title')?.innerText);
+      const url =
+        item.querySelector('.sk-event-item-fb-link')?.href ||
+        item.querySelector('.sk-event-item-gettickets')?.href ||
+        '';
+      const rawImage = item.querySelector('img')?.getAttribute('src') || '';
+      const timeEl = item.querySelector('.sk-event-item-date time');
+      const rawDate = cleanText(timeEl?.innerText);
+      const isoDate = timeEl?.getAttribute('datetime') || '';
 
-        const titleEl =
-          item.querySelector(
-            'h3.elementor-post__title a'
-          );
-
-        const img =
-          item.querySelector(
-            '.elementor-post__thumbnail img'
-          );
-
-        const raw =
-          img?.getAttribute('src') ||
-          img?.getAttribute('data-src') ||
-          '';
-
-        const href = titleEl?.href || '';
-
-        // Fallback from slug
-        const slugTitle = href
-          ? href
-              .split('/')
-              .filter(Boolean)
-              .pop()
-              .replace(/-/g, ' ')
-              .toUpperCase()
-          : '';
-
-        const title =
-          cleanText(titleEl?.innerText) ||
-          slugTitle;
-
-        // Attempt date extraction from card text
-        const text = cleanText(item.innerText);
-
-        const dateMatch = text.match(
-          /\b\d{1,2}(st|nd|rd|th)?\s+[A-Za-z]+\s+\d{4}\b/i
-        );
-
-        return {
-          title,
-          date: dateMatch?.[0] || '',
-
-          url: href,
-
-          imageUrl:
-            raw &&
-            !raw.startsWith('data:')
-              ? raw
-              : '',
-
-          venue: 'Fuel Rock Club',
-
-          scrapedAt: new Date().toISOString(),
-        };
-      })
-      .filter(e => e.title && e.url);
+      return {
+        title,
+        date: rawDate,
+        eventStartDate: isoDate,
+        url,
+        imageUrl: rawImage && !rawImage.startsWith('data:') ? rawImage : '',
+        venue: 'Fuel Rock Club',
+        scrapedAt: new Date().toISOString(),
+      };
+    }).filter(e => e.title && e.url);
   });
 
   await page.close();
-
   console.log(`  Fuel: ${events.length} events`);
-
   return events;
 }
 
