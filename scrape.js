@@ -1840,35 +1840,99 @@ async function scrapeTheGate(context) {
 
 async function scrapeFuel(context) {
   console.log('Scraping Fuel Rock Club...');
+
   const page = await context.newPage();
-  await gotoAndSettle(page, 'https://www.fuelrockclub.co.uk/events/', 'article.elementor-post');
-  await new Promise(r => setTimeout(r, 3_000));
+
+  await page.goto('https://www.fuelrockclub.co.uk/events/', {
+    waitUntil: 'networkidle',
+    timeout: 60000
+  });
+
+  // Wait for Elementor content to hydrate
+  await page.waitForFunction(() => {
+    return document.querySelectorAll(
+      'article.elementor-post'
+    ).length > 0;
+  }, {
+    timeout: 15000
+  });
+
+  // Extra wait because this site renders slowly
+  await page.waitForTimeout(3000);
 
   const events = await page.evaluate(() => {
-    return Array.from(document.querySelectorAll('article.elementor-post')).filter(item => {
-      // Exclude past events
-      return !item.classList.contains('category-past-events');
-    }).map(item => {
-      const titleEl = item.querySelector('h3.elementor-post__title a');
-      const img = item.querySelector('.elementor-post__thumbnail img');
-      const raw = img?.getAttribute('src') || img?.getAttribute('data-src') || '';
-      const href = titleEl?.href || '';
-      // Derive title from URL slug as innerText is always empty on this site
-      const slugTitle = href
-        ? href.split('/').filter(Boolean).pop().replace(/-/g, ' ').toUpperCase()
-        : '';
-      return {
-        title: slugTitle,
-        url: href,
-        imageUrl: raw && !raw.startsWith('data:') ? raw : '',
-        venue: 'Fuel Rock Club',
-        scrapedAt: new Date().toISOString(),
-      };
-    }).filter(e => e.title && e.url);
+
+    function cleanText(t) {
+      return t?.replace(/\s+/g, ' ').trim() || '';
+    }
+
+    return Array.from(
+      document.querySelectorAll('article.elementor-post')
+    )
+      .map(item => {
+
+        const titleEl =
+          item.querySelector(
+            'h3.elementor-post__title a'
+          );
+
+        const img =
+          item.querySelector(
+            '.elementor-post__thumbnail img'
+          );
+
+        const raw =
+          img?.getAttribute('src') ||
+          img?.getAttribute('data-src') ||
+          '';
+
+        const href = titleEl?.href || '';
+
+        // Fallback from slug
+        const slugTitle = href
+          ? href
+              .split('/')
+              .filter(Boolean)
+              .pop()
+              .replace(/-/g, ' ')
+              .toUpperCase()
+          : '';
+
+        const title =
+          cleanText(titleEl?.innerText) ||
+          slugTitle;
+
+        // Attempt date extraction from card text
+        const text = cleanText(item.innerText);
+
+        const dateMatch = text.match(
+          /\b\d{1,2}(st|nd|rd|th)?\s+[A-Za-z]+\s+\d{4}\b/i
+        );
+
+        return {
+          title,
+          date: dateMatch?.[0] || '',
+
+          url: href,
+
+          imageUrl:
+            raw &&
+            !raw.startsWith('data:')
+              ? raw
+              : '',
+
+          venue: 'Fuel Rock Club',
+
+          scrapedAt: new Date().toISOString(),
+        };
+      })
+      .filter(e => e.title && e.url);
   });
 
   await page.close();
+
   console.log(`  Fuel: ${events.length} events`);
+
   return events;
 }
 
