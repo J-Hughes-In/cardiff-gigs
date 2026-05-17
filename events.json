@@ -452,14 +452,11 @@
     "venue": "The Globe Cardiff",
     "scrapedAt": "2026-05-12T09:07:48.767Z",
     "imageUrl": "https://www.globecardiff.co.uk/wp-content/uploads/2025/11/Live-Event-Commitments-Sept-19-2026-1.jpg",
-    "shortDescription": "Buy Tickets for Robert Arkins Commitments on Universe.com",
-    "description": "Buy Tickets for Robert Arkins Commitments on Universe.com",
+    "shortDescription": "Buy Tickets for undefined on Universe.com",
+    "description": "Buy Tickets for undefined on Universe.com",
     "imageUrls": [
       "https://www.globecardiff.co.uk/wp-content/uploads/2025/11/Live-Event-Commitments-Sept-19-2026-1.jpg"
     ],
-    "ticketPriceFrom": 1,
-    "ticketCurrency": "GBP",
-    "ticketPriceLabel": "£1.00",
     "primaryCategory": "Music",
     "date": "Saturday, 19 September 2026"
   },
@@ -967,52 +964,6 @@
     "subcategory": "Wales Millennium Centre > What's on > 2026 > Explore Visual Art",
     "primaryCategory": "Theatre",
     "genre": "Classical"
-  },
-  {
-    "title": "SIMON SHEWRING",
-    "date": "Sunday, 17 May 2026",
-    "url": "https://www.wmc.org.uk/en/whats-on/2026/piano-recital",
-    "venue": "Wales Millennium Centre",
-    "scrapedAt": "2026-05-12T09:07:48.767Z",
-    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1772105997/WMC%20Content/Whats%20On/2026/BBC%20NoW/Simon%20Shewring/Simon_Shewring_Thumbnails?_a=BAAAV6DQ",
-    "imageUrls": [
-      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1772105997/WMC%20Content/Whats%20On/2026/BBC%20NoW/Simon%20Shewring/Simon_Shewring_Thumbnails?_a=BAAAV6DQ",
-      "http://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_630%2Cw_1200/f_auto/q_auto/v1772105997/WMC%20Content/Whats%20On/2026/BBC%20NoW/Simon%20Shewring/Simon_Shewring_Thumbnails?_a=BAAAV6DQ",
-      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_512%2Cw_1024/f_auto/q_auto/v1772105997/WMC%20Content/Whats%20On/2026/BBC%20NoW/Simon%20Shewring/Simon_Shewring_Thumbnails?_a=BAAAV6DQ",
-      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1772105997/WMC%20Content/Whats%20On/2026/BBC%20NoW/Simon%20Shewring/Simon_Shewring_Thumbnails?_a=BAAAV6DQ"
-    ],
-    "eventStartDate": "2026-05-17 16:00:00",
-    "eventEndDate": "2026-05-17 17:10:00",
-    "ticketPriceFrom": 15,
-    "ticketPriceTo": 15,
-    "ticketCurrency": "GBP",
-    "subcategory": "Wales Millennium Centre > What's on > 2026 > SIMON SHEWRING",
-    "primaryCategory": "Theatre",
-    "genre": "Jazz, Soul, Classical",
-    "ticketPriceLabel": "£15"
-  },
-  {
-    "title": "SHERRY VINE: DIRTY BLONDE",
-    "date": "Sunday, 17 May 2026",
-    "url": "https://www.wmc.org.uk/en/whats-on/2026/sherry-vine-dirty-blonde",
-    "venue": "Wales Millennium Centre",
-    "scrapedAt": "2026-05-12T09:07:48.767Z",
-    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1770481482/WMC%20Content/Whats%20On/2026/Cabaret/Sherry%20Vine/c584097f-6be9-4d70-a765-02ad7020f0ae?_a=BAAAV6DQ",
-    "imageUrls": [
-      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1770481482/WMC%20Content/Whats%20On/2026/Cabaret/Sherry%20Vine/c584097f-6be9-4d70-a765-02ad7020f0ae?_a=BAAAV6DQ",
-      "http://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_630%2Cw_1200/f_auto/q_auto/v1770481482/WMC%20Content/Whats%20On/2026/Cabaret/Sherry%20Vine/c584097f-6be9-4d70-a765-02ad7020f0ae?_a=BAAAV6DQ",
-      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_512%2Cw_1024/f_auto/q_auto/v1770481482/WMC%20Content/Whats%20On/2026/Cabaret/Sherry%20Vine/c584097f-6be9-4d70-a765-02ad7020f0ae?_a=BAAAV6DQ",
-      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1770481482/WMC%20Content/Whats%20On/2026/Cabaret/Sherry%20Vine/c584097f-6be9-4d70-a765-02ad7020f0ae?_a=BAAAV6DQ"
-    ],
-    "eventStartDate": "2026-05-17 19:00:00",
-    "eventEndDate": "2026-05-17 22:00:00",
-    "ticketPriceFrom": 18,
-    "ticketPriceTo": 18,
-    "ticketCurrency": "GBP",
-    "subcategory": "Wales Millennium Centre > What's on > 2026 > Sherry Vine: Dirty Blonde",
-    "primaryCategory": "Theatre",
-    "genre": "Jazz, Classical, Blues",
-    "ticketPriceLabel": "£18"
   },
   {
     "title": "THE CHOIR OF MAN",
@@ -1989,11 +1940,22 @@
     "url": "https://www.wmc.org.uk/en/whats-on/2026/oolas-cabaret-quiz",
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-05-12T09:07:48.767Z",
-    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1773242893/WMC%20Content/Whats%20On/2026/Cabaret/Cabaret%20Quiz/Oola_s_Cabaret_Quiz_June28th_What_s_on_Thumbnail_WMC_1200_x_900_px_1?_a=BAAAV6DQ",
+    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1773242893/WMC%20Content/Whats%20On/2026/Cabaret/Cabaret%20Quiz/Oola_s_Cabaret_Quiz_June28th_What_s_on_Thumbnail_WMC_1200_x_900_px_1?_a=BAAAV6DQ",
     "imageUrls": [
+      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1773242893/WMC%20Content/Whats%20On/2026/Cabaret/Cabaret%20Quiz/Oola_s_Cabaret_Quiz_June28th_What_s_on_Thumbnail_WMC_1200_x_900_px_1?_a=BAAAV6DQ",
+      "http://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_630%2Cw_1200/f_auto/q_auto/v1773242893/WMC%20Content/Whats%20On/2026/Cabaret/Cabaret%20Quiz/Oola_s_Cabaret_Quiz_June28th_What_s_on_Thumbnail_WMC_1200_x_900_px_1?_a=BAAAV6DQ",
+      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_512%2Cw_1024/f_auto/q_auto/v1773242893/WMC%20Content/Whats%20On/2026/Cabaret/Cabaret%20Quiz/Oola_s_Cabaret_Quiz_June28th_What_s_on_Thumbnail_WMC_1200_x_900_px_1?_a=BAAAV6DQ",
       "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1773242893/WMC%20Content/Whats%20On/2026/Cabaret/Cabaret%20Quiz/Oola_s_Cabaret_Quiz_June28th_What_s_on_Thumbnail_WMC_1200_x_900_px_1?_a=BAAAV6DQ"
     ],
-    "primaryCategory": "Theatre"
+    "eventStartDate": "2026-06-28 19:00:00",
+    "eventEndDate": "2026-06-28 21:00:00",
+    "ticketPriceFrom": 10,
+    "ticketPriceTo": 10,
+    "ticketCurrency": "GBP",
+    "subcategory": "Wales Millennium Centre > What's on > 2026 > OOLA’S CABARET QUIZ",
+    "primaryCategory": "Theatre",
+    "genre": "Jazz, Classical, Blues",
+    "ticketPriceLabel": "£10"
   },
   {
     "title": "UNITY FESTIVAL’S GRAND OPENING",
@@ -2001,11 +1963,22 @@
     "url": "https://www.wmc.org.uk/en/whats-on/2026/unity-festivals-grand-opening",
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-05-12T09:07:48.767Z",
-    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1778162619/WMC%20Content/Whats%20On/2026/Cabaret/Unity%20Festival%20Grand%20opening/1200_x_900?_a=BAAAV6DQ",
+    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1778162619/WMC%20Content/Whats%20On/2026/Cabaret/Unity%20Festival%20Grand%20opening/1200_x_900?_a=BAAAV6DQ",
     "imageUrls": [
+      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1778162619/WMC%20Content/Whats%20On/2026/Cabaret/Unity%20Festival%20Grand%20opening/1200_x_900?_a=BAAAV6DQ",
+      "http://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_630%2Cw_1200/f_auto/q_auto/v1778162619/WMC%20Content/Whats%20On/2026/Cabaret/Unity%20Festival%20Grand%20opening/1200_x_900?_a=BAAAV6DQ",
+      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_512%2Cw_1024/f_auto/q_auto/v1778162619/WMC%20Content/Whats%20On/2026/Cabaret/Unity%20Festival%20Grand%20opening/1200_x_900?_a=BAAAV6DQ",
       "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1778162619/WMC%20Content/Whats%20On/2026/Cabaret/Unity%20Festival%20Grand%20opening/1200_x_900?_a=BAAAV6DQ"
     ],
-    "primaryCategory": "Theatre"
+    "eventStartDate": "2026-07-01 20:30:00",
+    "eventEndDate": "2026-07-01 23:00:00",
+    "ticketPriceFrom": 10,
+    "ticketPriceTo": 10,
+    "ticketCurrency": "GBP",
+    "subcategory": "Wales Millennium Centre > What's on > 2026 > Unity Festival’s Grand Opening",
+    "primaryCategory": "Theatre",
+    "genre": "Classical",
+    "ticketPriceLabel": "£10"
   },
   {
     "title": "TRUNK OF FUNK",
@@ -2013,22 +1986,11 @@
     "url": "https://www.wmc.org.uk/en/whats-on/2026/trunk-of-funk",
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-05-12T09:07:48.767Z",
-    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1773829565/WMC%20Content/Whats%20On/2026/Cabaret/Trunk%20of%20Funk/Trunk_of_Funk?_a=BAAAV6DQ",
+    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1773829565/WMC%20Content/Whats%20On/2026/Cabaret/Trunk%20of%20Funk/Trunk_of_Funk?_a=BAAAV6DQ",
     "imageUrls": [
-      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1773829565/WMC%20Content/Whats%20On/2026/Cabaret/Trunk%20of%20Funk/Trunk_of_Funk?_a=BAAAV6DQ",
-      "http://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_630%2Cw_1200/f_auto/q_auto/v1773829565/WMC%20Content/Whats%20On/2026/Cabaret/Trunk%20of%20Funk/Trunk_of_Funk?_a=BAAAV6DQ",
-      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_512%2Cw_1024/f_auto/q_auto/v1773829565/WMC%20Content/Whats%20On/2026/Cabaret/Trunk%20of%20Funk/Trunk_of_Funk?_a=BAAAV6DQ",
       "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1773829565/WMC%20Content/Whats%20On/2026/Cabaret/Trunk%20of%20Funk/Trunk_of_Funk?_a=BAAAV6DQ"
     ],
-    "eventStartDate": "2026-07-02 20:00:00",
-    "eventEndDate": "2026-07-02 22:00:00",
-    "ticketPriceFrom": 15,
-    "ticketPriceTo": 15,
-    "ticketCurrency": "GBP",
-    "subcategory": "Wales Millennium Centre > What's on > 2026 > Trunk of Funk",
-    "primaryCategory": "Theatre",
-    "genre": "Jazz, Classical, Blues",
-    "ticketPriceLabel": "£15"
+    "primaryCategory": "Theatre"
   },
   {
     "title": "BABY BUMPS",
@@ -2036,11 +1998,22 @@
     "url": "https://www.wmc.org.uk/en/whats-on/2026/baby-bumps",
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-05-12T09:07:48.767Z",
-    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1776162513/WMC%20Content/Whats%20On/2026/Weston%20Studio/Unity%20Festoval/Baby_bumps_thumbnail?_a=BAAAV6DQ",
+    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1776162513/WMC%20Content/Whats%20On/2026/Weston%20Studio/Unity%20Festoval/Baby_bumps_thumbnail?_a=BAAAV6DQ",
     "imageUrls": [
+      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1776162513/WMC%20Content/Whats%20On/2026/Weston%20Studio/Unity%20Festoval/Baby_bumps_thumbnail?_a=BAAAV6DQ",
+      "http://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_630%2Cw_1200/f_auto/q_auto/v1776162513/WMC%20Content/Whats%20On/2026/Weston%20Studio/Unity%20Festoval/Baby_bumps_thumbnail?_a=BAAAV6DQ",
+      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_512%2Cw_1024/f_auto/q_auto/v1776162513/WMC%20Content/Whats%20On/2026/Weston%20Studio/Unity%20Festoval/Baby_bumps_thumbnail?_a=BAAAV6DQ",
       "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1776162513/WMC%20Content/Whats%20On/2026/Weston%20Studio/Unity%20Festoval/Baby_bumps_thumbnail?_a=BAAAV6DQ"
     ],
-    "primaryCategory": "Theatre"
+    "eventStartDate": "2026-07-02 20:00:00",
+    "eventEndDate": "2026-07-02 22:00:00",
+    "ticketPriceFrom": 16,
+    "ticketPriceTo": 16,
+    "ticketCurrency": "GBP",
+    "subcategory": "Wales Millennium Centre > What's on > 2026 > Baby Bumps",
+    "primaryCategory": "Theatre",
+    "genre": "Classical",
+    "ticketPriceLabel": "£16"
   },
   {
     "title": "JAMES ACASTER",
@@ -2118,11 +2091,22 @@
     "url": "https://www.wmc.org.uk/en/whats-on/2026/unity-festival-party",
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-05-12T09:07:48.767Z",
-    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1775559576/WMC%20Content/Whats%20On/2026/Cabaret/Unity%20Festival%20party/Unity_Party_desktop?_a=BAAAV6DQ",
+    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1775559576/WMC%20Content/Whats%20On/2026/Cabaret/Unity%20Festival%20party/Unity_Party_desktop?_a=BAAAV6DQ",
     "imageUrls": [
+      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1775559576/WMC%20Content/Whats%20On/2026/Cabaret/Unity%20Festival%20party/Unity_Party_desktop?_a=BAAAV6DQ",
+      "http://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_630%2Cw_1200/f_auto/q_auto/v1775559576/WMC%20Content/Whats%20On/2026/Cabaret/Unity%20Festival%20party/Unity_Party_desktop?_a=BAAAV6DQ",
+      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_512%2Cw_1024/f_auto/q_auto/v1775559576/WMC%20Content/Whats%20On/2026/Cabaret/Unity%20Festival%20party/Unity_Party_desktop?_a=BAAAV6DQ",
       "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1775559576/WMC%20Content/Whats%20On/2026/Cabaret/Unity%20Festival%20party/Unity_Party_desktop?_a=BAAAV6DQ"
     ],
-    "primaryCategory": "Theatre"
+    "eventStartDate": "2026-07-04 21:30:00",
+    "eventEndDate": "2026-07-04 23:00:00",
+    "ticketPriceFrom": 10,
+    "ticketPriceTo": 10,
+    "ticketCurrency": "GBP",
+    "subcategory": "Wales Millennium Centre > What's on > 2026 > Unity Festival Party",
+    "primaryCategory": "Theatre",
+    "genre": "Punk, Soul, Classical, Blues, Pop, Rock",
+    "ticketPriceLabel": "£10"
   },
   {
     "title": "AN AMERICAN SOUNDSCAPE",
@@ -2130,11 +2114,22 @@
     "url": "https://www.wmc.org.uk/en/whats-on/2026/an-american-soundscape",
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-05-12T09:07:48.767Z",
-    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1753717284/WMC%20Content/Whats%20On/2026/BBC%20NoW/An%20American%20Soundscape/thumbnail-5-july-2026-a?_a=BAAAV6DQ",
+    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1753717284/WMC%20Content/Whats%20On/2026/BBC%20NoW/An%20American%20Soundscape/thumbnail-5-july-2026-a?_a=BAAAV6DQ",
     "imageUrls": [
+      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1753717284/WMC%20Content/Whats%20On/2026/BBC%20NoW/An%20American%20Soundscape/thumbnail-5-july-2026-a?_a=BAAAV6DQ",
+      "http://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_630%2Cw_1200/f_auto/q_auto/v1753717284/WMC%20Content/Whats%20On/2026/BBC%20NoW/An%20American%20Soundscape/thumbnail-5-july-2026-a?_a=BAAAV6DQ",
+      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_512%2Cw_1024/f_auto/q_auto/v1753717284/WMC%20Content/Whats%20On/2026/BBC%20NoW/An%20American%20Soundscape/thumbnail-5-july-2026-a?_a=BAAAV6DQ",
       "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1753717284/WMC%20Content/Whats%20On/2026/BBC%20NoW/An%20American%20Soundscape/thumbnail-5-july-2026-a?_a=BAAAV6DQ"
     ],
-    "primaryCategory": "Theatre"
+    "eventStartDate": "2026-07-05 15:00:00",
+    "eventEndDate": "2026-07-05 17:00:00",
+    "ticketPriceFrom": 15,
+    "ticketPriceTo": 15,
+    "ticketCurrency": "GBP",
+    "subcategory": "Wales Millennium Centre > What's on > 2026 > An American Soundscape",
+    "primaryCategory": "Theatre",
+    "genre": "Classical",
+    "ticketPriceLabel": "£15"
   },
   {
     "title": "ANNIE",
@@ -2260,22 +2255,11 @@
     "url": "https://www.wmc.org.uk/en/whats-on/2026/showgirls-and-sharks",
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-05-12T09:07:48.767Z",
-    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1773933629/WMC%20Content/Whats%20On/2026/Cabaret/Sharks%20and%20Showgirls/Square?_a=BAAAV6DQ",
+    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1773933629/WMC%20Content/Whats%20On/2026/Cabaret/Sharks%20and%20Showgirls/Square?_a=BAAAV6DQ",
     "imageUrls": [
-      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1773933629/WMC%20Content/Whats%20On/2026/Cabaret/Sharks%20and%20Showgirls/Square?_a=BAAAV6DQ",
-      "http://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_630%2Cw_1200/f_auto/q_auto/v1773933629/WMC%20Content/Whats%20On/2026/Cabaret/Sharks%20and%20Showgirls/Square?_a=BAAAV6DQ",
-      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_512%2Cw_1024/f_auto/q_auto/v1773933629/WMC%20Content/Whats%20On/2026/Cabaret/Sharks%20and%20Showgirls/Square?_a=BAAAV6DQ",
       "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1773933629/WMC%20Content/Whats%20On/2026/Cabaret/Sharks%20and%20Showgirls/Square?_a=BAAAV6DQ"
     ],
-    "eventStartDate": "2026-07-19 19:00:00",
-    "eventEndDate": "2026-07-19 22:00:00",
-    "ticketPriceFrom": 15,
-    "ticketPriceTo": 15,
-    "ticketCurrency": "GBP",
-    "subcategory": "Wales Millennium Centre > What's on > 2026 > Showgirls and Sharks",
-    "primaryCategory": "Theatre",
-    "genre": "Jazz, Classical, Blues",
-    "ticketPriceLabel": "£15"
+    "primaryCategory": "Theatre"
   },
   {
     "title": "THE BODYGUARD",
@@ -2307,22 +2291,11 @@
     "url": "https://www.wmc.org.uk/en/whats-on/2026/the-rat-pack-las-vegas-live",
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-05-12T09:07:48.767Z",
-    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1775313332/WMC%20Content/Whats%20On/2026/Cabaret/Rat%20Pack/Rat_Pack?_a=BAAAV6DQ",
+    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1775313332/WMC%20Content/Whats%20On/2026/Cabaret/Rat%20Pack/Rat_Pack?_a=BAAAV6DQ",
     "imageUrls": [
-      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1775313332/WMC%20Content/Whats%20On/2026/Cabaret/Rat%20Pack/Rat_Pack?_a=BAAAV6DQ",
-      "http://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_630%2Cw_1200/f_auto/q_auto/v1775313332/WMC%20Content/Whats%20On/2026/Cabaret/Rat%20Pack/Rat_Pack?_a=BAAAV6DQ",
-      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_512%2Cw_1024/f_auto/q_auto/v1775313332/WMC%20Content/Whats%20On/2026/Cabaret/Rat%20Pack/Rat_Pack?_a=BAAAV6DQ",
       "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1775313332/WMC%20Content/Whats%20On/2026/Cabaret/Rat%20Pack/Rat_Pack?_a=BAAAV6DQ"
     ],
-    "eventStartDate": "2026-07-25 20:00:00",
-    "eventEndDate": "2026-07-25 22:00:00",
-    "ticketPriceFrom": 20,
-    "ticketPriceTo": 20,
-    "ticketCurrency": "GBP",
-    "subcategory": "Wales Millennium Centre > What's on > 2026 > The Rat Pack Las Vegas Live!",
-    "primaryCategory": "Theatre",
-    "genre": "Jazz, Classical, Blues",
-    "ticketPriceLabel": "£20"
+    "primaryCategory": "Theatre"
   },
   {
     "title": "AN EVENING WITH SIR DAVID JASON",
@@ -2354,22 +2327,12 @@
     "url": "https://www.wmc.org.uk/en/whats-on/2026/national-open-youth-orchestra-with-bbc-national-orchestra-of-wales",
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-05-12T09:07:48.767Z",
-    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1773747894/WMC%20Content/Whats%20On/2026/BBC%20NoW/NOYO/1200x900_-_Noyo_Thumbnails?_a=BAAAV6DQ",
+    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1773747894/WMC%20Content/Whats%20On/2026/BBC%20NoW/NOYO/1200x900_-_Noyo_Thumbnails?_a=BAAAV6DQ",
     "imageUrls": [
-      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1773747894/WMC%20Content/Whats%20On/2026/BBC%20NoW/NOYO/1200x900_-_Noyo_Thumbnails?_a=BAAAV6DQ",
-      "http://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_630%2Cw_1200/f_auto/q_auto/v1773747894/WMC%20Content/Whats%20On/2026/BBC%20NoW/NOYO/1200x900_-_Noyo_Thumbnails?_a=BAAAV6DQ",
-      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_512%2Cw_1024/f_auto/q_auto/v1773747894/WMC%20Content/Whats%20On/2026/BBC%20NoW/NOYO/1200x900_-_Noyo_Thumbnails?_a=BAAAV6DQ",
       "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1773747894/WMC%20Content/Whats%20On/2026/BBC%20NoW/NOYO/1200x900_-_Noyo_Thumbnails?_a=BAAAV6DQ"
     ],
-    "eventStartDate": "2026-07-30 15:00:00",
-    "eventEndDate": "2026-07-30 17:00:00",
-    "ticketPriceFrom": 0,
-    "ticketPriceTo": 0,
-    "ticketCurrency": "GBP",
-    "subcategory": "Wales Millennium Centre > What's on > 2026 > National Open Youth Orchestra with BBC National Orchestra of Wales",
     "primaryCategory": "Theatre",
-    "genre": "Electronic, Classical",
-    "ticketPriceLabel": "£0"
+    "genre": "Classical"
   },
   {
     "title": "QUARTEY & BLAYNEY",
@@ -2377,11 +2340,22 @@
     "url": "https://www.wmc.org.uk/en/whats-on/2026/quartey-and-blayney",
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-05-12T09:07:48.767Z",
-    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1775297777/WMC%20Content/Whats%20On/2026/Cabaret/Quartey%20and%20Blayney/Quartey_and_Blayney_Photo?_a=BAAAV6DQ",
+    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1775297777/WMC%20Content/Whats%20On/2026/Cabaret/Quartey%20and%20Blayney/Quartey_and_Blayney_Photo?_a=BAAAV6DQ",
     "imageUrls": [
+      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1775297777/WMC%20Content/Whats%20On/2026/Cabaret/Quartey%20and%20Blayney/Quartey_and_Blayney_Photo?_a=BAAAV6DQ",
+      "http://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_630%2Cw_1200/f_auto/q_auto/v1775297777/WMC%20Content/Whats%20On/2026/Cabaret/Quartey%20and%20Blayney/Quartey_and_Blayney_Photo?_a=BAAAV6DQ",
+      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_512%2Cw_1024/f_auto/q_auto/v1775297777/WMC%20Content/Whats%20On/2026/Cabaret/Quartey%20and%20Blayney/Quartey_and_Blayney_Photo?_a=BAAAV6DQ",
       "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1775297777/WMC%20Content/Whats%20On/2026/Cabaret/Quartey%20and%20Blayney/Quartey_and_Blayney_Photo?_a=BAAAV6DQ"
     ],
-    "primaryCategory": "Theatre"
+    "eventStartDate": "2026-07-30 20:00:00",
+    "eventEndDate": "2026-07-30 22:00:00",
+    "ticketPriceFrom": 12.5,
+    "ticketPriceTo": 12.5,
+    "ticketCurrency": "GBP",
+    "subcategory": "Wales Millennium Centre > What's on > 2026 > Quartey & Blayney",
+    "primaryCategory": "Theatre",
+    "genre": "Jazz, Classical, Blues",
+    "ticketPriceLabel": "£12.5"
   },
   {
     "title": "THE VAGUELY DEVIANT",
@@ -2397,15 +2371,26 @@
   },
   {
     "title": "THE STARS OF TOMORROW",
-    "date": "Sunday, 9 August 2026",
+    "date": "Sunday, 2 August 2026 – Sunday, 9 August 2026",
     "url": "https://www.wmc.org.uk/en/whats-on/2026/the-stars-of-tomorrow",
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-05-12T09:07:48.767Z",
-    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1712261467/WMC%20Content/Whats%20On/2024/Donald%20Gordon%20Theatre/The%20Stars%20of%20Tomorrow/stars_of_tomorrow_thumb_1200_x_900?_a=BAAAV6DQ",
+    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1712261467/WMC%20Content/Whats%20On/2024/Donald%20Gordon%20Theatre/The%20Stars%20of%20Tomorrow/stars_of_tomorrow_thumb_1200_x_900?_a=BAAAV6DQ",
     "imageUrls": [
+      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1712261467/WMC%20Content/Whats%20On/2024/Donald%20Gordon%20Theatre/The%20Stars%20of%20Tomorrow/stars_of_tomorrow_thumb_1200_x_900?_a=BAAAV6DQ",
+      "http://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_center%2Ch_630%2Cw_1200/f_auto/q_auto/v1712261467/WMC%20Content/Whats%20On/2024/Donald%20Gordon%20Theatre/The%20Stars%20of%20Tomorrow/stars_of_tomorrow_thumb_1200_x_900?_a=BAAAV6DQ",
+      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_center%2Ch_512%2Cw_1024/f_auto/q_auto/v1712261467/WMC%20Content/Whats%20On/2024/Donald%20Gordon%20Theatre/The%20Stars%20of%20Tomorrow/stars_of_tomorrow_thumb_1200_x_900?_a=BAAAV6DQ",
       "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1712261467/WMC%20Content/Whats%20On/2024/Donald%20Gordon%20Theatre/The%20Stars%20of%20Tomorrow/stars_of_tomorrow_thumb_1200_x_900?_a=BAAAV6DQ"
     ],
-    "primaryCategory": "Theatre"
+    "eventStartDate": "2026-08-02 13:30:00",
+    "eventEndDate": "2026-08-09 21:30:00",
+    "ticketPriceFrom": 24,
+    "ticketPriceTo": 24,
+    "ticketCurrency": "GBP",
+    "subcategory": "Wales Millennium Centre > What's on > 2026 > The Stars of Tomorrow",
+    "primaryCategory": "Theatre",
+    "genre": "Hip-hop, Jazz, Classical",
+    "ticketPriceLabel": "£24"
   },
   {
     "title": "JERSEY BOYS",
@@ -2425,22 +2410,11 @@
     "url": "https://www.wmc.org.uk/en/whats-on/2026/rumours-transatlantic-ensemble",
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-05-12T09:07:48.767Z",
-    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1712248782/WMC%20Content/Whats%20On/2024/Donald%20Gordon%20Theatre/Transatlantic%20Ensemble/Thumb_transatlantic_ensemble_1200_x_900_?_a=BAAAV6DQ",
+    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1712248782/WMC%20Content/Whats%20On/2024/Donald%20Gordon%20Theatre/Transatlantic%20Ensemble/Thumb_transatlantic_ensemble_1200_x_900_?_a=BAAAV6DQ",
     "imageUrls": [
-      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1712248782/WMC%20Content/Whats%20On/2024/Donald%20Gordon%20Theatre/Transatlantic%20Ensemble/Thumb_transatlantic_ensemble_1200_x_900_?_a=BAAAV6DQ",
-      "http://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_630%2Cw_1200/f_auto/q_auto/v1712248782/WMC%20Content/Whats%20On/2024/Donald%20Gordon%20Theatre/Transatlantic%20Ensemble/Thumb_transatlantic_ensemble_1200_x_900_?_a=BAAAV6DQ",
-      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_512%2Cw_1024/f_auto/q_auto/v1712248782/WMC%20Content/Whats%20On/2024/Donald%20Gordon%20Theatre/Transatlantic%20Ensemble/Thumb_transatlantic_ensemble_1200_x_900_?_a=BAAAV6DQ",
       "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1712248782/WMC%20Content/Whats%20On/2024/Donald%20Gordon%20Theatre/Transatlantic%20Ensemble/Thumb_transatlantic_ensemble_1200_x_900_?_a=BAAAV6DQ"
     ],
-    "eventStartDate": "2026-08-23 19:30:00",
-    "eventEndDate": "2026-08-23 23:00:00",
-    "ticketPriceFrom": 25,
-    "ticketPriceTo": 25,
-    "ticketCurrency": "GBP",
-    "subcategory": "Wales Millennium Centre > What's on > 2026 > Fleetwood Mac's 'Rumours' with the Transatlantic Ensemble",
-    "primaryCategory": "Theatre",
-    "genre": "Classical",
-    "ticketPriceLabel": "£25"
+    "primaryCategory": "Theatre"
   },
   {
     "title": "CALON",
@@ -2644,22 +2618,11 @@
     "url": "https://www.wmc.org.uk/en/whats-on/2026/robert-white",
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-05-12T09:07:48.767Z",
-    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1772107519/WMC%20Content/Whats%20On/2026/Cabaret/Robert%20White/Robert_White_-_Thumb?_a=BAAAV6DQ",
+    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1772107519/WMC%20Content/Whats%20On/2026/Cabaret/Robert%20White/Robert_White_-_Thumb?_a=BAAAV6DQ",
     "imageUrls": [
-      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1772107519/WMC%20Content/Whats%20On/2026/Cabaret/Robert%20White/Robert_White_-_Thumb?_a=BAAAV6DQ",
-      "http://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_630%2Cw_1200/f_auto/q_auto/v1772107519/WMC%20Content/Whats%20On/2026/Cabaret/Robert%20White/Robert_White_-_Thumb?_a=BAAAV6DQ",
-      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_512%2Cw_1024/f_auto/q_auto/v1772107519/WMC%20Content/Whats%20On/2026/Cabaret/Robert%20White/Robert_White_-_Thumb?_a=BAAAV6DQ",
       "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1772107519/WMC%20Content/Whats%20On/2026/Cabaret/Robert%20White/Robert_White_-_Thumb?_a=BAAAV6DQ"
     ],
-    "eventStartDate": "2026-10-15 20:00:00",
-    "eventEndDate": "2026-10-15 21:30:00",
-    "ticketPriceFrom": 20,
-    "ticketPriceTo": 20,
-    "ticketCurrency": "GBP",
-    "subcategory": "Wales Millennium Centre > What's on > 2026 > ROBERT WHITE",
-    "primaryCategory": "Theatre",
-    "genre": "Jazz, Classical, Blues",
-    "ticketPriceLabel": "£20"
+    "primaryCategory": "Theatre"
   },
   {
     "title": "DOG MAN: THE MUSICAL",
@@ -2680,11 +2643,22 @@
     "url": "https://www.wmc.org.uk/en/whats-on/2026/james-barr",
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-05-12T09:07:48.767Z",
-    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1770387342/WMC%20Content/Whats%20On/2026/Cabaret/James%20Barr/Untitled_design_13?_a=BAAAV6DQ",
+    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1770387342/WMC%20Content/Whats%20On/2026/Cabaret/James%20Barr/Untitled_design_13?_a=BAAAV6DQ",
     "imageUrls": [
+      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1770387342/WMC%20Content/Whats%20On/2026/Cabaret/James%20Barr/Untitled_design_13?_a=BAAAV6DQ",
+      "http://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_630%2Cw_1200/f_auto/q_auto/v1770387342/WMC%20Content/Whats%20On/2026/Cabaret/James%20Barr/Untitled_design_13?_a=BAAAV6DQ",
+      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_512%2Cw_1024/f_auto/q_auto/v1770387342/WMC%20Content/Whats%20On/2026/Cabaret/James%20Barr/Untitled_design_13?_a=BAAAV6DQ",
       "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1770387342/WMC%20Content/Whats%20On/2026/Cabaret/James%20Barr/Untitled_design_13?_a=BAAAV6DQ"
     ],
-    "primaryCategory": "Theatre"
+    "eventStartDate": "2026-10-18 19:00:00",
+    "eventEndDate": "2026-10-18 21:30:00",
+    "ticketPriceFrom": 16,
+    "ticketPriceTo": 16,
+    "ticketCurrency": "GBP",
+    "subcategory": "Wales Millennium Centre > What's on > 2026 > James Barr",
+    "primaryCategory": "Theatre",
+    "genre": "Jazz, Classical, Blues",
+    "ticketPriceLabel": "£16"
   },
   {
     "title": "DIRTY DANCING",
@@ -2704,11 +2678,22 @@
     "url": "https://www.wmc.org.uk/en/whats-on/2026/rachel-fairburn-vexy-beasts",
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-05-12T09:07:48.767Z",
-    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1758804052/WMC%20Content/Whats%20On/2026/Cabaret/Rachel%20Fairburn/rf-1080x1080?_a=BAAAV6DQ",
+    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1758804052/WMC%20Content/Whats%20On/2026/Cabaret/Rachel%20Fairburn/rf-1080x1080?_a=BAAAV6DQ",
     "imageUrls": [
+      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1758804052/WMC%20Content/Whats%20On/2026/Cabaret/Rachel%20Fairburn/rf-1080x1080?_a=BAAAV6DQ",
+      "http://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_630%2Cw_1200/f_auto/q_auto/v1758804052/WMC%20Content/Whats%20On/2026/Cabaret/Rachel%20Fairburn/rf-1080x1080?_a=BAAAV6DQ",
+      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_512%2Cw_1024/f_auto/q_auto/v1758804052/WMC%20Content/Whats%20On/2026/Cabaret/Rachel%20Fairburn/rf-1080x1080?_a=BAAAV6DQ",
       "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1758804052/WMC%20Content/Whats%20On/2026/Cabaret/Rachel%20Fairburn/rf-1080x1080?_a=BAAAV6DQ"
     ],
-    "primaryCategory": "Theatre"
+    "eventStartDate": "2026-10-22 20:00:00",
+    "eventEndDate": "2026-10-22 23:59:00",
+    "ticketPriceFrom": 20,
+    "ticketPriceTo": 20,
+    "ticketCurrency": "GBP",
+    "subcategory": "Wales Millennium Centre > What's on > 2026 > RACHEL FAIRBURN: Vexy Beasts",
+    "primaryCategory": "Theatre",
+    "genre": "Jazz, Classical, Blues, Rock",
+    "ticketPriceLabel": "£20"
   },
   {
     "title": "GAGGED OCTOBER",
@@ -2728,22 +2713,11 @@
     "url": "https://www.wmc.org.uk/en/whats-on/2026/harriet-kemsley",
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-05-12T09:07:48.767Z",
-    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1762257273/WMC%20Content/Whats%20On/2026/Cabaret/Harriet%20Kemsley/Harriet_Kemsley_Floozy_1200_1800_thumb?_a=BAAAV6DQ",
+    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1762257273/WMC%20Content/Whats%20On/2026/Cabaret/Harriet%20Kemsley/Harriet_Kemsley_Floozy_1200_1800_thumb?_a=BAAAV6DQ",
     "imageUrls": [
-      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1762257273/WMC%20Content/Whats%20On/2026/Cabaret/Harriet%20Kemsley/Harriet_Kemsley_Floozy_1200_1800_thumb?_a=BAAAV6DQ",
-      "http://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_630%2Cw_1200/f_auto/q_auto/v1762257273/WMC%20Content/Whats%20On/2026/Cabaret/Harriet%20Kemsley/Harriet_Kemsley_Floozy_1200_1800_thumb?_a=BAAAV6DQ",
-      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_512%2Cw_1024/f_auto/q_auto/v1762257273/WMC%20Content/Whats%20On/2026/Cabaret/Harriet%20Kemsley/Harriet_Kemsley_Floozy_1200_1800_thumb?_a=BAAAV6DQ",
       "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1762257273/WMC%20Content/Whats%20On/2026/Cabaret/Harriet%20Kemsley/Harriet_Kemsley_Floozy_1200_1800_thumb?_a=BAAAV6DQ"
     ],
-    "eventStartDate": "2026-10-29 20:00:00",
-    "eventEndDate": "2026-10-29 22:00:00",
-    "ticketPriceFrom": 18,
-    "ticketPriceTo": 18,
-    "ticketCurrency": "GBP",
-    "subcategory": "Wales Millennium Centre > What's on > 2026 > HARRIET KEMSLEY",
-    "primaryCategory": "Theatre",
-    "genre": "Jazz, Classical, Blues",
-    "ticketPriceLabel": "£18"
+    "primaryCategory": "Theatre"
   },
   {
     "title": "OWAIN & HENRY",
@@ -2751,11 +2725,22 @@
     "url": "https://www.wmc.org.uk/en/whats-on/2026/owain-and-henry",
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-05-12T09:07:48.767Z",
-    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1758006927/WMC%20Content/Whats%20On/2026/Donald%20Gordon%20Theatre/Owain%20and%20Henry/O_H_600x400?_a=BAAAV6DQ",
+    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1758006927/WMC%20Content/Whats%20On/2026/Donald%20Gordon%20Theatre/Owain%20and%20Henry/O_H_600x400?_a=BAAAV6DQ",
     "imageUrls": [
+      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1758006927/WMC%20Content/Whats%20On/2026/Donald%20Gordon%20Theatre/Owain%20and%20Henry/O_H_600x400?_a=BAAAV6DQ",
+      "http://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_630%2Cw_1200/f_auto/q_auto/v1758006927/WMC%20Content/Whats%20On/2026/Donald%20Gordon%20Theatre/Owain%20and%20Henry/O_H_600x400?_a=BAAAV6DQ",
+      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_512%2Cw_1024/f_auto/q_auto/v1758006927/WMC%20Content/Whats%20On/2026/Donald%20Gordon%20Theatre/Owain%20and%20Henry/O_H_600x400?_a=BAAAV6DQ",
       "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1758006927/WMC%20Content/Whats%20On/2026/Donald%20Gordon%20Theatre/Owain%20and%20Henry/O_H_600x400?_a=BAAAV6DQ"
     ],
-    "primaryCategory": "Theatre"
+    "eventStartDate": "2026-11-05 00:00:00",
+    "eventEndDate": "2026-11-28 23:59:00",
+    "ticketPriceFrom": 17,
+    "ticketPriceTo": 17,
+    "ticketCurrency": "GBP",
+    "subcategory": "Wales Millennium Centre > What's on > 2026 > Owain & Henry",
+    "primaryCategory": "Theatre",
+    "genre": "Classical",
+    "ticketPriceLabel": "£17"
   },
   {
     "title": "LAURA LEXX: YO-YO TOUR",
@@ -2935,12 +2920,22 @@
     "url": "https://www.wmc.org.uk/en/whats-on/2027/welsh-national-opera-jason-and-the-argonauts",
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-05-12T09:07:48.767Z",
-    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1777977709/WMC%20Content/Whats%20On/2027/Weston%20Studio/WNO:%20Jason%20and%20the%20Argonauts/WNO_J_WMC_1280x960px?_a=BAAAV6DQ",
+    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1777977709/WMC%20Content/Whats%20On/2027/Weston%20Studio/WNO:%20Jason%20and%20the%20Argonauts/WNO_J_WMC_1280x960px?_a=BAAAV6DQ",
     "imageUrls": [
+      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1777977709/WMC%20Content/Whats%20On/2027/Weston%20Studio/WNO:%20Jason%20and%20the%20Argonauts/WNO_J_WMC_1280x960px?_a=BAAAV6DQ",
+      "http://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_630%2Cw_1200/f_auto/q_auto/v1777977709/WMC%20Content/Whats%20On/2027/Weston%20Studio/WNO:%20Jason%20and%20the%20Argonauts/WNO_J_WMC_1280x960px?_a=BAAAV6DQ",
+      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_512%2Cw_1024/f_auto/q_auto/v1777977709/WMC%20Content/Whats%20On/2027/Weston%20Studio/WNO:%20Jason%20and%20the%20Argonauts/WNO_J_WMC_1280x960px?_a=BAAAV6DQ",
       "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1777977709/WMC%20Content/Whats%20On/2027/Weston%20Studio/WNO:%20Jason%20and%20the%20Argonauts/WNO_J_WMC_1280x960px?_a=BAAAV6DQ"
     ],
+    "eventStartDate": "2027-03-13 11:30:00",
+    "eventEndDate": "2027-03-13 16:00:00",
+    "ticketPriceFrom": 20,
+    "ticketPriceTo": 20,
+    "ticketCurrency": "GBP",
+    "subcategory": "Wales Millennium Centre > What's on > 2027 > Welsh National Opera: Jason and the Argonauts",
     "primaryCategory": "Theatre",
-    "genre": "Classical"
+    "genre": "Classical",
+    "ticketPriceLabel": "£20"
   },
   {
     "title": "MATTHEW BOURNE'S CINDERELLA",
@@ -8624,7 +8619,7 @@
     "eventEndDate": "2026-05-30T22:00:00+01:00",
     "subcategory": "SOLD OUT: Taco &#038; Tequila",
     "primaryCategory": "Sports",
-    "genre": "Reggae"
+    "genre": "SOLD OUT: Taco &#038"
   },
   {
     "title": "Marina – The Princess of Power Tour",
@@ -8636,7 +8631,6 @@
     "description": "Pop visionary MARINA brings her acclaimed Princess of Power (Deluxe) album to life with a headline UK tour — and DEPOT is one of just six stops. Following a sold-out North American run, MARINA returns home with a brand-new live show full of colour, energy, and unapologetic empowerment. Expect a euphoric set spanning her biggest hits and new fan favourites like SEX IS POWER, HOW TO SAY GOODBYE and KEY TO THE CASTLE — all delivered with the fierce confidence that’s made her one of pop’s most distinctive voices. Support comes from rising alt-pop artist Mikayla Geier. After topping charts with albums like Electra Heart and Love + Fear, and inspiring millions worldwide with her fearless songwriting, MARINA’s latest era celebrates freedom, femininity, and transformation — and this Cardiff date promises to be nothing short of electric. ➡ Presale &#8211; Wednesday, 29 October at 10am ➡ Any remaining tickets on sale &#8211; Friday, 31 October at 10am",
     "shortDescription": "MARINA brings her Princess of Power tour to DEPOT, Cardiff on 2 June 2026. Experience her electrifying live show with hits old and new.",
     "musicGenres": [
-      "Reggae",
       "Pop"
     ],
     "imageUrls": [
@@ -8647,30 +8641,7 @@
     "eventEndDate": "2026-06-02T23:00:00+01:00",
     "subcategory": "Marina &#8211; The Princess of Power Tour",
     "primaryCategory": "Music",
-    "genre": "Reggae, Pop"
-  },
-  {
-    "title": "Rum & Reggae Fest 2026",
-    "date": "Saturday, 16 May 2026",
-    "url": "https://depotcardiff.com/event/rum-reggae-fest-2026/",
-    "venue": "Depot Cardiff",
-    "scrapedAt": "2026-05-12T09:07:48.767Z",
-    "imageUrl": "https://depotcardiff.com/wp-content/uploads/2025/11/RumReggae_26_Cardiff_1920X1005_Anno.jpg",
-    "description": "Rum &amp; Reggae Festival 2026 &#8211; The Biggest Caribbean celebration has landed in Cardiff! After lighting up cities across the UK with Rum &amp; Reggae, we&#8217;re BACK and this time we cannot wait to take over Cardiff! On Saturday 16th May 2026, 2pm &#8211; 10pm, we&#8217;re transforming The Depot into an unforgettable Caribbean tropical paradise, packed with colour, rhythm and vibrant energy EXPECT an incredible lineup of reggae royalty, amazing DJs and UK sound system legends to keep the vibes flowing from start to finish. Get READY for the mighty David Rodigan alongside the unstoppable energy of General Levy. The Queen of Lovers Rock, Janet Kay MBE, blessed by Reggae Roast ft Mr Williamz. Feel the spirit of Bob Marley with live tribute act XODUS and experience the raw sound system of Love &amp; Harmony Uprising Sound System. The festival will be hosted by the one and only Solo Banton, keeping the vibes high and the crowd rocking all day long! No Rum &amp; Reggae festival will be complete without the flavours of the Caribbean. Sip on tropical rum cocktails and punch bowls as you explore the authentic Jamaican street food stalls. But also enjoy the carnival dancers, fire eaters &amp; stilt walkers, craft stalls, fairground rides, and roaming entertainment. This is the island experience you&#8217;ve been dreaming of! 🎟️ Tickets go on sale Friday 21st November at 10am!",
-    "shortDescription": "Rum & Reggae Festival 2026 brings Caribbean vibes to DEPOT! Live reggae, rum cocktails, street food & carnival energy all day long.",
-    "musicGenres": [
-      "Reggae",
-      "Rock"
-    ],
-    "imageUrls": [
-      "https://depotcardiff.com/wp-content/uploads/2025/11/RumReggae_26_Cardiff_1920X1005_Anno.jpg",
-      "https://depotcardiff.com/wp-content/uploads/2025/11/RumReggae_26_Cardiff_1920X1005_Anno.jpg.webp"
-    ],
-    "eventStartDate": "2026-05-16T14:00:00+01:00",
-    "eventEndDate": "2026-05-16T22:00:00+01:00",
-    "subcategory": "Rum &#038; Reggae Fest 2026",
-    "primaryCategory": "Music",
-    "genre": "Reggae, Rock"
+    "genre": "Pop"
   },
   {
     "title": "SOLD OUT: KINGFISHR",
@@ -8681,9 +8652,6 @@
     "imageUrl": "https://depotcardiff.com/wp-content/uploads/2025/08/Kingfishr-TW-copy.jpg",
     "description": "One of Ireland’s fastest-rising bands hits the stage at DEPOT — Tues 19th May 2026. Expect massive energy, soaring melodies, and that signature Kingfishr sound.",
     "shortDescription": "One of Ireland’s fastest-rising bands hits the stage at DEPOT. Expect massive energy, soaring melodies, and that signature Kingfishr sound.",
-    "musicGenres": [
-      "Reggae"
-    ],
     "imageUrls": [
       "https://depotcardiff.com/wp-content/uploads/2025/08/Kingfishr-TW-copy.jpg",
       "https://depotcardiff.com/wp-content/uploads/2025/08/Kingfishr-TW-copy.jpg.webp"
@@ -8692,7 +8660,7 @@
     "eventEndDate": "2026-05-19T23:00:00+01:00",
     "subcategory": "SOLD OUT: KINGFISHR",
     "primaryCategory": "Music",
-    "genre": "Reggae"
+    "genre": "SOLD OUT: KINGFISHR"
   },
   {
     "title": "Bingo Lingo",
@@ -8703,9 +8671,6 @@
     "imageUrl": "https://depotcardiff.com/wp-content/uploads/2025/10/cover5.jpg",
     "description": "Bingo Lingo isn’t your nan’s bingo — it’s a full-blown party of anthems, chaos, and wild prizes.",
     "shortDescription": "Cardiff's wildest bingo night! Expect big tunes, mad prizes, and non-stop party energy. Bingo Lingo is not your average night out.",
-    "musicGenres": [
-      "Reggae"
-    ],
     "imageUrls": [
       "https://depotcardiff.com/wp-content/uploads/2025/10/cover5.jpg",
       "https://depotcardiff.com/wp-content/uploads/2025/10/cover5.jpg.webp"
@@ -8714,7 +8679,7 @@
     "eventEndDate": "2026-05-22T23:00:00+01:00",
     "subcategory": "Bingo Lingo",
     "primaryCategory": "Music",
-    "genre": "Reggae"
+    "genre": "Bingo Lingo"
   },
   {
     "title": "Over 30s Club – Bank Holiday Sunday",
@@ -8733,7 +8698,7 @@
     "eventEndDate": "2026-05-24T22:00:00+01:00",
     "subcategory": "Over 30s Club &#8211; Bank Holiday Sunday",
     "primaryCategory": "Theatre",
-    "genre": "Reggae"
+    "genre": "Over 30s Club &#8211"
   },
   {
     "title": "Bingo Lingo",
@@ -8744,9 +8709,6 @@
     "imageUrl": "https://depotcardiff.com/wp-content/uploads/2025/10/cover5.jpg",
     "description": "Bingo Lingo isn’t your nan’s bingo — it’s a full-blown party of anthems, chaos, and wild prizes.",
     "shortDescription": "Cardiff's wildest bingo night! Expect big tunes, mad prizes, and non-stop party energy. Bingo Lingo is not your average night out.",
-    "musicGenres": [
-      "Reggae"
-    ],
     "imageUrls": [
       "https://depotcardiff.com/wp-content/uploads/2025/10/cover5.jpg",
       "https://depotcardiff.com/wp-content/uploads/2025/10/cover5.jpg.webp"
@@ -8755,7 +8717,7 @@
     "eventEndDate": "2026-05-29T23:00:00+01:00",
     "subcategory": "Bingo Lingo",
     "primaryCategory": "Music",
-    "genre": "Reggae"
+    "genre": "Bingo Lingo"
   },
   {
     "title": "Bingo Lingo at Tiger Yard",
@@ -8766,9 +8728,6 @@
     "imageUrl": "https://depotcardiff.com/wp-content/uploads/2026/02/Bing-Lingo-at-Tiger-Yard.webp",
     "description": "After a complete sell out series last summer, get ready for a night like no other! BINGO LINGO takes over Tiger Yard with a wild party like no other. — huge anthems, outrageous on-stage battles, epic prizes, and hilarious hosts bringing pure chaos from start to finish. Open-air vibes when the sun’s out, and if the weather turns rubbish, the roof goes on and the party doesn’t stop. Whether you’re a bingo newbie or a seasoned pro, expect the unexpected: 💃 Wild rounds. 🚨 The legendary rave round. 🎤 Crowd interaction. 🎁 Prizes so good they’ll change your life… 🕺 Stage antics that’ll have you laughing all night. 🌞 Glorious sunshine every night… maybe. 🎟️ TICKETS &amp; TABLES Everyone needs an entry ticket Doors: 18:00 Last entry: 19:30 Reserved tables available (book ahead!) – Tables hold 8 Unreserved tables are held for ticket holders on a first-come basis Hen, and Stag packages available 📍LOCATION Tiger Yard, Porth Teigr Way, Cardiff Bay, CF10 4GA 🔥 WHAT IS BINGO LINGO? Imagine bingo, but completely reimagined — with huge music anthems, crazy prizes, wild games, and nonstop laughs from start to finish. This isn’t a quiet night with a dabber — it’s your new favourite party. Whether you’re coming with mates, on a big night out, or just up for something different, BINGO LINGO is packed with high-energy hosts, ridiculous on-stage antics, and unforgettable moments. You don’t need to know the rules — just bring your crew, grab a drink, and get ready to shout for bingo, sing along, and maybe even win something bizarre. Full terms &amp; conditions: www.bingolingo.club",
     "shortDescription": "Bingo Lingo at Tiger Yard delivers huge anthems, chaotic games and epic prizes. Open air in the sun, roof closed if the weather turns.",
-    "musicGenres": [
-      "Reggae"
-    ],
     "imageUrls": [
       "https://depotcardiff.com/wp-content/uploads/2026/02/Bing-Lingo-at-Tiger-Yard.webp"
     ],
@@ -8776,7 +8735,7 @@
     "eventEndDate": "2026-06-05T23:00:00+01:00",
     "subcategory": "Bingo Lingo at Tiger Yard",
     "primaryCategory": "Music",
-    "genre": "Reggae"
+    "genre": "Bingo Lingo at Tiger Yard"
   },
   {
     "title": "Shangri-La in the Castle: Chris Stussy",
@@ -8788,8 +8747,7 @@
     "description": "One of the most influential figures in modern house music, Chris Stussy has firmly established himself as a tastemaker, selector and producer at the forefront of the global scene. Known for his groove-led sound and impeccable track selection, Stussy seamlessly moves between intimate club spaces and major festival stages worldwide. As the founder of the Up The Stuss label and curator of his USS event series, Chris Stussy continues to push club culture forward, putting music front and centre with immersive, distraction-free dancefloor experiences. His recent run of standout shows includes Warehouse Project, KOKO, Club Space, DC10, Hï Ibiza and Amnesia, alongside a sold-out headline show at London’s Roundhouse. Returning to Cardiff following a standout appearance last summer, Stussy now headlines Cardiff Castle for a very special outdoor show — and he’s bringing a heavyweight lineup with him. Joining the bill as special guest is Chloé Caillet, alongside support from L.P.Rhythm, Locklead, and Lauren Lo Sung, with multi-instrumentalist Lewis Taylor opening the night. Expect deep, rolling house music, heavyweight production and an atmosphere built for dancing from start to finish — a proper summer opener in one of the UK’s most iconic live music settings.",
     "shortDescription": "Chris Stussy headlines Shang in the Castle with Chloé Caillet, L.P.Rhythm, Locklead, Lauren Lo Sung and Lewis Taylor",
     "musicGenres": [
-      "Electronic",
-      "Reggae"
+      "Electronic"
     ],
     "imageUrls": [
       "https://depotcardiff.com/wp-content/uploads/2026/01/Chris-Stussy-Lineup-2026-Cover-1-1024x575.png",
@@ -8799,7 +8757,7 @@
     "eventEndDate": "2026-06-06T23:00:00+01:00",
     "subcategory": "Shangri-La in the Castle: Chris Stussy",
     "primaryCategory": "Music",
-    "genre": "Electronic, Reggae"
+    "genre": "Electronic"
   },
   {
     "title": "Pete Tong Ibiza Classics",
@@ -8812,8 +8770,7 @@
     "shortDescription": "Pete Tong brings Ibiza Classics to Cardiff Castle — a huge outdoor show with The Essential Orchestra and timeless dance anthems.",
     "musicGenres": [
       "Punk",
-      "Classical",
-      "Reggae"
+      "Classical"
     ],
     "imageUrls": [
       "https://depotcardiff.com/wp-content/uploads/2025/10/Pete-Tong-Support-2026-Cover-1.jpg",
@@ -8823,7 +8780,7 @@
     "eventEndDate": "2026-06-11T22:30:00+01:00",
     "subcategory": "Pete Tong Ibiza Classics",
     "primaryCategory": "Music",
-    "genre": "Punk, Classical, Reggae"
+    "genre": "Punk, Classical"
   },
   {
     "title": "MIKA",
@@ -8835,7 +8792,6 @@
     "description": "Global pop icon MIKA is set to kick off Cardiff’s Pride weekend in spectacular style with a huge open-air headline show at Cardiff Castle. Known for his theatrical flair, kaleidoscopic pop sound and boundless energy, MIKA will bring his chart-topping hits – including Grace Kelly, Love Today, Lollipop, and Relax, Take It Easy – to the heart of the city for one unforgettable night. He’ll be joined by indie-pop favourites The Feeling, performing sing-along anthems like Fill My Little World and Love It When You Call, plus acclaimed Welsh artist Gwenno, whose shimmering synth-pop and bilingual lyricism have earned her Mercury Prize recognition. Presented by Pride Cymru, DEPOT Live, and Cuffe &amp; Taylor, this special show will launch Cardiff’s Pride celebrations — a night of love, unity, and unapologetic joy soundtracked by one of pop’s most vibrant performers. 🎟 TicketsPresale opens Thursday 6 November, 10AMGeneral sale from Friday 7 November, 10AM",
     "shortDescription": "Global pop sensation MIKA headlines Cardiff Castle 12 June 2026, launching Cardiff’s Pride weekend with support from The Feeling and Gwenno.",
     "musicGenres": [
-      "Reggae",
       "Indie",
       "Pop"
     ],
@@ -8847,7 +8803,7 @@
     "eventEndDate": "2026-06-12T22:30:00+01:00",
     "subcategory": "MIKA",
     "primaryCategory": "Music",
-    "genre": "Reggae, Indie, Pop"
+    "genre": "Indie, Pop"
   },
   {
     "title": "Bingo Lingo at Tiger Yard",
@@ -8858,9 +8814,6 @@
     "imageUrl": "https://depotcardiff.com/wp-content/uploads/2026/02/Bing-Lingo-at-Tiger-Yard.webp",
     "description": "After a complete sell out series last summer, get ready for a night like no other! BINGO LINGO takes over Tiger Yard with a wild party like no other. — huge anthems, outrageous on-stage battles, epic prizes, and hilarious hosts bringing pure chaos from start to finish. Open-air vibes when the sun’s out, and if the weather turns rubbish, the roof goes on and the party doesn’t stop. Whether you’re a bingo newbie or a seasoned pro, expect the unexpected: 💃 Wild rounds. 🚨 The legendary rave round. 🎤 Crowd interaction. 🎁 Prizes so good they’ll change your life… 🕺 Stage antics that’ll have you laughing all night. 🌞 Glorious sunshine every night… maybe. 🎟️ TICKETS &amp; TABLES Everyone needs an entry ticket Doors: 18:00 Last entry: 19:30 Reserved tables available (book ahead!) – Tables hold 8 Unreserved tables are held for ticket holders on a first-come basis Hen, and Stag packages available 📍LOCATION Tiger Yard, Porth Teigr Way, Cardiff Bay, CF10 4GA 🔥 WHAT IS BINGO LINGO? Imagine bingo, but completely reimagined — with huge music anthems, crazy prizes, wild games, and nonstop laughs from start to finish. This isn’t a quiet night with a dabber — it’s your new favourite party. Whether you’re coming with mates, on a big night out, or just up for something different, BINGO LINGO is packed with high-energy hosts, ridiculous on-stage antics, and unforgettable moments. You don’t need to know the rules — just bring your crew, grab a drink, and get ready to shout for bingo, sing along, and maybe even win something bizarre. Full terms &amp; conditions: www.bingolingo.club",
     "shortDescription": "Bingo Lingo at Tiger Yard delivers huge anthems, chaotic games and epic prizes. Open air in the sun, roof closed if the weather turns.",
-    "musicGenres": [
-      "Reggae"
-    ],
     "imageUrls": [
       "https://depotcardiff.com/wp-content/uploads/2026/02/Bing-Lingo-at-Tiger-Yard.webp"
     ],
@@ -8868,7 +8821,7 @@
     "eventEndDate": "2026-06-12T23:00:00+01:00",
     "subcategory": "Bingo Lingo at Tiger Yard",
     "primaryCategory": "Music",
-    "genre": "Reggae"
+    "genre": "Bingo Lingo at Tiger Yard"
   },
   {
     "title": "METRIX Cardiff",
@@ -8879,9 +8832,6 @@
     "imageUrl": "https://depotcardiff.com/wp-content/uploads/2025/12/DEPOT-Artwork.jpg",
     "description": "METRIX is the UK&#8217;s most exciting new competition redefining the fitness space, fusing together high performance with the production and spectacle of world class nightclubs. Teams of two move through five ten-minute stations &#8211; think ergs, shuttles, burpees and more &#8211; powered by pulsing DJ sets, club-like lighting, and next-level production. Beyond the floor, METRIX delivers a full-spectrum experience with recovery stations, leading fitness and wellness brands, food, drink, and an atmosphere that keeps the energy high all day long. More than a competition, METRIX is a movement. Inclusive by design and built for athletes of all levels, it blends competition with community, fitness with festival energy, creating a space to bring people together, to push boundaries and to celebrate shared strength. The stage is set. The countdown is on. ➡ Presale 3 January 2026 ➡ General sale 5 January 2026 at 9am",
     "shortDescription": "High-energy team fitness event with DJ-led workouts, recovery zones, food & festival-style production. Inclusive, immersive, for all levels.",
-    "musicGenres": [
-      "Reggae"
-    ],
     "imageUrls": [
       "https://depotcardiff.com/wp-content/uploads/2025/12/DEPOT-Artwork.jpg",
       "https://depotcardiff.com/wp-content/uploads/2025/12/DEPOT-Artwork.jpg.webp"
@@ -8890,7 +8840,7 @@
     "eventEndDate": "2026-06-13T21:00:00+01:00",
     "subcategory": "METRIX Cardiff",
     "primaryCategory": "Music",
-    "genre": "Reggae"
+    "genre": "METRIX Cardiff"
   },
   {
     "title": "Ethel Cain",
@@ -8901,9 +8851,6 @@
     "imageUrl": "https://depotcardiff.com/wp-content/uploads/2025/09/Ethel-Cain-2026-Cover.jpg",
     "description": "American singer-songwriter Ethel Cain will bring her acclaimed Willoughby Tucker Forever tour to Cardiff Castle next summer, joined by special guest Anna von Hausswolff. Following a rapturously received US leg and sell-out shows across the UK in 2025, Cain is stepping up to some of her biggest headline performances yet. Cardiff fans will get the chance to experience the Florida-born artist&#8217;s cinematic soundscapes live in the iconic open-air setting of the Castle grounds. Her latest album, Willoughby Tucker, I&#8217;ll Always Love You — praised by NME, The Guardian, The New York Times and more — expands on the mythology first introduced in her 2022 breakthrough Preacher&#8217;s Daughter, cementing her as one of the most compelling new voices in modern music. Joining her on the night is universally acclaimed Swedish musician and composer Anna von Hausswolff. Her sixth album ICONOCLASTS — which features Ethel Cain on the single Aging Young Women — showcases an artist of vast, unpredictable creativity, always pushing forward and always unmissable live. From intimate beginnings recording in a church basement to international recognition on festival stages, fashion runways and critical &#8220;album of the year&#8221; lists, Ethel Cain has become a global phenomenon.",
     "shortDescription": "Ethel Cain headlines Cardiff Castle with special guest Anna von Hausswolff, as part of her acclaimed Willoughby Tucker Forever tour.",
-    "musicGenres": [
-      "Reggae"
-    ],
     "imageUrls": [
       "https://depotcardiff.com/wp-content/uploads/2025/09/Ethel-Cain-2026-Cover.jpg",
       "https://depotcardiff.com/wp-content/uploads/2025/09/Ethel-Cain-2026-Cover.jpg.webp"
@@ -8912,7 +8859,7 @@
     "eventEndDate": "2026-06-19T23:00:00+01:00",
     "subcategory": "Ethel Cain",
     "primaryCategory": "Music",
-    "genre": "Reggae"
+    "genre": "Ethel Cain"
   },
   {
     "title": "Bingo Lingo at Tiger Yard",
@@ -8923,9 +8870,6 @@
     "imageUrl": "https://depotcardiff.com/wp-content/uploads/2026/02/Bing-Lingo-at-Tiger-Yard.webp",
     "description": "After a complete sell out series last summer, get ready for a night like no other! BINGO LINGO takes over Tiger Yard with a wild party like no other. — huge anthems, outrageous on-stage battles, epic prizes, and hilarious hosts bringing pure chaos from start to finish. Open-air vibes when the sun’s out, and if the weather turns rubbish, the roof goes on and the party doesn’t stop. Whether you’re a bingo newbie or a seasoned pro, expect the unexpected: 💃 Wild rounds. 🚨 The legendary rave round. 🎤 Crowd interaction. 🎁 Prizes so good they’ll change your life… 🕺 Stage antics that’ll have you laughing all night. 🌞 Glorious sunshine every night… maybe. 🎟️ TICKETS &amp; TABLES Everyone needs an entry ticket Doors: 18:00 Last entry: 19:30 Reserved tables available (book ahead!) – Tables hold 8 Unreserved tables are held for ticket holders on a first-come basis Hen, and Stag packages available 📍LOCATION Tiger Yard, Porth Teigr Way, Cardiff Bay, CF10 4GA 🔥 WHAT IS BINGO LINGO? Imagine bingo, but completely reimagined — with huge music anthems, crazy prizes, wild games, and nonstop laughs from start to finish. This isn’t a quiet night with a dabber — it’s your new favourite party. Whether you’re coming with mates, on a big night out, or just up for something different, BINGO LINGO is packed with high-energy hosts, ridiculous on-stage antics, and unforgettable moments. You don’t need to know the rules — just bring your crew, grab a drink, and get ready to shout for bingo, sing along, and maybe even win something bizarre. Full terms &amp; conditions: www.bingolingo.club",
     "shortDescription": "Bingo Lingo at Tiger Yard delivers huge anthems, chaotic games and epic prizes. Open air in the sun, roof closed if the weather turns.",
-    "musicGenres": [
-      "Reggae"
-    ],
     "imageUrls": [
       "https://depotcardiff.com/wp-content/uploads/2026/02/Bing-Lingo-at-Tiger-Yard.webp"
     ],
@@ -8933,7 +8877,7 @@
     "eventEndDate": "2026-06-19T23:00:00+01:00",
     "subcategory": "Bingo Lingo at Tiger Yard",
     "primaryCategory": "Music",
-    "genre": "Reggae"
+    "genre": "Bingo Lingo at Tiger Yard"
   },
   {
     "title": "The Road to Nashville Festival",
@@ -8945,8 +8889,7 @@
     "description": "Get ready for a boot-stompin&#8217;, hat-tippin&#8217; celebration of country music as The Road to Nashville rolls into Cardiff! Experience the world&#8217;s best tribute acts performing live, bringing the heart of Music City straight to DEPOT.🤩 Featuring incredible tributes to: ⭐ Morgan Wallen ⭐ Luke Combs ⭐ Dolly Parton ⭐ Shania Twain ⭐ Lainey Wilson ⭐ Chris Stapleton + more&#8230; Dust off your cowboy boots and join us for a full day of line dancing, roaming entertainers, and Wild West decor that&#8217;ll make you feel right at home on the range.🌵 Indulge in delicious BBQ and smoker food vendors, test your skills at axe throwing and vintage games, or hold on tight for the rodeo bull challenge!🍖 Whether you&#8217;re a die-hard country fan or just looking for a great time, this event promises non-stop entertainment, good vibes, and a true taste of Nashville right here in the UK. 🤠 📍 Venue: DEPOT, Cardiff 📅 Date: Saturday 20th June 2026 ⏰ Time: 14:00 &#8211; 22:00 Grab your tickets, rally your cowboys and cowgirls, and get ready to hit The Road to Nashville!🎟️",
     "shortDescription": "Indoor country festival with top tribute acts to Morgan Wallen, Luke Combs and Dolly Parton, plus line dancing, BBQ and Wild West décor.",
     "musicGenres": [
-      "Country",
-      "Reggae"
+      "Country"
     ],
     "imageUrls": [
       "https://depotcardiff.com/wp-content/uploads/2026/01/RTN_26_Cardiff_1920X1005_Anno-1.jpg",
@@ -8956,7 +8899,7 @@
     "eventEndDate": "2026-06-20T22:00:00+01:00",
     "subcategory": "The Road to Nashville Festival",
     "primaryCategory": "Music",
-    "genre": "Country, Reggae"
+    "genre": "Country"
   },
   {
     "title": "Garbage & Skunk Anansie",
@@ -8971,7 +8914,6 @@
       "Punk",
       "Hard Rock",
       "Country",
-      "Reggae",
       "Pop",
       "Rock"
     ],
@@ -8983,7 +8925,7 @@
     "eventEndDate": "2026-06-22T22:30:00+01:00",
     "subcategory": "Garbage &#038; Skunk Anansie",
     "primaryCategory": "Music",
-    "genre": "Punk, Hard Rock, Country, Reggae, Pop, Rock"
+    "genre": "Punk, Hard Rock, Country, Pop, Rock"
   },
   {
     "title": "Empire of the Sun",
@@ -8996,7 +8938,6 @@
     "shortDescription": "Empire of the Sun bring their spectacular Ask That God Tour to the Castle in June, delivering euphoric synth-pop and immersive live visuals.",
     "musicGenres": [
       "Electronic",
-      "Reggae",
       "Pop"
     ],
     "imageUrls": [
@@ -9007,7 +8948,7 @@
     "eventEndDate": "2026-06-23T22:30:00+01:00",
     "subcategory": "Empire of the Sun",
     "primaryCategory": "Music",
-    "genre": "Electronic, Reggae, Pop"
+    "genre": "Electronic, Pop"
   },
   {
     "title": "Bilmuri",
@@ -9018,9 +8959,6 @@
     "imageUrl": "https://depotcardiff.com/wp-content/uploads/2026/02/Bilmuri-LN-Website-1920x1080-copy.jpg",
     "description": "Bilmuri &#8211; The Kinda Hard UK Tour Special guests Thornhill 🎟️ TICKETS → Priority Tickets: 12th Feb, 10am → Any remaining Tickets: 13th Feb 10am",
     "shortDescription": "Bilmuri brings The Kinda Hard UK Tour to DEPOT, Cardiff on Tuesday 23 June, with special guests Thornhill",
-    "musicGenres": [
-      "Reggae"
-    ],
     "imageUrls": [
       "https://depotcardiff.com/wp-content/uploads/2026/02/Bilmuri-LN-Website-1920x1080-copy.jpg",
       "https://depotcardiff.com/wp-content/uploads/2026/02/Bilmuri-LN-Website-1920x1080-copy.jpg.webp"
@@ -9029,7 +8967,7 @@
     "eventEndDate": "2026-06-23T23:00:00+01:00",
     "subcategory": "Bilmuri",
     "primaryCategory": "Music",
-    "genre": "Reggae"
+    "genre": "Bilmuri"
   },
   {
     "title": "SOLD OUT: The Cure",
@@ -9040,9 +8978,6 @@
     "imageUrl": "https://depotcardiff.com/wp-content/uploads/2026/01/The-Cure-Sold-Out-2026-Cover1.jpg",
     "description": "Prepare for an unmissable night in Cardiff as The Cure bring their legendary live show to Blackweir Fields",
     "shortDescription": "The Cure headline Blackweir – 24 June 2026. With special guests The Twilight Sad & The Joy Formidable. An unmissable night of live music.",
-    "musicGenres": [
-      "Reggae"
-    ],
     "imageUrls": [
       "https://depotcardiff.com/wp-content/uploads/2026/01/The-Cure-Sold-Out-2026-Cover1.jpg",
       "https://depotcardiff.com/wp-content/uploads/2026/01/The-Cure-Sold-Out-2026-Cover1.jpg.webp"
@@ -9051,7 +8986,7 @@
     "eventEndDate": "2026-06-24T22:30:00+01:00",
     "subcategory": "SOLD OUT: The Cure",
     "primaryCategory": "Music",
-    "genre": "Reggae"
+    "genre": "SOLD OUT: The Cure"
   },
   {
     "title": "SOLD OUT: McFLY",
@@ -9070,7 +9005,7 @@
     "eventEndDate": "2026-06-25T22:30:00+01:00",
     "subcategory": "SOLD OUT: McFLY",
     "primaryCategory": "Theatre",
-    "genre": "Soul, Reggae, Pop, Rock"
+    "genre": "Soul, Pop, Rock"
   },
   {
     "title": "Teddy Swims",
@@ -9081,9 +9016,6 @@
     "imageUrl": "https://depotcardiff.com/wp-content/uploads/2025/09/TS-2026-Blackweir-Branded-16x9-1.jpg",
     "description": "Teddy Swims brings his unstoppable live show to Blackweir with special guests Lauren Spencer Smith & Jordan Rakei.",
     "shortDescription": "Teddy Swims live at Blackweir Fields, Cardiff on 26 June 2026 with special guests Lauren Spencer Smith & Jordan Rakei.",
-    "musicGenres": [
-      "Reggae"
-    ],
     "imageUrls": [
       "https://depotcardiff.com/wp-content/uploads/2025/09/TS-2026-Blackweir-Branded-16x9-1.jpg",
       "https://depotcardiff.com/wp-content/uploads/2025/09/TS-2026-Blackweir-Branded-16x9-1.jpg.webp"
@@ -9092,7 +9024,7 @@
     "eventEndDate": "2026-06-26T22:30:00+01:00",
     "subcategory": "Teddy Swims",
     "primaryCategory": "Music",
-    "genre": "Reggae"
+    "genre": "Teddy Swims"
   },
   {
     "title": "Bingo Lingo at Tiger Yard",
@@ -9103,9 +9035,6 @@
     "imageUrl": "https://depotcardiff.com/wp-content/uploads/2026/02/Bing-Lingo-at-Tiger-Yard.webp",
     "description": "After a complete sell out series last summer, get ready for a night like no other! BINGO LINGO takes over Tiger Yard with a wild party like no other. — huge anthems, outrageous on-stage battles, epic prizes, and hilarious hosts bringing pure chaos from start to finish. Open-air vibes when the sun’s out, and if the weather turns rubbish, the roof goes on and the party doesn’t stop. Whether you’re a bingo newbie or a seasoned pro, expect the unexpected: 💃 Wild rounds. 🚨 The legendary rave round. 🎤 Crowd interaction. 🎁 Prizes so good they’ll change your life… 🕺 Stage antics that’ll have you laughing all night. 🌞 Glorious sunshine every night… maybe. 🎟️ TICKETS &amp; TABLES Everyone needs an entry ticket Doors: 18:00 Last entry: 19:30 Reserved tables available (book ahead!) – Tables hold 8 Unreserved tables are held for ticket holders on a first-come basis Hen, and Stag packages available 📍LOCATION Tiger Yard, Porth Teigr Way, Cardiff Bay, CF10 4GA 🔥 WHAT IS BINGO LINGO? Imagine bingo, but completely reimagined — with huge music anthems, crazy prizes, wild games, and nonstop laughs from start to finish. This isn’t a quiet night with a dabber — it’s your new favourite party. Whether you’re coming with mates, on a big night out, or just up for something different, BINGO LINGO is packed with high-energy hosts, ridiculous on-stage antics, and unforgettable moments. You don’t need to know the rules — just bring your crew, grab a drink, and get ready to shout for bingo, sing along, and maybe even win something bizarre. Full terms &amp; conditions: www.bingolingo.club",
     "shortDescription": "Bingo Lingo at Tiger Yard delivers huge anthems, chaotic games and epic prizes. Open air in the sun, roof closed if the weather turns.",
-    "musicGenres": [
-      "Reggae"
-    ],
     "imageUrls": [
       "https://depotcardiff.com/wp-content/uploads/2026/02/Bing-Lingo-at-Tiger-Yard.webp"
     ],
@@ -9113,7 +9042,7 @@
     "eventEndDate": "2026-06-26T23:00:00+01:00",
     "subcategory": "Bingo Lingo at Tiger Yard",
     "primaryCategory": "Music",
-    "genre": "Reggae"
+    "genre": "Bingo Lingo at Tiger Yard"
   },
   {
     "title": "Blackbird Festival 2026: Alter Bridge, Skindred + More",
@@ -9127,7 +9056,6 @@
     "musicGenres": [
       "Hard Rock",
       "Soul",
-      "Reggae",
       "Rock"
     ],
     "imageUrls": [
@@ -9138,7 +9066,7 @@
     "eventEndDate": "2026-06-27T23:00:00+01:00",
     "subcategory": "Blackbird Festival 2026: Alter Bridge, Skindred + More",
     "primaryCategory": "Music",
-    "genre": "Hard Rock, Soul, Reggae, Rock"
+    "genre": "Hard Rock, Soul, Rock"
   },
   {
     "title": "SOLD OUT: Lewis Capaldi",
@@ -9149,9 +9077,6 @@
     "imageUrl": "https://depotcardiff.com/wp-content/uploads/2025/09/Lewis-Capaldi-Support-2026-Cover-1-1024x575.png",
     "description": "Global superstar Lewis Capaldi will head to Blackweir next summer to headline a massive outdoor show – joined by special guest Jacob Alon. After unprecedented demand that saw the biggest ever rush for tickets across both pre-sale and general sale, Lewis Capaldi is currently blazing through a triumphant 200,000-ticket sold out 17-date UK arena tour – and he shows no sign of slowing down as he announces his biggest ever UK and Irish headline shows for next summer, including two huge nights at Blackweir Fields on Tuesday 30th June and Wednesday 1st July. Joining him in Cardiff is BRITs Critics’ Choice and BBC Introducing Award winner Jacob Alon. The Fife-born, Mercury Prize-nominated artist has quickly established themselves as one of the most compelling new voices in contemporary music, earning widespread acclaim for their debut album In Limerence and powerful live performances. With a voice that commands total attention, Jacob Alon is the perfect addition to what promises to be two unforgettable nights. The announcement comes during Lewis’s current sold-out 17-date UK arena tour, his first return to touring in two years, which has been sending fans into overdrive — debuting new songs alongside a run of era-defining hits and serving as a powerful reminder of the connection he commands. The response has been electric, with critics delivering four and five star reviews across the board, continuing this week with a run of three sold-out shows at London’s The O2. Lewis’s return has already seen him top the charts, bagging a monumental sixth UK number 1 single with his comeback track Survive, becoming the fastest-selling single of 2025. The success also marked his biggest ever opening week sales for a single, surpassing both Sabrina Carpenter and Lady Gaga for this year’s biggest opening week, placing him alongside the likes of Beyoncé, Britney Spears, Drake, Lady Gaga and Queen in achieving six UK number 1 singles — and overtaking David Bowie, Katy Perry and The Police in the process.",
     "shortDescription": "SOLD OUT: Lewis Capaldi brings his biggest hits and powerful live show to Cardiff’s Blackweir Fields on 30 June 2026.",
-    "musicGenres": [
-      "Reggae"
-    ],
     "imageUrls": [
       "https://depotcardiff.com/wp-content/uploads/2025/09/Lewis-Capaldi-Support-2026-Cover-1-1024x575.png",
       "https://depotcardiff.com/wp-content/uploads/2025/09/Lewis-Capaldi-Support-2026-Cover-1.png.webp"
@@ -9160,7 +9085,7 @@
     "eventEndDate": "2026-06-30T23:00:00+01:00",
     "subcategory": "SOLD OUT: Lewis Capaldi",
     "primaryCategory": "Music",
-    "genre": "Reggae"
+    "genre": "SOLD OUT: Lewis Capaldi"
   },
   {
     "title": "SOLD OUT: Katy Perry",
@@ -9172,7 +9097,6 @@
     "description": "Global pop superstar Katy Perry is heading to Wales for one of only two exclusive UK shows next summer – and she&#8217;s bringing a full-scale, hit-packed spectacle to the grounds of Cardiff Castle. With more than 115 billion streams, 70 million albums sold and a record-breaking list of RIAA Diamond-certified singles (including Firework, Dark Horse, Roar and California Gurls), Katy Perry stands as one of the biggest artists of all time. Her latest album 143 stormed into the Top 10 on both sides of the Atlantic, while her new single bandaids is already making waves. Joining Katy on the night is Mimi Webb — the BRIT Award-nominated singer-songwriter from Canterbury whose skyscraper-size vocals and emotionally charged pop have earned her over a billion streams worldwide. With two acclaimed albums under her belt — Amelia (Top 5 UK Albums Chart) and her latest Confessions — plus sold-out tours across multiple continents, Mimi is one of the most exciting live acts in British music right now. Expect a night loaded with huge anthems, unmatched energy and the larger-than-life performance only Katy can deliver. Speaking ahead of the show, she said: &#8220;What&#8217;s up Wales? I can&#8217;t wait to see you guys and we&#8217;ll have a party you&#8217;ll never forget. It will be epic.&#8221; This unmissable date forms part of TK Maxx presents DEPOT Live at Cardiff Castle 2026, presented by DEPOT Live and Cuffe &amp; Taylor.",
     "shortDescription": "Katy Perry brings one of two exclusive UK shows to Cardiff. Expect a huge hit-filled night from a global pop icon. Special guest Mimi Webb",
     "musicGenres": [
-      "Reggae",
       "Pop"
     ],
     "imageUrls": [
@@ -9183,7 +9107,7 @@
     "eventEndDate": "2026-06-30T22:30:00+01:00",
     "subcategory": "SOLD OUT: Katy Perry",
     "primaryCategory": "Music",
-    "genre": "Reggae, Pop"
+    "genre": "Pop"
   },
   {
     "title": "Lewis Capaldi – Extra Date",
@@ -9194,9 +9118,6 @@
     "imageUrl": "https://depotcardiff.com/wp-content/uploads/2025/09/Lewis-Capaldi-Support-2026-Cover-1-1024x575.png",
     "description": "Global superstar Lewis Capaldi will head to Blackweir next summer to headline a massive outdoor show – joined by special guest Jacob Alon. After unprecedented demand that saw the biggest ever rush for tickets across both pre-sale and general sale, Lewis Capaldi is currently blazing through a triumphant 200,000-ticket sold out 17-date UK arena tour – and he shows no sign of slowing down as he announces his biggest ever UK and Irish headline shows for next summer, including two huge nights at Blackweir Fields on Tuesday 30th June and Wednesday 1st July. Joining him in Cardiff is BRITs Critics’ Choice and BBC Introducing Award winner Jacob Alon. The Fife-born, Mercury Prize-nominated artist has quickly established themselves as one of the most compelling new voices in contemporary music, earning widespread acclaim for their debut album In Limerence and powerful live performances. With a voice that commands total attention, Jacob Alon is the perfect addition to what promises to be two unforgettable nights. The announcement comes during Lewis’s current sold-out 17-date UK arena tour, his first return to touring in two years, which has been sending fans into overdrive — debuting new songs alongside a run of era-defining hits and serving as a powerful reminder of the connection he commands. The response has been electric, with critics delivering four and five star reviews across the board, continuing this week with a run of three sold-out shows at London’s The O2. Lewis’s return has already seen him top the charts, bagging a monumental sixth UK number 1 single with his comeback track Survive, becoming the fastest-selling single of 2025. The success also marked his biggest ever opening week sales for a single, surpassing both Sabrina Carpenter and Lady Gaga for this year’s biggest opening week, placing him alongside the likes of Beyoncé, Britney Spears, Drake, Lady Gaga and Queen in achieving six UK number 1 singles — and overtaking David Bowie, Katy Perry and The Police in the process.",
     "shortDescription": "Global superstar Lewis Capaldi will headline a second massive outdoor show in Cardiff next summer due to overwhelming demand.",
-    "musicGenres": [
-      "Reggae"
-    ],
     "imageUrls": [
       "https://depotcardiff.com/wp-content/uploads/2025/09/Lewis-Capaldi-Support-2026-Cover-1-1024x575.png",
       "https://depotcardiff.com/wp-content/uploads/2025/09/Lewis-Capaldi-Support-2026-Cover-1.png.webp"
@@ -9205,7 +9126,7 @@
     "eventEndDate": "2026-07-01T23:00:00+01:00",
     "subcategory": "Lewis Capaldi &#8211; Extra Date",
     "primaryCategory": "Music",
-    "genre": "Reggae"
+    "genre": "Lewis Capaldi &#8211"
   },
   {
     "title": "Bingo Lingo at Tiger Yard",
@@ -9216,9 +9137,6 @@
     "imageUrl": "https://depotcardiff.com/wp-content/uploads/2026/02/Bing-Lingo-at-Tiger-Yard.webp",
     "description": "After a complete sell out series last summer, get ready for a night like no other! BINGO LINGO takes over Tiger Yard with a wild party like no other. — huge anthems, outrageous on-stage battles, epic prizes, and hilarious hosts bringing pure chaos from start to finish. Open-air vibes when the sun’s out, and if the weather turns rubbish, the roof goes on and the party doesn’t stop. Whether you’re a bingo newbie or a seasoned pro, expect the unexpected: 💃 Wild rounds. 🚨 The legendary rave round. 🎤 Crowd interaction. 🎁 Prizes so good they’ll change your life… 🕺 Stage antics that’ll have you laughing all night. 🌞 Glorious sunshine every night… maybe. 🎟️ TICKETS &amp; TABLES Everyone needs an entry ticket Doors: 18:00 Last entry: 19:30 Reserved tables available (book ahead!) – Tables hold 8 Unreserved tables are held for ticket holders on a first-come basis Hen, and Stag packages available 📍LOCATION Tiger Yard, Porth Teigr Way, Cardiff Bay, CF10 4GA 🔥 WHAT IS BINGO LINGO? Imagine bingo, but completely reimagined — with huge music anthems, crazy prizes, wild games, and nonstop laughs from start to finish. This isn’t a quiet night with a dabber — it’s your new favourite party. Whether you’re coming with mates, on a big night out, or just up for something different, BINGO LINGO is packed with high-energy hosts, ridiculous on-stage antics, and unforgettable moments. You don’t need to know the rules — just bring your crew, grab a drink, and get ready to shout for bingo, sing along, and maybe even win something bizarre. Full terms &amp; conditions: www.bingolingo.club",
     "shortDescription": "Bingo Lingo at Tiger Yard delivers huge anthems, chaotic games and epic prizes. Open air in the sun, roof closed if the weather turns.",
-    "musicGenres": [
-      "Reggae"
-    ],
     "imageUrls": [
       "https://depotcardiff.com/wp-content/uploads/2026/02/Bing-Lingo-at-Tiger-Yard.webp"
     ],
@@ -9226,7 +9144,7 @@
     "eventEndDate": "2026-07-03T23:00:00+01:00",
     "subcategory": "Bingo Lingo at Tiger Yard",
     "primaryCategory": "Music",
-    "genre": "Reggae"
+    "genre": "Bingo Lingo at Tiger Yard"
   },
   {
     "title": "Pitbull – I’m Back!",
@@ -9238,8 +9156,7 @@
     "description": "Get ready, Cardiff — Mr. Worldwide is back!",
     "shortDescription": "Pitbull brings his I’m Back! Tour to Cardiff with special guest Lil Jon for a massive outdoor party at Blackweir Fields on 4 July 2026.",
     "musicGenres": [
-      "Hip-hop",
-      "Reggae"
+      "Hip-hop"
     ],
     "imageUrls": [
       "https://depotcardiff.com/wp-content/uploads/2025/10/Pitbull-Blackweir-2026-Cover.jpg",
@@ -9249,7 +9166,7 @@
     "eventEndDate": "2026-07-04T22:30:00+01:00",
     "subcategory": "Pitbull &#8211; I&#8217;m Back!",
     "primaryCategory": "Music",
-    "genre": "Hip-hop, Reggae"
+    "genre": "Hip-hop"
   },
   {
     "title": "Bowling for Soup vs. Frank Turner & The Sleeping Souls",
@@ -9263,7 +9180,6 @@
     "musicGenres": [
       "Punk",
       "Folk",
-      "Reggae",
       "Pop"
     ],
     "imageUrls": [
@@ -9274,7 +9190,7 @@
     "eventEndDate": "2026-07-04T22:30:00+01:00",
     "subcategory": "Bowling for Soup vs. Frank Turner &#038; The Sleeping Souls",
     "primaryCategory": "Music",
-    "genre": "Punk, Folk, Reggae, Pop"
+    "genre": "Punk, Folk, Pop"
   },
   {
     "title": "Billy Ocean",
@@ -9287,7 +9203,6 @@
     "shortDescription": "Pop and soul legend Billy Ocean headlines Cardiff Castle on 9 July 2026. With very special guest Marti Pellow.",
     "musicGenres": [
       "Soul",
-      "Reggae",
       "Pop"
     ],
     "imageUrls": [
@@ -9298,7 +9213,7 @@
     "eventEndDate": "2026-07-09T22:30:00+01:00",
     "subcategory": "Billy Ocean",
     "primaryCategory": "Music",
-    "genre": "Soul, Reggae, Pop"
+    "genre": "Soul, Pop"
   },
   {
     "title": "Indie Beer Fest Wales 2026",
@@ -9310,7 +9225,6 @@
     "description": "Wales&#8217;s independent brewing scene is thriving — and this summer, it&#8217;s all coming together under one roof. The Indie Beer Wales Festival 2026 is a brand-new three-day event taking place right here at DEPOT Cardiff, bringing together over 35 independent Welsh breweries for a weekend of discovery, conversation, and seriously great beer. Whether you&#8217;re a diehard cask aficionado or just starting to explore the world of craft beer, there&#8217;s something here for everyone. With 150+ beers on pour — keg and cask — you&#8217;ll have plenty of room to roam, taste, and find your new favourite. What&#8217;s included 150+ beers from 35+ independent Welsh breweries — keg and cask Live music &#038; DJs throughout the weekend Street food to keep you fuelled all day A pint glass + beer token included with every ticket to get you started Three days. Three sessions. One unforgettable celebration of Welsh brewing culture. Come for a session, stay for the weekend — however you enjoy it, this is a summer event you won&#8217;t want to miss.",
     "shortDescription": "The first ever celebration of independent Welsh brewing — 150+ beers, live music & street food. Three days. One roof.",
     "musicGenres": [
-      "Reggae",
       "Indie"
     ],
     "imageUrls": [
@@ -9321,7 +9235,7 @@
     "eventEndDate": "2026-07-11T22:00:00+01:00",
     "subcategory": "Indie Beer Fest Wales 2026",
     "primaryCategory": "Music",
-    "genre": "Reggae, Indie"
+    "genre": "Indie"
   },
   {
     "title": "Bastille with Arthur Hill + Sofia Camara",
@@ -9333,7 +9247,6 @@
     "description": "Bastille head to Cardiff Castle in July for a huge outdoor headline show in the heart of the Welsh capital. One of the UK’s biggest and most loved bands of the last decade, Bastille have built a global following with their soaring alt-pop sound, emotional songwriting and unforgettable live performances. From the breakout success of Pompeii to fan favourites like Things We Lost In The Fire, Good Grief and Happier, the band’s catalogue has soundtracked a generation. Fronted by Dan Smith, Bastille have earned multiple BRIT nominations, topped charts around the world and amassed billions of streams across their career. Their powerful mix of cinematic production, anthemic choruses and introspective lyrics has made them one of the defining British bands of modern pop. Renowned for their electric live shows, Bastille bring an atmosphere that turns every performance into a shared moment with the crowd — huge singalongs, emotional highs and festival-sized energy from start to finish. Joining them for this special Cardiff Castle show are Arthur Hill and rising pop star Sofia Camara, making this one of the standout nights of the summer. Set within the historic walls of Cardiff Castle, this open-air show promises an unforgettable evening of anthems, atmosphere and one of the UK’s biggest live acts.",
     "shortDescription": "Bastille headline Cardiff Castle with support from Arthur Hill and Sofia Camara. Experience them live in the heart of Cardiff.",
     "musicGenres": [
-      "Reggae",
       "Pop"
     ],
     "imageUrls": [
@@ -9344,7 +9257,7 @@
     "eventEndDate": "2026-07-10T22:30:00+01:00",
     "subcategory": "Bastille with Arthur Hill + Sofia Camara",
     "primaryCategory": "Music",
-    "genre": "Reggae, Pop"
+    "genre": "Pop"
   },
   {
     "title": "Bingo Lingo at Tiger Yard",
@@ -9355,9 +9268,6 @@
     "imageUrl": "https://depotcardiff.com/wp-content/uploads/2026/02/Bing-Lingo-at-Tiger-Yard.webp",
     "description": "After a complete sell out series last summer, get ready for a night like no other! BINGO LINGO takes over Tiger Yard with a wild party like no other. — huge anthems, outrageous on-stage battles, epic prizes, and hilarious hosts bringing pure chaos from start to finish. Open-air vibes when the sun’s out, and if the weather turns rubbish, the roof goes on and the party doesn’t stop. Whether you’re a bingo newbie or a seasoned pro, expect the unexpected: 💃 Wild rounds. 🚨 The legendary rave round. 🎤 Crowd interaction. 🎁 Prizes so good they’ll change your life… 🕺 Stage antics that’ll have you laughing all night. 🌞 Glorious sunshine every night… maybe. 🎟️ TICKETS &amp; TABLES Everyone needs an entry ticket Doors: 18:00 Last entry: 19:30 Reserved tables available (book ahead!) – Tables hold 8 Unreserved tables are held for ticket holders on a first-come basis Hen, and Stag packages available 📍LOCATION Tiger Yard, Porth Teigr Way, Cardiff Bay, CF10 4GA 🔥 WHAT IS BINGO LINGO? Imagine bingo, but completely reimagined — with huge music anthems, crazy prizes, wild games, and nonstop laughs from start to finish. This isn’t a quiet night with a dabber — it’s your new favourite party. Whether you’re coming with mates, on a big night out, or just up for something different, BINGO LINGO is packed with high-energy hosts, ridiculous on-stage antics, and unforgettable moments. You don’t need to know the rules — just bring your crew, grab a drink, and get ready to shout for bingo, sing along, and maybe even win something bizarre. Full terms &amp; conditions: www.bingolingo.club",
     "shortDescription": "Bingo Lingo at Tiger Yard delivers huge anthems, chaotic games and epic prizes. Open air in the sun, roof closed if the weather turns.",
-    "musicGenres": [
-      "Reggae"
-    ],
     "imageUrls": [
       "https://depotcardiff.com/wp-content/uploads/2026/02/Bing-Lingo-at-Tiger-Yard.webp"
     ],
@@ -9365,7 +9275,7 @@
     "eventEndDate": "2026-07-10T23:00:00+01:00",
     "subcategory": "Bingo Lingo at Tiger Yard",
     "primaryCategory": "Music",
-    "genre": "Reggae"
+    "genre": "Bingo Lingo at Tiger Yard"
   },
   {
     "title": "David Gray – Past & Present Tour",
@@ -9384,7 +9294,7 @@
     "eventEndDate": "2026-07-11T22:30:00+01:00",
     "subcategory": "David Gray – Past &#038; Present Tour",
     "primaryCategory": "Comedy",
-    "genre": "Reggae"
+    "genre": "David Gray – Past &#038"
   },
   {
     "title": "Richard Ashcroft",
@@ -9396,7 +9306,6 @@
     "description": "Richard Ashcroft heads to Cardiff Castle next summer for a huge outdoor headline show on Thursday 16 July. Fresh off a standout year supporting Oasis across their 2025 stadium dates and the success of his seventh solo album Lovin You — which landed at Number Three in the UK charts — he returns in peak form. A two-time Ivor Novello and triple BRIT Award winner, Ashcroft remains one of the UK’s most influential songwriters. His set will draw from a catalogue that spans generational anthems with The Verve through to his expansive solo work. He’s joined by a heavyweight support bill: original Kasabian frontman Tom Meighan, bringing his trademark vocals and material from his solo album The Reckoning, plus rising indie favourites Apollo Junction opening the night. This show joins a stacked summer of music at TK Maxx presents DEPOT Live at Cardiff Castle — one of 2026’s major highlights.",
     "shortDescription": "Richard Ashcroft headlines Cardiff Castle on 16 July 2026 with special guests Tom Meighan and Apollo Junction.",
     "musicGenres": [
-      "Reggae",
       "Indie"
     ],
     "imageUrls": [
@@ -9407,7 +9316,7 @@
     "eventEndDate": "2026-07-16T22:30:00+01:00",
     "subcategory": "Richard Ashcroft",
     "primaryCategory": "Music",
-    "genre": "Reggae, Indie"
+    "genre": "Indie"
   },
   {
     "title": "Bingo Lingo at Tiger Yard",
@@ -9418,9 +9327,6 @@
     "imageUrl": "https://depotcardiff.com/wp-content/uploads/2026/02/Bing-Lingo-at-Tiger-Yard.webp",
     "description": "After a complete sell out series last summer, get ready for a night like no other! BINGO LINGO takes over Tiger Yard with a wild party like no other. — huge anthems, outrageous on-stage battles, epic prizes, and hilarious hosts bringing pure chaos from start to finish. Open-air vibes when the sun’s out, and if the weather turns rubbish, the roof goes on and the party doesn’t stop. Whether you’re a bingo newbie or a seasoned pro, expect the unexpected: 💃 Wild rounds. 🚨 The legendary rave round. 🎤 Crowd interaction. 🎁 Prizes so good they’ll change your life… 🕺 Stage antics that’ll have you laughing all night. 🌞 Glorious sunshine every night… maybe. 🎟️ TICKETS &amp; TABLES Everyone needs an entry ticket Doors: 18:00 Last entry: 19:30 Reserved tables available (book ahead!) – Tables hold 8 Unreserved tables are held for ticket holders on a first-come basis Hen, and Stag packages available 📍LOCATION Tiger Yard, Porth Teigr Way, Cardiff Bay, CF10 4GA 🔥 WHAT IS BINGO LINGO? Imagine bingo, but completely reimagined — with huge music anthems, crazy prizes, wild games, and nonstop laughs from start to finish. This isn’t a quiet night with a dabber — it’s your new favourite party. Whether you’re coming with mates, on a big night out, or just up for something different, BINGO LINGO is packed with high-energy hosts, ridiculous on-stage antics, and unforgettable moments. You don’t need to know the rules — just bring your crew, grab a drink, and get ready to shout for bingo, sing along, and maybe even win something bizarre. Full terms &amp; conditions: www.bingolingo.club",
     "shortDescription": "Bingo Lingo at Tiger Yard delivers huge anthems, chaotic games and epic prizes. Open air in the sun, roof closed if the weather turns.",
-    "musicGenres": [
-      "Reggae"
-    ],
     "imageUrls": [
       "https://depotcardiff.com/wp-content/uploads/2026/02/Bing-Lingo-at-Tiger-Yard.webp"
     ],
@@ -9428,7 +9334,7 @@
     "eventEndDate": "2026-07-17T23:00:00+01:00",
     "subcategory": "Bingo Lingo at Tiger Yard",
     "primaryCategory": "Music",
-    "genre": "Reggae"
+    "genre": "Bingo Lingo at Tiger Yard"
   },
   {
     "title": "Curated by Sammy Virji",
@@ -9439,9 +9345,6 @@
     "imageUrl": "https://depotcardiff.com/wp-content/uploads/2026/01/Sammy-Virji-2026-Cover.jpg",
     "description": "UK Garage’s biggest breakout star Sammy Virji lands in Cardiff for a huge open-air headline show at Shangri-La in the Castle, joined by a stacked line-up of special guests including Salute, Silva Bumpa, Arthi B2B Saint Ludo, Yemz and Lucas Alexander. One of the most in-demand names in dance music right now, Virji is at the forefront of the UKG resurgence. From viral DJ Mag sets to packed-out festival crowds worldwide, his rise has been rapid. Known for feel-good energy, heavy basslines and razor-sharp selections, his sets are built for full-scale party moments. Joining the bill is Vienna-born producer Salute, alongside fast-rising UK talent Silva Bumpa, while Arthi B2B Saint Ludo, Yemz and Lucas Alexander round out a huge line-up of club innovators and emerging names. In recent years, Virji has gone B2B with Four Tet, delivered a standout BBC Radio 1 Essential Mix and picked up DJ Mag Best Producer at the 2025 Best of British Awards. His tracks — including If U Need It and Cops &amp; Robbers with Skepta — have racked up tens of millions of streams worldwide. TICKETS ➡️ On sale from Tuesday 10 March, 10AM",
     "shortDescription": "Sammy Virji headlines with Salute, Silva Bumpa, Arthi B2B Saint Ludo, Yemz and Lucas Alexander for a huge edition of Shangri-La in the Castle",
-    "musicGenres": [
-      "Reggae"
-    ],
     "imageUrls": [
       "https://depotcardiff.com/wp-content/uploads/2026/01/Sammy-Virji-2026-Cover.jpg",
       "https://depotcardiff.com/wp-content/uploads/2026/01/Sammy-Virji-2026-Cover.jpg.webp"
@@ -9450,7 +9353,7 @@
     "eventEndDate": "2026-07-18T22:30:00+01:00",
     "subcategory": "Curated by Sammy Virji",
     "primaryCategory": "Music",
-    "genre": "Reggae"
+    "genre": "Curated by Sammy Virji"
   },
   {
     "title": "Self Esteem",
@@ -9462,7 +9365,6 @@
     "description": "Self Esteem returns to Cardiff next summer for a major outdoor headline show at Cardiff Castle – her biggest Welsh date to date. The Ivor Novello Award-winning singer, songwriter and actor brings the next chapter of A Complicated Woman to the Welsh capital, joined by special guest Kae Tempest and opening support Joshua Idehen. Fresh off the release of her acclaimed third album and debut book, Self Esteem (Rebecca Lucy Taylor) enters 2026 at full throttle. From the anthemic Focus Is Power – soundtrack to the Lionesses’ Euros victory coverage – to her run as Sally Bowles in Cabaret, Taylor has become one of the UK’s most fearless and celebrated creative voices. Since breaking through with Prioritise Pleasure, she’s earned Mercury, BRIT and NME nominations, racked up cross-station BBC playlisting, and cemented herself as one of the most compelling performers in modern pop. Joining her in Cardiff is Kae Tempest – the revered poet, playwright and recording artist whose career spans award-winning theatre, Mercury-nominated albums and internationally acclaimed written works. Opening the night is Joshua Idehen, the British-Nigerian poet and artist whose viral track Mum Does The Washing sparked a new wave of attention for his powerful spoken word and genre-blurring live performances. Presented by DEPOT Live, Cuffe &amp; Taylor and Clwb Ifor Bach.",
     "shortDescription": "Self Esteem brings a headline show with special guest Kae Tempest, and Joshua Idehen to Cardiff Castle on Friday 24th July 2026",
     "musicGenres": [
-      "Reggae",
       "Pop"
     ],
     "imageUrls": [
@@ -9473,7 +9375,7 @@
     "eventEndDate": "2026-07-24T22:30:00+01:00",
     "subcategory": "Self Esteem",
     "primaryCategory": "Music",
-    "genre": "Reggae, Pop"
+    "genre": "Pop"
   },
   {
     "title": "Bingo Lingo at Tiger Yard",
@@ -9484,9 +9386,6 @@
     "imageUrl": "https://depotcardiff.com/wp-content/uploads/2026/02/Bing-Lingo-at-Tiger-Yard.webp",
     "description": "After a complete sell out series last summer, get ready for a night like no other! BINGO LINGO takes over Tiger Yard with a wild party like no other. — huge anthems, outrageous on-stage battles, epic prizes, and hilarious hosts bringing pure chaos from start to finish. Open-air vibes when the sun’s out, and if the weather turns rubbish, the roof goes on and the party doesn’t stop. Whether you’re a bingo newbie or a seasoned pro, expect the unexpected: 💃 Wild rounds. 🚨 The legendary rave round. 🎤 Crowd interaction. 🎁 Prizes so good they’ll change your life… 🕺 Stage antics that’ll have you laughing all night. 🌞 Glorious sunshine every night… maybe. 🎟️ TICKETS &amp; TABLES Everyone needs an entry ticket Doors: 18:00 Last entry: 19:30 Reserved tables available (book ahead!) – Tables hold 8 Unreserved tables are held for ticket holders on a first-come basis Hen, and Stag packages available 📍LOCATION Tiger Yard, Porth Teigr Way, Cardiff Bay, CF10 4GA 🔥 WHAT IS BINGO LINGO? Imagine bingo, but completely reimagined — with huge music anthems, crazy prizes, wild games, and nonstop laughs from start to finish. This isn’t a quiet night with a dabber — it’s your new favourite party. Whether you’re coming with mates, on a big night out, or just up for something different, BINGO LINGO is packed with high-energy hosts, ridiculous on-stage antics, and unforgettable moments. You don’t need to know the rules — just bring your crew, grab a drink, and get ready to shout for bingo, sing along, and maybe even win something bizarre. Full terms &amp; conditions: www.bingolingo.club",
     "shortDescription": "Bingo Lingo at Tiger Yard delivers huge anthems, chaotic games and epic prizes. Open air in the sun, roof closed if the weather turns.",
-    "musicGenres": [
-      "Reggae"
-    ],
     "imageUrls": [
       "https://depotcardiff.com/wp-content/uploads/2026/02/Bing-Lingo-at-Tiger-Yard.webp"
     ],
@@ -9494,7 +9393,7 @@
     "eventEndDate": "2026-07-24T23:00:00+01:00",
     "subcategory": "Bingo Lingo at Tiger Yard",
     "primaryCategory": "Music",
-    "genre": "Reggae"
+    "genre": "Bingo Lingo at Tiger Yard"
   },
   {
     "title": "Depot In The Castle 2026: The Wombats, Sugababes +More",
@@ -9506,7 +9405,6 @@
     "description": "Depot in the Castle returns to the iconic grounds of Cardiff Castle on Saturday 25 July 2026 for a huge all-day celebration of live music, street food and entertainment – with The Wombats confirmed as headliners and Sugababes announced as special guests. One of Wales’ best-loved family-friendly festivals, Depot in the Castle brings together major headline acts, rising talent and a buzzing summer festival atmosphere right in the heart of the city. Fresh from the release of their sixth studio album Oh! The Ocean, The Wombats remain one of the UK’s most enduring indie bands, known for era-defining anthems including Let’s Dance to Joy Division, Greek Tragedy and Moving to New York. Expect a huge sing-along set to close out the day. Joining them are pop icons Sugababes, bringing their unmistakable vocals and a catalogue packed with hits such as Overload, Round Round, Freak Like Me and Push The Button. Following their biggest UK arena tour to date, they arrive in Cardiff at the peak of their powers. The full line-up also features: Red Rum Club – delivering their trademark mariachi-tinged indie rock Ben Ellis – a fast-rising Cardiff talent Afro Cluster – bringing high-energy Afrobeat and funk The Family Battenberg – known for their energetic live shows Alongside the music, expect local street food traders, family-friendly activities and a vibrant festival atmosphere throughout the day. Following last year’s sold-out edition headlined by Jess Glynne, Depot in the Castle 2026 is shaping up to be one of the standout events of the summer.",
     "shortDescription": "Join The Wombats, Sugababes and more at Depot in the Castle 2026 – Cardiff’s ultimate one-day festival at Cardiff Castle.",
     "musicGenres": [
-      "Reggae",
       "Indie",
       "Pop",
       "Rock"
@@ -9519,7 +9417,7 @@
     "eventEndDate": "2026-07-25T22:30:00+01:00",
     "subcategory": "Depot In The Castle 2026: The Wombats, Sugababes +More",
     "primaryCategory": "Music",
-    "genre": "Reggae, Indie, Pop, Rock"
+    "genre": "Indie, Pop, Rock"
   },
   {
     "title": "SOLD OUT: David Byrne",
@@ -9538,7 +9436,7 @@
     "eventEndDate": "2026-07-26T22:30:00+01:00",
     "subcategory": "SOLD OUT: David Byrne",
     "primaryCategory": "Film",
-    "genre": "Reggae"
+    "genre": "SOLD OUT: David Byrne"
   },
   {
     "title": "The Flaming Lips",
@@ -9549,9 +9447,6 @@
     "imageUrl": "https://depotcardiff.com/wp-content/uploads/2026/02/TV.jpg",
     "description": "One of the most inventive and influential live bands of the last three decades, The Flaming Lips return to Cardiff for a very special An Evening With performance at DEPOT. Renowned for their genre-defying sound, surreal visuals and euphoric live shows, the band will perform two unique sets on the night. Offering fans a deeper, more expansive journey through their celebrated catalogue. Expect moments of psychedelic beauty, towering anthems and the unmistakable sense of spectacle that has made their live shows legendary worldwide. From era-defining albums to left-field experiments and fan-favourite singalongs, this will be an immersive, one-off experience from a band that continues to push the boundaries of what a live show can be. 🎟️ TICKETS Presale &#8211; Wednesday, 11 Feb 10AM General sale &#8211; Friday, 13 Feb 10AM",
     "shortDescription": "The Flaming Lips return to Cardiff for An Evening With at DEPOT, performing two unique live sets on 29 July.",
-    "musicGenres": [
-      "Reggae"
-    ],
     "imageUrls": [
       "https://depotcardiff.com/wp-content/uploads/2026/02/TV.jpg",
       "https://depotcardiff.com/wp-content/uploads/2026/02/TV.jpg.webp"
@@ -9560,7 +9455,7 @@
     "eventEndDate": "2026-07-29T23:00:00+01:00",
     "subcategory": "The Flaming Lips",
     "primaryCategory": "Music",
-    "genre": "Reggae"
+    "genre": "The Flaming Lips"
   },
   {
     "title": "Biffy Clyro",
@@ -9573,7 +9468,6 @@
     "shortDescription": "Scottish rock icons Biffy Clyro headline Cardiff Castle this summer with special guests English Teacher and Humour",
     "musicGenres": [
       "Punk",
-      "Reggae",
       "Indie",
       "Rock"
     ],
@@ -9585,7 +9479,7 @@
     "eventEndDate": "2026-07-30T22:30:00+01:00",
     "subcategory": "Biffy Clyro",
     "primaryCategory": "Music",
-    "genre": "Punk, Reggae, Indie, Rock"
+    "genre": "Punk, Indie, Rock"
   },
   {
     "title": "The Streets",
@@ -9597,8 +9491,7 @@
     "description": "Mike Skinner and The Streets return to Cardiff for a huge summer show at Cardiff Castle, bringing their iconic album A Grand Don’t Come For Free to life — performed in full, from start to finish, for the very first time. Originally released in 2004, A Grand Don’t Come For Free became one of the most defining British albums of the 2000s. Built around a cinematic storyline that unfolds track by track, the record blends sharp storytelling, humour and raw honesty across classics including Dry Your Eyes, Blinded by the Lights, Fit But You Know It and Could Well Be In. Over two decades later, fans will finally get to experience the full narrative live on stage. Joining the bill as special guest is CASISDEAD, the elusive UK rapper known for his cinematic lyricism and dark, synth-driven sound. Widely regarded as one of the most inventive voices in UK rap, his atmospheric live performances have earned him a devoted following. Opening the night is Jimothy Lacoste, the cult favourite artist whose self-produced tracks and offbeat storytelling have built an international fanbase. With his DIY approach and witty take on everyday life, he brings a unique energy to the lineup. Set within the historic walls of Cardiff Castle, this one-off performance promises a rare chance to experience one of the UK’s most influential albums exactly as it was intended — live, in full, and in an unforgettable setting.",
     "shortDescription": "The Streets perform A Grand Don’t Come For Free in full at Cardiff Castle with CASISDEAD and Jimothy Lacoste.",
     "musicGenres": [
-      "Rap",
-      "Reggae"
+      "Rap"
     ],
     "imageUrls": [
       "https://depotcardiff.com/wp-content/uploads/2025/11/The-Streets-Support-2026-Cover.jpg",
@@ -9608,7 +9501,7 @@
     "eventEndDate": "2026-07-31T22:30:00+01:00",
     "subcategory": "The Streets",
     "primaryCategory": "Music",
-    "genre": "Rap, Reggae"
+    "genre": "Rap"
   },
   {
     "title": "Bingo Lingo at Tiger Yard",
@@ -9619,9 +9512,6 @@
     "imageUrl": "https://depotcardiff.com/wp-content/uploads/2026/02/Bing-Lingo-at-Tiger-Yard.webp",
     "description": "After a complete sell out series last summer, get ready for a night like no other! BINGO LINGO takes over Tiger Yard with a wild party like no other. — huge anthems, outrageous on-stage battles, epic prizes, and hilarious hosts bringing pure chaos from start to finish. Open-air vibes when the sun’s out, and if the weather turns rubbish, the roof goes on and the party doesn’t stop. Whether you’re a bingo newbie or a seasoned pro, expect the unexpected: 💃 Wild rounds. 🚨 The legendary rave round. 🎤 Crowd interaction. 🎁 Prizes so good they’ll change your life… 🕺 Stage antics that’ll have you laughing all night. 🌞 Glorious sunshine every night… maybe. 🎟️ TICKETS &amp; TABLES Everyone needs an entry ticket Doors: 18:00 Last entry: 19:30 Reserved tables available (book ahead!) – Tables hold 8 Unreserved tables are held for ticket holders on a first-come basis Hen, and Stag packages available 📍LOCATION Tiger Yard, Porth Teigr Way, Cardiff Bay, CF10 4GA 🔥 WHAT IS BINGO LINGO? Imagine bingo, but completely reimagined — with huge music anthems, crazy prizes, wild games, and nonstop laughs from start to finish. This isn’t a quiet night with a dabber — it’s your new favourite party. Whether you’re coming with mates, on a big night out, or just up for something different, BINGO LINGO is packed with high-energy hosts, ridiculous on-stage antics, and unforgettable moments. You don’t need to know the rules — just bring your crew, grab a drink, and get ready to shout for bingo, sing along, and maybe even win something bizarre. Full terms &amp; conditions: www.bingolingo.club",
     "shortDescription": "Bingo Lingo at Tiger Yard delivers huge anthems, chaotic games and epic prizes. Open air in the sun, roof closed if the weather turns.",
-    "musicGenres": [
-      "Reggae"
-    ],
     "imageUrls": [
       "https://depotcardiff.com/wp-content/uploads/2026/02/Bing-Lingo-at-Tiger-Yard.webp"
     ],
@@ -9629,7 +9519,7 @@
     "eventEndDate": "2026-07-31T23:00:00+01:00",
     "subcategory": "Bingo Lingo at Tiger Yard",
     "primaryCategory": "Music",
-    "genre": "Reggae"
+    "genre": "Bingo Lingo at Tiger Yard"
   },
   {
     "title": "Sex Pistols feat. Frank Carter",
@@ -9641,8 +9531,7 @@
     "description": "Punk history lands in the heart of Cardiff as Sex Pistols featuring Frank Carter headline Cardiff Castle on Saturday 1 August 2026, marking 50 years of punk. Steve Jones, Paul Cook and Glen Matlock are joined by Frank Carter for a full-throttle celebration of one of the most influential bands of all time. Fresh off a huge year of global shows and a fiery revival that’s seen circle pits at the Royal Albert Hall and a packed-out return to London’s 100 Club, the Pistols are hitting Cardiff for a massive outdoor show. They’re joined by a heavyweight punk lineup: The Stranglers, The Undertones, and Cardiff’s own rising force Panic Shack opening the night. Expect a relentless, high-energy bill honouring the legacy, attitude and chaos that kicked off a movement in 1976 — brought to life by a band that helped define it. This is a milestone moment for the castle’s summer series and one of the standout shows of 2026.",
     "shortDescription": "A huge night of punk at Cardiff Castle as Sex Pistols featuring Frank Carter are joined by The Stranglers, The Undertones and Panic Shack.",
     "musicGenres": [
-      "Punk",
-      "Reggae"
+      "Punk"
     ],
     "imageUrls": [
       "https://depotcardiff.com/wp-content/uploads/2025/11/Sex-Pistols-2026-Updated-Cover-scaled.png",
@@ -9652,7 +9541,7 @@
     "eventEndDate": "2026-08-01T22:30:00+01:00",
     "subcategory": "Sex Pistols feat. Frank Carter",
     "primaryCategory": "Music",
-    "genre": "Punk, Reggae"
+    "genre": "Punk"
   },
   {
     "title": "SOLD OUT: Two Door Cinema Club",
@@ -9671,7 +9560,7 @@
     "eventEndDate": "2026-08-02T22:30:00+01:00",
     "subcategory": "SOLD OUT: Two Door Cinema Club",
     "primaryCategory": "Film",
-    "genre": "Reggae, Indie"
+    "genre": "Indie"
   },
   {
     "title": "Bingo Lingo at Tiger Yard",
@@ -9682,9 +9571,6 @@
     "imageUrl": "https://depotcardiff.com/wp-content/uploads/2026/02/Bing-Lingo-at-Tiger-Yard.webp",
     "description": "After a complete sell out series last summer, get ready for a night like no other! BINGO LINGO takes over Tiger Yard with a wild party like no other. — huge anthems, outrageous on-stage battles, epic prizes, and hilarious hosts bringing pure chaos from start to finish. Open-air vibes when the sun’s out, and if the weather turns rubbish, the roof goes on and the party doesn’t stop. Whether you’re a bingo newbie or a seasoned pro, expect the unexpected: 💃 Wild rounds. 🚨 The legendary rave round. 🎤 Crowd interaction. 🎁 Prizes so good they’ll change your life… 🕺 Stage antics that’ll have you laughing all night. 🌞 Glorious sunshine every night… maybe. 🎟️ TICKETS &amp; TABLES Everyone needs an entry ticket Doors: 18:00 Last entry: 19:30 Reserved tables available (book ahead!) – Tables hold 8 Unreserved tables are held for ticket holders on a first-come basis Hen, and Stag packages available 📍LOCATION Tiger Yard, Porth Teigr Way, Cardiff Bay, CF10 4GA 🔥 WHAT IS BINGO LINGO? Imagine bingo, but completely reimagined — with huge music anthems, crazy prizes, wild games, and nonstop laughs from start to finish. This isn’t a quiet night with a dabber — it’s your new favourite party. Whether you’re coming with mates, on a big night out, or just up for something different, BINGO LINGO is packed with high-energy hosts, ridiculous on-stage antics, and unforgettable moments. You don’t need to know the rules — just bring your crew, grab a drink, and get ready to shout for bingo, sing along, and maybe even win something bizarre. Full terms &amp; conditions: www.bingolingo.club",
     "shortDescription": "Bingo Lingo at Tiger Yard delivers huge anthems, chaotic games and epic prizes. Open air in the sun, roof closed if the weather turns.",
-    "musicGenres": [
-      "Reggae"
-    ],
     "imageUrls": [
       "https://depotcardiff.com/wp-content/uploads/2026/02/Bing-Lingo-at-Tiger-Yard.webp"
     ],
@@ -9692,7 +9578,7 @@
     "eventEndDate": "2026-08-07T23:00:00+01:00",
     "subcategory": "Bingo Lingo at Tiger Yard",
     "primaryCategory": "Music",
-    "genre": "Reggae"
+    "genre": "Bingo Lingo at Tiger Yard"
   },
   {
     "title": "Hollywood Vampires",
@@ -9706,7 +9592,6 @@
     "musicGenres": [
       "Punk",
       "Country",
-      "Reggae",
       "Rock"
     ],
     "imageUrls": [
@@ -9717,7 +9602,7 @@
     "eventEndDate": "2026-08-14T22:30:00+01:00",
     "subcategory": "Hollywood Vampires",
     "primaryCategory": "Music",
-    "genre": "Punk, Country, Reggae, Rock"
+    "genre": "Punk, Country, Rock"
   },
   {
     "title": "Bingo Lingo at Tiger Yard",
@@ -9728,9 +9613,6 @@
     "imageUrl": "https://depotcardiff.com/wp-content/uploads/2026/02/Bing-Lingo-at-Tiger-Yard.webp",
     "description": "After a complete sell out series last summer, get ready for a night like no other! BINGO LINGO takes over Tiger Yard with a wild party like no other. — huge anthems, outrageous on-stage battles, epic prizes, and hilarious hosts bringing pure chaos from start to finish. Open-air vibes when the sun’s out, and if the weather turns rubbish, the roof goes on and the party doesn’t stop. Whether you’re a bingo newbie or a seasoned pro, expect the unexpected: 💃 Wild rounds. 🚨 The legendary rave round. 🎤 Crowd interaction. 🎁 Prizes so good they’ll change your life… 🕺 Stage antics that’ll have you laughing all night. 🌞 Glorious sunshine every night… maybe. 🎟️ TICKETS &amp; TABLES Everyone needs an entry ticket Doors: 18:00 Last entry: 19:30 Reserved tables available (book ahead!) – Tables hold 8 Unreserved tables are held for ticket holders on a first-come basis Hen, and Stag packages available 📍LOCATION Tiger Yard, Porth Teigr Way, Cardiff Bay, CF10 4GA 🔥 WHAT IS BINGO LINGO? Imagine bingo, but completely reimagined — with huge music anthems, crazy prizes, wild games, and nonstop laughs from start to finish. This isn’t a quiet night with a dabber — it’s your new favourite party. Whether you’re coming with mates, on a big night out, or just up for something different, BINGO LINGO is packed with high-energy hosts, ridiculous on-stage antics, and unforgettable moments. You don’t need to know the rules — just bring your crew, grab a drink, and get ready to shout for bingo, sing along, and maybe even win something bizarre. Full terms &amp; conditions: www.bingolingo.club",
     "shortDescription": "Bingo Lingo at Tiger Yard delivers huge anthems, chaotic games and epic prizes. Open air in the sun, roof closed if the weather turns.",
-    "musicGenres": [
-      "Reggae"
-    ],
     "imageUrls": [
       "https://depotcardiff.com/wp-content/uploads/2026/02/Bing-Lingo-at-Tiger-Yard.webp"
     ],
@@ -9738,7 +9620,7 @@
     "eventEndDate": "2026-08-14T23:00:00+01:00",
     "subcategory": "Bingo Lingo at Tiger Yard",
     "primaryCategory": "Music",
-    "genre": "Reggae"
+    "genre": "Bingo Lingo at Tiger Yard"
   },
   {
     "title": "SOLD OUT: Jimmy Eat World",
@@ -9757,7 +9639,7 @@
     "eventEndDate": "2026-08-15T22:30:00+01:00",
     "subcategory": "SOLD OUT: Jimmy Eat World",
     "primaryCategory": "Family",
-    "genre": "Punk, Reggae, Rock"
+    "genre": "Punk, Rock"
   },
   {
     "title": "R&B Lovers",
@@ -9769,8 +9651,7 @@
     "description": "Cardiff After our sellout April show we are back by huge demand in August! Cardiff get ready for a massive 90s &#038; 00s R&#038;B Festival at the amazing DEPOT! Cardiff crew are ready for another massive 90s &#038; 00s R&#038;B Festival! Expect the craziest vibes at this one! We have an insane event planned with lots of glitter, glam &#038; confetti and we have one of the best venues in the city! 💃 MUSIC 💃 Music from: DESTINY’S CHILD / ASHANTI / JA RULE / USHER / LUDACRIS / MS LAURYN HILL / TLC / CIARA / NELLY / NE-Y0 / TREY SONGZ / GINUWINE / BRANDY / MONICA / EVE / SEAN PAUL / MISSY ELLIOT / FAT JOE / CASSIE / TWISTA / MASE / MYA / NEXT / 112 / MARIO / DONNELL JONES / AMERIE / KELIS / MARIAH CAREY / YING YANG TWINS / PRETTY RICKY / JOE / DRU HILL / JODECI / TWEET / LLOYD / JON B / KEVIN LYTTLE EXPECT 👇 – 6 hours of Old School 90s &#038; 00’s RnB Anthems – Live Performers &#038; Hosts – Venue Decor – Festival Production – Confetti Showers – Glitter Stations – Massive Giveaways – State of the art sound system ⚠️ This event will sell out! ⚠️",
     "shortDescription": "90s & 00s R&B Festival lands at DEPOT. Six hours of throwback anthems, live performers, confetti, glitter and full festival production.",
     "musicGenres": [
-      "R&B",
-      "Reggae"
+      "R&B"
     ],
     "imageUrls": [
       "https://depotcardiff.com/wp-content/uploads/2026/04/MAIN-BANNER-PLAIN.jpg",
@@ -9780,7 +9661,7 @@
     "eventEndDate": "2026-08-15T23:00:00+01:00",
     "subcategory": "R&#038;B Lovers",
     "primaryCategory": "Music",
-    "genre": "R&B, Reggae"
+    "genre": "R&B"
   },
   {
     "title": "The Living Tombstone",
@@ -9793,7 +9674,6 @@
     "shortDescription": "The Living Tombstone bring their Multiplayer Tour to DEPOT in August. Electronic rock anthems, gaming culture hits and immersive live visuals.",
     "musicGenres": [
       "Electronic",
-      "Reggae",
       "Pop",
       "Rock"
     ],
@@ -9805,7 +9685,7 @@
     "eventEndDate": "2026-08-19T23:00:00+01:00",
     "subcategory": "The Living Tombstone",
     "primaryCategory": "Music",
-    "genre": "Electronic, Reggae, Pop, Rock"
+    "genre": "Electronic, Pop, Rock"
   },
   {
     "title": "Bingo Lingo at Tiger Yard",
@@ -9816,9 +9696,6 @@
     "imageUrl": "https://depotcardiff.com/wp-content/uploads/2026/02/Bing-Lingo-at-Tiger-Yard.webp",
     "description": "After a complete sell out series last summer, get ready for a night like no other! BINGO LINGO takes over Tiger Yard with a wild party like no other. — huge anthems, outrageous on-stage battles, epic prizes, and hilarious hosts bringing pure chaos from start to finish. Open-air vibes when the sun’s out, and if the weather turns rubbish, the roof goes on and the party doesn’t stop. Whether you’re a bingo newbie or a seasoned pro, expect the unexpected: 💃 Wild rounds. 🚨 The legendary rave round. 🎤 Crowd interaction. 🎁 Prizes so good they’ll change your life… 🕺 Stage antics that’ll have you laughing all night. 🌞 Glorious sunshine every night… maybe. 🎟️ TICKETS &amp; TABLES Everyone needs an entry ticket Doors: 18:00 Last entry: 19:30 Reserved tables available (book ahead!) – Tables hold 8 Unreserved tables are held for ticket holders on a first-come basis Hen, and Stag packages available 📍LOCATION Tiger Yard, Porth Teigr Way, Cardiff Bay, CF10 4GA 🔥 WHAT IS BINGO LINGO? Imagine bingo, but completely reimagined — with huge music anthems, crazy prizes, wild games, and nonstop laughs from start to finish. This isn’t a quiet night with a dabber — it’s your new favourite party. Whether you’re coming with mates, on a big night out, or just up for something different, BINGO LINGO is packed with high-energy hosts, ridiculous on-stage antics, and unforgettable moments. You don’t need to know the rules — just bring your crew, grab a drink, and get ready to shout for bingo, sing along, and maybe even win something bizarre. Full terms &amp; conditions: www.bingolingo.club",
     "shortDescription": "Bingo Lingo at Tiger Yard delivers huge anthems, chaotic games and epic prizes. Open air in the sun, roof closed if the weather turns.",
-    "musicGenres": [
-      "Reggae"
-    ],
     "imageUrls": [
       "https://depotcardiff.com/wp-content/uploads/2026/02/Bing-Lingo-at-Tiger-Yard.webp"
     ],
@@ -9826,7 +9703,7 @@
     "eventEndDate": "2026-08-21T23:00:00+01:00",
     "subcategory": "Bingo Lingo at Tiger Yard",
     "primaryCategory": "Music",
-    "genre": "Reggae"
+    "genre": "Bingo Lingo at Tiger Yard"
   },
   {
     "title": "Bingo Lingo at Tiger Yard",
@@ -9837,9 +9714,6 @@
     "imageUrl": "https://depotcardiff.com/wp-content/uploads/2026/02/Bing-Lingo-at-Tiger-Yard.webp",
     "description": "After a complete sell out series last summer, get ready for a night like no other! BINGO LINGO takes over Tiger Yard with a wild party like no other. — huge anthems, outrageous on-stage battles, epic prizes, and hilarious hosts bringing pure chaos from start to finish. Open-air vibes when the sun’s out, and if the weather turns rubbish, the roof goes on and the party doesn’t stop. Whether you’re a bingo newbie or a seasoned pro, expect the unexpected: 💃 Wild rounds. 🚨 The legendary rave round. 🎤 Crowd interaction. 🎁 Prizes so good they’ll change your life… 🕺 Stage antics that’ll have you laughing all night. 🌞 Glorious sunshine every night… maybe. 🎟️ TICKETS &amp; TABLES Everyone needs an entry ticket Doors: 18:00 Last entry: 19:30 Reserved tables available (book ahead!) – Tables hold 8 Unreserved tables are held for ticket holders on a first-come basis Hen, and Stag packages available 📍LOCATION Tiger Yard, Porth Teigr Way, Cardiff Bay, CF10 4GA 🔥 WHAT IS BINGO LINGO? Imagine bingo, but completely reimagined — with huge music anthems, crazy prizes, wild games, and nonstop laughs from start to finish. This isn’t a quiet night with a dabber — it’s your new favourite party. Whether you’re coming with mates, on a big night out, or just up for something different, BINGO LINGO is packed with high-energy hosts, ridiculous on-stage antics, and unforgettable moments. You don’t need to know the rules — just bring your crew, grab a drink, and get ready to shout for bingo, sing along, and maybe even win something bizarre. Full terms &amp; conditions: www.bingolingo.club",
     "shortDescription": "Bingo Lingo at Tiger Yard delivers huge anthems, chaotic games and epic prizes. Open air in the sun, roof closed if the weather turns.",
-    "musicGenres": [
-      "Reggae"
-    ],
     "imageUrls": [
       "https://depotcardiff.com/wp-content/uploads/2026/02/Bing-Lingo-at-Tiger-Yard.webp"
     ],
@@ -9847,7 +9721,7 @@
     "eventEndDate": "2026-08-28T23:00:00+01:00",
     "subcategory": "Bingo Lingo at Tiger Yard",
     "primaryCategory": "Music",
-    "genre": "Reggae"
+    "genre": "Bingo Lingo at Tiger Yard"
   },
   {
     "title": "Beefy’s Big Weekender: Jason Manford",
@@ -9866,7 +9740,7 @@
     "eventEndDate": "2026-09-12T17:00:00+01:00",
     "subcategory": "Beefy’s Big Weekender: Jason Manford",
     "primaryCategory": "Comedy",
-    "genre": "Country, Reggae"
+    "genre": "Country"
   },
   {
     "title": "Craig Charles Funk & Soul House Party",
@@ -9878,8 +9752,7 @@
     "description": "Craig Charles brings his legendary Funk &amp; Soul House Party to DEPOT for a full-throttle night of grooves, rare cuts and dancefloor-filling anthems. A selector in the truest sense, Craig Charles has spent over three decades digging deep into funk, soul, disco and rare groove — delivering feel-good, high-energy sets that keep rooms moving from start to finish. Known to millions from BBC 6 Music and revered on festival stages from Glastonbury to club basements across the UK, this is a master at work behind the decks. Expect timeless funk, raw soul, northern classics and infectious rhythms, all delivered with Craig’s trademark style and unstoppable energy. Joining him on the night: Deptford Northern Soul Club Big Macs Wholly Soul Band 🎟️ TICKETS → Priority Tickets: 12th Feb, 10am → Any remaining Tickets: 13th Feb 10am",
     "shortDescription": "Funk, soul and rare groove legend Craig Charles brings his Funk & Soul Club to DEPOT for a night of timeless grooves and dancefloor classics.",
     "musicGenres": [
-      "Soul",
-      "Reggae"
+      "Soul"
     ],
     "imageUrls": [
       "https://depotcardiff.com/wp-content/uploads/2026/02/Craig-Charles-2026-Cover-2.jpg",
@@ -9889,7 +9762,7 @@
     "eventEndDate": "2026-09-13T00:00:00+01:00",
     "subcategory": "Craig Charles Funk &#038; Soul House Party",
     "primaryCategory": "Music",
-    "genre": "Soul, Reggae"
+    "genre": "Soul"
   },
   {
     "title": "Beefy’s Big Weekender: Sara Pascoe",
@@ -9908,7 +9781,7 @@
     "eventEndDate": "2026-09-13T23:00:00+01:00",
     "subcategory": "Beefy’s Big Weekender: Sara Pascoe",
     "primaryCategory": "Comedy",
-    "genre": "Reggae"
+    "genre": "Beefy’s Big Weekender: Sara Pascoe"
   },
   {
     "title": "The History of Jungle",
@@ -9921,8 +9794,7 @@
     "shortDescription": "The History of Jungle comes to Depot Cardiff. Grooverider, Dillinja, DJ Hype, Congo Natty & more. 10 DJs, 8 MCs. 19 September 2026.",
     "musicGenres": [
       "Rap",
-      "Electronic",
-      "Reggae"
+      "Electronic"
     ],
     "imageUrls": [
       "https://depotcardiff.com/wp-content/uploads/2026/04/16-9-lineup-copy-1024x576.jpg",
@@ -9932,7 +9804,7 @@
     "eventEndDate": "2026-09-19T23:00:00+01:00",
     "subcategory": "The History of Jungle",
     "primaryCategory": "Music",
-    "genre": "Rap, Electronic, Reggae"
+    "genre": "Rap, Electronic"
   },
   {
     "title": "I Prevail – The Violent Nature Tour",
@@ -9944,7 +9816,6 @@
     "description": "Grammy-nominated metalcore heavyweights I Prevail bring The Violent Nature Tour to DEPOT Cardiff this September, following phenomenal demand across the UK. This extra Cardiff date promises an intense, full-throttle night as the band showcase tracks from their explosive new album Violent Nature alongside fan favourites from Lifelines, TRAUMA and TRUE POWER. Formed in Metro Detroit in 2013, I Prevail have grown from underground hopefuls to one of modern heavy music’s most powerful live acts, earning gold-certified records on both sides of the Atlantic and a Grammy nomination for Best Rock Album along the way. Violent Nature pushes them even further, channelling personal conflict and raw emotion into some of their heaviest, most cathartic songs to date – from the ferocious title track to the huge, melodic hooks of “Rain”. Joining them in Cardiff are special guests Polaris, Amira Elfeky, and Gore. setting the tone with a stacked bill of crushing riffs, soaring choruses and big, emotional singalongs from start to finish. Expect a high-energy, no-compromise show from a band entering a new era – louder, darker and more ambitious than ever.",
     "shortDescription": "I Prevail bring The Violent Nature Tour to DEPOT Cardiff with special guests Polaris and Amira Elfeky for a huge night of modern heavy music.",
     "musicGenres": [
-      "Reggae",
       "Rock"
     ],
     "imageUrls": [
@@ -9955,7 +9826,7 @@
     "eventEndDate": "2026-09-23T23:00:00+01:00",
     "subcategory": "I Prevail &#8211; The Violent Nature Tour",
     "primaryCategory": "Music",
-    "genre": "Reggae, Rock"
+    "genre": "Rock"
   },
   {
     "title": "Autechre – Live",
@@ -9974,7 +9845,7 @@
     "eventEndDate": "2026-10-22T23:00:00+01:00",
     "subcategory": "Autechre &#8211; Live",
     "primaryCategory": "Theatre",
-    "genre": "Electronic, Reggae"
+    "genre": "Electronic"
   },
   {
     "title": "Little Angels – Big Bad & Back Tour",
@@ -9987,7 +9858,6 @@
     "shortDescription": "Little Angels bring their ultra-rare Big Bad & Back Tour to DEPOT in November. Full original line-up. Support from Luke Morley (Thunder)",
     "musicGenres": [
       "Hard Rock",
-      "Reggae",
       "Rock"
     ],
     "imageUrls": [
@@ -9998,7 +9868,7 @@
     "eventEndDate": "2026-11-23T23:00:00+00:00",
     "subcategory": "Little Angels &#8211; Big Bad &#038; Back Tour",
     "primaryCategory": "Music",
-    "genre": "Hard Rock, Reggae, Rock"
+    "genre": "Hard Rock, Rock"
   },
   {
     "title": "Fat Dog",
@@ -10009,9 +9879,6 @@
     "imageUrl": "https://depotcardiff.com/wp-content/uploads/2026/05/WEBDEPOT.jpg",
     "description": "Fat Dog make their long-awaited return to Cardiff — and this time they&#8217;re stepping it up. Armed with brand new music and a headline European tour, the London five-piece descend on Depot for their biggest Welsh show yet. Known for their feverish live shows and a sound that refuses to sit still, Fat Dog have been building relentlessly since their debut. November 24th promises to be something special. 🎟️ TICKETS Presale Thursday 14th May at 10am General sale Friday 15th May at 10am",
     "shortDescription": "Fat Dog return to Cardiff this November at for their Depot biggest Welsh show yet. Brand new music, brand new tour.",
-    "musicGenres": [
-      "Reggae"
-    ],
     "imageUrls": [
       "https://depotcardiff.com/wp-content/uploads/2026/05/WEBDEPOT.jpg",
       "https://depotcardiff.com/wp-content/uploads/2026/05/WEBDEPOT.jpg.webp"
@@ -10020,7 +9887,7 @@
     "eventEndDate": "2026-11-24T23:00:00+00:00",
     "subcategory": "Fat Dog",
     "primaryCategory": "Music",
-    "genre": "Reggae"
+    "genre": "Fat Dog"
   },
   {
     "title": "Midge Ure – A Man Of Two Worlds",
@@ -10039,7 +9906,7 @@
     "eventEndDate": "2026-11-25T23:00:00+00:00",
     "subcategory": "Midge Ure &#8211; A Man Of Two Worlds",
     "primaryCategory": "Musical Theatre",
-    "genre": "Reggae"
+    "genre": "Midge Ure &#8211"
   },
   {
     "title": "Beefy’s Comedy Club: Guz Khan",
@@ -10080,7 +9947,7 @@
     "eventEndDate": "2026-12-08T23:00:00+00:00",
     "subcategory": "James B Partridge presents The Big Christmas Assembly",
     "primaryCategory": "Sports",
-    "genre": "Reggae"
+    "genre": "James B Partridge presents The Big Christmas Assembly"
   },
   {
     "title": "One Night In Nashville: A Very Country Christmas",
@@ -10092,8 +9959,7 @@
     "description": "Celebrate the festive season with a full-blown Nashville party as One Night In Nashville: A Very Country Christmas lands at DEPOT. Bringing the UK’s leading honky-tonk experience to the warehouse, this high-energy live show delivers the biggest modern country hits alongside timeless classics — all wrapped in a Christmas twist. Expect a packed set featuring music made famous by the likes of Shania Twain, Luke Combs, Carrie Underwood, Taylor Swift and Chris Stapleton, plus iconic tributes to legends including Dolly Parton, Johnny Cash and Kenny Rogers. Fronted by UK country star Maria Jordan and backed by a powerhouse live band, the show transports you straight to downtown Nashville with big vocals, standout musicianship and wall-to-wall singalongs. It’s not just a gig — it’s a full experience built for country fans and party crowds alike. Whether you’re in it for the classics, the modern hits or just a big festive night out, expect a feel-good atmosphere, hands-in-the-air moments and a proper Christmas party with a country edge. This is Nashville, DEPOT style. One night only. TICKETS ➡️ On sale Monday, 20 April at 10am SIGN UP FOR TICKETS",
     "shortDescription": "Celebrate the festive season with a full-blown Nashville party as One Night In Nashville: A Very Country Christmas lands at DEPOT.",
     "musicGenres": [
-      "Country",
-      "Reggae"
+      "Country"
     ],
     "imageUrls": [
       "https://depotcardiff.com/wp-content/uploads/2026/04/One-Night-In-Nashville-Press-Shot-HighRes-1.jpg",
@@ -10103,7 +9969,7 @@
     "eventEndDate": "2026-12-10T23:00:00+00:00",
     "subcategory": "One Night In Nashville: A Very Country Christmas",
     "primaryCategory": "Music",
-    "genre": "Country, Reggae"
+    "genre": "Country"
   },
   {
     "title": "Indiepalooza Festival 2027",
@@ -10116,7 +9982,6 @@
     "shortDescription": "Indiepalooza is an amazing touring indie-rock tribute festival. Expect 6 hours of bangers from some of the best tributes in the world.",
     "musicGenres": [
       "Country",
-      "Reggae",
       "Indie",
       "Rock"
     ],
@@ -10128,24 +9993,7 @@
     "eventEndDate": "2027-05-08T23:00:00+01:00",
     "subcategory": "Indiepalooza Festival 2027",
     "primaryCategory": "Music",
-    "genre": "Country, Reggae, Indie, Rock"
-  },
-  {
-    "title": "The Pink Pop Party",
-    "date": "Sunday, 17 May 2026",
-    "location": "Y Plas",
-    "url": "https://www.cardiffstudents.com/ents/event/42882/",
-    "venue": "Cardiff SU",
-    "scrapedAt": "2026-05-12T09:07:48.767Z",
-    "imageUrl": "https://www.cardiffstudents.com/asset/Event/6013/FIXR.jpg?thumbnail_width=100&thumbnail_height=100&resize_type=CropToFit",
-    "imageUrls": [
-      "https://www.cardiffstudents.com/asset/Event/6013/FIXR.jpg?thumbnail_width=100&thumbnail_height=100&resize_type=CropToFit"
-    ],
-    "primaryCategory": "Music",
-    "genre": "Pop",
-    "musicGenres": [
-      "Pop"
-    ]
+    "genre": "Country, Indie, Rock"
   },
   {
     "title": "Example",
@@ -12459,8 +12307,8 @@
     "imageUrl": "https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=1186118019656684",
     "venue": "Fuel Rock Club",
     "scrapedAt": "2026-05-14T15:05:53.408Z",
-    "shortDescription": "Event in Cardiff, United Kingdom by Midnight Tornado - Music News & Events and 3 others on Sunday, May 17 202629 posts in the discussion.",
-    "description": "Event in Cardiff, United Kingdom by Midnight Tornado - Music News & Events and 3 others on Sunday, May 17 202629 posts in the discussion.",
+    "shortDescription": "Event in Cardiff, United Kingdom by Midnight Tornado - Music News & Events and 3 others on Sunday, May 17 202630 posts in the discussion.",
+    "description": "Event in Cardiff, United Kingdom by Midnight Tornado - Music News & Events and 3 others on Sunday, May 17 202630 posts in the discussion.",
     "musicGenres": [
       "Rock"
     ],
@@ -12725,7 +12573,6 @@
     "shortDescription": "Other event in Cardiff, United Kingdom by FUEL ROCK CLUB on Thursday, June 4 2026",
     "description": "Other event in Cardiff, United Kingdom by FUEL ROCK CLUB on Thursday, June 4 2026",
     "musicGenres": [
-      "Pop",
       "Rock"
     ],
     "imageUrls": [
@@ -12733,7 +12580,7 @@
       "https://data-image.sociablekit.com/sources/facebook-page-events/102954066463800/4408511795961489.webp?v=1778902539835"
     ],
     "primaryCategory": "Music",
-    "genre": "Pop, Rock"
+    "genre": "Rock"
   },
   {
     "title": "I AM DRUG LIVE! - WITH ZED MOTEL & HAIRDYE",
@@ -12909,7 +12756,6 @@
     "shortDescription": "Other event in Cardiff, United Kingdom by FUEL ROCK CLUB on Thursday, June 25 2026",
     "description": "Other event in Cardiff, United Kingdom by FUEL ROCK CLUB on Thursday, June 25 2026",
     "musicGenres": [
-      "Pop",
       "Rock"
     ],
     "imageUrls": [
@@ -12917,7 +12763,7 @@
       "https://data-image.sociablekit.com/sources/facebook-page-events/102954066463800/932469325835133.webp?v=1778902539837"
     ],
     "primaryCategory": "Music",
-    "genre": "Pop, Rock"
+    "genre": "Rock"
   },
   {
     "title": "EVERYWHERE AT ONCE: ACID REIGN",
@@ -13210,7 +13056,6 @@
     "shortDescription": "Event in Cardiff, United Kingdom by FUEL ROCK CLUB on Friday, September 18 2026",
     "description": "Event in Cardiff, United Kingdom by FUEL ROCK CLUB on Friday, September 18 2026",
     "musicGenres": [
-      "Pop",
       "Rock"
     ],
     "imageUrls": [
@@ -13218,7 +13063,7 @@
       "https://data-image.sociablekit.com/sources/facebook-page-events/102954066463800/960895829702677.webp?v=1778902539842"
     ],
     "primaryCategory": "Music",
-    "genre": "Pop, Rock"
+    "genre": "Rock"
   },
   {
     "title": "BRATAKUS",
