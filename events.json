@@ -35,6 +35,7 @@
     "ticketCurrency": "GBP",
     "subcategory": "Cardiff > The Globe > Ed O'Brien: Film Screening + Q&A",
     "primaryCategory": "Theatre",
+    "genre": "Electronic, Rock",
     "date": "Sunday, 24 May 2026",
     "ticketPriceLabel": "£22.5–£40.68"
   },
@@ -952,29 +953,6 @@
     "primaryCategory": "Theatre",
     "genre": "Classical",
     "ticketPriceLabel": "£19"
-  },
-  {
-    "title": "COWBOYS COMEDY!",
-    "date": "Friday, 22 May 2026",
-    "url": "https://www.wmc.org.uk/en/whats-on/2026/cowboys-comedy",
-    "venue": "Wales Millennium Centre",
-    "scrapedAt": "2026-05-12T09:07:48.767Z",
-    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1771254336/a45baf15-21bf-4966-beb2-9535c3d09097_bumedj?_a=BAAAV6DQ",
-    "imageUrls": [
-      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1771254336/a45baf15-21bf-4966-beb2-9535c3d09097_bumedj?_a=BAAAV6DQ",
-      "http://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_630%2Cw_1200/f_auto/q_auto/v1771254336/a45baf15-21bf-4966-beb2-9535c3d09097_bumedj?_a=BAAAV6DQ",
-      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_512%2Cw_1024/f_auto/q_auto/v1771254336/a45baf15-21bf-4966-beb2-9535c3d09097_bumedj?_a=BAAAV6DQ",
-      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1771254336/a45baf15-21bf-4966-beb2-9535c3d09097_bumedj?_a=BAAAV6DQ"
-    ],
-    "eventStartDate": "2026-05-22 20:00:00",
-    "eventEndDate": "2026-05-22 22:00:00",
-    "ticketPriceFrom": 18,
-    "ticketPriceTo": 18,
-    "ticketCurrency": "GBP",
-    "subcategory": "Wales Millennium Centre > What's on > 2026 > COWBOYS COMEDY!",
-    "primaryCategory": "Comedy",
-    "genre": "Jazz, Classical, Blues, Rock",
-    "ticketPriceLabel": "£18"
   },
   {
     "title": "ODYSSEY",
@@ -1950,11 +1928,22 @@
     "url": "https://www.wmc.org.uk/en/whats-on/2026/the-pearl-revue",
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-05-12T09:07:48.767Z",
-    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1773937228/WMC%20Content/Whats%20On/2026/Cabaret/Pearl%20Revue%20July/The_Pearl_Revue_July3_What_s_on_Thumbnail_WMC_1200_x_900_px?_a=BAAAV6DQ",
+    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1773937228/WMC%20Content/Whats%20On/2026/Cabaret/Pearl%20Revue%20July/The_Pearl_Revue_July3_What_s_on_Thumbnail_WMC_1200_x_900_px?_a=BAAAV6DQ",
     "imageUrls": [
+      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1773937228/WMC%20Content/Whats%20On/2026/Cabaret/Pearl%20Revue%20July/The_Pearl_Revue_July3_What_s_on_Thumbnail_WMC_1200_x_900_px?_a=BAAAV6DQ",
+      "http://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_630%2Cw_1200/f_auto/q_auto/v1773937228/WMC%20Content/Whats%20On/2026/Cabaret/Pearl%20Revue%20July/The_Pearl_Revue_July3_What_s_on_Thumbnail_WMC_1200_x_900_px?_a=BAAAV6DQ",
+      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_512%2Cw_1024/f_auto/q_auto/v1773937228/WMC%20Content/Whats%20On/2026/Cabaret/Pearl%20Revue%20July/The_Pearl_Revue_July3_What_s_on_Thumbnail_WMC_1200_x_900_px?_a=BAAAV6DQ",
       "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1773937228/WMC%20Content/Whats%20On/2026/Cabaret/Pearl%20Revue%20July/The_Pearl_Revue_July3_What_s_on_Thumbnail_WMC_1200_x_900_px?_a=BAAAV6DQ"
     ],
-    "primaryCategory": "Theatre"
+    "eventStartDate": "2026-07-03 20:00:00",
+    "eventEndDate": "2026-07-03 22:30:00",
+    "ticketPriceFrom": 20,
+    "ticketPriceTo": 20,
+    "ticketCurrency": "GBP",
+    "subcategory": "Wales Millennium Centre > What's on > 2026 > The Pearl Revue",
+    "primaryCategory": "Theatre",
+    "genre": "Jazz, Classical, Blues, Rock",
+    "ticketPriceLabel": "£20"
   },
   {
     "title": "THE DAY THE MAN STEPPED ON THE MOON",
@@ -2008,11 +1997,22 @@
     "url": "https://www.wmc.org.uk/en/whats-on/2026/unity-festival-party",
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-05-12T09:07:48.767Z",
-    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1775559576/WMC%20Content/Whats%20On/2026/Cabaret/Unity%20Festival%20party/Unity_Party_desktop?_a=BAAAV6DQ",
+    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1775559576/WMC%20Content/Whats%20On/2026/Cabaret/Unity%20Festival%20party/Unity_Party_desktop?_a=BAAAV6DQ",
     "imageUrls": [
+      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1775559576/WMC%20Content/Whats%20On/2026/Cabaret/Unity%20Festival%20party/Unity_Party_desktop?_a=BAAAV6DQ",
+      "http://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_630%2Cw_1200/f_auto/q_auto/v1775559576/WMC%20Content/Whats%20On/2026/Cabaret/Unity%20Festival%20party/Unity_Party_desktop?_a=BAAAV6DQ",
+      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_512%2Cw_1024/f_auto/q_auto/v1775559576/WMC%20Content/Whats%20On/2026/Cabaret/Unity%20Festival%20party/Unity_Party_desktop?_a=BAAAV6DQ",
       "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1775559576/WMC%20Content/Whats%20On/2026/Cabaret/Unity%20Festival%20party/Unity_Party_desktop?_a=BAAAV6DQ"
     ],
-    "primaryCategory": "Theatre"
+    "eventStartDate": "2026-07-04 21:30:00",
+    "eventEndDate": "2026-07-04 23:00:00",
+    "ticketPriceFrom": 10,
+    "ticketPriceTo": 10,
+    "ticketCurrency": "GBP",
+    "subcategory": "Wales Millennium Centre > What's on > 2026 > Unity Festival Party",
+    "primaryCategory": "Theatre",
+    "genre": "Punk, Soul, Classical, Blues, Pop, Rock",
+    "ticketPriceLabel": "£10"
   },
   {
     "title": "AN AMERICAN SOUNDSCAPE",
@@ -2020,11 +2020,22 @@
     "url": "https://www.wmc.org.uk/en/whats-on/2026/an-american-soundscape",
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-05-12T09:07:48.767Z",
-    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1753717284/WMC%20Content/Whats%20On/2026/BBC%20NoW/An%20American%20Soundscape/thumbnail-5-july-2026-a?_a=BAAAV6DQ",
+    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1753717284/WMC%20Content/Whats%20On/2026/BBC%20NoW/An%20American%20Soundscape/thumbnail-5-july-2026-a?_a=BAAAV6DQ",
     "imageUrls": [
+      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1753717284/WMC%20Content/Whats%20On/2026/BBC%20NoW/An%20American%20Soundscape/thumbnail-5-july-2026-a?_a=BAAAV6DQ",
+      "http://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_630%2Cw_1200/f_auto/q_auto/v1753717284/WMC%20Content/Whats%20On/2026/BBC%20NoW/An%20American%20Soundscape/thumbnail-5-july-2026-a?_a=BAAAV6DQ",
+      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_512%2Cw_1024/f_auto/q_auto/v1753717284/WMC%20Content/Whats%20On/2026/BBC%20NoW/An%20American%20Soundscape/thumbnail-5-july-2026-a?_a=BAAAV6DQ",
       "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1753717284/WMC%20Content/Whats%20On/2026/BBC%20NoW/An%20American%20Soundscape/thumbnail-5-july-2026-a?_a=BAAAV6DQ"
     ],
-    "primaryCategory": "Theatre"
+    "eventStartDate": "2026-07-05 15:00:00",
+    "eventEndDate": "2026-07-05 17:00:00",
+    "ticketPriceFrom": 15,
+    "ticketPriceTo": 15,
+    "ticketCurrency": "GBP",
+    "subcategory": "Wales Millennium Centre > What's on > 2026 > An American Soundscape",
+    "primaryCategory": "Theatre",
+    "genre": "Classical",
+    "ticketPriceLabel": "£15"
   },
   {
     "title": "ANNIE",
@@ -2101,11 +2112,22 @@
     "url": "https://www.wmc.org.uk/en/whats-on/2026/shelly-ann",
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-05-12T09:07:48.767Z",
-    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1773937510/WMC%20Content/Whats%20On/2026/Cabaret/Shelly%20Ann/Shellyann_Instagram_Post_45?_a=BAAAV6DQ",
+    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1773937510/WMC%20Content/Whats%20On/2026/Cabaret/Shelly%20Ann/Shellyann_Instagram_Post_45?_a=BAAAV6DQ",
     "imageUrls": [
+      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1773937510/WMC%20Content/Whats%20On/2026/Cabaret/Shelly%20Ann/Shellyann_Instagram_Post_45?_a=BAAAV6DQ",
+      "http://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_630%2Cw_1200/f_auto/q_auto/v1773937510/WMC%20Content/Whats%20On/2026/Cabaret/Shelly%20Ann/Shellyann_Instagram_Post_45?_a=BAAAV6DQ",
+      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_512%2Cw_1024/f_auto/q_auto/v1773937510/WMC%20Content/Whats%20On/2026/Cabaret/Shelly%20Ann/Shellyann_Instagram_Post_45?_a=BAAAV6DQ",
       "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1773937510/WMC%20Content/Whats%20On/2026/Cabaret/Shelly%20Ann/Shellyann_Instagram_Post_45?_a=BAAAV6DQ"
     ],
-    "primaryCategory": "Theatre"
+    "eventStartDate": "2026-07-11 20:00:00",
+    "eventEndDate": "2026-07-11 23:59:00",
+    "ticketPriceFrom": 20,
+    "ticketPriceTo": 20,
+    "ticketCurrency": "GBP",
+    "subcategory": "Wales Millennium Centre > What's on > 2026 > Shelly Ann",
+    "primaryCategory": "Theatre",
+    "genre": "Jazz, Country, Classical, Blues, Pop, Rock",
+    "ticketPriceLabel": "£20"
   },
   {
     "title": "COFFI A CYMRU",
@@ -2148,22 +2170,11 @@
     "url": "https://www.wmc.org.uk/en/whats-on/2026/stephanie-webber",
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-05-12T09:07:48.767Z",
-    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1775640099/WMC%20Content/Whats%20On/2026/Cabaret/Stephanie%20Webber/Steph_Webber?_a=BAAAV6DQ",
+    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1775640099/WMC%20Content/Whats%20On/2026/Cabaret/Stephanie%20Webber/Steph_Webber?_a=BAAAV6DQ",
     "imageUrls": [
-      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1775640099/WMC%20Content/Whats%20On/2026/Cabaret/Stephanie%20Webber/Steph_Webber?_a=BAAAV6DQ",
-      "http://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_630%2Cw_1200/f_auto/q_auto/v1775640099/WMC%20Content/Whats%20On/2026/Cabaret/Stephanie%20Webber/Steph_Webber?_a=BAAAV6DQ",
-      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_512%2Cw_1024/f_auto/q_auto/v1775640099/WMC%20Content/Whats%20On/2026/Cabaret/Stephanie%20Webber/Steph_Webber?_a=BAAAV6DQ",
       "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1775640099/WMC%20Content/Whats%20On/2026/Cabaret/Stephanie%20Webber/Steph_Webber?_a=BAAAV6DQ"
     ],
-    "eventStartDate": "2026-07-18 20:00:00",
-    "eventEndDate": "2026-07-18 22:00:00",
-    "ticketPriceFrom": 18,
-    "ticketPriceTo": 18,
-    "ticketCurrency": "GBP",
-    "subcategory": "Wales Millennium Centre > What's on > 2026 > Steph Webber - Glittering Nights",
-    "primaryCategory": "Theatre",
-    "genre": "Jazz, Country, Classical, Blues, Rock",
-    "ticketPriceLabel": "£18"
+    "primaryCategory": "Theatre"
   },
   {
     "title": "SHOWGIRLS AND SHARKS",
@@ -2207,22 +2218,11 @@
     "url": "https://www.wmc.org.uk/en/whats-on/2026/the-rat-pack-las-vegas-live",
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-05-12T09:07:48.767Z",
-    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1775313332/WMC%20Content/Whats%20On/2026/Cabaret/Rat%20Pack/Rat_Pack?_a=BAAAV6DQ",
+    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1775313332/WMC%20Content/Whats%20On/2026/Cabaret/Rat%20Pack/Rat_Pack?_a=BAAAV6DQ",
     "imageUrls": [
-      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1775313332/WMC%20Content/Whats%20On/2026/Cabaret/Rat%20Pack/Rat_Pack?_a=BAAAV6DQ",
-      "http://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_630%2Cw_1200/f_auto/q_auto/v1775313332/WMC%20Content/Whats%20On/2026/Cabaret/Rat%20Pack/Rat_Pack?_a=BAAAV6DQ",
-      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_512%2Cw_1024/f_auto/q_auto/v1775313332/WMC%20Content/Whats%20On/2026/Cabaret/Rat%20Pack/Rat_Pack?_a=BAAAV6DQ",
       "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1775313332/WMC%20Content/Whats%20On/2026/Cabaret/Rat%20Pack/Rat_Pack?_a=BAAAV6DQ"
     ],
-    "eventStartDate": "2026-07-25 20:00:00",
-    "eventEndDate": "2026-07-25 22:00:00",
-    "ticketPriceFrom": 20,
-    "ticketPriceTo": 20,
-    "ticketCurrency": "GBP",
-    "subcategory": "Wales Millennium Centre > What's on > 2026 > The Rat Pack Las Vegas Live!",
-    "primaryCategory": "Theatre",
-    "genre": "Jazz, Classical, Blues, Rock",
-    "ticketPriceLabel": "£20"
+    "primaryCategory": "Theatre"
   },
   {
     "title": "AN EVENING WITH SIR DAVID JASON",
@@ -2230,22 +2230,11 @@
     "url": "https://www.wmc.org.uk/en/whats-on/2026/an-evening-with-sir-david-jason",
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-05-12T09:07:48.767Z",
-    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1764159789/WMC%20Content/Whats%20On/2026/Donald%20Gordon%20Theatre/Sir%20David%20Jason/WHATS_ON_THUMBNAIL?_a=BAAAV6DQ",
+    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1764159789/WMC%20Content/Whats%20On/2026/Donald%20Gordon%20Theatre/Sir%20David%20Jason/WHATS_ON_THUMBNAIL?_a=BAAAV6DQ",
     "imageUrls": [
-      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1764159789/WMC%20Content/Whats%20On/2026/Donald%20Gordon%20Theatre/Sir%20David%20Jason/WHATS_ON_THUMBNAIL?_a=BAAAV6DQ",
-      "http://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_630%2Cw_1200/f_auto/q_auto/v1764159789/WMC%20Content/Whats%20On/2026/Donald%20Gordon%20Theatre/Sir%20David%20Jason/WHATS_ON_THUMBNAIL?_a=BAAAV6DQ",
-      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_512%2Cw_1024/f_auto/q_auto/v1764159789/WMC%20Content/Whats%20On/2026/Donald%20Gordon%20Theatre/Sir%20David%20Jason/WHATS_ON_THUMBNAIL?_a=BAAAV6DQ",
       "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1764159789/WMC%20Content/Whats%20On/2026/Donald%20Gordon%20Theatre/Sir%20David%20Jason/WHATS_ON_THUMBNAIL?_a=BAAAV6DQ"
     ],
-    "eventStartDate": "2026-07-26 19:30:00",
-    "eventEndDate": "2026-07-26 22:00:00",
-    "ticketPriceFrom": 50,
-    "ticketPriceTo": 50,
-    "ticketCurrency": "GBP",
-    "subcategory": "Wales Millennium Centre > What's on > 2026 > An Evening with Sir David Jason",
-    "primaryCategory": "Theatre",
-    "genre": "Classical",
-    "ticketPriceLabel": "£50"
+    "primaryCategory": "Theatre"
   },
   {
     "title": "THE KARATE KID",
@@ -2253,22 +2242,11 @@
     "url": "https://www.wmc.org.uk/en/whats-on/2026/the-karate-kid",
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-05-12T09:07:48.767Z",
-    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1773228297/WMC%20Content/Whats%20On/2026/Donald%20Gordon%20Theatre/The%20Karate%20Kid/KK26036_1280x960pxls_CARDIFF?_a=BAAAV6DQ",
+    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1773228297/WMC%20Content/Whats%20On/2026/Donald%20Gordon%20Theatre/The%20Karate%20Kid/KK26036_1280x960pxls_CARDIFF?_a=BAAAV6DQ",
     "imageUrls": [
-      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1773228297/WMC%20Content/Whats%20On/2026/Donald%20Gordon%20Theatre/The%20Karate%20Kid/KK26036_1280x960pxls_CARDIFF?_a=BAAAV6DQ",
-      "http://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_630%2Cw_1200/f_auto/q_auto/v1773228297/WMC%20Content/Whats%20On/2026/Donald%20Gordon%20Theatre/The%20Karate%20Kid/KK26036_1280x960pxls_CARDIFF?_a=BAAAV6DQ",
-      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_512%2Cw_1024/f_auto/q_auto/v1773228297/WMC%20Content/Whats%20On/2026/Donald%20Gordon%20Theatre/The%20Karate%20Kid/KK26036_1280x960pxls_CARDIFF?_a=BAAAV6DQ",
       "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1773228297/WMC%20Content/Whats%20On/2026/Donald%20Gordon%20Theatre/The%20Karate%20Kid/KK26036_1280x960pxls_CARDIFF?_a=BAAAV6DQ"
     ],
-    "eventStartDate": "2026-07-28 19:30:00",
-    "eventEndDate": "2026-08-01 22:00:00",
-    "ticketPriceFrom": 19,
-    "ticketPriceTo": 19,
-    "ticketCurrency": "GBP",
-    "subcategory": "Wales Millennium Centre > What's on > 2026 > The Karate Kid",
-    "primaryCategory": "Theatre",
-    "genre": "Classical",
-    "ticketPriceLabel": "£19"
+    "primaryCategory": "Theatre"
   },
   {
     "title": "NATIONAL OPEN YOUTH ORCHESTRA WITH BBC NATIONAL ORCHESTRA OF WALES",
@@ -2276,22 +2254,12 @@
     "url": "https://www.wmc.org.uk/en/whats-on/2026/national-open-youth-orchestra-with-bbc-national-orchestra-of-wales",
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-05-12T09:07:48.767Z",
-    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1773747894/WMC%20Content/Whats%20On/2026/BBC%20NoW/NOYO/1200x900_-_Noyo_Thumbnails?_a=BAAAV6DQ",
+    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1773747894/WMC%20Content/Whats%20On/2026/BBC%20NoW/NOYO/1200x900_-_Noyo_Thumbnails?_a=BAAAV6DQ",
     "imageUrls": [
-      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1773747894/WMC%20Content/Whats%20On/2026/BBC%20NoW/NOYO/1200x900_-_Noyo_Thumbnails?_a=BAAAV6DQ",
-      "http://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_630%2Cw_1200/f_auto/q_auto/v1773747894/WMC%20Content/Whats%20On/2026/BBC%20NoW/NOYO/1200x900_-_Noyo_Thumbnails?_a=BAAAV6DQ",
-      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_512%2Cw_1024/f_auto/q_auto/v1773747894/WMC%20Content/Whats%20On/2026/BBC%20NoW/NOYO/1200x900_-_Noyo_Thumbnails?_a=BAAAV6DQ",
       "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1773747894/WMC%20Content/Whats%20On/2026/BBC%20NoW/NOYO/1200x900_-_Noyo_Thumbnails?_a=BAAAV6DQ"
     ],
-    "eventStartDate": "2026-07-30 15:00:00",
-    "eventEndDate": "2026-07-30 17:00:00",
-    "ticketPriceFrom": 0,
-    "ticketPriceTo": 0,
-    "ticketCurrency": "GBP",
-    "subcategory": "Wales Millennium Centre > What's on > 2026 > National Open Youth Orchestra with BBC National Orchestra of Wales",
     "primaryCategory": "Theatre",
-    "genre": "Electronic, Classical",
-    "ticketPriceLabel": "£0"
+    "genre": "Classical"
   },
   {
     "title": "QUARTEY & BLAYNEY",
@@ -2347,11 +2315,22 @@
     "url": "https://www.wmc.org.uk/en/whats-on/2026/rumours-transatlantic-ensemble",
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-05-12T09:07:48.767Z",
-    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1712248782/WMC%20Content/Whats%20On/2024/Donald%20Gordon%20Theatre/Transatlantic%20Ensemble/Thumb_transatlantic_ensemble_1200_x_900_?_a=BAAAV6DQ",
+    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1712248782/WMC%20Content/Whats%20On/2024/Donald%20Gordon%20Theatre/Transatlantic%20Ensemble/Thumb_transatlantic_ensemble_1200_x_900_?_a=BAAAV6DQ",
     "imageUrls": [
+      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1712248782/WMC%20Content/Whats%20On/2024/Donald%20Gordon%20Theatre/Transatlantic%20Ensemble/Thumb_transatlantic_ensemble_1200_x_900_?_a=BAAAV6DQ",
+      "http://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_630%2Cw_1200/f_auto/q_auto/v1712248782/WMC%20Content/Whats%20On/2024/Donald%20Gordon%20Theatre/Transatlantic%20Ensemble/Thumb_transatlantic_ensemble_1200_x_900_?_a=BAAAV6DQ",
+      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_512%2Cw_1024/f_auto/q_auto/v1712248782/WMC%20Content/Whats%20On/2024/Donald%20Gordon%20Theatre/Transatlantic%20Ensemble/Thumb_transatlantic_ensemble_1200_x_900_?_a=BAAAV6DQ",
       "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1712248782/WMC%20Content/Whats%20On/2024/Donald%20Gordon%20Theatre/Transatlantic%20Ensemble/Thumb_transatlantic_ensemble_1200_x_900_?_a=BAAAV6DQ"
     ],
-    "primaryCategory": "Theatre"
+    "eventStartDate": "2026-08-23 19:30:00",
+    "eventEndDate": "2026-08-23 23:00:00",
+    "ticketPriceFrom": 25,
+    "ticketPriceTo": 25,
+    "ticketCurrency": "GBP",
+    "subcategory": "Wales Millennium Centre > What's on > 2026 > Fleetwood Mac's 'Rumours' with the Transatlantic Ensemble",
+    "primaryCategory": "Theatre",
+    "genre": "Classical",
+    "ticketPriceLabel": "£25"
   },
   {
     "title": "CALON",
@@ -2367,15 +2346,26 @@
   },
   {
     "title": "BURLESQUE",
-    "date": "Tuesday, 1 September 2026 – Saturday, 5 September 2026",
+    "date": "Tuesday, 1 September 2026 – Sunday, 6 September 2026",
     "url": "https://www.wmc.org.uk/en/whats-on/2026/burlesque",
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-05-12T09:07:48.767Z",
-    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1770307051/Burlesque_Generic_1280x960_trs1ob?_a=BAAAV6DQ",
+    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1770307051/Burlesque_Generic_1280x960_trs1ob?_a=BAAAV6DQ",
     "imageUrls": [
+      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1770307051/Burlesque_Generic_1280x960_trs1ob?_a=BAAAV6DQ",
+      "http://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_630%2Cw_1200/f_auto/q_auto/v1770307051/Burlesque_Generic_1280x960_trs1ob?_a=BAAAV6DQ",
+      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_512%2Cw_1024/f_auto/q_auto/v1770307051/Burlesque_Generic_1280x960_trs1ob?_a=BAAAV6DQ",
       "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1770307051/Burlesque_Generic_1280x960_trs1ob?_a=BAAAV6DQ"
     ],
-    "primaryCategory": "Theatre"
+    "eventStartDate": "2026-09-01 19:30:00",
+    "eventEndDate": "2026-09-05 23:00:00",
+    "ticketPriceFrom": 22,
+    "ticketPriceTo": 22,
+    "ticketCurrency": "GBP",
+    "subcategory": "Wales Millennium Centre > What's on > 2026 > Burlesque",
+    "primaryCategory": "Theatre",
+    "genre": "Classical",
+    "ticketPriceLabel": "£22"
   },
   {
     "title": "LINLEY HAMILTON QUINTET",
@@ -2419,22 +2409,11 @@
     "url": "https://www.wmc.org.uk/en/whats-on/2026/galifrey-cabaret",
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-05-12T09:07:48.767Z",
-    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1776847432/WMC%20Content/Whats%20On/2026/Cabaret/Galifrey%20Cabaret/Gal_Cab_-_Thumb?_a=BAAAV6DQ",
+    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1776847432/WMC%20Content/Whats%20On/2026/Cabaret/Galifrey%20Cabaret/Gal_Cab_-_Thumb?_a=BAAAV6DQ",
     "imageUrls": [
-      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1776847432/WMC%20Content/Whats%20On/2026/Cabaret/Galifrey%20Cabaret/Gal_Cab_-_Thumb?_a=BAAAV6DQ",
-      "http://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_630%2Cw_1200/f_auto/q_auto/v1776847432/WMC%20Content/Whats%20On/2026/Cabaret/Galifrey%20Cabaret/Gal_Cab_-_Thumb?_a=BAAAV6DQ",
-      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_512%2Cw_1024/f_auto/q_auto/v1776847432/WMC%20Content/Whats%20On/2026/Cabaret/Galifrey%20Cabaret/Gal_Cab_-_Thumb?_a=BAAAV6DQ",
       "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1776847432/WMC%20Content/Whats%20On/2026/Cabaret/Galifrey%20Cabaret/Gal_Cab_-_Thumb?_a=BAAAV6DQ"
     ],
-    "eventStartDate": "2026-09-10 20:59:00",
-    "eventEndDate": "2026-09-12 22:30:00",
-    "ticketPriceFrom": 20,
-    "ticketPriceTo": 20,
-    "ticketCurrency": "GBP",
-    "subcategory": "Wales Millennium Centre > What's on > 2026 > Galifrey Cabaret",
-    "primaryCategory": "Theatre",
-    "genre": "Punk, Jazz, Classical, Blues, Rock",
-    "ticketPriceLabel": "£20"
+    "primaryCategory": "Theatre"
   },
   {
     "title": "IN MEMORY OF AMY",
@@ -2442,22 +2421,11 @@
     "url": "https://www.wmc.org.uk/en/whats-on/2026/in-memory-of-amy",
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-05-12T09:07:48.767Z",
-    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1775229929/WMC%20Content/Whats%20On/2026/Cabaret/In%20MEmory%20of%20AMy/4a9aed80-2057-40b6-b4aa-7a3e95d92484?_a=BAAAV6DQ",
+    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1775229929/WMC%20Content/Whats%20On/2026/Cabaret/In%20MEmory%20of%20AMy/4a9aed80-2057-40b6-b4aa-7a3e95d92484?_a=BAAAV6DQ",
     "imageUrls": [
-      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1775229929/WMC%20Content/Whats%20On/2026/Cabaret/In%20MEmory%20of%20AMy/4a9aed80-2057-40b6-b4aa-7a3e95d92484?_a=BAAAV6DQ",
-      "http://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_630%2Cw_1200/f_auto/q_auto/v1775229929/WMC%20Content/Whats%20On/2026/Cabaret/In%20MEmory%20of%20AMy/4a9aed80-2057-40b6-b4aa-7a3e95d92484?_a=BAAAV6DQ",
-      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_512%2Cw_1024/f_auto/q_auto/v1775229929/WMC%20Content/Whats%20On/2026/Cabaret/In%20MEmory%20of%20AMy/4a9aed80-2057-40b6-b4aa-7a3e95d92484?_a=BAAAV6DQ",
       "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1775229929/WMC%20Content/Whats%20On/2026/Cabaret/In%20MEmory%20of%20AMy/4a9aed80-2057-40b6-b4aa-7a3e95d92484?_a=BAAAV6DQ"
     ],
-    "eventStartDate": "2026-09-13 19:00:00",
-    "eventEndDate": "2026-09-13 22:00:00",
-    "ticketPriceFrom": 20,
-    "ticketPriceTo": 20,
-    "ticketCurrency": "GBP",
-    "subcategory": "Wales Millennium Centre > What's on > 2026 > In Memory of Amy",
-    "primaryCategory": "Theatre",
-    "genre": "Jazz, Classical, Blues, Rock",
-    "ticketPriceLabel": "£20"
+    "primaryCategory": "Theatre"
   },
   {
     "title": "TOM WARD",
@@ -2485,16 +2453,26 @@
   },
   {
     "title": "WELSH NATIONAL OPERA: BLUEBEARD’S CASTLE + OEDIPUS REX",
-    "date": "Friday, 25 September 2026",
+    "date": "Sunday, 20 September 2026 – Friday, 2 October 2026",
     "url": "https://www.wmc.org.uk/en/whats-on/2026/welsh-national-opera-bluebeards-castle-oedipus-rex",
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-05-12T09:07:48.767Z",
-    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1777631209/WNO_BCOR_WMC_1280x960px_alpj6b?_a=BAAAV6DQ",
+    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1777631209/WNO_BCOR_WMC_1280x960px_alpj6b?_a=BAAAV6DQ",
     "imageUrls": [
+      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1777631209/WNO_BCOR_WMC_1280x960px_alpj6b?_a=BAAAV6DQ",
+      "http://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_630%2Cw_1200/f_auto/q_auto/v1777631209/WNO_BCOR_WMC_1280x960px_alpj6b?_a=BAAAV6DQ",
+      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_512%2Cw_1024/f_auto/q_auto/v1777631209/WNO_BCOR_WMC_1280x960px_alpj6b?_a=BAAAV6DQ",
       "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1777631209/WNO_BCOR_WMC_1280x960px_alpj6b?_a=BAAAV6DQ"
     ],
+    "eventStartDate": "2026-09-20 16:00:00",
+    "eventEndDate": "2026-10-02 19:30:00",
+    "ticketPriceFrom": 25,
+    "ticketPriceTo": 25,
+    "ticketCurrency": "GBP",
+    "subcategory": "Wales Millennium Centre > What's on > 2026 > Welsh National Opera: Bluebeard’s Castle + Oedipus Rex",
     "primaryCategory": "Theatre",
-    "genre": "Classical"
+    "genre": "Classical",
+    "ticketPriceLabel": "£25"
   },
   {
     "title": "MISCAST CABARET",
@@ -2662,12 +2640,22 @@
     "url": "https://www.wmc.org.uk/en/whats-on/2026/cabaret-template-7",
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-05-22T11:06:35.921Z",
-    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1779189523/WMC%20Content/Whats%20On/2026/Cabaret/Alt%20Cabaret-%20Musicals/WMC_Musicals_Mobile?_a=BAAAV6DQ",
+    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1779189523/WMC%20Content/Whats%20On/2026/Cabaret/Alt%20Cabaret-%20Musicals/WMC_Musicals_Mobile?_a=BAAAV6DQ",
     "imageUrls": [
+      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1779189523/WMC%20Content/Whats%20On/2026/Cabaret/Alt%20Cabaret-%20Musicals/WMC_Musicals_Mobile?_a=BAAAV6DQ",
+      "http://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_630%2Cw_1200/f_auto/q_auto/v1779189523/WMC%20Content/Whats%20On/2026/Cabaret/Alt%20Cabaret-%20Musicals/WMC_Musicals_Mobile?_a=BAAAV6DQ",
+      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_512%2Cw_1024/f_auto/q_auto/v1779189523/WMC%20Content/Whats%20On/2026/Cabaret/Alt%20Cabaret-%20Musicals/WMC_Musicals_Mobile?_a=BAAAV6DQ",
       "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1779189523/WMC%20Content/Whats%20On/2026/Cabaret/Alt%20Cabaret-%20Musicals/WMC_Musicals_Mobile?_a=BAAAV6DQ"
     ],
-    "primaryCategory": "Musical Theatre",
-    "genre": "Musical Theatre"
+    "eventStartDate": "2026-10-17 20:00:00",
+    "eventEndDate": "2026-10-17 22:00:00",
+    "ticketPriceFrom": 18,
+    "ticketPriceTo": 18,
+    "ticketCurrency": "GBP",
+    "subcategory": "Wales Millennium Centre > What's on > 2026 > The Alternative Cabaret: Musicals",
+    "primaryCategory": "Theatre",
+    "genre": "Jazz, Classical, Blues, Rock",
+    "ticketPriceLabel": "£18"
   },
   {
     "title": "JAMES BARR",
@@ -2675,11 +2663,22 @@
     "url": "https://www.wmc.org.uk/en/whats-on/2026/james-barr",
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-05-12T09:07:48.767Z",
-    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1770387342/WMC%20Content/Whats%20On/2026/Cabaret/James%20Barr/Untitled_design_13?_a=BAAAV6DQ",
+    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1770387342/WMC%20Content/Whats%20On/2026/Cabaret/James%20Barr/Untitled_design_13?_a=BAAAV6DQ",
     "imageUrls": [
+      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1770387342/WMC%20Content/Whats%20On/2026/Cabaret/James%20Barr/Untitled_design_13?_a=BAAAV6DQ",
+      "http://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_630%2Cw_1200/f_auto/q_auto/v1770387342/WMC%20Content/Whats%20On/2026/Cabaret/James%20Barr/Untitled_design_13?_a=BAAAV6DQ",
+      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_512%2Cw_1024/f_auto/q_auto/v1770387342/WMC%20Content/Whats%20On/2026/Cabaret/James%20Barr/Untitled_design_13?_a=BAAAV6DQ",
       "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1770387342/WMC%20Content/Whats%20On/2026/Cabaret/James%20Barr/Untitled_design_13?_a=BAAAV6DQ"
     ],
-    "primaryCategory": "Theatre"
+    "eventStartDate": "2026-10-18 19:00:00",
+    "eventEndDate": "2026-10-18 21:30:00",
+    "ticketPriceFrom": 16,
+    "ticketPriceTo": 16,
+    "ticketCurrency": "GBP",
+    "subcategory": "Wales Millennium Centre > What's on > 2026 > James Barr",
+    "primaryCategory": "Theatre",
+    "genre": "Jazz, Classical, Blues, Rock",
+    "ticketPriceLabel": "£16"
   },
   {
     "title": "DIRTY DANCING",
@@ -2687,22 +2686,11 @@
     "url": "https://www.wmc.org.uk/en/whats-on/2026/dirty-dancing",
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-05-12T09:07:48.767Z",
-    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1758705722/WMC%20Content/Whats%20On/2026/Donald%20Gordon%20Theatre/Dirty%20Dancing/DirtyDancing-Thumb?_a=BAAAV6DQ",
+    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1758705722/WMC%20Content/Whats%20On/2026/Donald%20Gordon%20Theatre/Dirty%20Dancing/DirtyDancing-Thumb?_a=BAAAV6DQ",
     "imageUrls": [
-      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1758705722/WMC%20Content/Whats%20On/2026/Donald%20Gordon%20Theatre/Dirty%20Dancing/DirtyDancing-Thumb?_a=BAAAV6DQ",
-      "http://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_630%2Cw_1200/f_auto/q_auto/v1758705722/WMC%20Content/Whats%20On/2026/Donald%20Gordon%20Theatre/Dirty%20Dancing/DirtyDancing-Thumb?_a=BAAAV6DQ",
-      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_512%2Cw_1024/f_auto/q_auto/v1758705722/WMC%20Content/Whats%20On/2026/Donald%20Gordon%20Theatre/Dirty%20Dancing/DirtyDancing-Thumb?_a=BAAAV6DQ",
       "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1758705722/WMC%20Content/Whats%20On/2026/Donald%20Gordon%20Theatre/Dirty%20Dancing/DirtyDancing-Thumb?_a=BAAAV6DQ"
     ],
-    "eventStartDate": "2026-10-20 19:30:00",
-    "eventEndDate": "2026-10-24 20:30:00",
-    "ticketPriceFrom": 19,
-    "ticketPriceTo": 19,
-    "ticketCurrency": "GBP",
-    "subcategory": "Wales Millennium Centre > What's on > 2026 > Dirty Dancing",
-    "primaryCategory": "Theatre",
-    "genre": "Classical",
-    "ticketPriceLabel": "£19"
+    "primaryCategory": "Theatre"
   },
   {
     "title": "RACHEL FAIRBURN: VEXY BEASTS",
@@ -2710,22 +2698,11 @@
     "url": "https://www.wmc.org.uk/en/whats-on/2026/rachel-fairburn-vexy-beasts",
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-05-12T09:07:48.767Z",
-    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1758804052/WMC%20Content/Whats%20On/2026/Cabaret/Rachel%20Fairburn/rf-1080x1080?_a=BAAAV6DQ",
+    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1758804052/WMC%20Content/Whats%20On/2026/Cabaret/Rachel%20Fairburn/rf-1080x1080?_a=BAAAV6DQ",
     "imageUrls": [
-      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1758804052/WMC%20Content/Whats%20On/2026/Cabaret/Rachel%20Fairburn/rf-1080x1080?_a=BAAAV6DQ",
-      "http://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_630%2Cw_1200/f_auto/q_auto/v1758804052/WMC%20Content/Whats%20On/2026/Cabaret/Rachel%20Fairburn/rf-1080x1080?_a=BAAAV6DQ",
-      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_512%2Cw_1024/f_auto/q_auto/v1758804052/WMC%20Content/Whats%20On/2026/Cabaret/Rachel%20Fairburn/rf-1080x1080?_a=BAAAV6DQ",
       "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1758804052/WMC%20Content/Whats%20On/2026/Cabaret/Rachel%20Fairburn/rf-1080x1080?_a=BAAAV6DQ"
     ],
-    "eventStartDate": "2026-10-22 20:00:00",
-    "eventEndDate": "2026-10-22 23:59:00",
-    "ticketPriceFrom": 20,
-    "ticketPriceTo": 20,
-    "ticketCurrency": "GBP",
-    "subcategory": "Wales Millennium Centre > What's on > 2026 > RACHEL FAIRBURN: Vexy Beasts",
-    "primaryCategory": "Theatre",
-    "genre": "Jazz, Classical, Blues, Rock",
-    "ticketPriceLabel": "£20"
+    "primaryCategory": "Theatre"
   },
   {
     "title": "GAGGED OCTOBER",
@@ -2757,22 +2734,11 @@
     "url": "https://www.wmc.org.uk/en/whats-on/2026/owain-and-henry",
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-05-12T09:07:48.767Z",
-    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1758006927/WMC%20Content/Whats%20On/2026/Donald%20Gordon%20Theatre/Owain%20and%20Henry/O_H_600x400?_a=BAAAV6DQ",
+    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1758006927/WMC%20Content/Whats%20On/2026/Donald%20Gordon%20Theatre/Owain%20and%20Henry/O_H_600x400?_a=BAAAV6DQ",
     "imageUrls": [
-      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1758006927/WMC%20Content/Whats%20On/2026/Donald%20Gordon%20Theatre/Owain%20and%20Henry/O_H_600x400?_a=BAAAV6DQ",
-      "http://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_630%2Cw_1200/f_auto/q_auto/v1758006927/WMC%20Content/Whats%20On/2026/Donald%20Gordon%20Theatre/Owain%20and%20Henry/O_H_600x400?_a=BAAAV6DQ",
-      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_512%2Cw_1024/f_auto/q_auto/v1758006927/WMC%20Content/Whats%20On/2026/Donald%20Gordon%20Theatre/Owain%20and%20Henry/O_H_600x400?_a=BAAAV6DQ",
       "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1758006927/WMC%20Content/Whats%20On/2026/Donald%20Gordon%20Theatre/Owain%20and%20Henry/O_H_600x400?_a=BAAAV6DQ"
     ],
-    "eventStartDate": "2026-11-05 00:00:00",
-    "eventEndDate": "2026-11-28 23:59:00",
-    "ticketPriceFrom": 17,
-    "ticketPriceTo": 17,
-    "ticketCurrency": "GBP",
-    "subcategory": "Wales Millennium Centre > What's on > 2026 > Owain & Henry",
-    "primaryCategory": "Theatre",
-    "genre": "Classical",
-    "ticketPriceLabel": "£17"
+    "primaryCategory": "Theatre"
   },
   {
     "title": "LAURA LEXX: YO-YO TOUR",
@@ -2928,22 +2894,11 @@
     "url": "https://www.wmc.org.uk/en/whats-on/2027/blood-brothers",
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-05-12T09:07:48.767Z",
-    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1763984317/WMC%20Content/Whats%20On/2026/Donald%20Gordon%20Theatre/Blood%20Brothers/BB_Crdff_1280x960?_a=BAAAV6DQ",
+    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1763984317/WMC%20Content/Whats%20On/2026/Donald%20Gordon%20Theatre/Blood%20Brothers/BB_Crdff_1280x960?_a=BAAAV6DQ",
     "imageUrls": [
-      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1763984317/WMC%20Content/Whats%20On/2026/Donald%20Gordon%20Theatre/Blood%20Brothers/BB_Crdff_1280x960?_a=BAAAV6DQ",
-      "http://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_630%2Cw_1200/f_auto/q_auto/v1763984317/WMC%20Content/Whats%20On/2026/Donald%20Gordon%20Theatre/Blood%20Brothers/BB_Crdff_1280x960?_a=BAAAV6DQ",
-      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_512%2Cw_1024/f_auto/q_auto/v1763984317/WMC%20Content/Whats%20On/2026/Donald%20Gordon%20Theatre/Blood%20Brothers/BB_Crdff_1280x960?_a=BAAAV6DQ",
       "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1763984317/WMC%20Content/Whats%20On/2026/Donald%20Gordon%20Theatre/Blood%20Brothers/BB_Crdff_1280x960?_a=BAAAV6DQ"
     ],
-    "eventStartDate": "2027-02-16 19:30:00",
-    "eventEndDate": "2027-02-20 23:00:00",
-    "ticketPriceFrom": 19.5,
-    "ticketPriceTo": 19.5,
-    "ticketCurrency": "GBP",
-    "subcategory": "Wales Millennium Centre > What's on > 2027 > Blood Brothers",
-    "primaryCategory": "Theatre",
-    "genre": "Classical",
-    "ticketPriceLabel": "£19.5"
+    "primaryCategory": "Theatre"
   },
   {
     "title": "ANDREW BIRD - ON THE EDGE TOUR",
@@ -2959,26 +2914,16 @@
   },
   {
     "title": "WELSH NATIONAL OPERA: THE ANONYMOUS LOVER",
-    "date": "Thursday, 4 March 2027 – Friday, 12 March 2027",
+    "date": "Friday, 12 March 2027",
     "url": "https://www.wmc.org.uk/en/whats-on/2027/welsh-national-opera-the-anonymous-lover",
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-05-12T09:07:48.767Z",
-    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1777977697/WMC%20Content/Whats%20On/2027/Weston%20Studio/WNO:%20The%20Anonymous%20Lover/WNO_AL_WMC_1280x960px?_a=BAAAV6DQ",
+    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1777977697/WMC%20Content/Whats%20On/2027/Weston%20Studio/WNO:%20The%20Anonymous%20Lover/WNO_AL_WMC_1280x960px?_a=BAAAV6DQ",
     "imageUrls": [
-      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1777977697/WMC%20Content/Whats%20On/2027/Weston%20Studio/WNO:%20The%20Anonymous%20Lover/WNO_AL_WMC_1280x960px?_a=BAAAV6DQ",
-      "http://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_630%2Cw_1200/f_auto/q_auto/v1777977697/WMC%20Content/Whats%20On/2027/Weston%20Studio/WNO:%20The%20Anonymous%20Lover/WNO_AL_WMC_1280x960px?_a=BAAAV6DQ",
-      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_512%2Cw_1024/f_auto/q_auto/v1777977697/WMC%20Content/Whats%20On/2027/Weston%20Studio/WNO:%20The%20Anonymous%20Lover/WNO_AL_WMC_1280x960px?_a=BAAAV6DQ",
       "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1777977697/WMC%20Content/Whats%20On/2027/Weston%20Studio/WNO:%20The%20Anonymous%20Lover/WNO_AL_WMC_1280x960px?_a=BAAAV6DQ"
     ],
-    "eventStartDate": "2027-03-04 19:30:00",
-    "eventEndDate": "2027-03-12 21:00:00",
-    "ticketPriceFrom": 30,
-    "ticketPriceTo": 30,
-    "ticketCurrency": "GBP",
-    "subcategory": "Wales Millennium Centre > What's on > 2027 > Welsh National Opera: The Anonymous Lover",
     "primaryCategory": "Theatre",
-    "genre": "Classical",
-    "ticketPriceLabel": "£30"
+    "genre": "Classical"
   },
   {
     "title": "WELSH NATIONAL OPERA: JASON AND THE ARGONAUTS",
@@ -2986,12 +2931,22 @@
     "url": "https://www.wmc.org.uk/en/whats-on/2027/welsh-national-opera-jason-and-the-argonauts",
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-05-12T09:07:48.767Z",
-    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1777977709/WMC%20Content/Whats%20On/2027/Weston%20Studio/WNO:%20Jason%20and%20the%20Argonauts/WNO_J_WMC_1280x960px?_a=BAAAV6DQ",
+    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1777977709/WMC%20Content/Whats%20On/2027/Weston%20Studio/WNO:%20Jason%20and%20the%20Argonauts/WNO_J_WMC_1280x960px?_a=BAAAV6DQ",
     "imageUrls": [
+      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1777977709/WMC%20Content/Whats%20On/2027/Weston%20Studio/WNO:%20Jason%20and%20the%20Argonauts/WNO_J_WMC_1280x960px?_a=BAAAV6DQ",
+      "http://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_630%2Cw_1200/f_auto/q_auto/v1777977709/WMC%20Content/Whats%20On/2027/Weston%20Studio/WNO:%20Jason%20and%20the%20Argonauts/WNO_J_WMC_1280x960px?_a=BAAAV6DQ",
+      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_512%2Cw_1024/f_auto/q_auto/v1777977709/WMC%20Content/Whats%20On/2027/Weston%20Studio/WNO:%20Jason%20and%20the%20Argonauts/WNO_J_WMC_1280x960px?_a=BAAAV6DQ",
       "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1777977709/WMC%20Content/Whats%20On/2027/Weston%20Studio/WNO:%20Jason%20and%20the%20Argonauts/WNO_J_WMC_1280x960px?_a=BAAAV6DQ"
     ],
+    "eventStartDate": "2027-03-13 11:30:00",
+    "eventEndDate": "2027-03-13 16:00:00",
+    "ticketPriceFrom": 20,
+    "ticketPriceTo": 20,
+    "ticketCurrency": "GBP",
+    "subcategory": "Wales Millennium Centre > What's on > 2027 > Welsh National Opera: Jason and the Argonauts",
     "primaryCategory": "Theatre",
-    "genre": "Classical"
+    "genre": "Classical",
+    "ticketPriceLabel": "£20"
   },
   {
     "title": "MATTHEW BOURNE'S CINDERELLA",
@@ -3011,11 +2966,22 @@
     "url": "https://www.wmc.org.uk/en/whats-on/2027/mrs-doubtfire",
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-05-12T09:07:48.767Z",
-    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1761744949/WMC%20Content/Whats%20On/2027/Donald%20Gordon%20Theatre/Mrs%20Doubtfire/MD_CARDIFFWMC_1280x960_WhatsOn?_a=BAAAV6DQ",
+    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1761744949/WMC%20Content/Whats%20On/2027/Donald%20Gordon%20Theatre/Mrs%20Doubtfire/MD_CARDIFFWMC_1280x960_WhatsOn?_a=BAAAV6DQ",
     "imageUrls": [
+      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1761744949/WMC%20Content/Whats%20On/2027/Donald%20Gordon%20Theatre/Mrs%20Doubtfire/MD_CARDIFFWMC_1280x960_WhatsOn?_a=BAAAV6DQ",
+      "http://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_630%2Cw_1200/f_auto/q_auto/v1761744949/WMC%20Content/Whats%20On/2027/Donald%20Gordon%20Theatre/Mrs%20Doubtfire/MD_CARDIFFWMC_1280x960_WhatsOn?_a=BAAAV6DQ",
+      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_512%2Cw_1024/f_auto/q_auto/v1761744949/WMC%20Content/Whats%20On/2027/Donald%20Gordon%20Theatre/Mrs%20Doubtfire/MD_CARDIFFWMC_1280x960_WhatsOn?_a=BAAAV6DQ",
       "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1761744949/WMC%20Content/Whats%20On/2027/Donald%20Gordon%20Theatre/Mrs%20Doubtfire/MD_CARDIFFWMC_1280x960_WhatsOn?_a=BAAAV6DQ"
     ],
-    "primaryCategory": "Theatre"
+    "eventStartDate": "2027-03-23 19:30:00",
+    "eventEndDate": "2027-04-11 22:30:00",
+    "ticketPriceFrom": 22,
+    "ticketPriceTo": 22,
+    "ticketCurrency": "GBP",
+    "subcategory": "Wales Millennium Centre > What's on > 2027 > Mrs Doubtfire",
+    "primaryCategory": "Theatre",
+    "genre": "Classical",
+    "ticketPriceLabel": "£22"
   },
   {
     "title": "JUST FOR ONE DAY: THE LIVE AID MUSICAL",
@@ -3120,7 +3086,7 @@
     "url": "https://trafalgartickets.com/new-theatre-cardiff/en-GB/event/music/the-rocket-man-a-tribute-to-elton-john-tickets",
     "venue": "New Theatre Cardiff",
     "scrapedAt": "2026-05-12T09:07:48.767Z",
-    "imageUrl": "https://images.ctfassets.net/le9bkneeoxws/4dRNC02N1xsOueRN1tKHNR/7de13dc02ea34b8721bef7fba00c9eca/TheRocketMan_1200x600.jpg",
+    "imageUrl": "https://trafalgartickets.com/new-theatre-cardiff/en-GB/opengraph-image?f260f528b7390f12",
     "ticketPriceFrom": 38,
     "ticketCurrency": "GBP",
     "ticketPriceLabel": "from £38",
@@ -3128,21 +3094,15 @@
     "subVenue": "Main Auditorium",
     "promoter": "Entertainers Show Providers Limited",
     "genre": "Music",
-    "description": "Book your tickets to  at New Theatre Cardiff at the official Trafalgar Tickets, New Theatre Cardiff box office.",
-    "shortDescription": "Pack your bags, strap yourself in, zero hour 7.30pm, <8pm for later curtain-ups> for a night like no other as we celebrate Sir Elton John! The Rocket Man is the world’s favourite celebration to a musical icon, playing to audiences all around the world and we are delighted to announce our UK tour for 2025. So, catch a star if you can, and wish for something special as we ask you, are you ready for love?  No one else recreates the flamboyant megastar with as much vigour and brilliance. Join us as The Rocket Man and our amazing live band take you down the Yellow Brick Road with two hours of glorious Elton hits, including, Saturday Night’s Alright, Crocodile Rock, I Guess That’s Why They Call it the Blues, Daniel, I’m Still Standing, Philadelphia Freedom, Your Song and many, many more. With dazzling costumes, stunning vocals and sensational piano solos, we take you on a journey through Elton’s life and career, the highs and the lows with many a laugh brought to life, live on stage. This show has it all! So, if it gets to seven o’clock and you wanna rock, book your tickets now!  The Rocket Man – a magical night in tribute to Sir Elton John UK Tour Tickets on sale now. Don’t miss out!  This is a tribute show and is no way affiliated with any original artists/estates/management companies or similar shows. Promoter reserves the right to alter the programme.",
+    "shortDescription": "New Theatre Cardiff is home to a popular array of top-quality musicals, drama, comedy, dance, family shows and more. Book your tickets today.",
+    "description": "New Theatre Cardiff is home to a popular array of top-quality musicals, drama, comedy, dance, family shows and more. Book your tickets today.",
     "musicGenres": [
-      "Blues",
       "Rock"
     ],
     "imageUrls": [
-      "https://images.ctfassets.net/le9bkneeoxws/4dRNC02N1xsOueRN1tKHNR/7de13dc02ea34b8721bef7fba00c9eca/TheRocketMan_1200x600.jpg",
-      "https://images.ctfassets.net/le9bkneeoxws/fb6daasL9oyfuuFgE18uL/6606e3385851614fcc51d368ccbe30a9/TheRocketMan_600x600.jpg",
-      "https://trafalgartickets.com/new-theatre-cardiff/en-GB/event/music/the-rocket-man-a-tribute-to-elton-john-tickets/opengraph-image?34a3bd89618fecf0",
+      "https://trafalgartickets.com/new-theatre-cardiff/en-GB/opengraph-image?f260f528b7390f12",
       "https://images.ctfassets.net/le9bkneeoxws/fb6daasL9oyfuuFgE18uL/6606e3385851614fcc51d368ccbe30a9/TheRocketMan_600x600.jpg?w=2048&fm=webp&q=75"
     ],
-    "eventStartDate": "2026-05-22T18:30:00.000Z",
-    "eventEndDate": "2026-05-22T21:00:00.000Z",
-    "ticketPriceTo": 38,
     "primaryCategory": "Music"
   },
   {
@@ -10526,12 +10486,7 @@
     ],
     "eventStartDate": "2026-05-22T19:15:00+01:00",
     "eventEndDate": "2026-05-22T22:00:00+01:00",
-    "ticketPriceFrom": 38.38,
-    "ticketPriceTo": 80.1,
-    "ticketCurrency": "GBP",
-    "primaryCategory": "Theatre",
-    "genre": "Classical",
-    "ticketPriceLabel": "£38.38–£80.1"
+    "primaryCategory": "Theatre"
   },
   {
     "title": "THE HANDSOME FAMILY",
@@ -10919,1564 +10874,6 @@
     "ticketCurrency": "GBP",
     "primaryCategory": "Music",
     "ticketPriceLabel": "£20.25"
-  },
-  {
-    "title": "OFFICE DOG",
-    "date": "Friday, 22 May 2026",
-    "details": "7.00pm • £10 • 18+",
-    "url": "https://clwbiforbach.seetickets.com/event/office-dog/clwb-ifor-bach/3617949",
-    "venue": "Clwb Ifor Bach",
-    "scrapedAt": "2026-05-19T11:36:15.860Z",
-    "imageUrl": "https://clwb.net/wp-content/uploads/2026/03/Office-Dog-website-320x160.jpg",
-    "musicGenres": [
-      "Pop"
-    ],
-    "imageUrls": [
-      "https://clwb.net/wp-content/uploads/2026/03/Office-Dog-website-320x160.jpg"
-    ],
-    "primaryCategory": "Music",
-    "genre": "Pop",
-    "description": "7.00pm • £10 • 18+",
-    "ticketPriceFrom": 10,
-    "ticketCurrency": "GBP",
-    "ticketPriceLabel": "£10"
-  },
-  {
-    "title": "STARBURSTER",
-    "date": "Friday, 22 May 2026 – Saturday, 23 May 2026",
-    "details": "11.00pm • £3+ • 18+",
-    "url": "https://www.fatsoma.com/e/hy6igmrt/la/tf7a",
-    "venue": "Clwb Ifor Bach",
-    "scrapedAt": "2026-05-19T11:36:15.860Z",
-    "imageUrl": "https://cdn2.fatsoma.com/media/W1siZiIsInB1YmxpYy8yMDI2LzQvOS8xMC8zLzI2Lzc2MC9TdGFyYnVyc3Rlci5qcGciXV0",
-    "description": "★ STARBURSTER ★\n\nplaying the newest in rock, post-punk and everything in between. \nFFO: DRUNKTANK, Fontaines D.C., IDLES + MORE",
-    "shortDescription": "STARBURSTER  at Clwb Ifor Bach, Cardiff on 22nd May 2026. Buy tickets in just 2-clicks with our super-fast checkout",
-    "musicGenres": [
-      "Punk",
-      "Rock"
-    ],
-    "imageUrls": [
-      "https://cdn2.fatsoma.com/media/W1siZiIsInB1YmxpYy8yMDI2LzQvOS8xMC8zLzI2Lzc2MC9TdGFyYnVyc3Rlci5qcGciXV0",
-      "https://fatsoma.imgix.net/W1siZiIsInB1YmxpYy8yMDI2LzQvOS8xMC8zLzI2Lzc2MC9TdGFyYnVyc3Rlci5qcGciXV0?auto=format%2Ccompress",
-      "https://clwb.net/wp-content/uploads/2025/10/Starburster-website-1-320x160.jpg"
-    ],
-    "eventStartDate": "2026-05-22T22:00:00.000Z",
-    "eventEndDate": "2026-05-23T03:00:00.000Z",
-    "ticketPriceFrom": 3,
-    "ticketPriceTo": 5,
-    "ticketCurrency": "GBP",
-    "primaryCategory": "Music",
-    "genre": "Punk, Rock",
-    "ticketPriceLabel": "£3–£5"
-  },
-  {
-    "title": "THE PINK PONY CLWB",
-    "date": "Friday, 22 May 2026 – Saturday, 23 May 2026",
-    "details": "DJ MELFED MELYS • 11.00pm • £3+ • 18+",
-    "url": "https://www.fatsoma.com/e/jk05lk6a/la/bjgx",
-    "venue": "Clwb Ifor Bach",
-    "scrapedAt": "2026-05-19T11:36:15.860Z",
-    "imageUrl": "https://cdn2.fatsoma.com/media/W1siZiIsInB1YmxpYy8yMDI2LzQvMTUvMTMvNDMvNDYvMzkvUFBDIEJBTk5FUi5qcGciXV0",
-    "description": "⋆౨ৎ˚⟡˖ ࣪  Welcome back to The Pink Pony Clwb ⋆౨ৎ˚⟡˖ ࣪ \n★ IMPORTANT INFO ★ due to high demand for this event we will be selling MORE tickets on the door - this means that the online tickets will sell out faster - if you want guaranteed entry, you will need to be quick! \nPS: Remember that this ticket guarantees access to all floors at Clwb ⚔️\n\n★ Pssst... PPC Membership/entry is free for those signed up to our Clwbnight Newsletter :-) Free codes out Thursday! Sign up here: Clwbnight Newsletter",
-    "shortDescription": "⋆౨ৎ˚⟡˖ ࣪ THE PINK PONY CLWB ⋆˚⟡౨ৎ ࣪˖ at Clwb Ifor Bach, Cardiff on 22nd May 2026. Buy tickets in just 2-clicks with our super-fast checkout",
-    "imageUrls": [
-      "https://cdn2.fatsoma.com/media/W1siZiIsInB1YmxpYy8yMDI2LzQvMTUvMTMvNDMvNDYvMzkvUFBDIEJBTk5FUi5qcGciXV0",
-      "https://fatsoma.imgix.net/W1siZiIsInB1YmxpYy8yMDI2LzQvMTUvMTMvNDMvNDYvMzkvUFBDIEJBTk5FUi5qcGciXV0?auto=format%2Ccompress",
-      "https://clwb.net/wp-content/uploads/2025/11/PPC-Website-320x160.jpg"
-    ],
-    "eventStartDate": "2026-05-22T22:00:00.000Z",
-    "eventEndDate": "2026-05-23T03:00:00.000Z",
-    "ticketPriceFrom": 3,
-    "ticketPriceTo": 5,
-    "ticketCurrency": "GBP",
-    "primaryCategory": "Music",
-    "ticketPriceLabel": "£3–£5"
-  },
-  {
-    "title": "PINS",
-    "date": "Saturday, 23 May 2026",
-    "details": "EM KOKO • 7.00pm • £13 • 18+",
-    "url": "https://clwbiforbach.seetickets.com/event/pins/clwb-ifor-bach/3592676",
-    "venue": "Clwb Ifor Bach",
-    "scrapedAt": "2026-05-19T11:36:15.860Z",
-    "imageUrl": "https://clwb.net/wp-content/uploads/2026/01/Pins-website-320x160.jpg",
-    "musicGenres": [
-      "Pop"
-    ],
-    "imageUrls": [
-      "https://clwb.net/wp-content/uploads/2026/01/Pins-website-320x160.jpg"
-    ],
-    "primaryCategory": "Music",
-    "genre": "Pop",
-    "description": "EM KOKO • 7.00pm • £13 • 18+",
-    "ticketPriceFrom": 13,
-    "ticketCurrency": "GBP",
-    "ticketPriceLabel": "£13"
-  },
-  {
-    "title": "TAKE ME OUT",
-    "date": "Saturday, 23 May 2026 – Sunday, 24 May 2026",
-    "details": "11.00pm • £3+ • 18+",
-    "url": "https://www.fatsoma.com/e/18h2n4bw/la/befn",
-    "venue": "Clwb Ifor Bach",
-    "scrapedAt": "2026-05-19T11:36:15.860Z",
-    "imageUrl": "https://cdn2.fatsoma.com/media/W1siZiIsInB1YmxpYy8yMDI2LzQvMTUvMTMvNTMvNDcvOTIwL1JhY2tNdWx0aXBhcnQyMDI2MDExMi01Ni0zenRxZWguanBnIl1d",
-    "description": "rock anthems and alternative bangers you know all the words to, croeso to Caerdydd's ultimate indie night out.\nffo: arctic monkeys * the killers * wet leg* paramore*  wolf alice * tame impala *  stereophonics * the killers franz ferdinand * oasis * two door cinema club + \n1 TICKET = ACCES TO ALL FLOORS",
-    "shortDescription": "TAKE ME OUT at Clwb Ifor Bach, Cardiff on 23rd May 2026. Buy tickets in just 2-clicks with our super-fast checkout",
-    "imageUrls": [
-      "https://cdn2.fatsoma.com/media/W1siZiIsInB1YmxpYy8yMDI2LzQvMTUvMTMvNTMvNDcvOTIwL1JhY2tNdWx0aXBhcnQyMDI2MDExMi01Ni0zenRxZWguanBnIl1d",
-      "https://fatsoma.imgix.net/W1siZiIsInB1YmxpYy8yMDI2LzQvMTUvMTMvNTMvNDcvOTIwL1JhY2tNdWx0aXBhcnQyMDI2MDExMi01Ni0zenRxZWguanBnIl1d?auto=format%2Ccompress",
-      "https://clwb.net/wp-content/uploads/2026/01/TAKE-ME-OUT-BANNER-320x160.jpg"
-    ],
-    "eventStartDate": "2026-05-23T22:00:00.000Z",
-    "eventEndDate": "2026-05-24T03:00:00.000Z",
-    "ticketPriceFrom": 3,
-    "ticketPriceTo": 5,
-    "ticketCurrency": "GBP",
-    "primaryCategory": "Film",
-    "genre": "Indie, Rock",
-    "ticketPriceLabel": "£3–£5"
-  },
-  {
-    "title": "RUSH",
-    "date": "Saturday, 23 May 2026 – Sunday, 24 May 2026",
-    "details": "11.00pm • £3+ • 18+",
-    "url": "https://www.fatsoma.com/e/levujva3/la/nfij",
-    "venue": "Clwb Ifor Bach",
-    "scrapedAt": "2026-05-19T11:36:15.860Z",
-    "imageUrl": "https://cdn2.fatsoma.com/media/W1siZiIsInB1YmxpYy8yMDI2LzQvMTUvMTMvNTIvMzgvMjUzL1JhY2tNdWx0aXBhcnQyMDI2MDExMi02MC0xMGJyaDI0LmpwZyJdXQ",
-    "description": "expect high tempo, pop &amp; disco anthems that will keep you dancing till the early hours of Sunday morning. \nbritney * sabrina * chappell * madonna *  billie * cher charli * abba *  lady gaga * kylie * sister sledge *rihanna * troye * donna summer * addison * chic + MORE★ IMPORTANT INFO ★ \nThis ticket guarantees access to all floors at Clwb.\nDue to high demand for this event we will be selling MORE tickets on the door - this means that the online tickets will sell out faster - if you want guaranteed entry, you will need to be quick! \n\n\n\n\n⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠀⠀⠀⠀⠀⠀⠀",
-    "shortDescription": "RUSH  at Clwb Ifor Bach, Cardiff on 23rd May 2026. Buy tickets in just 2-clicks with our super-fast checkout",
-    "musicGenres": [
-      "Pop"
-    ],
-    "imageUrls": [
-      "https://cdn2.fatsoma.com/media/W1siZiIsInB1YmxpYy8yMDI2LzQvMTUvMTMvNTIvMzgvMjUzL1JhY2tNdWx0aXBhcnQyMDI2MDExMi02MC0xMGJyaDI0LmpwZyJdXQ",
-      "https://fatsoma.imgix.net/W1siZiIsInB1YmxpYy8yMDI2LzQvMTUvMTMvNTIvMzgvMjUzL1JhY2tNdWx0aXBhcnQyMDI2MDExMi02MC0xMGJyaDI0LmpwZyJdXQ?auto=format%2Ccompress",
-      "https://clwb.net/wp-content/uploads/2026/01/banner-3-320x160.jpg"
-    ],
-    "eventStartDate": "2026-05-23T22:00:00.000Z",
-    "eventEndDate": "2026-05-24T03:00:00.000Z",
-    "ticketPriceFrom": 3,
-    "ticketPriceTo": 5,
-    "ticketCurrency": "GBP",
-    "primaryCategory": "Music",
-    "genre": "Pop",
-    "ticketPriceLabel": "£3–£5"
-  },
-  {
-    "title": "WEATHERDAY",
-    "date": "Sunday, 24 May 2026",
-    "details": "7.30pm • £15 • 14+",
-    "url": "https://clwbiforbach.seetickets.com/event/weatherday/clwb-ifor-bach/3595559",
-    "venue": "Clwb Ifor Bach",
-    "scrapedAt": "2026-05-19T11:36:15.860Z",
-    "imageUrl": "https://clwb.net/wp-content/uploads/2026/01/Weatherday-website-320x160.jpg",
-    "musicGenres": [
-      "Pop"
-    ],
-    "imageUrls": [
-      "https://clwb.net/wp-content/uploads/2026/01/Weatherday-website-320x160.jpg"
-    ],
-    "primaryCategory": "Music",
-    "genre": "Pop",
-    "description": "7.30pm • £15 • 14+",
-    "ticketPriceFrom": 15,
-    "ticketCurrency": "GBP",
-    "ticketPriceLabel": "£15"
-  },
-  {
-    "title": "COURTNEY MARIE ANDREWS",
-    "date": "Wednesday, 27 May 2026",
-    "details": "7.00pm • £25 • 14+",
-    "url": "https://clwbiforbach.seetickets.com/event/courtney-marie-andrews/clwb-ifor-bach/3621060",
-    "venue": "Clwb Ifor Bach",
-    "scrapedAt": "2026-05-19T11:36:15.860Z",
-    "imageUrl": "https://clwb.net/wp-content/uploads/2026/03/Courtney-Marie-Andrews-Website-320x160.jpg",
-    "musicGenres": [
-      "Pop"
-    ],
-    "imageUrls": [
-      "https://clwb.net/wp-content/uploads/2026/03/Courtney-Marie-Andrews-Website-320x160.jpg"
-    ],
-    "primaryCategory": "Music",
-    "genre": "Pop",
-    "description": "7.00pm • £25 • 14+",
-    "ticketPriceFrom": 25,
-    "ticketCurrency": "GBP",
-    "ticketPriceLabel": "£25"
-  },
-  {
-    "title": "TRASHPOP",
-    "date": "Thursday, 28 May 2026",
-    "details": "8.00pm • £7 • 16+",
-    "url": "https://www.fatsoma.com/e/hg8c0mmi/la/nc6e",
-    "venue": "Clwb Ifor Bach",
-    "scrapedAt": "2026-05-19T11:36:15.860Z",
-    "imageUrl": "https://cdn2.fatsoma.com/media/W1siZiIsInB1YmxpYy8yMDI2LzUvMS8xNS8xMi8zOC8yODMvUmFja011bHRpcGFydDIwMjYwNTAxLTY4LTFhNnVjMDMuanBnIl1d",
-    "description": "WELCOME 2 TRASHPOP ~ CELEBRATING UNDERGROUND ELECTRONIC TALENT IN CYMRU.\n\na night of music, fashion and community. trashpop presents a hybrid-live showcase, with live artists, djs and pop-ups from Breezy Archive, Finley's House &amp; Lucky cow.\nffo: pc music, hyper pop, underground rap, bubblegum bass, electro clash, electronic, hardcore +\n\n♬⋆ tix start from £6*♬⋆ wheelchair accessible ♬⋆ gender neutral toilets♬⋆ performances will contain flashing lights\nany additional requirements/questions dm us @trashpop.cdf\n*you will be asked to present a valid form of Student ID on the door for this ticket tier",
-    "shortDescription": "TRASHPOP  at Clwb Ifor Bach, Cardiff on 28th May 2026. Buy tickets in just 2-clicks with our super-fast checkout",
-    "musicGenres": [
-      "Rap",
-      "Electronic",
-      "Pop"
-    ],
-    "imageUrls": [
-      "https://cdn2.fatsoma.com/media/W1siZiIsInB1YmxpYy8yMDI2LzUvMS8xNS8xMi8zOC8yODMvUmFja011bHRpcGFydDIwMjYwNTAxLTY4LTFhNnVjMDMuanBnIl1d",
-      "https://fatsoma.imgix.net/W1siZiIsInB1YmxpYy8yMDI2LzUvMS8xNS8xMi8zOC8yODMvUmFja011bHRpcGFydDIwMjYwNTAxLTY4LTFhNnVjMDMuanBnIl1d?auto=format%2Ccompress",
-      "https://clwb.net/wp-content/uploads/2026/05/trashpop-320x160.jpg"
-    ],
-    "eventStartDate": "2026-05-28T19:00:00.000Z",
-    "eventEndDate": "2026-05-28T22:00:00.000Z",
-    "ticketPriceFrom": 6,
-    "ticketPriceTo": 7,
-    "ticketCurrency": "GBP",
-    "primaryCategory": "Music",
-    "genre": "Rap, Electronic, Pop",
-    "ticketPriceLabel": "£6–£7"
-  },
-  {
-    "title": "SŴN SOCIALS: SILVERWINGKILLER",
-    "date": "Friday, 29 May 2026",
-    "details": "SPIT HOOD | GWONSUN | POGRIFF • 7.00pm • £10 • 18+",
-    "url": "https://clwbiforbach.seetickets.com/event/silverwingkiller/clwb-ifor-bach/3603270",
-    "venue": "Clwb Ifor Bach",
-    "scrapedAt": "2026-05-19T11:36:15.860Z",
-    "imageUrl": "https://clwb.net/wp-content/uploads/2026/02/2000x1000-SwnSocials-SWK-320x160.jpg",
-    "musicGenres": [
-      "Pop"
-    ],
-    "imageUrls": [
-      "https://clwb.net/wp-content/uploads/2026/02/2000x1000-SwnSocials-SWK-320x160.jpg"
-    ],
-    "primaryCategory": "Music",
-    "genre": "Pop",
-    "description": "SPIT HOOD | GWONSUN | POGRIFF • 7.00pm • £10 • 18+",
-    "ticketPriceFrom": 10,
-    "ticketCurrency": "GBP",
-    "ticketPriceLabel": "£10"
-  },
-  {
-    "title": "DIRTBAG",
-    "date": "Friday, 29 May 2026 – Saturday, 30 May 2026",
-    "details": "11.00pm • £3+ • 18+",
-    "url": "https://www.fatsoma.com/e/8ll7ap7v/la/4jmi",
-    "venue": "Clwb Ifor Bach",
-    "scrapedAt": "2026-05-19T11:36:15.860Z",
-    "imageUrl": "https://cdn2.fatsoma.com/media/W1siZiIsInB1YmxpYy8yMDI2LzUvMjAvMTUvOC8yLzY1Ni9SYWNrTXVsdGlwYXJ0MjAyNjA1MjAtNjYtMWIzaGMwcC5qcGciXV0",
-    "description": "clwbnights just got heavy. join us @ clwb for emo, nu metal, pop punk, alt and everything in between. ffo: turnstile, slipknot, scowl, paramore, korn, system of a down, bring me the horizon +1 TICKET = ACCESS TO ALL FLOORS",
-    "shortDescription": "DIRTBAG (EMO, NU METAL, POST-PUNK +) at Clwb Ifor Bach, Cardiff on 29th May 2026. Buy tickets in just 2-clicks with our super-fast checkout",
-    "musicGenres": [
-      "Punk",
-      "Metal",
-      "Pop"
-    ],
-    "imageUrls": [
-      "https://cdn2.fatsoma.com/media/W1siZiIsInB1YmxpYy8yMDI2LzUvMjAvMTUvOC8yLzY1Ni9SYWNrTXVsdGlwYXJ0MjAyNjA1MjAtNjYtMWIzaGMwcC5qcGciXV0",
-      "https://fatsoma.imgix.net/W1siZiIsInB1YmxpYy8yMDI2LzUvMjAvMTUvOC8yLzY1Ni9SYWNrTXVsdGlwYXJ0MjAyNjA1MjAtNjYtMWIzaGMwcC5qcGciXV0?auto=format%2Ccompress",
-      "https://clwb.net/wp-content/uploads/2026/02/dirtbag-no-date-320x160.jpg"
-    ],
-    "eventStartDate": "2026-05-29T22:00:00.000Z",
-    "eventEndDate": "2026-05-30T03:00:00.000Z",
-    "ticketPriceFrom": 3,
-    "ticketPriceTo": 5,
-    "ticketCurrency": "GBP",
-    "primaryCategory": "Music",
-    "genre": "Punk, Metal, Pop",
-    "ticketPriceLabel": "£3–£5"
-  },
-  {
-    "title": "CLWB XCX",
-    "date": "Friday, 29 May 2026 – Saturday, 30 May 2026",
-    "details": "11.00pm • £3+ • 18+",
-    "url": "https://www.fatsoma.com/e/aiafaz2w/la/c8oi",
-    "venue": "Clwb Ifor Bach",
-    "scrapedAt": "2026-05-19T11:36:15.860Z",
-    "imageUrl": "https://cdn2.fatsoma.com/media/W1siZiIsInB1YmxpYy8yMDI2LzQvMTUvMTUvMi8zNC80MjkvUmFja011bHRpcGFydDIwMjYwMTI4LTYyLW1ia3NkZi5qcGciXV0",
-    "description": "guess who's back ☆ playing charli + friends + hyper pop tunes all night long !! &lt;3\n\n★IMPORTANT INFO: due to high demand we will be keeping some tickets for on the door for this event - this means that the online tickets will sell out fast - if you want guaranteed entry, you will need to be quick! With this ticket you will also have access to the other event taking place in our building ★\n\nPlease note this event is booked in for the Top Floor but this could be subject to change and is dependent on capacity. If you have any accessibility requirements please contact access@clwb.net",
-    "shortDescription": "clwb xcx  at Clwb Ifor Bach, Cardiff on 29th May 2026. Buy tickets in just 2-clicks with our super-fast checkout",
-    "musicGenres": [
-      "Pop"
-    ],
-    "imageUrls": [
-      "https://cdn2.fatsoma.com/media/W1siZiIsInB1YmxpYy8yMDI2LzQvMTUvMTUvMi8zNC80MjkvUmFja011bHRpcGFydDIwMjYwMTI4LTYyLW1ia3NkZi5qcGciXV0",
-      "https://fatsoma.imgix.net/W1siZiIsInB1YmxpYy8yMDI2LzQvMTUvMTUvMi8zNC80MjkvUmFja011bHRpcGFydDIwMjYwMTI4LTYyLW1ia3NkZi5qcGciXV0?auto=format%2Ccompress",
-      "https://clwb.net/wp-content/uploads/2026/01/clwb-xcx-1-320x160.jpg"
-    ],
-    "eventStartDate": "2026-05-29T22:00:00.000Z",
-    "eventEndDate": "2026-05-30T03:00:00.000Z",
-    "ticketPriceFrom": 3,
-    "ticketPriceTo": 5,
-    "ticketCurrency": "GBP",
-    "primaryCategory": "Music",
-    "genre": "Pop",
-    "ticketPriceLabel": "£3–£5"
-  },
-  {
-    "title": "THE ROGUES",
-    "date": "Saturday, 30 May 2026",
-    "details": "7.00pm • £10 • 18+",
-    "url": "https://clwbiforbach.seetickets.com/event/the-rogues/clwb-ifor-bach/3596895",
-    "venue": "Clwb Ifor Bach",
-    "scrapedAt": "2026-05-19T11:36:15.860Z",
-    "imageUrl": "https://clwb.net/wp-content/uploads/2026/01/The-Rogues-website-320x160.jpg",
-    "musicGenres": [
-      "Pop"
-    ],
-    "imageUrls": [
-      "https://clwb.net/wp-content/uploads/2026/01/The-Rogues-website-320x160.jpg"
-    ],
-    "primaryCategory": "Music",
-    "genre": "Pop",
-    "description": "7.00pm • £10 • 18+",
-    "ticketPriceFrom": 10,
-    "ticketCurrency": "GBP",
-    "ticketPriceLabel": "£10"
-  },
-  {
-    "title": "RUSH",
-    "date": "Saturday, 30 May 2026 – Sunday, 31 May 2026",
-    "details": "11.00pm • £3+ • 18+",
-    "url": "https://www.fatsoma.com/e/2ijwkp85/la/ifca",
-    "venue": "Clwb Ifor Bach",
-    "scrapedAt": "2026-05-19T11:36:15.860Z",
-    "imageUrl": "https://cdn2.fatsoma.com/media/W1siZiIsInB1YmxpYy8yMDI2LzQvMTUvMTUvNi84LzYwNC9SYWNrTXVsdGlwYXJ0MjAyNjAxMTItNjAtMTBicmgyNC5qcGciXV0",
-    "description": "expect high tempo, pop &amp; disco anthems that will keep you dancing till the early hours of Sunday morning. \nbritney * sabrina * chappell * madonna *  billie * cher charli * abba *  lady gaga * kylie * sister sledge *rihanna * troye * donna summer * addison * chic + MORE★ IMPORTANT INFO ★ \nThis ticket guarantees access to all floors at Clwb.\nDue to high demand for this event we will be selling MORE tickets on the door - this means that the online tickets will sell out faster - if you want guaranteed entry, you will need to be quick! \n\n\n\n\n⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠀⠀⠀⠀⠀⠀⠀",
-    "shortDescription": "RUSH  at Clwb Ifor Bach, Cardiff on 30th May 2026. Buy tickets in just 2-clicks with our super-fast checkout",
-    "musicGenres": [
-      "Pop"
-    ],
-    "imageUrls": [
-      "https://cdn2.fatsoma.com/media/W1siZiIsInB1YmxpYy8yMDI2LzQvMTUvMTUvNi84LzYwNC9SYWNrTXVsdGlwYXJ0MjAyNjAxMTItNjAtMTBicmgyNC5qcGciXV0",
-      "https://fatsoma.imgix.net/W1siZiIsInB1YmxpYy8yMDI2LzQvMTUvMTUvNi84LzYwNC9SYWNrTXVsdGlwYXJ0MjAyNjAxMTItNjAtMTBicmgyNC5qcGciXV0?auto=format%2Ccompress",
-      "https://clwb.net/wp-content/uploads/2026/01/banner-3-320x160.jpg"
-    ],
-    "eventStartDate": "2026-05-30T22:00:00.000Z",
-    "eventEndDate": "2026-05-31T03:00:00.000Z",
-    "ticketPriceFrom": 3,
-    "ticketPriceTo": 5,
-    "ticketCurrency": "GBP",
-    "primaryCategory": "Music",
-    "genre": "Pop",
-    "ticketPriceLabel": "£3–£5"
-  },
-  {
-    "title": "TAKE ME OUT",
-    "date": "Saturday, 30 May 2026 – Sunday, 31 May 2026",
-    "details": "11.00pm • £3+ • 18+",
-    "url": "https://www.fatsoma.com/e/nw8ukblq/la/ybsx",
-    "venue": "Clwb Ifor Bach",
-    "scrapedAt": "2026-05-19T11:36:15.860Z",
-    "imageUrl": "https://cdn2.fatsoma.com/media/W1siZiIsInB1YmxpYy8yMDI2LzQvMTUvMTUvNy8zLzU3MC9SYWNrTXVsdGlwYXJ0MjAyNjAxMTItNTYtM3p0cWVoLmpwZyJdXQ",
-    "description": "rock anthems and alternative bangers you know all the words to, croeso to Caerdydd's ultimate indie night out.\nffo: arctic monkeys * the killers * wet leg* paramore*  wolf alice * tame impala *  stereophonics * the killers franz ferdinand * oasis * two door cinema club + \n1 TICKET = ACCES TO ALL FLOORS",
-    "shortDescription": "TAKE ME OUT at Clwb Ifor Bach, Cardiff on 30th May 2026. Buy tickets in just 2-clicks with our super-fast checkout",
-    "imageUrls": [
-      "https://cdn2.fatsoma.com/media/W1siZiIsInB1YmxpYy8yMDI2LzQvMTUvMTUvNy8zLzU3MC9SYWNrTXVsdGlwYXJ0MjAyNjAxMTItNTYtM3p0cWVoLmpwZyJdXQ",
-      "https://fatsoma.imgix.net/W1siZiIsInB1YmxpYy8yMDI2LzQvMTUvMTUvNy8zLzU3MC9SYWNrTXVsdGlwYXJ0MjAyNjAxMTItNTYtM3p0cWVoLmpwZyJdXQ?auto=format%2Ccompress",
-      "https://clwb.net/wp-content/uploads/2026/01/TAKE-ME-OUT-BANNER-320x160.jpg"
-    ],
-    "eventStartDate": "2026-05-30T22:00:00.000Z",
-    "eventEndDate": "2026-05-31T03:00:00.000Z",
-    "ticketPriceFrom": 3,
-    "ticketPriceTo": 5,
-    "ticketCurrency": "GBP",
-    "primaryCategory": "Film",
-    "genre": "Indie, Rock",
-    "ticketPriceLabel": "£3–£5"
-  },
-  {
-    "title": "GREEN MAN RISING FINAL",
-    "date": "Tuesday, 2 June 2026",
-    "details": "7.00pm • FREE | AM DDIM (RSVP) • 14+ (Under 16's accompanied by an adult)",
-    "url": "https://clwbiforbach.seetickets.com/event/green-man-rising-live-final/clwb-ifor-bach/3635146",
-    "venue": "Clwb Ifor Bach",
-    "scrapedAt": "2026-05-19T11:36:15.860Z",
-    "imageUrl": "https://clwb.net/wp-content/uploads/2026/04/GMRISING-320x160.jpg",
-    "musicGenres": [
-      "Pop"
-    ],
-    "imageUrls": [
-      "https://clwb.net/wp-content/uploads/2026/04/GMRISING-320x160.jpg"
-    ],
-    "primaryCategory": "Music",
-    "genre": "Pop",
-    "description": "7.00pm • FREE | AM DDIM (RSVP) • 14+ (Under 16's accompanied by an adult)"
-  },
-  {
-    "title": "REAL FARMER",
-    "date": "Thursday, 4 June 2026",
-    "details": "7.00pm • £12.50 • 14+",
-    "url": "https://clwbiforbach.seetickets.com/event/real-farmer/clwb-ifor-bach/3606140",
-    "venue": "Clwb Ifor Bach",
-    "scrapedAt": "2026-05-19T11:36:15.860Z",
-    "imageUrl": "https://clwb.net/wp-content/uploads/2026/02/Real-Farmer-Website-320x160.jpg",
-    "musicGenres": [
-      "Pop"
-    ],
-    "imageUrls": [
-      "https://clwb.net/wp-content/uploads/2026/02/Real-Farmer-Website-320x160.jpg"
-    ],
-    "primaryCategory": "Music",
-    "genre": "Pop",
-    "description": "7.00pm • £12.50 • 14+",
-    "ticketPriceFrom": 12.5,
-    "ticketCurrency": "GBP",
-    "ticketPriceLabel": "£12.50"
-  },
-  {
-    "title": "BEN OTTEWELL (GOMEZ) & JAMES WALSH (STARSAILOR)",
-    "date": "Friday, 5 June 2026",
-    "details": "7.00pm • £28 • 18+",
-    "url": "https://clwbiforbach.seetickets.com/event/ben-ottewell-gomez-james-walsh-starsailor-/clwb-ifor-bach/3612339",
-    "venue": "Clwb Ifor Bach",
-    "scrapedAt": "2026-05-19T11:36:15.860Z",
-    "imageUrl": "https://clwb.net/wp-content/uploads/2026/03/Ben-Ottewell-website-320x160.jpg",
-    "musicGenres": [
-      "Pop"
-    ],
-    "imageUrls": [
-      "https://clwb.net/wp-content/uploads/2026/03/Ben-Ottewell-website-320x160.jpg"
-    ],
-    "primaryCategory": "Music",
-    "genre": "Pop",
-    "description": "7.00pm • £28 • 18+",
-    "ticketPriceFrom": 28,
-    "ticketCurrency": "GBP",
-    "ticketPriceLabel": "£28"
-  },
-  {
-    "title": "HEADWRECK",
-    "date": "Saturday, 6 June 2026",
-    "details": "PARADISE FELL | CELAVI • 7.00pm • £15 • 18+ (Under 16's accompanied by an adult)",
-    "url": "https://www.seetickets.com/event/headwreck-clwb-ifor-bach-cardiff/clwb-ifor-bach/3614247",
-    "venue": "Clwb Ifor Bach",
-    "scrapedAt": "2026-05-19T11:36:15.860Z",
-    "imageUrl": "https://clwb.net/wp-content/uploads/2026/05/Headwreck_ClwbIforBach_06062026-320x160.jpg",
-    "musicGenres": [
-      "Pop"
-    ],
-    "imageUrls": [
-      "https://clwb.net/wp-content/uploads/2026/05/Headwreck_ClwbIforBach_06062026-320x160.jpg"
-    ],
-    "primaryCategory": "Music",
-    "genre": "Pop",
-    "description": "PARADISE FELL | CELAVI • 7.00pm • £15 • 18+ (Under 16's accompanied by an adult)",
-    "ticketPriceFrom": 15,
-    "ticketCurrency": "GBP",
-    "ticketPriceLabel": "£15"
-  },
-  {
-    "title": "CATTY & LIAM J EDWARDS – THE OFFICIAL PRIDE CYMRU LAUNCH PARTY",
-    "date": "Wednesday, 10 June 2026",
-    "details": "7.30pm • £14 • 14+ (Under 16's accompanied by an adult)",
-    "url": "https://www.seetickets.com/event/catty-liam-j-edwards-pride-cymru-launch-party/clwb-ifor-bach/3636535",
-    "venue": "Clwb Ifor Bach",
-    "scrapedAt": "2026-05-19T11:36:15.860Z",
-    "imageUrl": "https://clwb.net/wp-content/uploads/2026/05/CATTY-320x160.jpg",
-    "musicGenres": [
-      "Pop"
-    ],
-    "imageUrls": [
-      "https://clwb.net/wp-content/uploads/2026/05/CATTY-320x160.jpg"
-    ],
-    "primaryCategory": "Music",
-    "genre": "Pop",
-    "description": "7.30pm • £14 • 14+ (Under 16's accompanied by an adult)",
-    "ticketPriceFrom": 14,
-    "ticketCurrency": "GBP",
-    "ticketPriceLabel": "£14"
-  },
-  {
-    "title": "TRAMPOLENE",
-    "date": "Friday, 12 June 2026",
-    "details": "SLAK • 7.00pm • £12.50 • 18+",
-    "url": "https://clwbiforbach.seetickets.com/event/trampolene/clwb-ifor-bach/3612893",
-    "venue": "Clwb Ifor Bach",
-    "scrapedAt": "2026-05-19T11:36:15.860Z",
-    "imageUrl": "https://clwb.net/wp-content/uploads/2026/03/Trampolene-website-320x160.jpg",
-    "musicGenres": [
-      "Pop"
-    ],
-    "imageUrls": [
-      "https://clwb.net/wp-content/uploads/2026/03/Trampolene-website-320x160.jpg"
-    ],
-    "primaryCategory": "Music",
-    "genre": "Pop",
-    "description": "SLAK • 7.00pm • £12.50 • 18+",
-    "ticketPriceFrom": 12.5,
-    "ticketCurrency": "GBP",
-    "ticketPriceLabel": "£12.50"
-  },
-  {
-    "title": "A LITTLE GAY CLWB NIGHT (PRIDE WARM-UP)",
-    "date": "Friday, 12 June 2026 – Saturday, 13 June 2026",
-    "details": "MELFED MELYS · REPLICXNT · RAVEN · MOLLY PALMER • 11.00pm • £3+ • 18+",
-    "url": "https://www.fatsoma.com/e/p31qqeq5/la/u8qu",
-    "venue": "Clwb Ifor Bach",
-    "scrapedAt": "2026-05-19T11:36:15.860Z",
-    "imageUrl": "https://cdn2.fatsoma.com/media/W1siZiIsInB1YmxpYy8yMDI2LzUvMTIvMTQvMzMvMTIvMzU2L1JhY2tNdWx0aXBhcnQyMDI2MDUxMi01Ni0xdGJrdWQwLmpwZyJdXQ",
-    "description": "“TheLittleGayClub” is back for Pride!!! ⋆｡𖦹 °.🏳️‍🌈⋆❀˖°\n\n\nCome sweat it out at our warm up clwb with a FULL building take-over &lt;3\n\n❀ Molly Palmer’s Midnight Sun room up top, playing non-stop glittery Pop\n❀ Melfed Melys, Replicxnt &amp; Raven are commanding our Immaterial Room downstairs, playing hyper pop, dance and more\n\n★ IMPORTANT INFO ★ \nThis ticket guarantees access to all floors at Clwb.\nDue to high demand for this event we will be selling MORE tickets on the door - this means that the online tickets will sell out faster - if you want guaranteed entry, you will need to be quick! \n\n\n\n\n⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠀⠀⠀⠀⠀⠀⠀",
-    "shortDescription": "A Little Gay Clwb Night (Pride Warm-Up) at Clwb Ifor Bach, Cardiff on 12th Jun 2026. Buy tickets in just 2-clicks with our super-fast checkout",
-    "musicGenres": [
-      "Pop"
-    ],
-    "imageUrls": [
-      "https://cdn2.fatsoma.com/media/W1siZiIsInB1YmxpYy8yMDI2LzUvMTIvMTQvMzMvMTIvMzU2L1JhY2tNdWx0aXBhcnQyMDI2MDUxMi01Ni0xdGJrdWQwLmpwZyJdXQ",
-      "https://fatsoma.imgix.net/W1siZiIsInB1YmxpYy8yMDI2LzUvMTIvMTQvMzMvMTIvMzU2L1JhY2tNdWx0aXBhcnQyMDI2MDUxMi01Ni0xdGJrdWQwLmpwZyJdXQ?auto=format%2Ccompress",
-      "https://clwb.net/wp-content/uploads/2026/05/ALGCN-320x160.jpg"
-    ],
-    "eventStartDate": "2026-06-12T22:00:00.000Z",
-    "eventEndDate": "2026-06-13T03:00:00.000Z",
-    "ticketPriceFrom": 3,
-    "ticketPriceTo": 5,
-    "ticketCurrency": "GBP",
-    "primaryCategory": "Music",
-    "genre": "Pop",
-    "ticketPriceLabel": "£3–£5"
-  },
-  {
-    "title": "MEET ME IN THE BATHROOM (PRIDE AFTER PARTY)",
-    "date": "Saturday, 13 June 2026 – Sunday, 14 June 2026",
-    "details": "11.00pm • £3+ • 18+",
-    "url": "https://www.fatsoma.com/e/c1846a08/la/wk87",
-    "venue": "Clwb Ifor Bach",
-    "scrapedAt": "2026-05-19T16:58:18.241Z",
-    "imageUrl": "https://cdn2.fatsoma.com/media/W1siZiIsInB1YmxpYy8yMDI2LzUvMTkvMTIvNDUvMTQvOTM3L1JhY2tNdWx0aXBhcnQyMDI2MDIwNS02MC0xZm5hZ2liLmpwZyJdXQ",
-    "description": "Indie sleaze is so back. The sounds of Yeah Yeah Yeahs, Crystal Castles, Peaches and more will be ringing down Womanby Street all night this Friday. \n\nEXPECT: Yeah Yeah Yeahs – Interpol – LCD Soundsystem – The Strokes – Peaches – MGMT – The Rapture – TV on the Radio – Bloc Party – The Libertines – The Kills – Klaxons – CSS – Hot Chip – The White Stripes – Franz Ferdinand – Arctic Monkeys – Foals – Crystal Castles – Sleigh Bells – Gossip – Friendly Fires – Le Tigre – Cut Copy – The Horrors",
-    "shortDescription": "MEET ME IN THE BATHROOM (PRIDE AFTER PARTY) at Clwb Ifor Bach, Cardiff on 13th Jun 2026. Buy tickets in just 2-clicks with our super-fast checkout",
-    "musicGenres": [
-      "Indie"
-    ],
-    "imageUrls": [
-      "https://cdn2.fatsoma.com/media/W1siZiIsInB1YmxpYy8yMDI2LzUvMTkvMTIvNDUvMTQvOTM3L1JhY2tNdWx0aXBhcnQyMDI2MDIwNS02MC0xZm5hZ2liLmpwZyJdXQ",
-      "https://fatsoma.imgix.net/W1siZiIsInB1YmxpYy8yMDI2LzUvMTkvMTIvNDUvMTQvOTM3L1JhY2tNdWx0aXBhcnQyMDI2MDIwNS02MC0xZm5hZ2liLmpwZyJdXQ?auto=format%2Ccompress",
-      "https://clwb.net/wp-content/uploads/2026/02/MEET-ME-IN-THE-BATHROOM-NO-DATE-320x160.jpg"
-    ],
-    "eventStartDate": "2026-06-13T22:00:00.000Z",
-    "eventEndDate": "2026-06-14T03:00:00.000Z",
-    "ticketPriceFrom": 3,
-    "ticketPriceTo": 5,
-    "ticketCurrency": "GBP",
-    "primaryCategory": "Music",
-    "genre": "Indie",
-    "ticketPriceLabel": "£3–£5"
-  },
-  {
-    "title": "TOOTH",
-    "date": "Saturday, 13 June 2026",
-    "details": "7.00pm • £12.50 • 18+",
-    "url": "https://www.seetickets.com/event/tooth/clwb-ifor-bach/3631723",
-    "venue": "Clwb Ifor Bach",
-    "scrapedAt": "2026-05-19T11:36:15.860Z",
-    "imageUrl": "https://clwb.net/wp-content/uploads/2026/04/TOOTH-320x160.jpg",
-    "musicGenres": [
-      "Pop"
-    ],
-    "imageUrls": [
-      "https://clwb.net/wp-content/uploads/2026/04/TOOTH-320x160.jpg"
-    ],
-    "primaryCategory": "Music",
-    "genre": "Pop",
-    "description": "7.00pm • £12.50 • 18+",
-    "ticketPriceFrom": 12.5,
-    "ticketCurrency": "GBP",
-    "ticketPriceLabel": "£12.50"
-  },
-  {
-    "title": "THE PINK PONY CLWB (PRIDE AFTER PARTY)",
-    "date": "Saturday, 13 June 2026 – Sunday, 14 June 2026",
-    "details": "11.00pm • £3+ • 18+",
-    "url": "https://www.fatsoma.com/e/zd0p6yfd/la/koz9",
-    "venue": "Clwb Ifor Bach",
-    "scrapedAt": "2026-05-19T16:58:18.241Z",
-    "imageUrl": "https://cdn2.fatsoma.com/media/W1siZiIsInB1YmxpYy8yMDI2LzUvMTkvMTIvNDMvNTcvNzE3L1BQQyBCQU5ORVIuanBnIl1d",
-    "description": "⋆౨ৎ˚⟡˖ ࣪  Welcome back to The Pink Pony Clwb ⋆౨ৎ˚⟡˖ ࣪ \n★ IMPORTANT INFO ★ due to high demand for this event we will be selling MORE tickets on the door - this means that the online tickets will sell out faster - if you want guaranteed entry, you will need to be quick! \nPS: Remember that this ticket guarantees access to all floors at Clwb ⚔️\n\n★ Pssst... PPC Membership/entry is free for those signed up to our Clwbnight Newsletter :-) Free codes out Thursday! Sign up here: Clwbnight Newsletter",
-    "shortDescription": "⋆౨ৎ˚⟡˖ ࣪ THE PINK PONY CLWB (PRIDE AFTER PARTY) ⋆˚⟡౨ৎ ࣪˖ at Clwb Ifor Bach, Cardiff on 13th Jun 2026. Buy tickets in just 2-clicks with our super-fast checkout",
-    "imageUrls": [
-      "https://cdn2.fatsoma.com/media/W1siZiIsInB1YmxpYy8yMDI2LzUvMTkvMTIvNDMvNTcvNzE3L1BQQyBCQU5ORVIuanBnIl1d",
-      "https://fatsoma.imgix.net/W1siZiIsInB1YmxpYy8yMDI2LzUvMTkvMTIvNDMvNTcvNzE3L1BQQyBCQU5ORVIuanBnIl1d?auto=format%2Ccompress",
-      "https://clwb.net/wp-content/uploads/2025/11/PPC-Website-320x160.jpg"
-    ],
-    "eventStartDate": "2026-06-13T22:00:00.000Z",
-    "eventEndDate": "2026-06-14T03:00:00.000Z",
-    "ticketPriceFrom": 3,
-    "ticketPriceTo": 5,
-    "ticketCurrency": "GBP",
-    "primaryCategory": "Music",
-    "ticketPriceLabel": "£3–£5"
-  },
-  {
-    "title": "CLWB PRIDE AFTER PARTY",
-    "date": "Saturday, 13 June 2026 – Sunday, 14 June 2026",
-    "details": "THE PINK PONY CLWB + MEET ME IN THE BATHROOM • 11.00pm • £3+ • 18+",
-    "url": "https://www.fatsoma.com/e/z7pdnh12/la/r76c",
-    "venue": "Clwb Ifor Bach",
-    "scrapedAt": "2026-05-19T16:58:18.241Z",
-    "imageUrl": "https://cdn2.fatsoma.com/media/W1siZiIsInB1YmxpYy8yMDI2LzUvMTkvMTMvMzYvOC8zNzUvUmFja011bHRpcGFydDIwMjYwNTE5LTYwLTFpc3ViZHQuanBnIl1d",
-    "description": "Pride afters at ours yeah?\n1 TICKET = ACCESS TO ALL FLOORS \nTHE PINK PONY CLWB - sapphic pop \nMEET ME IN THE BATHROOM - indie sleaze electronica\n\n★ Pssst... entry is free for those signed up to our Clwbnight Newsletter :-) Free codes out Thursday! Sign up here: Clwbnight Newsletter",
-    "shortDescription": "PRIDE AFTER PARTY (THE PINK PONY CLWB + MEET ME IN THE BATHROOM)  at Clwb Ifor Bach, Cardiff on 13th Jun 2026. Buy tickets in just 2-clicks with our super-fast checkout",
-    "musicGenres": [
-      "Indie",
-      "Pop"
-    ],
-    "imageUrls": [
-      "https://cdn2.fatsoma.com/media/W1siZiIsInB1YmxpYy8yMDI2LzUvMTkvMTMvMzYvOC8zNzUvUmFja011bHRpcGFydDIwMjYwNTE5LTYwLTFpc3ViZHQuanBnIl1d",
-      "https://fatsoma.imgix.net/W1siZiIsInB1YmxpYy8yMDI2LzUvMTkvMTMvMzYvOC8zNzUvUmFja011bHRpcGFydDIwMjYwNTE5LTYwLTFpc3ViZHQuanBnIl1d?auto=format%2Ccompress",
-      "https://clwb.net/wp-content/uploads/2026/05/PRIDE-BANNER-1-320x160.jpg"
-    ],
-    "eventStartDate": "2026-06-13T22:00:00.000Z",
-    "eventEndDate": "2026-06-14T03:00:00.000Z",
-    "ticketPriceFrom": 3,
-    "ticketCurrency": "GBP",
-    "ticketPriceLabel": "£3.00",
-    "primaryCategory": "Music",
-    "genre": "Indie, Pop"
-  },
-  {
-    "title": "CIWB",
-    "date": "Friday, 19 June 2026",
-    "details": "7.00pm • £13 • 18+",
-    "url": "https://clwbiforbach.seetickets.com/event/ciwb/clwb-ifor-bach/3612649",
-    "venue": "Clwb Ifor Bach",
-    "scrapedAt": "2026-05-19T11:36:15.860Z",
-    "imageUrl": "https://clwb.net/wp-content/uploads/2026/03/ciuwb-320x160.jpg",
-    "musicGenres": [
-      "Pop"
-    ],
-    "imageUrls": [
-      "https://clwb.net/wp-content/uploads/2026/03/ciuwb-320x160.jpg"
-    ],
-    "primaryCategory": "Music",
-    "genre": "Pop",
-    "description": "7.00pm • £13 • 18+",
-    "ticketPriceFrom": 13,
-    "ticketCurrency": "GBP",
-    "ticketPriceLabel": "£13"
-  },
-  {
-    "title": "ETHEL CAIN AFTERS (ALT POP CLUBNIGHT)",
-    "date": "Friday, 19 June 2026 – Saturday, 20 June 2026",
-    "details": "MELFED MELYS • 11.00pm • £3+ • 18+",
-    "url": "https://www.fatsoma.com/e/dci0alrf/la/tb7t",
-    "venue": "Clwb Ifor Bach",
-    "scrapedAt": "2026-05-20T16:58:16.751Z",
-    "imageUrl": "https://cdn2.fatsoma.com/media/W1siZiIsInB1YmxpYy8yMDI2LzUvMjAvMTEvNTYvOC82NzEvUmFja011bHRpcGFydDIwMjYwNTIwLTU2LTFjOXJwNXMuanBnIl1d",
-    "description": "Willoughby Tucker Forever &lt;3\nAfter the Ethel Cain gig in the castle, join us for an alt pop clwbnight like no other with Melfed Melys on the decks. \nSpinning Ethel Cain, Muna, Chappell Roan, Boy Genius, Addison Rae, Clairo, Mitski and more ‧₊ ♪˚⊹",
-    "shortDescription": "ETHEL CAIN AFTER PARTY (ALT POP CLWBNIGHT) at Clwb Ifor Bach, Cardiff on 19th Jun 2026. Buy tickets in just 2-clicks with our super-fast checkout",
-    "musicGenres": [
-      "Pop"
-    ],
-    "imageUrls": [
-      "https://cdn2.fatsoma.com/media/W1siZiIsInB1YmxpYy8yMDI2LzUvMjAvMTEvNTYvOC82NzEvUmFja011bHRpcGFydDIwMjYwNTIwLTU2LTFjOXJwNXMuanBnIl1d",
-      "https://fatsoma.imgix.net/W1siZiIsInB1YmxpYy8yMDI2LzUvMjAvMTEvNTYvOC82NzEvUmFja011bHRpcGFydDIwMjYwNTIwLTU2LTFjOXJwNXMuanBnIl1d?auto=format%2Ccompress",
-      "https://clwb.net/wp-content/uploads/2026/05/Banner-320x160.jpg"
-    ],
-    "eventStartDate": "2026-06-19T22:00:00.000Z",
-    "eventEndDate": "2026-06-20T03:00:00.000Z",
-    "ticketPriceFrom": 3,
-    "ticketPriceTo": 5,
-    "ticketCurrency": "GBP",
-    "primaryCategory": "Music",
-    "genre": "Pop",
-    "ticketPriceLabel": "£3–£5"
-  },
-  {
-    "title": "STARBURSTER",
-    "date": "Friday, 19 June 2026 – Saturday, 20 June 2026",
-    "details": "11.00pm • £3+ • 18+",
-    "url": "https://www.fatsoma.com/e/k4i98hxf/la/nglu",
-    "venue": "Clwb Ifor Bach",
-    "scrapedAt": "2026-05-22T16:28:30.608Z",
-    "imageUrl": "https://cdn2.fatsoma.com/media/W1siZiIsInB1YmxpYy8yMDI2LzUvMjEvMTQvMjcvNS8xMTUvU3RhcmJ1cnN0ZXIuanBnIl1d",
-    "description": "★ STARBURSTER ★\n\nplaying the newest in rock, post-punk and everything in between. \nFFO: DRUNKTANK, Fontaines D.C., IDLES + MORE",
-    "shortDescription": "STARBURSTER  at Clwb Ifor Bach, Cardiff on 19th Jun 2026. Buy tickets in just 2-clicks with our super-fast checkout",
-    "musicGenres": [
-      "Punk",
-      "Rock"
-    ],
-    "imageUrls": [
-      "https://cdn2.fatsoma.com/media/W1siZiIsInB1YmxpYy8yMDI2LzUvMjEvMTQvMjcvNS8xMTUvU3RhcmJ1cnN0ZXIuanBnIl1d",
-      "https://fatsoma.imgix.net/W1siZiIsInB1YmxpYy8yMDI2LzUvMjEvMTQvMjcvNS8xMTUvU3RhcmJ1cnN0ZXIuanBnIl1d?auto=format%2Ccompress",
-      "https://clwb.net/wp-content/uploads/2025/10/Starburster-website-1-320x160.jpg"
-    ],
-    "eventStartDate": "2026-06-19T22:00:00.000Z",
-    "eventEndDate": "2026-06-20T03:00:00.000Z",
-    "ticketPriceFrom": 3,
-    "ticketPriceTo": 5,
-    "ticketCurrency": "GBP",
-    "primaryCategory": "Music",
-    "genre": "Punk, Rock",
-    "ticketPriceLabel": "£3–£5"
-  },
-  {
-    "title": "AIRBOURNE @ TRAMSHED",
-    "date": "Monday, 29 June 2026",
-    "details": "7.00pm • £27 • 14+ (under 16's must be accompanied by an adult)",
-    "url": "https://clwbiforbach.seetickets.com/event/airbourne/tramshed/3597912",
-    "venue": "Clwb Ifor Bach",
-    "scrapedAt": "2026-05-19T11:36:15.860Z",
-    "imageUrl": "https://clwb.net/wp-content/uploads/2026/01/Airbourne-website-320x160.jpg",
-    "musicGenres": [
-      "Pop"
-    ],
-    "imageUrls": [
-      "https://clwb.net/wp-content/uploads/2026/01/Airbourne-website-320x160.jpg"
-    ],
-    "primaryCategory": "Music",
-    "genre": "Pop",
-    "description": "7.00pm • £27 • 14+ (under 16's must be accompanied by an adult)",
-    "ticketPriceFrom": 27,
-    "ticketCurrency": "GBP",
-    "ticketPriceLabel": "£27"
-  },
-  {
-    "title": "THORNS",
-    "date": "Saturday, 4 July 2026",
-    "details": "7.00pm • £12 • 18+",
-    "url": "https://www.seetickets.com/event/thorns/clwb-ifor-bach/3635858",
-    "venue": "Clwb Ifor Bach",
-    "scrapedAt": "2026-05-19T11:36:15.860Z",
-    "imageUrl": "https://clwb.net/wp-content/uploads/2026/05/Untitled-1-2-320x160.jpg",
-    "musicGenres": [
-      "Pop"
-    ],
-    "imageUrls": [
-      "https://clwb.net/wp-content/uploads/2026/05/Untitled-1-2-320x160.jpg"
-    ],
-    "primaryCategory": "Music",
-    "genre": "Pop",
-    "description": "7.00pm • £12 • 18+",
-    "ticketPriceFrom": 12,
-    "ticketCurrency": "GBP",
-    "ticketPriceLabel": "£12"
-  },
-  {
-    "title": "THIS IS THE KIT",
-    "date": "Tuesday, 7 July 2026",
-    "details": "7.30pm • £26 • 14+",
-    "url": "https://www.seetickets.com/event/this-is-the-kit/clwb-ifor-bach/3625448",
-    "venue": "Clwb Ifor Bach",
-    "scrapedAt": "2026-05-19T11:36:15.860Z",
-    "imageUrl": "https://clwb.net/wp-content/uploads/2026/04/Web-3-320x160.jpg",
-    "musicGenres": [
-      "Pop"
-    ],
-    "imageUrls": [
-      "https://clwb.net/wp-content/uploads/2026/04/Web-3-320x160.jpg"
-    ],
-    "primaryCategory": "Music",
-    "genre": "Pop",
-    "description": "7.30pm • £26 • 14+",
-    "ticketPriceFrom": 26,
-    "ticketCurrency": "GBP",
-    "ticketPriceLabel": "£26"
-  },
-  {
-    "title": "HO99O9",
-    "date": "Friday, 10 July 2026",
-    "details": "7.00pm • £23 • 18+",
-    "url": "https://www.seetickets.com/event/ho99o9/clwb-ifor-bach/3624885",
-    "venue": "Clwb Ifor Bach",
-    "scrapedAt": "2026-05-19T11:36:15.860Z",
-    "imageUrl": "https://clwb.net/wp-content/uploads/2026/04/Web-320x160.jpg",
-    "musicGenres": [
-      "Pop"
-    ],
-    "imageUrls": [
-      "https://clwb.net/wp-content/uploads/2026/04/Web-320x160.jpg"
-    ],
-    "primaryCategory": "Music",
-    "genre": "Pop",
-    "description": "7.00pm • £23 • 18+",
-    "ticketPriceFrom": 23,
-    "ticketCurrency": "GBP",
-    "ticketPriceLabel": "£23"
-  },
-  {
-    "title": "LYDIA LUNCH AND MARC HURTADO PLAY THE SONGS OF SUICIDE",
-    "date": "Wednesday, 15 July 2026",
-    "details": "7.30pm • £16 • 14+ (Under 16's accompanied by an adult)",
-    "url": "https://www.seetickets.com/event/lydia-lunch-marc-hurtado/clwb-ifor-bach/3637236",
-    "venue": "Clwb Ifor Bach",
-    "scrapedAt": "2026-05-19T11:36:15.860Z",
-    "imageUrl": "https://clwb.net/wp-content/uploads/2026/05/Lydia_Lunch_ClwbIforBach_15.07.2026-320x160.jpg",
-    "imageUrls": [
-      "https://clwb.net/wp-content/uploads/2026/05/Lydia_Lunch_ClwbIforBach_15.07.2026-320x160.jpg"
-    ],
-    "primaryCategory": "Theatre",
-    "genre": "Pop",
-    "description": "7.30pm • £16 • 14+ (Under 16's accompanied by an adult)",
-    "ticketPriceFrom": 16,
-    "ticketCurrency": "GBP",
-    "ticketPriceLabel": "£16"
-  },
-  {
-    "title": "BAT SABBATH",
-    "date": "Monday, 20 July 2026",
-    "details": "7.30pm • £21.50 • 14+",
-    "url": "https://clwbiforbach.seetickets.com/event/bat-sabbath/clwb-ifor-bach/3537599",
-    "venue": "Clwb Ifor Bach",
-    "scrapedAt": "2026-05-19T11:36:15.860Z",
-    "imageUrl": "https://clwb.net/wp-content/uploads/2025/11/Bat-Sabbath-website-320x160.jpg",
-    "musicGenres": [
-      "Pop"
-    ],
-    "imageUrls": [
-      "https://clwb.net/wp-content/uploads/2025/11/Bat-Sabbath-website-320x160.jpg"
-    ],
-    "primaryCategory": "Music",
-    "genre": "Pop",
-    "description": "7.30pm • £21.50 • 14+",
-    "ticketPriceFrom": 21.5,
-    "ticketCurrency": "GBP",
-    "ticketPriceLabel": "£21.50"
-  },
-  {
-    "title": "GEE TEE",
-    "date": "Wednesday, 22 July 2026",
-    "details": "7.30pm • £17 • 14+ (under 16's must be accompanied by an adult)",
-    "url": "https://www.seetickets.com/event/gee-tee/clwb-ifor-bach/3638335",
-    "venue": "Clwb Ifor Bach",
-    "scrapedAt": "2026-05-19T11:36:15.860Z",
-    "imageUrl": "https://clwb.net/wp-content/uploads/2026/05/Untitled-design-30-320x160.jpg",
-    "musicGenres": [
-      "Pop"
-    ],
-    "imageUrls": [
-      "https://clwb.net/wp-content/uploads/2026/05/Untitled-design-30-320x160.jpg"
-    ],
-    "primaryCategory": "Music",
-    "genre": "Pop",
-    "description": "7.30pm • £17 • 14+ (under 16's must be accompanied by an adult)",
-    "ticketPriceFrom": 17,
-    "ticketCurrency": "GBP",
-    "ticketPriceLabel": "£17"
-  },
-  {
-    "title": "SELF ESTEEM @ CARDIFF CASTLE",
-    "date": "Friday, 24 July 2026",
-    "details": "KAE TEMPEST | JOSH IDEHAN • 5.00pm • £49.50 • 14+",
-    "url": "https://www.seetickets.com/event/self-esteem/cardiff-castle/3561848?_gl=1*mlye0p*_up*MQ..*_gs*MQ..&gclid=Cj0KCQiAubrJBhCbARIsAHIdxD9y2X_yvAu_BXUdobW04WOdn7L51IP194kh6ZJYk9qJMbNcoC9iqhIaArhaEALw_wcB&gbraid=0AAAAA_PLtjWFrB_e_pyXGynTxAdvUJ4MB",
-    "venue": "Clwb Ifor Bach",
-    "scrapedAt": "2026-05-19T11:36:15.860Z",
-    "imageUrl": "https://clwb.net/wp-content/uploads/2025/12/Self-Esteem-website-320x160.jpg",
-    "musicGenres": [
-      "Pop"
-    ],
-    "imageUrls": [
-      "https://clwb.net/wp-content/uploads/2025/12/Self-Esteem-website-320x160.jpg"
-    ],
-    "primaryCategory": "Music",
-    "genre": "Pop",
-    "description": "KAE TEMPEST | JOSH IDEHAN • 5.00pm • £49.50 • 14+",
-    "ticketPriceFrom": 49.5,
-    "ticketCurrency": "GBP",
-    "ticketPriceLabel": "£49.50"
-  },
-  {
-    "title": "THE FLAMING LIPS @ DEPOT",
-    "date": "Wednesday, 29 July 2026",
-    "details": "7.00pm • £45 • 14+",
-    "url": "https://clwbiforbach.seetickets.com/event/the-flaming-lips/depot/3565093",
-    "venue": "Clwb Ifor Bach",
-    "scrapedAt": "2026-05-19T11:36:15.860Z",
-    "imageUrl": "https://clwb.net/wp-content/uploads/2026/02/Website-Image-320x160.jpg",
-    "musicGenres": [
-      "Pop"
-    ],
-    "imageUrls": [
-      "https://clwb.net/wp-content/uploads/2026/02/Website-Image-320x160.jpg"
-    ],
-    "primaryCategory": "Music",
-    "genre": "Pop",
-    "description": "7.00pm • £45 • 14+",
-    "ticketPriceFrom": 45,
-    "ticketCurrency": "GBP",
-    "ticketPriceLabel": "£45"
-  },
-  {
-    "title": "HOT 8 BRASS BAND @ CORN EXCHANGE",
-    "date": "Wednesday, 5 August 2026",
-    "details": "7.30pm • £25 • 16+",
-    "url": "https://clwbiforbach.seetickets.com/event/hot-8-brass-band/corn-exchange/3628551",
-    "venue": "Clwb Ifor Bach",
-    "scrapedAt": "2026-05-19T11:36:15.860Z",
-    "imageUrl": "https://clwb.net/wp-content/uploads/2026/04/hot-8-320x160.jpg",
-    "musicGenres": [
-      "Pop"
-    ],
-    "imageUrls": [
-      "https://clwb.net/wp-content/uploads/2026/04/hot-8-320x160.jpg"
-    ],
-    "primaryCategory": "Music",
-    "genre": "Pop",
-    "description": "7.30pm • £25 • 16+",
-    "ticketPriceFrom": 25,
-    "ticketCurrency": "GBP",
-    "ticketPriceLabel": "£25"
-  },
-  {
-    "title": "NOASIS",
-    "date": "Friday, 21 August 2026",
-    "details": "7.00pm • £20 • 18+",
-    "url": "https://clwbiforbach.seetickets.com/event/noasis/clwb-ifor-bach/3606557",
-    "venue": "Clwb Ifor Bach",
-    "scrapedAt": "2026-05-19T11:36:15.860Z",
-    "imageUrl": "https://clwb.net/wp-content/uploads/2026/02/2000x1000-Noasis-320x160.jpg",
-    "musicGenres": [
-      "Pop"
-    ],
-    "imageUrls": [
-      "https://clwb.net/wp-content/uploads/2026/02/2000x1000-Noasis-320x160.jpg"
-    ],
-    "primaryCategory": "Music",
-    "genre": "Pop",
-    "description": "7.00pm • £20 • 18+",
-    "ticketPriceFrom": 20,
-    "ticketCurrency": "GBP",
-    "ticketPriceLabel": "£20"
-  },
-  {
-    "title": "FAYE WEBSTER @ TRAMSHED",
-    "date": "Monday, 24 August 2026",
-    "details": "7.00pm • £26 • 14+ (under 16's must be accompanied by an adult)",
-    "url": "https://clwbiforbach.seetickets.com/event/faye-webster/tramshed/3614560",
-    "venue": "Clwb Ifor Bach",
-    "scrapedAt": "2026-05-19T11:36:15.860Z",
-    "imageUrl": "https://clwb.net/wp-content/uploads/2026/03/Faye-Webster-Website-320x160.jpg",
-    "musicGenres": [
-      "Pop"
-    ],
-    "imageUrls": [
-      "https://clwb.net/wp-content/uploads/2026/03/Faye-Webster-Website-320x160.jpg"
-    ],
-    "primaryCategory": "Music",
-    "genre": "Pop",
-    "description": "7.00pm • £26 • 14+ (under 16's must be accompanied by an adult)",
-    "ticketPriceFrom": 26,
-    "ticketCurrency": "GBP",
-    "ticketPriceLabel": "£26"
-  },
-  {
-    "title": "TEEN MORTGAGE",
-    "date": "Saturday, 29 August 2026",
-    "details": "COWBOY HUNTERS • 7.00pm • £20 • 18+",
-    "url": "https://www.seetickets.com/event/teen-mortgage/clwb-ifor-bach/3626054",
-    "venue": "Clwb Ifor Bach",
-    "scrapedAt": "2026-05-19T11:36:15.860Z",
-    "imageUrl": "https://clwb.net/wp-content/uploads/2026/04/Web-2-320x160.jpg",
-    "musicGenres": [
-      "Pop"
-    ],
-    "imageUrls": [
-      "https://clwb.net/wp-content/uploads/2026/04/Web-2-320x160.jpg"
-    ],
-    "primaryCategory": "Music",
-    "genre": "Pop",
-    "description": "COWBOY HUNTERS • 7.00pm • £20 • 18+",
-    "ticketPriceFrom": 20,
-    "ticketCurrency": "GBP",
-    "ticketPriceLabel": "£20"
-  },
-  {
-    "title": "ALLAH-LAS @ Y PLAS",
-    "date": "Thursday, 3 September 2026",
-    "details": "7.00pm • £22 • 14+",
-    "url": "https://clwbiforbach.seetickets.com/event/allah-las/y-plas/3597503",
-    "venue": "Clwb Ifor Bach",
-    "scrapedAt": "2026-05-19T11:36:15.860Z",
-    "imageUrl": "https://clwb.net/wp-content/uploads/2026/01/Allah-Las-website-320x160.jpg",
-    "musicGenres": [
-      "Pop"
-    ],
-    "imageUrls": [
-      "https://clwb.net/wp-content/uploads/2026/01/Allah-Las-website-320x160.jpg"
-    ],
-    "primaryCategory": "Music",
-    "genre": "Pop",
-    "description": "7.00pm • £22 • 14+",
-    "ticketPriceFrom": 22,
-    "ticketCurrency": "GBP",
-    "ticketPriceLabel": "£22"
-  },
-  {
-    "title": "CASEY @ THE GLOBE",
-    "date": "Friday, 4 September 2026",
-    "details": "DOWNSWING • 12.00am • £22.50 • 18+",
-    "url": "https://www.seetickets.com/event/casey/the-globe/3628606",
-    "venue": "Clwb Ifor Bach",
-    "scrapedAt": "2026-05-19T11:36:15.860Z",
-    "imageUrl": "https://clwb.net/wp-content/uploads/2026/04/casey-320x160.jpg",
-    "musicGenres": [
-      "Pop"
-    ],
-    "imageUrls": [
-      "https://clwb.net/wp-content/uploads/2026/04/casey-320x160.jpg"
-    ],
-    "primaryCategory": "Music",
-    "genre": "Pop",
-    "description": "DOWNSWING • 12.00am • £22.50 • 18+",
-    "ticketPriceFrom": 22.5,
-    "ticketCurrency": "GBP",
-    "ticketPriceLabel": "£22.50"
-  },
-  {
-    "title": "MARTHA",
-    "date": "Thursday, 10 September 2026",
-    "details": "7.30pm • £16 • 14+ (Under 16's accompanied by an adult)",
-    "url": "",
-    "venue": "Clwb Ifor Bach",
-    "scrapedAt": "2026-05-19T11:36:15.860Z",
-    "imageUrl": "https://clwb.net/wp-content/uploads/2026/04/Website-Image-320x160.jpg",
-    "primaryCategory": "Music",
-    "description": "7.30pm • £16 • 14+ (Under 16's accompanied by an adult)",
-    "ticketPriceFrom": 16,
-    "ticketCurrency": "GBP",
-    "ticketPriceLabel": "£16",
-    "imageUrls": [
-      "https://clwb.net/wp-content/uploads/2026/04/Website-Image-320x160.jpg"
-    ]
-  },
-  {
-    "title": "ELLA LANGLEY UK",
-    "date": "Friday, 18 September 2026",
-    "details": "7.00pm • £15 • 18+",
-    "url": "https://www.seetickets.com/event/ella-langley-uk/clwb-ifor-bach/3633073",
-    "venue": "Clwb Ifor Bach",
-    "scrapedAt": "2026-05-19T11:36:15.860Z",
-    "imageUrl": "https://clwb.net/wp-content/uploads/2026/05/Untitled-1-320x160.jpg",
-    "musicGenres": [
-      "Pop"
-    ],
-    "imageUrls": [
-      "https://clwb.net/wp-content/uploads/2026/05/Untitled-1-320x160.jpg"
-    ],
-    "primaryCategory": "Music",
-    "genre": "Pop",
-    "description": "7.00pm • £15 • 18+",
-    "ticketPriceFrom": 15,
-    "ticketCurrency": "GBP",
-    "ticketPriceLabel": "£15"
-  },
-  {
-    "title": "RESCHEDULED: PIGS PIGS PIGS PIGS PIGS PIGS PIGS @ TRAMSHED",
-    "date": "Sunday, 20 September 2026",
-    "details": "MERYL STREEK | SHLUG • 7.00pm • £22 • 14+ (Under 16's accompanied by an adult)",
-    "url": "https://clwbiforbach.seetickets.com/event/pigs-pigs-pigs-pigs-pigs-pigs/tramshed/3555234",
-    "venue": "Clwb Ifor Bach",
-    "scrapedAt": "2026-05-19T11:36:15.860Z",
-    "imageUrl": "https://clwb.net/wp-content/uploads/2025/11/Px7-Website-320x160.jpg",
-    "musicGenres": [
-      "Pop"
-    ],
-    "imageUrls": [
-      "https://clwb.net/wp-content/uploads/2025/11/Px7-Website-320x160.jpg"
-    ],
-    "primaryCategory": "Music",
-    "genre": "Pop",
-    "description": "MERYL STREEK | SHLUG • 7.00pm • £22 • 14+ (Under 16's accompanied by an adult)",
-    "ticketPriceFrom": 22,
-    "ticketCurrency": "GBP",
-    "ticketPriceLabel": "£22"
-  },
-  {
-    "title": "FRANCIS OF DELIRIUM",
-    "date": "Saturday, 26 September 2026",
-    "details": "7.00pm • £12.50 • 18+",
-    "url": "https://clwbiforbach.seetickets.com/event/francis-of-delirium/clwb-ifor-bach/3628616",
-    "venue": "Clwb Ifor Bach",
-    "scrapedAt": "2026-05-19T11:36:15.860Z",
-    "imageUrl": "https://clwb.net/wp-content/uploads/2026/04/francis-of-delirium-320x160.jpg",
-    "musicGenres": [
-      "Pop"
-    ],
-    "imageUrls": [
-      "https://clwb.net/wp-content/uploads/2026/04/francis-of-delirium-320x160.jpg"
-    ],
-    "primaryCategory": "Music",
-    "genre": "Pop",
-    "description": "7.00pm • £12.50 • 18+",
-    "ticketPriceFrom": 12.5,
-    "ticketCurrency": "GBP",
-    "ticketPriceLabel": "£12.50"
-  },
-  {
-    "title": "SWIM DEEP",
-    "date": "Thursday, 1 October 2026",
-    "details": "7.00pm • £18 • 14+ (Under 16's accompanied by an adult)",
-    "url": "https://www.seetickets.com/event/swim-deep/clwb-ifor-bach/3602812",
-    "venue": "Clwb Ifor Bach",
-    "scrapedAt": "2026-05-19T11:36:15.860Z",
-    "imageUrl": "https://clwb.net/wp-content/uploads/2026/02/Website-Image-1-320x160.jpg",
-    "musicGenres": [
-      "Pop"
-    ],
-    "imageUrls": [
-      "https://clwb.net/wp-content/uploads/2026/02/Website-Image-1-320x160.jpg"
-    ],
-    "primaryCategory": "Music",
-    "genre": "Pop",
-    "description": "7.00pm • £18 • 14+ (Under 16's accompanied by an adult)",
-    "ticketPriceFrom": 18,
-    "ticketCurrency": "GBP",
-    "ticketPriceLabel": "£18"
-  },
-  {
-    "title": "SPACE",
-    "date": "Friday, 2 October 2026",
-    "details": "7.00pm • £23.50 • 18+",
-    "url": "https://clwbiforbach.seetickets.com/event/space/clwb-ifor-bach/3603480",
-    "venue": "Clwb Ifor Bach",
-    "scrapedAt": "2026-05-19T11:36:15.860Z",
-    "imageUrl": "https://clwb.net/wp-content/uploads/2026/02/Space-website-320x160.jpg",
-    "musicGenres": [
-      "Pop"
-    ],
-    "imageUrls": [
-      "https://clwb.net/wp-content/uploads/2026/02/Space-website-320x160.jpg"
-    ],
-    "primaryCategory": "Music",
-    "genre": "Pop",
-    "description": "7.00pm • £23.50 • 18+",
-    "ticketPriceFrom": 23.5,
-    "ticketCurrency": "GBP",
-    "ticketPriceLabel": "£23.50"
-  },
-  {
-    "title": "MAN/WOMAN/CHAINSAW @ THE GLOBE",
-    "date": "Saturday, 3 October 2026",
-    "details": "7.00pm • £16 • 14+ (under 16's must be accompanied by an adult)",
-    "url": "https://clwbiforbach.seetickets.com/event/man-woman-chainsaw/the-globe/3608564",
-    "venue": "Clwb Ifor Bach",
-    "scrapedAt": "2026-05-19T11:36:15.860Z",
-    "imageUrl": "https://clwb.net/wp-content/uploads/2026/03/ManWomanChainsaw-website-1-320x160.jpg",
-    "musicGenres": [
-      "Pop"
-    ],
-    "imageUrls": [
-      "https://clwb.net/wp-content/uploads/2026/03/ManWomanChainsaw-website-1-320x160.jpg"
-    ],
-    "primaryCategory": "Music",
-    "genre": "Pop",
-    "description": "7.00pm • £16 • 14+ (under 16's must be accompanied by an adult)",
-    "ticketPriceFrom": 16,
-    "ticketCurrency": "GBP",
-    "ticketPriceLabel": "£16"
-  },
-  {
-    "title": "LADYLIKE",
-    "date": "Saturday, 3 October 2026",
-    "details": "7.00pm • £10 • 18+",
-    "url": "https://www.seetickets.com/event/ladylike/clwb-ifor-bach/3636508",
-    "venue": "Clwb Ifor Bach",
-    "scrapedAt": "2026-05-19T11:36:15.860Z",
-    "imageUrl": "https://clwb.net/wp-content/uploads/2026/05/Untitled-1-1-320x160.jpg",
-    "musicGenres": [
-      "Pop"
-    ],
-    "imageUrls": [
-      "https://clwb.net/wp-content/uploads/2026/05/Untitled-1-1-320x160.jpg"
-    ],
-    "primaryCategory": "Music",
-    "genre": "Pop",
-    "description": "7.00pm • £10 • 18+",
-    "ticketPriceFrom": 10,
-    "ticketCurrency": "GBP",
-    "ticketPriceLabel": "£10"
-  },
-  {
-    "title": "IBIBIO SOUND MACHINE",
-    "date": "Saturday, 3 October 2026",
-    "details": "7.00pm • £25 • 18+",
-    "url": "https://www.seetickets.com/event/ibibio-sound-machine/clwb-ifor-bach/3620455",
-    "venue": "Clwb Ifor Bach",
-    "scrapedAt": "2026-05-19T11:36:15.860Z",
-    "imageUrl": "https://clwb.net/wp-content/uploads/2026/05/ibibio-320x160.jpg",
-    "musicGenres": [
-      "Pop"
-    ],
-    "imageUrls": [
-      "https://clwb.net/wp-content/uploads/2026/05/ibibio-320x160.jpg"
-    ],
-    "primaryCategory": "Music",
-    "genre": "Pop",
-    "description": "7.00pm • £25 • 18+",
-    "ticketPriceFrom": 25,
-    "ticketCurrency": "GBP",
-    "ticketPriceLabel": "£25"
-  },
-  {
-    "title": "DONNY BENÉT @ TRAMSHED",
-    "date": "Tuesday, 6 October 2026",
-    "details": "7.00pm • £22.50 • 14+ (Under 16s to be accompanied by an adult)",
-    "url": "https://clwbiforbach.seetickets.com/event/donny-benet/tramshed/3611291",
-    "venue": "Clwb Ifor Bach",
-    "scrapedAt": "2026-05-19T11:36:15.860Z",
-    "imageUrl": "https://clwb.net/wp-content/uploads/2026/03/Web-320x160.jpg",
-    "musicGenres": [
-      "Pop"
-    ],
-    "imageUrls": [
-      "https://clwb.net/wp-content/uploads/2026/03/Web-320x160.jpg"
-    ],
-    "primaryCategory": "Music",
-    "genre": "Pop",
-    "description": "7.00pm • £22.50 • 14+ (Under 16s to be accompanied by an adult)",
-    "ticketPriceFrom": 22.5,
-    "ticketCurrency": "GBP",
-    "ticketPriceLabel": "£22.50"
-  },
-  {
-    "title": "ARKAYLA",
-    "date": "Saturday, 10 October 2026",
-    "details": "7.00pm • £14 • 18+",
-    "url": "https://clwbiforbach.seetickets.com/event/arkayla/clwb-ifor-bach/3621375",
-    "venue": "Clwb Ifor Bach",
-    "scrapedAt": "2026-05-19T11:36:15.860Z",
-    "imageUrl": "https://clwb.net/wp-content/uploads/2026/04/arkayla-320x160.jpg",
-    "musicGenres": [
-      "Pop"
-    ],
-    "imageUrls": [
-      "https://clwb.net/wp-content/uploads/2026/04/arkayla-320x160.jpg"
-    ],
-    "primaryCategory": "Music",
-    "genre": "Pop",
-    "description": "7.00pm • £14 • 18+",
-    "ticketPriceFrom": 14,
-    "ticketCurrency": "GBP",
-    "ticketPriceLabel": "£14"
-  },
-  {
-    "title": "SKATING POLLY",
-    "date": "Monday, 12 October 2026",
-    "details": "LORD FRIDAY THE 13TH • 7.30pm • £17 • 14+ (Under 16's accompanied by an adult)",
-    "url": "https://www.seetickets.com/event/skating-polly-lord-friday-the-13th/clwb-ifor-bach/3636102",
-    "venue": "Clwb Ifor Bach",
-    "scrapedAt": "2026-05-19T11:36:15.860Z",
-    "imageUrl": "https://clwb.net/wp-content/uploads/2026/05/skatingpollu-320x160.jpg",
-    "musicGenres": [
-      "Pop"
-    ],
-    "imageUrls": [
-      "https://clwb.net/wp-content/uploads/2026/05/skatingpollu-320x160.jpg"
-    ],
-    "primaryCategory": "Music",
-    "genre": "Pop",
-    "description": "LORD FRIDAY THE 13TH • 7.30pm • £17 • 14+ (Under 16's accompanied by an adult)",
-    "ticketPriceFrom": 17,
-    "ticketCurrency": "GBP",
-    "ticketPriceLabel": "£17"
-  },
-  {
-    "title": "ADULT DVD",
-    "date": "Tuesday, 13 October 2026",
-    "details": "TURNSPIT • 7.30pm • £15 • 14+",
-    "url": "https://www.seetickets.com/event/adult-dvd/clwb-ifor-bach/3628851",
-    "venue": "Clwb Ifor Bach",
-    "scrapedAt": "2026-05-19T11:36:15.860Z",
-    "imageUrl": "https://clwb.net/wp-content/uploads/2026/04/Adult-DVD_-320x160.jpg",
-    "musicGenres": [
-      "Pop"
-    ],
-    "imageUrls": [
-      "https://clwb.net/wp-content/uploads/2026/04/Adult-DVD_-320x160.jpg"
-    ],
-    "primaryCategory": "Music",
-    "genre": "Pop",
-    "description": "TURNSPIT • 7.30pm • £15 • 14+",
-    "ticketPriceFrom": 15,
-    "ticketCurrency": "GBP",
-    "ticketPriceLabel": "£15"
-  },
-  {
-    "title": "PANCHIKO @ TRAMSHED",
-    "date": "Wednesday, 14 October 2026",
-    "details": "ALISON'S HALO • 7.00pm • £26 • 14+ (under 16's must be accompanied by an adult)",
-    "url": "https://clwbiforbach.seetickets.com/event/panchiko/tramshed/3612191",
-    "venue": "Clwb Ifor Bach",
-    "scrapedAt": "2026-05-19T11:36:15.860Z",
-    "imageUrl": "https://clwb.net/wp-content/uploads/2026/03/Panchiko-website-1-320x160.jpg",
-    "musicGenres": [
-      "Pop"
-    ],
-    "imageUrls": [
-      "https://clwb.net/wp-content/uploads/2026/03/Panchiko-website-1-320x160.jpg"
-    ],
-    "primaryCategory": "Music",
-    "genre": "Pop",
-    "description": "ALISON'S HALO • 7.00pm • £26 • 14+ (under 16's must be accompanied by an adult)",
-    "ticketPriceFrom": 26,
-    "ticketCurrency": "GBP",
-    "ticketPriceLabel": "£26"
-  },
-  {
-    "title": "SWN FESTIVAL 2026",
-    "date": "Thursday, 15 October 2026",
-    "details": "WALES' #1 NEW MUSIC FESTIVAL • 6.00pm •  • 18+",
-    "url": "https://swnfest.com/",
-    "venue": "Clwb Ifor Bach",
-    "scrapedAt": "2026-05-19T11:36:15.860Z",
-    "imageUrl": "https://swnfest.com/wp-content/uploads/2026/04/Swn-2026.jpg",
-    "shortDescription": "Award-winning multi-venue music festival based in Cardiff. Focusing on new music, emerging artists and homegrown acts. Est. 2007",
-    "description": "Award-winning multi-venue music festival based in Cardiff. Focusing on new music, emerging artists and homegrown acts. Est. 2007",
-    "imageUrls": [
-      "https://swnfest.com/wp-content/uploads/2026/04/Swn-2026.jpg",
-      "https://clwb.net/wp-content/uploads/2026/04/swn-320x160.jpg"
-    ],
-    "primaryCategory": "Music"
-  },
-  {
-    "title": "SPORTS",
-    "date": "Thursday, 22 October 2026",
-    "details": "7.30pm • £18 • 14+",
-    "url": "https://clwbiforbach.seetickets.com/event/sports/clwb-ifor-bach/3515789",
-    "venue": "Clwb Ifor Bach",
-    "scrapedAt": "2026-05-19T11:36:15.860Z",
-    "imageUrl": "https://clwb.net/wp-content/uploads/2025/10/Sports-website-320x160.jpg",
-    "musicGenres": [
-      "Pop"
-    ],
-    "imageUrls": [
-      "https://clwb.net/wp-content/uploads/2025/10/Sports-website-320x160.jpg"
-    ],
-    "primaryCategory": "Music",
-    "genre": "Pop",
-    "description": "7.30pm • £18 • 14+",
-    "ticketPriceFrom": 18,
-    "ticketCurrency": "GBP",
-    "ticketPriceLabel": "£18"
-  },
-  {
-    "title": "SLEEP BROKEN",
-    "date": "Friday, 30 October 2026",
-    "details": "7.00pm • £15 • 18+",
-    "url": "https://www.seetickets.com/event/sleep-broken/clwb-ifor-bach/3628532",
-    "venue": "Clwb Ifor Bach",
-    "scrapedAt": "2026-05-19T11:36:15.860Z",
-    "imageUrl": "https://clwb.net/wp-content/uploads/2026/05/SleepBroken_ClwbIforBach_301026-320x160.jpg",
-    "musicGenres": [
-      "Pop"
-    ],
-    "imageUrls": [
-      "https://clwb.net/wp-content/uploads/2026/05/SleepBroken_ClwbIforBach_301026-320x160.jpg"
-    ],
-    "primaryCategory": "Music",
-    "genre": "Pop",
-    "description": "7.00pm • £15 • 18+",
-    "ticketPriceFrom": 15,
-    "ticketCurrency": "GBP",
-    "ticketPriceLabel": "£15"
-  },
-  {
-    "title": "HIGH FADE",
-    "date": "Wednesday, 4 November 2026",
-    "details": "7.30pm • £20 • 14+",
-    "url": "https://www.seetickets.com/event/high-fade/clwb-ifor-bach/3622256",
-    "venue": "Clwb Ifor Bach",
-    "scrapedAt": "2026-05-19T11:36:15.860Z",
-    "imageUrl": "https://clwb.net/wp-content/uploads/2026/03/High-Fade-Web-320x160.jpg",
-    "musicGenres": [
-      "Pop"
-    ],
-    "imageUrls": [
-      "https://clwb.net/wp-content/uploads/2026/03/High-Fade-Web-320x160.jpg"
-    ],
-    "primaryCategory": "Music",
-    "genre": "Pop",
-    "description": "7.30pm • £20 • 14+",
-    "ticketPriceFrom": 20,
-    "ticketCurrency": "GBP",
-    "ticketPriceLabel": "£20"
-  },
-  {
-    "title": "STU LARSEN",
-    "date": "Thursday, 5 November 2026",
-    "details": "7.30pm • £16.50 • 14+",
-    "url": "https://clwbiforbach.seetickets.com/event/stu-larsen/clwb-ifor-bach/3609414",
-    "venue": "Clwb Ifor Bach",
-    "scrapedAt": "2026-05-19T11:36:15.860Z",
-    "imageUrl": "https://clwb.net/wp-content/uploads/2026/02/Stu-Larsen-website-1-320x160.jpg",
-    "musicGenres": [
-      "Pop"
-    ],
-    "imageUrls": [
-      "https://clwb.net/wp-content/uploads/2026/02/Stu-Larsen-website-1-320x160.jpg"
-    ],
-    "primaryCategory": "Music",
-    "genre": "Pop",
-    "description": "7.30pm • £16.50 • 14+",
-    "ticketPriceFrom": 16.5,
-    "ticketCurrency": "GBP",
-    "ticketPriceLabel": "£16.50"
-  },
-  {
-    "title": "MICHAEL MCGOVERN",
-    "date": "Tuesday, 10 November 2026",
-    "details": "7.30pm • £16 • 14+",
-    "url": "https://www.seetickets.com/event/michael-mcgovern/clwb-ifor-bach/3641259",
-    "venue": "Clwb Ifor Bach",
-    "scrapedAt": "2026-05-22T16:28:30.608Z",
-    "imageUrl": "https://clwb.net/wp-content/uploads/2026/05/MICHAEL-MCGOVERN-320x160.jpg",
-    "musicGenres": [
-      "Pop"
-    ],
-    "imageUrls": [
-      "https://clwb.net/wp-content/uploads/2026/05/MICHAEL-MCGOVERN-320x160.jpg"
-    ],
-    "primaryCategory": "Music",
-    "genre": "Pop",
-    "description": "7.30pm • £16 • 14+",
-    "ticketPriceFrom": 16,
-    "ticketCurrency": "GBP",
-    "ticketPriceLabel": "£16"
-  },
-  {
-    "title": "THE ALLERGIES",
-    "date": "Thursday, 19 November 2026",
-    "details": "7.00pm • £22.50 • 14+",
-    "url": "https://clwbiforbach.seetickets.com/event/the-allergies/clwb-ifor-bach/3618314",
-    "venue": "Clwb Ifor Bach",
-    "scrapedAt": "2026-05-19T11:36:15.860Z",
-    "imageUrl": "https://clwb.net/wp-content/uploads/2026/03/The-Allergies-website-320x160.jpg",
-    "musicGenres": [
-      "Pop"
-    ],
-    "imageUrls": [
-      "https://clwb.net/wp-content/uploads/2026/03/The-Allergies-website-320x160.jpg"
-    ],
-    "primaryCategory": "Music",
-    "genre": "Pop",
-    "description": "7.00pm • £22.50 • 14+",
-    "ticketPriceFrom": 22.5,
-    "ticketCurrency": "GBP",
-    "ticketPriceLabel": "£22.50"
-  },
-  {
-    "title": "TEENAGE FANCLUB",
-    "date": "Thursday, 19 November 2026",
-    "details": "7.00pm • £30 • 14+",
-    "url": "https://www.seetickets.com/event/teenage-fanclub/cardiff-students-union-y-plas/3626058",
-    "venue": "Clwb Ifor Bach",
-    "scrapedAt": "2026-05-19T11:36:15.860Z",
-    "imageUrl": "https://clwb.net/wp-content/uploads/2026/04/Teenage-Fanclub-320x160.jpg",
-    "musicGenres": [
-      "Pop"
-    ],
-    "imageUrls": [
-      "https://clwb.net/wp-content/uploads/2026/04/Teenage-Fanclub-320x160.jpg"
-    ],
-    "primaryCategory": "Music",
-    "genre": "Pop",
-    "description": "7.00pm • £30 • 14+",
-    "ticketPriceFrom": 30,
-    "ticketCurrency": "GBP",
-    "ticketPriceLabel": "£30"
-  },
-  {
-    "title": "GETDOWN SERVICES @ TRAMSHED",
-    "date": "Thursday, 19 November 2026",
-    "details": "7.00pm • £22 • 14+ (Under 16's accompanied by an adult)",
-    "url": "https://clwbiforbach.seetickets.com/event/getdown-services/tramshed/3634595",
-    "venue": "Clwb Ifor Bach",
-    "scrapedAt": "2026-05-22T16:28:30.608Z",
-    "imageUrl": "https://clwb.net/wp-content/uploads/2026/05/Getdown_Services_Tramshed_19112026-320x160.jpg",
-    "musicGenres": [
-      "Pop"
-    ],
-    "imageUrls": [
-      "https://clwb.net/wp-content/uploads/2026/05/Getdown_Services_Tramshed_19112026-320x160.jpg"
-    ],
-    "primaryCategory": "Music",
-    "genre": "Pop",
-    "description": "7.00pm • £22 • 14+ (Under 16's accompanied by an adult)",
-    "ticketPriceFrom": 22,
-    "ticketCurrency": "GBP",
-    "ticketPriceLabel": "£22"
-  },
-  {
-    "title": "LITTLE ANGELS @ DEPOT",
-    "date": "Monday, 23 November 2026",
-    "details": "LUKE MORLEY (THURNDER) • 7.00pm • £40 • 14+ (Under 16's accompanied by an adult)",
-    "url": "https://clwbiforbach.seetickets.com/event/little-angels/depot/3606309",
-    "venue": "Clwb Ifor Bach",
-    "scrapedAt": "2026-05-19T11:36:15.860Z",
-    "imageUrl": "https://clwb.net/wp-content/uploads/2026/05/LittleAngels_Depot_23112026-320x160.jpg",
-    "musicGenres": [
-      "Pop"
-    ],
-    "imageUrls": [
-      "https://clwb.net/wp-content/uploads/2026/05/LittleAngels_Depot_23112026-320x160.jpg"
-    ],
-    "primaryCategory": "Music",
-    "genre": "Pop",
-    "description": "LUKE MORLEY (THURNDER) • 7.00pm • £40 • 14+ (Under 16's accompanied by an adult)",
-    "ticketPriceFrom": 40,
-    "ticketCurrency": "GBP",
-    "ticketPriceLabel": "£40"
-  },
-  {
-    "title": "FAT DOG @ DEPOT",
-    "date": "Tuesday, 24 November 2026",
-    "details": "7.00pm • £25 • 14+ (Under 16's accompanied by an adult)",
-    "url": "https://clwbiforbach.seetickets.com/event/fat-dog/depot/3628740",
-    "venue": "Clwb Ifor Bach",
-    "scrapedAt": "2026-05-19T11:36:15.860Z",
-    "imageUrl": "https://clwb.net/wp-content/uploads/2026/05/FatDog_DepotCardiff_24112026-320x160.jpg",
-    "musicGenres": [
-      "Pop"
-    ],
-    "imageUrls": [
-      "https://clwb.net/wp-content/uploads/2026/05/FatDog_DepotCardiff_24112026-320x160.jpg"
-    ],
-    "primaryCategory": "Music",
-    "genre": "Pop",
-    "description": "7.00pm • £25 • 14+ (Under 16's accompanied by an adult)",
-    "ticketPriceFrom": 25,
-    "ticketCurrency": "GBP",
-    "ticketPriceLabel": "£25"
-  },
-  {
-    "title": "BLEECH 9:3",
-    "date": "Friday, 27 November 2026",
-    "details": "7.00pm • £17 • 18+",
-    "url": "https://www.seetickets.com/event/bleech-9-3/clwb-ifor-bach/3632479",
-    "venue": "Clwb Ifor Bach",
-    "scrapedAt": "2026-05-19T11:36:15.860Z",
-    "imageUrl": "https://clwb.net/wp-content/uploads/2026/05/bleech93-320x160.jpg",
-    "musicGenres": [
-      "Pop"
-    ],
-    "imageUrls": [
-      "https://clwb.net/wp-content/uploads/2026/05/bleech93-320x160.jpg"
-    ],
-    "primaryCategory": "Music",
-    "genre": "Pop",
-    "description": "7.00pm • £17 • 18+",
-    "ticketPriceFrom": 17,
-    "ticketCurrency": "GBP",
-    "ticketPriceLabel": "£17"
-  },
-  {
-    "title": "RAMMLIED",
-    "date": "Saturday, 5 December 2026",
-    "details": "7.00pm • £14 • 18+",
-    "url": "https://clwbiforbach.seetickets.com/event/rammlied/clwb-ifor-bach/3569415",
-    "venue": "Clwb Ifor Bach",
-    "scrapedAt": "2026-05-19T11:36:15.860Z",
-    "imageUrl": "https://clwb.net/wp-content/uploads/2025/12/Rammlied-Website-320x160.jpg",
-    "musicGenres": [
-      "Pop"
-    ],
-    "imageUrls": [
-      "https://clwb.net/wp-content/uploads/2025/12/Rammlied-Website-320x160.jpg"
-    ],
-    "primaryCategory": "Music",
-    "genre": "Pop",
-    "description": "7.00pm • £14 • 18+",
-    "ticketPriceFrom": 14,
-    "ticketCurrency": "GBP",
-    "ticketPriceLabel": "£14"
   },
   {
     "title": "CLUMSY CABARET SEXY SCI FI SHOW",
@@ -13450,26 +11847,6 @@
     "genre": "Folk, Pop"
   },
   {
-    "title": "Forgiveness of a Monster",
-    "date": "Friday, 8 May 2026 – Saturday, 23 May 2026",
-    "description": "This pain is something I wanted to hold onto As it made me who I am Forged me as I grew Maybe it’s time I let it go And started new",
-    "category": "Made at Sherman",
-    "url": "https://www.shermantheatre.co.uk/event/forgiveness-of-a-monster/",
-    "imageUrl": "https://www.shermantheatre.co.uk/wp-content/uploads/2025/12/Sherman-KK1232-Forgiveness-1280x562-1-1272x562.jpg",
-    "venue": "Sherman Theatre",
-    "scrapedAt": "2026-05-14T10:10:02.799Z",
-    "imageUrls": [
-      "https://www.shermantheatre.co.uk/wp-content/uploads/2025/12/Sherman-KK1232-Forgiveness-1280x562-1-1272x562.jpg"
-    ],
-    "subcategory": "Forgiveness of a Monster",
-    "ticketPriceFrom": 16,
-    "ticketPriceTo": 24,
-    "ticketCurrency": "GBP",
-    "ticketPriceLabel": "£16–£24",
-    "primaryCategory": "Other",
-    "genre": "Forgiveness of a Monster"
-  },
-  {
     "title": "Twelfth Night",
     "date": "Thursday, 21 May 2026 – Saturday, 23 May 2026",
     "description": "If music be the food of love, play on…",
@@ -13488,6 +11865,26 @@
     "ticketPriceLabel": "£18–£32",
     "primaryCategory": "Theatre",
     "genre": "Twelfth Night"
+  },
+  {
+    "title": "Forgiveness of a Monster",
+    "date": "Friday, 8 May 2026 – Saturday, 23 May 2026",
+    "description": "This pain is something I wanted to hold onto As it made me who I am Forged me as I grew Maybe it’s time I let it go And started new",
+    "category": "Made at Sherman",
+    "url": "https://www.shermantheatre.co.uk/event/forgiveness-of-a-monster/",
+    "imageUrl": "https://www.shermantheatre.co.uk/wp-content/uploads/2025/12/Sherman-KK1232-Forgiveness-1280x562-1-1272x562.jpg",
+    "venue": "Sherman Theatre",
+    "scrapedAt": "2026-05-14T10:10:02.799Z",
+    "imageUrls": [
+      "https://www.shermantheatre.co.uk/wp-content/uploads/2025/12/Sherman-KK1232-Forgiveness-1280x562-1-1272x562.jpg"
+    ],
+    "subcategory": "Forgiveness of a Monster",
+    "ticketPriceFrom": 16,
+    "ticketPriceTo": 24,
+    "ticketCurrency": "GBP",
+    "ticketPriceLabel": "£16–£24",
+    "primaryCategory": "Other",
+    "genre": "Forgiveness of a Monster"
   },
   {
     "title": "NEW ’26: That Last Summer",
