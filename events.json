@@ -917,75 +917,6 @@
     "date": "Saturday, 17 April 2027"
   },
   {
-    "title": "ODYSSEY",
-    "date": "Saturday, 23 May 2026 – Sunday, 24 May 2026",
-    "url": "https://www.wmc.org.uk/en/whats-on/2026/odyssey",
-    "venue": "Wales Millennium Centre",
-    "scrapedAt": "2026-05-12T09:07:48.767Z",
-    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1774880544/WMC%20Content/Whats%20On/2026/Weston%20Studio/ODYSSEY/odyssey_logo_thumbnail?_a=BAAAV6DQ",
-    "imageUrls": [
-      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1774880544/WMC%20Content/Whats%20On/2026/Weston%20Studio/ODYSSEY/odyssey_logo_thumbnail?_a=BAAAV6DQ",
-      "http://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_630%2Cw_1200/f_auto/q_auto/v1774880544/WMC%20Content/Whats%20On/2026/Weston%20Studio/ODYSSEY/odyssey_logo_thumbnail?_a=BAAAV6DQ",
-      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_512%2Cw_1024/f_auto/q_auto/v1774880544/WMC%20Content/Whats%20On/2026/Weston%20Studio/ODYSSEY/odyssey_logo_thumbnail?_a=BAAAV6DQ",
-      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1774880544/WMC%20Content/Whats%20On/2026/Weston%20Studio/ODYSSEY/odyssey_logo_thumbnail?_a=BAAAV6DQ"
-    ],
-    "eventStartDate": "2026-05-23 15:00:00",
-    "eventEndDate": "2026-05-24 20:00:00",
-    "ticketPriceFrom": 20,
-    "ticketPriceTo": 20,
-    "ticketCurrency": "GBP",
-    "subcategory": "Wales Millennium Centre > What's on > 2026 > Odyssey",
-    "primaryCategory": "Theatre",
-    "genre": "Rap, Classical",
-    "ticketPriceLabel": "£20"
-  },
-  {
-    "title": "THE CHOIR OF MAN",
-    "date": "Tuesday, 19 May 2026 – Saturday, 23 May 2026",
-    "url": "https://www.wmc.org.uk/en/whats-on/2026/choir-of-man",
-    "venue": "Wales Millennium Centre",
-    "scrapedAt": "2026-05-12T09:07:48.767Z",
-    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1761929713/WMC%20Content/Whats%20On/2026/Donald%20Gordon%20Theatre/Choir%20Of%20Man/COM25015_WMC_WhatsOn_1280x960pxls?_a=BAAAV6DQ",
-    "imageUrls": [
-      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1761929713/WMC%20Content/Whats%20On/2026/Donald%20Gordon%20Theatre/Choir%20Of%20Man/COM25015_WMC_WhatsOn_1280x960pxls?_a=BAAAV6DQ",
-      "http://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_630%2Cw_1200/f_auto/q_auto/v1761929713/WMC%20Content/Whats%20On/2026/Donald%20Gordon%20Theatre/Choir%20Of%20Man/COM25015_WMC_WhatsOn_1280x960pxls?_a=BAAAV6DQ",
-      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_512%2Cw_1024/f_auto/q_auto/v1761929713/WMC%20Content/Whats%20On/2026/Donald%20Gordon%20Theatre/Choir%20Of%20Man/COM25015_WMC_WhatsOn_1280x960pxls?_a=BAAAV6DQ",
-      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1761929713/WMC%20Content/Whats%20On/2026/Donald%20Gordon%20Theatre/Choir%20Of%20Man/COM25015_WMC_WhatsOn_1280x960pxls?_a=BAAAV6DQ"
-    ],
-    "eventStartDate": "2026-05-19 19:30:00",
-    "eventEndDate": "2026-05-23 22:30:00",
-    "ticketPriceFrom": 19,
-    "ticketPriceTo": 19,
-    "ticketCurrency": "GBP",
-    "subcategory": "Wales Millennium Centre > What's on > 2026 > The Choir of Man",
-    "primaryCategory": "Theatre",
-    "genre": "Classical",
-    "ticketPriceLabel": "£19"
-  },
-  {
-    "title": "BLUES & BURLESQUE",
-    "date": "Saturday, 23 May 2026",
-    "url": "https://www.wmc.org.uk/en/whats-on/2026/blues-and-burlesque",
-    "venue": "Wales Millennium Centre",
-    "scrapedAt": "2026-05-12T09:07:48.767Z",
-    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1771176588/WMC%20Content/Whats%20On/2026/Cabaret/Blues%20a%20Burlesque/15f2c64a-2fca-4733-a711-2f786a91a7eb?_a=BAAAV6DQ",
-    "imageUrls": [
-      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1771176588/WMC%20Content/Whats%20On/2026/Cabaret/Blues%20a%20Burlesque/15f2c64a-2fca-4733-a711-2f786a91a7eb?_a=BAAAV6DQ",
-      "http://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_630%2Cw_1200/f_auto/q_auto/v1771176588/WMC%20Content/Whats%20On/2026/Cabaret/Blues%20a%20Burlesque/15f2c64a-2fca-4733-a711-2f786a91a7eb?_a=BAAAV6DQ",
-      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_512%2Cw_1024/f_auto/q_auto/v1771176588/WMC%20Content/Whats%20On/2026/Cabaret/Blues%20a%20Burlesque/15f2c64a-2fca-4733-a711-2f786a91a7eb?_a=BAAAV6DQ",
-      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1771176588/WMC%20Content/Whats%20On/2026/Cabaret/Blues%20a%20Burlesque/15f2c64a-2fca-4733-a711-2f786a91a7eb?_a=BAAAV6DQ"
-    ],
-    "eventStartDate": "2026-05-23 20:00:00",
-    "eventEndDate": "2026-05-23 22:00:00",
-    "ticketPriceFrom": 20,
-    "ticketPriceTo": 20,
-    "ticketCurrency": "GBP",
-    "subcategory": "Wales Millennium Centre > What's on > 2026 > Blues & Burlesque",
-    "primaryCategory": "Theatre",
-    "genre": "Jazz, Classical, Blues, Rock",
-    "ticketPriceLabel": "£20"
-  },
-  {
     "title": "WALES MILLENNIUM CENTRE TOURS (ENGLISH)",
     "date": "Sunday, 1 February 2026 – Thursday, 31 December 2026",
     "url": "https://www.wmc.org.uk/en/whats-on/2026/tours-english",
@@ -1009,6 +940,29 @@
     "ticketPriceLabel": "£17"
   },
   {
+    "title": "ODYSSEY",
+    "date": "Saturday, 23 May 2026 – Sunday, 24 May 2026",
+    "url": "https://www.wmc.org.uk/en/whats-on/2026/odyssey",
+    "venue": "Wales Millennium Centre",
+    "scrapedAt": "2026-05-12T09:07:48.767Z",
+    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1774880544/WMC%20Content/Whats%20On/2026/Weston%20Studio/ODYSSEY/odyssey_logo_thumbnail?_a=BAAAV6DQ",
+    "imageUrls": [
+      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1774880544/WMC%20Content/Whats%20On/2026/Weston%20Studio/ODYSSEY/odyssey_logo_thumbnail?_a=BAAAV6DQ",
+      "http://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_630%2Cw_1200/f_auto/q_auto/v1774880544/WMC%20Content/Whats%20On/2026/Weston%20Studio/ODYSSEY/odyssey_logo_thumbnail?_a=BAAAV6DQ",
+      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_512%2Cw_1024/f_auto/q_auto/v1774880544/WMC%20Content/Whats%20On/2026/Weston%20Studio/ODYSSEY/odyssey_logo_thumbnail?_a=BAAAV6DQ",
+      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1774880544/WMC%20Content/Whats%20On/2026/Weston%20Studio/ODYSSEY/odyssey_logo_thumbnail?_a=BAAAV6DQ"
+    ],
+    "eventStartDate": "2026-05-23 15:00:00",
+    "eventEndDate": "2026-05-24 20:00:00",
+    "ticketPriceFrom": 20,
+    "ticketPriceTo": 20,
+    "ticketCurrency": "GBP",
+    "subcategory": "Wales Millennium Centre > What's on > 2026 > Odyssey",
+    "primaryCategory": "Theatre",
+    "genre": "Rap, Classical",
+    "ticketPriceLabel": "£20"
+  },
+  {
     "title": "BUFFY THE VAMPIRE - ONCE MORE WITH FEELING!",
     "date": "Sunday, 24 May 2026",
     "url": "https://www.wmc.org.uk/en/whats-on/2026/buffy-the-vampire-once-more-with-feeling",
@@ -1028,7 +982,7 @@
     "ticketCurrency": "GBP",
     "subcategory": "Wales Millennium Centre > What's on > 2026 > Buffy the Vampire - Once More With Feeling!",
     "primaryCategory": "Theatre",
-    "genre": "Jazz, Classical, Blues, Rock",
+    "genre": "Jazz, Classical, Rock",
     "ticketPriceLabel": "£16"
   },
   {
@@ -1231,7 +1185,7 @@
     "ticketCurrency": "GBP",
     "subcategory": "Wales Millennium Centre > What's on > 2026 > Mark T Cox: Paddy Daddy",
     "primaryCategory": "Theatre",
-    "genre": "Jazz, Classical, Blues, Pop, Rock",
+    "genre": "Jazz, Classical, Pop, Rock",
     "ticketPriceLabel": "£10"
   },
   {
@@ -1273,7 +1227,7 @@
     "ticketCurrency": "GBP",
     "subcategory": "Wales Millennium Centre > What's on > 2026 > Cabaret Provocateur",
     "primaryCategory": "Theatre",
-    "genre": "Jazz, Classical, Blues, Rock",
+    "genre": "Jazz, Classical, Rock",
     "ticketPriceLabel": "£20"
   },
   {
@@ -1364,7 +1318,7 @@
     "ticketCurrency": "GBP",
     "subcategory": "Wales Millennium Centre > What's on > 2026 > Cabaret Bingo",
     "primaryCategory": "Theatre",
-    "genre": "Jazz, Classical, Blues, Rock",
+    "genre": "Jazz, Classical, Rock",
     "ticketPriceLabel": "£15"
   },
   {
@@ -1387,7 +1341,7 @@
     "ticketCurrency": "GBP",
     "subcategory": "Wales Millennium Centre > What's on > 2026 > A Queer Icons Cabaret",
     "primaryCategory": "Theatre",
-    "genre": "Jazz, Classical, Blues, Rock",
+    "genre": "Jazz, Classical, Rock",
     "ticketPriceLabel": "£20"
   },
   {
@@ -1494,7 +1448,7 @@
     "ticketCurrency": "GBP",
     "subcategory": "Wales Millennium Centre > What's on > 2026 > EIGHT: The One (Wo)Man Drag King Musical Parody",
     "primaryCategory": "Musical Theatre",
-    "genre": "Jazz, Classical, Blues, Rock",
+    "genre": "Jazz, Classical, Rock",
     "ticketPriceLabel": "£15"
   },
   {
@@ -1540,7 +1494,7 @@
     "ticketCurrency": "GBP",
     "subcategory": "Wales Millennium Centre > What's on > 2026 > Alison Jiear",
     "primaryCategory": "Theatre",
-    "genre": "Jazz, Classical, Blues, Rock",
+    "genre": "Jazz, Classical, Rock",
     "ticketPriceLabel": "£20"
   },
   {
@@ -1563,7 +1517,7 @@
     "ticketCurrency": "GBP",
     "subcategory": "Wales Millennium Centre > What's on > 2026 > Diana Ross - Tameka Jackson",
     "primaryCategory": "Theatre",
-    "genre": "Jazz, Classical, Blues, Rock",
+    "genre": "Jazz, Classical, Rock",
     "ticketPriceLabel": "£20"
   },
   {
@@ -1586,7 +1540,7 @@
     "ticketCurrency": "GBP",
     "subcategory": "Wales Millennium Centre > What's on > 2026 > Kae Kurd: Kae Kurd's Comedy Club on the Road",
     "primaryCategory": "Comedy",
-    "genre": "Jazz, Classical, Blues, Rock",
+    "genre": "Jazz, Classical, Rock",
     "ticketPriceLabel": "£20"
   },
   {
@@ -1655,7 +1609,7 @@
     "ticketCurrency": "GBP",
     "subcategory": "Wales Millennium Centre > What's on > 2026 > DRAGWYL",
     "primaryCategory": "Theatre",
-    "genre": "Jazz, Classical, Blues, Rock",
+    "genre": "Jazz, Classical, Rock",
     "ticketPriceLabel": "£20"
   },
   {
@@ -1678,7 +1632,7 @@
     "ticketCurrency": "GBP",
     "subcategory": "Wales Millennium Centre > What's on > 2026 > THE SCHITTS SHOW",
     "primaryCategory": "Theatre",
-    "genre": "Jazz, Classical, Blues, Rock",
+    "genre": "Jazz, Classical, Rock",
     "ticketPriceLabel": "£20"
   },
   {
@@ -1701,7 +1655,7 @@
     "ticketCurrency": "GBP",
     "subcategory": "Wales Millennium Centre > What's on > 2026 > Gagged June",
     "primaryCategory": "Theatre",
-    "genre": "Jazz, Classical, Blues, Rock",
+    "genre": "Jazz, Classical, Rock",
     "ticketPriceLabel": "£15"
   },
   {
@@ -1789,7 +1743,7 @@
     "ticketCurrency": "GBP",
     "subcategory": "Wales Millennium Centre > What's on > 2026 > Shrektacular",
     "primaryCategory": "Theatre",
-    "genre": "Jazz, Classical, Blues, Rock",
+    "genre": "Jazz, Classical, Rock",
     "ticketPriceLabel": "£20"
   },
   {
@@ -1844,11 +1798,22 @@
     "url": "https://www.wmc.org.uk/en/whats-on/2026/trunk-of-funk",
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-05-12T09:07:48.767Z",
-    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1773829565/WMC%20Content/Whats%20On/2026/Cabaret/Trunk%20of%20Funk/Trunk_of_Funk?_a=BAAAV6DQ",
+    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1773829565/WMC%20Content/Whats%20On/2026/Cabaret/Trunk%20of%20Funk/Trunk_of_Funk?_a=BAAAV6DQ",
     "imageUrls": [
+      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1773829565/WMC%20Content/Whats%20On/2026/Cabaret/Trunk%20of%20Funk/Trunk_of_Funk?_a=BAAAV6DQ",
+      "http://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_630%2Cw_1200/f_auto/q_auto/v1773829565/WMC%20Content/Whats%20On/2026/Cabaret/Trunk%20of%20Funk/Trunk_of_Funk?_a=BAAAV6DQ",
+      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_512%2Cw_1024/f_auto/q_auto/v1773829565/WMC%20Content/Whats%20On/2026/Cabaret/Trunk%20of%20Funk/Trunk_of_Funk?_a=BAAAV6DQ",
       "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1773829565/WMC%20Content/Whats%20On/2026/Cabaret/Trunk%20of%20Funk/Trunk_of_Funk?_a=BAAAV6DQ"
     ],
-    "primaryCategory": "Theatre"
+    "eventStartDate": "2026-07-02 20:00:00",
+    "eventEndDate": "2026-07-02 22:00:00",
+    "ticketPriceFrom": 15,
+    "ticketPriceTo": 15,
+    "ticketCurrency": "GBP",
+    "subcategory": "Wales Millennium Centre > What's on > 2026 > Trunk of Funk",
+    "primaryCategory": "Theatre",
+    "genre": "Jazz, Classical, Rock",
+    "ticketPriceLabel": "£15"
   },
   {
     "title": "BABY BUMPS",
@@ -1856,11 +1821,22 @@
     "url": "https://www.wmc.org.uk/en/whats-on/2026/baby-bumps",
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-05-12T09:07:48.767Z",
-    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1776162513/WMC%20Content/Whats%20On/2026/Weston%20Studio/Unity%20Festoval/Baby_bumps_thumbnail?_a=BAAAV6DQ",
+    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1776162513/WMC%20Content/Whats%20On/2026/Weston%20Studio/Unity%20Festoval/Baby_bumps_thumbnail?_a=BAAAV6DQ",
     "imageUrls": [
+      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1776162513/WMC%20Content/Whats%20On/2026/Weston%20Studio/Unity%20Festoval/Baby_bumps_thumbnail?_a=BAAAV6DQ",
+      "http://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_630%2Cw_1200/f_auto/q_auto/v1776162513/WMC%20Content/Whats%20On/2026/Weston%20Studio/Unity%20Festoval/Baby_bumps_thumbnail?_a=BAAAV6DQ",
+      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_512%2Cw_1024/f_auto/q_auto/v1776162513/WMC%20Content/Whats%20On/2026/Weston%20Studio/Unity%20Festoval/Baby_bumps_thumbnail?_a=BAAAV6DQ",
       "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1776162513/WMC%20Content/Whats%20On/2026/Weston%20Studio/Unity%20Festoval/Baby_bumps_thumbnail?_a=BAAAV6DQ"
     ],
-    "primaryCategory": "Theatre"
+    "eventStartDate": "2026-07-02 20:00:00",
+    "eventEndDate": "2026-07-02 22:00:00",
+    "ticketPriceFrom": 16,
+    "ticketPriceTo": 16,
+    "ticketCurrency": "GBP",
+    "subcategory": "Wales Millennium Centre > What's on > 2026 > Baby Bumps",
+    "primaryCategory": "Theatre",
+    "genre": "Classical",
+    "ticketPriceLabel": "£16"
   },
   {
     "title": "JAMES ACASTER",
@@ -1891,11 +1867,22 @@
     "url": "https://www.wmc.org.uk/en/whats-on/2026/the-pearl-revue",
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-05-12T09:07:48.767Z",
-    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1773937228/WMC%20Content/Whats%20On/2026/Cabaret/Pearl%20Revue%20July/The_Pearl_Revue_July3_What_s_on_Thumbnail_WMC_1200_x_900_px?_a=BAAAV6DQ",
+    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1773937228/WMC%20Content/Whats%20On/2026/Cabaret/Pearl%20Revue%20July/The_Pearl_Revue_July3_What_s_on_Thumbnail_WMC_1200_x_900_px?_a=BAAAV6DQ",
     "imageUrls": [
+      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1773937228/WMC%20Content/Whats%20On/2026/Cabaret/Pearl%20Revue%20July/The_Pearl_Revue_July3_What_s_on_Thumbnail_WMC_1200_x_900_px?_a=BAAAV6DQ",
+      "http://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_630%2Cw_1200/f_auto/q_auto/v1773937228/WMC%20Content/Whats%20On/2026/Cabaret/Pearl%20Revue%20July/The_Pearl_Revue_July3_What_s_on_Thumbnail_WMC_1200_x_900_px?_a=BAAAV6DQ",
+      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_512%2Cw_1024/f_auto/q_auto/v1773937228/WMC%20Content/Whats%20On/2026/Cabaret/Pearl%20Revue%20July/The_Pearl_Revue_July3_What_s_on_Thumbnail_WMC_1200_x_900_px?_a=BAAAV6DQ",
       "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1773937228/WMC%20Content/Whats%20On/2026/Cabaret/Pearl%20Revue%20July/The_Pearl_Revue_July3_What_s_on_Thumbnail_WMC_1200_x_900_px?_a=BAAAV6DQ"
     ],
-    "primaryCategory": "Theatre"
+    "eventStartDate": "2026-07-03 20:00:00",
+    "eventEndDate": "2026-07-03 22:30:00",
+    "ticketPriceFrom": 20,
+    "ticketPriceTo": 20,
+    "ticketCurrency": "GBP",
+    "subcategory": "Wales Millennium Centre > What's on > 2026 > The Pearl Revue",
+    "primaryCategory": "Theatre",
+    "genre": "Jazz, Classical, Rock",
+    "ticketPriceLabel": "£20"
   },
   {
     "title": "THE DAY THE MAN STEPPED ON THE MOON",
@@ -1903,11 +1890,22 @@
     "url": "https://www.wmc.org.uk/en/whats-on/2026/the-day-the-man-stepped-on-the-moon",
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-05-12T09:07:48.767Z",
-    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1775901234/WMC%20Content/Whats%20On/2026/Weston%20Studio/Unity%20Festoval/moon_thumbnail?_a=BAAAV6DQ",
+    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1775901234/WMC%20Content/Whats%20On/2026/Weston%20Studio/Unity%20Festoval/moon_thumbnail?_a=BAAAV6DQ",
     "imageUrls": [
+      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1775901234/WMC%20Content/Whats%20On/2026/Weston%20Studio/Unity%20Festoval/moon_thumbnail?_a=BAAAV6DQ",
+      "http://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_630%2Cw_1200/f_auto/q_auto/v1775901234/WMC%20Content/Whats%20On/2026/Weston%20Studio/Unity%20Festoval/moon_thumbnail?_a=BAAAV6DQ",
+      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_512%2Cw_1024/f_auto/q_auto/v1775901234/WMC%20Content/Whats%20On/2026/Weston%20Studio/Unity%20Festoval/moon_thumbnail?_a=BAAAV6DQ",
       "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1775901234/WMC%20Content/Whats%20On/2026/Weston%20Studio/Unity%20Festoval/moon_thumbnail?_a=BAAAV6DQ"
     ],
-    "primaryCategory": "Theatre"
+    "eventStartDate": "2026-07-03 20:00:00",
+    "eventEndDate": "2026-07-03 21:00:00",
+    "ticketPriceFrom": 16,
+    "ticketPriceTo": 16,
+    "ticketCurrency": "GBP",
+    "subcategory": "Wales Millennium Centre > What's on > 2026 > The Day the Man Stepped on the Moon",
+    "primaryCategory": "Theatre",
+    "genre": "Classical",
+    "ticketPriceLabel": "£16"
   },
   {
     "title": "DOWN",
@@ -1938,11 +1936,22 @@
     "url": "https://www.wmc.org.uk/en/whats-on/2026/unity-festival-party",
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-05-12T09:07:48.767Z",
-    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1775559576/WMC%20Content/Whats%20On/2026/Cabaret/Unity%20Festival%20party/Unity_Party_desktop?_a=BAAAV6DQ",
+    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1775559576/WMC%20Content/Whats%20On/2026/Cabaret/Unity%20Festival%20party/Unity_Party_desktop?_a=BAAAV6DQ",
     "imageUrls": [
+      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1775559576/WMC%20Content/Whats%20On/2026/Cabaret/Unity%20Festival%20party/Unity_Party_desktop?_a=BAAAV6DQ",
+      "http://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_630%2Cw_1200/f_auto/q_auto/v1775559576/WMC%20Content/Whats%20On/2026/Cabaret/Unity%20Festival%20party/Unity_Party_desktop?_a=BAAAV6DQ",
+      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_512%2Cw_1024/f_auto/q_auto/v1775559576/WMC%20Content/Whats%20On/2026/Cabaret/Unity%20Festival%20party/Unity_Party_desktop?_a=BAAAV6DQ",
       "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1775559576/WMC%20Content/Whats%20On/2026/Cabaret/Unity%20Festival%20party/Unity_Party_desktop?_a=BAAAV6DQ"
     ],
-    "primaryCategory": "Theatre"
+    "eventStartDate": "2026-07-04 21:30:00",
+    "eventEndDate": "2026-07-04 23:00:00",
+    "ticketPriceFrom": 10,
+    "ticketPriceTo": 10,
+    "ticketCurrency": "GBP",
+    "subcategory": "Wales Millennium Centre > What's on > 2026 > Unity Festival Party",
+    "primaryCategory": "Theatre",
+    "genre": "Punk, Soul, Classical, Blues, Pop, Rock",
+    "ticketPriceLabel": "£10"
   },
   {
     "title": "AN AMERICAN SOUNDSCAPE",
@@ -1973,11 +1982,22 @@
     "url": "https://www.wmc.org.uk/en/whats-on/2026/annie",
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-05-12T09:07:48.767Z",
-    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1769687820/WMC%20Content/Whats%20On/2026/Donald%20Gordon%20Theatre/Annie/ANNIE-2025-11-ClaireSweeney-1280x960?_a=BAAAV6DQ",
+    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1769687820/WMC%20Content/Whats%20On/2026/Donald%20Gordon%20Theatre/Annie/ANNIE-2025-11-ClaireSweeney-1280x960?_a=BAAAV6DQ",
     "imageUrls": [
+      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1769687820/WMC%20Content/Whats%20On/2026/Donald%20Gordon%20Theatre/Annie/ANNIE-2025-11-ClaireSweeney-1280x960?_a=BAAAV6DQ",
+      "http://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_630%2Cw_1200/f_auto/q_auto/v1769687820/WMC%20Content/Whats%20On/2026/Donald%20Gordon%20Theatre/Annie/ANNIE-2025-11-ClaireSweeney-1280x960?_a=BAAAV6DQ",
+      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_512%2Cw_1024/f_auto/q_auto/v1769687820/WMC%20Content/Whats%20On/2026/Donald%20Gordon%20Theatre/Annie/ANNIE-2025-11-ClaireSweeney-1280x960?_a=BAAAV6DQ",
       "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1769687820/WMC%20Content/Whats%20On/2026/Donald%20Gordon%20Theatre/Annie/ANNIE-2025-11-ClaireSweeney-1280x960?_a=BAAAV6DQ"
     ],
-    "primaryCategory": "Theatre"
+    "eventStartDate": "2026-07-07 19:30:00",
+    "eventEndDate": "2026-07-18 22:30:00",
+    "ticketPriceFrom": 22,
+    "ticketPriceTo": 22,
+    "ticketCurrency": "GBP",
+    "subcategory": "Wales Millennium Centre > What's on > 2026 > Annie",
+    "primaryCategory": "Theatre",
+    "genre": "Classical",
+    "ticketPriceLabel": "£22"
   },
   {
     "title": "DAN COSTA",
@@ -1999,7 +2019,7 @@
     "ticketCurrency": "GBP",
     "subcategory": "Wales Millennium Centre > What's on > 2026 > Dan Costa",
     "primaryCategory": "Theatre",
-    "genre": "Jazz, Classical, Blues, Rock",
+    "genre": "Jazz, Classical, Rock",
     "ticketPriceLabel": "£15"
   },
   {
@@ -2022,7 +2042,7 @@
     "ticketCurrency": "GBP",
     "subcategory": "Wales Millennium Centre > What's on > 2026 > Big Band Burlesque",
     "primaryCategory": "Theatre",
-    "genre": "Jazz, Classical, Blues, Rock",
+    "genre": "Jazz, Classical, Rock",
     "ticketPriceLabel": "£20"
   },
   {
@@ -2080,7 +2100,7 @@
     "ticketCurrency": "GBP",
     "subcategory": "Wales Millennium Centre > What's on > 2026 > Steph Webber - Glittering Nights",
     "primaryCategory": "Theatre",
-    "genre": "Jazz, Country, Classical, Blues, Rock",
+    "genre": "Jazz, Country, Classical, Rock",
     "ticketPriceLabel": "£18"
   },
   {
@@ -2089,45 +2109,23 @@
     "url": "https://www.wmc.org.uk/en/whats-on/2026/showgirls-and-sharks",
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-05-12T09:07:48.767Z",
-    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1773933629/WMC%20Content/Whats%20On/2026/Cabaret/Sharks%20and%20Showgirls/Square?_a=BAAAV6DQ",
+    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1773933629/WMC%20Content/Whats%20On/2026/Cabaret/Sharks%20and%20Showgirls/Square?_a=BAAAV6DQ",
     "imageUrls": [
-      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1773933629/WMC%20Content/Whats%20On/2026/Cabaret/Sharks%20and%20Showgirls/Square?_a=BAAAV6DQ",
-      "http://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_630%2Cw_1200/f_auto/q_auto/v1773933629/WMC%20Content/Whats%20On/2026/Cabaret/Sharks%20and%20Showgirls/Square?_a=BAAAV6DQ",
-      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_512%2Cw_1024/f_auto/q_auto/v1773933629/WMC%20Content/Whats%20On/2026/Cabaret/Sharks%20and%20Showgirls/Square?_a=BAAAV6DQ",
       "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1773933629/WMC%20Content/Whats%20On/2026/Cabaret/Sharks%20and%20Showgirls/Square?_a=BAAAV6DQ"
     ],
-    "eventStartDate": "2026-07-19 19:00:00",
-    "eventEndDate": "2026-07-19 22:00:00",
-    "ticketPriceFrom": 15,
-    "ticketPriceTo": 15,
-    "ticketCurrency": "GBP",
-    "subcategory": "Wales Millennium Centre > What's on > 2026 > Showgirls and Sharks",
-    "primaryCategory": "Theatre",
-    "genre": "Jazz, Classical, Blues, Rock",
-    "ticketPriceLabel": "£15"
+    "primaryCategory": "Theatre"
   },
   {
     "title": "THE BODYGUARD",
-    "date": "Monday, 20 July 2026 – Sunday, 26 July 2026",
+    "date": "Monday, 20 July 2026 – Saturday, 25 July 2026",
     "url": "https://www.wmc.org.uk/en/whats-on/2026/the-bodyguard",
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-05-12T09:07:48.767Z",
-    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1768574353/WMC%20Content/Whats%20On/2026/Donald%20Gordon%20Theatre/The%20Bodyguard/BG-JUL25-BBs-CARDIFF-1280x960?_a=BAAAV6DQ",
+    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1768574353/WMC%20Content/Whats%20On/2026/Donald%20Gordon%20Theatre/The%20Bodyguard/BG-JUL25-BBs-CARDIFF-1280x960?_a=BAAAV6DQ",
     "imageUrls": [
-      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1768574353/WMC%20Content/Whats%20On/2026/Donald%20Gordon%20Theatre/The%20Bodyguard/BG-JUL25-BBs-CARDIFF-1280x960?_a=BAAAV6DQ",
-      "http://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_630%2Cw_1200/f_auto/q_auto/v1768574353/WMC%20Content/Whats%20On/2026/Donald%20Gordon%20Theatre/The%20Bodyguard/BG-JUL25-BBs-CARDIFF-1280x960?_a=BAAAV6DQ",
-      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_512%2Cw_1024/f_auto/q_auto/v1768574353/WMC%20Content/Whats%20On/2026/Donald%20Gordon%20Theatre/The%20Bodyguard/BG-JUL25-BBs-CARDIFF-1280x960?_a=BAAAV6DQ",
       "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1768574353/WMC%20Content/Whats%20On/2026/Donald%20Gordon%20Theatre/The%20Bodyguard/BG-JUL25-BBs-CARDIFF-1280x960?_a=BAAAV6DQ"
     ],
-    "eventStartDate": "2026-07-20 00:00:00",
-    "eventEndDate": "2026-07-25 23:59:00",
-    "ticketPriceFrom": 22,
-    "ticketPriceTo": 22,
-    "ticketCurrency": "GBP",
-    "subcategory": "Wales Millennium Centre > What's on > 2026 > The Bodyguard",
-    "primaryCategory": "Theatre",
-    "genre": "Classical",
-    "ticketPriceLabel": "£22"
+    "primaryCategory": "Theatre"
   },
   {
     "title": "GLENDA & RITA",
@@ -2149,7 +2147,7 @@
     "ticketCurrency": "GBP",
     "subcategory": "Wales Millennium Centre > What's on > 2026 > Glenda & Rita",
     "primaryCategory": "Theatre",
-    "genre": "Jazz, Classical, Blues, Rock",
+    "genre": "Jazz, Classical, Rock",
     "ticketPriceLabel": "£18"
   },
   {
@@ -2172,7 +2170,7 @@
     "ticketCurrency": "GBP",
     "subcategory": "Wales Millennium Centre > What's on > 2026 > The Rat Pack Las Vegas Live!",
     "primaryCategory": "Theatre",
-    "genre": "Jazz, Classical, Blues, Rock",
+    "genre": "Jazz, Classical, Rock",
     "ticketPriceLabel": "£20"
   },
   {
@@ -2181,22 +2179,11 @@
     "url": "https://www.wmc.org.uk/en/whats-on/2026/an-evening-with-sir-david-jason",
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-05-12T09:07:48.767Z",
-    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1764159789/WMC%20Content/Whats%20On/2026/Donald%20Gordon%20Theatre/Sir%20David%20Jason/WHATS_ON_THUMBNAIL?_a=BAAAV6DQ",
+    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1764159789/WMC%20Content/Whats%20On/2026/Donald%20Gordon%20Theatre/Sir%20David%20Jason/WHATS_ON_THUMBNAIL?_a=BAAAV6DQ",
     "imageUrls": [
-      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1764159789/WMC%20Content/Whats%20On/2026/Donald%20Gordon%20Theatre/Sir%20David%20Jason/WHATS_ON_THUMBNAIL?_a=BAAAV6DQ",
-      "http://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_630%2Cw_1200/f_auto/q_auto/v1764159789/WMC%20Content/Whats%20On/2026/Donald%20Gordon%20Theatre/Sir%20David%20Jason/WHATS_ON_THUMBNAIL?_a=BAAAV6DQ",
-      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_512%2Cw_1024/f_auto/q_auto/v1764159789/WMC%20Content/Whats%20On/2026/Donald%20Gordon%20Theatre/Sir%20David%20Jason/WHATS_ON_THUMBNAIL?_a=BAAAV6DQ",
       "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1764159789/WMC%20Content/Whats%20On/2026/Donald%20Gordon%20Theatre/Sir%20David%20Jason/WHATS_ON_THUMBNAIL?_a=BAAAV6DQ"
     ],
-    "eventStartDate": "2026-07-26 19:30:00",
-    "eventEndDate": "2026-07-26 22:00:00",
-    "ticketPriceFrom": 50,
-    "ticketPriceTo": 50,
-    "ticketCurrency": "GBP",
-    "subcategory": "Canolfan Mileniwm Cymru > Digwyddiadur > 2026 > An Evening with Sir David Jason",
-    "primaryCategory": "Theatre",
-    "genre": "Classical",
-    "ticketPriceLabel": "£50"
+    "primaryCategory": "Theatre"
   },
   {
     "title": "THE KARATE KID",
@@ -2240,11 +2227,22 @@
     "url": "https://www.wmc.org.uk/en/whats-on/2026/quartey-and-blayney",
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-05-12T09:07:48.767Z",
-    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1775297777/WMC%20Content/Whats%20On/2026/Cabaret/Quartey%20and%20Blayney/Quartey_and_Blayney_Photo?_a=BAAAV6DQ",
+    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1775297777/WMC%20Content/Whats%20On/2026/Cabaret/Quartey%20and%20Blayney/Quartey_and_Blayney_Photo?_a=BAAAV6DQ",
     "imageUrls": [
+      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1775297777/WMC%20Content/Whats%20On/2026/Cabaret/Quartey%20and%20Blayney/Quartey_and_Blayney_Photo?_a=BAAAV6DQ",
+      "http://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_630%2Cw_1200/f_auto/q_auto/v1775297777/WMC%20Content/Whats%20On/2026/Cabaret/Quartey%20and%20Blayney/Quartey_and_Blayney_Photo?_a=BAAAV6DQ",
+      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_512%2Cw_1024/f_auto/q_auto/v1775297777/WMC%20Content/Whats%20On/2026/Cabaret/Quartey%20and%20Blayney/Quartey_and_Blayney_Photo?_a=BAAAV6DQ",
       "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1775297777/WMC%20Content/Whats%20On/2026/Cabaret/Quartey%20and%20Blayney/Quartey_and_Blayney_Photo?_a=BAAAV6DQ"
     ],
-    "primaryCategory": "Theatre"
+    "eventStartDate": "2026-07-30 20:00:00",
+    "eventEndDate": "2026-07-30 22:00:00",
+    "ticketPriceFrom": 12.5,
+    "ticketPriceTo": 12.5,
+    "ticketCurrency": "GBP",
+    "subcategory": "Wales Millennium Centre > What's on > 2026 > Quartey & Blayney",
+    "primaryCategory": "Theatre",
+    "genre": "Jazz, Classical, Rock",
+    "ticketPriceLabel": "£12.5"
   },
   {
     "title": "THE VAGUELY DEVIANT",
@@ -2296,26 +2294,15 @@
   },
   {
     "title": "CALON",
-    "date": "Thursday, 27 August 2026 – Sunday, 30 August 2026",
+    "date": "Thursday, 27 August 2026 – Saturday, 29 August 2026",
     "url": "https://www.wmc.org.uk/en/whats-on/2026/calon",
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-05-12T09:07:48.767Z",
-    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1747320931/WMC%20Content/Whats%20On/2026/Donald%20Gordon%20Theatre/Calon/CALON-_What_s_On_Thumbnail_PNG?_a=BAAAV6DQ",
+    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1747320931/WMC%20Content/Whats%20On/2026/Donald%20Gordon%20Theatre/Calon/CALON-_What_s_On_Thumbnail_PNG?_a=BAAAV6DQ",
     "imageUrls": [
-      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1747320931/WMC%20Content/Whats%20On/2026/Donald%20Gordon%20Theatre/Calon/CALON-_What_s_On_Thumbnail_PNG?_a=BAAAV6DQ",
-      "http://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_630%2Cw_1200/f_auto/q_auto/v1747320931/WMC%20Content/Whats%20On/2026/Donald%20Gordon%20Theatre/Calon/CALON-_What_s_On_Thumbnail_PNG?_a=BAAAV6DQ",
-      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_512%2Cw_1024/f_auto/q_auto/v1747320931/WMC%20Content/Whats%20On/2026/Donald%20Gordon%20Theatre/Calon/CALON-_What_s_On_Thumbnail_PNG?_a=BAAAV6DQ",
       "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1747320931/WMC%20Content/Whats%20On/2026/Donald%20Gordon%20Theatre/Calon/CALON-_What_s_On_Thumbnail_PNG?_a=BAAAV6DQ"
     ],
-    "eventStartDate": "2026-08-27 19:30:00",
-    "eventEndDate": "2026-08-29 23:00:00",
-    "ticketPriceFrom": 20,
-    "ticketPriceTo": 20,
-    "ticketCurrency": "GBP",
-    "subcategory": "Wales Millennium Centre > What's on > 2026 > Calon",
-    "primaryCategory": "Theatre",
-    "genre": "Classical",
-    "ticketPriceLabel": "£20"
+    "primaryCategory": "Theatre"
   },
   {
     "title": "BURLESQUE",
@@ -2395,22 +2382,11 @@
     "url": "https://www.wmc.org.uk/en/whats-on/2026/tom-ward-post-millennium-tension",
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-05-12T09:07:48.767Z",
-    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1771774284/WMC%20Content/Whats%20On/2026/Cabaret/Tom%20Ward/2a83ce49-5377-493c-b64b-c3ae3566f948?_a=BAAAV6DQ",
+    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1771774284/WMC%20Content/Whats%20On/2026/Cabaret/Tom%20Ward/2a83ce49-5377-493c-b64b-c3ae3566f948?_a=BAAAV6DQ",
     "imageUrls": [
-      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1771774284/WMC%20Content/Whats%20On/2026/Cabaret/Tom%20Ward/2a83ce49-5377-493c-b64b-c3ae3566f948?_a=BAAAV6DQ",
-      "http://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_630%2Cw_1200/f_auto/q_auto/v1771774284/WMC%20Content/Whats%20On/2026/Cabaret/Tom%20Ward/2a83ce49-5377-493c-b64b-c3ae3566f948?_a=BAAAV6DQ",
-      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_512%2Cw_1024/f_auto/q_auto/v1771774284/WMC%20Content/Whats%20On/2026/Cabaret/Tom%20Ward/2a83ce49-5377-493c-b64b-c3ae3566f948?_a=BAAAV6DQ",
       "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1771774284/WMC%20Content/Whats%20On/2026/Cabaret/Tom%20Ward/2a83ce49-5377-493c-b64b-c3ae3566f948?_a=BAAAV6DQ"
     ],
-    "eventStartDate": "2026-09-17 20:00:00",
-    "eventEndDate": "2026-09-17 22:00:00",
-    "ticketPriceFrom": 19,
-    "ticketPriceTo": 19,
-    "ticketCurrency": "GBP",
-    "subcategory": "Wales Millennium Centre > What's on > 2026 > Tom Ward",
-    "primaryCategory": "Theatre",
-    "genre": "Jazz, Classical, Blues, Rock",
-    "ticketPriceLabel": "£19"
+    "primaryCategory": "Theatre"
   },
   {
     "title": "GIANT STEPS",
@@ -2418,22 +2394,11 @@
     "url": "https://www.wmc.org.uk/en/whats-on/2026/giant-steps",
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-05-22T11:06:35.921Z",
-    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1778580407/WMC%20Content/Whats%20On/2026/Cabaret/Giant-Steps-mobile?_a=BAAAV6DQ",
+    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1778580407/WMC%20Content/Whats%20On/2026/Cabaret/Giant-Steps-mobile?_a=BAAAV6DQ",
     "imageUrls": [
-      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1778580407/WMC%20Content/Whats%20On/2026/Cabaret/Giant-Steps-mobile?_a=BAAAV6DQ",
-      "http://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_630%2Cw_1200/f_auto/q_auto/v1778580407/WMC%20Content/Whats%20On/2026/Cabaret/Giant-Steps-mobile?_a=BAAAV6DQ",
-      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_512%2Cw_1024/f_auto/q_auto/v1778580407/WMC%20Content/Whats%20On/2026/Cabaret/Giant-Steps-mobile?_a=BAAAV6DQ",
       "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1778580407/WMC%20Content/Whats%20On/2026/Cabaret/Giant-Steps-mobile?_a=BAAAV6DQ"
     ],
-    "eventStartDate": "2026-09-18 20:00:00",
-    "eventEndDate": "2026-09-19 22:00:00",
-    "ticketPriceFrom": 18,
-    "ticketPriceTo": 18,
-    "ticketCurrency": "GBP",
-    "subcategory": "Wales Millennium Centre > What's on > 2026 > GIANT STEPS",
-    "primaryCategory": "Theatre",
-    "genre": "Jazz, Classical, Blues, Rock",
-    "ticketPriceLabel": "£18"
+    "primaryCategory": "Theatre"
   },
   {
     "title": "WELSH NATIONAL OPERA: BLUEBEARD’S CASTLE + OEDIPUS REX",
@@ -2491,12 +2456,22 @@
     "url": "https://www.wmc.org.uk/en/whats-on/2026/welsh-national-opera-family-concert",
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-05-12T09:07:48.767Z",
-    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1777634636/WMC%20Content/Whats%20On/2026/Donald%20Gordon%20Theatre/WNO%20Family%20Concert/WNO_FC_WMC_1280x960px?_a=BAAAV6DQ",
+    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1777634636/WMC%20Content/Whats%20On/2026/Donald%20Gordon%20Theatre/WNO%20Family%20Concert/WNO_FC_WMC_1280x960px?_a=BAAAV6DQ",
     "imageUrls": [
+      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1777634636/WMC%20Content/Whats%20On/2026/Donald%20Gordon%20Theatre/WNO%20Family%20Concert/WNO_FC_WMC_1280x960px?_a=BAAAV6DQ",
+      "http://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_630%2Cw_1200/f_auto/q_auto/v1777634636/WMC%20Content/Whats%20On/2026/Donald%20Gordon%20Theatre/WNO%20Family%20Concert/WNO_FC_WMC_1280x960px?_a=BAAAV6DQ",
+      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_512%2Cw_1024/f_auto/q_auto/v1777634636/WMC%20Content/Whats%20On/2026/Donald%20Gordon%20Theatre/WNO%20Family%20Concert/WNO_FC_WMC_1280x960px?_a=BAAAV6DQ",
       "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1777634636/WMC%20Content/Whats%20On/2026/Donald%20Gordon%20Theatre/WNO%20Family%20Concert/WNO_FC_WMC_1280x960px?_a=BAAAV6DQ"
     ],
+    "eventStartDate": "2026-09-30 18:30:00",
+    "eventEndDate": "2026-09-30 21:00:00",
+    "ticketPriceFrom": 20,
+    "ticketPriceTo": 20,
+    "ticketCurrency": "GBP",
+    "subcategory": "Wales Millennium Centre > What's on > 2026 > Welsh National Opera: Family Concert",
     "primaryCategory": "Theatre",
-    "genre": "Classical"
+    "genre": "Classical",
+    "ticketPriceLabel": "£20"
   },
   {
     "title": "HANNAH HORTON",
@@ -2552,11 +2527,22 @@
     "url": "https://www.wmc.org.uk/en/whats-on/2026/an-evening-with-liverpool-legend-ian-rush",
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-05-12T09:07:48.767Z",
-    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1774873572/WMC%20Content/Whats%20On/2026/Donald%20Gordon%20Theatre/An%20Evening%20With%20Ian%20Rush/960x1208a?_a=BAAAV6DQ",
+    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1774873572/WMC%20Content/Whats%20On/2026/Donald%20Gordon%20Theatre/An%20Evening%20With%20Ian%20Rush/960x1208a?_a=BAAAV6DQ",
     "imageUrls": [
+      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1774873572/WMC%20Content/Whats%20On/2026/Donald%20Gordon%20Theatre/An%20Evening%20With%20Ian%20Rush/960x1208a?_a=BAAAV6DQ",
+      "http://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_630%2Cw_1200/f_auto/q_auto/v1774873572/WMC%20Content/Whats%20On/2026/Donald%20Gordon%20Theatre/An%20Evening%20With%20Ian%20Rush/960x1208a?_a=BAAAV6DQ",
+      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_512%2Cw_1024/f_auto/q_auto/v1774873572/WMC%20Content/Whats%20On/2026/Donald%20Gordon%20Theatre/An%20Evening%20With%20Ian%20Rush/960x1208a?_a=BAAAV6DQ",
       "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1774873572/WMC%20Content/Whats%20On/2026/Donald%20Gordon%20Theatre/An%20Evening%20With%20Ian%20Rush/960x1208a?_a=BAAAV6DQ"
     ],
-    "primaryCategory": "Theatre"
+    "eventStartDate": "2026-10-12 19:30:00",
+    "eventEndDate": "2026-10-12 23:00:00",
+    "ticketPriceFrom": 47,
+    "ticketPriceTo": 47,
+    "ticketCurrency": "GBP",
+    "subcategory": "Wales Millennium Centre > What's on > 2026 > An Evening With Liverpool Legend Ian Rush MBE",
+    "primaryCategory": "Theatre",
+    "genre": "Classical",
+    "ticketPriceLabel": "£47"
   },
   {
     "title": "THE ULTIMATE CLASSIC ROCK SHOW",
@@ -2687,22 +2673,11 @@
     "url": "https://www.wmc.org.uk/en/whats-on/2026/owain-and-henry",
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-05-12T09:07:48.767Z",
-    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1758006927/WMC%20Content/Whats%20On/2026/Donald%20Gordon%20Theatre/Owain%20and%20Henry/O_H_600x400?_a=BAAAV6DQ",
+    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1758006927/WMC%20Content/Whats%20On/2026/Donald%20Gordon%20Theatre/Owain%20and%20Henry/O_H_600x400?_a=BAAAV6DQ",
     "imageUrls": [
-      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1758006927/WMC%20Content/Whats%20On/2026/Donald%20Gordon%20Theatre/Owain%20and%20Henry/O_H_600x400?_a=BAAAV6DQ",
-      "http://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_630%2Cw_1200/f_auto/q_auto/v1758006927/WMC%20Content/Whats%20On/2026/Donald%20Gordon%20Theatre/Owain%20and%20Henry/O_H_600x400?_a=BAAAV6DQ",
-      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_512%2Cw_1024/f_auto/q_auto/v1758006927/WMC%20Content/Whats%20On/2026/Donald%20Gordon%20Theatre/Owain%20and%20Henry/O_H_600x400?_a=BAAAV6DQ",
       "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1758006927/WMC%20Content/Whats%20On/2026/Donald%20Gordon%20Theatre/Owain%20and%20Henry/O_H_600x400?_a=BAAAV6DQ"
     ],
-    "eventStartDate": "2026-11-05 00:00:00",
-    "eventEndDate": "2026-11-28 23:59:00",
-    "ticketPriceFrom": 17,
-    "ticketPriceTo": 17,
-    "ticketCurrency": "GBP",
-    "subcategory": "Wales Millennium Centre > What's on > 2026 > Owain & Henry",
-    "primaryCategory": "Theatre",
-    "genre": "Classical",
-    "ticketPriceLabel": "£17"
+    "primaryCategory": "Theatre"
   },
   {
     "title": "LAURA LEXX: YO-YO TOUR",
@@ -2722,22 +2697,12 @@
     "url": "https://www.wmc.org.uk/en/whats-on/2026/the-rock-and-roll-magic-show",
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-05-22T11:06:35.921Z",
-    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1779190746/WMC%20Content/Whats%20On/2026/Cabaret/Rock%20and%20Roll%20Magic%20Show/STORY_ROCKMAGIC_mobile?_a=BAAAV6DQ",
+    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1779190746/WMC%20Content/Whats%20On/2026/Cabaret/Rock%20and%20Roll%20Magic%20Show/STORY_ROCKMAGIC_mobile?_a=BAAAV6DQ",
     "imageUrls": [
-      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1779190746/WMC%20Content/Whats%20On/2026/Cabaret/Rock%20and%20Roll%20Magic%20Show/STORY_ROCKMAGIC_mobile?_a=BAAAV6DQ",
-      "http://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_630%2Cw_1200/f_auto/q_auto/v1779190746/WMC%20Content/Whats%20On/2026/Cabaret/Rock%20and%20Roll%20Magic%20Show/STORY_ROCKMAGIC_mobile?_a=BAAAV6DQ",
-      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_512%2Cw_1024/f_auto/q_auto/v1779190746/WMC%20Content/Whats%20On/2026/Cabaret/Rock%20and%20Roll%20Magic%20Show/STORY_ROCKMAGIC_mobile?_a=BAAAV6DQ",
       "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1779190746/WMC%20Content/Whats%20On/2026/Cabaret/Rock%20and%20Roll%20Magic%20Show/STORY_ROCKMAGIC_mobile?_a=BAAAV6DQ"
     ],
-    "eventStartDate": "2026-11-12 20:00:00",
-    "eventEndDate": "2026-11-12 22:00:00",
-    "ticketPriceFrom": 18,
-    "ticketPriceTo": 18,
-    "ticketCurrency": "GBP",
-    "subcategory": "Wales Millennium Centre > What's on > 2026 > The Rock & Roll Magic Show",
     "primaryCategory": "Theatre",
-    "genre": "Jazz, Classical, Blues, Rock",
-    "ticketPriceLabel": "£18"
+    "genre": "Rock"
   },
   {
     "title": "CHRISTOPHER HALL - PIZAZZ",
@@ -2769,11 +2734,22 @@
     "url": "https://www.wmc.org.uk/en/whats-on/2026/sooz-kempner-imposter",
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-05-12T09:07:48.767Z",
-    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1768739997/WMC%20Content/Whats%20On/2026/Cabaret/Sooz%20Kempner/7b76d0f6-e7c3-4c82-8c16-3d4ce6a8f9cd?_a=BAAAV6DQ",
+    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1768739997/WMC%20Content/Whats%20On/2026/Cabaret/Sooz%20Kempner/7b76d0f6-e7c3-4c82-8c16-3d4ce6a8f9cd?_a=BAAAV6DQ",
     "imageUrls": [
+      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1768739997/WMC%20Content/Whats%20On/2026/Cabaret/Sooz%20Kempner/7b76d0f6-e7c3-4c82-8c16-3d4ce6a8f9cd?_a=BAAAV6DQ",
+      "http://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_630%2Cw_1200/f_auto/q_auto/v1768739997/WMC%20Content/Whats%20On/2026/Cabaret/Sooz%20Kempner/7b76d0f6-e7c3-4c82-8c16-3d4ce6a8f9cd?_a=BAAAV6DQ",
+      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_512%2Cw_1024/f_auto/q_auto/v1768739997/WMC%20Content/Whats%20On/2026/Cabaret/Sooz%20Kempner/7b76d0f6-e7c3-4c82-8c16-3d4ce6a8f9cd?_a=BAAAV6DQ",
       "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1768739997/WMC%20Content/Whats%20On/2026/Cabaret/Sooz%20Kempner/7b76d0f6-e7c3-4c82-8c16-3d4ce6a8f9cd?_a=BAAAV6DQ"
     ],
-    "primaryCategory": "Theatre"
+    "eventStartDate": "2026-11-22 19:00:00",
+    "eventEndDate": "2026-11-22 22:00:00",
+    "ticketPriceFrom": 18,
+    "ticketPriceTo": 18,
+    "ticketCurrency": "GBP",
+    "subcategory": "Wales Millennium Centre > What's on > 2026 > Sooz Kempner: Imposter",
+    "primaryCategory": "Theatre",
+    "genre": "Jazz, Classical, Rock",
+    "ticketPriceLabel": "£18"
   },
   {
     "title": "MAMMA MIA!",
@@ -2843,12 +2819,22 @@
     "url": "https://www.wmc.org.uk/en/whats-on/2027/trainspotting-the-musical",
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-05-12T09:07:48.767Z",
-    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1778236627/WMC%20Content/Whats%20On/2027/Donald%20Gordon%20Theatre/Trainspotting/260506_Trainspotting_Cardiff_1280x960?_a=BAAAV6DQ",
+    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1778236627/WMC%20Content/Whats%20On/2027/Donald%20Gordon%20Theatre/Trainspotting/260506_Trainspotting_Cardiff_1280x960?_a=BAAAV6DQ",
     "imageUrls": [
+      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1778236627/WMC%20Content/Whats%20On/2027/Donald%20Gordon%20Theatre/Trainspotting/260506_Trainspotting_Cardiff_1280x960?_a=BAAAV6DQ",
+      "http://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_630%2Cw_1200/f_auto/q_auto/v1778236627/WMC%20Content/Whats%20On/2027/Donald%20Gordon%20Theatre/Trainspotting/260506_Trainspotting_Cardiff_1280x960?_a=BAAAV6DQ",
+      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_512%2Cw_1024/f_auto/q_auto/v1778236627/WMC%20Content/Whats%20On/2027/Donald%20Gordon%20Theatre/Trainspotting/260506_Trainspotting_Cardiff_1280x960?_a=BAAAV6DQ",
       "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1778236627/WMC%20Content/Whats%20On/2027/Donald%20Gordon%20Theatre/Trainspotting/260506_Trainspotting_Cardiff_1280x960?_a=BAAAV6DQ"
     ],
+    "eventStartDate": "2027-01-25 19:30:00",
+    "eventEndDate": "2027-01-30 23:00:00",
+    "ticketPriceFrom": 24,
+    "ticketPriceTo": 24,
+    "ticketCurrency": "GBP",
+    "subcategory": "Wales Millennium Centre > What's on > 2027 > Trainspotting: The Musical",
     "primaryCategory": "Musical Theatre",
-    "genre": "Musical Theatre"
+    "genre": "Classical",
+    "ticketPriceLabel": "£24"
   },
   {
     "title": "THE FULL MONTY",
@@ -2991,22 +2977,11 @@
     "url": "https://www.wmc.org.uk/en/whats-on/2027/cats",
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-05-12T09:07:48.767Z",
-    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1767715247/WMC%20Content/Whats%20On/2027/Donald%20Gordon%20Theatre/Cats/8500_19_Cats_Cardiff_1200x900_v1?_a=BAAAV6DQ",
+    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1767715247/WMC%20Content/Whats%20On/2027/Donald%20Gordon%20Theatre/Cats/8500_19_Cats_Cardiff_1200x900_v1?_a=BAAAV6DQ",
     "imageUrls": [
-      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1767715247/WMC%20Content/Whats%20On/2027/Donald%20Gordon%20Theatre/Cats/8500_19_Cats_Cardiff_1200x900_v1?_a=BAAAV6DQ",
-      "http://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_630%2Cw_1200/f_auto/q_auto/v1767715247/WMC%20Content/Whats%20On/2027/Donald%20Gordon%20Theatre/Cats/8500_19_Cats_Cardiff_1200x900_v1?_a=BAAAV6DQ",
-      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_512%2Cw_1024/f_auto/q_auto/v1767715247/WMC%20Content/Whats%20On/2027/Donald%20Gordon%20Theatre/Cats/8500_19_Cats_Cardiff_1200x900_v1?_a=BAAAV6DQ",
       "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1767715247/WMC%20Content/Whats%20On/2027/Donald%20Gordon%20Theatre/Cats/8500_19_Cats_Cardiff_1200x900_v1?_a=BAAAV6DQ"
     ],
-    "eventStartDate": "2027-05-25 19:30:00",
-    "eventEndDate": "2027-05-29 22:00:00",
-    "ticketPriceFrom": 19,
-    "ticketPriceTo": 19,
-    "ticketCurrency": "GBP",
-    "subcategory": "Wales Millennium Centre > What's on > 2027 > Cats",
-    "primaryCategory": "Theatre",
-    "genre": "Classical",
-    "ticketPriceLabel": "£19"
+    "primaryCategory": "Theatre"
   },
   {
     "title": "EVERYBODY'S TALKING ABOUT JAMIE",
@@ -3022,26 +2997,15 @@
   },
   {
     "title": "PRETTY WOMAN",
-    "date": "Tuesday, 8 June 2027 – Sunday, 13 June 2027",
+    "date": "Tuesday, 8 June 2027 – Saturday, 12 June 2027",
     "url": "https://www.wmc.org.uk/en/whats-on/2027/pretty-woman",
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-05-12T09:07:48.767Z",
-    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1778063081/WMC%20Content/Whats%20On/2027/Donald%20Gordon%20Theatre/Pretty%20Woman/PW_Image_1280x960?_a=BAAAV6DQ",
+    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1778063081/WMC%20Content/Whats%20On/2027/Donald%20Gordon%20Theatre/Pretty%20Woman/PW_Image_1280x960?_a=BAAAV6DQ",
     "imageUrls": [
-      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1778063081/WMC%20Content/Whats%20On/2027/Donald%20Gordon%20Theatre/Pretty%20Woman/PW_Image_1280x960?_a=BAAAV6DQ",
-      "http://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_630%2Cw_1200/f_auto/q_auto/v1778063081/WMC%20Content/Whats%20On/2027/Donald%20Gordon%20Theatre/Pretty%20Woman/PW_Image_1280x960?_a=BAAAV6DQ",
-      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_512%2Cw_1024/f_auto/q_auto/v1778063081/WMC%20Content/Whats%20On/2027/Donald%20Gordon%20Theatre/Pretty%20Woman/PW_Image_1280x960?_a=BAAAV6DQ",
       "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1778063081/WMC%20Content/Whats%20On/2027/Donald%20Gordon%20Theatre/Pretty%20Woman/PW_Image_1280x960?_a=BAAAV6DQ"
     ],
-    "eventStartDate": "2027-06-08 19:30:00",
-    "eventEndDate": "2027-06-12 23:00:00",
-    "ticketPriceFrom": 22,
-    "ticketPriceTo": 22,
-    "ticketCurrency": "GBP",
-    "subcategory": "Wales Millennium Centre > What's on > 2027 > Pretty Woman",
-    "primaryCategory": "Theatre",
-    "genre": "Classical, Rock",
-    "ticketPriceLabel": "£22"
+    "primaryCategory": "Theatre"
   },
   {
     "title": "BACK TO THE FUTURE",
@@ -3049,11 +3013,22 @@
     "url": "https://www.wmc.org.uk/en/whats-on/2027/back-to-the-future",
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-05-12T09:07:48.767Z",
-    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1770738934/WMC%20Content/Whats%20On/2027/Donald%20Gordon%20Theatre/Back%20To%20The%20Future/BTTF_Image_1280x960?_a=BAAAV6DQ",
+    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1770738934/WMC%20Content/Whats%20On/2027/Donald%20Gordon%20Theatre/Back%20To%20The%20Future/BTTF_Image_1280x960?_a=BAAAV6DQ",
     "imageUrls": [
+      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1770738934/WMC%20Content/Whats%20On/2027/Donald%20Gordon%20Theatre/Back%20To%20The%20Future/BTTF_Image_1280x960?_a=BAAAV6DQ",
+      "http://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_630%2Cw_1200/f_auto/q_auto/v1770738934/WMC%20Content/Whats%20On/2027/Donald%20Gordon%20Theatre/Back%20To%20The%20Future/BTTF_Image_1280x960?_a=BAAAV6DQ",
+      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_512%2Cw_1024/f_auto/q_auto/v1770738934/WMC%20Content/Whats%20On/2027/Donald%20Gordon%20Theatre/Back%20To%20The%20Future/BTTF_Image_1280x960?_a=BAAAV6DQ",
       "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1770738934/WMC%20Content/Whats%20On/2027/Donald%20Gordon%20Theatre/Back%20To%20The%20Future/BTTF_Image_1280x960?_a=BAAAV6DQ"
     ],
-    "primaryCategory": "Theatre"
+    "eventStartDate": "2027-10-19 19:30:00",
+    "eventEndDate": "2027-11-13 22:30:00",
+    "ticketPriceFrom": 22,
+    "ticketPriceTo": 22,
+    "ticketCurrency": "GBP",
+    "subcategory": "Wales Millennium Centre > What's on > 2027 > Back To The Future",
+    "primaryCategory": "Theatre",
+    "genre": "Classical",
+    "ticketPriceLabel": "£22"
   },
   {
     "title": "The Enormous Crocodile",
@@ -8695,25 +8670,6 @@
     "genre": "Pop"
   },
   {
-    "title": "Bingo Lingo",
-    "date": "Friday, 22 May 2026",
-    "url": "https://depotcardiff.com/event/bingo-lingo-151/",
-    "venue": "Depot Cardiff",
-    "scrapedAt": "2026-05-12T09:07:48.767Z",
-    "imageUrl": "https://depotcardiff.com/wp-content/uploads/2025/10/cover5.jpg",
-    "description": "Bingo Lingo isn’t your nan’s bingo — it’s a full-blown party of anthems, chaos, and wild prizes.",
-    "shortDescription": "Cardiff's wildest bingo night! Expect big tunes, mad prizes, and non-stop party energy. Bingo Lingo is not your average night out.",
-    "imageUrls": [
-      "https://depotcardiff.com/wp-content/uploads/2025/10/cover5.jpg",
-      "https://depotcardiff.com/wp-content/uploads/2025/10/cover5.jpg.webp"
-    ],
-    "eventStartDate": "2026-05-22T18:00:00+01:00",
-    "eventEndDate": "2026-05-22T23:00:00+01:00",
-    "subcategory": "Bingo Lingo",
-    "primaryCategory": "Music",
-    "genre": "Bingo Lingo"
-  },
-  {
     "title": "Over 30s Club – Bank Holiday Sunday",
     "date": "Sunday, 24 May 2026",
     "url": "https://depotcardiff.com/event/over-30s-club/",
@@ -10378,21 +10334,12 @@
     "venue": "The Gate Cardiff",
     "scrapedAt": "2026-05-14T10:10:02.799Z",
     "shortDescription": "Buy tickets and see event information for Colin Blunstone.",
-    "musicGenres": [
-      "Folk",
-      "Rock"
-    ],
     "imageUrls": [
       "https://cdn2.gigantic.com/static/images/event/820x500/colin_blunstone-7588906340.jpg",
       "https://images.squarespace-cdn.com/content/v1/654cb4c138f6a96142426e33/2e7ee868-70d2-4dff-bd27-39fb9ac2e268/WEB-SHOT_03_COUCH_0542-copy.jpg"
     ],
     "eventStartDate": "2026-05-23T19:00:00+01:00",
-    "ticketPriceFrom": 33,
-    "ticketPriceTo": 33,
-    "ticketCurrency": "GBP",
-    "primaryCategory": "Music",
-    "genre": "Folk, Rock",
-    "ticketPriceLabel": "£33"
+    "primaryCategory": "Music"
   },
   {
     "title": "WYNNE EVANS",
@@ -10461,16 +10408,15 @@
     "date": "Wednesday, 20 May 2026",
     "description": "Dele Sosimi, the Nigerian-British Afrobeat Ambassador, Musician and Educator, has been at the heart of the global Afrobeat scene since relocating to the UK in December 1995. Having started his musical career with Fela Kuti's Egypt 80 band in his teens, he then teamed up with childhood friend Fela's son Femi Kuti (back in the late eighties) to kick start the Positive Force - touring, recording and performing worldwide. Over forty years later, he remains a tireless ambassador for the unique musical movement all over the world. His blend of complex funk grooves, traditional Nigerian music, African percussion and an underlying sense of jazz combines with his virtuoso keyboard skills and rhythmic singing to make him one of the most respected Afrobeat authorities of his era.",
     "support": "From Fela Kuti's Egypt 80, with support from Rob Nichols",
-    "imageUrl": "https://cdn2.gigantic.com/static/images/campaign/820x500/dele_sosimi-7502598010.png",
+    "imageUrl": "https://cdn2.gigantic.com/static/images/campaign/820x500/no_image.jpg",
     "url": "https://thegate.gigantic.com/dele-sosimi-tickets/cardiff-the-gate/2026-05-20-19-00",
     "venue": "The Gate Cardiff",
     "scrapedAt": "2026-05-14T10:10:02.799Z",
     "shortDescription": "Buy tickets and see event information for Dele Sosimi.",
     "imageUrls": [
-      "https://cdn2.gigantic.com/static/images/campaign/820x500/dele_sosimi-7502598010.png",
+      "https://cdn2.gigantic.com/static/images/campaign/820x500/no_image.jpg",
       "https://images.squarespace-cdn.com/content/v1/654cb4c138f6a96142426e33/37859b17-d34e-4b42-8d36-d3d6122de308/WEB-DSC_0114.jpg"
     ],
-    "eventStartDate": "2026-05-20T19:00:00+01:00",
     "primaryCategory": "Musical Theatre"
   },
   {
@@ -12487,8 +12433,8 @@
     "imageUrl": "https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=1193391499312997",
     "venue": "Fuel Rock Club",
     "scrapedAt": "2026-05-14T15:05:53.408Z",
-    "shortDescription": "Event in Cardiff, United Kingdom by Midnight Tornado - Music News & Events and 4 others on Tuesday, June 2 202631 posts in the discussion.",
-    "description": "Event in Cardiff, United Kingdom by Midnight Tornado - Music News & Events and 4 others on Tuesday, June 2 202631 posts in the discussion.",
+    "shortDescription": "Event in Cardiff, United Kingdom by Midnight Tornado - Music News & Events and 4 others on Tuesday, June 2 202632 posts in the discussion.",
+    "description": "Event in Cardiff, United Kingdom by Midnight Tornado - Music News & Events and 4 others on Tuesday, June 2 202632 posts in the discussion.",
     "musicGenres": [
       "Rock"
     ],
@@ -13349,25 +13295,6 @@
     "genre": "Twelfth Night"
   },
   {
-    "title": "NEW ’26: XL Bully",
-    "date": "Saturday, 6 June 2026 – Friday, 12 June 2026",
-    "description": "Eight friends take a shortcut home after a night out.",
-    "category": "Theatre",
-    "url": "https://www.shermantheatre.co.uk/event/new-26-xl-bully/",
-    "imageUrl": "https://www.shermantheatre.co.uk/wp-content/uploads/2026/03/NEW-26-XL-Bully_1920x1080-1272x954.jpg",
-    "venue": "Sherman Theatre",
-    "scrapedAt": "2026-05-14T10:10:02.799Z",
-    "imageUrls": [
-      "https://www.shermantheatre.co.uk/wp-content/uploads/2026/03/NEW-26-XL-Bully_1920x1080-1272x954.jpg"
-    ],
-    "subcategory": "NEW &#8217;26: XL Bully",
-    "ticketPriceFrom": 15,
-    "ticketCurrency": "GBP",
-    "ticketPriceLabel": "£15",
-    "primaryCategory": "Theatre",
-    "genre": "NEW &#8217"
-  },
-  {
     "title": "NEW ’26: That Last Summer",
     "date": "Saturday, 6 June 2026 – Friday, 12 June 2026",
     "description": "Cardiff. Now.",
@@ -13380,6 +13307,25 @@
       "https://www.shermantheatre.co.uk/wp-content/uploads/2026/03/NEW-26-That-Last-Summer_1920x1080-1272x954.jpg"
     ],
     "subcategory": "NEW &#8217;26: That Last Summer",
+    "ticketPriceFrom": 15,
+    "ticketCurrency": "GBP",
+    "ticketPriceLabel": "£15",
+    "primaryCategory": "Theatre",
+    "genre": "NEW &#8217"
+  },
+  {
+    "title": "NEW ’26: XL Bully",
+    "date": "Saturday, 6 June 2026 – Friday, 12 June 2026",
+    "description": "Eight friends take a shortcut home after a night out.",
+    "category": "Theatre",
+    "url": "https://www.shermantheatre.co.uk/event/new-26-xl-bully/",
+    "imageUrl": "https://www.shermantheatre.co.uk/wp-content/uploads/2026/03/NEW-26-XL-Bully_1920x1080-1272x954.jpg",
+    "venue": "Sherman Theatre",
+    "scrapedAt": "2026-05-14T10:10:02.799Z",
+    "imageUrls": [
+      "https://www.shermantheatre.co.uk/wp-content/uploads/2026/03/NEW-26-XL-Bully_1920x1080-1272x954.jpg"
+    ],
+    "subcategory": "NEW &#8217;26: XL Bully",
     "ticketPriceFrom": 15,
     "ticketCurrency": "GBP",
     "ticketPriceLabel": "£15",
