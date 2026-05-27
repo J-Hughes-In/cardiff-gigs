@@ -101,19 +101,136 @@ function wmcComputeAvailability(labels) {
   let bestTier = null;
   for (const rank of WMC_AVAILABILITY_RANK) {
     const match = tiers.find((t) => t.label.toLowerCase().includes(rank));
-    if (match) bestTier = match;
+    if (match) { bestTier = match; break; }
   }
 
   const avgMid = Math.round(tiers.reduce((sum, t) => sum + t.mid, 0) / tiers.length);
+  const hasLimitedOrWorse = tiers.some((t) => t.mid >= 76);
+  const flooredAvg = hasLimitedOrWorse ? Math.max(avgMid, 50) : avgMid;
+
   const clamped = bestTier
-    ? Math.min(Math.max(avgMid, 0), bestTier.mid === 15 ? 30 : bestTier.mid === 46 ? 60 : bestTier.mid === 76 ? 90 : bestTier.mid === 95 ? 99 : 100)
-    : avgMid;
+    ? Math.min(Math.max(flooredAvg, 0), bestTier.mid === 15 ? 30 : bestTier.mid === 46 ? 60 : bestTier.mid === 76 ? 90 : bestTier.mid === 95 ? 99 : 100)
+    : flooredAvg;
 
   return {
     availability:         bestTier?.label ?? null,
     availabilityRange:    bestTier?.range ?? null,
     availabilityEstimate: clamped,
   };
+}
+// ─── WMC popularity scoring ──────────────────────────────────────────────────
+
+/**
+ * Weekday demand weights for WMC.
+ * Mid-week shows are harder to fill organically, so a sold-out Tuesday
+ * implies stronger real demand than a sold-out Saturday.
+ */
+const WMC_WEEKDAY_WEIGHTS = {
+  0: 0.70, // Sunday
+  1: 1.00, // Monday
+  2: 1.00, // Tuesday
+  3: 0.95, // Wednesday
+  4: 0.90, // Thursday
+  5: 0.75, // Friday
+  6: 0.60, // Saturday
+};
+
+/**
+ * Derive a popularity score (0–100) and human-readable label for a single
+ * WMC event using only data available from the current scrape.
+ *
+ * Inputs used:
+ *   ev.availabilityEstimate  — % of seats sold (0 = empty, 100 = sold out)
+ *   ev.date                  — raw date string from the production card
+ *   ev.scrapedAt             — ISO timestamp set at scrape time (reference)
+ *
+ * Returns { popularityScore, popularityLabel } or null fields if the date
+ * cannot be resolved (graceful degradation — no score is better than a wrong one).
+ *
+ * Algorithm:
+ *   demandScore     = availabilityEstimate / 100           (0–1)
+ *   leadMultiplier  = 0.4 + 0.6 * (daysUntil / 365)       (0.4–1.0, clamped)
+ *   weekdayWeight   = WMC_WEEKDAY_WEIGHTS[dayOfWeek]       (0.6–1.0)
+ *   raw             = demandScore * leadMultiplier * weekdayWeight * 100
+ *   popularityScore = clamp(round(raw), 0, 100)
+ */
+function wmcComputePopularity(ev) {
+  // Require a numeric availability estimate
+  const estimate = ev.availabilityEstimate;
+  if (estimate == null || Number.isNaN(Number(estimate))) {
+    return { popularityScore: null, popularityLabel: null };
+  }
+
+  // ── 1. Resolve event date ──────────────────────────────────────────────────
+  const scrapedAt = ev.scrapedAt || new Date().toISOString();
+  const refDate   = new Date(scrapedAt);
+
+  let eventDate = null;
+
+  // Try the raw date string from the production card (e.g. "Fri 20 Jun" or
+  // "20 Jun – 6 Jul 2025"). We reuse the same parse helpers used elsewhere.
+  const rawDate = String(ev.date || '').trim();
+  if (rawDate) {
+    // Range: take the start date
+    const range =
+      tryParseUkRangeTwoDaysOneMonthYear(rawDate) ||
+      tryParseSameMonthDayRange(rawDate)           ||
+      tryParseDayMonthRangeYear(rawDate);
+    if (range) {
+      eventDate = range.start;
+    } else {
+      eventDate =
+        tryParseShortUkDayMonYear(rawDate)                   ||
+        tryParseDdMmYyyy(rawDate)                             ||
+        tryParseWeekdayOrdinalMonthYear(rawDate)              ||
+        tryParseOrdinalMonthOptionalYear(rawDate, scrapedAt)  ||
+        tryParseMonthDayAtTime(rawDate, scrapedAt)            ||
+        tryParseDayOrdinalMonthNoYear(rawDate, scrapedAt);
+    }
+  }
+
+  // If the listing date is missing a year, also try the URL
+  if (!eventDate && ev.url) {
+    eventDate = tryParseDateFromListingUrl(ev.url, scrapedAt);
+  }
+
+  if (!eventDate || Number.isNaN(eventDate.getTime())) {
+    // Cannot safely compute lead-time — return null scores rather than noise
+    return { popularityScore: null, popularityLabel: null };
+  }
+
+  // ── 2. Lead-time component ─────────────────────────────────────────────────
+  const msPerDay   = 86_400_000;
+  const daysUntil  = Math.max(0, (eventDate.getTime() - refDate.getTime()) / msPerDay);
+  const leadNorm   = Math.min(daysUntil, 365) / 365;      // 0 (imminent) → 1 (≥1 year away)
+  const leadMultiplier = 0.7 + 0.3 * leadNorm;   // range: 0.70 – 1.00
+
+  // ── 3. Weekday weight ──────────────────────────────────────────────────────
+  const dayOfWeek     = eventDate.getDay();                // 0=Sun … 6=Sat
+  const weekdayWeight = WMC_WEEKDAY_WEIGHTS[dayOfWeek] ?? 0.85;
+
+  // ── 4. Demand pressure ────────────────────────────────────────────────────
+  const hasLimitedOrWorse  = /limited|wheelchair|sold.?out/i.test(ev.availability || '');
+  const isAtLeastMonthAway = daysUntil >= 30;
+  const flooredEstimate    = (hasLimitedOrWorse && isAtLeastMonthAway)
+    ? Math.max(Number(estimate), 60)
+    : Number(estimate);
+  const demandScore        = flooredEstimate / 100;
+
+  // ── 5. Composite ──────────────────────────────────────────────────────────
+  const raw            = demandScore * leadMultiplier * weekdayWeight * 100;
+  let popularityScore = Math.min(100, Math.max(0, Math.round(raw)));
+  if (/wheelchair|sold.?out/i.test(ev.availability || '')) popularityScore = Math.max(popularityScore, 80);
+
+  // ── 6. Human-readable label ───────────────────────────────────────────────
+  let popularityLabel;
+  if      (popularityScore >= 75) popularityLabel = 'Very high demand';
+  else if (popularityScore >= 50) popularityLabel = 'High demand';
+  else if (popularityScore >= 30) popularityLabel = 'Moderate demand';
+  else if (popularityScore >= 15) popularityLabel = 'Low demand';
+  else                            popularityLabel = 'Very low demand';
+
+  return { popularityScore, popularityLabel };
 }
 
 async function wmcWaitForAngularBind(page, timeout = 15_000) {
@@ -1336,7 +1453,10 @@ async function scrapeWMC(context) {
       event.availability         = computed.availability;
       event.availabilityRange    = computed.availabilityRange;
       event.availabilityEstimate = computed.availabilityEstimate;
+      // Derive popularity from the availability + date + weekday we now have
+      Object.assign(event, wmcComputePopularity(event));
     }
+    
   }
 
   const withAvailability = events.filter((e) => e.availability).length;
