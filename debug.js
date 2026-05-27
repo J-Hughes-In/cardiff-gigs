@@ -1,159 +1,150 @@
+/**
+ * debug.js — scrape all WMC events with availability + sub-venue
+ * Run: node debug.js
+ * Requires: availability.js in the same directory
+ */
+
 const { chromium } = require('playwright');
+const { computeAvailability } = require('./availability');
 
-async function scrape() {
-  const browser = await chromium.launch({
-    headless: false
-  });
+const LISTING_URL = 'https://www.wmc.org.uk/en/whats-on/events';
+const TIMEOUT = 15_000;
 
+const SUB_VENUES = [
+  { match: 'cabaret',        label: 'Cabaret'        },
+  { match: 'hoddinott hall', label: 'Hoddinott Hall'  },
+  { match: 'weston studio',  label: 'Weston Studio'   },
+  { match: 'dance house',    label: 'Dance House'     },
+];
+
+function parseSubVenue(rawPrefix) {
+  if (!rawPrefix) return null;
+  const lower = rawPrefix.toLowerCase().trim();
+  for (const { match, label } of SUB_VENUES) {
+    if (lower.startsWith(match)) return label;
+  }
+  return null;
+}
+
+async function gotoAndSettle(page, url, selector) {
+  await page.goto(url, { waitUntil: 'domcontentloaded' });
+  try {
+    await page.waitForSelector(selector, { timeout: TIMEOUT });
+  } catch {
+    await page.waitForLoadState('networkidle').catch(() => {});
+  }
+}
+
+async function waitForAngularBind(page) {
+  try {
+    await page.waitForFunction(
+      () => {
+        const list = document.querySelector('.calendar-list-filter-list--performance-list');
+        if (!list) return false;
+        if (list.classList.contains('ng-hide')) {
+          return !!document.querySelector('.events-error:not(.ng-hide)');
+        }
+        const availDivs = list.querySelectorAll('.calendar-list-entry__availablity');
+        if (availDivs.length === 0) return true;
+        return Array.from(availDivs).some((el) => !el.innerText.includes('{{'));
+      },
+      { timeout: TIMEOUT }
+    );
+  } catch {}
+}
+
+async function getAvailability(context, eventUrl) {
+  const page = await context.newPage();
+  try {
+    await page.goto(`${eventUrl.replace(/\/$/, '')}/performances`, { waitUntil: 'domcontentloaded' });
+    await waitForAngularBind(page);
+    const labels = await page.evaluate(() =>
+      Array.from(
+        document.querySelectorAll(
+          '.calendar-list-filter-list--performance-list .calendar-list-entry__availablity'
+        )
+      )
+        .map((el) => el.innerText?.trim() ?? '')
+        .filter((t) => t && !t.includes('{{'))
+    );
+    return computeAvailability(labels);
+  } catch {
+    return null;
+  } finally {
+    await page.close();
+  }
+}
+
+async function main() {
+  const browser = await chromium.launch({ headless: true });
   const context = await browser.newContext({
     userAgent:
-      'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36',
+      'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 ' +
+      '(KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
+  });
 
-    viewport: {
-      width: 1365,
-      height: 900
+  const listPage = await context.newPage();
+  await gotoAndSettle(listPage, LISTING_URL, 'div.production-card');
+
+  // Wait for Angular to compile titles
+  await listPage.waitForFunction(
+    () => {
+      const cards = document.querySelectorAll('div.production-card');
+      if (cards.length === 0) return false;
+      const title = cards[0].querySelector('h4.production-card__title');
+      return title && !title.innerText.includes('{{');
     },
-  });
+    { timeout: TIMEOUT }
+  ).catch(() => {});
 
-  const page = await context.newPage();
-
-  console.log('Opening Fuel Rock Club events page...');
-
-  await page.goto(
-    'https://www.fuelrockclub.co.uk/events/',
-    {
-      waitUntil: 'networkidle',
-      timeout: 60000
-    }
+  const events = await listPage.evaluate(() =>
+    Array.from(document.querySelectorAll('div.production-card')).map((item) => {
+      const prefixEl = item.querySelector('p.production-card__prefix');
+      const prefix = (!prefixEl || prefixEl.getAttribute('aria-hidden') === 'true')
+        ? ''
+        : prefixEl.innerText.trim();
+      return {
+        title:   item.querySelector('h4.production-card__title')?.innerText.trim() || '',
+        date:    item.querySelector('p.production-card__date')?.innerText.trim() || '',
+        url:     item.querySelector('a.production-card__link-overlay')?.href || '',
+        _prefix: prefix,
+      };
+    }).filter((e) => e.title && e.url)
   );
+  await listPage.close();
 
-  console.log('Waiting for SociableKit iframe...');
-
-  await page.waitForSelector(
-    'iframe[src*="sociablekit"]',
-    {
-      timeout: 20000
-    }
-  );
-
-  const iframeElement = await page.$(
-    'iframe[src*="sociablekit"]'
-  );
-
-  if (!iframeElement) {
-    throw new Error('SociableKit iframe not found');
+  // Resolve sub-venues in Node scope
+  for (const event of events) {
+    const subVenue = parseSubVenue(event._prefix);
+    if (subVenue) event.subVenue = subVenue;
+    delete event._prefix;
   }
 
-  const frame = await iframeElement.contentFrame();
+  console.log(`Found ${events.length} events\n`);
 
-  if (!frame) {
-    throw new Error('Could not access iframe content');
+  const results = [];
+  for (let i = 0; i < events.length; i++) {
+    const event = events[i];
+    const subTag = event.subVenue ? ` [${event.subVenue}]` : '';
+    process.stdout.write(`[${String(i + 1).padStart(2)}/${events.length}] ${event.title}${subTag}... `);
+
+    const computed = await getAvailability(context, event.url);
+
+    if (computed) {
+      process.stdout.write(`${computed.availability} (~${computed.availabilityEstimate}%)\n`);
+      results.push({ ...event, ...computed });
+    } else {
+      process.stdout.write(`no availability data\n`);
+      results.push({ ...event });
+    }
   }
 
-  console.log('Waiting for event cards inside iframe...');
-
-  await frame.waitForSelector(
-    '.sk-event-item',
-    {
-      timeout: 20000
-    }
-  );
-
-  // Allow lazy content to finish rendering
-  await frame.waitForTimeout(3000);
-
-  const events = await frame.evaluate(() => {
-
-    function cleanText(t) {
-      return t?.replace(/\s+/g, ' ').trim() || '';
-    }
-
-    return Array.from(
-      document.querySelectorAll('.sk-event-item')
-    )
-      .map(item => {
-
-        const title =
-          cleanText(
-            item.querySelector(
-              '.sk-event-item-title'
-            )?.innerText
-          );
-
-        const url =
-          item.querySelector(
-            '.sk-event-item-fb-link'
-          )?.href ||
-
-          item.querySelector(
-            '.sk-event-item-gettickets'
-          )?.href ||
-
-          '';
-
-        const rawImage =
-          item.querySelector('img')
-            ?.getAttribute('src') || '';
-
-        // THIS is the reliable date source
-        const timeEl =
-          item.querySelector(
-            '.sk-event-item-date time'
-          );
-
-        const rawDate =
-          cleanText(timeEl?.innerText);
-
-        const isoDate =
-          timeEl?.getAttribute('datetime') || '';
-
-        return {
-          title,
-
-          date: rawDate,
-
-          eventStartDate: isoDate,
-
-          url,
-
-          imageUrl:
-            rawImage &&
-            !rawImage.startsWith('data:')
-              ? rawImage
-              : '',
-
-          venue: 'Fuel Rock Club',
-
-          scrapedAt: new Date().toISOString(),
-
-          primaryCategory: 'Music',
-
-          genre: 'Music',
-
-          // useful for debugging
-          rawDate,
-          isoDate
-        };
-      })
-      .filter(e => e.title && e.url);
-  });
-
-  console.log('\n========== RESULTS ==========\n');
-
-  console.log(
-    JSON.stringify(events, null, 2)
-  );
-
-  console.log(
-    `\nTotal events: ${events.length}`
-  );
-
-  await page.waitForTimeout(5000);
+  console.log('\n' + JSON.stringify(results, null, 2));
 
   await browser.close();
 }
 
-scrape().catch(err => {
-  console.error(err);
+main().catch((err) => {
+  console.error('Fatal:', err);
   process.exit(1);
 });

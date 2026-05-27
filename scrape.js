@@ -54,6 +54,109 @@ const GENRE_SIGNALS = [
   [/\bworld\s*music\b/i, 'World Music'],
 ];
 
+// ─── WMC availability helpers ────────────────────────────────────────────────
+
+const WMC_AVAILABILITY_TIERS = {
+  'good availability':                 { label: 'GOOD AVAILABILITY',              range: '0-30%',  mid: 15  },
+  'moderate availability':             { label: 'MODERATE AVAILABILITY',          range: '31-60%', mid: 46  },
+  'limited availability':              { label: 'LIMITED AVAILABILITY',           range: '61-90%', mid: 76  },
+  'only wheelchair seating available': { label: 'ONLY WHEELCHAIR SEATING AVAILABLE', range: '91-99%', mid: 95  },
+  'sold out':                          { label: 'SOLD OUT',                       range: '100%',   mid: 100 },
+};
+
+const WMC_AVAILABILITY_RANK = [
+  'only wheelchair seating available',
+  'limited availability',
+  'moderate availability',
+  'good availability',
+];
+
+const WMC_SUB_VENUES = [
+  { match: 'cabaret',        label: 'Cabaret'        },
+  { match: 'hoddinott hall', label: 'Hoddinott Hall'  },
+  { match: 'weston studio',  label: 'Weston Studio'   },
+  { match: 'dance house',    label: 'Dance House'     },
+];
+
+function wmcParseSubVenue(rawPrefix) {
+  if (!rawPrefix) return null;
+  const lower = rawPrefix.toLowerCase().trim();
+  for (const { match, label } of WMC_SUB_VENUES) {
+    if (lower.startsWith(match)) return label;
+  }
+  return null;
+}
+
+function wmcComputeAvailability(labels) {
+  if (!labels.length) return null;
+  const tiers = labels.map((l) => {
+    const lower = l.toLowerCase().trim();
+    for (const [key, tier] of Object.entries(WMC_AVAILABILITY_TIERS)) {
+      if (lower.includes(key)) return tier;
+    }
+    return null;
+  }).filter(Boolean);
+  if (!tiers.length) return null;
+
+  let bestTier = null;
+  for (const rank of WMC_AVAILABILITY_RANK) {
+    const match = tiers.find((t) => t.label.toLowerCase().includes(rank));
+    if (match) bestTier = match;
+  }
+
+  const avgMid = Math.round(tiers.reduce((sum, t) => sum + t.mid, 0) / tiers.length);
+  const clamped = bestTier
+    ? Math.min(Math.max(avgMid, 0), bestTier.mid === 15 ? 30 : bestTier.mid === 46 ? 60 : bestTier.mid === 76 ? 90 : bestTier.mid === 95 ? 99 : 100)
+    : avgMid;
+
+  return {
+    availability:         bestTier?.label ?? null,
+    availabilityRange:    bestTier?.range ?? null,
+    availabilityEstimate: clamped,
+  };
+}
+
+async function wmcWaitForAngularBind(page, timeout = 15_000) {
+  try {
+    await page.waitForFunction(
+      () => {
+        const list = document.querySelector('.calendar-list-filter-list--performance-list');
+        if (!list) return false;
+        if (list.classList.contains('ng-hide')) {
+          return !!document.querySelector('.events-error:not(.ng-hide)');
+        }
+        const availDivs = list.querySelectorAll('.calendar-list-entry__availablity');
+        if (availDivs.length === 0) return true;
+        return Array.from(availDivs).some((el) => !el.innerText.includes('{{'));
+      },
+      { timeout }
+    );
+  } catch {}
+}
+
+async function wmcScrapeAvailability(context, eventUrl) {
+  const perfUrl = `${eventUrl.replace(/\/$/, '')}/performances`;
+  const page = await context.newPage();
+  try {
+    await page.goto(perfUrl, { waitUntil: 'domcontentloaded', timeout: 45_000 });
+    await wmcWaitForAngularBind(page);
+    const labels = await page.evaluate(() =>
+      Array.from(
+        document.querySelectorAll(
+          '.calendar-list-filter-list--performance-list .calendar-list-entry__availablity'
+        )
+      )
+        .map((el) => el.innerText?.trim() ?? '')
+        .filter((t) => t && !t.includes('{{'))
+    );
+    return wmcComputeAvailability(labels);
+  } catch {
+    return null;
+  } finally {
+    await page.close();
+  }
+}
+
 /**
  * Extract genre labels from any block of text by scanning against GENRE_SIGNALS.
  * Returns a deduplicated array.
@@ -940,13 +1043,6 @@ function mergeEnrichmentIntoEvent(ev, en) {
     if (merged.length) out.musicGenres = merged;
   }
 
-  // Text-signal genres extracted from description and body snippet
-  const textBlob = [en.shortDescription, en.description, en.bodySnippet].filter(Boolean).join(' ');
-  const textSignalGenres = extractGenreSignalsFromText(textBlob);
-  if (textSignalGenres.length) {
-    const existing = Array.isArray(out.musicGenres) ? out.musicGenres : [];
-    out.musicGenres = unionMusicGenres(existing, textSignalGenres);
-  }
 
   out = mergeHotlinkImagesIntoEvent(out, en);
 
@@ -1015,20 +1111,13 @@ function finalizeEvent(ev) {
     if (titleSignals.length) musicGenres = titleSignals;
   }
 
-  // Also scan listing details text
-  if (ev.details) {
-    const detailSignals = extractGenreSignalsFromText(ev.details);
-    musicGenres = unionMusicGenres(musicGenres, detailSignals);
-  }
 
   // --- Build genre string (human-readable) ---
   const musicGenreHint = musicGenres.length ? musicGenres.join(', ') : '';
   const genre = (
     ev.genre ||
     musicGenreHint ||
-    subcategoryLineAsGenreHint(ev.subcategory) ||
     categoryAsGenreHint(ev.category) ||
-    inferGenreFromTitle(ev.title) ||
     ''
   ).trim();
 
@@ -1193,6 +1282,18 @@ async function scrapeWMC(context) {
   console.log('Scraping WMC...');
   const page = await context.newPage();
   await gotoAndSettle(page, 'https://www.wmc.org.uk/en/whats-on/events', 'div.production-card');
+
+  // Wait for Angular to compile the listing
+  await page.waitForFunction(
+    () => {
+      const cards = document.querySelectorAll('div.production-card');
+      if (cards.length === 0) return false;
+      const title = cards[0].querySelector('h4.production-card__title');
+      return title && !title.innerText.includes('{{');
+    },
+    { timeout: 15_000 }
+  ).catch(() => {});
+
   const events = await page.evaluate(() => {
     return Array.from(document.querySelectorAll('div.production-card')).map((item) => {
       let imageUrl = '';
@@ -1203,18 +1304,44 @@ async function scrapeWMC(context) {
           try { imageUrl = new URL(raw, location.href).href; } catch { imageUrl = raw.trim(); }
         }
       }
+      const prefixEl = item.querySelector('p.production-card__prefix');
+      const prefix = (!prefixEl || prefixEl.getAttribute('aria-hidden') === 'true')
+        ? '' : prefixEl.innerText.trim();
       return {
-        title: item.querySelector('h4.production-card__title')?.innerText.trim() || '',
-        date: item.querySelector('p.production-card__date')?.innerText.trim() || '',
-        url: item.querySelector('a.production-card__link-overlay')?.href || '',
-        venue: 'Wales Millennium Centre',
+        title:   item.querySelector('h4.production-card__title')?.innerText.trim() || '',
+        date:    item.querySelector('p.production-card__date')?.innerText.trim() || '',
+        url:     item.querySelector('a.production-card__link-overlay')?.href || '',
+        venue:   'Wales Millennium Centre',
         scrapedAt: new Date().toISOString(),
+        _prefix: prefix,
         ...(imageUrl ? { imageUrl } : {}),
       };
     }).filter((e) => e.title);
   });
+
+  // Resolve sub-venues in Node scope where WMC_SUB_VENUES is defined
+  for (const event of events) {
+    const subVenue = wmcParseSubVenue(event._prefix);
+    if (subVenue) event.subVenue = subVenue;
+    delete event._prefix;
+  }
+
   await page.close();
-  console.log(`  WMC: ${events.length} events`);
+  console.log(`  WMC: ${events.length} events found, fetching availability...`);
+
+  for (const event of events) {
+    if (!event.url) continue;
+    const computed = await wmcScrapeAvailability(context, event.url);
+    if (computed) {
+      event.availability         = computed.availability;
+      event.availabilityRange    = computed.availabilityRange;
+      event.availabilityEstimate = computed.availabilityEstimate;
+    }
+  }
+
+  const withAvailability = events.filter((e) => e.availability).length;
+  const withSubVenue     = events.filter((e) => e.subVenue).length;
+  console.log(`  WMC: done. ${withAvailability}/${events.length} with availability, ${withSubVenue}/${events.length} with sub-venue.`);
   return events;
 }
 
