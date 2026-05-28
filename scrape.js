@@ -2256,6 +2256,239 @@ async function scrapeCanopi(context) {
   console.log(`  Canopi: ${events.length} events`);
   return events;
 }
+async function scrapeAcapela(context) {
+  console.log('Scraping Acapela...');
+  const page = await context.newPage();
+  const allRaw = [];
+
+  for (let p = 1; p <= 10; p++) {
+    const url = p === 1
+      ? 'https://acapela.co.uk/whats-on'
+      : `https://acapela.co.uk/whats-on/page/${p}/`;
+    await gotoAndSettle(page, url, 'article');
+
+    const pageEvents = await page.evaluate(() => {
+      return Array.from(document.querySelectorAll('article')).map(item => {
+        const titleEl  = item.querySelector('h1,h2,h3,.entry-title,.post-title');
+        const dateEl   = item.querySelector('time,.entry-date,.event-date,[class*="date"]');
+        const linkEl   = item.querySelector('a[href*="/event"],a[href*="/whats-on"],.entry-title a,h2 a,h3 a');
+        const img      = item.querySelector('img[src],img[data-src]');
+        const statusEl = item.querySelector('[class*="status"],[class*="sold"],[class*="label"]');
+        const raw = img?.getAttribute('src') || img?.getAttribute('data-src') || '';
+        return {
+          title:    titleEl?.innerText?.trim() || '',
+          date:     dateEl?.innerText?.trim() || dateEl?.getAttribute('datetime') || '',
+          url:      linkEl?.href || '',
+          imageUrl: raw && !raw.startsWith('data:') ? raw : '',
+          status:   statusEl?.innerText?.trim() || '',
+        };
+      }).filter(e => e.title);
+    });
+
+    if (pageEvents.length === 0) break;
+    allRaw.push(...pageEvents);
+  }
+
+  await page.close();
+
+  // Normalise
+  const events = allRaw.map(e => {
+    const { cleanTitle, status } = extractAcapelaStatus(e.title);
+    return {
+      title:        cleanTitle,
+      date:         normaliseAcapelaDate(e.date),
+      url:          e.url,
+      venue:        'Acapela',
+      scrapedAt:    new Date().toISOString(),
+      imageUrl:     e.imageUrl,
+      availability: e.status || status,
+    };
+  });
+
+  console.log(`  Acapela: ${events.length} events`);
+  return events;
+}
+
+async function scrapeChapterArts(context) {
+  console.log('Scraping Chapter Arts Centre...');
+  const page = await context.newPage();
+  const allRaw = [];
+
+  for (let p = 1; p <= 5; p++) {
+    const url = p === 1
+      ? 'https://www.chapter.org/whats-on'
+      : `https://www.chapter.org/whats-on?page=${p}`;
+    await gotoAndSettle(page, url, 'article');
+
+    const pageEvents = await page.evaluate(() => {
+      return Array.from(document.querySelectorAll('article')).map(item => {
+        const titleEl = item.querySelector('h2,h3,h4,.title');
+        const dateEl  = item.querySelector('time,[class*="date"],[datetime]');
+        const linkEl  = item.querySelector('a[href]');
+        const img     = item.querySelector('img[src],img[data-src],img[data-lazy]');
+        const catEl   = item.querySelector('[class*="category"],[class*="tag"],[class*="genre"]');
+        const raw     = img?.getAttribute('src') || img?.getAttribute('data-src') || '';
+        const title   = titleEl?.innerText?.trim() || '';
+        if (!title) return null;
+        return {
+          title,
+          date:     dateEl?.innerText?.trim() || dateEl?.getAttribute('datetime') || '',
+          url:      linkEl?.href || '',
+          imageUrl: raw && !raw.startsWith('data:') ? raw : '',
+          category: catEl?.innerText?.trim() || '',
+        };
+      }).filter(Boolean);
+    });
+
+    if (pageEvents.length === 0) break;
+    allRaw.push(...pageEvents);
+  }
+
+  await page.close();
+
+  // Deduplicate by URL, filter junk, clean titles
+  const seen = new Set();
+  const events = allRaw
+    .filter(e => {
+      const key = e.url || e.title;
+      if (!key || seen.has(key)) return false;
+      seen.add(key);
+      return true;
+    })
+    .filter(e => !isChapterJunk(e))
+    .map(e => ({
+      title:     (e.title).replace(/[\u00a0\u200b\u202f\ufeff]/g, ' ').replace(/\s+/g, ' ').trim(),
+      date:      e.date,
+      url:       e.url,
+      venue:     'Chapter Arts Centre',
+      scrapedAt: new Date().toISOString(),
+      imageUrl:  e.imageUrl,
+      category:  e.category,
+    }));
+
+  console.log(`  Chapter Arts: ${events.length} events`);
+  return events;
+}
+
+async function scrapeCultVR(context) {
+  console.log('Scraping CultVR...');
+  const page = await context.newPage();
+  const allRaw = [];
+
+  for (let p = 1; p <= 5; p++) {
+    const url = p === 1
+      ? 'https://www.cultvr.cymru/whats-on/'
+      : `https://www.cultvr.cymru/whats-on/page/${p}/`;
+    await gotoAndSettle(page, url, 'article');
+
+    const pageEvents = await page.evaluate(() => {
+      return Array.from(document.querySelectorAll('article.event,article.post,.event')).map(item => {
+        const titleEl   = item.querySelector('h1,h2,h3,.entry-title');
+        const dateEl    = item.querySelector('time[datetime],.event-date,[class*="date"]');
+        const linkEl    = item.querySelector('a[href]');
+        const img       = item.querySelector('img[src],img[data-src]');
+        const excerptEl = item.querySelector('.entry-excerpt,.entry-summary,p');
+        const raw       = img?.getAttribute('src') || img?.getAttribute('data-src') || '';
+        return {
+          title:       titleEl?.innerText?.trim() || '',
+          date:        dateEl?.innerText?.trim() || '',
+          datetime:    dateEl?.getAttribute('datetime') || '',
+          url:         linkEl?.href || '',
+          imageUrl:    raw && !raw.startsWith('data:') ? raw : '',
+          description: excerptEl?.innerText?.trim().slice(0, 200) || '',
+        };
+      }).filter(e => e.title);
+    });
+
+    if (pageEvents.length === 0) break;
+    allRaw.push(...pageEvents);
+  }
+
+  await page.close();
+
+  // Parse DD/MM/YYYY dates and filter past events
+  const today = new Date(); today.setHours(0, 0, 0, 0);
+  const DAY_NAMES   = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+  const MONTH_NAMES = ['January','February','March','April','May','June','July',
+                       'August','September','October','November','December'];
+
+  const events = allRaw
+    .map(e => {
+      const raw = e.date || e.datetime || '';
+      const m = raw.match(/(\d{2})\/(\d{2})\/(\d{4})/);
+      let formatted = raw;
+      let startDate = null;
+      if (m) {
+        const [, dd, mm, yyyy] = m;
+        const d = new Date(Number(yyyy), Number(mm) - 1, Number(dd));
+        if (!isNaN(d)) {
+          formatted = `${DAY_NAMES[d.getDay()]}, ${Number(dd)} ${MONTH_NAMES[Number(mm)-1]} ${yyyy}`;
+          startDate = d;
+        }
+      }
+      return { ...e, _formatted: formatted, _startDate: startDate };
+    })
+    .filter(e => !e._startDate || e._startDate >= today)
+    .map(({ _formatted, _startDate, datetime, ...e }) => ({
+      title:       e.title,
+      date:        _formatted,
+      url:         e.url,
+      venue:       'CultVR',
+      scrapedAt:   new Date().toISOString(),
+      imageUrl:    e.imageUrl,
+      description: e.description,
+    }));
+
+  console.log(`  CultVR: ${events.length} events`);
+  return events;
+}
+// ---------------------------------------------------------------------------
+// Acapela / Chapter / CultVR helpers
+// ---------------------------------------------------------------------------
+
+function extractAcapelaStatus(title) {
+  const m = title.match(/\s*[(-]?\s*(SOLD\s*OUT|SELLING\s*FAST|FEW\s*LEFT|LIMITED)\s*[)-]?\s*$/i);
+  if (!m) return { cleanTitle: title.trim(), status: '' };
+  return {
+    cleanTitle: title.slice(0, m.index).trim(),
+    status:     m[1].toUpperCase().replace(/\s+/g, ' '),
+  };
+}
+
+function normaliseAcapelaDate(raw) {
+  if (!raw) return '';
+  const clean = raw.trim().replace(/(\d+)(?:st|nd|rd|th)\b/gi, '$1');
+  const m = clean.match(/^(\d{1,2})\s+([A-Za-z]+)\s+(\d{4})$/);
+  if (!m) return raw;
+  const dayNum   = parseInt(m[1], 10);
+  const monthIdx = ['January','February','March','April','May','June','July',
+                    'August','September','October','November','December']
+                    .findIndex(mn => mn.toLowerCase() === m[2].toLowerCase());
+  if (monthIdx === -1) return raw;
+  const d = new Date(Number(m[3]), monthIdx, dayNum);
+  if (isNaN(d)) return raw;
+  return d.toLocaleDateString('en-GB', { weekday:'long', day:'numeric', month:'long', year:'numeric' });
+}
+
+const CHAPTER_NAV_URL_PATTERNS = [
+  /\/about(\/|$)/, /\/hire(\/|$)/, /\/visit(\/|$)/,
+  /\/support-us(\/|$)/, /\/guide\//, /\/food-drink(\/|$)/,
+];
+const CHAPTER_NAV_TITLES = new Set([
+  'CINEMA','THEATRE','GALLERY','FOOD & DRINK','VISIT','HIRE','SUPPORT US','ABOUT',
+]);
+
+function isChapterJunk(e) {
+  const title = (e.title || '').trim();
+  const url   = (e.url   || '').trim();
+  const date  = (e.date  || '').trim();
+  if (CHAPTER_NAV_TITLES.has(title.toUpperCase())) return true;
+  if (url && CHAPTER_NAV_URL_PATTERNS.some(p => p.test(url))) return true;
+  if (/first name|last name|email address/i.test(date)) return true;
+  if (!date && !e.imageUrl && /[.!?]$/.test(title)) return true;
+  if (!date && /^[A-Z\s'':–-]+$/.test(title) && title.includes(':')) return true;
+  return false;
+}
 
 async function scrapeClwb(context) {
   console.log('Scraping Clwb Ifor Bach...');
@@ -2419,6 +2652,9 @@ async function scrapeAll() {
     ...await safeScrap(() => scrapePrincipality(context), 'Principality'),
     ...await safeScrap(() => scrapeSherman(context), 'Sherman'),
     ...await safeScrap(() => scrapeCanopi(context), 'Canopi'),
+    ...await safeScrap(() => scrapeAcapela(context), 'Acapela'),
+    ...await safeScrap(() => scrapeChapterArts(context), 'Chapter Arts'),
+    ...await safeScrap(() => scrapeCultVR(context), 'CultVR'),
   ];
 
   allEvents = await enrichAllEvents(context, allEvents);
