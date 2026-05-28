@@ -2652,8 +2652,8 @@ async function scrapeAll() {
     ...await safeScrap(() => scrapePrincipality(context), 'Principality'),
     ...await safeScrap(() => scrapeSherman(context), 'Sherman'),
     ...await safeScrap(() => scrapeCanopi(context), 'Canopi'),
-    ...await safeScrap(() => scrapeAcapela(context), 'Acapela'),
-    ...await safeScrap(() => scrapeChapterArts(context), 'Chapter Arts'),
+//    ...await safeScrap(() => scrapeAcapela(context), 'Acapela'),
+//    ...await safeScrap(() => scrapeChapterArts(context), 'Chapter Arts'),
     ...await safeScrap(() => scrapeCultVR(context), 'CultVR'),
   ];
 
