@@ -387,7 +387,19 @@ function inferPrimaryCategory(ev) {
 function numPrice(v) {
   if (v == null) return NaN;
   if (typeof v === 'number' && !Number.isNaN(v)) return v;
-  const n = Number(String(v).replace(/[^0-9.]/g, ''));
+  const s = String(v).trim();
+
+  // Bail out if this looks like a range string — let normalizeOffers handle
+  // ranges at a higher level; blindly stripping gives garbage like 20.5023
+  if (/\d\s*[-–]\s*[£$€]?\s*\d/.test(s)) return NaN;
+
+  // Handle European comma decimals: "16,50" → 16.50
+  // Only treat comma as decimal if it's followed by exactly 2 digits at end
+  const euroComma = s.replace(/^[^0-9]*/, '').match(/^(\d+),(\d{2})$/);
+  if (euroComma) return Number(`${euroComma[1]}.${euroComma[2]}`);
+
+  // Standard strip — safe now that ranges are caught above
+  const n = Number(s.replace(/[^0-9.]/g, ''));
   return Number.isNaN(n) ? NaN : n;
 }
 
