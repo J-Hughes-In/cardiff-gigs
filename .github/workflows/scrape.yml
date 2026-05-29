@@ -30,10 +30,14 @@ jobs:
       - name: Run scraper
         run: npm run scrape
 
+      - name: Enrich comedian data
+        run: node comedians.js
+        continue-on-error: true
+
       - name: Commit results
         run: |
           git config user.email "actions@github.com"
           git config user.name "GitHub Actions"
-          git add events.json
+          git add events.json comedians.json comedian-review.json
           git diff --staged --quiet || git commit -m "Update events $(date -u +%Y-%m-%d)"
           git push origin HEAD:main
