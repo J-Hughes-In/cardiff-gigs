@@ -1778,16 +1778,26 @@ async function ntScrapeEventDetail(context, eventUrl) {
     }));
     for (const [url, offer] of offerMap) {
       if (!enriched.find(p => p.bookingUrl === url)) {
+        const schemaAvail = offer.availability || '';
+        const schemaStatusLabel =
+          schemaAvail.includes('SoldOut')          ? 'sold out' :
+          schemaAvail.includes('LimitedAvailability') ? 'limited'  : '';
         enriched.push({
           time: '', price: `£${offer.price}`, bookingUrl: url,
-          statusLabel: '', schemaAvailability: offer.availability,
+          statusLabel: schemaStatusLabel, schemaAvailability: schemaAvail,
           schemaPrice: Number(offer.price), dotClass: '', note: '',
           _source: 'jsonld-only',
         });
       }
     }
 
-    return { sellingFast: result.sellingFast, jsonLd: result.jsonLd, performances: enriched, error: null };
+    // If the page-level banner says sold out and we got no performances (all gone),
+    // synthesise a single sold-out sentinel so ntDeriveAvailabilityFields can handle it
+    if (result.pageSoldOut && enriched.length === 0) {
+      enriched.push({ time: '', price: '', bookingUrl: '', statusLabel: 'sold out', dotClass: '', note: '', _source: 'page-banner' });
+    }
+
+    return { sellingFast: result.sellingFast, pageSoldOut: result.pageSoldOut, jsonLd: result.jsonLd, performances: enriched, error: null };
   } catch (err) {
     try { await page.close(); } catch (_) {}
     return { sellingFast: false, jsonLd: null, performances: [], error: err.message };
