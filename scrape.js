@@ -1732,6 +1732,35 @@ async function ntScrapeEventDetail(context, eventUrl) {
         if (el) jsonLd = JSON.parse(el.textContent);
       } catch (_) {}
 
+      // ── React payload sold-out detection ────────────────────────────────────
+      // Trafalgar's JSON-LD keeps availability as InStock even when sold out.
+      // The authoritative sold-out state is in the __next_f streaming payload
+      // (Tixly data): "SoldOut":true / "SaleStatusText":"SoldOut" /
+      // "hasAllDatesSoldOut":true. We scan inline scripts for these signals.
+      let payloadSoldOut = false;
+      try {
+        for (const s of document.querySelectorAll('script:not([src])')) {
+          const t = s.textContent || '';
+          if (/"SoldOut"\s*:\s*true/.test(t) ||
+              /"SaleStatusText"\s*:\s*"SoldOut"/.test(t) ||
+              /"hasAllDatesSoldOut"\s*:\s*true/.test(t)) {
+            payloadSoldOut = true;
+            break;
+          }
+        }
+      } catch (_) {}
+
+      // ── Page-level sold-out banner ───────────────────────────────────────────
+      // Matches the specific card-header banner inside event-tag-card-wrapper:
+      // <div class="px-lg pt-xs pb-xl bg-gradient-to-r ..."><div ...>Sold out</div></div>
+      const bannerSoldOut = [...document.querySelectorAll('[data-testid="event-tag-card-wrapper"]')]
+        .some(el => /^\s*sold\s*out\s*$/i.test(
+          (el.querySelector(':scope > div:first-child > div')?.innerText ||
+           el.querySelector(':scope > div:first-child')?.innerText || '')
+        ));
+
+      const pageSoldOut = payloadSoldOut || bannerSoldOut;
+
       const isRealTicketUrl = href =>
         href.includes('buyingflow/tickets/') &&
         !href.includes('/membership/') &&
@@ -1742,12 +1771,25 @@ async function ntScrapeEventDetail(context, eventUrl) {
         const href = (a.getAttribute('href') || '').split('?')[0];
         if (!isRealTicketUrl(href) || seen.has(href)) continue;
         seen.add(href);
-        const timeEl      = a.querySelector('span.text-md');
-        const time        = timeEl ? timeEl.innerText.trim() : '';
-        const statusSpan  = a.querySelector('[data-testid="status-indicator"] ~ span, [data-testid="status-indicator"] + span');
-        const statusLabel = statusSpan ? statusSpan.innerText.trim().toLowerCase() : '';
-        const dotEl       = a.querySelector('[data-testid="status-indicator"]');
-        const dotClass    = dotEl ? (dotEl.getAttribute('class') || '') : '';
+        const timeEl  = a.querySelector('span.text-md');
+        const time    = timeEl ? timeEl.innerText.trim() : '';
+
+        // Status: try the sibling span first, then fall back to dot colour.
+        // (deep-red = sold out, amber/yellow = limited, green = good)
+        const statusSpan = a.querySelector('[data-testid="status-indicator"] ~ span, [data-testid="status-indicator"] + span');
+        const dotEl      = a.querySelector('[data-testid="status-indicator"]');
+        const dotClass   = dotEl ? (dotEl.getAttribute('class') || '') : '';
+        let statusLabel  = statusSpan ? statusSpan.innerText.trim().toLowerCase() : '';
+        if (!statusLabel) {
+          if (dotClass.includes('bg-deep-red'))                                     statusLabel = 'sold out';
+          else if (dotClass.includes('bg-amber') || dotClass.includes('bg-yellow')) statusLabel = 'limited';
+          else if (dotClass.includes('bg-emerald') || dotClass.includes('bg-green')) statusLabel = 'good';
+        }
+        // If the page-level sold-out signal fired and this performance still has
+        // no explicit status (Trafalgar leaves the link rendered but Remaining=0),
+        // override it to sold out.
+        if (!statusLabel && pageSoldOut) statusLabel = 'sold out';
+
         const priceBadges = [...a.querySelectorAll('.bg-emerald-green-500\\/5')];
         let price = '';
         for (const b of priceBadges) {
@@ -1757,7 +1799,7 @@ async function ntScrapeEventDetail(context, eventUrl) {
         const noteEl = a.querySelector('.text-slate-500');
         performances.push({ time, price, statusLabel, dotClass, bookingUrl: href, note: noteEl?.innerText.trim() || '' });
       }
-      return { sellingFast, jsonLd, performances };
+      return { sellingFast, pageSoldOut, jsonLd, performances };
     });
 
     await page.close();
@@ -1791,10 +1833,19 @@ async function ntScrapeEventDetail(context, eventUrl) {
       }
     }
 
-    // If the page-level banner says sold out and we got no performances (all gone),
-    // synthesise a single sold-out sentinel so ntDeriveAvailabilityFields can handle it
-    if (result.pageSoldOut && enriched.length === 0) {
-      enriched.push({ time: '', price: '', bookingUrl: '', statusLabel: 'sold out', dotClass: '', note: '', _source: 'page-banner' });
+    // pageSoldOut: two cases to handle:
+    //   1. No booking links at all — synthesise a sentinel entry.
+    //   2. Booking links exist but Trafalgar hasn't updated the dot/span status
+    //      (link is rendered but Remaining=0 in Tixly data). Override any
+    //      performances that still have an empty statusLabel.
+    if (result.pageSoldOut) {
+      if (enriched.length === 0) {
+        enriched.push({ time: '', price: '', bookingUrl: '', statusLabel: 'sold out', dotClass: '', note: '', _source: 'page-banner' });
+      } else {
+        for (const p of enriched) {
+          if (!p.statusLabel) p.statusLabel = 'sold out';
+        }
+      }
     }
 
     return { sellingFast: result.sellingFast, pageSoldOut: result.pageSoldOut, jsonLd: result.jsonLd, performances: enriched, error: null };
@@ -2636,6 +2687,157 @@ async function scrapePrincipality(context) {
   return events;
 }
 
+// ─── Sherman Theatre availability helpers ─────────────────────────────────────
+
+/**
+ * Sherman weekday demand weights.
+ * Sherman is a mid-size civic theatre; mid-week shows in a smaller space
+ * imply stronger interest than equivalent weekend ones.
+ */
+const SHERMAN_WEEKDAY_WEIGHTS = {
+  0: 0.70, // Sunday
+  1: 1.00, // Monday
+  2: 1.00, // Tuesday
+  3: 0.95, // Wednesday
+  4: 0.90, // Thursday
+  5: 0.75, // Friday
+  6: 0.70, // Saturday
+};
+
+/**
+ * Scrape a Spektrix seat-map page for Sherman Theatre.
+ * Seat images use class "Seat" (unavailable) vs "SeatSelectable" (available).
+ * Returns { available, occupied, total, occupancyPct, error }.
+ */
+async function shermanScrapeSeatingPage(context, bookingUrl) {
+  const page = await context.newPage();
+  try {
+    await page.goto(bookingUrl, { waitUntil: 'domcontentloaded', timeout: 30_000 });
+
+    // Wait for seat images to render (Spektrix renders them as <img> tags)
+    let seatsFound = false;
+    try {
+      await page.waitForSelector('img.Seat, img.SeatSelectable', { timeout: 20_000 });
+      seatsFound = true;
+    } catch (_) {}
+
+    await new Promise(r => setTimeout(r, 1_500));
+
+    const counts = await page.evaluate((seatsFound) => {
+      if (!seatsFound) return { available: 0, occupied: 0, total: 0, occupancyPct: null, error: 'no seats found' };
+
+      let available = 0, occupied = 0;
+      for (const img of document.querySelectorAll('img')) {
+        const cls = img.className || '';
+        const title = img.getAttribute('title') || img.getAttribute('tooltip') || '';
+        if (cls.includes('SeatSelectable')) {
+          available++;
+        } else if (cls.includes('Seat') && !cls.includes('SeatSelectable')) {
+          // "Seat" without "SeatSelectable" = unavailable/taken
+          // Only count if it looks like a real seat (has a Unavailable title or is positioned)
+          if (title === 'Unavailable' || img.style.top) occupied++;
+        }
+      }
+      const total = available + occupied;
+      return {
+        available,
+        occupied,
+        total,
+        occupancyPct: total > 0 ? Math.round((occupied / total) * 100) : null,
+        error: null,
+      };
+    }, seatsFound);
+
+    await page.close();
+    return counts;
+  } catch (err) {
+    try { await page.close(); } catch (_) {}
+    return { available: 0, occupied: 0, total: 0, occupancyPct: null, error: err.message };
+  }
+}
+
+/**
+ * Derive Sherman availability label + estimate from a seat scrape result.
+ * If no seat data (sold-out page, no booking link), pass { soldOut: true }.
+ */
+function shermanDeriveAvailability(seating, soldOut) {
+  if (soldOut || (seating?.occupancyPct != null && seating.occupancyPct >= 100)) {
+    return { availability: 'SOLD OUT', availabilityRange: '100%', availabilityEstimate: 100 };
+  }
+  if (seating?.occupancyPct == null) {
+    return { availability: null, availabilityRange: null, availabilityEstimate: null };
+  }
+  const pct = seating.occupancyPct;
+  const lo = Math.floor(pct / 10) * 10;
+  const hi = Math.min(100, lo + 10);
+  const range = `${lo}-${hi}%`;
+  let label;
+  if (pct >= 100)      label = 'SOLD OUT';
+  else if (pct >= 85)  label = 'LIMITED';
+  else if (pct >= 50)  label = 'GOOD - SELLING FAST';
+  else                 label = 'GOOD';
+  return { availability: label, availabilityRange: range, availabilityEstimate: pct };
+}
+
+/**
+ * Compute popularity for a Sherman event (same algorithm as NT/WMC).
+ */
+function shermanComputePopularity(ev) {
+  const estimate = ev.availabilityEstimate;
+  if (estimate == null || Number.isNaN(Number(estimate))) {
+    return { popularityScore: null, popularityLabel: null };
+  }
+  const scrapedAt = ev.scrapedAt || new Date().toISOString();
+  const refDate   = new Date(scrapedAt);
+  let eventDate = null;
+  const isoStart = ev.eventStartDate;
+  if (isoStart) {
+    const d = new Date(isoStart);
+    if (!Number.isNaN(d.getTime())) eventDate = d;
+  }
+  if (!eventDate) {
+    const rawDate = String(ev.date || '').trim();
+    if (rawDate) {
+      const range =
+        tryParseUkRangeTwoDaysOneMonthYear(rawDate) ||
+        tryParseSameMonthDayRange(rawDate)           ||
+        tryParseDayMonthRangeYear(rawDate);
+      eventDate = range ? range.start : (
+        tryParseShortUkDayMonYear(rawDate)                   ||
+        tryParseDdMmYyyy(rawDate)                             ||
+        tryParseWeekdayOrdinalMonthYear(rawDate)              ||
+        tryParseOrdinalMonthOptionalYear(rawDate, scrapedAt)  ||
+        tryParseMonthDayAtTime(rawDate, scrapedAt)            ||
+        tryParseDayOrdinalMonthNoYear(rawDate, scrapedAt)
+      );
+    }
+  }
+  if (!eventDate || Number.isNaN(eventDate.getTime())) {
+    return { popularityScore: null, popularityLabel: null };
+  }
+  const msPerDay       = 86_400_000;
+  const daysUntil      = Math.max(0, (eventDate.getTime() - refDate.getTime()) / msPerDay);
+  const leadNorm       = Math.min(daysUntil, 365) / 365;
+  const leadMultiplier = 0.7 + 0.3 * leadNorm;
+  const dayOfWeek     = eventDate.getDay();
+  const weekdayWeight = SHERMAN_WEEKDAY_WEIGHTS[dayOfWeek] ?? 0.85;
+  const hasLimitedOrWorse  = /limited|sold.?out/i.test(ev.availability || '');
+  const isAtLeastMonthAway = daysUntil >= 30;
+  const flooredEstimate    = (hasLimitedOrWorse && isAtLeastMonthAway)
+    ? Math.max(Number(estimate), 60)
+    : Number(estimate);
+  const raw = (flooredEstimate / 100) * leadMultiplier * weekdayWeight * 100;
+  let popularityScore = Math.min(100, Math.max(0, Math.round(raw)));
+  if (/sold.?out/i.test(ev.availability || '')) popularityScore = Math.max(popularityScore, 80);
+  let popularityLabel;
+  if      (popularityScore >= 75) popularityLabel = 'Very high demand';
+  else if (popularityScore >= 50) popularityLabel = 'High demand';
+  else if (popularityScore >= 30) popularityLabel = 'Moderate demand';
+  else if (popularityScore >= 15) popularityLabel = 'Low demand';
+  else                            popularityLabel = 'Very low demand';
+  return { popularityScore, popularityLabel };
+}
+
 async function scrapeSherman(context) {
   console.log('Scraping Sherman Theatre...');
   const page = await context.newPage();
@@ -2661,27 +2863,119 @@ async function scrapeSherman(context) {
   const events = await page.evaluate(() => {
     return Array.from(document.querySelectorAll('div.card-event')).map(item => {
       const titleEl = item.querySelector('h3.card-title');
-      const dateEl = item.querySelector('span.date');
-      const descEl = item.querySelector('.card-description');
-      const catEl = item.querySelector('.item-categories span');
-      const linkEl = item.querySelector('a.card-link');
-      const imgEl = item.querySelector('div.card-image[data-src]');
-      const raw = imgEl?.getAttribute('data-src') || '';
+      const dateEl  = item.querySelector('span.date');
+      const descEl  = item.querySelector('.card-description');
+      const catEl   = item.querySelector('.item-categories span');
+      const linkEl  = item.querySelector('a.card-link');
+      const imgEl   = item.querySelector('div.card-image[data-src]');
+      const raw     = imgEl?.getAttribute('data-src') || '';
       return {
-        title: titleEl?.innerText.trim() || '',
-        date: dateEl?.innerText.trim() || '',
+        title:    titleEl?.innerText.trim() || '',
+        date:     dateEl?.innerText.trim() || '',
         description: descEl?.innerText.trim() || '',
         category: catEl?.innerText.trim() || '',
-        url: linkEl?.href || '',
+        url:      linkEl?.href || '',
         imageUrl: raw && !raw.startsWith('data:') ? raw : '',
-        venue: 'Sherman Theatre',
+        venue:    'Sherman Theatre',
         scrapedAt: new Date().toISOString(),
       };
     }).filter(e => e.title);
   });
 
   await page.close();
-  console.log(`  Sherman: ${events.length} events`);
+  console.log(`  Sherman: ${events.length} events found, fetching availability...`);
+
+  // ── Per-event detail: check sold-out status + optional seat scrape ────────
+  for (const ev of events) {
+    if (!ev.url) continue;
+
+    const detailPage = await context.newPage();
+    let soldOut = false;
+    let bookingUrl = null;
+
+    try {
+      await detailPage.goto(ev.url, { waitUntil: 'domcontentloaded', timeout: 30_000 });
+      await new Promise(r => setTimeout(r, 1_000));
+
+      const detail = await detailPage.evaluate(() => {
+        // Each performance appears as .instance; check if any have a booking link
+        const instances = [...document.querySelectorAll('.instance')];
+
+        let anyBookingLink = null;
+        let allSoldOut = instances.length > 0;
+
+        for (const inst of instances) {
+          const ctaEl  = inst.querySelector('.instance-cta');
+          const ctaTxt = (ctaEl?.innerText || '').trim().toLowerCase();
+          const link   = inst.querySelector('a.btn-book-instance');
+
+          if (link?.href) {
+            anyBookingLink = link.href;
+            allSoldOut = false; // at least one bookable performance exists
+          } else if (!ctaTxt.includes('sold out')) {
+            // Something else — not clearly sold out, not bookable
+            allSoldOut = false;
+          }
+          // if ctaTxt is "sold out" and no link, allSoldOut stays true for this instance
+        }
+
+        // Also check for a global sold-out marker (no instances with links at all)
+        const soldOutText = [...document.querySelectorAll('.instance-cta')]
+          .every(el => /sold\s*out/i.test(el.innerText || ''));
+
+        return {
+          soldOut: instances.length > 0 && allSoldOut && soldOutText,
+          bookingUrl: anyBookingLink,
+        };
+      });
+
+      soldOut    = detail.soldOut;
+      bookingUrl = detail.bookingUrl;
+
+      // Extract date/time from the detail page for better ISO date
+      const isoDate = await detailPage.evaluate(() => {
+        const dateEl = document.querySelector('.date');
+        const timeEl = document.querySelector('.show-meta-length');
+        return {
+          dateText: dateEl?.innerText?.trim() || '',
+          timeText: timeEl?.innerText?.trim() || '',
+        };
+      });
+      if (isoDate.dateText && !ev.eventStartDate) ev.details = isoDate.dateText;
+
+    } catch (_) {
+    } finally {
+      await detailPage.close();
+    }
+
+    if (soldOut) {
+      const avail = shermanDeriveAvailability(null, true);
+      Object.assign(ev, avail);
+      Object.assign(ev, shermanComputePopularity(ev));
+      continue;
+    }
+
+    if (!bookingUrl) continue; // no booking link and not sold out — skip availability
+
+    // Scrape seat map
+    const seating = await shermanScrapeSeatingPage(context, bookingUrl);
+    if (seating.error && !seating.total) continue;
+
+    const avail = shermanDeriveAvailability(seating, false);
+    Object.assign(ev, avail);
+    if (seating.total > 0) {
+      ev.seatingAggregate = {
+        avgOccupancyPct:  seating.occupancyPct,
+        available:        seating.available,
+        occupied:         seating.occupied,
+        total:            seating.total,
+      };
+    }
+    Object.assign(ev, shermanComputePopularity(ev));
+  }
+
+  const withAvailability = events.filter(e => e.availability).length;
+  console.log(`  Sherman: done. ${withAvailability}/${events.length} with availability.`);
   return events;
 }
 
