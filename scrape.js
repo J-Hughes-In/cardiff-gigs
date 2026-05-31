@@ -1477,6 +1477,323 @@ async function scrapeWMC(context) {
   return events;
 }
 
+// ─── New Theatre availability + popularity helpers ────────────────────────────
+
+/**
+ * NT weekday demand weights.
+ * Trafalgar Tickets shows have more Saturday matinees than WMC, so Saturday
+ * is bumped slightly vs the WMC table.
+ */
+const NT_WEEKDAY_WEIGHTS = {
+  0: 0.70, // Sunday
+  1: 1.00, // Monday
+  2: 1.00, // Tuesday
+  3: 0.95, // Wednesday
+  4: 0.90, // Thursday
+  5: 0.75, // Friday
+  6: 0.70, // Saturday (higher than WMC — more matinees fill naturally)
+};
+
+// Fixed estimate for events where seating is intentionally skipped
+// (all-green status, no "selling fast" flag).
+const NT_GOOD_ONLY_ESTIMATE = 40;
+
+// Max individual booking pages to visit per event when seating IS scraped.
+// Singin'-in-the-Rain data shows variance across a 15-perf run is ≤14 pts,
+// so 8 samples captures the spread without visiting every page.
+const NT_MAX_SEATING_PAGES = 8;
+
+// Concurrency for detail + seating pages within scrapeNewTheatre.
+const NT_DETAIL_CONCURRENCY = 5;
+
+function ntOccupancyToLabel(pct) {
+  if (pct == null) return null;
+  if (pct >= 100)  return 'sold out';
+  if (pct >= 85)   return 'limited';
+  return 'good';
+}
+
+/**
+ * Derive availability fields from seating scrape results.
+ * Mirrors the deriveAvailabilityFields logic from debug.js.
+ */
+function ntDeriveAvailabilityFields(performances, sellingFast, seatingResults, skippedSeating) {
+  const occMap = new Map();
+  for (const s of seatingResults) {
+    if (s.seating?.occupancyPct != null) occMap.set(s.bookingUrl, s.seating.occupancyPct);
+  }
+
+  const enriched = performances.map(p => {
+    const occ          = occMap.get(p.bookingUrl) ?? null;
+    const derivedLabel = ntOccupancyToLabel(occ);
+    return {
+      ...p,
+      occupancyPct:       occ,
+      statusLabel:        p.statusLabel || derivedLabel || '',
+      derivedStatusLabel: derivedLabel,
+    };
+  });
+
+  const occs      = enriched.map(p => p.occupancyPct).filter(v => v != null);
+  const allLabels = enriched.map(p => p.statusLabel).filter(Boolean);
+  const allSoldOut = allLabels.length > 0 && allLabels.every(l => l === 'sold out');
+  const hasLimited = allLabels.some(l => l === 'limited') ||
+                     (occs.length > 0 && Math.max(...occs) >= 85);
+
+  let availabilityEstimate, availabilityRange, availability;
+
+  if (occs.length > 0) {
+    availabilityEstimate = Math.round(occs.reduce((a, b) => a + b, 0) / occs.length);
+    const lo = Math.floor(availabilityEstimate / 10) * 10;
+    const hi = Math.min(100, lo + 10);
+    availabilityRange    = `${lo}-${hi}%`;
+    const worstLabel     = ntOccupancyToLabel(Math.max(...occs));
+    const suffix         = sellingFast ? ' - SELLING FAST' : '';
+    availability         = (allSoldOut ? 'SOLD OUT' : (worstLabel || 'GOOD').toUpperCase()) + suffix;
+
+  } else if (skippedSeating) {
+    availabilityEstimate = NT_GOOD_ONLY_ESTIMATE;
+    availabilityRange    = '20-50%';
+    availability         = 'GOOD';
+
+  } else if (allSoldOut) {
+    availability = 'SOLD OUT'; availabilityEstimate = 100; availabilityRange = '100%';
+  } else if (hasLimited) {
+    availabilityEstimate = sellingFast ? 87 : 78;
+    availabilityRange    = '75-90%';
+    availability         = sellingFast ? 'LIMITED - SELLING FAST' : 'LIMITED';
+  } else {
+    availabilityEstimate = 50;
+    availabilityRange    = '40-60%';
+    availability         = 'GOOD - SELLING FAST';
+  }
+
+  const seatingAggregate = occs.length > 0 ? {
+    avgOccupancyPct:      availabilityEstimate,
+    maxOccupancyPct:      Math.max(...occs),
+    minOccupancyPct:      Math.min(...occs),
+    totalAvailable:       seatingResults.reduce((a, s) => a + (s.seating?.available || 0), 0),
+    totalOccupied:        seatingResults.reduce((a, s) => a + (s.seating?.occupied  || 0), 0),
+    performancesWithData: occs.length,
+  } : null;
+
+  return { availability, availabilityRange, availabilityEstimate, sellingFast, seatingAggregate, performances: enriched };
+}
+
+/**
+ * Compute popularity score (0–100) for a New Theatre event.
+ * Uses the same algorithm as wmcComputePopularity but with NT weekday weights
+ * and ISO startDate from JSON-LD rather than raw listing date strings.
+ *
+ * For multi-performance events, pass the highest availabilityEstimate (worst
+ * supply pressure) so the score reflects peak demand, not the average.
+ */
+function ntComputePopularity(ev) {
+  const estimate = ev.availabilityEstimate;
+  if (estimate == null || Number.isNaN(Number(estimate))) {
+    return { popularityScore: null, popularityLabel: null };
+  }
+
+  const scrapedAt = ev.scrapedAt || new Date().toISOString();
+  const refDate   = new Date(scrapedAt);
+
+  // Prefer ISO startDate from JSON-LD; fall back to raw listing date helpers
+  let eventDate = null;
+  const isoStart = ev.eventStartDate || ev.jsonLdStartDate;
+  if (isoStart) {
+    const d = new Date(isoStart);
+    if (!Number.isNaN(d.getTime())) eventDate = d;
+  }
+  if (!eventDate) {
+    const rawDate = String(ev.date || '').trim();
+    if (rawDate) {
+      const range =
+        tryParseUkRangeTwoDaysOneMonthYear(rawDate) ||
+        tryParseSameMonthDayRange(rawDate)           ||
+        tryParseDayMonthRangeYear(rawDate);
+      eventDate = range ? range.start : (
+        tryParseShortUkDayMonYear(rawDate)                   ||
+        tryParseDdMmYyyy(rawDate)                             ||
+        tryParseWeekdayOrdinalMonthYear(rawDate)              ||
+        tryParseOrdinalMonthOptionalYear(rawDate, scrapedAt)  ||
+        tryParseMonthDayAtTime(rawDate, scrapedAt)            ||
+        tryParseDayOrdinalMonthNoYear(rawDate, scrapedAt)
+      );
+    }
+  }
+  if (!eventDate && ev.url) eventDate = tryParseDateFromListingUrl(ev.url, scrapedAt);
+  if (!eventDate || Number.isNaN(eventDate.getTime())) {
+    return { popularityScore: null, popularityLabel: null };
+  }
+
+  const msPerDay       = 86_400_000;
+  const daysUntil      = Math.max(0, (eventDate.getTime() - refDate.getTime()) / msPerDay);
+  const leadNorm       = Math.min(daysUntil, 365) / 365;
+  const leadMultiplier = 0.7 + 0.3 * leadNorm;
+
+  const dayOfWeek     = eventDate.getDay();
+  const weekdayWeight = NT_WEEKDAY_WEIGHTS[dayOfWeek] ?? 0.85;
+
+  const hasLimitedOrWorse  = /limited|sold.?out/i.test(ev.availability || '');
+  const isAtLeastMonthAway = daysUntil >= 30;
+  const flooredEstimate    = (hasLimitedOrWorse && isAtLeastMonthAway)
+    ? Math.max(Number(estimate), 60)
+    : Number(estimate);
+  const demandScore = flooredEstimate / 100;
+
+  const raw = demandScore * leadMultiplier * weekdayWeight * 100;
+  let popularityScore = Math.min(100, Math.max(0, Math.round(raw)));
+  if (/sold.?out/i.test(ev.availability || '')) popularityScore = Math.max(popularityScore, 80);
+
+  let popularityLabel;
+  if      (popularityScore >= 75) popularityLabel = 'Very high demand';
+  else if (popularityScore >= 50) popularityLabel = 'High demand';
+  else if (popularityScore >= 30) popularityLabel = 'Moderate demand';
+  else if (popularityScore >= 15) popularityLabel = 'Low demand';
+  else                            popularityLabel = 'Very low demand';
+
+  return { popularityScore, popularityLabel };
+}
+
+/**
+ * Scrape a single Trafalgar booking/seating page and return seat counts.
+ * Returns isCalendarFlow=true when the page uses a date-picker flow with no
+ * seat map (which means we cannot get occupancy from it).
+ */
+async function ntScrapeSeatingPage(context, bookingUrl) {
+  const page = await context.newPage();
+  try {
+    await page.goto(bookingUrl, { waitUntil: 'domcontentloaded', timeout: 30_000 });
+
+    // Wait for real seat elements before concluding it's a calendar-flow page
+    let seatsFound = false;
+    try {
+      await page.waitForSelector('.seat.clk, .seat.occ', { timeout: 20_000 });
+      seatsFound = true;
+    } catch (_) {}
+
+    await new Promise(r => setTimeout(r, 1_500));
+
+    const counts = await page.evaluate((seatsFound) => {
+      const hasCalendar    = !!document.getElementById('calendar-hallview');
+      const isCalendarFlow = !seatsFound && hasCalendar;
+      const all = [...document.querySelectorAll('[class]')].filter(el =>
+        (el.getAttribute('class') || '').includes('seat')
+      );
+      let available = 0, occupied = 0, other = 0;
+      for (const el of all) {
+        const cls = el.getAttribute('class') || '';
+        if      (cls.includes('clk')) available++;
+        else if (cls.includes('occ')) occupied++;
+        else                          other++;
+      }
+      const total = available + occupied;
+      return {
+        isCalendarFlow,
+        available, occupied, total, other,
+        occupancyPct: total > 0 ? Math.round((occupied / total) * 100) : null,
+        pageTitle: document.title || '',
+      };
+    }, seatsFound);
+
+    await page.close();
+    return { bookingUrl, ...counts, error: null };
+  } catch (err) {
+    try { await page.close(); } catch (_) {}
+    return { bookingUrl, isCalendarFlow: false, available: 0, occupied: 0, total: 0, occupancyPct: null, error: err.message };
+  }
+}
+
+/**
+ * Scrape the Trafalgar event detail page for a single event URL.
+ * Returns { sellingFast, jsonLd, performances }.
+ */
+async function ntScrapeEventDetail(context, eventUrl) {
+  const page = await context.newPage();
+  try {
+    await page.goto(eventUrl, { waitUntil: 'domcontentloaded', timeout: 25_000 });
+    await new Promise(r => setTimeout(r, 2_000));
+
+    // Scroll to reveal all performance rows
+    await page.evaluate(async () => {
+      for (let i = 0; i < 10; i++) {
+        window.scrollBy(0, 500);
+        await new Promise(r => setTimeout(r, 150));
+      }
+    });
+    await new Promise(r => setTimeout(r, 600));
+
+    const result = await page.evaluate(() => {
+      const sellingFast = /selling\s+fast/i.test(document.body.innerText || '');
+
+      let jsonLd = null;
+      try {
+        const el = document.getElementById('structured-data-event');
+        if (el) jsonLd = JSON.parse(el.textContent);
+      } catch (_) {}
+
+      const isRealTicketUrl = href =>
+        href.includes('buyingflow/tickets/') &&
+        !href.includes('/membership/') &&
+        !href.includes('/priority-');
+
+      const seen = new Set(), performances = [];
+      for (const a of document.querySelectorAll('a[href*="booking.trafalgartickets.com"]')) {
+        const href = (a.getAttribute('href') || '').split('?')[0];
+        if (!isRealTicketUrl(href) || seen.has(href)) continue;
+        seen.add(href);
+        const timeEl      = a.querySelector('span.text-md');
+        const time        = timeEl ? timeEl.innerText.trim() : '';
+        const statusSpan  = a.querySelector('[data-testid="status-indicator"] ~ span, [data-testid="status-indicator"] + span');
+        const statusLabel = statusSpan ? statusSpan.innerText.trim().toLowerCase() : '';
+        const dotEl       = a.querySelector('[data-testid="status-indicator"]');
+        const dotClass    = dotEl ? (dotEl.getAttribute('class') || '') : '';
+        const priceBadges = [...a.querySelectorAll('.bg-emerald-green-500\\/5')];
+        let price = '';
+        for (const b of priceBadges) {
+          const t = (b.innerText || '').trim();
+          if (t && !['good', 'limited', 'sold out'].includes(t.toLowerCase())) { price = t; break; }
+        }
+        const noteEl = a.querySelector('.text-slate-500');
+        performances.push({ time, price, statusLabel, dotClass, bookingUrl: href, note: noteEl?.innerText.trim() || '' });
+      }
+      return { sellingFast, jsonLd, performances };
+    });
+
+    await page.close();
+
+    // Merge JSON-LD offers into performances (adds schemaAvailability + schemaPrice,
+    // and appends any JSON-LD-only entries not found in the DOM listing)
+    const offerMap = new Map();
+    if (result.jsonLd?.offers) {
+      for (const o of [].concat(result.jsonLd.offers)) {
+        const url = (o.url || '').split('?')[0];
+        if (url) offerMap.set(url, o);
+      }
+    }
+    const enriched = result.performances.map(p => ({
+      ...p,
+      schemaAvailability: offerMap.get(p.bookingUrl)?.availability || null,
+      schemaPrice: offerMap.get(p.bookingUrl)?.price ? Number(offerMap.get(p.bookingUrl).price) : null,
+    }));
+    for (const [url, offer] of offerMap) {
+      if (!enriched.find(p => p.bookingUrl === url)) {
+        enriched.push({
+          time: '', price: `£${offer.price}`, bookingUrl: url,
+          statusLabel: '', schemaAvailability: offer.availability,
+          schemaPrice: Number(offer.price), dotClass: '', note: '',
+          _source: 'jsonld-only',
+        });
+      }
+    }
+
+    return { sellingFast: result.sellingFast, jsonLd: result.jsonLd, performances: enriched, error: null };
+  } catch (err) {
+    try { await page.close(); } catch (_) {}
+    return { sellingFast: false, jsonLd: null, performances: [], error: err.message };
+  }
+}
+
 async function scrapeNewTheatre(context) {
   console.log('Scraping New Theatre...');
   const page = await context.newPage();
@@ -1508,11 +1825,12 @@ async function scrapeNewTheatre(context) {
       loadMoreClicks++;
       if (loadMoreClicks > 20) break;
     } catch (_) {
-      break; // button gone or unclickable — stop
+      break;
     }
   }
   if (loadMoreClicks > 0) console.log(`  New Theatre: clicked Load More ${loadMoreClicks} times`);
 
+  // ── Step 1: collect listing-page data (title, date, price, image, url) ──────
   const domEvents = await page.evaluate(() => {
     const seen = new Set();
     const out = [];
@@ -1575,6 +1893,7 @@ async function scrapeNewTheatre(context) {
   const html = await page.content();
   await page.close();
 
+  // ── Step 2: apply inline JSON meta (categories, promoter, hero images) ───────
   const metaByGroupId = new Map();
   for (const match of html.matchAll(/\{\\?"eventGroupId\\?":\d+.*?\}/g)) {
     try {
@@ -1626,7 +1945,127 @@ async function scrapeNewTheatre(context) {
     if (byName) applyNewTheatreMeta(row, byName);
   }
 
-  console.log(`  New Theatre: ${domEvents.length} events`);
+  console.log(`  New Theatre: ${domEvents.length} events found, fetching availability...`);
+
+  // ── Step 3: per-event detail + tiered seating scrape ─────────────────────────
+  // Build URL list (one per listing event)
+  const eventUrls = domEvents.map(e => e.url);
+
+  // Build a lookup so we can write results back to the original row objects
+  const rowByUrl = new Map(domEvents.map(e => [e.url, e]));
+
+  // Concurrent processing: detail page → conditional seating pages
+  const queue = [...eventUrls];
+  let doneCount = 0;
+  let seatingAttempted = 0;
+  let seatingSkipped = 0;
+
+  async function processOneEvent() {
+    while (queue.length) {
+      const eventUrl = queue.shift();
+      const row = rowByUrl.get(eventUrl);
+      if (!row) continue;
+
+      // Fetch detail page (performances + JSON-LD)
+      const detail = await ntScrapeEventDetail(context, eventUrl);
+      doneCount++;
+      if (doneCount % 20 === 0 || doneCount === eventUrls.length) {
+        console.log(`  New Theatre: detail ${doneCount}/${eventUrls.length}`);
+      }
+
+      if (detail.error || !detail.performances.length) {
+        // No performance data — leave availability fields absent; finalizeEvent handles it
+        continue;
+      }
+
+      // Attach JSON-LD dates and images from detail page
+      if (detail.jsonLd) {
+        if (detail.jsonLd.startDate && !row.eventStartDate) row.eventStartDate = detail.jsonLd.startDate;
+        if (detail.jsonLd.endDate   && !row.eventEndDate)   row.eventEndDate   = detail.jsonLd.endDate;
+        if (Array.isArray(detail.jsonLd.image) && detail.jsonLd.image.length) {
+          if (!row.imageUrl) row.imageUrl = detail.jsonLd.image[0];
+          row.imageUrls = detail.jsonLd.image;
+        }
+        // Widen price range using all offers
+        if (detail.jsonLd.offers) {
+          const prices = [].concat(detail.jsonLd.offers)
+            .map(o => Number(o.price))
+            .filter(p => !Number.isNaN(p) && p > 0);
+          if (prices.length) {
+            const minP = Math.min(...prices);
+            const maxP = Math.max(...prices);
+            if (row.ticketPriceFrom == null || minP < row.ticketPriceFrom) row.ticketPriceFrom = minP;
+            if (maxP > (row.ticketPriceTo || 0)) row.ticketPriceTo = maxP;
+            if (!row.ticketCurrency) row.ticketCurrency = 'GBP';
+            if (!row.ticketPriceLabel) row.ticketPriceLabel = `from £${minP}`;
+          }
+        }
+      }
+
+      const validPerfs = detail.performances.filter(p => p.bookingUrl);
+      const hasLimited = validPerfs.some(p => p.statusLabel === 'limited' || p.statusLabel === 'sold out');
+
+      // Tiered gating: skip seating when all performances are "good" with no "selling fast"
+      const skipSeating = !hasLimited && !detail.sellingFast;
+
+      if (skipSeating) {
+        seatingSkipped++;
+        const avail = ntDeriveAvailabilityFields(validPerfs, false, [], true);
+        row.availability         = avail.availability;
+        row.availabilityRange    = avail.availabilityRange;
+        row.availabilityEstimate = avail.availabilityEstimate;
+      } else {
+        seatingAttempted++;
+
+        // Select which booking pages to visit (capped + deduplicated)
+        const seenUrls  = new Set();
+        const toScrape  = [];
+        for (const p of validPerfs) {
+          if (!seenUrls.has(p.bookingUrl)) {
+            seenUrls.add(p.bookingUrl);
+            toScrape.push(p);
+            if (toScrape.length >= NT_MAX_SEATING_PAGES) break;
+          }
+        }
+
+        const seatingResults    = [];
+        let calendarFlowSeen = false;
+        for (const perf of toScrape) {
+          const seating = await ntScrapeSeatingPage(context, perf.bookingUrl);
+          if (seating.isCalendarFlow) { calendarFlowSeen = true; break; }
+          seatingResults.push({ ...perf, seating });
+        }
+
+        const avail = ntDeriveAvailabilityFields(
+          validPerfs, detail.sellingFast, seatingResults,
+          calendarFlowSeen && seatingResults.length === 0
+        );
+
+        row.availability         = avail.availability;
+        row.availabilityRange    = avail.availabilityRange;
+        row.availabilityEstimate = avail.availabilityEstimate;
+        if (avail.seatingAggregate) row.seatingAggregate = avail.seatingAggregate;
+      }
+
+      // Popularity score — use max occupancy across performances as the demand signal
+      const maxOcc = row.seatingAggregate?.maxOccupancyPct ?? row.availabilityEstimate;
+      Object.assign(row, ntComputePopularity({
+        ...row,
+        availabilityEstimate: maxOcc,
+      }));
+    }
+  }
+
+  await Promise.all(
+    Array.from({ length: NT_DETAIL_CONCURRENCY }, () => processOneEvent())
+  );
+
+  const withAvailability = domEvents.filter(e => e.availability).length;
+  console.log(
+    `  New Theatre: done. ${withAvailability}/${domEvents.length} with availability, ` +
+    `${seatingAttempted} seating scraped, ${seatingSkipped} skipped (all-good).`
+  );
+
   return domEvents;
 }
 
