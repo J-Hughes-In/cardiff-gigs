@@ -2706,44 +2706,67 @@ const SHERMAN_WEEKDAY_WEIGHTS = {
 
 /**
  * Scrape a Spektrix seat-map page for Sherman Theatre.
+ *
+ * The /book-online/XXXXX wrapper page embeds a CROSS-ORIGIN iframe at
+ *   https://tickets.shermantheatre.co.uk/shermantheatre/website/chooseseats.aspx?EventInstanceId=XXXXX
+ * page.evaluate() cannot reach inside a cross-origin iframe, so we derive
+ * the Spektrix URL directly and navigate there instead.
+ *
  * Seat images use class "Seat" (unavailable) vs "SeatSelectable" (available).
  * Returns { available, occupied, total, occupancyPct, error }.
  */
+function shermanBuildSpektrixUrl(bookingUrl) {
+  const match = (bookingUrl || '').match(/\/book-online\/(\d+)/);
+  if (!match) return null;
+  return `https://tickets.shermantheatre.co.uk/shermantheatre/website/chooseseats.aspx?EventInstanceId=${match[1]}&resize=true`;
+}
+
 async function shermanScrapeSeatingPage(context, bookingUrl) {
+  const spektrixUrl = shermanBuildSpektrixUrl(bookingUrl);
+  if (!spektrixUrl) {
+    return { available: 0, occupied: 0, total: 0, occupancyPct: null, error: `Cannot derive Spektrix URL from ${bookingUrl}` };
+  }
   const page = await context.newPage();
   try {
-    await page.goto(bookingUrl, { waitUntil: 'domcontentloaded', timeout: 30_000 });
+    await page.goto(spektrixUrl, { waitUntil: 'domcontentloaded', timeout: 30_000 });
 
-    // Wait for seat images to render (Spektrix renders them as <img> tags)
+    // Wait for the Spektrix seating area to render.
+    // .SeatingArea is present for both allocated and unallocated seating.
+    // For allocated seating the seat images appear inside it.
     let seatsFound = false;
     try {
-      await page.waitForSelector('img.Seat, img.SeatSelectable', { timeout: 20_000 });
-      seatsFound = true;
+      await page.waitForSelector('.SeatingArea', { timeout: 20_000 });
+      // Give seat images a moment to render after the container appears
+      await new Promise(r => setTimeout(r, 2_000));
+      // Check if any seat images actually loaded inside it
+      seatsFound = await page.evaluate(() =>
+        document.querySelectorAll('img').length > 5
+      );
     } catch (_) {}
 
     await new Promise(r => setTimeout(r, 1_500));
 
     const counts = await page.evaluate((seatsFound) => {
-      if (!seatsFound) return { available: 0, occupied: 0, total: 0, occupancyPct: null, error: 'no seats found' };
+      if (!seatsFound) {
+        // Check if there's a seating area at all (might be general admission / unallocated)
+        const hasSeatingArea = !!document.querySelector('.SeatingArea, .SeatingSelector');
+        return { available: 0, occupied: 0, total: 0, occupancyPct: null, unallocated: !hasSeatingArea, error: 'no seat images found' };
+      }
 
       let available = 0, occupied = 0;
       for (const img of document.querySelectorAll('img')) {
-        const cls = img.className || '';
-        const title = img.getAttribute('title') || img.getAttribute('tooltip') || '';
-        if (cls.includes('SeatSelectable')) {
+        const cn = img.getAttribute('classname') || '';
+        if (cn.includes('SeatSelectable')) {
           available++;
-        } else if (cls.includes('Seat') && !cls.includes('SeatSelectable')) {
-          // "Seat" without "SeatSelectable" = unavailable/taken
-          // Only count if it looks like a real seat (has a Unavailable title or is positioned)
-          if (title === 'Unavailable' || img.style.top) occupied++;
+        } else if (cn.includes('Seat') && !cn.includes('SeatSelectable')) {
+          occupied++;
         }
       }
       const total = available + occupied;
       return {
-        available,
-        occupied,
-        total,
+        available, occupied, total,
         occupancyPct: total > 0 ? Math.round((occupied / total) * 100) : null,
+        unallocated: false,
         error: null,
       };
     }, seatsFound);
@@ -2763,6 +2786,10 @@ async function shermanScrapeSeatingPage(context, bookingUrl) {
 function shermanDeriveAvailability(seating, soldOut) {
   if (soldOut || (seating?.occupancyPct != null && seating.occupancyPct >= 100)) {
     return { availability: 'SOLD OUT', availabilityRange: '100%', availabilityEstimate: 100 };
+  }
+  // General-admission / unallocated seating — no seat map to read
+  if (seating?.unallocated) {
+    return { availability: 'GOOD', availabilityRange: '20-50%', availabilityEstimate: 40 };
   }
   if (seating?.occupancyPct == null) {
     return { availability: null, availabilityRange: null, availabilityEstimate: null };
