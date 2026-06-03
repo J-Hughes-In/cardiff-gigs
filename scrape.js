@@ -1406,62 +1406,68 @@ async function scrapeGlobe(context) {
   console.log(`  Globe: ${events.length} events`);
   return events;
 }
-
 async function scrapeWMC(context) {
   console.log('Scraping WMC...');
   const page = await context.newPage();
-  await gotoAndSettle(page, 'https://www.wmc.org.uk/en/whats-on/events', 'div.production-card');
-
-  // Wait for Angular to compile the listing
-  await page.waitForFunction(
-    () => {
-      const cards = document.querySelectorAll('div.production-card');
-      if (cards.length === 0) return false;
-      const title = cards[0].querySelector('h4.production-card__title');
-      return title && !title.innerText.includes('{{');
-    },
-    { timeout: 15_000 }
-  ).catch(() => {});
-
-  const events = await page.evaluate(() => {
-    return Array.from(document.querySelectorAll('div.production-card')).map((item) => {
-      let imageUrl = '';
-      const img = item.querySelector('img[src], img[data-src], img[data-lazy-src]');
-      if (img) {
-        const raw = img.getAttribute('src') || img.getAttribute('data-src') || img.getAttribute('data-lazy-src') || '';
-        if (raw && !raw.startsWith('data:')) {
-          try { imageUrl = new URL(raw, location.href).href; } catch { imageUrl = raw.trim(); }
+ 
+  // Retry listing load up to 3 times if Angular doesn't render cards
+  let events = [];
+  for (let attempt = 1; attempt <= 3; attempt++) {
+    await gotoAndSettle(page, 'https://www.wmc.org.uk/en/whats-on/events', 'div.production-card');
+    await page.waitForFunction(
+      () => {
+        const cards = document.querySelectorAll('div.production-card');
+        if (cards.length === 0) return false;
+        const title = cards[0].querySelector('h4.production-card__title');
+        return title && !title.innerText.includes('{{');
+      },
+      { timeout: 25_000 }
+    ).catch(() => {});
+ 
+    events = await page.evaluate(() => {
+      return Array.from(document.querySelectorAll('div.production-card')).map((item) => {
+        let imageUrl = '';
+        const img = item.querySelector('img[src], img[data-src], img[data-lazy-src]');
+        if (img) {
+          const raw = img.getAttribute('src') || img.getAttribute('data-src') || img.getAttribute('data-lazy-src') || '';
+          if (raw && !raw.startsWith('data:')) {
+            try { imageUrl = new URL(raw, location.href).href; } catch { imageUrl = raw.trim(); }
+          }
         }
-      }
-      const prefixEl = item.querySelector('p.production-card__prefix');
-      const prefix = (!prefixEl || prefixEl.getAttribute('aria-hidden') === 'true')
-        ? '' : prefixEl.innerText.trim();
-      return {
-        title:   item.querySelector('h4.production-card__title')?.innerText.trim() || '',
-        date:    item.querySelector('p.production-card__date')?.innerText.trim() || '',
-        url:     item.querySelector('a.production-card__link-overlay')?.href || '',
-        venue:   'Wales Millennium Centre',
-        scrapedAt: new Date().toISOString(),
-        _prefix: prefix,
-        ...(imageUrl ? { imageUrl } : {}),
-      };
-    }).filter((e) => e.title);
-  });
-
-  // Resolve sub-venues in Node scope where WMC_SUB_VENUES is defined
+        const prefixEl = item.querySelector('p.production-card__prefix');
+        const prefix = (!prefixEl || prefixEl.getAttribute('aria-hidden') === 'true')
+          ? '' : prefixEl.innerText.trim();
+        return {
+          title:     item.querySelector('h4.production-card__title')?.innerText.trim() || '',
+          date:      item.querySelector('p.production-card__date')?.innerText.trim() || '',
+          url:       item.querySelector('a.production-card__link-overlay')?.href || '',
+          venue:     'Wales Millennium Centre',
+          scrapedAt: new Date().toISOString(),
+          _prefix:   prefix,
+          ...(imageUrl ? { imageUrl } : {}),
+        };
+      }).filter((e) => e.title);
+    });
+ 
+    if (events.length > 0) break;
+    console.log(`  WMC: 0 cards on attempt ${attempt}, retrying...`);
+    await new Promise(r => setTimeout(r, 3_000));
+  }
+ 
+  // Resolve sub-venues
   for (const event of events) {
     const subVenue = wmcParseSubVenue(event._prefix);
     if (subVenue) event.subVenue = subVenue;
     delete event._prefix;
   }
-
+ 
   await page.close();
-  console.log(`  WMC: ${events.length} events found, fetching availability...`);
-
-  for (const event of events) {
-    if (!event.url) continue;
-
-    // Scrape description from the event detail page
+  console.log(`  WMC: ${events.length} events found, fetching availability + descriptions...`);
+ 
+  // ── Description fetch: concurrency 4 ──────────────────────────────────────
+  const DESC_CONCURRENCY = 4;
+  async function fetchDescription(event) {
+    if (!event.url) return;
     const descPage = await context.newPage();
     try {
       await descPage.goto(event.url, { waitUntil: 'domcontentloaded', timeout: 30_000 });
@@ -1480,8 +1486,16 @@ async function scrapeWMC(context) {
     } finally {
       await descPage.close();
     }
-
-    // Scrape availability from the /performances sub-page
+  }
+ 
+  // Run descriptions in batches of DESC_CONCURRENCY
+  for (let i = 0; i < events.length; i += DESC_CONCURRENCY) {
+    await Promise.all(events.slice(i, i + DESC_CONCURRENCY).map(fetchDescription));
+  }
+ 
+  // ── Availability (sequential — hits /performances sub-page) ───────────────
+  for (const event of events) {
+    if (!event.url) continue;
     const computed = await wmcScrapeAvailability(context, event.url);
     if (computed) {
       event.availability         = computed.availability;
@@ -1490,10 +1504,10 @@ async function scrapeWMC(context) {
       Object.assign(event, wmcComputePopularity(event));
     }
   }
-
+ 
   const withAvailability = events.filter((e) => e.availability).length;
   const withSubVenue     = events.filter((e) => e.subVenue).length;
-  const withDescription = events.filter((e) => e.description).length;
+  const withDescription  = events.filter((e) => e.description).length;
   console.log(`  WMC: done. ${withAvailability}/${events.length} with availability, ${withSubVenue}/${events.length} with sub-venue, ${withDescription}/${events.length} with description.`);
   return events;
 }
@@ -2231,12 +2245,21 @@ async function scrapeUtilitaArena(context) {
   return events;
 }
 
+
 async function scrapeDepot(context) {
   console.log('Scraping Depot...');
   const page = await context.newPage();
-  await gotoAndSettle(page, 'https://depotcardiff.com/events/', 'li.fusion-layout-column');
-
-  // Slow incremental scroll to trigger lazy loading
+ 
+  // Try the original selector first; if it times out, proceed anyway
+  await page.goto('https://depotcardiff.com/events/', { waitUntil: 'domcontentloaded', timeout: 45_000 });
+  await page.waitForLoadState('load').catch(() => {});
+ 
+  // Wait for either the old selector or the wider fallback
+  await page.waitForSelector(
+    'li.fusion-layout-column, .fusion-layout-column, article.tribe_events_cat, .tribe_events_cat',
+    { state: 'attached', timeout: 15_000 }
+  ).catch(() => {});
+ 
   async function autoScroll() {
     await page.evaluate(async () => {
       await new Promise((resolve) => {
@@ -2253,14 +2276,16 @@ async function scrapeDepot(context) {
       });
     });
   }
-
+ 
   let lastCount = 0;
   let unchangedRounds = 0;
   while (true) {
     await autoScroll();
     await new Promise(r => setTimeout(r, 3_000));
     const count = await page.evaluate(() =>
-      document.querySelectorAll('li.fusion-layout-column').length
+      document.querySelectorAll(
+        'li.fusion-layout-column, .fusion-layout-column:not(.fusion-layout-column .fusion-layout-column)'
+      ).length
     );
     console.log(`  Depot scroll: events ${count}`);
     if (count === lastCount) {
@@ -2271,9 +2296,31 @@ async function scrapeDepot(context) {
     }
     lastCount = count;
   }
-
+ 
+  // Dump candidate selectors so you can see what's actually on the page
+  const selectorAudit = await page.evaluate(() => {
+    const checks = [
+      'li.fusion-layout-column',
+      '.fusion-layout-column',
+      'article[class*="tribe"]',
+      'article[class*="event"]',
+      'a[href*="/event/"]',
+    ];
+    return checks.map(sel => ({ sel, count: document.querySelectorAll(sel).length }));
+  });
+  console.log('  Depot selector audit:', JSON.stringify(selectorAudit));
+ 
   const events = await page.evaluate(() => {
-    return Array.from(document.querySelectorAll('li.fusion-layout-column')).map((item) => {
+    // Primary: original selector
+    let items = Array.from(document.querySelectorAll('li.fusion-layout-column'));
+ 
+    // Fallback: any column that contains an /event/ link
+    if (items.length === 0) {
+      items = Array.from(document.querySelectorAll('.fusion-layout-column'))
+        .filter(el => el.querySelector('a[href*="/event/"]'));
+    }
+ 
+    return items.map((item) => {
       let imageUrl = '';
       const img = item.querySelector('.fusion-imageframe img, .fusion-featured-image img, img[src], img[data-src]');
       if (img) {
@@ -2283,20 +2330,22 @@ async function scrapeDepot(context) {
         }
       }
       return {
-        title: item.querySelector('h2 a')?.innerText.trim() || '',
-        date: item.querySelector('.fusion-text p')?.innerText.trim() || '',
-        url: item.querySelector('a[href*="/event/"]')?.href || '',
-        venue: 'Depot Cardiff',
+        title:     item.querySelector('h2 a')?.innerText.trim() || '',
+        date:      item.querySelector('.fusion-text p')?.innerText.trim() || '',
+        url:       item.querySelector('a[href*="/event/"]')?.href || '',
+        venue:     'Depot Cardiff',
         scrapedAt: new Date().toISOString(),
         ...(imageUrl ? { imageUrl } : {}),
       };
     }).filter((e) => e.title);
   });
-
+ 
   await page.close();
   console.log(`  Depot: ${events.length} events`);
   return events;
 }
+ 
+
 
 async function scrapeCardiffSU(context) {
   console.log('Scraping Cardiff SU...');
@@ -2621,31 +2670,55 @@ async function scrapeTheGate(context) {
 async function scrapeFuel(context) {
   console.log('Scraping Fuel Rock Club...');
   const page = await context.newPage();
-  await gotoAndSettle(page, 'https://www.fuelrockclub.co.uk/events/', 'iframe[src*="sociablekit"]');
-
-  // Wait for the SociableKit iframe to load
-  const iframeElement = await page.$('iframe[src*="sociablekit"]');
+  await gotoAndSettle(page, 'https://www.fuelrockclub.co.uk/events/', null);
+ 
+  // Wait a bit for iframes to inject
+  await new Promise(r => setTimeout(r, 4_000));
+ 
+  // Audit what iframes are actually on the page
+  const iframeAudit = await page.evaluate(() =>
+    Array.from(document.querySelectorAll('iframe')).map(f => f.getAttribute('src') || '(no src)')
+  );
+  console.log('  Fuel: iframes found:', iframeAudit.length ? iframeAudit : ['none']);
+ 
+  // Try progressively broader selectors
+  const iframeSelectors = [
+    'iframe[src*="sociablekit"]',
+    'iframe[src*="sociable"]',
+    'iframe[src*="facebook"]',
+    'iframe[id*="sociable"]',
+    'iframe[class*="sociable"]',
+  ];
+ 
+  let iframeElement = null;
+  for (const sel of iframeSelectors) {
+    iframeElement = await page.$(sel);
+    if (iframeElement) {
+      console.log(`  Fuel: matched iframe with selector: ${sel}`);
+      break;
+    }
+  }
+ 
   if (!iframeElement) {
-    console.log('  Fuel: SociableKit iframe not found');
+    console.log('  Fuel: SociableKit iframe not found — check iframes logged above');
     await page.close();
     return [];
   }
-
+ 
   const frame = await iframeElement.contentFrame();
   if (!frame) {
-    console.log('  Fuel: could not access iframe content');
+    console.log('  Fuel: could not access iframe content (cross-origin?)');
     await page.close();
     return [];
   }
-
-  await frame.waitForSelector('.sk-event-item', { timeout: 20_000 });
+ 
+  await frame.waitForSelector('.sk-event-item', { timeout: 20_000 }).catch(() => {});
   await new Promise(r => setTimeout(r, 3_000));
-
+ 
   const events = await frame.evaluate(() => {
     function cleanText(t) {
       return t?.replace(/\s+/g, ' ').trim() || '';
     }
-
     return Array.from(document.querySelectorAll('.sk-event-item')).map(item => {
       const title = cleanText(item.querySelector('.sk-event-item-title')?.innerText);
       const url =
@@ -2656,23 +2729,24 @@ async function scrapeFuel(context) {
       const timeEl = item.querySelector('.sk-event-item-date time');
       const rawDate = cleanText(timeEl?.innerText);
       const isoDate = timeEl?.getAttribute('datetime') || '';
-
       return {
         title,
-        date: rawDate,
+        date:           rawDate,
         eventStartDate: isoDate,
         url,
-        imageUrl: rawImage && !rawImage.startsWith('data:') ? rawImage : '',
-        venue: 'Fuel Rock Club',
-        scrapedAt: new Date().toISOString(),
+        imageUrl:       rawImage && !rawImage.startsWith('data:') ? rawImage : '',
+        venue:          'Fuel Rock Club',
+        scrapedAt:      new Date().toISOString(),
       };
     }).filter(e => e.title && e.url);
   });
-
+ 
   await page.close();
   console.log(`  Fuel: ${events.length} events`);
   return events;
 }
+ 
+
 
 async function scrapePrincipality(context) {
   console.log('Scraping Principality Stadium...');
