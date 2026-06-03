@@ -1460,20 +1460,41 @@ async function scrapeWMC(context) {
 
   for (const event of events) {
     if (!event.url) continue;
+
+    // Scrape description from the event detail page
+    const descPage = await context.newPage();
+    try {
+      await descPage.goto(event.url, { waitUntil: 'domcontentloaded', timeout: 30_000 });
+      await descPage.waitForTimeout(1500);
+      event.description = await descPage.evaluate(() => {
+        const detailsEl = document.querySelector('.production-details');
+        if (!detailsEl) return '';
+        const lede = detailsEl.querySelector('p.o-lede');
+        if (lede) return lede.innerText.trim();
+        const firstP = detailsEl.querySelector('p');
+        return firstP?.innerText.trim() || '';
+      });
+    } catch (err) {
+      console.warn(`  WMC: could not scrape description for ${event.url}: ${err.message}`);
+      event.description = '';
+    } finally {
+      await descPage.close();
+    }
+
+    // Scrape availability from the /performances sub-page
     const computed = await wmcScrapeAvailability(context, event.url);
     if (computed) {
       event.availability         = computed.availability;
       event.availabilityRange    = computed.availabilityRange;
       event.availabilityEstimate = computed.availabilityEstimate;
-      // Derive popularity from the availability + date + weekday we now have
       Object.assign(event, wmcComputePopularity(event));
     }
-    
   }
 
   const withAvailability = events.filter((e) => e.availability).length;
   const withSubVenue     = events.filter((e) => e.subVenue).length;
-  console.log(`  WMC: done. ${withAvailability}/${events.length} with availability, ${withSubVenue}/${events.length} with sub-venue.`);
+  const withDescription = events.filter((e) => e.description).length;
+  console.log(`  WMC: done. ${withAvailability}/${events.length} with availability, ${withSubVenue}/${events.length} with sub-venue, ${withDescription}/${events.length} with description.`);
   return events;
 }
 
