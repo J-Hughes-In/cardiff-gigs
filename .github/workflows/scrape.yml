@@ -7,6 +7,11 @@ on:
     - cron: '0 20 * * *'
   workflow_dispatch:
 
+concurrency:
+  group: update-events
+  cancel-in-progress: false
+
+
 permissions:
   contents: write
 
@@ -39,5 +44,7 @@ jobs:
           git config user.email "actions@github.com"
           git config user.name "GitHub Actions"
           git add events.json comedians.json comedian-review.json
-          git diff --staged --quiet || git commit -m "Update events $(date -u +%Y-%m-%d)"
+          git diff --staged --quiet && echo "No changes to commit" && exit 0
+          git commit -m "Update events $(date -u +%Y-%m-%d)"
+          git pull --rebase origin main
           git push origin HEAD:main
