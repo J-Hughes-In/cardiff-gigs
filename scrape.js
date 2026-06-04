@@ -3493,7 +3493,64 @@ function printDuplicateReview(events) {
 // Main scrape orchestration
 // ---------------------------------------------------------------------------
 
-async function scrapeAll() {
+// ---------------------------------------------------------------------------
+// Venue registry — single source of truth for name → scraper mapping
+// ---------------------------------------------------------------------------
+
+const SCRAPERS = [
+  { name: 'Globe',          fn: scrapeGlobe         },
+  { name: 'WMC',            fn: scrapeWMC            },
+  { name: 'New Theatre',    fn: scrapeNewTheatre     },
+  { name: 'Tramshed',       fn: scrapeTramshed       },
+  { name: 'Utilita Arena',  fn: scrapeUtilitaArena   },
+  { name: 'Depot',          fn: scrapeDepot          },
+  { name: 'Cardiff SU',     fn: scrapeCardiffSU      },
+  { name: 'The Gate',       fn: scrapeTheGate        },
+  { name: 'Clwb',           fn: scrapeClwb           },
+  { name: 'Fuel',           fn: scrapeFuel           },
+  { name: 'Principality',   fn: scrapePrincipality   },
+  { name: 'Sherman',        fn: scrapeSherman        },
+  { name: 'Canopi',         fn: scrapeCanopi         },
+  { name: 'CultVR',         fn: scrapeCultVR         },
+  // { name: 'Acapela',     fn: scrapeAcapela        },
+  // { name: 'Chapter Arts',fn: scrapeChapterArts    },
+];
+
+/**
+ * Resolve which scrapers to run from CLI args and env var.
+ *
+ * Priority:
+ *   1. --venue <Name> flags (repeatable, case-insensitive)
+ *   2. SCRAPE_VENUES=Name1,Name2 env var
+ *   3. No filter → run all enabled scrapers
+ *
+ * Logs the resolved set and exits with an error if an unknown name is given.
+ */
+function resolveScrapers(argv) {
+  const flagVenues = [];
+  for (let i = 0; i < argv.length; i++) {
+    if (argv[i] === '--venue' && argv[i + 1]) flagVenues.push(argv[++i]);
+  }
+  const envVenues = (process.env.SCRAPE_VENUES || '')
+    .split(',').map((s) => s.trim()).filter(Boolean);
+
+  const requested = flagVenues.length ? flagVenues : envVenues;
+  if (!requested.length) return SCRAPERS;
+
+  const byNameLower = new Map(SCRAPERS.map((s) => [s.name.toLowerCase(), s]));
+  const resolved = [];
+  for (const r of requested) {
+    const s = byNameLower.get(r.toLowerCase());
+    if (!s) {
+      console.error(`Unknown venue "${r}". Known venues: ${SCRAPERS.map((x) => x.name).join(', ')}`);
+      process.exit(1);
+    }
+    resolved.push(s);
+  }
+  return resolved;
+}
+
+async function scrapeAll(selectedScrapers) {
   const browser = await chromium.launch({ args: ['--disable-dev-shm-usage'] });
   const context = await browser.newContext({
     userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36',
@@ -3515,33 +3572,25 @@ async function scrapeAll() {
     return [];
   }
 
-  let allEvents = [
-    ...await safeScrap(() => scrapeGlobe(context), 'Globe'),
-    ...await safeScrap(() => scrapeWMC(context), 'WMC'),
-    ...await safeScrap(() => scrapeNewTheatre(context), 'New Theatre'),
-    ...await safeScrap(() => scrapeTramshed(context), 'Tramshed'),
-    ...await safeScrap(() => scrapeUtilitaArena(context), 'Utilita Arena'),
-    ...await safeScrap(() => scrapeDepot(context), 'Depot'),
-    ...await safeScrap(() => scrapeCardiffSU(context), 'Cardiff SU'),
-    ...await safeScrap(() => scrapeTheGate(context), 'The Gate'),
-    ...await safeScrap(() => scrapeClwb(context), 'Clwb'),
-    ...await safeScrap(() => scrapeFuel(context), 'Fuel'),
-    ...await safeScrap(() => scrapePrincipality(context), 'Principality'),
-    ...await safeScrap(() => scrapeSherman(context), 'Sherman'),
-    ...await safeScrap(() => scrapeCanopi(context), 'Canopi'),
-//    ...await safeScrap(() => scrapeAcapela(context), 'Acapela'),
-//    ...await safeScrap(() => scrapeChapterArts(context), 'Chapter Arts'),
-    ...await safeScrap(() => scrapeCultVR(context), 'CultVR'),
-  ];
+  const partial = selectedScrapers.length < SCRAPERS.length;
+  if (partial) {
+    console.log(`Running partial scrape: ${selectedScrapers.map((s) => s.name).join(', ')}`);
+  }
 
-  allEvents = await enrichAllEvents(context, allEvents);
+  let freshEvents = [];
+  for (const { name, fn } of selectedScrapers) {
+    const results = await safeScrap(() => fn(context), name);
+    freshEvents.push(...results);
+  }
+
+  freshEvents = await enrichAllEvents(context, freshEvents);
 
   await browser.close();
 
-  const { events: deduped, dropped } = dedupeEventsPreservingOrder(allEvents);
+  const { events: dedupedFresh, dropped } = dedupeEventsPreservingOrder(freshEvents);
   if (dropped > 0) console.log(`\nRemoved ${dropped} duplicate event row(s).`);
 
-  // Preserve original scrapedAt for events we've seen before
+  // Load existing events.json
   let previousEvents = [];
   if (fs.existsSync('events.json')) {
     try {
@@ -3549,7 +3598,17 @@ async function scrapeAll() {
     } catch (_) {}
   }
 
-  // Build a lookup of previous scrapedAt by dedupe key
+  // For a partial scrape: keep events from venues we didn't touch, replace the rest.
+  // For a full scrape: replace everything (same as before).
+  let baseEvents = previousEvents;
+  if (partial) {
+    const scrapedVenueNames = new Set(dedupedFresh.map((e) => e.venue));
+    baseEvents = previousEvents.filter((e) => !scrapedVenueNames.has(e.venue));
+  } else {
+    baseEvents = [];
+  }
+
+  // Build a lookup of previous scrapedAt by dedupe key (across all previous events)
   const previousScrapedAt = new Map();
   for (const ev of previousEvents) {
     const k = eventDedupeKey(ev);
@@ -3558,21 +3617,21 @@ async function scrapeAll() {
     }
   }
 
-  // Apply: keep old scrapedAt if event existed before, otherwise it's new
+  // Stamp new events, preserve scrapedAt for events we've seen before
   const now = new Date().toISOString();
   let newCount = 0;
-  const final = deduped.map(ev => {
+  const stamped = dedupedFresh.map((ev) => {
     const k = eventDedupeKey(ev);
     const existing = previousScrapedAt.get(k);
-    if (existing) {
-      return { ...ev, scrapedAt: existing };
-    } else {
-      newCount++;
-      return { ...ev, scrapedAt: now };
-    }
+    if (existing) return { ...ev, scrapedAt: existing };
+    newCount++;
+    return { ...ev, scrapedAt: now };
   });
 
   if (newCount > 0) console.log(`\n${newCount} new event(s) detected since last scrape`);
+
+  // Merge: untouched venues first (preserving their order), then fresh results
+  const { events: final } = dedupeEventsPreservingOrder([...baseEvents, ...stamped]);
 
   fs.writeFileSync('events.json', JSON.stringify(final, null, 2));
   console.log(`Total: ${final.length} events saved to events.json`);
@@ -3616,5 +3675,5 @@ if (require.main === module && process.argv.includes('--dates-only')) {
   console.log(`  musicGenres filled: ${musicGenresFilled} (${total ? Math.round((musicGenresFilled / total) * 100) : 0}%)`);
   console.log(`  genre filled: ${genreFilled}`);
 } else if (require.main === module) {
-  scrapeAll().catch(console.error);
+  scrapeAll(resolveScrapers(process.argv.slice(2))).catch(console.error);
 }
