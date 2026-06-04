@@ -1,6 +1,20 @@
 const { chromium } = require('playwright');
 const fs = require('fs');
+const path = require('path');
 const axios = require('axios');
+
+// ---------------------------------------------------------------------------
+// Welsh-language acts list (curated, case-insensitive lookup)
+// ---------------------------------------------------------------------------
+
+function loadWelshActs() {
+  try {
+    const p = path.join(__dirname, 'welsh-acts.json');
+    return new Set(JSON.parse(fs.readFileSync(p, 'utf8')).map((s) => s.toLowerCase().trim()));
+  } catch { return new Set(); }
+}
+
+const WELSH_ACTS = loadWelshActs();
 
 const GOTO = { waitUntil: 'domcontentloaded', timeout: 90_000 };
 const SKIP_ENRICH = process.env.SCRAPE_NO_ENRICH === '1';
@@ -1063,9 +1077,28 @@ function extractMusicBrainzGenreNames(mbArtistJson) {
   return out;
 }
 
-async function fetchMusicBrainzGenresForArtistName(artistName, cacheByKey, mbUserAgent) {
+// Genre tags on MusicBrainz that indicate a Welsh-language artist
+const MB_WELSH_LANGUAGE_TAGS = new Set([
+  'canu pop cymraeg',
+  'welsh language',
+  'cerdd dant',
+  'caneuon gwerin cymraeg',
+  'welsh folk',
+  'cymraeg',
+  'welsh hip hop',
+  'welsh language music',
+  'welsh language rock',
+  'welsh psychedelia',
+]);
+
+/**
+ * Fetch genres AND Welsh-language signal for a single artist from MusicBrainz.
+ * Returns { genres: string[], isWelshLanguage: boolean }.
+ * Results are cached by lowercased artist name.
+ */
+async function fetchMusicBrainzArtistData(artistName, cacheByKey, mbUserAgent) {
   const raw = normalizeArtistNameForMb(artistName);
-  if (!raw) return [];
+  if (!raw) return { genres: [], isWelshLanguage: false };
   const key = raw.toLowerCase();
   if (cacheByKey.has(key)) return cacheByKey.get(key);
   const p = (async () => {
@@ -1074,14 +1107,31 @@ async function fetchMusicBrainzGenresForArtistName(artistName, cacheByKey, mbUse
       const searchUrl = `https://musicbrainz.org/ws/2/artist/?query=${encodeURIComponent(q)}&fmt=json&limit=1`;
       const searchRes = await axios.get(searchUrl, { headers: { 'User-Agent': mbUserAgent }, timeout: 15_000 });
       const mbid = searchRes?.data?.artists?.[0]?.id;
-      if (!mbid) return [];
-      const artistUrl = `https://musicbrainz.org/ws/2/artist/${mbid}?inc=genres&fmt=json`;
+      if (!mbid) return { genres: [], isWelshLanguage: false };
+      const artistUrl = `https://musicbrainz.org/ws/2/artist/${mbid}?inc=genres+tags+area&fmt=json`;
       const artistRes = await axios.get(artistUrl, { headers: { 'User-Agent': mbUserAgent }, timeout: 15_000 });
-      return extractMusicBrainzGenreNames(artistRes?.data);
-    } catch { return []; }
+      const data = artistRes?.data;
+      const genres = extractMusicBrainzGenreNames(data);
+
+      // Welsh-language signal: any MB tag/genre name overlapping with known Welsh tags
+      const allTagNames = [
+        ...( Array.isArray(data?.genres) ? data.genres : [] ),
+        ...( Array.isArray(data?.tags)   ? data.tags   : [] ),
+      ].map((t) => String(t?.name || t?.tag || t || '').toLowerCase().trim()).filter(Boolean);
+
+      const isWelshLanguage = allTagNames.some((t) => MB_WELSH_LANGUAGE_TAGS.has(t));
+
+      return { genres, isWelshLanguage };
+    } catch { return { genres: [], isWelshLanguage: false }; }
   })();
   cacheByKey.set(key, p);
   return p;
+}
+
+// Kept for callers that only need genres (backwards-compatible shim)
+async function fetchMusicBrainzGenresForArtistName(artistName, cacheByKey, mbUserAgent) {
+  const { genres } = await fetchMusicBrainzArtistData(artistName, cacheByKey, mbUserAgent);
+  return genres;
 }
 
 // ---------------------------------------------------------------------------
@@ -1222,6 +1272,16 @@ function tryAttachPriceFromListingText(ev) {
 }
 
 // ---------------------------------------------------------------------------
+// Tag helpers
+// ---------------------------------------------------------------------------
+
+function addTag(ev, tag) {
+  const existing = Array.isArray(ev.tags) ? ev.tags : [];
+  if (existing.includes(tag)) return ev;
+  return { ...ev, tags: [...existing, tag] };
+}
+
+// ---------------------------------------------------------------------------
 // Event finalisation
 // ---------------------------------------------------------------------------
 
@@ -1351,17 +1411,23 @@ async function enrichAllEvents(context, allEvents) {
         const en = ev.url ? cache.get(ev.url) : null;
         let out = mergeEnrichmentIntoEvent(ev, en);
 
-        if (
-          WANT_MUSICBRAINZ &&
-          (!Array.isArray(out.musicGenres) || out.musicGenres.length === 0) &&
-          en && Array.isArray(en.performerNames) && en.performerNames.length
-        ) {
+        const performerNames = en && Array.isArray(en.performerNames) ? en.performerNames : [];
+
+        // Welsh-acts file check (no MB needed — runs always)
+        const welshByList = performerNames.some((n) => WELSH_ACTS.has(n.toLowerCase().trim()));
+        if (welshByList) out = addTag(out, 'Welsh Language');
+
+        if (WANT_MUSICBRAINZ && performerNames.length) {
+          const needsGenres = !Array.isArray(out.musicGenres) || out.musicGenres.length === 0;
           let mergedGenres = Array.isArray(out.musicGenres) ? out.musicGenres : [];
-          const names = en.performerNames.slice(0, 3);
+          const names = performerNames.slice(0, 3);
           for (const n of names) {
-            const genres = await fetchMusicBrainzGenresForArtistName(n, mbCacheByKey, mbUserAgent);
-            mergedGenres = unionMusicGenres(mergedGenres, genres);
-            if (mergedGenres.length >= 8) break;
+            const { genres, isWelshLanguage } = await fetchMusicBrainzArtistData(n, mbCacheByKey, mbUserAgent);
+            if (isWelshLanguage) out = addTag(out, 'Welsh Language');
+            if (needsGenres) {
+              mergedGenres = unionMusicGenres(mergedGenres, genres);
+              if (mergedGenres.length >= 8) break;
+            }
           }
           if (mergedGenres.length) out.musicGenres = mergedGenres;
         }
