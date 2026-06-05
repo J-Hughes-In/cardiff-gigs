@@ -6,6 +6,11 @@ on:
     - cron: '0 14 * * *'
     - cron: '0 20 * * *'
   workflow_dispatch:
+    inputs:
+      venue:
+        description: 'Venue name to scrape (leave blank to scrape all)'
+        required: false
+        default: ''
 
 permissions:
   contents: write
@@ -28,7 +33,12 @@ jobs:
         run: npx playwright install chromium --with-deps
 
       - name: Run scraper
-        run: npm run scrape
+        run: |
+          if [ -n "${{ inputs.venue }}" ]; then
+            node scrape.js --venue "${{ inputs.venue }}"
+          else
+            npm run scrape
+          fi
 
       - name: Enrich comedian data
         run: node comedians.js
