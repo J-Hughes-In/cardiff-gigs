@@ -10,7 +10,7 @@
     "status": "uncertain",
     "source": "search",
     "sourceEventTitle": "CABARET VOLTAIRE’S FINAL UK TOUR",
-    "lastUpdated": "2026-06-07T15:49:31.550Z"
+    "lastUpdated": "2026-06-07T22:02:05.632Z"
   },
   "cabaret provocateur": {
     "name": "CABARET PROVOCATEUR",
@@ -75,7 +75,7 @@
     "status": "failed",
     "source": null,
     "sourceEventTitle": "GALIFREY CABARET",
-    "lastUpdated": "2026-06-07T15:53:15.135Z"
+    "lastUpdated": "2026-06-07T22:06:19.684Z"
   },
   "miscast cabaret": {
     "name": "MISCAST CABARET",
@@ -88,7 +88,7 @@
     "status": "uncertain",
     "source": "search",
     "sourceEventTitle": "MISCAST CABARET",
-    "lastUpdated": "2026-06-07T15:53:22.052Z"
+    "lastUpdated": "2026-06-07T22:06:27.243Z"
   },
   "the alternative cabaret": {
     "name": "THE ALTERNATIVE CABARET",
@@ -101,7 +101,7 @@
     "status": "uncertain",
     "source": "search",
     "sourceEventTitle": "THE ALTERNATIVE CABARET: MUSICALS",
-    "lastUpdated": "2026-06-07T15:54:28.969Z"
+    "lastUpdated": "2026-06-07T22:07:05.617Z"
   },
   "the rock & roll magic show": {
     "name": "THE ROCK & ROLL MAGIC SHOW",
@@ -114,7 +114,7 @@
     "status": "uncertain",
     "source": "search",
     "sourceEventTitle": "THE ROCK & ROLL MAGIC SHOW",
-    "lastUpdated": "2026-06-07T15:54:37.867Z"
+    "lastUpdated": "2026-06-07T22:07:12.630Z"
   },
   "the enormous crocodile": {
     "name": "The Enormous Crocodile",
@@ -140,7 +140,7 @@
     "status": "uncertain",
     "source": "search",
     "sourceEventTitle": "The Magic Of Motown",
-    "lastUpdated": "2026-06-07T15:55:21.773Z"
+    "lastUpdated": "2026-06-07T22:08:29.563Z"
   },
   "jasper carrott": {
     "name": "Jasper Carrott",
@@ -166,20 +166,20 @@
     "status": "uncertain",
     "source": "direct",
     "sourceEventTitle": "Man In The Mirror - A Tribute To Michael Jackson",
-    "lastUpdated": "2026-06-07T15:55:24.293Z"
+    "lastUpdated": "2026-06-07T22:08:32.140Z"
   },
   "entertainers. book": {
     "name": "Entertainers. Book",
-    "matchedTitle": "Dex (entertainer)",
+    "matchedTitle": "Cedric the Entertainer",
     "wikipedia": true,
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Dex_(entertainer)",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Cedric_the_Entertainer",
     "popularityScore": 20,
     "tier": "D",
     "confidence": 0,
     "status": "uncertain",
     "source": "search",
     "sourceEventTitle": "Man In The Mirror - A Tribute To Michael Jackson",
-    "lastUpdated": "2026-06-07T15:56:03.089Z"
+    "lastUpdated": "2026-06-07T22:08:40.190Z"
   },
   "keith brymer jones and marj hogarth": {
     "name": "Keith Brymer Jones and Marj Hogarth",
@@ -192,7 +192,7 @@
     "status": "uncertain",
     "source": "search",
     "sourceEventTitle": "Keith Brymer Jones and Marj Hogarth: Us, Pots and A Welsh Chapel",
-    "lastUpdated": "2026-06-07T15:56:09.012Z"
+    "lastUpdated": "2026-06-07T22:09:18.156Z"
   },
   "lost in music": {
     "name": "Lost In Music",
@@ -205,7 +205,7 @@
     "status": "uncertain",
     "source": "direct",
     "sourceEventTitle": "Lost In Music",
-    "lastUpdated": "2026-06-07T15:56:11.531Z"
+    "lastUpdated": "2026-06-07T22:09:20.742Z"
   },
   "donna summer": {
     "name": "Donna Summer",
@@ -218,7 +218,7 @@
     "status": "uncertain",
     "source": "direct",
     "sourceEventTitle": "Lost In Music",
-    "lastUpdated": "2026-06-07T15:56:14.040Z"
+    "lastUpdated": "2026-06-07T22:09:23.269Z"
   },
   "the illegal eagles": {
     "name": "The Illegal Eagles",
@@ -231,7 +231,7 @@
     "status": "uncertain",
     "source": "search",
     "sourceEventTitle": "The Illegal Eagles",
-    "lastUpdated": "2026-06-07T15:56:20.684Z"
+    "lastUpdated": "2026-06-07T22:09:29.857Z"
   },
   "jinkx monsoon": {
     "name": "Jinkx Monsoon",
@@ -257,7 +257,7 @@
     "status": "uncertain",
     "source": "direct",
     "sourceEventTitle": "Shoot From The Hip",
-    "lastUpdated": "2026-06-07T15:57:23.941Z"
+    "lastUpdated": "2026-06-07T22:09:32.435Z"
   },
   "luther uk": {
     "name": "Luther UK",
@@ -270,7 +270,7 @@
     "status": "uncertain",
     "source": "search",
     "sourceEventTitle": "Luther UK",
-    "lastUpdated": "2026-06-07T15:57:30.276Z"
+    "lastUpdated": "2026-06-07T22:10:10.883Z"
   },
   "harry cambridge": {
     "name": "Harry  Cambridge",
@@ -283,7 +283,7 @@
     "status": "uncertain",
     "source": "search",
     "sourceEventTitle": "Luther UK",
-    "lastUpdated": "2026-06-07T15:57:37.668Z"
+    "lastUpdated": "2026-06-07T22:10:19.276Z"
   },
   "never too much": {
     "name": "Never Too Much",
@@ -296,7 +296,7 @@
     "status": "uncertain",
     "source": "direct",
     "sourceEventTitle": "Luther UK",
-    "lastUpdated": "2026-06-07T15:57:40.200Z"
+    "lastUpdated": "2026-06-07T22:10:21.856Z"
   },
   "in the air tonight": {
     "name": "In The Air Tonight",
@@ -309,7 +309,7 @@
     "status": "uncertain",
     "source": "direct",
     "sourceEventTitle": "In The Air Tonight",
-    "lastUpdated": "2026-06-07T15:58:12.787Z"
+    "lastUpdated": "2026-06-07T22:10:24.436Z"
   },
   "princess proms": {
     "name": "Princess Proms",
@@ -322,7 +322,7 @@
     "status": "uncertain",
     "source": "search",
     "sourceEventTitle": "Princess Proms",
-    "lastUpdated": "2026-06-07T15:58:18.939Z"
+    "lastUpdated": "2026-06-07T22:11:34.177Z"
   },
   "sweet caroline": {
     "name": "Sweet Caroline",
@@ -335,7 +335,7 @@
     "status": "uncertain",
     "source": "direct",
     "sourceEventTitle": "Sweet Caroline - A Tribute To Neil Diamond",
-    "lastUpdated": "2026-06-07T15:58:21.457Z"
+    "lastUpdated": "2026-06-07T22:11:36.753Z"
   },
   "london's adelphi theatre.": {
     "name": "London’s Adelphi Theatre.",
@@ -348,7 +348,7 @@
     "status": "uncertain",
     "source": "search",
     "sourceEventTitle": "Sweet Caroline - A Tribute To Neil Diamond",
-    "lastUpdated": "2026-06-07T15:59:29.186Z"
+    "lastUpdated": "2026-06-07T22:11:45.257Z"
   },
   "'my first concert'": {
     "name": "'My First Concert'",
@@ -361,7 +361,7 @@
     "status": "uncertain",
     "source": "search",
     "sourceEventTitle": "'My First Concert' Featuring Baby Shark, Pinkfong & The Zoomies",
-    "lastUpdated": "2026-06-07T15:59:38.440Z"
+    "lastUpdated": "2026-06-07T22:12:04.152Z"
   },
   "johns' boys choir": {
     "name": "Johns' Boys Choir",
@@ -374,7 +374,7 @@
     "status": "uncertain",
     "source": "search",
     "sourceEventTitle": "Johns' Boys Choir",
-    "lastUpdated": "2026-06-07T15:59:45.073Z"
+    "lastUpdated": "2026-06-07T22:12:12.594Z"
   },
   "johns' boys": {
     "name": "Johns’ Boys",
@@ -387,7 +387,7 @@
     "status": "uncertain",
     "source": "search",
     "sourceEventTitle": "Johns' Boys Choir",
-    "lastUpdated": "2026-06-07T16:00:23.134Z"
+    "lastUpdated": "2026-06-07T22:13:22.666Z"
   },
   "fun for little ones": {
     "name": "Fun For Little Ones",
@@ -400,7 +400,7 @@
     "status": "uncertain",
     "source": "search",
     "sourceEventTitle": "Fun For Little Ones - A Tribute To Ms Rachel",
-    "lastUpdated": "2026-06-07T16:00:31.074Z"
+    "lastUpdated": "2026-06-07T22:13:29.962Z"
   },
   "sam campbell": {
     "name": "Sam Campbell",
@@ -413,7 +413,7 @@
     "status": "uncertain",
     "source": "direct",
     "sourceEventTitle": "Sam Campbell: Kid Giblet",
-    "lastUpdated": "2026-06-07T16:00:33.594Z"
+    "lastUpdated": "2026-06-07T22:13:32.540Z"
   },
   "piff the magic dragon": {
     "name": "Piff the Magic Dragon",
@@ -439,7 +439,7 @@
     "status": "failed",
     "source": null,
     "sourceEventTitle": "Piff & Pop's Magic Shoppe",
-    "lastUpdated": "2026-06-07T16:01:14.624Z"
+    "lastUpdated": "2026-06-07T22:14:14.422Z"
   },
   "penn jillette": {
     "name": "Penn Jillette",
@@ -465,7 +465,7 @@
     "status": "uncertain",
     "source": "direct",
     "sourceEventTitle": "Piff & Pop's Magic Shoppe",
-    "lastUpdated": "2026-06-07T16:01:17.151Z"
+    "lastUpdated": "2026-06-07T22:14:17.003Z"
   },
   "john van der put": {
     "name": "John van der Put",
@@ -478,7 +478,7 @@
     "status": "uncertain",
     "source": "direct",
     "sourceEventTitle": "Piff & Pop's Magic Shoppe",
-    "lastUpdated": "2026-06-07T16:01:19.671Z"
+    "lastUpdated": "2026-06-07T22:14:23.324Z"
   },
   "john barrowman": {
     "name": "John Barrowman",
@@ -491,7 +491,7 @@
     "status": "uncertain",
     "source": "direct",
     "sourceEventTitle": "John Barrowman: My Life In Musicals",
-    "lastUpdated": "2026-06-07T16:01:22.180Z"
+    "lastUpdated": "2026-06-07T22:14:25.853Z"
   },
   "mike wozniak": {
     "name": "Mike Wozniak",
@@ -582,7 +582,7 @@
     "status": "uncertain",
     "source": "search",
     "sourceEventTitle": "Hannah East: Express Yourself",
-    "lastUpdated": "2026-06-07T16:02:29.402Z"
+    "lastUpdated": "2026-06-07T22:15:04.676Z"
   },
   "adam rowe": {
     "name": "Adam Rowe",
@@ -608,7 +608,7 @@
     "status": "uncertain",
     "source": "direct",
     "sourceEventTitle": "Serena Terry: Therapy",
-    "lastUpdated": "2026-06-07T16:02:31.920Z"
+    "lastUpdated": "2026-06-07T22:15:07.254Z"
   },
   "al murray": {
     "name": "Al Murray",
@@ -634,7 +634,7 @@
     "status": "uncertain",
     "source": "search",
     "sourceEventTitle": "Al Murray - All You Need Is Guv",
-    "lastUpdated": "2026-06-07T16:02:38.983Z"
+    "lastUpdated": "2026-06-07T22:15:16.479Z"
   },
   "the pub landlord": {
     "name": "The Pub Landlord",
@@ -647,7 +647,7 @@
     "status": "uncertain",
     "source": "direct",
     "sourceEventTitle": "Al Murray - All You Need Is Guv",
-    "lastUpdated": "2026-06-07T16:02:41.507Z"
+    "lastUpdated": "2026-06-07T22:15:19.057Z"
   },
   "tom davis": {
     "name": "Tom Davis",
@@ -660,7 +660,7 @@
     "status": "uncertain",
     "source": "direct",
     "sourceEventTitle": "Tom Davis: Spudgun",
-    "lastUpdated": "2026-06-07T16:03:14.093Z"
+    "lastUpdated": "2026-06-07T22:15:21.635Z"
   },
   "romesh ranganathan": {
     "name": "Romesh Ranganathan",
@@ -686,7 +686,7 @@
     "status": "uncertain",
     "source": "search",
     "sourceEventTitle": "Michael Starring Ben",
-    "lastUpdated": "2026-06-07T16:03:20.040Z"
+    "lastUpdated": "2026-06-07T22:16:30.563Z"
   },
   "susan calman": {
     "name": "Susan Calman",
@@ -764,7 +764,7 @@
     "status": "uncertain",
     "source": "direct",
     "sourceEventTitle": "Step Into Christmas",
-    "lastUpdated": "2026-06-07T16:03:22.556Z"
+    "lastUpdated": "2026-06-07T22:16:33.144Z"
   },
   "hey jude! get back with the beatles": {
     "name": "Hey Jude! Get Back With The Beatles",
@@ -777,7 +777,7 @@
     "status": "uncertain",
     "source": "search",
     "sourceEventTitle": "Hey Jude! Get Back With The Beatles",
-    "lastUpdated": "2026-06-07T16:03:30.030Z"
+    "lastUpdated": "2026-06-07T22:16:42.341Z"
   },
   "the beatles": {
     "name": "The Beatles",
@@ -790,7 +790,7 @@
     "status": "uncertain",
     "source": "direct",
     "sourceEventTitle": "Hey Jude! Get Back With The Beatles",
-    "lastUpdated": "2026-06-07T16:03:32.540Z"
+    "lastUpdated": "2026-06-07T22:16:44.869Z"
   },
   "the beatles. yesterday. today.": {
     "name": "The Beatles. Yesterday. Today.",
@@ -803,7 +803,7 @@
     "status": "uncertain",
     "source": "search",
     "sourceEventTitle": "Hey Jude! Get Back With The Beatles",
-    "lastUpdated": "2026-06-07T16:04:10.715Z"
+    "lastUpdated": "2026-06-07T22:17:03.623Z"
   },
   "murder, she didn't write": {
     "name": "Murder, She Didn't Write",
@@ -816,7 +816,7 @@
     "status": "uncertain",
     "source": "search",
     "sourceEventTitle": "Murder, She Didn't Write",
-    "lastUpdated": "2026-06-07T16:04:19.097Z"
+    "lastUpdated": "2026-06-07T22:17:10.967Z"
   },
   "radio gaga": {
     "name": "Radio Gaga",
@@ -829,7 +829,7 @@
     "status": "uncertain",
     "source": "direct",
     "sourceEventTitle": "Radio Gaga",
-    "lastUpdated": "2026-06-07T16:04:21.617Z"
+    "lastUpdated": "2026-06-07T22:17:13.544Z"
   },
   "sky full of stars": {
     "name": "Sky Full Of Stars",
@@ -842,7 +842,7 @@
     "status": "uncertain",
     "source": "search",
     "sourceEventTitle": "Sky Full Of Stars",
-    "lastUpdated": "2026-06-07T16:05:28.681Z"
+    "lastUpdated": "2026-06-07T22:17:21.137Z"
   },
   "sky full": {
     "name": "Sky Full",
@@ -855,7 +855,7 @@
     "status": "uncertain",
     "source": "search",
     "sourceEventTitle": "Sky Full Of Stars",
-    "lastUpdated": "2026-06-07T16:05:35.870Z"
+    "lastUpdated": "2026-06-07T22:18:30.767Z"
   },
   "fascinating aïda": {
     "name": "Fascinating Aïda",
@@ -881,7 +881,7 @@
     "status": "uncertain",
     "source": "search",
     "sourceEventTitle": "Fascinating Aïda",
-    "lastUpdated": "2026-06-07T16:06:12.302Z"
+    "lastUpdated": "2026-06-07T22:18:39.633Z"
   },
   "sue perkins": {
     "name": "Sue Perkins",
@@ -898,16 +898,16 @@
   },
   "the eternal shame of sue perkins": {
     "name": "The Eternal Shame Of Sue Perkins",
-    "matchedTitle": "Bull Moose Party",
+    "matchedTitle": "List of one-hit wonders in the United States",
     "wikipedia": true,
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Bull_Moose_Party",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/List_of_one-hit_wonders_in_the_United_States",
     "popularityScore": 20,
     "tier": "D",
     "confidence": 0,
     "status": "uncertain",
     "source": "search",
     "sourceEventTitle": "The Eternal Shame Of Sue Perkins",
-    "lastUpdated": "2026-06-07T16:06:19.951Z"
+    "lastUpdated": "2026-06-07T22:19:17.812Z"
   },
   "simon brodkin": {
     "name": "Simon Brodkin",
@@ -946,7 +946,7 @@
     "status": "uncertain",
     "source": "direct",
     "sourceEventTitle": "Scott Bennett: Stuff",
-    "lastUpdated": "2026-06-07T16:06:22.471Z"
+    "lastUpdated": "2026-06-07T22:19:20.388Z"
   },
   "john bishop. the": {
     "name": "John Bishop. The",
@@ -972,7 +972,7 @@
     "status": "uncertain",
     "source": "direct",
     "sourceEventTitle": "Rick Wakeman - The Wizard Of Prog",
-    "lastUpdated": "2026-06-07T16:06:24.980Z"
+    "lastUpdated": "2026-06-07T22:19:22.918Z"
   },
   "the wizard": {
     "name": "The Wizard",
@@ -985,7 +985,7 @@
     "status": "uncertain",
     "source": "direct",
     "sourceEventTitle": "Rick Wakeman - The Wizard Of Prog",
-    "lastUpdated": "2026-06-07T16:06:27.500Z"
+    "lastUpdated": "2026-06-07T22:19:25.496Z"
   },
   "jon culshaw": {
     "name": "Jon Culshaw",
@@ -1011,7 +1011,7 @@
     "status": "uncertain",
     "source": "search",
     "sourceEventTitle": "Jon Culshaw: Me, Myself & Others",
-    "lastUpdated": "2026-06-07T16:07:04.263Z"
+    "lastUpdated": "2026-06-07T22:19:32.679Z"
   },
   "ed gamble": {
     "name": "Ed Gamble",
@@ -1050,7 +1050,7 @@
     "status": "uncertain",
     "source": "direct",
     "sourceEventTitle": "Troy Hawke: Never Stop, Never Change!",
-    "lastUpdated": "2026-06-07T16:07:06.781Z"
+    "lastUpdated": "2026-06-07T22:19:35.255Z"
   },
   "count arthur strong": {
     "name": "Count Arthur Strong",
@@ -1063,7 +1063,7 @@
     "status": "uncertain",
     "source": "direct",
     "sourceEventTitle": "Count Arthur Strong - And It's Goodnight From Me!",
-    "lastUpdated": "2026-06-07T16:07:09.298Z"
+    "lastUpdated": "2026-06-07T22:19:37.831Z"
   },
   "dylan moran": {
     "name": "Dylan Moran",
@@ -1089,7 +1089,7 @@
     "status": "uncertain",
     "source": "direct",
     "sourceEventTitle": "The Silence Of The Lambs",
-    "lastUpdated": "2026-06-07T16:07:11.821Z"
+    "lastUpdated": "2026-06-07T22:20:10.660Z"
   },
   "john partridge": {
     "name": "John Partridge",
@@ -1102,7 +1102,7 @@
     "status": "uncertain",
     "source": "direct",
     "sourceEventTitle": "The Silence Of The Lambs",
-    "lastUpdated": "2026-06-07T16:07:14.338Z"
+    "lastUpdated": "2026-06-07T22:20:13.238Z"
   },
   "henry paker": {
     "name": "Henry Paker",
@@ -1154,7 +1154,7 @@
     "status": "failed",
     "source": null,
     "sourceEventTitle": "Steve Steinman's Fuel Injected Magic! 50th Anniversary Concert",
-    "lastUpdated": "2026-06-07T16:08:25.149Z"
+    "lastUpdated": "2026-06-07T22:20:24.596Z"
   },
   "david gray": {
     "name": "David Gray",
@@ -1362,7 +1362,7 @@
     "status": "uncertain",
     "source": "search",
     "sourceEventTitle": "Mark Watson: Before It Overtakes Us",
-    "lastUpdated": "2026-06-07T16:08:35.299Z"
+    "lastUpdated": "2026-06-07T22:21:34.815Z"
   },
   "ania magliano": {
     "name": "Ania Magliano",
@@ -1440,7 +1440,7 @@
     "status": "uncertain",
     "source": "search",
     "sourceEventTitle": "Li Jin Hao: Falling from a Moon",
-    "lastUpdated": "2026-06-07T16:09:11.607Z"
+    "lastUpdated": "2026-06-07T22:21:42.913Z"
   },
   "dan schreiber": {
     "name": "Dan Schreiber",
@@ -1466,7 +1466,7 @@
     "status": "uncertain",
     "source": "search",
     "sourceEventTitle": "DINOSAURS, A STORY OF SURVIVAL / IMMERSIVE CINEMA",
-    "lastUpdated": "2026-06-07T16:09:17.913Z"
+    "lastUpdated": "2026-06-07T22:22:30.833Z"
   },
   "daniel kitson": {
     "name": "Daniel Kitson",
@@ -1509,16 +1509,16 @@
   },
   "daniel foxx": {
     "name": "Daniel Foxx",
-    "matchedTitle": "Unfortunate: The Untold Story of Ursula The Sea Witch",
+    "matchedTitle": "Jimmie Foxx",
     "wikipedia": true,
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/Unfortunate%3A_The_Untold_Story_of_Ursula_The_Sea_Witch",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Jimmie_Foxx",
     "popularityScore": 20,
     "tier": "D",
     "confidence": 0,
     "status": "uncertain",
     "source": "search",
     "sourceEventTitle": "Daniel Foxx: How Lovely",
-    "lastUpdated": "2026-06-04T12:05:13.996Z"
+    "lastUpdated": "2026-06-07T22:22:21.046Z"
   },
   "john kearns": {
     "name": "John Kearns",
@@ -1596,7 +1596,7 @@
     "status": "uncertain",
     "source": "direct",
     "sourceEventTitle": "LEGALLY BLONDE",
-    "lastUpdated": "2026-06-07T15:49:34.077Z"
+    "lastUpdated": "2026-06-07T22:02:08.297Z"
   },
   "dragwyl": {
     "name": "DRAGWYL",
@@ -1609,7 +1609,7 @@
     "status": "failed",
     "source": null,
     "sourceEventTitle": "DRAGWYL",
-    "lastUpdated": "2026-06-07T15:50:15.683Z"
+    "lastUpdated": "2026-06-07T22:03:19.286Z"
   },
   "gagged june": {
     "name": "GAGGED JUNE",
@@ -1622,7 +1622,7 @@
     "status": "uncertain",
     "source": "search",
     "sourceEventTitle": "GAGGED JUNE",
-    "lastUpdated": "2026-06-07T15:50:23.408Z"
+    "lastUpdated": "2026-06-07T22:03:27.489Z"
   },
   "the pearl revue": {
     "name": "THE PEARL REVUE",
@@ -1635,7 +1635,7 @@
     "status": "uncertain",
     "source": "search",
     "sourceEventTitle": "THE PEARL REVUE",
-    "lastUpdated": "2026-06-07T15:51:29.623Z"
+    "lastUpdated": "2026-06-07T22:03:34.596Z"
   },
   "steph webber": {
     "name": "STEPH WEBBER",
@@ -1648,7 +1648,7 @@
     "status": "uncertain",
     "source": "search",
     "sourceEventTitle": "STEPH WEBBER - GLITTERING NIGHTS",
-    "lastUpdated": "2026-06-07T15:51:38.233Z"
+    "lastUpdated": "2026-06-07T22:04:14.098Z"
   },
   "quartey & blayney": {
     "name": "QUARTEY & BLAYNEY",
@@ -1661,7 +1661,7 @@
     "status": "uncertain",
     "source": "search",
     "sourceEventTitle": "QUARTEY & BLAYNEY",
-    "lastUpdated": "2026-06-07T15:51:44.280Z"
+    "lastUpdated": "2026-06-07T22:04:22.388Z"
   },
   "carwyn blayney": {
     "name": "Carwyn Blayney",
@@ -1674,7 +1674,7 @@
     "status": "uncertain",
     "source": "search",
     "sourceEventTitle": "QUARTEY & BLAYNEY",
-    "lastUpdated": "2026-06-07T15:52:21.115Z"
+    "lastUpdated": "2026-06-07T22:05:01.399Z"
   },
   "bbc's amandaland": {
     "name": "BBC's Amandaland",
@@ -1687,7 +1687,7 @@
     "status": "uncertain",
     "source": "search",
     "sourceEventTitle": "QUARTEY & BLAYNEY",
-    "lastUpdated": "2026-06-07T15:52:29.283Z"
+    "lastUpdated": "2026-06-07T22:05:08.068Z"
   },
   "michael akadiri": {
     "name": "MICHAEL AKADIRI",
@@ -1765,7 +1765,7 @@
     "status": "uncertain",
     "source": "search",
     "sourceEventTitle": "ANDREW BIRD - ON THE EDGE TOUR",
-    "lastUpdated": "2026-06-04T22:28:14.725Z"
+    "lastUpdated": "2026-06-07T22:07:21.088Z"
   },
   "welsh national opera": {
     "name": "WELSH NATIONAL OPERA",
@@ -1821,16 +1821,16 @@
   },
   "sounds of the ocean / immersive cinema": {
     "name": "SOUNDS OF THE OCEAN / IMMERSIVE CINEMA",
-    "matchedTitle": "U2:UV Achtung Baby Live at Sphere",
+    "matchedTitle": "Leviathan (2012 film)",
     "wikipedia": true,
-    "wikipediaUrl": "https://en.wikipedia.org/wiki/U2%3AUV_Achtung_Baby_Live_at_Sphere",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Leviathan_(2012_film)",
     "popularityScore": 20,
     "tier": "D",
     "confidence": 0,
     "status": "uncertain",
     "source": "search",
     "sourceEventTitle": "SOUNDS OF THE OCEAN / IMMERSIVE CINEMA",
-    "lastUpdated": "2026-06-07T16:09:25.730Z"
+    "lastUpdated": "2026-06-07T22:22:39.145Z"
   },
   "giant steps": {
     "name": "GIANT STEPS",
@@ -1844,5 +1844,148 @@
     "source": "search",
     "sourceEventTitle": "GIANT STEPS",
     "lastUpdated": "2026-06-06T12:01:10.109Z"
+  },
+  "candlelight": {
+    "name": "Candlelight",
+    "matchedTitle": "Candlelight",
+    "wikipedia": true,
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Candlelight",
+    "popularityScore": 35,
+    "tier": "D",
+    "confidence": 60,
+    "status": "uncertain",
+    "source": "direct",
+    "sourceEventTitle": "Candlelight: Tribute to Fleetwood Mac",
+    "lastUpdated": "2026-06-07T22:23:11.984Z"
+  },
+  "inception this land": {
+    "name": "Inception This Land",
+    "matchedTitle": "History of life",
+    "wikipedia": true,
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/History_of_life",
+    "popularityScore": 20,
+    "tier": "D",
+    "confidence": 0,
+    "status": "uncertain",
+    "source": "search",
+    "sourceEventTitle": "Candlelight: Hans Zimmer's Best Works",
+    "lastUpdated": "2026-06-07T22:23:20.213Z"
+  },
+  "the lion king zooster's": {
+    "name": "The Lion King Zooster’s",
+    "matchedTitle": "List of Madagascar (franchise) characters",
+    "wikipedia": true,
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/List_of_Madagascar_(franchise)_characters",
+    "popularityScore": 20,
+    "tier": "D",
+    "confidence": 0,
+    "status": "uncertain",
+    "source": "search",
+    "sourceEventTitle": "Candlelight: Hans Zimmer's Best Works",
+    "lastUpdated": "2026-06-07T22:23:29.156Z"
+  },
+  "madagascar supermarine": {
+    "name": "Madagascar Supermarine",
+    "matchedTitle": "Israeli Air Force Museum",
+    "wikipedia": true,
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Israeli_Air_Force_Museum",
+    "popularityScore": 20,
+    "tier": "D",
+    "confidence": 0,
+    "status": "uncertain",
+    "source": "search",
+    "sourceEventTitle": "Candlelight: Hans Zimmer's Best Works",
+    "lastUpdated": "2026-06-07T22:24:08.776Z"
+  },
+  "dunkirk honor": {
+    "name": "Dunkirk Honor",
+    "matchedTitle": "Dunkirk, New York",
+    "wikipedia": true,
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Dunkirk%2C_New_York",
+    "popularityScore": 20,
+    "tier": "D",
+    "confidence": 0,
+    "status": "uncertain",
+    "source": "search",
+    "sourceEventTitle": "Candlelight: Hans Zimmer's Best Works",
+    "lastUpdated": "2026-06-07T22:24:16.537Z"
+  },
+  "the pacific": {
+    "name": "The Pacific",
+    "matchedTitle": "Pacific Ocean",
+    "wikipedia": true,
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Pacific_Ocean",
+    "popularityScore": 10,
+    "tier": "D",
+    "confidence": 5,
+    "status": "uncertain",
+    "source": "direct",
+    "sourceEventTitle": "Candlelight: Hans Zimmer's Best Works",
+    "lastUpdated": "2026-06-07T22:24:19.115Z"
+  },
+  "the dark knight wonder": {
+    "name": "The Dark Knight Wonder",
+    "matchedTitle": "The Dark Knight Strikes Again",
+    "wikipedia": true,
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/The_Dark_Knight_Strikes_Again",
+    "popularityScore": 20,
+    "tier": "D",
+    "confidence": 0,
+    "status": "uncertain",
+    "source": "search",
+    "sourceEventTitle": "Candlelight: Hans Zimmer's Best Works",
+    "lastUpdated": "2026-06-07T22:25:27.010Z"
+  },
+  "interstellar dune suite gladiator": {
+    "name": "Interstellar Dune Suite Gladiator",
+    "matchedTitle": "The Last Samurai (soundtrack)",
+    "wikipedia": true,
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/The_Last_Samurai_(soundtrack)",
+    "popularityScore": 23,
+    "tier": "D",
+    "confidence": 0,
+    "status": "uncertain",
+    "source": "search",
+    "sourceEventTitle": "Candlelight: Hans Zimmer's Best Works",
+    "lastUpdated": "2026-06-07T22:25:35.196Z"
+  },
+  "sherlock holmes pirates": {
+    "name": "Sherlock Holmes Pirates",
+    "matchedTitle": "Sherlock Holmes pastiches",
+    "wikipedia": true,
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Sherlock_Holmes_pastiches",
+    "popularityScore": 20,
+    "tier": "D",
+    "confidence": 0,
+    "status": "uncertain",
+    "source": "search",
+    "sourceEventTitle": "Candlelight: Hans Zimmer's Best Works",
+    "lastUpdated": "2026-06-07T22:26:15.718Z"
+  },
+  "hayao miyazaki's dreams by mystery ensemble": {
+    "name": "Hayao Miyazaki's Dreams by Mystery Ensemble",
+    "matchedTitle": "Castle in the Sky",
+    "wikipedia": true,
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Castle_in_the_Sky",
+    "popularityScore": 20,
+    "tier": "D",
+    "confidence": 0,
+    "status": "uncertain",
+    "source": "search",
+    "sourceEventTitle": "Hayao Miyazaki's Dreams by Mystery Ensemble",
+    "lastUpdated": "2026-06-07T22:26:23.565Z"
+  },
+  "seriously collins": {
+    "name": "Seriously Collins",
+    "matchedTitle": "...But Seriously",
+    "wikipedia": true,
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/...But_Seriously",
+    "popularityScore": 20,
+    "tier": "D",
+    "confidence": 0,
+    "status": "uncertain",
+    "source": "search",
+    "sourceEventTitle": "Seriously Collins - The Candlelight Concert",
+    "lastUpdated": "2026-06-07T22:26:31.397Z"
   }
 }
