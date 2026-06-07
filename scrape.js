@@ -3623,6 +3623,8 @@ async function scrapeAll(selectedScrapers) {
     viewport: { width: 1365, height: 900 },
   });
 
+  const failedScrapers = new Set();
+
   async function safeScrap(fn, name, retries = 2) {
     let lastErr;
     for (let attempt = 0; attempt <= retries; attempt++) {
@@ -3635,6 +3637,7 @@ async function scrapeAll(selectedScrapers) {
       }
     }
     console.log(`  ${name} failed: ${lastErr.message.split('\n')[0]}`);
+    failedScrapers.add(name);
     return [];
   }
 
@@ -3664,14 +3667,20 @@ async function scrapeAll(selectedScrapers) {
     } catch (_) {}
   }
 
-  // For a partial scrape: keep events from venues we didn't touch, replace the rest.
-  // For a full scrape: replace everything (same as before).
-  let baseEvents = previousEvents;
+  // Only replace a venue's events if we actually got results back for it.
+  // Failed scrapers (returned [] due to error) leave previous events untouched
+  // so a transient failure doesn't wipe the venue from events.json.
+  const successVenueNames = new Set(dedupedFresh.map((e) => e.venue));
+  let baseEvents;
   if (partial) {
-    const scrapedVenueNames = new Set(dedupedFresh.map((e) => e.venue));
-    baseEvents = previousEvents.filter((e) => !scrapedVenueNames.has(e.venue));
+    // Keep events from venues we didn't attempt, plus any failed venues.
+    baseEvents = previousEvents.filter((e) => !successVenueNames.has(e.venue));
   } else {
-    baseEvents = [];
+    // Full scrape: clear only venues we successfully retrieved data for.
+    if (failedScrapers.size > 0) {
+      console.log(`Preserving previous events for failed venues: ${[...failedScrapers].join(', ')}`);
+    }
+    baseEvents = previousEvents.filter((e) => !successVenueNames.has(e.venue));
   }
 
   // Build a lookup of previous scrapedAt by dedupe key (across all previous events)
