@@ -3560,6 +3560,89 @@ function printDuplicateReview(events) {
 // ---------------------------------------------------------------------------
 
 // ---------------------------------------------------------------------------
+// Llandaff Cathedral — sourced from ents24.com venue page
+// ---------------------------------------------------------------------------
+async function scrapeLlandaffCathedral(context) {
+  console.log('Scraping Llandaff Cathedral...');
+  const page = await context.newPage();
+  const BASE = 'https://www.ents24.com';
+
+  await gotoAndSettle(page, `${BASE}/cardiff-events/llandaff-cathedral`, 'li.strip');
+  await new Promise(r => setTimeout(r, 2_000));
+
+  const listings = await page.evaluate((base) => {
+    return Array.from(document.querySelectorAll('li.strip')).map(li => {
+      const timeEl   = li.querySelector('time[datetime]');
+      const whatEl   = li.querySelector('.what.text-bold');
+      const perfEl   = li.querySelector('.what.text-bold .text-dull');
+      const linkEl   = li.querySelector('a.what-and-where');
+      const ctaEl    = li.querySelector('.going-cta a');
+
+      const cancelled = ctaEl?.textContent?.trim().toLowerCase() === 'cancelled';
+      const relHref   = linkEl?.getAttribute('href') || '';
+
+      // Strip the performer span text from the title
+      const performerName = perfEl?.textContent?.trim() || '';
+      let title = whatEl?.textContent?.trim() || '';
+      if (performerName) title = title.replace(performerName, '').trim();
+
+      return {
+        date:          timeEl?.getAttribute('datetime') || '',
+        title,
+        performerName,
+        url:           relHref ? base + relHref : '',
+        cancelled,
+      };
+    }).filter(e => e.title && !e.cancelled && e.date);
+  }, BASE);
+
+  // Visit each event page for start time, image and description
+  const events = [];
+  for (const item of listings) {
+    try {
+      await gotoAndSettle(page, item.url, 'main.event-page', { timeout: 15_000 });
+      await new Promise(r => setTimeout(r, 1_000));
+
+      const detail = await page.evaluate(() => {
+        // Time: look for "at HH:MMpm" pattern in the date/time block
+        const dateBlock = document.querySelector('.bg-card');
+        const timeMatch = dateBlock?.textContent?.match(/at\s+(\d{1,2}:\d{2}(?:am|pm))/i);
+        const startTime = timeMatch ? timeMatch[1] : '';
+
+        // Description
+        const descEl = document.querySelector('.bg-dank-card .space-y-4');
+        const description = descEl?.innerText?.trim() || '';
+
+        // Image
+        const imgEl = document.querySelector('picture source[srcset], .entity img[src]');
+        const imageUrl = imgEl?.getAttribute('srcset')?.split('?')[0] ||
+                         imgEl?.getAttribute('src')?.split('?')[0] || '';
+
+        return { startTime, description, imageUrl };
+      });
+
+      events.push({
+        title:          item.title,
+        date:           item.date,
+        startTime:      detail.startTime,
+        venue:          'Llandaff Cathedral',
+        url:            item.url,
+        description:    detail.description,
+        imageUrl:       detail.imageUrl,
+        performerNames: item.performerName ? [item.performerName] : [],
+        scrapedAt:      new Date().toISOString(),
+      });
+    } catch (e) {
+      console.log(`  Llandaff Cathedral: skipping ${item.title} — ${e.message.split('\n')[0]}`);
+    }
+  }
+
+  await page.close();
+  console.log(`  Llandaff Cathedral: ${events.length} events`);
+  return events;
+}
+
+// ---------------------------------------------------------------------------
 // Venue registry — single source of truth for name → scraper mapping
 // ---------------------------------------------------------------------------
 
@@ -3577,9 +3660,10 @@ const SCRAPERS = [
   { name: 'Principality',   fn: scrapePrincipality   },
   { name: 'Sherman',        fn: scrapeSherman        },
   { name: 'Canopi',         fn: scrapeCanopi         },
-  { name: 'CultVR',         fn: scrapeCultVR         },
-  // { name: 'Acapela',     fn: scrapeAcapela        },
-  // { name: 'Chapter Arts',fn: scrapeChapterArts    },
+  { name: 'CultVR',              fn: scrapeCultVR              },
+  { name: 'Llandaff Cathedral', fn: scrapeLlandaffCathedral   },
+  // { name: 'Acapela',          fn: scrapeAcapela             },
+  // { name: 'Chapter Arts',     fn: scrapeChapterArts         },
 ];
 
 /**
@@ -3623,6 +3707,8 @@ async function scrapeAll(selectedScrapers) {
     viewport: { width: 1365, height: 900 },
   });
 
+  const failedScrapers = new Set();
+
   async function safeScrap(fn, name, retries = 2) {
     let lastErr;
     for (let attempt = 0; attempt <= retries; attempt++) {
@@ -3635,6 +3721,7 @@ async function scrapeAll(selectedScrapers) {
       }
     }
     console.log(`  ${name} failed: ${lastErr.message.split('\n')[0]}`);
+    failedScrapers.add(name);
     return [];
   }
 
@@ -3664,14 +3751,20 @@ async function scrapeAll(selectedScrapers) {
     } catch (_) {}
   }
 
-  // For a partial scrape: keep events from venues we didn't touch, replace the rest.
-  // For a full scrape: replace everything (same as before).
-  let baseEvents = previousEvents;
+  // Only replace a venue's events if we actually got results back for it.
+  // Failed scrapers (returned [] due to error) leave previous events untouched
+  // so a transient failure doesn't wipe the venue from events.json.
+  const successVenueNames = new Set(dedupedFresh.map((e) => e.venue));
+  let baseEvents;
   if (partial) {
-    const scrapedVenueNames = new Set(dedupedFresh.map((e) => e.venue));
-    baseEvents = previousEvents.filter((e) => !scrapedVenueNames.has(e.venue));
+    // Keep events from venues we didn't attempt, plus any failed venues.
+    baseEvents = previousEvents.filter((e) => !successVenueNames.has(e.venue));
   } else {
-    baseEvents = [];
+    // Full scrape: clear only venues we successfully retrieved data for.
+    if (failedScrapers.size > 0) {
+      console.log(`Preserving previous events for failed venues: ${[...failedScrapers].join(', ')}`);
+    }
+    baseEvents = previousEvents.filter((e) => !successVenueNames.has(e.venue));
   }
 
   // Build a lookup of previous scrapedAt by dedupe key (across all previous events)
