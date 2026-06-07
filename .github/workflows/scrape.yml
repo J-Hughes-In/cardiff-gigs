@@ -41,6 +41,19 @@ jobs:
           fi
 
       - name: Enrich comedian data
+        # Run when: no specific venue is requested (full scrape), or the venue is one
+        # that lists comedy acts. Also limited to the 08:00 scheduled run so it
+        # doesn't fire on every cron tick.
+        if: |
+          github.event_name == 'workflow_dispatch' && (
+            inputs.venue == '' ||
+            inputs.venue == 'WMC' ||
+            inputs.venue == 'New Theatre' ||
+            inputs.venue == 'Sherman' ||
+            inputs.venue == 'Globe' ||
+            inputs.venue == 'Tramshed'
+          ) ||
+          github.event_name == 'schedule' && startsWith(github.event.schedule, '0 8')
         run: node comedians.js
         continue-on-error: true
 
