@@ -1541,6 +1541,18 @@ async function scrapeWMC(context) {
       event.description = await descPage.evaluate(() => {
         const detailsEl = document.querySelector('.production-details');
         if (!detailsEl) return '';
+        // Collect text from all content element blocks, skipping well boxes (practical info)
+        const contentBlocks = detailsEl.querySelectorAll('.dnadesign__elemental__models__elementcontent .content-element__content');
+        const paragraphs = [];
+        contentBlocks.forEach(block => {
+          if (block.querySelector('.o-well')) return; // skip practical info boxes
+          block.querySelectorAll('p').forEach(p => {
+            const text = p.innerText.trim();
+            if (text) paragraphs.push(text);
+          });
+        });
+        if (paragraphs.length) return paragraphs.join('\n\n');
+        // fallback: lede or first paragraph
         const lede = detailsEl.querySelector('p.o-lede');
         if (lede) return lede.innerText.trim();
         const firstP = detailsEl.querySelector('p');
