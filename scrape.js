@@ -2315,97 +2315,131 @@ async function scrapeUtilitaArena(context) {
 async function scrapeDepot(context) {
   console.log('Scraping Depot...');
   const page = await context.newPage();
- 
-  // Try the original selector first; if it times out, proceed anyway
+
   await page.goto('https://depotcardiff.com/events/', { waitUntil: 'domcontentloaded', timeout: 45_000 });
   await page.waitForLoadState('load').catch(() => {});
- 
-  // Wait for either the old selector or the wider fallback
+
+  // Wait broadly for any recognisable event container
   await page.waitForSelector(
-    'li.fusion-layout-column, .fusion-layout-column, article.tribe_events_cat, .tribe_events_cat',
-    { state: 'attached', timeout: 15_000 }
+    [
+      'li.fusion-layout-column',
+      '.fusion-layout-column',
+      'article.tribe_events_cat',
+      'article.type-tribe_events',
+      '.tribe-events-pro-grid__event',
+      '.tribe-common-l-container',
+      'article[class*="event"]',
+      '.event-item',
+      '.events-list__item',
+    ].join(', '),
+    { state: 'attached', timeout: 20_000 }
   ).catch(() => {});
- 
-  async function autoScroll() {
-    await page.evaluate(async () => {
-      await new Promise((resolve) => {
-        let totalHeight = 0;
-        const distance = 300;
-        const timer = setInterval(() => {
-          window.scrollBy(0, distance);
-          totalHeight += distance;
-          if (totalHeight >= document.body.scrollHeight) {
-            clearInterval(timer);
-            resolve();
-          }
-        }, 400);
-      });
+
+  // Scroll to trigger lazy-loads
+  await page.evaluate(async () => {
+    await new Promise((resolve) => {
+      let total = 0;
+      const timer = setInterval(() => {
+        window.scrollBy(0, 400);
+        total += 400;
+        if (total >= document.body.scrollHeight) { clearInterval(timer); resolve(); }
+      }, 300);
     });
-  }
- 
-  let lastCount = 0;
-  let unchangedRounds = 0;
-  while (true) {
-    await autoScroll();
-    await new Promise(r => setTimeout(r, 3_000));
-    const count = await page.evaluate(() =>
-      document.querySelectorAll(
-        'li.fusion-layout-column, .fusion-layout-column:not(.fusion-layout-column .fusion-layout-column)'
-      ).length
-    );
-    console.log(`  Depot scroll: events ${count}`);
-    if (count === lastCount) {
-      unchangedRounds++;
-      if (unchangedRounds >= 3) break;
-    } else {
-      unchangedRounds = 0;
-    }
-    lastCount = count;
-  }
- 
-  // Dump candidate selectors so you can see what's actually on the page
+  });
+  await new Promise(r => setTimeout(r, 3_000));
+
+  // Extended selector audit including tribe and common WP event patterns
   const selectorAudit = await page.evaluate(() => {
     const checks = [
       'li.fusion-layout-column',
       '.fusion-layout-column',
       'article[class*="tribe"]',
+      'article.type-tribe_events',
+      '.tribe-events-pro-grid__event',
+      '.tribe-common-l-container article',
       'article[class*="event"]',
+      '.event-item',
+      '.events-list__item',
       'a[href*="/event/"]',
+      'a[href*="/events/"]',
+      'a[href*="seetickets"]',
+      'a[href*="ticketweb"]',
+      'a[href*="eventbrite"]',
     ];
     return checks.map(sel => ({ sel, count: document.querySelectorAll(sel).length }));
   });
   console.log('  Depot selector audit:', JSON.stringify(selectorAudit));
- 
-  const events = await page.evaluate(() => {
-    // Primary: original selector
-    let items = Array.from(document.querySelectorAll('li.fusion-layout-column'));
- 
-    // Fallback: any column that contains an /event/ link
-    if (items.length === 0) {
-      items = Array.from(document.querySelectorAll('.fusion-layout-column'))
-        .filter(el => el.querySelector('a[href*="/event/"]'));
+
+  // Page structure dump to diagnose unknown layouts
+  const pageDump = await page.evaluate(() => {
+    const bodyText = (document.body?.innerText || '').slice(0, 800).replace(/\s+/g, ' ');
+    const allLinks = Array.from(document.querySelectorAll('a[href]'))
+      .map(a => a.getAttribute('href') || '')
+      .filter(h => h && !h.startsWith('#') && !h.startsWith('javascript'))
+      .slice(0, 40);
+    const tagClasses = {};
+    for (const tag of ['article', 'li', 'div', 'section']) {
+      const els = document.querySelectorAll(tag + '[class]');
+      const cls = new Set();
+      for (const el of els) for (const c of el.classList) cls.add(c);
+      if (cls.size) tagClasses[tag] = [...cls].slice(0, 30).join(' ');
     }
- 
-    return items.map((item) => {
+    return { bodyText, allLinks, tagClasses };
+  });
+  console.log('  Depot body snippet:', pageDump.bodyText);
+  console.log('  Depot all links (sample):', pageDump.allLinks);
+  console.log('  Depot element classes:', JSON.stringify(pageDump.tagClasses));
+
+  const events = await page.evaluate(() => {
+    function extractItem(item, linkSel) {
       let imageUrl = '';
-      const img = item.querySelector('.fusion-imageframe img, .fusion-featured-image img, img[src], img[data-src]');
+      const img = item.querySelector('img[src], img[data-src], img[data-lazy-src]');
       if (img) {
         const raw = img.getAttribute('src') || img.getAttribute('data-src') || img.getAttribute('data-lazy-src') || '';
         if (raw && !raw.startsWith('data:')) {
           try { imageUrl = new URL(raw, location.href).href; } catch { imageUrl = raw.trim(); }
         }
       }
+      const link = item.querySelector(linkSel) || item.querySelector('a[href]');
+      const title = item.querySelector('h2 a, h3 a, h2, h3, .tribe-event-url, .event-title')?.innerText?.trim()
+        || link?.innerText?.trim() || '';
+      const dateEl = item.querySelector(
+        '.tribe-event-date-start, time, .event-date, .date, p[class*="date"], span[class*="date"]'
+      );
       return {
-        title:     item.querySelector('h2 a')?.innerText.trim() || '',
-        date:      item.querySelector('.fusion-text p')?.innerText.trim() || '',
-        url:       item.querySelector('a[href*="/event/"]')?.href || '',
-        venue:     'Depot Cardiff',
+        title,
+        date: dateEl?.innerText?.trim() || dateEl?.getAttribute('datetime') || '',
+        url: link?.href || '',
+        venue: 'Depot Cardiff',
         scrapedAt: new Date().toISOString(),
         ...(imageUrl ? { imageUrl } : {}),
       };
-    }).filter((e) => e.title);
+    }
+
+    // Try selectors in priority order
+    const strategies = [
+      // Old Avada layout
+      { sel: 'li.fusion-layout-column', linkSel: 'a[href*="/event/"]' },
+      { sel: '.fusion-layout-column:not(.fusion-layout-column .fusion-layout-column)', linkSel: 'a[href]' },
+      // The Events Calendar (tribe) layouts
+      { sel: 'article.type-tribe_events', linkSel: 'a.url, a[href*="/event"]' },
+      { sel: '.tribe-events-pro-grid__event', linkSel: 'a' },
+      { sel: '.tribe-common-l-container article', linkSel: 'a' },
+      // Generic WP event patterns
+      { sel: 'article[class*="event"]', linkSel: 'a[href]' },
+      { sel: '.event-item', linkSel: 'a[href]' },
+      { sel: '.events-list__item', linkSel: 'a[href]' },
+    ];
+
+    for (const { sel, linkSel } of strategies) {
+      const items = Array.from(document.querySelectorAll(sel));
+      if (items.length > 0) {
+        return items.map(item => extractItem(item, linkSel)).filter(e => e.title);
+      }
+    }
+    return [];
   });
- 
+
   await page.close();
   console.log(`  Depot: ${events.length} events`);
   return events;
@@ -2737,78 +2771,146 @@ async function scrapeFuel(context) {
   console.log('Scraping Fuel Rock Club...');
   const page = await context.newPage();
   await gotoAndSettle(page, 'https://www.fuelrockclub.co.uk/events/', null);
- 
-  // Wait a bit for iframes to inject
-  await new Promise(r => setTimeout(r, 4_000));
- 
-  // Audit what iframes are actually on the page
+
+  // Wait for iframes or direct event containers to appear
+  await new Promise(r => setTimeout(r, 5_000));
+
   const iframeAudit = await page.evaluate(() =>
-    Array.from(document.querySelectorAll('iframe')).map(f => f.getAttribute('src') || '(no src)')
+    Array.from(document.querySelectorAll('iframe')).map(f => ({
+      src: f.getAttribute('src') || '(no src)',
+      id: f.id || '',
+      className: f.className || '',
+    }))
   );
   console.log('  Fuel: iframes found:', iframeAudit.length ? iframeAudit : ['none']);
- 
-  // Try progressively broader selectors
+
+  // --- Path A: SociableKit or Facebook iframe ---
   const iframeSelectors = [
     'iframe[src*="sociablekit"]',
     'iframe[src*="sociable"]',
-    'iframe[src*="facebook"]',
+    'iframe[src*="facebook.com/plugins/page"]',
+    'iframe[src*="facebook.com/events"]',
     'iframe[id*="sociable"]',
     'iframe[class*="sociable"]',
   ];
- 
+
   let iframeElement = null;
   for (const sel of iframeSelectors) {
     iframeElement = await page.$(sel);
     if (iframeElement) {
-      console.log(`  Fuel: matched iframe with selector: ${sel}`);
+      console.log(`  Fuel: matched iframe selector: ${sel}`);
       break;
     }
   }
- 
-  if (!iframeElement) {
-    console.log('  Fuel: SociableKit iframe not found — check iframes logged above');
-    await page.close();
-    return [];
-  }
- 
-  const frame = await iframeElement.contentFrame();
-  if (!frame) {
-    console.log('  Fuel: could not access iframe content (cross-origin?)');
-    await page.close();
-    return [];
-  }
- 
-  await frame.waitForSelector('.sk-event-item', { timeout: 20_000 }).catch(() => {});
-  await new Promise(r => setTimeout(r, 3_000));
- 
-  const events = await frame.evaluate(() => {
-    function cleanText(t) {
-      return t?.replace(/\s+/g, ' ').trim() || '';
+
+  if (iframeElement) {
+    const frame = await iframeElement.contentFrame();
+    if (frame) {
+      await frame.waitForSelector('.sk-event-item', { timeout: 15_000 }).catch(() => {});
+      await new Promise(r => setTimeout(r, 2_000));
+      const events = await frame.evaluate(() => {
+        function cleanText(t) { return t?.replace(/\s+/g, ' ').trim() || ''; }
+        return Array.from(document.querySelectorAll('.sk-event-item')).map(item => {
+          const title = cleanText(item.querySelector('.sk-event-item-title')?.innerText);
+          const url =
+            item.querySelector('.sk-event-item-fb-link')?.href ||
+            item.querySelector('.sk-event-item-gettickets')?.href || '';
+          const rawImage = item.querySelector('img')?.getAttribute('src') || '';
+          const timeEl = item.querySelector('.sk-event-item-date time');
+          return {
+            title, date: cleanText(timeEl?.innerText), eventStartDate: timeEl?.getAttribute('datetime') || '',
+            url, imageUrl: rawImage && !rawImage.startsWith('data:') ? rawImage : '',
+            venue: 'Fuel Rock Club', scrapedAt: new Date().toISOString(),
+          };
+        }).filter(e => e.title && e.url);
+      });
+      await page.close();
+      console.log(`  Fuel: ${events.length} events (via iframe)`);
+      return events;
     }
-    return Array.from(document.querySelectorAll('.sk-event-item')).map(item => {
-      const title = cleanText(item.querySelector('.sk-event-item-title')?.innerText);
-      const url =
-        item.querySelector('.sk-event-item-fb-link')?.href ||
-        item.querySelector('.sk-event-item-gettickets')?.href ||
-        '';
-      const rawImage = item.querySelector('img')?.getAttribute('src') || '';
-      const timeEl = item.querySelector('.sk-event-item-date time');
-      const rawDate = cleanText(timeEl?.innerText);
-      const isoDate = timeEl?.getAttribute('datetime') || '';
-      return {
-        title,
-        date:           rawDate,
-        eventStartDate: isoDate,
-        url,
-        imageUrl:       rawImage && !rawImage.startsWith('data:') ? rawImage : '',
-        venue:          'Fuel Rock Club',
-        scrapedAt:      new Date().toISOString(),
-      };
-    }).filter(e => e.title && e.url);
+    console.log('  Fuel: iframe found but content not accessible (cross-origin)');
+  }
+
+  // --- Path B: Direct on-page event listing (tribe / WP / custom) ---
+  const selectorAudit = await page.evaluate(() => {
+    const checks = [
+      'article.type-tribe_events',
+      '.tribe-events-pro-grid__event',
+      '.tribe-common-l-container article',
+      'article[class*="event"]',
+      '.event-item',
+      '.events-list__item',
+      'a[href*="/event"]',
+      'a[href*="eventbrite"]',
+      'a[href*="seetickets"]',
+      'a[href*="dice.fm"]',
+      'a[href*="ticketweb"]',
+      'a[href*="wegottickets"]',
+    ];
+    return checks.map(sel => ({ sel, count: document.querySelectorAll(sel).length }));
   });
- 
+  console.log('  Fuel selector audit:', JSON.stringify(selectorAudit));
+
+  // Full page structure dump
+  const pageDump = await page.evaluate(() => {
+    const bodyText = (document.body?.innerText || '').slice(0, 1000).replace(/\s+/g, ' ');
+    const allLinks = Array.from(document.querySelectorAll('a[href]'))
+      .map(a => a.getAttribute('href') || '')
+      .filter(h => h && !h.startsWith('#') && !h.startsWith('javascript'))
+      .slice(0, 50);
+    const tagClasses = {};
+    for (const tag of ['article', 'li', 'div', 'section']) {
+      const els = document.querySelectorAll(tag + '[class]');
+      const cls = new Set();
+      for (const el of els) for (const c of el.classList) cls.add(c);
+      if (cls.size) tagClasses[tag] = [...cls].slice(0, 30).join(' ');
+    }
+    return { bodyText, allLinks, tagClasses };
+  });
+  console.log('  Fuel body snippet:', pageDump.bodyText);
+  console.log('  Fuel all links (sample):', pageDump.allLinks);
+  console.log('  Fuel element classes:', JSON.stringify(pageDump.tagClasses));
+
+  const events = await page.evaluate(() => {
+    function extractItem(item) {
+      let imageUrl = '';
+      const img = item.querySelector('img[src], img[data-src], img[data-lazy-src]');
+      if (img) {
+        const raw = img.getAttribute('src') || img.getAttribute('data-src') || img.getAttribute('data-lazy-src') || '';
+        if (raw && !raw.startsWith('data:')) {
+          try { imageUrl = new URL(raw, location.href).href; } catch { imageUrl = raw.trim(); }
+        }
+      }
+      const title = item.querySelector('h2 a, h3 a, h2, h3, .tribe-event-url, .event-title')?.innerText?.trim() || '';
+      const dateEl = item.querySelector(
+        '.tribe-event-date-start, time, .event-date, .date, span[class*="date"], p[class*="date"]'
+      );
+      const url = item.querySelector('a.url, a[href*="/event"]')?.href || item.querySelector('a[href]')?.href || '';
+      return {
+        title, date: dateEl?.innerText?.trim() || dateEl?.getAttribute('datetime') || '',
+        eventStartDate: dateEl?.getAttribute('datetime') || '',
+        url, imageUrl, venue: 'Fuel Rock Club', scrapedAt: new Date().toISOString(),
+      };
+    }
+
+    const strategies = [
+      'article.type-tribe_events',
+      '.tribe-events-pro-grid__event',
+      '.tribe-common-l-container article',
+      'article[class*="event"]',
+      '.event-item',
+      '.events-list__item',
+    ];
+
+    for (const sel of strategies) {
+      const items = Array.from(document.querySelectorAll(sel));
+      if (items.length > 0) return items.map(extractItem).filter(e => e.title);
+    }
+    return [];
+  });
+
   await page.close();
-  console.log(`  Fuel: ${events.length} events`);
+  console.log(`  Fuel: ${events.length} events (direct)`);
   return events;
 }
  
@@ -3436,31 +3538,110 @@ function isChapterJunk(e) {
 async function scrapeClwb(context) {
   console.log('Scraping Clwb Ifor Bach...');
   const page = await context.newPage();
-  await gotoAndSettle(page, 'https://clwb.net/whats-on/', '#eventsListings li.grid-item');
+
+  // Wait for any recognisable event container
+  await page.goto('https://clwb.net/whats-on/', { waitUntil: 'domcontentloaded', timeout: 45_000 });
+  await page.waitForLoadState('load').catch(() => {});
+  await page.waitForSelector(
+    [
+      '#eventsListings li.grid-item',
+      'li.grid-item',
+      'article.type-tribe_events',
+      '.tribe-events-pro-grid__event',
+      '.tribe-common-l-container article',
+      'article[class*="event"]',
+      '.event-item',
+    ].join(', '),
+    { state: 'attached', timeout: 20_000 }
+  ).catch(() => {});
+  await new Promise(r => setTimeout(r, 2_000));
+
+  // Diagnostic dump when needed
+  const selectorAudit = await page.evaluate(() => {
+    const checks = [
+      '#eventsListings li.grid-item',
+      'li.grid-item',
+      'article.type-tribe_events',
+      '.tribe-events-pro-grid__event',
+      '.tribe-common-l-container article',
+      'article[class*="event"]',
+      '.event-item',
+      'a[href*="/event"]',
+      'a[href*="seetickets"]',
+    ];
+    return checks.map(sel => ({ sel, count: document.querySelectorAll(sel).length }));
+  });
+  console.log('  Clwb selector audit:', JSON.stringify(selectorAudit));
+
+  if (selectorAudit.every(r => r.count === 0)) {
+    const pageDump = await page.evaluate(() => {
+      const bodyText = (document.body?.innerText || '').slice(0, 800).replace(/\s+/g, ' ');
+      const allLinks = Array.from(document.querySelectorAll('a[href]'))
+        .map(a => a.getAttribute('href') || '')
+        .filter(h => h && !h.startsWith('#') && !h.startsWith('javascript'))
+        .slice(0, 40);
+      const tagClasses = {};
+      for (const tag of ['article', 'li', 'div', 'section']) {
+        const els = document.querySelectorAll(tag + '[class]');
+        const cls = new Set();
+        for (const el of els) for (const c of el.classList) cls.add(c);
+        if (cls.size) tagClasses[tag] = [...cls].slice(0, 30).join(' ');
+      }
+      return { bodyText, allLinks, tagClasses };
+    });
+    console.log('  Clwb body snippet:', pageDump.bodyText);
+    console.log('  Clwb all links (sample):', pageDump.allLinks);
+    console.log('  Clwb element classes:', JSON.stringify(pageDump.tagClasses));
+  }
+
   const events = await page.evaluate(() => {
-    return Array.from(document.querySelectorAll('#eventsListings li.grid-item')).map((item) => {
+    function extractItem(item) {
       let imageUrl = '';
-      const img = item.querySelector('figure img, .grid-item-image img, img[src], img[data-src]');
+      const img = item.querySelector('figure img, .grid-item-image img, img[src], img[data-src], img[data-lazy-src]');
       if (img) {
         const raw = img.getAttribute('src') || img.getAttribute('data-src') || img.getAttribute('data-lazy-src') || '';
         if (raw && !raw.startsWith('data:')) {
           try { imageUrl = new URL(raw, location.href).href; } catch { imageUrl = raw.trim(); }
         }
       }
+      const title = item.querySelector('h3.grid-item-title, h2, h3, .tribe-event-url, .event-title')?.innerText?.trim() || '';
+      const dateEl = item.querySelector(
+        'p.grid-item-support.date-translate, p.date-translate, .tribe-event-date-start, time, .event-date, span[class*="date"]'
+      );
+      const details = Array.from(item.querySelectorAll('p.grid-item-support:not(.date-translate)'))
+        .map(p => p.innerText.trim()).filter(Boolean).join(' • ');
+      const url =
+        item.querySelector('a.tickets-button, a[href*="seetickets"], a[href*="fatsoma"], figure a, .grid-item-image a')?.href ||
+        item.querySelector('a.url, a[href*="/event"]')?.href ||
+        item.querySelector('a[href^="http"]')?.href || '';
       return {
-        title: item.querySelector('h3.grid-item-title')?.innerText.trim() || '',
-        date: item.querySelector('p.grid-item-support.date-translate, p.date-translate')?.innerText.trim() || '',
-        details: Array.from(item.querySelectorAll('p.grid-item-support:not(.date-translate)'))
-          .map((p) => p.innerText.trim()).join(' • '),
-        url:
-          item.querySelector('a.tickets-button, a[href*="seetickets"], a[href*="fatsoma"], figure a, .grid-item-image a')?.href ||
-          item.querySelector('a[href^="http"]')?.href || '',
+        title,
+        date: dateEl?.innerText?.trim() || dateEl?.getAttribute('datetime') || '',
+        details,
+        url,
         venue: 'Clwb Ifor Bach',
         scrapedAt: new Date().toISOString(),
         ...(imageUrl ? { imageUrl } : {}),
       };
-    }).filter((e) => e.title);
+    }
+
+    const strategies = [
+      '#eventsListings li.grid-item',
+      'li.grid-item',
+      'article.type-tribe_events',
+      '.tribe-events-pro-grid__event',
+      '.tribe-common-l-container article',
+      'article[class*="event"]',
+      '.event-item',
+    ];
+
+    for (const sel of strategies) {
+      const items = Array.from(document.querySelectorAll(sel));
+      if (items.length > 0) return items.map(extractItem).filter(e => e.title);
+    }
+    return [];
   });
+
   await page.close();
   console.log(`  Clwb: ${events.length} events`);
   return events;
