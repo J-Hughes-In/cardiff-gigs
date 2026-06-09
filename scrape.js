@@ -691,6 +691,25 @@ async function fetchPageEnrichment(page, url) {
 
     const bodyText = (document.body?.innerText || '').slice(0, 20_000);
 
+    // ── Sold-out detection ────────────────────────────────────────────────────
+    // tixr.com: each ticket row carries data-product-state; event is sold out
+    // when every row is SOLD_OUT or CLOSED (and at least one row exists).
+    const tixrRows = Array.from(document.querySelectorAll('[data-product-state]'));
+    const tixrSoldOut = tixrRows.length > 0 &&
+      tixrRows.every((el) => {
+        const s = el.getAttribute('data-product-state');
+        return s === 'SOLD_OUT' || s === 'CLOSED';
+      });
+
+    // seetickets.com: sold out when every .v2-price-status says "not available"
+    // AND a waiting-list sign-up is present.
+    const priceStatuses = Array.from(document.querySelectorAll('.v2-price-status'));
+    const hasWaitingList = !!(document.querySelector('.waiting-list-btn') || document.querySelector('#triggerSubscribe'));
+    const seeTicketsSoldOut = priceStatuses.length > 0 && hasWaitingList &&
+      priceStatuses.every((el) => /tickets\s+not\s+available/i.test(el.innerText || ''));
+
+    const soldOut = tixrSoldOut || seeTicketsSoldOut;
+
     return {
       description: description || '',
       shortDescription: ogDesc || '',
@@ -711,6 +730,7 @@ async function fetchPageEnrichment(page, url) {
           : null,
       ogTitle,
       bodySnippet: bodyText,
+      soldOut,
     };
   });
 }
@@ -1240,6 +1260,12 @@ function mergeEnrichmentIntoEvent(ev, en) {
     }
   }
 
+  if (en.soldOut && !out.availability) {
+    out.availability         = 'SOLD OUT';
+    out.availabilityRange    = '100%';
+    out.availabilityEstimate = 100;
+  }
+
   const trail = tidyBreadcrumbTrail(en.breadcrumbTrail);
   if (trail && !out.subcategory) out.subcategory = trail;
   if (en.eventKeywords && !out.eventKeywords) out.eventKeywords = String(en.eventKeywords).trim();
@@ -1538,26 +1564,60 @@ async function scrapeWMC(context) {
     try {
       await descPage.goto(event.url, { waitUntil: 'domcontentloaded', timeout: 30_000 });
       await descPage.waitForTimeout(1500);
-      event.description = await descPage.evaluate(() => {
+      const pageData = await descPage.evaluate(() => {
+        // Description
         const detailsEl = document.querySelector('.production-details');
-        if (!detailsEl) return '';
-        // Collect text from all content element blocks, skipping well boxes (practical info)
-        const contentBlocks = detailsEl.querySelectorAll('.dnadesign__elemental__models__elementcontent .content-element__content');
-        const paragraphs = [];
-        contentBlocks.forEach(block => {
-          if (block.querySelector('.o-well')) return; // skip practical info boxes
-          block.querySelectorAll('p').forEach(p => {
-            const text = p.innerText.trim();
-            if (text) paragraphs.push(text);
+        let description = '';
+        if (detailsEl) {
+          const contentBlocks = detailsEl.querySelectorAll('.dnadesign__elemental__models__elementcontent .content-element__content');
+          const paragraphs = [];
+          contentBlocks.forEach(block => {
+            if (block.querySelector('.o-well')) return; // skip practical info boxes
+            block.querySelectorAll('p').forEach(p => {
+              const text = p.innerText.trim();
+              if (text) paragraphs.push(text);
+            });
           });
-        });
-        if (paragraphs.length) return paragraphs.join('\n\n');
-        // fallback: lede or first paragraph
-        const lede = detailsEl.querySelector('p.o-lede');
-        if (lede) return lede.innerText.trim();
-        const firstP = detailsEl.querySelector('p');
-        return firstP?.innerText.trim() || '';
+          if (paragraphs.length) {
+            description = paragraphs.join('\n\n');
+          } else {
+            const lede = detailsEl.querySelector('p.o-lede');
+            if (lede) description = lede.innerText.trim();
+            else description = detailsEl.querySelector('p')?.innerText.trim() || '';
+          }
+        }
+
+        // Sub-venue from event page header (fallback when card had no prefix)
+        const headerVenue = document.querySelector('.production-header__venue')?.innerText.trim() || '';
+
+        // Booking ticket URL from the CTA button
+        const ticketUrl = document.querySelector('.production-header__cta a[href]')?.href || '';
+
+        // Price shown on the booking button
+        const ticketPrice = document.querySelector('.production-header__btn-price')?.innerText.trim() || '';
+
+        return { description, headerVenue, ticketUrl, ticketPrice };
       });
+
+      event.description = pageData.description;
+
+      // Apply sub-venue from header if not already resolved from listing card prefix
+      if (!event.subVenue && pageData.headerVenue) {
+        const subVenue = wmcParseSubVenue(pageData.headerVenue);
+        if (subVenue) event.subVenue = subVenue;
+      }
+
+      // Stash ticket URL and price for use in the availability pass
+      if (pageData.ticketUrl) event._ticketUrl = pageData.ticketUrl;
+      if (pageData.ticketPrice && !event.ticketPriceLabel) {
+        const m = pageData.ticketPrice.match(/£(\d+(?:\.\d+)?)/);
+        if (m) {
+          event.ticketPriceFrom = Number(m[1]);
+          event.ticketPriceTo   = Number(m[1]);
+          event.ticketCurrency  = 'GBP';
+          event.ticketPriceLabel = `£${m[1]}`;
+        }
+      }
     } catch (err) {
       console.warn(`  WMC: could not scrape description for ${event.url}: ${err.message}`);
       event.description = '';
@@ -1565,13 +1625,13 @@ async function scrapeWMC(context) {
       await descPage.close();
     }
   }
- 
+
   // Run descriptions in batches of DESC_CONCURRENCY
   for (let i = 0; i < events.length; i += DESC_CONCURRENCY) {
     await Promise.all(events.slice(i, i + DESC_CONCURRENCY).map(fetchDescription));
   }
- 
-  // ── Availability (sequential — hits /performances sub-page) ───────────────
+
+  // ── Availability (sequential — hits /performances sub-page, with ticket-page fallback) ──
   for (const event of events) {
     if (!event.url) continue;
     const computed = await wmcScrapeAvailability(context, event.url);
@@ -1580,9 +1640,40 @@ async function scrapeWMC(context) {
       event.availabilityRange    = computed.availabilityRange;
       event.availabilityEstimate = computed.availabilityEstimate;
       Object.assign(event, wmcComputePopularity(event));
+    } else if (event._ticketUrl) {
+      // No /performances page — check the direct booking page for sold-out status
+      const bestAvailUrl = event._ticketUrl.replace(
+        /\/en\/booking\/production\/(\d+)$/,
+        '/en/booking/production/bestavailable/$1'
+      );
+      const ticketPage = await context.newPage();
+      try {
+        await ticketPage.goto(bestAvailUrl, { waitUntil: 'domcontentloaded', timeout: 30_000 });
+        await ticketPage.waitForTimeout(1000);
+        const soldOut = await ticketPage.evaluate(() => {
+          const content = document.querySelector('.content.group, #page-content');
+          if (!content) return false;
+          return /\bsold\s*out\b/i.test(content.innerText || '');
+        });
+        if (soldOut) {
+          event.availability         = 'SOLD OUT';
+          event.availabilityRange    = '100%';
+          event.availabilityEstimate = 100;
+        } else {
+          event.availability         = 'GOOD AVAILABILITY';
+          event.availabilityRange    = '0-30%';
+          event.availabilityEstimate = 15;
+        }
+        Object.assign(event, wmcComputePopularity(event));
+      } catch {
+        // leave availability unset
+      } finally {
+        await ticketPage.close();
+      }
     }
+    delete event._ticketUrl;
   }
- 
+
   const withAvailability = events.filter((e) => e.availability).length;
   const withSubVenue     = events.filter((e) => e.subVenue).length;
   const withDescription  = events.filter((e) => e.description).length;
@@ -2453,6 +2544,17 @@ async function scrapeDepot(context) {
   });
 
   await page.close();
+
+  // Strip "SOLD OUT:" prefix from titles and set availability fields
+  for (const ev of events) {
+    if (/^sold\s*out\s*:/i.test(ev.title)) {
+      ev.title               = ev.title.replace(/^sold\s*out\s*:\s*/i, '').trim();
+      ev.availability        = 'SOLD OUT';
+      ev.availabilityRange   = '100%';
+      ev.availabilityEstimate = 100;
+    }
+  }
+
   console.log(`  Depot: ${events.length} events`);
   return events;
 }
