@@ -691,6 +691,25 @@ async function fetchPageEnrichment(page, url) {
 
     const bodyText = (document.body?.innerText || '').slice(0, 20_000);
 
+    // ── Sold-out detection ────────────────────────────────────────────────────
+    // tixr.com: each ticket row carries data-product-state; event is sold out
+    // when every row is SOLD_OUT or CLOSED (and at least one row exists).
+    const tixrRows = Array.from(document.querySelectorAll('[data-product-state]'));
+    const tixrSoldOut = tixrRows.length > 0 &&
+      tixrRows.every((el) => {
+        const s = el.getAttribute('data-product-state');
+        return s === 'SOLD_OUT' || s === 'CLOSED';
+      });
+
+    // seetickets.com: sold out when every .v2-price-status says "not available"
+    // AND a waiting-list sign-up is present.
+    const priceStatuses = Array.from(document.querySelectorAll('.v2-price-status'));
+    const hasWaitingList = !!(document.querySelector('.waiting-list-btn') || document.querySelector('#triggerSubscribe'));
+    const seeTicketsSoldOut = priceStatuses.length > 0 && hasWaitingList &&
+      priceStatuses.every((el) => /tickets\s+not\s+available/i.test(el.innerText || ''));
+
+    const soldOut = tixrSoldOut || seeTicketsSoldOut;
+
     return {
       description: description || '',
       shortDescription: ogDesc || '',
@@ -711,6 +730,7 @@ async function fetchPageEnrichment(page, url) {
           : null,
       ogTitle,
       bodySnippet: bodyText,
+      soldOut,
     };
   });
 }
@@ -1238,6 +1258,12 @@ function mergeEnrichmentIntoEvent(ev, en) {
       if (high != null && !Number.isNaN(high) && high !== low) out.ticketPriceTo = high;
       out.ticketCurrency = en.microdataPrice.currency || out.ticketCurrency || 'GBP';
     }
+  }
+
+  if (en.soldOut && !out.availability) {
+    out.availability         = 'SOLD OUT';
+    out.availabilityRange    = '100%';
+    out.availabilityEstimate = 100;
   }
 
   const trail = tidyBreadcrumbTrail(en.breadcrumbTrail);
@@ -2518,6 +2544,17 @@ async function scrapeDepot(context) {
   });
 
   await page.close();
+
+  // Strip "SOLD OUT:" prefix from titles and set availability fields
+  for (const ev of events) {
+    if (/^sold\s*out\s*:/i.test(ev.title)) {
+      ev.title               = ev.title.replace(/^sold\s*out\s*:\s*/i, '').trim();
+      ev.availability        = 'SOLD OUT';
+      ev.availabilityRange   = '100%';
+      ev.availabilityEstimate = 100;
+    }
+  }
+
   console.log(`  Depot: ${events.length} events`);
   return events;
 }
