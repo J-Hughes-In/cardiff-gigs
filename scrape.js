@@ -691,15 +691,41 @@ async function fetchPageEnrichment(page, url) {
 
     const bodyText = (document.body?.innerText || '').slice(0, 20_000);
 
-    // ── Sold-out detection ────────────────────────────────────────────────────
-    // tixr.com: each ticket row carries data-product-state; event is sold out
-    // when every row is SOLD_OUT or CLOSED (and at least one row exists).
+    // ── Tixr.com: sold-out detection + price extraction ──────────────────────
+    // Each ticket row carries data-product-state; event is sold out when every
+    // row is SOLD_OUT or CLOSED (and at least one row exists).
     const tixrRows = Array.from(document.querySelectorAll('[data-product-state]'));
     const tixrSoldOut = tixrRows.length > 0 &&
       tixrRows.every((el) => {
         const s = el.getAttribute('data-product-state');
         return s === 'SOLD_OUT' || s === 'CLOSED';
       });
+    // Extract the face-value price from open ticket rows (lowest across types).
+    // Prefer the base price from .itemization "(£X.XX + fees)" over the all-in
+    // .price text so we report the face value rather than the total with fees.
+    let tixrPriceLow = null;
+    let tixrPriceHigh = null;
+    for (const row of tixrRows) {
+      const state = row.getAttribute('data-product-state');
+      if (state === 'SOLD_OUT' || state === 'CLOSED') continue;
+      let price = null;
+      const itemization = row.querySelector('.itemization');
+      if (itemization) {
+        const m = (itemization.innerText || '').match(/£(\d+(?:\.\d+)?)/);
+        if (m) price = parseFloat(m[1]);
+      }
+      if (price == null) {
+        const priceEl = row.querySelector('.price');
+        if (priceEl) {
+          const m = (priceEl.innerText || '').match(/£(\d+(?:\.\d+)?)/);
+          if (m) price = parseFloat(m[1]);
+        }
+      }
+      if (price != null && !isNaN(price) && price > 0) {
+        tixrPriceLow  = tixrPriceLow  == null ? price : Math.min(tixrPriceLow,  price);
+        tixrPriceHigh = tixrPriceHigh == null ? price : Math.max(tixrPriceHigh, price);
+      }
+    }
 
     // seetickets.com: sold out when every .v2-price-status says "not available"
     // AND a waiting-list sign-up is present.
@@ -731,6 +757,7 @@ async function fetchPageEnrichment(page, url) {
       ogTitle,
       bodySnippet: bodyText,
       soldOut,
+      tixrPrice: tixrPriceLow != null ? { low: tixrPriceLow, high: tixrPriceHigh ?? tixrPriceLow } : null,
     };
   });
 }
@@ -1278,6 +1305,13 @@ function mergeEnrichmentIntoEvent(ev, en) {
       out.ticketCurrency = vis.currency || 'GBP';
       out.ticketPriceLabel = vis.label;
     }
+  }
+
+  // tixr.com face-value price (last resort — used when no structured price found)
+  if (out.ticketPriceFrom == null && en.tixrPrice) {
+    out.ticketPriceFrom = en.tixrPrice.low;
+    if (en.tixrPrice.high !== en.tixrPrice.low) out.ticketPriceTo = en.tixrPrice.high;
+    out.ticketCurrency = out.ticketCurrency || 'GBP';
   }
 
   return out;
@@ -3938,6 +3972,165 @@ async function scrapeLlandaffCathedral(context) {
 }
 
 // ---------------------------------------------------------------------------
+// Paradise Garden
+// ---------------------------------------------------------------------------
+
+async function scrapeParadiseGarden(context) {
+  console.log('Scraping Paradise Garden...');
+  const page = await context.newPage();
+
+  // Determine the current and next month slugs (e.g. "june2026", "july2026")
+  const MONTH_NAMES = ['january','february','march','april','may','june',
+                       'july','august','september','october','november','december'];
+  const now = new Date();
+  const monthSlugs = [
+    MONTH_NAMES[now.getMonth()] + now.getFullYear(),
+    MONTH_NAMES[(now.getMonth() + 1) % 12] + (now.getMonth() === 11 ? now.getFullYear() + 1 : now.getFullYear()),
+  ];
+
+  const events = [];
+
+  for (const slug of monthSlugs) {
+    const url = `https://www.paradise-garden.co.uk/events/${slug}`;
+    try {
+      await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 30_000 });
+      await page.waitForTimeout(2000);
+
+      // Check the page actually has content (month may not be published yet)
+      const hasContent = await page.evaluate(() =>
+        !!document.querySelector('.sqs-html-content, .gallery-grid-item')
+      );
+      if (!hasContent) {
+        console.log(`  Paradise Garden: no content at ${url}, skipping`);
+        continue;
+      }
+
+      const pageData = await page.evaluate((slug) => {
+        // Extract month/year from slug (e.g. "june2026")
+        const monthMatch = slug.match(/^([a-z]+)(\d{4})$/);
+        const monthName = monthMatch ? monthMatch[1] : '';
+        const year = monthMatch ? parseInt(monthMatch[2], 10) : new Date().getFullYear();
+        const MONTH_MAP = {
+          january:1, february:2, march:3, april:4, may:5, june:6,
+          july:7, august:8, september:9, october:10, november:11, december:12,
+        };
+        const monthNum = MONTH_MAP[monthName] || 1;
+
+        // First image from the gallery grid — used for all events this month
+        const gridImg = document.querySelector('.gallery-grid-item img[data-src], .gallery-grid-item img[src]');
+        const imageUrl = gridImg
+          ? (gridImg.getAttribute('data-src') || gridImg.getAttribute('src') || '').split('?format=')[0]
+          : '';
+
+        // Parse event text from the .sqs-html-content block
+        const content = document.querySelector('.sqs-html-content');
+        if (!content) return { imageUrl, events: [] };
+
+        const children = Array.from(content.children);
+        const parsedEvents = [];
+        let currentDate = null; // { day: int }
+        let currentTitles = []; // h3 text seen after the date
+        let currentDesc = [];   // p text seen after the last h3
+
+        function flushTitle() {
+          if (!currentDate || !currentTitles.length) return;
+          // Each h3 after a date becomes a separate event
+          for (let ti = 0; ti < currentTitles.length; ti++) {
+            const titleText = currentTitles[ti].trim();
+            if (!titleText) continue;
+            // Description: paragraphs that followed this title
+            // (only the last title in a group gets the desc paragraphs)
+            const desc = ti === currentTitles.length - 1 ? currentDesc.join('\n').trim() : '';
+            const dateStr = `${year}-${String(monthNum).padStart(2,'0')}-${String(currentDate.day).padStart(2,'0')}`;
+            parsedEvents.push({ dateStr, title: titleText, description: desc });
+          }
+          currentTitles = [];
+          currentDesc = [];
+        }
+
+        function tryParseDate(text) {
+          // Matches patterns like "wed 3", "thur 4", "fri 5 ", "mon 14" etc.
+          const m = text.trim().match(/^(?:mon|tue|tues|wed|thur|thu|fri|sat|sun)\s+(\d{1,2})(?:\s|$)/i);
+          return m ? parseInt(m[1], 10) : null;
+        }
+
+        for (const el of children) {
+          const tag = el.tagName.toLowerCase();
+          const rawText = el.innerText?.trim() || '';
+
+          // Date heading: <h4> or <p><strong> containing day-of-week + day number
+          if (tag === 'h4' || tag === 'h2') {
+            // h2 may be a section header (e.g. "june 2026 events...") — skip those
+            const dayNum = tryParseDate(rawText);
+            if (dayNum != null) {
+              flushTitle();
+              currentDate = { day: dayNum };
+            }
+            // else: h2 section header — leave currentDate as is
+            continue;
+          }
+
+          if (tag === 'p') {
+            // Could be a <p><strong>fri 5</strong></p> date marker
+            const strongText = el.querySelector('strong')?.innerText?.trim() || '';
+            const dayNum = tryParseDate(strongText || rawText);
+            if (dayNum != null) {
+              flushTitle();
+              currentDate = { day: dayNum };
+              continue;
+            }
+            // Otherwise it's a description paragraph
+            if (rawText && currentDate) currentDesc.push(rawText);
+            continue;
+          }
+
+          if (tag === 'h3') {
+            if (!currentDate) continue;
+            // Flush desc from previous title before starting a new one
+            if (currentTitles.length && currentDesc.length) {
+              // assign desc to previous title and start fresh
+              const prevTitle = currentTitles[currentTitles.length - 1];
+              const dateStr = `${year}-${String(monthNum).padStart(2,'0')}-${String(currentDate.day).padStart(2,'0')}`;
+              parsedEvents.push({ dateStr, title: prevTitle.trim(), description: currentDesc.join('\n').trim() });
+              currentTitles = currentTitles.slice(0, -1);
+              currentDesc = [];
+            }
+            currentTitles.push(rawText);
+            continue;
+          }
+        }
+        flushTitle();
+
+        return { imageUrl, events: parsedEvents };
+      }, slug);
+
+      for (const ev of pageData.events) {
+        // Skip "private hire" and blank titles
+        if (!ev.title || /^private\s+hire$/i.test(ev.title)) continue;
+        events.push({
+          title: ev.title,
+          date: ev.dateStr,
+          eventStartDate: ev.dateStr,
+          description: ev.description || '',
+          venue: 'Paradise Garden',
+          url: url,
+          imageUrl: pageData.imageUrl,
+          scrapedAt: new Date().toISOString(),
+        });
+      }
+
+      console.log(`  Paradise Garden: ${pageData.events.length} events from ${slug}`);
+    } catch (err) {
+      console.warn(`  Paradise Garden: failed to scrape ${url}: ${err.message}`);
+    }
+  }
+
+  await page.close();
+  console.log(`  Paradise Garden: ${events.length} total events`);
+  return events;
+}
+
+// ---------------------------------------------------------------------------
 // Venue registry — single source of truth for name → scraper mapping
 // ---------------------------------------------------------------------------
 
@@ -3956,7 +4149,8 @@ const SCRAPERS = [
   { name: 'Sherman',        fn: scrapeSherman        },
   { name: 'Canopi',         fn: scrapeCanopi         },
   { name: 'CultVR',              fn: scrapeCultVR              },
-  { name: 'Llandaff Cathedral', fn: scrapeLlandaffCathedral   },
+  { name: 'Llandaff Cathedral',  fn: scrapeLlandaffCathedral  },
+  { name: 'Paradise Garden',    fn: scrapeParadiseGarden     },
   // { name: 'Acapela',          fn: scrapeAcapela             },
   // { name: 'Chapter Arts',     fn: scrapeChapterArts         },
 ];
