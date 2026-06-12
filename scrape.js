@@ -1597,17 +1597,26 @@ async function scrapeWMC(context) {
     const descPage = await context.newPage();
     try {
       await descPage.goto(event.url, { waitUntil: 'domcontentloaded', timeout: 30_000 });
-      await descPage.waitForTimeout(1500);
+      // Wait for Angular to render the production detail content.
+      // Try for up to 6 s; fall through gracefully if it never appears.
+      await descPage.waitForSelector('.production-details, .o-lede, [class*="elemental"]', { timeout: 6_000 }).catch(() => {});
+      await descPage.waitForTimeout(1000);
       const pageData = await descPage.evaluate(() => {
-        // Description
+        // Description — try structured elemental content blocks first
         const detailsEl = document.querySelector('.production-details');
         let description = '';
         if (detailsEl) {
           const contentBlocks = detailsEl.querySelectorAll('.dnadesign__elemental__models__elementcontent .content-element__content');
           const paragraphs = [];
           contentBlocks.forEach(block => {
-            if (block.querySelector('.o-well')) return; // skip practical info boxes
+            // Only skip blocks that are *entirely* a .o-well (practical info box);
+            // blocks that merely contain one should still yield their other paragraphs.
+            const wells = block.querySelectorAll('.o-well');
             block.querySelectorAll('p').forEach(p => {
+              // skip paragraphs that live inside an .o-well
+              let inWell = false;
+              for (const w of wells) { if (w.contains(p)) { inWell = true; break; } }
+              if (inWell) return;
               const text = p.innerText.trim();
               if (text) paragraphs.push(text);
             });
@@ -1615,10 +1624,19 @@ async function scrapeWMC(context) {
           if (paragraphs.length) {
             description = paragraphs.join('\n\n');
           } else {
-            const lede = detailsEl.querySelector('p.o-lede');
-            if (lede) description = lede.innerText.trim();
-            else description = detailsEl.querySelector('p')?.innerText.trim() || '';
+            // Fallbacks: lede, any paragraph, or the whole details block text
+            const lede = detailsEl.querySelector('p.o-lede, .o-lede p');
+            if (lede) {
+              description = lede.innerText.trim();
+            } else {
+              const firstP = detailsEl.querySelector('p');
+              description = firstP?.innerText.trim() || detailsEl.innerText.trim().slice(0, 1000);
+            }
           }
+        }
+        // Last-resort: og:description meta tag
+        if (!description) {
+          description = document.querySelector('meta[property="og:description"], meta[name="description"]')?.getAttribute('content')?.trim() || '';
         }
 
         // Sub-venue from event page header (fallback when card had no prefix)
@@ -3993,15 +4011,17 @@ async function scrapeParadiseGarden(context) {
   for (const slug of monthSlugs) {
     const url = `https://www.paradise-garden.co.uk/events/${slug}`;
     try {
-      await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 30_000 });
-      await page.waitForTimeout(2000);
+      await page.goto(url, { waitUntil: 'networkidle', timeout: 45_000 }).catch(() => {});
+      // Wait for the event text block to appear (Squarespace renders via JS)
+      await page.waitForSelector('.sqs-html-content h3, .sqs-html-content h4, .sqs-html-content p strong', { timeout: 8_000 }).catch(() => {});
+      await page.waitForTimeout(1500);
 
       // Check the page actually has content (month may not be published yet)
       const hasContent = await page.evaluate(() =>
-        !!document.querySelector('.sqs-html-content, .gallery-grid-item')
+        !!document.querySelector('.sqs-html-content h3, .sqs-html-content h4')
       );
       if (!hasContent) {
-        console.log(`  Paradise Garden: no content at ${url}, skipping`);
+        console.log(`  Paradise Garden: no event content at ${url}, skipping`);
         continue;
       }
 
@@ -4016,90 +4036,101 @@ async function scrapeParadiseGarden(context) {
         };
         const monthNum = MONTH_MAP[monthName] || 1;
 
-        // First image from the gallery grid — used for all events this month
-        const gridImg = document.querySelector('.gallery-grid-item img[data-src], .gallery-grid-item img[src]');
+        // First image from the gallery grid — used for all events this month.
+        // Squarespace can use data-src, data-image, or src on the img element.
+        const gridImg = document.querySelector(
+          '.gallery-grid-item img, figure[class*="gallery"] img, [class*="gallery-grid"] img'
+        );
         const imageUrl = gridImg
-          ? (gridImg.getAttribute('data-src') || gridImg.getAttribute('src') || '').split('?format=')[0]
+          ? (
+              gridImg.getAttribute('data-image') ||
+              gridImg.getAttribute('data-src') ||
+              gridImg.getAttribute('src') || ''
+            ).split('?format=')[0]
           : '';
 
-        // Parse event text from the .sqs-html-content block
-        const content = document.querySelector('.sqs-html-content');
-        if (!content) return { imageUrl, events: [] };
+        // Find the .sqs-html-content block that contains the event listing.
+        // There may be several blocks; pick the one with the most h3/h4 headings.
+        const allBlocks = Array.from(document.querySelectorAll('.sqs-html-content'));
+        const content = allBlocks.reduce((best, block) => {
+          const count = block.querySelectorAll('h3, h4').length;
+          return count > (best ? best.querySelectorAll('h3, h4').length : 0) ? block : best;
+        }, null);
 
-        const children = Array.from(content.children);
+        if (!content) return { imageUrl, events: [], debug: 'no .sqs-html-content found' };
+
+        // Flatten all descendant elements (not just direct children) so we handle
+        // nested wrappers that Squarespace sometimes injects.
+        const elements = Array.from(content.querySelectorAll('h1,h2,h3,h4,h5,p'));
+
         const parsedEvents = [];
-        let currentDate = null; // { day: int }
-        let currentTitles = []; // h3 text seen after the date
-        let currentDesc = [];   // p text seen after the last h3
+        let currentDate = null;
+        let currentTitle = null;
+        let currentDesc = [];
 
-        function flushTitle() {
-          if (!currentDate || !currentTitles.length) return;
-          // Each h3 after a date becomes a separate event
-          for (let ti = 0; ti < currentTitles.length; ti++) {
-            const titleText = currentTitles[ti].trim();
-            if (!titleText) continue;
-            // Description: paragraphs that followed this title
-            // (only the last title in a group gets the desc paragraphs)
-            const desc = ti === currentTitles.length - 1 ? currentDesc.join('\n').trim() : '';
+        function flushEvent() {
+          if (!currentDate || !currentTitle) return;
+          const titleText = currentTitle.trim();
+          if (titleText) {
             const dateStr = `${year}-${String(monthNum).padStart(2,'0')}-${String(currentDate.day).padStart(2,'0')}`;
-            parsedEvents.push({ dateStr, title: titleText, description: desc });
+            parsedEvents.push({ dateStr, title: titleText, description: currentDesc.join('\n').trim() });
           }
-          currentTitles = [];
+          currentTitle = null;
           currentDesc = [];
         }
 
         function tryParseDate(text) {
-          // Matches patterns like "wed 3", "thur 4", "fri 5 ", "mon 14" etc.
-          const m = text.trim().match(/^(?:mon|tue|tues|wed|thur|thu|fri|sat|sun)\s+(\d{1,2})(?:\s|$)/i);
+          const m = text.trim().match(/^(?:mon|tue|tues|wed|thur|thu|fri|sat|sun)\.?\s+(\d{1,2})(?:\s|\(|$)/i);
           return m ? parseInt(m[1], 10) : null;
         }
 
-        for (const el of children) {
+        for (const el of elements) {
           const tag = el.tagName.toLowerCase();
-          const rawText = el.innerText?.trim() || '';
+          const rawText = (el.innerText || el.textContent || '').trim();
+          if (!rawText) continue;
 
-          // Date heading: <h4> or <p><strong> containing day-of-week + day number
-          if (tag === 'h4' || tag === 'h2') {
-            // h2 may be a section header (e.g. "june 2026 events...") — skip those
+          // Date: h4 like "wed 3", or p>strong like "fri 5" or "fri 5 (new distraktions)"
+          if (tag === 'h4' || tag === 'h5') {
             const dayNum = tryParseDate(rawText);
             if (dayNum != null) {
-              flushTitle();
+              flushEvent();
               currentDate = { day: dayNum };
+              continue;
             }
-            // else: h2 section header — leave currentDate as is
+            // h4 with no day number may be a sub-description — treat as desc if we have a title
+            if (currentTitle) currentDesc.push(rawText);
             continue;
           }
 
           if (tag === 'p') {
-            // Could be a <p><strong>fri 5</strong></p> date marker
-            const strongText = el.querySelector('strong')?.innerText?.trim() || '';
-            const dayNum = tryParseDate(strongText || rawText);
+            // Bold paragraph used as date marker: <p><strong>fri 5</strong></p>
+            const strongText = (el.querySelector('strong, b')?.innerText || '').trim();
+            const candidateText = strongText || rawText;
+            const dayNum = tryParseDate(candidateText);
             if (dayNum != null) {
-              flushTitle();
+              flushEvent();
               currentDate = { day: dayNum };
+              // If the <p> had extra text after the date (e.g. "(new distraktions)") ignore it
               continue;
             }
-            // Otherwise it's a description paragraph
-            if (rawText && currentDate) currentDesc.push(rawText);
+            if (currentTitle) currentDesc.push(rawText);
             continue;
           }
 
           if (tag === 'h3') {
             if (!currentDate) continue;
-            // Flush desc from previous title before starting a new one
-            if (currentTitles.length && currentDesc.length) {
-              // assign desc to previous title and start fresh
-              const prevTitle = currentTitles[currentTitles.length - 1];
-              const dateStr = `${year}-${String(monthNum).padStart(2,'0')}-${String(currentDate.day).padStart(2,'0')}`;
-              parsedEvents.push({ dateStr, title: prevTitle.trim(), description: currentDesc.join('\n').trim() });
-              currentTitles = currentTitles.slice(0, -1);
-              currentDesc = [];
-            }
-            currentTitles.push(rawText);
+            // Each h3 is a distinct event on the same date
+            flushEvent();
+            currentTitle = rawText;
+            continue;
+          }
+
+          if (tag === 'h2') {
+            // Section headers like "june 2026 events at paradise garden:" — skip
             continue;
           }
         }
-        flushTitle();
+        flushEvent();
 
         return { imageUrl, events: parsedEvents };
       }, slug);
