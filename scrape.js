@@ -4089,7 +4089,7 @@ async function scrapeParadiseGarden(context) {
 
         for (const el of elements) {
           const tag = el.tagName.toLowerCase();
-          const rawText = (el.innerText || el.textContent || '').trim();
+         const rawText = (el.textContent || '').trim();
           if (!rawText) continue;
 
           // Date: h4 like "wed 3", or p>strong like "fri 5" or "fri 5 (new distraktions)"
@@ -4107,7 +4107,7 @@ async function scrapeParadiseGarden(context) {
 
           if (tag === 'p') {
             // Bold paragraph used as date marker: <p><strong>fri 5</strong></p>
-            const strongText = (el.querySelector('strong, b')?.innerText || '').trim();
+            const strongText = (el.querySelector('strong, b')?.textContent || '').trim();
             const candidateText = strongText || rawText;
             const dayNum = tryParseDate(candidateText);
             if (dayNum != null) {
