@@ -1617,7 +1617,9 @@ async function scrapeWMC(context) {
               let inWell = false;
               for (const w of wells) { if (w.contains(p)) { inWell = true; break; } }
               if (inWell) return;
-              const text = p.innerText.trim();
+              // Use textContent rather than innerText: wow.js starts elements with
+              // visibility:hidden, and innerText returns "" for hidden elements.
+              const text = (p.textContent || '').trim();
               if (text) paragraphs.push(text);
             });
           });
@@ -1627,10 +1629,10 @@ async function scrapeWMC(context) {
             // Fallbacks: lede, any paragraph, or the whole details block text
             const lede = detailsEl.querySelector('p.o-lede, .o-lede p');
             if (lede) {
-              description = lede.innerText.trim();
+              description = (lede.textContent || '').trim();
             } else {
               const firstP = detailsEl.querySelector('p');
-              description = firstP?.innerText.trim() || detailsEl.innerText.trim().slice(0, 1000);
+              description = (firstP?.textContent || detailsEl.textContent || '').trim().slice(0, 1000);
             }
           }
         }
@@ -1640,13 +1642,14 @@ async function scrapeWMC(context) {
         }
 
         // Sub-venue from event page header (fallback when card had no prefix)
-        const headerVenue = document.querySelector('.production-header__venue')?.innerText.trim() || '';
+        // textContent used for the same visibility reason
+        const headerVenue = (document.querySelector('.production-header__venue')?.textContent || '').trim();
 
         // Booking ticket URL from the CTA button
         const ticketUrl = document.querySelector('.production-header__cta a[href]')?.href || '';
 
         // Price shown on the booking button
-        const ticketPrice = document.querySelector('.production-header__btn-price')?.innerText.trim() || '';
+        const ticketPrice = (document.querySelector('.production-header__btn-price')?.textContent || '').trim();
 
         return { description, headerVenue, ticketUrl, ticketPrice };
       });
