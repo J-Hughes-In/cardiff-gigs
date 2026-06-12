@@ -3841,10 +3841,16 @@ const GENERIC_LISTING_URLS = new Set([
   normalizeUrlForDedupe('https://www.thegate.org.uk/whats-on'),
 ]);
 
+function isGenericListingUrl(normalizedUrl) {
+  if (GENERIC_LISTING_URLS.has(normalizedUrl)) return true;
+  if (/paradise-garden\.co\.uk\/events\/[a-z]+\d{4}$/.test(normalizedUrl)) return true;
+  return false;
+}
+
 function eventDedupeKey(ev) {
   const url = typeof ev.url === 'string' ? ev.url.trim() : '';
   const nu = normalizeUrlForDedupe(url);
-  if (nu && /^https?:\/\//i.test(url) && !GENERIC_LISTING_URLS.has(nu)) return `url:${nu}`;
+  if (nu && /^https?:\/\//i.test(url) && !isGenericListingUrl(nu)) return `url:${nu}`;
   const title = normalizeTitleForDedupe(ev.title);
   const date = String(ev.date || ev.eventStartDate || '').trim().toLowerCase();
   const venue = String(ev.venue || '').trim().toLowerCase();
