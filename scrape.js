@@ -4062,24 +4062,33 @@ async function scrapeAll(selectedScrapers) {
     baseEvents = previousEvents.filter((e) => !successVenueNames.has(e.venue));
   }
 
-  // Build a lookup of previous scrapedAt by dedupe key (across all previous events)
+  // Build a lookup of previous event data by dedupe key (across all previous events)
   const previousScrapedAt = new Map();
+  const previousDescriptions = new Map();
   for (const ev of previousEvents) {
     const k = eventDedupeKey(ev);
     if (ev.scrapedAt && !previousScrapedAt.has(k)) {
       previousScrapedAt.set(k, ev.scrapedAt);
     }
+    if (ev.description && !previousDescriptions.has(k)) {
+      previousDescriptions.set(k, ev.description);
+    }
   }
 
-  // Stamp new events, preserve scrapedAt for events we've seen before
+  // Stamp new events, preserve scrapedAt for events we've seen before.
+  // Also preserve description from the previous scrape if the fresh scrape
+  // returned an empty string — transient page-load failures shouldn't wipe
+  // a description that was successfully captured in an earlier run.
   const now = new Date().toISOString();
   let newCount = 0;
   const stamped = dedupedFresh.map((ev) => {
     const k = eventDedupeKey(ev);
-    const existing = previousScrapedAt.get(k);
-    if (existing) return { ...ev, scrapedAt: existing };
-    newCount++;
-    return { ...ev, scrapedAt: now };
+    const existingScrapedAt = previousScrapedAt.get(k);
+    const existingDescription = previousDescriptions.get(k);
+    const description = ev.description || existingDescription || ev.description;
+    const base = existingScrapedAt ? { ...ev, scrapedAt: existingScrapedAt } : { ...ev, scrapedAt: now };
+    if (!existingScrapedAt) newCount++;
+    return description !== ev.description ? { ...base, description } : base;
   });
 
   if (newCount > 0) console.log(`\n${newCount} new event(s) detected since last scrape`);
