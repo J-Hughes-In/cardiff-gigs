@@ -2,9 +2,10 @@ name: Scrape Cardiff Gigs
 
 on:
   schedule:
-    - cron: '0 8 * * *'
-    - cron: '0 14 * * *'
-    - cron: '0 20 * * *'
+    - cron: '7 7 * * *'
+    - cron: '7 10 * * *'
+    - cron: '7 14 * * *'
+    - cron: '7 19 * * *'
   workflow_dispatch:
     inputs:
       venue:
@@ -48,7 +49,7 @@ jobs:
       - name: Enrich comedian data
         # Run once a day on the 08:00 UTC scheduled cron only.
         # Skipped on manual dispatches and the 14:00/20:00 scheduled runs.
-        if: github.event_name == 'schedule' && startsWith(github.event.schedule, '0 8')
+        if: github.event_name == 'schedule' && startsWith(github.event.schedule, '7 19')
         run: node comedians.js
         continue-on-error: true
 
