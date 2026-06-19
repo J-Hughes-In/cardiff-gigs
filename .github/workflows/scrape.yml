@@ -2,10 +2,12 @@ name: Scrape Cardiff Gigs
 
 on:
   schedule:
-    - cron: '7 7 * * *'
-    - cron: '7 10 * * *'
-    - cron: '7 14 * * *'
-    - cron: '7 19 * * *'
+    
+    - cron: '3 4 * * *'
+    - cron: '3 7 * * *'
+    - cron: '3 10 * * *'
+    - cron: '3 14 * * *'
+    - cron: '3 19 * * *'
   workflow_dispatch:
     inputs:
       venue:
