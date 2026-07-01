@@ -1715,9 +1715,12 @@ async function scrapeWMC(context) {
           event.availabilityRange    = '100%';
           event.availabilityEstimate = 100;
         } else {
-          event.availability         = 'GOOD AVAILABILITY';
-          event.availabilityRange    = '0-30%';
-          event.availabilityEstimate = 15;
+          // No seat-map/tier breakdown is exposed on this page — it's just an
+          // unreserved "on sale" or not-yet-public "upcoming" allocation, so
+          // there's no real signal to estimate a tier from. Don't guess.
+          event.availability         = 'UNKNOWN';
+          event.availabilityRange    = null;
+          event.availabilityEstimate = null;
         }
         Object.assign(event, wmcComputePopularity(event));
       } catch {
