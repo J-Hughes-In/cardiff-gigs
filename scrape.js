@@ -1651,7 +1651,24 @@ async function scrapeWMC(context) {
         // Price shown on the booking button
         const ticketPrice = (document.querySelector('.production-header__btn-price')?.textContent || '').trim();
 
-        return { description, headerVenue, ticketUrl, ticketPrice };
+        // On-sale schedule (.production-header__onsale) — only rendered when the
+        // production isn't bookable yet but has scheduled pre-sale/public on-sale
+        // dates. Grab the "on sale to public" tier (or the last tier if there's
+        // no public one) so we can show a real date instead of guessing at
+        // availability. textContent is used since these items can be ng-hide'd.
+        let onSaleDate = '';
+        const onsaleEl = document.querySelector('.production-header__onsale');
+        if (onsaleEl && onsaleEl.getAttribute('aria-hidden') !== 'true') {
+          const items = Array.from(onsaleEl.querySelectorAll('.production-header__onsale-item'));
+          const publicItem = items.find((it) =>
+            /public/i.test((it.querySelector('.production-header__onsale-label')?.textContent || ''))
+          ) || items[items.length - 1];
+          if (publicItem) {
+            onSaleDate = (publicItem.querySelector('.production-header__onsale-date')?.textContent || '').trim();
+          }
+        }
+
+        return { description, headerVenue, ticketUrl, ticketPrice, onSaleDate };
       });
 
       event.description = pageData.description;
@@ -1662,8 +1679,9 @@ async function scrapeWMC(context) {
         if (subVenue) event.subVenue = subVenue;
       }
 
-      // Stash ticket URL and price for use in the availability pass
+      // Stash ticket URL, price and on-sale date for use in the availability pass
       if (pageData.ticketUrl) event._ticketUrl = pageData.ticketUrl;
+      if (pageData.onSaleDate) event._onSaleDate = pageData.onSaleDate;
       if (pageData.ticketPrice && !event.ticketPriceLabel) {
         const m = pageData.ticketPrice.match(/£(\d+(?:\.\d+)?)/);
         if (m) {
@@ -1694,6 +1712,13 @@ async function scrapeWMC(context) {
       event.availability         = computed.availability;
       event.availabilityRange    = computed.availabilityRange;
       event.availabilityEstimate = computed.availabilityEstimate;
+      Object.assign(event, wmcComputePopularity(event));
+    } else if (event._onSaleDate) {
+      // Not bookable yet, but the page told us exactly when it goes on sale —
+      // show that instead of guessing at a tier or a generic "unknown".
+      event.availability         = `Tickets on sale: ${event._onSaleDate}`;
+      event.availabilityRange    = null;
+      event.availabilityEstimate = null;
       Object.assign(event, wmcComputePopularity(event));
     } else if (event._ticketUrl) {
       // No /performances page — check the direct booking page for sold-out status
@@ -1730,6 +1755,7 @@ async function scrapeWMC(context) {
       }
     }
     delete event._ticketUrl;
+    delete event._onSaleDate;
   }
 
   const withAvailability = events.filter((e) => e.availability).length;
