@@ -71,14 +71,18 @@ const GENRE_SIGNALS = [
 // ─── WMC availability helpers ────────────────────────────────────────────────
 
 const WMC_AVAILABILITY_TIERS = {
-  'good availability':                 { label: 'GOOD AVAILABILITY',              range: '0-30%',  mid: 15  },
-  'moderate availability':             { label: 'MODERATE AVAILABILITY',          range: '31-60%', mid: 46  },
-  'limited availability':              { label: 'LIMITED AVAILABILITY',           range: '61-90%', mid: 76  },
-  'only wheelchair seating available': { label: 'ONLY WHEELCHAIR SEATING AVAILABLE', range: '91-99%', mid: 95  },
-  'sold out':                          { label: 'SOLD OUT',                       range: '100%',   mid: 100 },
+  'good availability':                 { label: 'GOOD AVAILABILITY',              range: '0-30%',  lo: 0,   hi: 30,  mid: 15  },
+  'moderate availability':             { label: 'MODERATE AVAILABILITY',          range: '31-60%', lo: 31,  hi: 60,  mid: 46  },
+  'limited availability':              { label: 'LIMITED AVAILABILITY',           range: '61-90%', lo: 61,  hi: 90,  mid: 76  },
+  'only wheelchair seating available': { label: 'ONLY WHEELCHAIR SEATING AVAILABLE', range: '91-99%', lo: 91, hi: 99, mid: 95  },
+  'sold out':                          { label: 'SOLD OUT',                       range: '100%',   lo: 100, hi: 100, mid: 100 },
 };
 
+// Ordered scarcest → most available. The headline tier for a multi-night run
+// is the scarcest tier seen on any night (a run where only one night is down
+// to wheelchair seats is still "selling out" from a buyer's perspective).
 const WMC_AVAILABILITY_RANK = [
+  'sold out',
   'only wheelchair seating available',
   'limited availability',
   'moderate availability',
@@ -101,35 +105,90 @@ function wmcParseSubVenue(rawPrefix) {
   return null;
 }
 
-function wmcComputeAvailability(labels) {
-  if (!labels.length) return null;
-  const tiers = labels.map((l) => {
-    const lower = l.toLowerCase().trim();
+/**
+ * Turn the per-performance availability read from a WMC /performances page into
+ * a single headline tier plus a per-night breakdown.
+ *
+ * Accepts either an array of raw label strings (back-compat) or an array of
+ * `{ date, label }` objects (preferred — lets us report which night is scarce).
+ *
+ * The headline `availability` / `availabilityRange` come from the scarcest tier
+ * seen on any night. Critically, `availabilityEstimate` is clamped INTO that
+ * headline tier's own range, so the estimate can never contradict the range it
+ * is shown alongside (previously a "91-99%" run could report an 82% estimate —
+ * a cross-night average that fell below its own stated range).
+ */
+function wmcComputeAvailability(entries) {
+  if (!entries || !entries.length) return null;
+
+  // Normalise to { date, label } — tolerate plain strings from older callers.
+  const rows = entries
+    .map((e) => (typeof e === 'string' ? { date: null, label: e } : e))
+    .filter((e) => e && e.label);
+  if (!rows.length) return null;
+
+  const matchTier = (label) => {
+    const lower = String(label).toLowerCase().trim();
     for (const [key, tier] of Object.entries(WMC_AVAILABILITY_TIERS)) {
-      if (lower.includes(key)) return tier;
+      if (lower.includes(key)) return { key, tier };
     }
     return null;
-  }).filter(Boolean);
-  if (!tiers.length) return null;
+  };
 
+  // One entry per performance that we could classify.
+  const perf = rows
+    .map((r) => {
+      const m = matchTier(r.label);
+      if (!m) return null;
+      return {
+        date:                 r.date || null,
+        availability:         m.tier.label,
+        availabilityRange:    m.tier.range,
+        availabilityEstimate: m.tier.mid,
+        _key:                 m.key,
+        _tier:                m.tier,
+      };
+    })
+    .filter(Boolean);
+  if (!perf.length) return null;
+
+  // Headline tier = scarcest across all nights (worst-first by rank).
   let bestTier = null;
   for (const rank of WMC_AVAILABILITY_RANK) {
-    const match = tiers.find((t) => t.label.toLowerCase().includes(rank));
-    if (match) { bestTier = match; break; }
+    const hit = perf.find((p) => p._key === rank);
+    if (hit) { bestTier = hit._tier; break; }
+  }
+  if (!bestTier) {
+    bestTier = perf.map((p) => p._tier).sort((a, b) => b.mid - a.mid)[0];
   }
 
-  const avgMid = Math.round(tiers.reduce((sum, t) => sum + t.mid, 0) / tiers.length);
-  const hasLimitedOrWorse = tiers.some((t) => t.mid >= 76);
-  const flooredAvg = hasLimitedOrWorse ? Math.max(avgMid, 50) : avgMid;
+  // Cross-night occupancy stats from tier midpoints.
+  const mids   = perf.map((p) => p._tier.mid);
+  const avgMid = Math.round(mids.reduce((a, b) => a + b, 0) / mids.length);
+  const minMid = Math.min(...mids);
+  const maxMid = Math.max(...mids);
 
-  const clamped = bestTier
-    ? Math.min(Math.max(flooredAvg, 0), bestTier.mid === 15 ? 30 : bestTier.mid === 46 ? 60 : bestTier.mid === 76 ? 90 : bestTier.mid === 95 ? 99 : 100)
-    : flooredAvg;
+  // Keep the headline estimate INSIDE the headline tier's range so the two
+  // numbers stay consistent (e.g. an "only wheelchair" run reports 91-99% and
+  // an estimate that is also ≥91, not a lower cross-night average).
+  const availabilityEstimate = Math.min(Math.max(avgMid, bestTier.lo), bestTier.hi);
+
+  // How many nights sit in each tier — a compact, human-readable breakdown.
+  const tierCounts = {};
+  for (const p of perf) tierCounts[p.availability] = (tierCounts[p.availability] || 0) + 1;
 
   return {
-    availability:         bestTier?.label ?? null,
-    availabilityRange:    bestTier?.range ?? null,
-    availabilityEstimate: clamped,
+    availability:         bestTier.label,
+    availabilityRange:    bestTier.range,
+    availabilityEstimate,
+    seatingAggregate: {
+      avgOccupancyPct:      avgMid,
+      minOccupancyPct:      minMid,
+      maxOccupancyPct:      maxMid,
+      performancesWithData: perf.length,
+      tierCounts,
+    },
+    performances: perf.map(({ _key, _tier, ...rest }) => rest),
   };
 }
 // ─── WMC popularity scoring ──────────────────────────────────────────────────
@@ -271,16 +330,33 @@ async function wmcScrapeAvailability(context, eventUrl) {
   try {
     await page.goto(perfUrl, { waitUntil: 'domcontentloaded', timeout: 45_000 });
     await wmcWaitForAngularBind(page);
-    const labels = await page.evaluate(() =>
-      Array.from(
-        document.querySelectorAll(
-          '.calendar-list-filter-list--performance-list .calendar-list-entry__availablity'
-        )
-      )
-        .map((el) => el.innerText?.trim() ?? '')
-        .filter((t) => t && !t.includes('{{'))
-    );
-    return wmcComputeAvailability(labels);
+    const entries = await page.evaluate(() => {
+      const list = document.querySelector('.calendar-list-filter-list--performance-list');
+      if (!list) return [];
+      const clean = (t) => (t || '').replace(/\s+/g, ' ').trim();
+
+      // Preferred: one row per performance so we can attach a date to each
+      // availability label (BEM: the availability node lives inside the entry).
+      const rows = Array.from(list.querySelectorAll('.calendar-list-entry'));
+      if (rows.length) {
+        return rows
+          .map((row) => {
+            const label = clean(row.querySelector('.calendar-list-entry__availablity')?.innerText);
+            const dateEl = row.querySelector(
+              '.calendar-list-entry__date, .calendar-list-entry__time, time, [class*="date"], [class*="time"]'
+            );
+            const date = dateEl ? clean(dateEl.innerText || dateEl.textContent) : null;
+            return { date: date || null, label };
+          })
+          .filter((e) => e.label && !e.label.includes('{{'));
+      }
+
+      // Fallback: flat availability nodes only (no per-night date available).
+      return Array.from(list.querySelectorAll('.calendar-list-entry__availablity'))
+        .map((el) => ({ date: null, label: clean(el.innerText) }))
+        .filter((e) => e.label && !e.label.includes('{{'));
+    });
+    return wmcComputeAvailability(entries);
   } catch {
     return null;
   } finally {
@@ -1712,6 +1788,10 @@ async function scrapeWMC(context) {
       event.availability         = computed.availability;
       event.availabilityRange    = computed.availabilityRange;
       event.availabilityEstimate = computed.availabilityEstimate;
+      if (computed.seatingAggregate) event.seatingAggregate = computed.seatingAggregate;
+      if (computed.performances && computed.performances.length > 1) {
+        event.performances = computed.performances;
+      }
       Object.assign(event, wmcComputePopularity(event));
     } else if (event._onSaleDate) {
       // Not bookable yet, but the page told us exactly when it goes on sale —
