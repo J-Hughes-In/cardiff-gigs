@@ -565,8 +565,16 @@ async function fetchPageEnrichment(page, url) {
   const host = (() => {
     try { return new URL(url).hostname; } catch { return ''; }
   })();
-  if (host.includes('tixr.com')) await new Promise((r) => setTimeout(r, 5_000));
-  else await new Promise((r) => setTimeout(r, 900));
+  if (host.includes('tixr.com')) {
+    // Tixr is a SPA — the ticket picker rows ([data-product-state]) are fetched
+    // via XHR after load. A blind wait races that request and can evaluate an
+    // empty picker (missing the sold-out state entirely), so wait for a real
+    // ticket row to render before reading it. Fall through if it never appears.
+    await page
+      .waitForSelector('[data-product-state], .event-ticket-picker .ticket', { timeout: 20_000 })
+      .catch(() => {});
+    await new Promise((r) => setTimeout(r, 1_500));
+  } else await new Promise((r) => setTimeout(r, 900));
 
   return page.evaluate(() => {
     const meta = (sel) => document.querySelector(sel)?.getAttribute('content')?.trim() || '';
@@ -768,22 +776,28 @@ async function fetchPageEnrichment(page, url) {
     const bodyText = (document.body?.innerText || '').slice(0, 20_000);
 
     // ── Tixr.com: sold-out detection + price extraction ──────────────────────
-    // Each ticket row carries data-product-state; event is sold out when every
-    // row is SOLD_OUT or CLOSED (and at least one row exists).
+    // Each ticket row carries data-product-state (and data-product-display-state);
+    // the event is sold out when every row is unavailable (and at least one row
+    // exists). A row is unavailable when either state attribute is SOLD_OUT or
+    // CLOSED, or the row renders a visible "Sold Out" badge — Tixr is not always
+    // consistent about which signal it sets.
     const tixrRows = Array.from(document.querySelectorAll('[data-product-state]'));
-    const tixrSoldOut = tixrRows.length > 0 &&
-      tixrRows.every((el) => {
-        const s = el.getAttribute('data-product-state');
-        return s === 'SOLD_OUT' || s === 'CLOSED';
-      });
+    const UNAVAILABLE_STATES = new Set(['SOLD_OUT', 'CLOSED']);
+    const rowIsUnavailable = (el) => {
+      const state = el.getAttribute('data-product-state');
+      const displayState = el.getAttribute('data-product-display-state');
+      if (UNAVAILABLE_STATES.has(state) || UNAVAILABLE_STATES.has(displayState)) return true;
+      const badge = el.querySelector('.tag.badge, .card-badge');
+      return !!badge && /sold\s*out/i.test(badge.textContent || '');
+    };
+    const tixrSoldOut = tixrRows.length > 0 && tixrRows.every(rowIsUnavailable);
     // Extract the face-value price from open ticket rows (lowest across types).
     // Prefer the base price from .itemization "(£X.XX + fees)" over the all-in
     // .price text so we report the face value rather than the total with fees.
     let tixrPriceLow = null;
     let tixrPriceHigh = null;
     for (const row of tixrRows) {
-      const state = row.getAttribute('data-product-state');
-      if (state === 'SOLD_OUT' || state === 'CLOSED') continue;
+      if (rowIsUnavailable(row)) continue;
       let price = null;
       const itemization = row.querySelector('.itemization');
       if (itemization) {
