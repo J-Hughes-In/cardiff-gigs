@@ -775,29 +775,41 @@ async function fetchPageEnrichment(page, url) {
 
     const bodyText = (document.body?.innerText || '').slice(0, 20_000);
 
-    // ── Tixr.com: sold-out detection + price extraction ──────────────────────
-    // Each ticket row carries data-product-state (and data-product-display-state);
-    // the event is sold out when every row is unavailable (and at least one row
-    // exists). A row is unavailable when either state attribute is SOLD_OUT or
-    // CLOSED, or the row renders a visible "Sold Out" badge — Tixr is not always
-    // consistent about which signal it sets.
+    // ── Tixr.com: sold-out / waitlist detection + price extraction ────────────
+    // Each ticket row carries data-product-state (and data-product-display-state).
+    // A row has no buyable inventory when it is sold out OR waitlist-only:
+    //   - sold out: either state attribute is SOLD_OUT/CLOSED, or a "Sold Out"
+    //     badge is shown (Tixr isn't consistent about which signal it sets).
+    //   - waitlist: the row carries a "Waitlist" badge / viewWaitlistTag action
+    //     (typically alongside a QUEUED state) — you can only join a waitlist.
+    // The event is effectively sold out when EVERY row is one of the above (and
+    // at least one row exists). If any of those rows is a waitlist row, we flag
+    // it so the event is labelled "WAITLIST AVAILABLE" rather than "SOLD OUT".
     const tixrRows = Array.from(document.querySelectorAll('[data-product-state]'));
     const UNAVAILABLE_STATES = new Set(['SOLD_OUT', 'CLOSED']);
-    const rowIsUnavailable = (el) => {
+    const rowBadgeText = (el) => {
+      const badge = el.querySelector('.tag.badge, .card-badge, [action="viewWaitlistTag"]');
+      return badge ? (badge.getAttribute('data-text') || badge.textContent || '') : '';
+    };
+    const rowIsWaitlist = (el) =>
+      !!el.querySelector('[action="viewWaitlistTag"]') || /waitlist/i.test(rowBadgeText(el));
+    const rowIsSoldOut = (el) => {
       const state = el.getAttribute('data-product-state');
       const displayState = el.getAttribute('data-product-display-state');
       if (UNAVAILABLE_STATES.has(state) || UNAVAILABLE_STATES.has(displayState)) return true;
-      const badge = el.querySelector('.tag.badge, .card-badge');
-      return !!badge && /sold\s*out/i.test(badge.textContent || '');
+      return /sold\s*out/i.test(rowBadgeText(el));
     };
-    const tixrSoldOut = tixrRows.length > 0 && tixrRows.every(rowIsUnavailable);
-    // Extract the face-value price from open ticket rows (lowest across types).
-    // Prefer the base price from .itemization "(£X.XX + fees)" over the all-in
-    // .price text so we report the face value rather than the total with fees.
+    const rowHasNoInventory = (el) => rowIsSoldOut(el) || rowIsWaitlist(el);
+    const tixrSoldOut = tixrRows.length > 0 && tixrRows.every(rowHasNoInventory);
+    const tixrWaitlist = tixrSoldOut && tixrRows.some(rowIsWaitlist);
+    // Extract the face-value price from rows you can still act on (open or
+    // waitlist — a waitlist row still shows the price you'd pay). Skip only
+    // genuinely sold-out rows. Prefer the base price from .itemization
+    // "(£X.XX + fees)" over the all-in .price text so we report face value.
     let tixrPriceLow = null;
     let tixrPriceHigh = null;
     for (const row of tixrRows) {
-      if (rowIsUnavailable(row)) continue;
+      if (rowIsSoldOut(row)) continue;
       let price = null;
       const itemization = row.querySelector('.itemization');
       if (itemization) {
@@ -847,6 +859,7 @@ async function fetchPageEnrichment(page, url) {
       ogTitle,
       bodySnippet: bodyText,
       soldOut,
+      waitlist: tixrWaitlist,
       tixrPrice: tixrPriceLow != null ? { low: tixrPriceLow, high: tixrPriceHigh ?? tixrPriceLow } : null,
     };
   });
@@ -1378,7 +1391,10 @@ function mergeEnrichmentIntoEvent(ev, en) {
   }
 
   if (en.soldOut && !out.availability) {
-    out.availability         = 'SOLD OUT';
+    // A waitlist-only event has no buyable inventory (100% gone) but still lets
+    // people join a waitlist, so surface that distinction rather than a flat
+    // "SOLD OUT".
+    out.availability         = en.waitlist ? 'WAITLIST AVAILABLE' : 'SOLD OUT';
     out.availabilityRange    = '100%';
     out.availabilityEstimate = 100;
   }
