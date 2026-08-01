@@ -1249,34 +1249,15 @@
     "scrapedAt": "2026-06-05T22:12:18.829Z",
     "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1773228297/WMC%20Content/Whats%20On/2026/Donald%20Gordon%20Theatre/The%20Karate%20Kid/KK26036_1280x960pxls_CARDIFF?_a=BAAAV6DQ",
     "description": "The iconic 80s generation defining movie is now a dynamic new musical.\n\nDaniel is the new kid in town trying to fit in until he becomes the target of Cobra Kai’s relentless star student, Johnny. Underestimated and outmatched, Daniel struggles to find his footing, until Ali, Johnny’s ex, sees something in Daniel that no one else does. As Johnny refuses to step aside, teenage rivalry turns into something more sinister. Daniel discovers guidance from Mr. Miyagi who teaches him that karate isn’t about fighting, it’s about balance, respect and that the greatest victories are won from within.\n\nFeaturing a Tony Award®-winning design team and an electrifying new score, this ‘elegant, emotional and remarkable’ (BroadwayWorld) coming-of-age masterpiece is reimagined with stunning artistry and groundbreaking choreography.\n\nHonouring the roots of the timeless story, this musical celebrates resilience, mentorship, and the quiet strength that bridges generations.\n\nDestiny is in your hands. Wax on. Wax off. Book now.",
-    "availability": "MODERATE AVAILABILITY",
-    "availabilityRange": "31-60%",
-    "availabilityEstimate": 46,
-    "seatingAggregate": {
-      "avgOccupancyPct": 46,
-      "minOccupancyPct": 46,
-      "maxOccupancyPct": 46,
-      "performancesWithData": 2,
-      "tierCounts": {
-        "MODERATE AVAILABILITY": 2
-      }
-    },
-    "performances": [
-      {
-        "date": "2:30pm",
-        "availability": "MODERATE AVAILABILITY",
-        "availabilityRange": "31-60%",
-        "availabilityEstimate": 46
-      },
-      {
-        "date": "7:30pm",
-        "availability": "MODERATE AVAILABILITY",
-        "availabilityRange": "31-60%",
-        "availabilityEstimate": 46
-      }
-    ],
-    "popularityScore": 32,
-    "popularityLabel": "Moderate demand",
+    "ticketPriceFrom": 19,
+    "ticketPriceTo": 19,
+    "ticketCurrency": "GBP",
+    "ticketPriceLabel": "£19",
+    "availability": "UNKNOWN",
+    "availabilityRange": null,
+    "availabilityEstimate": null,
+    "popularityScore": null,
+    "popularityLabel": null,
     "imageUrls": [
       "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1773228297/WMC%20Content/Whats%20On/2026/Donald%20Gordon%20Theatre/The%20Karate%20Kid/KK26036_1280x960pxls_CARDIFF?_a=BAAAV6DQ",
       "http://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_630%2Cw_1200/f_auto/q_auto/v1773228297/WMC%20Content/Whats%20On/2026/Donald%20Gordon%20Theatre/The%20Karate%20Kid/KK26036_1280x960pxls_CARDIFF?_a=BAAAV6DQ",
@@ -1285,12 +1266,8 @@
     ],
     "eventStartDate": "2026-07-28 19:30:00",
     "eventEndDate": "2026-08-01 22:00:00",
-    "ticketPriceFrom": 19,
-    "ticketPriceTo": 19,
-    "ticketCurrency": "GBP",
     "subcategory": "Wales Millennium Centre > What's on > 2026 > The Karate Kid",
-    "primaryCategory": "Musical Theatre",
-    "ticketPriceLabel": "£19"
+    "primaryCategory": "Musical Theatre"
   },
   {
     "title": "EVOLVER",
@@ -1305,11 +1282,202 @@
     "ticketPriceTo": 10,
     "ticketCurrency": "GBP",
     "ticketPriceLabel": "£10",
-    "availability": "UNKNOWN",
-    "availabilityRange": null,
-    "availabilityEstimate": null,
-    "popularityScore": null,
-    "popularityLabel": null,
+    "availability": "GOOD AVAILABILITY",
+    "availabilityRange": "0-30%",
+    "availabilityEstimate": 15,
+    "seatingAggregate": {
+      "avgOccupancyPct": 15,
+      "minOccupancyPct": 15,
+      "maxOccupancyPct": 15,
+      "performancesWithData": 30,
+      "tierCounts": {
+        "GOOD AVAILABILITY": 30
+      }
+    },
+    "performances": [
+      {
+        "date": null,
+        "availability": "GOOD AVAILABILITY",
+        "availabilityRange": "0-30%",
+        "availabilityEstimate": 15
+      },
+      {
+        "date": null,
+        "availability": "GOOD AVAILABILITY",
+        "availabilityRange": "0-30%",
+        "availabilityEstimate": 15
+      },
+      {
+        "date": null,
+        "availability": "GOOD AVAILABILITY",
+        "availabilityRange": "0-30%",
+        "availabilityEstimate": 15
+      },
+      {
+        "date": null,
+        "availability": "GOOD AVAILABILITY",
+        "availabilityRange": "0-30%",
+        "availabilityEstimate": 15
+      },
+      {
+        "date": null,
+        "availability": "GOOD AVAILABILITY",
+        "availabilityRange": "0-30%",
+        "availabilityEstimate": 15
+      },
+      {
+        "date": null,
+        "availability": "GOOD AVAILABILITY",
+        "availabilityRange": "0-30%",
+        "availabilityEstimate": 15
+      },
+      {
+        "date": null,
+        "availability": "GOOD AVAILABILITY",
+        "availabilityRange": "0-30%",
+        "availabilityEstimate": 15
+      },
+      {
+        "date": null,
+        "availability": "GOOD AVAILABILITY",
+        "availabilityRange": "0-30%",
+        "availabilityEstimate": 15
+      },
+      {
+        "date": null,
+        "availability": "GOOD AVAILABILITY",
+        "availabilityRange": "0-30%",
+        "availabilityEstimate": 15
+      },
+      {
+        "date": null,
+        "availability": "GOOD AVAILABILITY",
+        "availabilityRange": "0-30%",
+        "availabilityEstimate": 15
+      },
+      {
+        "date": null,
+        "availability": "GOOD AVAILABILITY",
+        "availabilityRange": "0-30%",
+        "availabilityEstimate": 15
+      },
+      {
+        "date": null,
+        "availability": "GOOD AVAILABILITY",
+        "availabilityRange": "0-30%",
+        "availabilityEstimate": 15
+      },
+      {
+        "date": null,
+        "availability": "GOOD AVAILABILITY",
+        "availabilityRange": "0-30%",
+        "availabilityEstimate": 15
+      },
+      {
+        "date": null,
+        "availability": "GOOD AVAILABILITY",
+        "availabilityRange": "0-30%",
+        "availabilityEstimate": 15
+      },
+      {
+        "date": null,
+        "availability": "GOOD AVAILABILITY",
+        "availabilityRange": "0-30%",
+        "availabilityEstimate": 15
+      },
+      {
+        "date": null,
+        "availability": "GOOD AVAILABILITY",
+        "availabilityRange": "0-30%",
+        "availabilityEstimate": 15
+      },
+      {
+        "date": null,
+        "availability": "GOOD AVAILABILITY",
+        "availabilityRange": "0-30%",
+        "availabilityEstimate": 15
+      },
+      {
+        "date": null,
+        "availability": "GOOD AVAILABILITY",
+        "availabilityRange": "0-30%",
+        "availabilityEstimate": 15
+      },
+      {
+        "date": null,
+        "availability": "GOOD AVAILABILITY",
+        "availabilityRange": "0-30%",
+        "availabilityEstimate": 15
+      },
+      {
+        "date": null,
+        "availability": "GOOD AVAILABILITY",
+        "availabilityRange": "0-30%",
+        "availabilityEstimate": 15
+      },
+      {
+        "date": null,
+        "availability": "GOOD AVAILABILITY",
+        "availabilityRange": "0-30%",
+        "availabilityEstimate": 15
+      },
+      {
+        "date": null,
+        "availability": "GOOD AVAILABILITY",
+        "availabilityRange": "0-30%",
+        "availabilityEstimate": 15
+      },
+      {
+        "date": null,
+        "availability": "GOOD AVAILABILITY",
+        "availabilityRange": "0-30%",
+        "availabilityEstimate": 15
+      },
+      {
+        "date": null,
+        "availability": "GOOD AVAILABILITY",
+        "availabilityRange": "0-30%",
+        "availabilityEstimate": 15
+      },
+      {
+        "date": null,
+        "availability": "GOOD AVAILABILITY",
+        "availabilityRange": "0-30%",
+        "availabilityEstimate": 15
+      },
+      {
+        "date": null,
+        "availability": "GOOD AVAILABILITY",
+        "availabilityRange": "0-30%",
+        "availabilityEstimate": 15
+      },
+      {
+        "date": null,
+        "availability": "GOOD AVAILABILITY",
+        "availabilityRange": "0-30%",
+        "availabilityEstimate": 15
+      },
+      {
+        "date": null,
+        "availability": "GOOD AVAILABILITY",
+        "availabilityRange": "0-30%",
+        "availabilityEstimate": 15
+      },
+      {
+        "date": null,
+        "availability": "GOOD AVAILABILITY",
+        "availabilityRange": "0-30%",
+        "availabilityEstimate": 15
+      },
+      {
+        "date": null,
+        "availability": "GOOD AVAILABILITY",
+        "availabilityRange": "0-30%",
+        "availabilityEstimate": 15
+      }
+    ],
+    "popularityScore": 9,
+    "popularityLabel": "Very low demand",
     "imageUrls": [
       "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1781104396/WMC%20Content/Whats%20On/2026/Immersive%20experience/Evolver/Evolver_On-Sale-Assets_Thumbnail_ARTWORK_AG100626?_a=BAAAV6DQ",
       "http://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_630%2Cw_1200/f_auto/q_auto/v1781104396/WMC%20Content/Whats%20On/2026/Immersive%20experience/Evolver/Evolver_On-Sale-Assets_Thumbnail_ARTWORK_AG100626?_a=BAAAV6DQ",
@@ -1329,6 +1497,10 @@
     "scrapedAt": "2026-06-05T22:12:18.829Z",
     "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_center%2Ch_270%2Cw_480/f_auto/q_auto/v1709306431/WMC%20Content/Whats%20On/WMC%20Tours/Auditorium2?_a=BAAAV6DQ",
     "description": "Take our backstage tour and get an exclusive behind-the-scenes glimpse into the world of theatre.\n\nBeginning at our iconic Donald Gordon Theatre, you’ll be guided through our rarely seen backstage areas before ending your tour with an opportunity for photos by our famous inscription wall.\n\nAfterwards, take your time to explore our front of house spaces, architecture and art, grab a seat and watch the world go by from our ground floor café-bar, Ffwrnais. Your delicious lunch, coffee or fresh pastry will taste all the better knowing you get 10% off by showing your tour ticket. You can also visit Armadilo, our theatre Shop, where you’ll also enjoy 10% off with your ticket—perfect for picking up a unique gift or souvenir.\n\nWe pride ourselves on being open and welcoming to everyone. If you have any specific access requirements, please contact us before the tour so that we can make any necessary arrangements.",
+    "ticketPriceFrom": 17,
+    "ticketPriceTo": 17,
+    "ticketCurrency": "GBP",
+    "ticketPriceLabel": "£17",
     "availability": "UNKNOWN",
     "availabilityRange": null,
     "availabilityEstimate": null,
@@ -1342,12 +1514,8 @@
     ],
     "eventStartDate": "2026-02-01 10:30:00",
     "eventEndDate": "2026-12-31 13:00:00",
-    "ticketPriceFrom": 17,
-    "ticketPriceTo": 17,
-    "ticketCurrency": "GBP",
     "subcategory": "Wales Millennium Centre > What's on > 2026 > Wales Millennium Centre Tours (English)",
-    "primaryCategory": "Theatre",
-    "ticketPriceLabel": "£17"
+    "primaryCategory": "Theatre"
   },
   {
     "title": "THE STARS OF TOMORROW",
@@ -1593,10 +1761,6 @@
     "scrapedAt": "2026-07-06T17:41:23.114Z",
     "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_center%2Ch_270%2Cw_480/f_auto/q_auto/v1709306431/WMC%20Content/Whats%20On/WMC%20Tours/Auditorium2?_a=BAAAV6DQ",
     "description": "Take our backstage tour and get an exclusive behind-the-scenes glimpse into the world of theatre.\n\nBeginning at our iconic Donald Gordon Theatre, you’ll be guided through our rarely seen backstage areas before ending your tour with an opportunity for photos by our famous inscription wall.\n\nAfterwards, take your time to explore our front of house spaces, architecture and art, grab a seat and watch the world go by from our ground floor café-bar, Ffwrnais. Your delicious lunch, coffee or fresh pastry will taste all the better knowing you get 10% off by showing your tour ticket. You can also visit Armadilo, our theatre Shop, where you’ll also enjoy 10% off with your ticket—perfect for picking up a unique gift or souvenir.\n\nWe pride ourselves on being open and welcoming to everyone. If you have any specific access requirements, please contact us before the tour so that we can make any necessary arrangements.",
-    "ticketPriceFrom": 17,
-    "ticketPriceTo": 17,
-    "ticketCurrency": "GBP",
-    "ticketPriceLabel": "£17",
     "availability": "UNKNOWN",
     "availabilityRange": null,
     "availabilityEstimate": null,
@@ -1610,8 +1774,12 @@
     ],
     "eventStartDate": "2026-05-15 10:00:00",
     "eventEndDate": "2026-06-28 11:00:00",
+    "ticketPriceFrom": 17,
+    "ticketPriceTo": 17,
+    "ticketCurrency": "GBP",
     "subcategory": "Wales Millennium Centre > What's on > 2026 > Wales Millennium Centre Tours (Welsh)",
-    "primaryCategory": "Theatre"
+    "primaryCategory": "Theatre",
+    "ticketPriceLabel": "£17"
   },
   {
     "title": "FLEETWOOD MAC'S 'RUMOURS' WITH THE TRANSATLANTIC ENSEMBLE",
@@ -1621,15 +1789,20 @@
     "scrapedAt": "2026-06-05T22:12:18.829Z",
     "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1712248782/WMC%20Content/Whats%20On/2024/Donald%20Gordon%20Theatre/Transatlantic%20Ensemble/Thumb_transatlantic_ensemble_1200_x_900_?_a=BAAAV6DQ",
     "description": "The 'Transatlantic Ensemble' return by popular demand to Wales Millenium Centre, after past sellout shows here two years in a row and multiple sell-outs at Edinburgh Fringe Festival and right across the UK.\n\nThey will be performing Fleetwood Mac's iconic Rumours album in its entirety, plus loads of other well-known Fleetwood Mac classics. Experience one of the greatest albums of all time, lovingly and accurately recreated live, by this stunning ensemble of gifted young musicians and vocalists.\n\nThere is just something so evocative about the Rumours album – something that strikes a chord with every true music fan. It has soundtracked the lives of multiple generations.\n\nIf you are a fan of the album, this stunning performance by this incredible ensemble is quite simply something you cannot afford to miss. Be sure to bring your singing voice and prepare to be amazed, as this band are quite simply phenomenal!",
-    "ticketPriceFrom": 25,
-    "ticketPriceTo": 25,
-    "ticketCurrency": "GBP",
-    "ticketPriceLabel": "£25",
-    "availability": "UNKNOWN",
-    "availabilityRange": null,
-    "availabilityEstimate": null,
-    "popularityScore": null,
-    "popularityLabel": null,
+    "availability": "LIMITED AVAILABILITY",
+    "availabilityRange": "61-90%",
+    "availabilityEstimate": 76,
+    "seatingAggregate": {
+      "avgOccupancyPct": 76,
+      "minOccupancyPct": 76,
+      "maxOccupancyPct": 76,
+      "performancesWithData": 1,
+      "tierCounts": {
+        "LIMITED AVAILABILITY": 1
+      }
+    },
+    "popularityScore": 38,
+    "popularityLabel": "Moderate demand",
     "imageUrls": [
       "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1712248782/WMC%20Content/Whats%20On/2024/Donald%20Gordon%20Theatre/Transatlantic%20Ensemble/Thumb_transatlantic_ensemble_1200_x_900_?_a=BAAAV6DQ",
       "http://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_630%2Cw_1200/f_auto/q_auto/v1712248782/WMC%20Content/Whats%20On/2024/Donald%20Gordon%20Theatre/Transatlantic%20Ensemble/Thumb_transatlantic_ensemble_1200_x_900_?_a=BAAAV6DQ",
@@ -1638,8 +1811,12 @@
     ],
     "eventStartDate": "2026-08-23 19:30:00",
     "eventEndDate": "2026-08-23 23:00:00",
+    "ticketPriceFrom": 25,
+    "ticketPriceTo": 25,
+    "ticketCurrency": "GBP",
     "subcategory": "Wales Millennium Centre > What's on > 2026 > Fleetwood Mac's 'Rumours' with the Transatlantic Ensemble",
-    "primaryCategory": "Theatre"
+    "primaryCategory": "Theatre",
+    "ticketPriceLabel": "£25"
   },
   {
     "title": "CALON",
@@ -1700,7 +1877,7 @@
     "ticketPriceFrom": 20,
     "ticketPriceTo": 20,
     "ticketCurrency": "GBP",
-    "subcategory": "Canolfan Mileniwm Cymru > Digwyddiadur > 2026 > Calon",
+    "subcategory": "Wales Millennium Centre > What's on > 2026 > Calon",
     "primaryCategory": "Musical Theatre",
     "ticketPriceLabel": "£20"
   },
@@ -1712,6 +1889,10 @@
     "scrapedAt": "2026-06-05T22:12:18.829Z",
     "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1770307051/Burlesque_Generic_1280x960_trs1ob?_a=BAAAV6DQ",
     "description": "After taking the West End by storm — where it became summer 2025’s biggest hit, selling out night after night — Burlesque A BIG New Musical is coming to Cardiff in September.\n\nFrom executive producer Christina Aguilera and written by Steven Antin, Burlesque invites you to a club like no other: a hidden world beneath the city lights where sequins sparkle, seduction shimmers and lives can change in the flick of a feather boa.\n\nWhen Ali arrives in New York searching for the mother she never knew, she stumbles upon a dazzling underground scene alive with music, movement, and mystery. Drawn into this intoxicating world, she begins to uncover her extraordinary voice — and finds an unexpected family of dreamers, misfits and schemers who will change her life forever.\n\nBurlesque is a scintillating journey of self-discovery that absolutely sizzles, featuring powerhouse songs by Christina Aguilera, Sia and Diane Warren, alongside thrilling new numbers from Todrick Hall and Jess Folley.\n\nWritten by Steven Antin, who also wrote and directed the original 2010 Burlesque movie.\n\nExecutive produced by Christina Aguilera, bringing her star power, musical legacy and commitment to the show.\n\nSongs by Christina Aguilera, Sia and Diane Warren, with new numbers by Todrick Hall and Jess Folley.",
+    "ticketPriceFrom": 22,
+    "ticketPriceTo": 22,
+    "ticketCurrency": "GBP",
+    "ticketPriceLabel": "£22",
     "availability": "MODERATE AVAILABILITY",
     "availabilityRange": "31-60%",
     "availabilityEstimate": 33,
@@ -1779,12 +1960,8 @@
     ],
     "eventStartDate": "2026-09-01 19:30:00",
     "eventEndDate": "2026-09-05 23:00:00",
-    "ticketPriceFrom": 22,
-    "ticketPriceTo": 22,
-    "ticketCurrency": "GBP",
     "subcategory": "Wales Millennium Centre > What's on > 2026 > Burlesque",
-    "primaryCategory": "Musical Theatre",
-    "ticketPriceLabel": "£22"
+    "primaryCategory": "Musical Theatre"
   },
   {
     "title": "LINLEY HAMILTON QUINTET",
@@ -1853,6 +2030,10 @@
     "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1764853279/WMC%20Content/Whats%20On/2026/Cabaret/Ginger%20Johnson/Thumbnail_Ginger_Johnson?_a=BAAAV6DQ",
     "subVenue": "Cabaret",
     "description": "You’ve seen her in the Masterchef kitchen… You’ve seen her on the Drag Race runway… Now it's time to see her in her element: outrageous, untamed and completely off the reins.\n\nFollowing the explosive success of her smash hit 2024 tour ‘Ginger Johnson Blows Off!’, the nation’s silliest sausage is back on the road with her brand new live spectacular: Show Pony!\n\nPromising high camp, low morals, and double helpings of her trademark ridiculousness, Show Pony is a barnstorming night of whip-smart comedy and top-tier talent that proves why Ginger is one of Britain’s most beloved queens.",
+    "ticketPriceFrom": 28,
+    "ticketPriceTo": 28,
+    "ticketCurrency": "GBP",
+    "ticketPriceLabel": "£28",
     "availability": "UNKNOWN",
     "availabilityRange": null,
     "availabilityEstimate": null,
@@ -1866,12 +2047,8 @@
     ],
     "eventStartDate": "2026-09-04 20:00:00",
     "eventEndDate": "2026-09-05 20:00:00",
-    "ticketPriceFrom": 28,
-    "ticketPriceTo": 28,
-    "ticketCurrency": "GBP",
     "subcategory": "Wales Millennium Centre > What's on > 2026 > Ginger Johnson - Show Pony",
-    "primaryCategory": "Comedy",
-    "ticketPriceLabel": "£28"
+    "primaryCategory": "Comedy"
   },
   {
     "title": "JIVE ACES",
@@ -1940,7 +2117,7 @@
     "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1775229929/WMC%20Content/Whats%20On/2026/Cabaret/In%20MEmory%20of%20AMy/4a9aed80-2057-40b6-b4aa-7a3e95d92484?_a=BAAAV6DQ",
     "subVenue": "Cabaret",
     "description": "Anna Aarons' dedicated show in memory of the late, great Amy Winehouse celebrates its 10 year anniversary this year, as well as commemorating 15 years since the legend's passing.\n\nNot a 'typical' tribute, Aarons', joined by her 5 piece band, takes audiences on a thoughtful journey of Winehouse's catalogue, her musical influences, as well as sewing in her original music; portraying Winehouse's influence on modern songwriting. After multiple sold out shows across Central London, Aarons is delighted to bring this highly regarded show to the Cabaret Millenium Centre.\n\nVocals - Anna AaronsKeys - Gareth BucklandGuitar - Magnus EricsonBass - Mehmet RaifDrums - Will JacksonSax - Kerry Williams",
-    "availability": "UNKNOWN",
+    "availability": "Tickets on sale: {{::on_sale_date.formatted_date}}",
     "availabilityRange": null,
     "availabilityEstimate": null,
     "popularityScore": null,
@@ -2055,10 +2232,6 @@
     "scrapedAt": "2026-06-05T22:12:18.829Z",
     "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1777631209/WNO_BCOR_WMC_1280x960px_alpj6b?_a=BAAAV6DQ",
     "description": "In this powerful double bill, two extraordinary works of the 20th century are brought together in a shared world of ritual, mystery and psychological intensity.\n\nIn Bluebeard’s Castle, Judith leaves everything behind to be with the enigmatic Duke Bluebeard. She soon discovers his home is filled with locked doors and as she demands each one be opened, she uncovers not only the secrets of his past, but something far more unsettling. As darkness gathers, love and fear become impossible to separate.\n\nIn the second half, the same stark setting becomes the ancient city of Thebes for Oedipus Rex. A plague grips the land, and its king is determined to uncover the truth behind it. As his search intensifies, he is forced to confront a destiny he cannot escape. What begins as a quest for answers, becomes a devastating revelation.\n\nGothic, atmospheric and visually striking, this unified staging draws powerful connections between two timeless myths.\n\nFeaturing music by Hildegard Von Bingen Conductor Lydia Yankovskaya Director Joe Hill-Gibbins\n\nCast Nathan Berg, Peter Hoare, Christine Rice\n\nOriginal production of Bluebeard’s Castle English National Opera",
-    "ticketPriceFrom": 25,
-    "ticketPriceTo": 25,
-    "ticketCurrency": "GBP",
-    "ticketPriceLabel": "£25",
     "availability": "MODERATE AVAILABILITY",
     "availabilityRange": "31-60%",
     "availabilityEstimate": 31,
@@ -2102,9 +2275,13 @@
     ],
     "eventStartDate": "2026-09-20 16:00:00",
     "eventEndDate": "2026-10-02 19:30:00",
+    "ticketPriceFrom": 25,
+    "ticketPriceTo": 25,
+    "ticketCurrency": "GBP",
     "subcategory": "Wales Millennium Centre > What's on > 2026 > Welsh National Opera: Bluebeard’s Castle + Oedipus Rex",
     "primaryCategory": "Theatre",
-    "genre": "Classical"
+    "genre": "Classical",
+    "ticketPriceLabel": "£25"
   },
   {
     "title": "MISCAST CABARET",
@@ -2115,6 +2292,10 @@
     "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1778583523/WMC%20Content/Whats%20On/2026/Cabaret/Miscast%20Cabaret/Miscast_Iconic_Trio?_a=BAAAV6DQ",
     "subVenue": "Cabaret",
     "description": "The wrong roles. The right songs. The ultimate divas.\n\nWhat happens when the casting is completely wrong… but the performances are absolutely right?\n\nWelcome to Miscast Cabaret – ICONIC, a night of powerhouse vocals, unexpected roles and unapologetic diva energy.\n\nThink songs you love  -  performed by the people you’d never expect to sing them.\n\nIt’s bold. It’s camp. It’s a little bit chaotic. And it’s all completely intentional.\n\nExpect big voices, bigger personalities and a celebration of iconic songs done verydifferently.\n\nCome for the chaos. Stay for the talent.\n\nFeaturing incredible local Welsh talent  - completely homegrown.",
+    "ticketPriceFrom": 15,
+    "ticketPriceTo": 15,
+    "ticketCurrency": "GBP",
+    "ticketPriceLabel": "£15",
     "availability": "UNKNOWN",
     "availabilityRange": null,
     "availabilityEstimate": null,
@@ -2128,12 +2309,8 @@
     ],
     "eventStartDate": "2026-09-20 19:00:00",
     "eventEndDate": "2026-09-20 21:00:00",
-    "ticketPriceFrom": 15,
-    "ticketPriceTo": 15,
-    "ticketCurrency": "GBP",
     "subcategory": "Wales Millennium Centre > What's on > 2026 > Miscast Cabaret",
-    "primaryCategory": "Theatre",
-    "ticketPriceLabel": "£15"
+    "primaryCategory": "Theatre"
   },
   {
     "title": "ESSENTIALLY CHER",
@@ -2173,6 +2350,10 @@
     "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1781104808/WMC%20Content/Whats%20On/2026/BBC%20NoW/Protest%2C%20Power%2C%20Revolution%2C%20Resistance/Power_thumbnail?_a=BAAAV6DQ",
     "subVenue": "Hoddinott Hall",
     "description": "Protest, Power, Revolution, Resistance is a concert with something urgent to say.\n\nConducted by Johanna Malangré, current Music Director of the Orchestre de Picardie in France, the programme showcases her electrifying musicality and imaginative leadership.\n\nIt begins with Joan Tower’s Fanfare for the Uncommon Woman, a brilliant, bracing piece for brass and percussion inspired by Copland’s famous fanfare but reimagined as a celebration of women who lead, risk, and transform the world. From there, the orchestra moves into the powerful sound world of Margaret Bonds’ The Montgomery Variations, written in response to the civil rights movement and shaped by Bonds’ experience of Montgomery, Alabama. Both reflective and resolute, its movements capture the collective determination of protest and the sense of a new beginning.\n\nAfter the interval, Haydn’s Farewell Symphony reminds us that messages in music are not always shouted, sometimes they are staged with quiet ingenuity. What begins as a tense, impassioned symphony becomes a theatrical plea for compassion, as players famously leave the stage one by one. Finally, Shostakovich’s Ninth Symphony turns expectations upside down. Written in 1945, when a monumental victory symphony was demanded, Shostakovich produced instead a compact, spirited, and unpredictably shadowed work.\n\nREFLECTIVE · COURAGEOUS · IMAGINATIVE\n\nJoan Tower Fanfare for the Uncommon Woman Bonds The Montgomery Variations Haydn Symphony No.45 (Farewell Symphony) Interval Shostakovich Symphony No.9",
+    "ticketPriceFrom": 17,
+    "ticketPriceTo": 17,
+    "ticketCurrency": "GBP",
+    "ticketPriceLabel": "£17",
     "availability": "UNKNOWN",
     "availabilityRange": null,
     "availabilityEstimate": null,
@@ -2186,12 +2367,8 @@
     ],
     "eventStartDate": "2026-09-26 15:00:00",
     "eventEndDate": "2026-09-26 17:00:00",
-    "ticketPriceFrom": 17,
-    "ticketPriceTo": 17,
-    "ticketCurrency": "GBP",
     "subcategory": "Wales Millennium Centre > What's on > 2026 > Protest, Power, Revolution, Resistance",
-    "primaryCategory": "Theatre",
-    "ticketPriceLabel": "£17"
+    "primaryCategory": "Theatre"
   },
   {
     "title": "WELSH NATIONAL OPERA: LA BOHÈME",
@@ -2201,10 +2378,6 @@
     "scrapedAt": "2026-06-05T22:12:18.829Z",
     "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1777629186/WMC%20Content/Whats%20On/2026/Donald%20Gordon%20Theatre/WNO%20La%20Boheme%20Puccini/WNO_LB_WMC_1280x960px?_a=BAAAV6DQ",
     "description": "In the Latin Quarter of Paris, four young artists live for the moment, sharing what little they have; chasing big dreams and laughing through the cold.\n\nWhen Rodolfo meets Mimì, a quiet seamstress with a fading light, their connection is instant and unforgettable. But in a world shaped by poverty and passion, love burns brightly but all too briefly.\n\nPuccini’s deeply moving masterpiece captures the passion of youth through some of the most beautiful and recognisable music ever written. La bohème evokes the spirit and intensity of bohemian life: the joy of falling in love, the pain of letting go, and the fragile of it all.\n\nThis acclaimed production reimagines this beloved story with striking clarity and emotional power. Set in a stark, monochrome world inspired by 1930s Paris where shadows linger and the presence of death is never far away.\n\nThe result is a La bohème that feels both timeless and contemporary. It paints a vivid portrait of young lives lived on the edge, where every moment matters and every goodbye cuts deep.\n\nwno.org.uk/boheme\n\nOriginal production Glyndebourne\n\nConductor Corinna NiemeyerDirector Floris Visser\n\nRodolfo Carlos Cardoso\n\nMimì Alexia Voulgaridou",
-    "ticketPriceFrom": 25,
-    "ticketPriceTo": 25,
-    "ticketCurrency": "GBP",
-    "ticketPriceLabel": "£25",
     "availability": "MODERATE AVAILABILITY",
     "availabilityRange": "31-60%",
     "availabilityEstimate": 31,
@@ -2248,9 +2421,13 @@
     ],
     "eventStartDate": "2026-09-27 16:00:00",
     "eventEndDate": "2026-10-03 23:00:00",
+    "ticketPriceFrom": 25,
+    "ticketPriceTo": 25,
+    "ticketCurrency": "GBP",
     "subcategory": "Wales Millennium Centre > What's on > 2026 > Welsh National Opera: La bohème",
     "primaryCategory": "Theatre",
-    "genre": "Classical"
+    "genre": "Classical",
+    "ticketPriceLabel": "£25"
   },
   {
     "title": "THE ART OF CHANGE | BODIES OF WATER | ÔL HAUNTS",
@@ -2326,10 +2503,6 @@
     "scrapedAt": "2026-06-05T22:12:18.829Z",
     "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1777634636/WMC%20Content/Whats%20On/2026/Donald%20Gordon%20Theatre/WNO%20Family%20Concert/WNO_FC_WMC_1280x960px?_a=BAAAV6DQ",
     "description": "Welsh National Opera’s Family Concert is back with a vibrant and welcoming introduction to live orchestral music.\n\nHosted by Elin Llwyd, the concert blends well-known favourites brought to life by WNO Orchestra, alongside a group of outstanding soloists performing recognisable pieces for all the family.  Offenbach’s energetic Can-Can brings a sense of joy and familiarity, encouraging young audiences to connect straight away while Beethoven’s music from Prometheus stands out with its bold, cinematic quality almost like a superhero soundtrack, making it both accessible and thrilling, even for those new to classical music.\n\nAdding to the playful atmosphere is Ballo de Orsi (‘Dance of the Bears’), a piece that feels wonderfully visual and full of character. Its lively, almost storytelling quality, invites children to imagine scenes and movement, making the listening experience both fun and immersive.\n\nWith its mythological theme, engaging repertoire and relaxed setting, this concert offers something enjoyable and memorable for everyone.",
-    "ticketPriceFrom": 20,
-    "ticketPriceTo": 20,
-    "ticketCurrency": "GBP",
-    "ticketPriceLabel": "£20",
     "availability": "GOOD AVAILABILITY",
     "availabilityRange": "0-30%",
     "availabilityEstimate": 15,
@@ -2352,9 +2525,13 @@
     ],
     "eventStartDate": "2026-09-30 18:30:00",
     "eventEndDate": "2026-09-30 21:00:00",
+    "ticketPriceFrom": 20,
+    "ticketPriceTo": 20,
+    "ticketCurrency": "GBP",
     "subcategory": "Wales Millennium Centre > What's on > 2026 > Welsh National Opera: Family Concert",
     "primaryCategory": "Theatre",
-    "genre": "Classical"
+    "genre": "Classical",
+    "ticketPriceLabel": "£20"
   },
   {
     "title": "JUST FOR YOU TRILOGY",
@@ -2451,6 +2628,10 @@
     "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1763720925/WMC%20Content/Whats%20On/2026/Cabaret/Michael%20Akadirir/michael-akadiri-uncle-800pxsq?_a=BAAAV6DQ",
     "subVenue": "Cabaret",
     "description": "Following two hit UK tours, Biggest Award in Comedy nominee and resident (junior) Doctor Michael Akadiri prescribes Cardiff with a potent dose of his latest offering, Don’t Call Me Uncle!\n\nMulti-award-winning comedian Michael is proud to wear many hats: doctor, husband & father. Evidently, that list does not include uncle.\n\nYet, despite only being in his early 30s, “the supremely talented and likeable” (Metro) doctor, for the first time ever, was recently called uncle in public (a term usually reserved for elders!). This has sent him spiralling!\n\nJoin the ”‘hugely entertaining” (Chortle) Akadiri as he fights this lurid allegation, contemplates the difference between perception and reality all whilst keeping the laughs flowing with his trademark “sharp-wit” (Chortle) & “politically punchy” (Guardian) anecdotes.\n\nAs seen on Comedy Central LIVE, ITVs Stand Up Sketch & Channel 4’s Stand Up to Cancer. As heard on Capital Xtra’s Breakfast Show, LBC & BBC Radio 4’s Loose Ends Tour support for Jason Manford.\n\nWinner - Komedia New Comedy AwardWinner - Comedian of Medicine Award, Haags Comedy FestivalNextUp Biggest Award in Comedy nominee",
+    "ticketPriceFrom": 18,
+    "ticketPriceTo": 18,
+    "ticketCurrency": "GBP",
+    "ticketPriceLabel": "£18",
     "availability": "UNKNOWN",
     "availabilityRange": null,
     "availabilityEstimate": null,
@@ -2464,12 +2645,8 @@
     ],
     "eventStartDate": "2026-10-03 20:00:00",
     "eventEndDate": "2026-10-03 22:00:00",
-    "ticketPriceFrom": 18,
-    "ticketPriceTo": 18,
-    "ticketCurrency": "GBP",
     "subcategory": "Wales Millennium Centre > What's on > 2026 > Michael Akadiri: Don’t Call Me Uncle!",
-    "primaryCategory": "Comedy",
-    "ticketPriceLabel": "£18"
+    "primaryCategory": "Comedy"
   },
   {
     "title": "KATHERINE JENKINS 25 YEAR ANNIVERSARY TOUR",
@@ -2479,15 +2656,20 @@
     "scrapedAt": "2026-06-05T22:12:18.829Z",
     "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1770982518/WMC%20Content/Whats%20On/2026/Donald%20Gordon%20Theatre/Katherine%20Jenkins/J3744_KJ_Car_1200x900?_a=BAAAV6DQ",
     "description": "The biggest selling classical artist of this century, Katherine Jenkins OBE, has today announced a brand new 18-date UK tour for 2026, to celebrate her incredible 25 Years in music.\n\nThe 25 Year Anniversary Tour is the first tour for Katherine in five years and is set to feature all her biggest hits including ‘Time To Say Goodbye’, the emotional ‘Jealous of the Angels’ and  ‘I Will Always Love You' and more.\n\nSpeaking on what it means to celebrate 25 years, Katherine says: “Reaching twenty-five years in music is incredibly emotional, but this tour is truly a celebration of the fans who have been there from the very beginning. To be heading out across the UK and Ireland for eighteen special shows feels less like a celebration of a career and more like a reunion with old friends and I can’t wait to stand on stage, look out into those familiar faces, and share it all over again.”\n\nKatherine Jenkins OBE is officially the world’s most successful classical singer, having been named The Biggest Selling Classical Artist of the Century by Classic FM and earning a record-breaking 14 number-one albums since signing to Universal Classics at just 22. She burst onto the music scene in 2003 with a landmark performance at Westminster Cathedral honouring Pope John Paul II, followed by appearances at major international sporting events and at the Sydney Opera House.\n\nA favourite of the British Royal Family, Jenkins has sung at many national occasions including Her Majesty Queen Elizabeth II’s Diamond Jubilee, Coronation concerts at Buckingham Palace, and her 90th birthday celebrations at Windsor Castle. She has also performed for Popes, Presidents and Princes, further establishing her place as one of the world’s most in-demand classical performers.\n\nAlongside her musical achievements, Katherine has earned ‘National Treasure” status through her charitable work. She serves as global patron of The Wilderness Foundation, ambassador for Prince William’s TUSK Trust and Macmillan Cancer Support, and trustee of The British Forces Foundation - for whom she has performed for troops in conflict zones around the world. Awarded an OBE in 2013, she also lifted spirits during the 2020 pandemic with 25 free “lockdown live” concerts, including history-making performances at Buckingham Palace and a behind-closed-doors Royal Albert Hall concert.\n\nA versatile creative force, Katherine has performed and recorded with many of the world’s leading artists, made her West End debut in Carousel to critical acclaim, and earned television recognition with appearances in Doctor Who, Dancing with the Stars (runner-up), and as a presenter on Songs of Praise. Her recent ventures include roles in films Minamata and Dream Horse, becoming Lady Sponsor of HMS Cardiff, launching her award-winning luxury gin brand Cygnet, and opening the inaugural SXSW London festival.",
-    "ticketPriceFrom": 32.5,
-    "ticketPriceTo": 32.5,
-    "ticketCurrency": "GBP",
-    "ticketPriceLabel": "£32.50",
-    "availability": "UNKNOWN",
-    "availabilityRange": null,
-    "availabilityEstimate": null,
-    "popularityScore": null,
-    "popularityLabel": null,
+    "availability": "LIMITED AVAILABILITY",
+    "availabilityRange": "61-90%",
+    "availabilityEstimate": 76,
+    "seatingAggregate": {
+      "avgOccupancyPct": 76,
+      "minOccupancyPct": 76,
+      "maxOccupancyPct": 76,
+      "performancesWithData": 1,
+      "tierCounts": {
+        "LIMITED AVAILABILITY": 1
+      }
+    },
+    "popularityScore": 40,
+    "popularityLabel": "Moderate demand",
     "imageUrls": [
       "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1770982518/WMC%20Content/Whats%20On/2026/Donald%20Gordon%20Theatre/Katherine%20Jenkins/J3744_KJ_Car_1200x900?_a=BAAAV6DQ",
       "http://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_630%2Cw_1200/f_auto/q_auto/v1770982518/WMC%20Content/Whats%20On/2026/Donald%20Gordon%20Theatre/Katherine%20Jenkins/J3744_KJ_Car_1200x900?_a=BAAAV6DQ",
@@ -2496,8 +2678,12 @@
     ],
     "eventStartDate": "2026-10-04 19:00:00",
     "eventEndDate": "2026-10-04 23:00:00",
+    "ticketPriceFrom": 32.5,
+    "ticketPriceTo": 32.5,
+    "ticketCurrency": "GBP",
     "subcategory": "Wales Millennium Centre > What's on > 2026 > Katherine Jenkins 25 Year Anniversary Tour",
-    "primaryCategory": "Musical Theatre"
+    "primaryCategory": "Musical Theatre",
+    "ticketPriceLabel": "£32.5"
   },
   {
     "title": "WELSH MUSIC PRIZE",
@@ -2507,6 +2693,10 @@
     "scrapedAt": "2026-07-15T09:55:36.351Z",
     "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1783508068/WMC%20Content/Whats%20On/2026/Donald%20Gordon%20Theatre/LLAIS/Welsh%20Music%20Prize/WMP26-Sgwar?_a=BAAAV6DQ",
     "description": "Welsh Music Prize will once again be a part of this year’s Llais with a celebration of Welsh music made over the past year.\n\nJoin us for an evening showcasing the 15 shortlisted albums, featuring live performances from shortlisted artists and Triskel Award-winning artists.\n\nFollow Welsh Music Prize on Instagram or Facebook for more information.",
+    "ticketPriceFrom": 10,
+    "ticketPriceTo": 10,
+    "ticketCurrency": "GBP",
+    "ticketPriceLabel": "£10",
     "availability": "MODERATE AVAILABILITY",
     "availabilityRange": "31-60%",
     "availabilityEstimate": 46,
@@ -2529,12 +2719,8 @@
     ],
     "eventStartDate": "2026-10-07 19:30:00",
     "eventEndDate": "2026-10-07 23:30:00",
-    "ticketPriceFrom": 10,
-    "ticketPriceTo": 10,
-    "ticketCurrency": "GBP",
     "subcategory": "Wales Millennium Centre > What's on > 2026 > Welsh Music Prize",
-    "primaryCategory": "Theatre",
-    "ticketPriceLabel": "£10"
+    "primaryCategory": "Theatre"
   },
   {
     "title": "JASDEEP SINGH DEGUN X BBC NOW",
@@ -2545,10 +2731,6 @@
     "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1781184940/WMC%20Content/Whats%20On/2026/BBC%20NoW/Jasdeep%20Singh%20Degun/thumbnail-Adam-Lyons-credit-th01-_1200x900?_a=BAAAV6DQ",
     "subVenue": "Hoddinott Hall",
     "description": "Voices from across musical worlds come together as the BBC National Orchestra and Chorus of Wales joins composer‑sitarist Jasdeep Singh Degun for a powerful mix of Indian classical tradition and Western orchestral sound.\n\nFeaturing acclaimed soloists, reimagined operatic moments, and vibrant new works, this performance celebrates connection, creativity, and the many forms a voice can take.",
-    "ticketPriceFrom": 17,
-    "ticketPriceTo": 17,
-    "ticketCurrency": "GBP",
-    "ticketPriceLabel": "£17",
     "availability": "UNKNOWN",
     "availabilityRange": null,
     "availabilityEstimate": null,
@@ -2562,8 +2744,12 @@
     ],
     "eventStartDate": "2026-10-08 19:30:00",
     "eventEndDate": "2026-10-08 21:30:00",
+    "ticketPriceFrom": 17,
+    "ticketPriceTo": 17,
+    "ticketCurrency": "GBP",
     "subcategory": "Wales Millennium Centre > What's on > 2026 > Jasdeep Singh Degun X BBC NOW",
-    "primaryCategory": "Musical Theatre"
+    "primaryCategory": "Musical Theatre",
+    "ticketPriceLabel": "£17"
   },
   {
     "title": "SHOVEL DANCE COLLECTIVE + NAIMA BOCK",
@@ -2574,6 +2760,10 @@
     "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1784043095/WMC%20Content/Llais/2026/Artists/Shovel%20DAnce%20Collective%20Naima%20Bock/Shovel_Dance_Naima-Mob?_a=BAAAV6DQ",
     "description": "Join us in the Weston Studio for an evening of captivating music from two incredible artists.\n\nShovel Dance Collective are a group of nine musicians united by a passion for the beauty, force, and political charge of the traditional musics of Britain, Ireland and beyond. They are committed to Folk music not as an archaeological artifact to be unearthed, but as a living communal activity - inviting and generous to those it speaks to. They arrange the source material into a kind of musique boue (mud music), simultaneously traditional and experimental they engage a deep, cross-temporal synthesis of free improvisation, tape manipulation and field recordings. Their music appears as a patchwork as pieces are stitched together, rearranged and recontextualised. The yarn is threaded with their sense of aesthetic innovation, and with a deep sense of the ways in which traditional music holds the voices of the oppressed and those who, by their labour, create the wealth of the world.\n\nThey have performed sold out shows across the UK, with headline concerts at venues such as Cafe OTO, Kings Place and Cecil Sharp House. The collective have appeared at many major festivals: Glastonbury, Roskilde, SXSW, Rewire, Green Man, End of the Road, Sidmouth Folk Festival, Supernormal and Supersonic festivals among others. Publications such as The Wire, Loud and Quiet, NME, Financial Times and The Times have heralded their live performances across the years. Their albums ‘The Shovel Dance’ and ‘The Water is the Shovel of the Shore’ have been championed by The Wire, MOJO, Uncut, KLOF, Songlines et al. and both were named albums of the year by The Quietus.\n\nMost of the writing of Naima Bock’s second album, Below A Massive Dark Land (out 27 September via Sub Pop), was a solitary affair. It may not sound it – it’s made up of strong, purposeful arrangements with a huge host of musicians; filled with cradling space and warm light. This will also come as a surprise to anyone who has seen Naima perform in the time since the release of her 2022 debut Giant Palm, undoubtedly a communal experience.\n\nWith a band of ten, three, or even just solo, when Naima plays there’s a rare bond between the musicians on stage and the audience. In their interview with her, The Quietus declared “after every song the applause and cheering is immense, so immense in fact that it seems to becoming from a different place than the usual formalities of a live show, a link between performer and artist forged somewhere deeper and more personal.”\n\nIt was in Giant Palm’s music too, a record that sweeps and swells, a chorus of voices and instrumentation that rises and falls as one alongside Naima’s own somersaulting voice.",
     "subVenue": "Weston Studio",
+    "ticketPriceFrom": 20,
+    "ticketPriceTo": 20,
+    "ticketCurrency": "GBP",
+    "ticketPriceLabel": "£20",
     "availability": "GOOD AVAILABILITY",
     "availabilityRange": "0-30%",
     "availabilityEstimate": 15,
@@ -2596,12 +2786,8 @@
     ],
     "eventStartDate": "2026-10-08 19:30:00",
     "eventEndDate": "2026-10-08 23:00:00",
-    "ticketPriceFrom": 20,
-    "ticketPriceTo": 20,
-    "ticketCurrency": "GBP",
     "subcategory": "Wales Millennium Centre > What's on > 2026 > Shovel Dance Collective + Naima Bock",
-    "primaryCategory": "Theatre",
-    "ticketPriceLabel": "£20"
+    "primaryCategory": "Theatre"
   },
   {
     "title": "LAURIE ANDERSON: FRIENDS AND TEACHERS",
@@ -2763,7 +2949,7 @@
     "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1783350895/24f1966b-f0a8-4d9d-b6eb-3ba28985f771_dg2l6i?_a=BAAAV6DQ",
     "description": "Jordan Playfair is a guitarist, lyricist, and composer whose work blends elements of folk, metal, and blues. His current focus is on exploring the textural possibilities of the guitar within the structure of a song.\n\nIn 2024 Jordan released his debut album ‘Something Inside So Wrong’ on the Danish label 15 Love. Written between 2013 and 2024, the album features a collection of home-recorded compositions drawn from his archive, utilising guitar, electronics, and voice.\n\nLast year, Jordan released new music with London label AD 93.",
     "subVenue": "Cabaret",
-    "availability": "Tickets on sale: {{::on_sale_date.formatted_date}}",
+    "availability": "UNKNOWN",
     "availabilityRange": null,
     "availabilityEstimate": null,
     "popularityScore": null,
@@ -2904,6 +3090,10 @@
     "scrapedAt": "2026-07-15T09:55:36.351Z",
     "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1784042542/WMC%20Content/Llais/2026/Artists/Buena%20Vista%20Orchestra%20Baobab/Buena_Vista_Baobab-Mob?_a=BAAAV6DQ",
     "description": "Immerse yourself in a spectacular double bill celebrating the musical connections between Cuba and West Africa, performed by two of the world’s most exciting and influential ensembles.\n\nBuena Vista All Stars are a legendary orchestra filled with the best Cuban musicians whose vibrant performances have captivated audiences across the globe. Blending traditional Cuban rhythms with African and Spanish influences, the ensemble brings the beauty, passion and spirit of Cuba to life through masterful musicianship and infectious energy.\n\nRooted in generations of musical heritage while embracing a fresh and contemporary spirit, Buena Vista All Stars honour the enduring legacy of Cuban music while celebrating its place as a living, evolving art form.\n\nJoining them on the bill, Orchestra Baobab will bring the sounds of Senegal to Cardiff. Founded in Dakar in 1970, the celebrated group became a cornerstone of African music with its distinctive fusion of Afro-Cuban rhythms, Wolof, Mandinka and Serer musical traditions.\n\nConstantly reinventing their sound while remaining true to their roots, Orchestra Baobab have captivated audiences for decades with their hypnotic grooves, elegant melodies and exceptional musicianship. From the intimate clubs of Dakar to stages around the world, their music tells the story of a rich and diverse cultural heritage.\n\nTogether, these two iconic ensembles invite you on an unforgettable musical journey filled with rhythm, tradition and timeless songs that transcend borders and connect cultures.",
+    "ticketPriceFrom": 29.5,
+    "ticketPriceTo": 29.5,
+    "ticketCurrency": "GBP",
+    "ticketPriceLabel": "£29.50",
     "availability": "MODERATE AVAILABILITY",
     "availabilityRange": "31-60%",
     "availabilityEstimate": 46,
@@ -2926,13 +3116,9 @@
     ],
     "eventStartDate": "2026-10-11 18:30:00",
     "eventEndDate": "2026-10-11 23:15:00",
-    "ticketPriceFrom": 29.5,
-    "ticketPriceTo": 29.5,
-    "ticketCurrency": "GBP",
     "subcategory": "Wales Millennium Centre > What's on > 2026 > Buena Vista All Stars + Orchestra Baobab",
     "primaryCategory": "Musical Theatre",
-    "genre": "Classical",
-    "ticketPriceLabel": "£29.5"
+    "genre": "Classical"
   },
   {
     "title": "AN EVENING WITH LIVERPOOL LEGEND IAN RUSH MBE",
@@ -2940,12 +3126,8 @@
     "url": "https://www.wmc.org.uk/en/whats-on/2026/an-evening-with-liverpool-legend-ian-rush",
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-06-05T22:12:18.829Z",
-    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1774873572/WMC%20Content/Whats%20On/2026/Donald%20Gordon%20Theatre/An%20Evening%20With%20Ian%20Rush/1280x960?_a=BAAAV6DQ",
+    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1774873572/WMC%20Content/Whats%20On/2026/Donald%20Gordon%20Theatre/An%20Evening%20With%20Ian%20Rush/1280x960?_a=BAAAV6DQ",
     "description": "An Evening With Liverpool Legend Ian Rush MBE\n\nThe ultimate evening of Liverpool legend Ian Rush live on stage hosted by Jed Stone. The evening will be full of entertainment and banter as you can well expect, so sit back and enjoy!\n\nThis evening will give you a full insight into his career with two spells at Liverpool becoming the highest goal scorer in history of the club, winning countless trophies along the way.\n\nThere will be limited opportunities for Meet and Greet pre-show, come along to meet Ian and have a professional photo with him.  Don’t miss out on your chance to be one of those…",
-    "ticketPriceFrom": 47,
-    "ticketPriceTo": 47,
-    "ticketCurrency": "GBP",
-    "ticketPriceLabel": "£47",
     "availability": "MODERATE AVAILABILITY",
     "availabilityRange": "31-60%",
     "availabilityEstimate": 46,
@@ -2961,14 +3143,8 @@
     "popularityScore": 35,
     "popularityLabel": "Moderate demand",
     "imageUrls": [
-      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1774873572/WMC%20Content/Whats%20On/2026/Donald%20Gordon%20Theatre/An%20Evening%20With%20Ian%20Rush/1280x960?_a=BAAAV6DQ",
-      "http://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_630%2Cw_1200/f_auto/q_auto/v1774873572/WMC%20Content/Whats%20On/2026/Donald%20Gordon%20Theatre/An%20Evening%20With%20Ian%20Rush/1280x960?_a=BAAAV6DQ",
-      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_512%2Cw_1024/f_auto/q_auto/v1774873572/WMC%20Content/Whats%20On/2026/Donald%20Gordon%20Theatre/An%20Evening%20With%20Ian%20Rush/1280x960?_a=BAAAV6DQ",
       "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1774873572/WMC%20Content/Whats%20On/2026/Donald%20Gordon%20Theatre/An%20Evening%20With%20Ian%20Rush/1280x960?_a=BAAAV6DQ"
     ],
-    "eventStartDate": "2026-10-12 19:30:00",
-    "eventEndDate": "2026-10-12 23:00:00",
-    "subcategory": "Wales Millennium Centre > What's on > 2026 > An Evening With Liverpool Legend Ian Rush MBE",
     "primaryCategory": "Theatre"
   },
   {
@@ -2979,10 +3155,6 @@
     "scrapedAt": "2026-06-05T22:12:18.829Z",
     "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1770027825/1260_by_980_vj45iw?_a=BAAAV6DQ",
     "description": "Dust off your air guitars for an evening of the very best classic rock anthems from legends past and present.\n\nLet The Ultimate Classic Rock Show take you on a roller coaster journey of classic rock nostalgia, performing hit after hit live with stunning accuracy and high energy accompanied by an incredible light and projection show, they're guaranteed to have you on your feet all night.\n\nOver two hours of classic rock anthems from artists including Eric Clapton, Led Zeppelin, Queen, Pink Floyd, ELO, Deep Purple, Free, AC/DC, The Eagles and Jimi Hendrix to name but a few!",
-    "ticketPriceFrom": 25,
-    "ticketPriceTo": 25,
-    "ticketCurrency": "GBP",
-    "ticketPriceLabel": "£25",
     "availability": "MODERATE AVAILABILITY",
     "availabilityRange": "31-60%",
     "availabilityEstimate": 46,
@@ -3005,9 +3177,13 @@
     ],
     "eventStartDate": "2026-10-15 19:30:00",
     "eventEndDate": "2026-10-15 23:59:00",
+    "ticketPriceFrom": 25,
+    "ticketPriceTo": 25,
+    "ticketCurrency": "GBP",
     "subcategory": "Wales Millennium Centre > What's on > 2026 > The Ultimate Classic Rock Show",
     "primaryCategory": "Theatre",
-    "genre": "Rock"
+    "genre": "Rock",
+    "ticketPriceLabel": "£25"
   },
   {
     "title": "ROBERT WHITE",
@@ -3040,30 +3216,55 @@
   },
   {
     "title": "DOG MAN: THE MUSICAL",
-    "date": "Friday, 16 October 2026 – Saturday, 17 October 2026",
+    "date": "Saturday, 17 October 2026",
     "url": "https://www.wmc.org.uk/en/whats-on/2026/dog-man-the-musical",
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-06-05T22:12:18.829Z",
-    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1771425490/WMC%20Content/Whats%20On/2026/Donald%20Gordon%20Theatre/Dog%20Man/DogMan_Cardiff_1200x900_Whats_On?_a=BAAAV6DQ",
+    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1770299107/DogMan_Cardiff_1200x900_Whats_On_pdjhuq?_a=BAAAV6DQ",
     "description": "Dog Man: The Musical is a hilarious new musical based on the worldwide bestselling book series from Dav Pilkey, the creator of Captain Underpants and Cat Kid Comic Club.\n\nBest friends George and Harold have been creating comics for years, but now that they’re ten, they figure it’s time to level up and write a musical based on their favourite character, Dog Man, the crime-biting sensation who is part dog, part man and ALL HERO! How hard could it be?\n\nWith the head of a dog and the body of a policeman, Dog Man loves to fight crime… and chew on the furniture.\n\nBut while trying his best to be a good boy, can he save the city from Flippy the cyborg fish and his army of Beasty Buildings? Can he catch Petey, the world’s most evil cat, who has cloned himself to exact revenge on the doggy do-gooder? And will George and Harold finish their show before lunchtime?\n\n@dogmanthemusicaluk\n\nIMAGES REGISTERED TRADEMARK OF DAV PILKEY.",
-    "ticketPriceFrom": 22,
-    "ticketPriceTo": 22,
-    "ticketCurrency": "GBP",
-    "ticketPriceLabel": "£22",
-    "availability": "UNKNOWN",
-    "availabilityRange": null,
-    "availabilityEstimate": null,
-    "popularityScore": null,
-    "popularityLabel": null,
+    "availability": "MODERATE AVAILABILITY",
+    "availabilityRange": "31-60%",
+    "availabilityEstimate": 46,
+    "seatingAggregate": {
+      "avgOccupancyPct": 46,
+      "minOccupancyPct": 46,
+      "maxOccupancyPct": 46,
+      "performancesWithData": 4,
+      "tierCounts": {
+        "MODERATE AVAILABILITY": 4
+      }
+    },
+    "performances": [
+      {
+        "date": "6:00pm",
+        "availability": "MODERATE AVAILABILITY",
+        "availabilityRange": "31-60%",
+        "availabilityEstimate": 46
+      },
+      {
+        "date": "11:00am",
+        "availability": "MODERATE AVAILABILITY",
+        "availabilityRange": "31-60%",
+        "availabilityEstimate": 46
+      },
+      {
+        "date": "2:30pm",
+        "availability": "MODERATE AVAILABILITY",
+        "availabilityRange": "31-60%",
+        "availabilityEstimate": 46
+      },
+      {
+        "date": "6:00pm",
+        "availability": "MODERATE AVAILABILITY",
+        "availabilityRange": "31-60%",
+        "availabilityEstimate": 46
+      }
+    ],
+    "popularityScore": 21,
+    "popularityLabel": "Low demand",
     "imageUrls": [
-      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1771425490/WMC%20Content/Whats%20On/2026/Donald%20Gordon%20Theatre/Dog%20Man/DogMan_Cardiff_1200x900_Whats_On?_a=BAAAV6DQ",
-      "http://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_630%2Cw_1200/f_auto/q_auto/v1770299107/DogMan_Cardiff_1200x900_Whats_On_pdjhuq?_a=BAAAV6DQ",
-      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_512%2Cw_1024/f_auto/q_auto/v1770299107/DogMan_Cardiff_1200x900_Whats_On_pdjhuq?_a=BAAAV6DQ",
       "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1770299107/DogMan_Cardiff_1200x900_Whats_On_pdjhuq?_a=BAAAV6DQ"
     ],
-    "eventStartDate": "2026-10-16 18:00:00",
-    "eventEndDate": "2026-10-17 21:00:00",
-    "subcategory": "Canolfan Mileniwm Cymru > Digwyddiadur > 2026 > Dog Man: The Musical",
     "primaryCategory": "Musical Theatre"
   },
   {
@@ -3292,7 +3493,7 @@
     "url": "https://www.wmc.org.uk/en/whats-on/2026/cadbury-parfait-2",
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-07-17T09:55:49.425Z",
-    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1784109784/WMC%20Content/Whats%20On/2026/Cabaret/Cadbury%20Parfait/How_To_Survive_A_Horror_Movie_Cadbury_Cabaret_4-3_no_text?_a=BAAAV6DQ",
+    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1784109784/WMC%20Content/Whats%20On/2026/Cabaret/Cadbury%20Parfait/How_To_Survive_A_Horror_Movie_Cadbury_Cabaret_4-3_no_text?_a=BAAAV6DQ",
     "subVenue": "Cabaret",
     "description": "Do you have what it takes to survive a horror film? Are you the final girl or perhaps the killer?\n\nWell, then join us for a night of chilling, thrilling and perhaps a little bit deadly entertainment.\n\nExpect international talent serving up burlesque, drag, circus and sideshow, we’re to here to trick and more importantly treat you! What lurks in the dark? Well you’ll have to venture in and find out for yourself, if you’re brave enough.\n\nFancy dress is encouraged, who knows, maybe you’ll win a prize or maybe it’ll save your life.So tell us, what’s your favourite scary movie?\n\nCast includes:",
     "ticketPriceFrom": 20,
@@ -3305,14 +3506,8 @@
     "popularityScore": null,
     "popularityLabel": null,
     "imageUrls": [
-      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1784109784/WMC%20Content/Whats%20On/2026/Cabaret/Cadbury%20Parfait/How_To_Survive_A_Horror_Movie_Cadbury_Cabaret_4-3_no_text?_a=BAAAV6DQ",
-      "http://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_630%2Cw_1200/f_auto/q_auto/v1784109784/WMC%20Content/Whats%20On/2026/Cabaret/Cadbury%20Parfait/How_To_Survive_A_Horror_Movie_Cadbury_Cabaret_4-3_no_text?_a=BAAAV6DQ",
-      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_512%2Cw_1024/f_auto/q_auto/v1784109784/WMC%20Content/Whats%20On/2026/Cabaret/Cadbury%20Parfait/How_To_Survive_A_Horror_Movie_Cadbury_Cabaret_4-3_no_text?_a=BAAAV6DQ",
       "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1784109784/WMC%20Content/Whats%20On/2026/Cabaret/Cadbury%20Parfait/How_To_Survive_A_Horror_Movie_Cadbury_Cabaret_4-3_no_text?_a=BAAAV6DQ"
     ],
-    "eventStartDate": "2026-10-24 20:00:00",
-    "eventEndDate": "2026-10-24 22:00:00",
-    "subcategory": "Wales Millennium Centre > What's on > 2026 > CADBURY PARFAIT",
     "primaryCategory": "Film"
   },
   {
@@ -3321,13 +3516,23 @@
     "url": "https://www.wmc.org.uk/en/whats-on/2026/aberfan-60",
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-06-29T12:30:37.749Z",
-    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1781274535/WMC%20Content/Whats%20On/2026/BBC%20NoW/Aberfan/3cf0712f-e6d1-4e18-8839-50f161bc2e6d?_a=BAAAV6DQ",
+    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1781274535/WMC%20Content/Whats%20On/2026/BBC%20NoW/Aberfan/3cf0712f-e6d1-4e18-8839-50f161bc2e6d?_a=BAAAV6DQ",
     "subVenue": "Hoddinott Hall",
     "description": "REMEMBRANCE · COMMUNITY · HOPE\n\nMarking the 60 years since the Aberfan disaster, this concert is anchored by Paul Mealor’s newly commissioned From Darkness into Light: a concert requiem for hope, bringing together Mark Lewis Jones, Aberfan Schools Choirs, Ynysowen Male Voice Choir, and the BBC National Chorus of Wales in an act of remembrance. Framing this centrepiece is music that moves from urgency to hope: Anna Clyne’s This Moment flashes with restless energy; Haydn’s E minor “Mourning” Symphony (No. 44) drives forward with fierce intensity; Mozart offers weight and luminous calm in the Andante cantabile from the “Jupiter”; and Vaughan Williams’ Whitman-inspired Toward the Unknown Region sets out on a searching journey towards the horizon.\n\nArtists:\n\nTim Redmond – ConductorMark Lewis Jones – Narrator Ynysowen Primary School & Ysgol Gymraeg Rhyd y Grug Combined ChoirsYnysowen Male Voice Choir BBC National Chorus of Wales\n\nRepertoire:\n\nAnna Clyne This MomentHaydn Movement 1 Symphony No.44 ‘Mourning’ Mozart Movement 2 “Andante Cantabile” from Symphony No.41 ‘Jupiter'Vaughan-Williams Toward the Unknown RegionInterval | EgwylPaul Mealor Aberfan: From Darkness to Light",
     "imageUrls": [
+      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1781274535/WMC%20Content/Whats%20On/2026/BBC%20NoW/Aberfan/3cf0712f-e6d1-4e18-8839-50f161bc2e6d?_a=BAAAV6DQ",
+      "http://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_630%2Cw_1200/f_auto/q_auto/v1781274535/WMC%20Content/Whats%20On/2026/BBC%20NoW/Aberfan/3cf0712f-e6d1-4e18-8839-50f161bc2e6d?_a=BAAAV6DQ",
+      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_512%2Cw_1024/f_auto/q_auto/v1781274535/WMC%20Content/Whats%20On/2026/BBC%20NoW/Aberfan/3cf0712f-e6d1-4e18-8839-50f161bc2e6d?_a=BAAAV6DQ",
       "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1781274535/WMC%20Content/Whats%20On/2026/BBC%20NoW/Aberfan/3cf0712f-e6d1-4e18-8839-50f161bc2e6d?_a=BAAAV6DQ"
     ],
-    "primaryCategory": "Theatre"
+    "eventStartDate": "2026-10-25 15:00:00",
+    "eventEndDate": "2026-10-25 17:00:00",
+    "ticketPriceFrom": 17,
+    "ticketPriceTo": 17,
+    "ticketCurrency": "GBP",
+    "subcategory": "Wales Millennium Centre > What's on > 2026 > Aberfan 60",
+    "primaryCategory": "Theatre",
+    "ticketPriceLabel": "£17"
   },
   {
     "title": "GAGGED! A QUEER COMEDY NIGHT",
@@ -3335,27 +3540,12 @@
     "url": "https://www.wmc.org.uk/en/whats-on/2026/gagged-october",
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-06-05T22:12:18.829Z",
-    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1763638665/WMC%20Content/Whats%20On/2026/Cabaret/Gagged%20June/Gagged_Thumbnail?_a=BAAAV6DQ",
+    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1763638665/WMC%20Content/Whats%20On/2026/Cabaret/Gagged%20June/Gagged_Thumbnail?_a=BAAAV6DQ",
     "subVenue": "Cabaret",
     "description": "Cabaret & Little Wander presents GAGGED! - a Queer Comedy Night!\n\nGet ready for a night of big laughs and bold voices as GAGGED brings the best of the best from the UK’s Queer stand-up circuit to Cardiff Bay!\n\nHosted by the fabulous Lee Peart, expect an evening packed with sharp wit, camp chaos, and unapologetically queer comedy.\n\nCome out, grab a drink, and get GAGGED with laughter!",
-    "ticketPriceFrom": 15,
-    "ticketPriceTo": 15,
-    "ticketCurrency": "GBP",
-    "ticketPriceLabel": "£15",
-    "availability": "UNKNOWN",
-    "availabilityRange": null,
-    "availabilityEstimate": null,
-    "popularityScore": null,
-    "popularityLabel": null,
     "imageUrls": [
-      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1763638665/WMC%20Content/Whats%20On/2026/Cabaret/Gagged%20June/Gagged_Thumbnail?_a=BAAAV6DQ",
-      "http://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_630%2Cw_1200/f_auto/q_auto/v1763638665/WMC%20Content/Whats%20On/2026/Cabaret/Gagged%20June/Gagged_Thumbnail?_a=BAAAV6DQ",
-      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_512%2Cw_1024/f_auto/q_auto/v1763638665/WMC%20Content/Whats%20On/2026/Cabaret/Gagged%20June/Gagged_Thumbnail?_a=BAAAV6DQ",
       "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1763638665/WMC%20Content/Whats%20On/2026/Cabaret/Gagged%20June/Gagged_Thumbnail?_a=BAAAV6DQ"
     ],
-    "eventStartDate": "2026-10-25 19:00:00",
-    "eventEndDate": "2026-10-25 22:00:00",
-    "subcategory": "Wales Millennium Centre > What's on > 2026 > Gagged! A Queer Comedy Night",
     "primaryCategory": "Comedy"
   },
   {
@@ -3377,12 +3567,28 @@
     "url": "https://www.wmc.org.uk/en/whats-on/2026/harriet-kemsley",
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-06-05T22:12:18.829Z",
-    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1762257273/WMC%20Content/Whats%20On/2026/Cabaret/Harriet%20Kemsley/Harriet_Kemsley_Floozy_1200_1800_thumb?_a=BAAAV6DQ",
+    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1762257273/WMC%20Content/Whats%20On/2026/Cabaret/Harriet%20Kemsley/Harriet_Kemsley_Floozy_1200_1800_thumb?_a=BAAAV6DQ",
     "description": "Harriet’s life has been in constant chaos for as long as she can remember. So what happens when things start to go right for the multi-award winning stand-up comedian?\n\nFollowing her eye opening appearance on Last One Laughing UK, Harriet is back on tour with a new show about dating, mushrooms and how she’s trying her absolute best to be a bit of a floozy.\n\nAs seen and heard on Live at the Apollo, Would I Lie to You?, 8 Out of 10 Cats Does Countdown and co-host of the wildly successful Single Ladies In Your Area podcast.",
+    "subVenue": "Cabaret",
+    "ticketPriceFrom": 18,
+    "ticketPriceTo": 18,
+    "ticketCurrency": "GBP",
+    "ticketPriceLabel": "£18",
+    "availability": "SOLD OUT",
+    "availabilityRange": "100%",
+    "availabilityEstimate": 100,
+    "popularityScore": 80,
+    "popularityLabel": "Very high demand",
     "imageUrls": [
+      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1762257273/WMC%20Content/Whats%20On/2026/Cabaret/Harriet%20Kemsley/Harriet_Kemsley_Floozy_1200_1800_thumb?_a=BAAAV6DQ",
+      "http://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_630%2Cw_1200/f_auto/q_auto/v1762257273/WMC%20Content/Whats%20On/2026/Cabaret/Harriet%20Kemsley/Harriet_Kemsley_Floozy_1200_1800_thumb?_a=BAAAV6DQ",
+      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_512%2Cw_1024/f_auto/q_auto/v1762257273/WMC%20Content/Whats%20On/2026/Cabaret/Harriet%20Kemsley/Harriet_Kemsley_Floozy_1200_1800_thumb?_a=BAAAV6DQ",
       "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1762257273/WMC%20Content/Whats%20On/2026/Cabaret/Harriet%20Kemsley/Harriet_Kemsley_Floozy_1200_1800_thumb?_a=BAAAV6DQ"
     ],
-    "primaryCategory": "Theatre"
+    "eventStartDate": "2026-10-29 20:00:00",
+    "eventEndDate": "2026-10-29 22:00:00",
+    "subcategory": "Canolfan Mileniwm Cymru > Digwyddiadur > 2026 > HARRIET KEMSLEY",
+    "primaryCategory": "Comedy"
   },
   {
     "title": "YOU SHALL NOT YASSSS!",
@@ -3443,13 +3649,28 @@
     "url": "https://www.wmc.org.uk/en/whats-on/2026/philip-clouts-quartet",
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-07-31T10:27:36.815Z",
-    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1784810387/WMC%20Content/Whats%20On/2026/Cabaret/Philip%20Clouts%20Quartet/Philip_-_Thumb?_a=BAAAV6DQ",
+    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1784810387/WMC%20Content/Whats%20On/2026/Cabaret/Philip%20Clouts%20Quartet/Philip_-_Thumb?_a=BAAAV6DQ",
     "subVenue": "Cabaret",
     "description": "Melodic jazz with inspirations from around the world.\n\nCape Town-born pianist/composer Clouts’ South African roots have inspired a voyage of discovery that has led to him soaking up the joyful passion of Caribbean calypso, the bluesy melodies of Middle Eastern praise songs, the exuberant sway of Cuban dance music and the tuneful essence of Gospel while honouring jazz heroes including Bill Evans, Keith Jarrett and Charles Lloyd.\n\nAs a key member of the popular London-based world jazz ensemble Zubop and its offshoot ZubopGambia, with BBC World Music Award-winner Juldeh Camara, Clouts created a solid body of work with African roots and, since moving to Dorset in 2006, he has responded to his new surroundings with impressionistic compositions that complement his world music interests, resonating with strong themes and packing a mighty rhythmical punch.\n\nThe latest CD from the Philip Clouts Quartet is one of the first wave of releases on the new jazz imprint from prestigious label Odradek Records. On this album, entitled Umoya (named from the Zulu word for life force), Clouts’ African inspirations extend beyond Cape jazz to Gnawa music and Afrobeat, and further to pan-European folksong and soul-jazz.\n\nJoined by rising star saxophonist Samuel Eagles, bassist Tim Fairhall and drummer Ted Carrasco, he brings his musical journey alive with superb musicianship and infectious vigour.",
+    "ticketPriceFrom": 15,
+    "ticketPriceTo": 15,
+    "ticketCurrency": "GBP",
+    "ticketPriceLabel": "£15",
+    "availability": "UNKNOWN",
+    "availabilityRange": null,
+    "availabilityEstimate": null,
+    "popularityScore": null,
+    "popularityLabel": null,
     "imageUrls": [
+      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1784810387/WMC%20Content/Whats%20On/2026/Cabaret/Philip%20Clouts%20Quartet/Philip_-_Thumb?_a=BAAAV6DQ",
+      "http://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_630%2Cw_1200/f_auto/q_auto/v1784810387/WMC%20Content/Whats%20On/2026/Cabaret/Philip%20Clouts%20Quartet/Philip_-_Thumb?_a=BAAAV6DQ",
+      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_512%2Cw_1024/f_auto/q_auto/v1784810387/WMC%20Content/Whats%20On/2026/Cabaret/Philip%20Clouts%20Quartet/Philip_-_Thumb?_a=BAAAV6DQ",
       "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1784810387/WMC%20Content/Whats%20On/2026/Cabaret/Philip%20Clouts%20Quartet/Philip_-_Thumb?_a=BAAAV6DQ"
     ],
-    "primaryCategory": "Theatre"
+    "eventStartDate": "2026-11-05 19:00:00",
+    "eventEndDate": "2026-11-05 21:30:00",
+    "subcategory": "Wales Millennium Centre > What's on > 2026 > Philip Clouts Quartet",
+    "primaryCategory": "Musical Theatre"
   },
   {
     "title": "OWAIN & HENRY",
@@ -3457,7 +3678,7 @@
     "url": "https://www.wmc.org.uk/en/whats-on/2026/owain-and-henry",
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-06-05T22:12:18.829Z",
-    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1758006927/WMC%20Content/Whats%20On/2026/Donald%20Gordon%20Theatre/Owain%20and%20Henry/O_H_600x400?_a=BAAAV6DQ",
+    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1758006927/WMC%20Content/Whats%20On/2026/Donald%20Gordon%20Theatre/Owain%20and%20Henry/O_H_600x400?_a=BAAAV6DQ",
     "description": "An epic story of power, national identity, and the price of silence.\n\nIn 1400, Owain Glyndŵr (Michael Sheen), a forgotten lord of a small northern land, is declared an outlaw by King Henry IV (Linus Roache). Rather than surrendering to his fate, Owain rises in rebellion. As the spark of his revolt spreads across the border, Henry finds himself struggling to keep the throne and the two men find themselves on opposite sides of history; one fighting for survival, the other for control.\n\nWritten by Olivier Award-winning Welsh playwright Gary Owen (Iphigenia in Splott), Owain & Henry is an historical epic charged with poetic power. This ambitious new production brings to life one of Wales’ most defining stories, where the fight for the existence of a nation hangs in the balance.\n\nCo-directed by Michael Sheen and Steffan Donnelly of Theatr Cymru.\n\nA Wales Millennium Centre and Welsh National Theatre co-production.",
     "availability": "LIMITED AVAILABILITY",
     "availabilityRange": "61-90%",
@@ -3640,19 +3861,9 @@
     "popularityScore": 43,
     "popularityLabel": "Moderate demand",
     "imageUrls": [
-      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1758006927/WMC%20Content/Whats%20On/2026/Donald%20Gordon%20Theatre/Owain%20and%20Henry/O_H_600x400?_a=BAAAV6DQ",
-      "http://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_630%2Cw_1200/f_auto/q_auto/v1758006927/WMC%20Content/Whats%20On/2026/Donald%20Gordon%20Theatre/Owain%20and%20Henry/O_H_600x400?_a=BAAAV6DQ",
-      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_512%2Cw_1024/f_auto/q_auto/v1758006927/WMC%20Content/Whats%20On/2026/Donald%20Gordon%20Theatre/Owain%20and%20Henry/O_H_600x400?_a=BAAAV6DQ",
       "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1758006927/WMC%20Content/Whats%20On/2026/Donald%20Gordon%20Theatre/Owain%20and%20Henry/O_H_600x400?_a=BAAAV6DQ"
     ],
-    "eventStartDate": "2026-11-05 00:00:00",
-    "eventEndDate": "2026-11-28 23:59:00",
-    "ticketPriceFrom": 17,
-    "ticketPriceTo": 17,
-    "ticketCurrency": "GBP",
-    "subcategory": "Wales Millennium Centre > What's on > 2026 > Owain & Henry",
-    "primaryCategory": "Theatre",
-    "ticketPriceLabel": "£17"
+    "primaryCategory": "Theatre"
   },
   {
     "title": "LAURA LEXX: YO-YO TOUR",
@@ -3673,28 +3884,13 @@
     "url": "https://www.wmc.org.uk/en/whats-on/2026/the-pearl-revue-2",
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-07-17T09:55:49.425Z",
-    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1783866730/WMC%20Content/Whats%20On/2026/Cabaret/Pearl%20Rev/0094a48c-fc9d-4937-8e58-3c6cd34e064a?_a=BAAAV6DQ",
+    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1783866730/WMC%20Content/Whats%20On/2026/Cabaret/Pearl%20Rev/0094a48c-fc9d-4937-8e58-3c6cd34e064a?_a=BAAAV6DQ",
     "subVenue": "Cabaret",
     "description": "The days might be getting cooler but we’re keeping your evening HOT at The Pearl Revue! A dazzling night of cabaret, variety and burlesque all tied together with a comedy bow.\n\nFeaturing world-class casts of circus sensations, drag royalty, burlesque icons, vaudeville charmers, sideshow daredevils, comedians, and more. Think of it as the Cabaret Avengers… with tighter pants and more rhinestones!\n\nLovingly curated by Oola Pearl, no two shows are ever the same - but each one is a guaranteed dopamine hit.\n\nExpect sparkle, silliness, and just the right touch of mischief. Grab your besties and secure your tickets for a night you won’t forget.\n\nMay include strong language and partial nudity. Strictly for those over 18 with a funny bone and a wicked streak!\n\nProudly produced by Welsh production company Quill & Pearl Presents.",
-    "ticketPriceFrom": 20,
-    "ticketPriceTo": 20,
-    "ticketCurrency": "GBP",
-    "ticketPriceLabel": "£20",
-    "availability": "UNKNOWN",
-    "availabilityRange": null,
-    "availabilityEstimate": null,
-    "popularityScore": null,
-    "popularityLabel": null,
     "imageUrls": [
-      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1783866730/WMC%20Content/Whats%20On/2026/Cabaret/Pearl%20Rev/0094a48c-fc9d-4937-8e58-3c6cd34e064a?_a=BAAAV6DQ",
-      "http://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_630%2Cw_1200/f_auto/q_auto/v1783866730/WMC%20Content/Whats%20On/2026/Cabaret/Pearl%20Rev/0094a48c-fc9d-4937-8e58-3c6cd34e064a?_a=BAAAV6DQ",
-      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_512%2Cw_1024/f_auto/q_auto/v1783866730/WMC%20Content/Whats%20On/2026/Cabaret/Pearl%20Rev/0094a48c-fc9d-4937-8e58-3c6cd34e064a?_a=BAAAV6DQ",
       "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1783866730/WMC%20Content/Whats%20On/2026/Cabaret/Pearl%20Rev/0094a48c-fc9d-4937-8e58-3c6cd34e064a?_a=BAAAV6DQ"
     ],
-    "eventStartDate": "2026-11-07 20:00:00",
-    "eventEndDate": "2026-11-07 23:00:00",
-    "subcategory": "Wales Millennium Centre > What's on > 2026 > The Pearl Revue",
-    "primaryCategory": "Comedy"
+    "primaryCategory": "Theatre"
   },
   {
     "title": "WAR AND PEACE",
@@ -3872,12 +4068,27 @@
     "url": "https://www.wmc.org.uk/en/whats-on/2026/cardiff-comedy-club",
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-07-17T12:15:00.222Z",
-    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1784022147/WMC%20Content/Whats%20On/2026/Cabaret/Cardiff%20Comedy%20Club/WMC_CC_Thumbnails_1200_x_900_Nov26?_a=BAAAV6DQ",
+    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1784022147/WMC%20Content/Whats%20On/2026/Cabaret/Cardiff%20Comedy%20Club/WMC_CC_Thumbnails_1200_x_900_Nov26?_a=BAAAV6DQ",
     "subVenue": "Cabaret",
     "description": "Cabaret at Wales Millennium Centre have teamed up with comedy curators Little Wander (the brains behind Machynlleth Comedy Festival) to bring you the best in weird, wonderful and wildly funny stand-up.\n\nExpect surreal stories, sharp observations and the sort of comedy that makes you laugh first and ask “wait, what just happened?” later.\n\nThe night features:\n\nDry, Welsh oddball.BBC New Comedian of the Year 2024As seen on Comic Relief“Energy and delivery on stage absolutely fantastic” – Babatunde Aleshe\n\nAs seen on ITV, BBC, DAVE and Comedy CentralBBC New Comedy Award Finalist4 x Leicester Comedy Festival NomineeChortle Awards NomineeIsh Awards Best Show NomineeWinner Of The 99 Club Bursary 2022\"She is an irresistible force of nature\" - Beyond the joke\"Aggressively funny” - The List\n\nRohan is a comedian with little to say and a lot of words to say it with. He has taken his unique brand of critically-assessed stand-up all over the UK and has written for Radio 4Extra. He is a 2Northdown New Act Finalist 2022, So You Think You’re Funny Finalist 2022 and came 3rd in the Max Turner Prize.\n\n\"Wilson makes it all look effortless...for engaging, chatty,unadorned stand-up, Wilson knows how to deliver\"  - Chortle\"Highly entertaining\" - Time Out \"He's a very very funny man\" - Frank Skinner“Tour-de-force.” - Leicester Mercury",
+    "ticketPriceFrom": 18,
+    "ticketPriceTo": 18,
+    "ticketCurrency": "GBP",
+    "ticketPriceLabel": "£18",
+    "availability": "UNKNOWN",
+    "availabilityRange": null,
+    "availabilityEstimate": null,
+    "popularityScore": null,
+    "popularityLabel": null,
     "imageUrls": [
+      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1784022147/WMC%20Content/Whats%20On/2026/Cabaret/Cardiff%20Comedy%20Club/WMC_CC_Thumbnails_1200_x_900_Nov26?_a=BAAAV6DQ",
+      "http://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_630%2Cw_1200/f_auto/q_auto/v1784022147/WMC%20Content/Whats%20On/2026/Cabaret/Cardiff%20Comedy%20Club/WMC_CC_Thumbnails_1200_x_900_Nov26?_a=BAAAV6DQ",
+      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_512%2Cw_1024/f_auto/q_auto/v1784022147/WMC%20Content/Whats%20On/2026/Cabaret/Cardiff%20Comedy%20Club/WMC_CC_Thumbnails_1200_x_900_Nov26?_a=BAAAV6DQ",
       "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1784022147/WMC%20Content/Whats%20On/2026/Cabaret/Cardiff%20Comedy%20Club/WMC_CC_Thumbnails_1200_x_900_Nov26?_a=BAAAV6DQ"
     ],
+    "eventStartDate": "2026-11-26 20:00:00",
+    "eventEndDate": "2026-11-26 22:00:00",
+    "subcategory": "Wales Millennium Centre > What's on > 2026 > Cardiff Comedy Club",
     "primaryCategory": "Comedy"
   },
   {
@@ -3889,15 +4100,6 @@
     "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1784721639/WMC%20Content/Whats%20On/2026/Cabaret/Sleigh%20Misserables/WEB_2?_a=BAAAV6DQ",
     "subVenue": "Cabaret",
     "description": "Musical theatre fans, your perfect festive night out has arrived.\n\nThe greatest musical theatre songs of all time meet the most beloved Christmas classics in the ultimate festive cabaret spectacular.\n\nJoin us for an unforgettable evening as iconic 11 o'clock numbers, showstopping Broadway and West End favourites, and cherished seasonal hits are mixed, mashed and wrapped up under one tinsel-covered roof. From powerful ballads to festive singalong moments, this joyful celebration of musical theatre and Christmas promises something for everyone.\n\nWhich songs will make the final setlist? You'll have to join us to find out. Expect laughter, nostalgia, soaring vocals, festive surprises and enough Christmas spirit to last the entire holiday season.",
-    "ticketPriceFrom": 18,
-    "ticketPriceTo": 18,
-    "ticketCurrency": "GBP",
-    "ticketPriceLabel": "£18",
-    "availability": "UNKNOWN",
-    "availabilityRange": null,
-    "availabilityEstimate": null,
-    "popularityScore": null,
-    "popularityLabel": null,
     "imageUrls": [
       "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1784721639/WMC%20Content/Whats%20On/2026/Cabaret/Sleigh%20Misserables/WEB_2?_a=BAAAV6DQ",
       "http://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_630%2Cw_1200/f_auto/q_auto/v1784721639/WMC%20Content/Whats%20On/2026/Cabaret/Sleigh%20Misserables/WEB_2?_a=BAAAV6DQ",
@@ -3906,8 +4108,12 @@
     ],
     "eventStartDate": "2026-11-27 20:00:00",
     "eventEndDate": "2026-11-28 21:30:00",
+    "ticketPriceFrom": 18,
+    "ticketPriceTo": 18,
+    "ticketCurrency": "GBP",
     "subcategory": "Wales Millennium Centre > What's on > 2026 > Sleigh Miserables",
-    "primaryCategory": "Musical Theatre"
+    "primaryCategory": "Theatre",
+    "ticketPriceLabel": "£18"
   },
   {
     "title": "MAMMA MIA!",
@@ -4002,13 +4208,28 @@
     "url": "https://www.wmc.org.uk/en/whats-on/2026/tchaikovskys-nutcracker",
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-06-29T12:30:37.749Z",
-    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1781445954/WMC%20Content/Whats%20On/2026/BBC%20NoW/Nutcracker/e5051972-b5ce-47c4-a9a5-fdf0f6b63a17?_a=BAAAV6DQ",
+    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1781445954/WMC%20Content/Whats%20On/2026/BBC%20NoW/Nutcracker/e5051972-b5ce-47c4-a9a5-fdf0f6b63a17?_a=BAAAV6DQ",
     "subVenue": "Hoddinott Hall",
     "description": "MAGIC WONDER DELIGHTFUL\n\nA festive, family friendly celebration of Seasonal classics, conducted by Luis Castillo Briceño. The evening opens with the magical Prelude from Humperdinck’s Hänsel und Gretel, where folk inspired melodies and glowing orchestral colours bring the fairy tale forest vividly to life. Frank Bridge’s sparkling Christmas Dance “Sir Roger de Coverley” follows, a whirlwind of variations on a much loved English tune traditionally played at Christmas celebrations, ending with a joyful nod to Auld Lang Syne.Benjamin Britten’s much loved Young Person’s Guide to the Orchestra offers an entertaining and illuminating tour of the orchestra, perfect for curious listeners of all ages. After the interval, Tchaikovsky’s irresistible Nutcracker Suite brings the concert to a close, overflowing with seasonal magic, dance, and unforgettable melodies.\n\nArtists:\n\nLuis Castillo-Briceno – Conductor\n\nSteffan Rhodri – Narrator\n\nRepertoire:\n\nHumperdinck Hänsel und Gretel: Prelude Bridge Christmas Dance \"\"Sir Roger de Coverley\"\" Britten Young Person's Guide to the Orchestra INTERVAL Tchaikovsky Suite from Nutcracker",
+    "ticketPriceFrom": 17,
+    "ticketPriceTo": 17,
+    "ticketCurrency": "GBP",
+    "ticketPriceLabel": "£17",
+    "availability": "UNKNOWN",
+    "availabilityRange": null,
+    "availabilityEstimate": null,
+    "popularityScore": null,
+    "popularityLabel": null,
     "imageUrls": [
+      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1781445954/WMC%20Content/Whats%20On/2026/BBC%20NoW/Nutcracker/e5051972-b5ce-47c4-a9a5-fdf0f6b63a17?_a=BAAAV6DQ",
+      "http://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_630%2Cw_1200/f_auto/q_auto/v1781445954/WMC%20Content/Whats%20On/2026/BBC%20NoW/Nutcracker/e5051972-b5ce-47c4-a9a5-fdf0f6b63a17?_a=BAAAV6DQ",
+      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_512%2Cw_1024/f_auto/q_auto/v1781445954/WMC%20Content/Whats%20On/2026/BBC%20NoW/Nutcracker/e5051972-b5ce-47c4-a9a5-fdf0f6b63a17?_a=BAAAV6DQ",
       "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1781445954/WMC%20Content/Whats%20On/2026/BBC%20NoW/Nutcracker/e5051972-b5ce-47c4-a9a5-fdf0f6b63a17?_a=BAAAV6DQ"
     ],
-    "primaryCategory": "Theatre"
+    "eventStartDate": "2026-12-03 19:30:00",
+    "eventEndDate": "2026-12-03 22:00:00",
+    "subcategory": "Wales Millennium Centre > What's on > 2026 > Tchaikovsky’s Nutcracker",
+    "primaryCategory": "Family"
   },
   {
     "title": "CAMILLE O'SULLIVAN - LOVELETTER",
@@ -4016,7 +4237,7 @@
     "url": "https://www.wmc.org.uk/en/whats-on/2026/camille-osullivan-loveletter",
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-06-05T22:12:18.829Z",
-    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1775566448/WMC%20Content/Whats%20On/2026/Weston%20Studio/Camille%20OSullivan/Camille-OSullivan-1?_a=BAAAV6DQ",
+    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1775566448/WMC%20Content/Whats%20On/2026/Weston%20Studio/Camille%20OSullivan/Camille-OSullivan-1?_a=BAAAV6DQ",
     "description": "A love letter in song, Camille’s celebrates dear friend Shane MacGowan, Sinéad O’Connor, David Bowie, Radiohead, Brel, Nick Cave and more. Chameleon-like on stage, each song has a different character with its story to tell.\n\nCamille with long-time collaborator Feargal Murray has created an intimate, heartfelt show with a little bit of joyful, mad chaos as her life unravels, capturing the honest response to those much loved and lost.\n\nVoted “One of the top 25 performances ever on Later with Jools BBC” (Daily Telegraph) and \"Queen of the Edinburgh Festival\" (BBC), Camille toured with the Pogues, guested at Yoko Ono’s & Richard Thompson’s RFH Meltdown and original star of Olivier Award-winning La Clique. Previously an award-winning architect and painter, Camille was born in London to a French mother and Irish/English father, she grew up in a village in Cork, Ireland listening to her parents & sisters eclectic music collection that shaped her into the unique interpreter she is today.\n\nThe multi-award-winning singer has stunned audiences around the world with her five-star sell-out performances, including the Sydney Opera House, Royal Festival Hall, The Roundhouse, won the coveted Herald Angel award for her RSC solo performance ‘The Rape of Lucrece’ and recently an Architectural RIAI 2025 award.\n\nDark, sexy, fierce, amusing and mesmerizing, Camille transforms each song she performs into an intense, emotional, and theatrical experience. Expect joy and pure passion.",
     "availability": "GOOD AVAILABILITY",
     "availabilityRange": "0-30%",
@@ -4053,19 +4274,9 @@
     "popularityScore": 11,
     "popularityLabel": "Very low demand",
     "imageUrls": [
-      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1775566448/WMC%20Content/Whats%20On/2026/Weston%20Studio/Camille%20OSullivan/Camille-OSullivan-1?_a=BAAAV6DQ",
-      "http://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_630%2Cw_1200/f_auto/q_auto/v1775566448/WMC%20Content/Whats%20On/2026/Weston%20Studio/Camille%20OSullivan/Camille-OSullivan-1?_a=BAAAV6DQ",
-      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_512%2Cw_1024/f_auto/q_auto/v1775566448/WMC%20Content/Whats%20On/2026/Weston%20Studio/Camille%20OSullivan/Camille-OSullivan-1?_a=BAAAV6DQ",
       "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1775566448/WMC%20Content/Whats%20On/2026/Weston%20Studio/Camille%20OSullivan/Camille-OSullivan-1?_a=BAAAV6DQ"
     ],
-    "eventStartDate": "2026-12-03 20:30:00",
-    "eventEndDate": "2026-12-05 22:00:00",
-    "ticketPriceFrom": 20,
-    "ticketPriceTo": 20,
-    "ticketCurrency": "GBP",
-    "subcategory": "Wales Millennium Centre > What's on > 2026 > Camille O'Sullivan - Loveletter",
-    "primaryCategory": "Theatre",
-    "ticketPriceLabel": "£20"
+    "primaryCategory": "Theatre"
   },
   {
     "title": "LEROY BRITO - HALFTIME",
@@ -4112,10 +4323,6 @@
     "scrapedAt": "2026-06-05T22:12:18.829Z",
     "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1746704380/WMC%20Content/Whats%20On/2026/Donald%20Gordon%20Theatre/Matilda/Matilda_Mobile?_a=BAAAV6DQ",
     "description": "Following the sellout success of its first tour in 2018/19, Matilda The Musical, the multi-award winning musical from the Royal Shakespeare Company, inspired by the beloved book by Roald Dahl, is heading back out on tour across the UK and Ireland.\n\nIn celebration of 15 years on stage since opening at the Courtyard Theatre in Stratford-upon-Avon, and following performances in 100 cities across 17 countries worldwide, Matilda now returns to Wales Millennium Centre.\n\nWith book by Dennis Kelly, music and lyrics by Tim Minchin and directed by Matthew Warchus, Matilda is the story of an extraordinary little girl who, armed with a vivid imagination and a sharp mind, dares to take a stand and change her own destiny.\n\nWinner of over 100 international awards, including 24 for Best Musical, the ‘unique and unforgettable’ (Rolling Stone) global phenomenon, Matilda has now delighted over 12 million audiences worldwide.",
-    "ticketPriceFrom": 23,
-    "ticketPriceTo": 23,
-    "ticketCurrency": "GBP",
-    "ticketPriceLabel": "£23",
     "availability": "LIMITED AVAILABILITY",
     "availabilityRange": "61-90%",
     "availabilityEstimate": 61,
@@ -4424,16 +4631,20 @@
     ],
     "eventStartDate": "2026-12-09 19:30:00",
     "eventEndDate": "2027-01-17 23:00:00",
+    "ticketPriceFrom": 23,
+    "ticketPriceTo": 23,
+    "ticketCurrency": "GBP",
     "subcategory": "Wales Millennium Centre > What's on > 2026 > Matilda The Musical",
-    "primaryCategory": "Musical Theatre"
+    "primaryCategory": "Musical Theatre",
+    "ticketPriceLabel": "£23"
   },
   {
     "title": "BARRYLESQUE",
-    "date": "Wednesday, 16 December 2026 – Friday, 2 January 2026",
+    "date": "Tuesday, 26 January 2027 – Saturday, 2 January 2027",
     "url": "https://www.wmc.org.uk/en/whats-on/2026/barrylesque",
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-06-19T14:08:47.929Z",
-    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1781796377/WMC%20Content/Whats%20On/2026/Weston%20Studio/Barrylesque/26059_Barrylesque_On-Sale-Assets_ARTWORK_AG180626_WEB_THUMBNAIL?_a=BAAAV6DQ",
+    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1781796377/WMC%20Content/Whats%20On/2026/Weston%20Studio/Barrylesque/26059_Barrylesque_On-Sale-Assets_ARTWORK_AG180626_WEB_THUMBNAIL?_a=BAAAV6DQ",
     "description": "Hold on to your paper hats and fizz... This Christmas, Wales Millennium Centre is bringing you the most glamorous, most outrageous and most unmissably Welsh night out of the festive season.\n\nBarrylesque is a drag cabaret spectacular that takes the beloved world of Gavin & Stacey and gives it the full Barry Island treatment. Featuring all your fave characters, reimagined as larger-than-life drag and burlesque performers for a night of live vocals, lip sync, comedy and chaos. Expect iconic catchphrases, outrageous characters, and a singalong finale that'll have the whole house on its feet. Tidy.\n\nAnd maybe, just maybe, we might finally work out what happened on that fishing trip.\n\nPart cabaret, part sitcom, entirely tongue-in-cheek, Barrylesque is the only Christmas gift worth giving this year.\n\nDon't miss it. It's well lush.",
     "availability": "MODERATE AVAILABILITY",
     "availabilityRange": "31-60%",
@@ -4531,19 +4742,9 @@
     "popularityScore": 26,
     "popularityLabel": "Low demand",
     "imageUrls": [
-      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1781796377/WMC%20Content/Whats%20On/2026/Weston%20Studio/Barrylesque/26059_Barrylesque_On-Sale-Assets_ARTWORK_AG180626_WEB_THUMBNAIL?_a=BAAAV6DQ",
-      "http://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_630%2Cw_1200/f_auto/q_auto/v1781796377/WMC%20Content/Whats%20On/2026/Weston%20Studio/Barrylesque/26059_Barrylesque_On-Sale-Assets_ARTWORK_AG180626_WEB_THUMBNAIL?_a=BAAAV6DQ",
-      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_512%2Cw_1024/f_auto/q_auto/v1781796377/WMC%20Content/Whats%20On/2026/Weston%20Studio/Barrylesque/26059_Barrylesque_On-Sale-Assets_ARTWORK_AG180626_WEB_THUMBNAIL?_a=BAAAV6DQ",
       "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1781796377/WMC%20Content/Whats%20On/2026/Weston%20Studio/Barrylesque/26059_Barrylesque_On-Sale-Assets_ARTWORK_AG180626_WEB_THUMBNAIL?_a=BAAAV6DQ"
     ],
-    "eventStartDate": "2026-12-16 20:30:00",
-    "eventEndDate": "2026-01-02 22:00:00",
-    "ticketPriceFrom": 20,
-    "ticketPriceTo": 20,
-    "ticketCurrency": "GBP",
-    "subcategory": "Wales Millennium Centre > What's on > 2026 > Barrylesque",
-    "primaryCategory": "Theatre",
-    "ticketPriceLabel": "£20"
+    "primaryCategory": "Theatre"
   },
   {
     "title": "THE MAGIC OF CHRISTMAS",
@@ -4565,23 +4766,9 @@
     "url": "https://www.wmc.org.uk/en/whats-on/2027/tchaikovsky-5",
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-06-29T12:30:37.749Z",
-    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1781601443/WMC%20Content/Whats%20On/2027/BBC%20NOW/Tchaikovsky%205/Tchaikovsky_5_thumb?_a=BAAAV6DQ",
+    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1781601443/WMC%20Content/Whats%20On/2027/BBC%20NOW/Tchaikovsky%205/Tchaikovsky_5_thumb?_a=BAAAV6DQ",
     "subVenue": "Hoddinott Hall",
     "description": "This richly coloured concert is conducted by Principal Guest Conductor Jaime Martín and brings together music of atmosphere, virtuosity and symphonic power.\n\nGrace Williams’ Sea Sketches opens the evening, capturing the character of the Welsh coastline in music of freshness, colour and flowing movement.\n\nThe focus then turns to harpist Mared Pugh‑Evans, soloist in Henriette Renié’s Harp Concerto, a deeply Romantic work shaped by long, sweeping melodies and brilliant, virtuosic passages for the harp.\n\nAfter the interval, Tchaikovsky’s Symphony No. 5 charts a dramatic journey from struggle to hard‑won triumph, bringing the programme to an impassioned close.\n\nExpressive Rich Destiny\n\nWilliams Sea Sketches (20')Henreitte Renie Harp Concerto (25')Interval Tchaikovsky Symphony No.5 (44')",
-    "imageUrls": [
-      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1781601443/WMC%20Content/Whats%20On/2027/BBC%20NOW/Tchaikovsky%205/Tchaikovsky_5_thumb?_a=BAAAV6DQ"
-    ],
-    "primaryCategory": "Theatre"
-  },
-  {
-    "title": "STRAUSS & WAGNER",
-    "date": "Sunday, 17 January 2027",
-    "url": "https://www.wmc.org.uk/en/whats-on/2027/strauss-and-wagner",
-    "venue": "Wales Millennium Centre",
-    "scrapedAt": "2026-06-29T12:30:37.749Z",
-    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1781604767/WMC%20Content/Whats%20On/2027/BBC%20NOW/Strauss%20and%20Wagner/Strauss_Wagner_thumb?_a=BAAAV6DQ",
-    "subVenue": "Hoddinott Hall",
-    "description": "Strauss & Wagner: two towering figures at the height of their expressive powers.\n\nRichard Strauss’s Four Last Songs, composed in 1948, a year before his death, stand as one of the most luminous farewells in all music. Setting deeply contemplative texts, Strauss reflects on love, transience and release, drawing the listener into what he called “the magic circle of the night.”\n\nAfter the interval, Wagner’s Tristan und Isolde: An Orchestral Passion reveals the composer at his most revolutionary. This sumptuous orchestral synthesis has long been cherished as a concert work in its own right, its lush romantic surface concealing a daring harmonic language that transformed music history from its opening bars.\n\nConducted by Anthony Hermus, the programme offers an immersive journey through two composers redefining the emotional and musical possibilities of their art.\n\nPASSION FAREWELL LUMINOUS Strauss VIER LETZTE LIEDER (Four Last Songs) (24') Interval (20') Wagner arr. | trefn. Henk de Vlieger Tristan und Isolde: An Orchestral Passion (60')",
     "ticketPriceFrom": 17,
     "ticketPriceTo": 17,
     "ticketCurrency": "GBP",
@@ -4592,15 +4779,29 @@
     "popularityScore": null,
     "popularityLabel": null,
     "imageUrls": [
-      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1781604767/WMC%20Content/Whats%20On/2027/BBC%20NOW/Strauss%20and%20Wagner/Strauss_Wagner_thumb?_a=BAAAV6DQ",
-      "http://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_630%2Cw_1200/f_auto/q_auto/v1781604767/WMC%20Content/Whats%20On/2027/BBC%20NOW/Strauss%20and%20Wagner/Strauss_Wagner_thumb?_a=BAAAV6DQ",
-      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_512%2Cw_1024/f_auto/q_auto/v1781604767/WMC%20Content/Whats%20On/2027/BBC%20NOW/Strauss%20and%20Wagner/Strauss_Wagner_thumb?_a=BAAAV6DQ",
+      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1781601443/WMC%20Content/Whats%20On/2027/BBC%20NOW/Tchaikovsky%205/Tchaikovsky_5_thumb?_a=BAAAV6DQ",
+      "http://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_630%2Cw_1200/f_auto/q_auto/v1781601443/WMC%20Content/Whats%20On/2027/BBC%20NOW/Tchaikovsky%205/Tchaikovsky_5_thumb?_a=BAAAV6DQ",
+      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_512%2Cw_1024/f_auto/q_auto/v1781601443/WMC%20Content/Whats%20On/2027/BBC%20NOW/Tchaikovsky%205/Tchaikovsky_5_thumb?_a=BAAAV6DQ",
+      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1781601443/WMC%20Content/Whats%20On/2027/BBC%20NOW/Tchaikovsky%205/Tchaikovsky_5_thumb?_a=BAAAV6DQ"
+    ],
+    "eventStartDate": "2027-01-07 19:30:00",
+    "eventEndDate": "2027-01-07 21:30:00",
+    "subcategory": "Wales Millennium Centre > What's on > 2027 > Tchaikovsky 5",
+    "primaryCategory": "Theatre"
+  },
+  {
+    "title": "STRAUSS & WAGNER",
+    "date": "Sunday, 17 January 2027",
+    "url": "https://www.wmc.org.uk/en/whats-on/2027/strauss-and-wagner",
+    "venue": "Wales Millennium Centre",
+    "scrapedAt": "2026-06-29T12:30:37.749Z",
+    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1781604767/WMC%20Content/Whats%20On/2027/BBC%20NOW/Strauss%20and%20Wagner/Strauss_Wagner_thumb?_a=BAAAV6DQ",
+    "subVenue": "Hoddinott Hall",
+    "description": "Strauss & Wagner: two towering figures at the height of their expressive powers.\n\nRichard Strauss’s Four Last Songs, composed in 1948, a year before his death, stand as one of the most luminous farewells in all music. Setting deeply contemplative texts, Strauss reflects on love, transience and release, drawing the listener into what he called “the magic circle of the night.”\n\nAfter the interval, Wagner’s Tristan und Isolde: An Orchestral Passion reveals the composer at his most revolutionary. This sumptuous orchestral synthesis has long been cherished as a concert work in its own right, its lush romantic surface concealing a daring harmonic language that transformed music history from its opening bars.\n\nConducted by Anthony Hermus, the programme offers an immersive journey through two composers redefining the emotional and musical possibilities of their art.\n\nPASSION FAREWELL LUMINOUS Strauss VIER LETZTE LIEDER (Four Last Songs) (24') Interval (20') Wagner arr. | trefn. Henk de Vlieger Tristan und Isolde: An Orchestral Passion (60')",
+    "imageUrls": [
       "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1781604767/WMC%20Content/Whats%20On/2027/BBC%20NOW/Strauss%20and%20Wagner/Strauss_Wagner_thumb?_a=BAAAV6DQ"
     ],
-    "eventStartDate": "2027-01-17 15:00:00",
-    "eventEndDate": "2027-01-17 17:30:00",
-    "subcategory": "Wales Millennium Centre > What's on > 2027 > Strauss & Wagner",
-    "primaryCategory": "Musical Theatre"
+    "primaryCategory": "Theatre"
   },
   {
     "title": "PARANORMAL ACTIVITY",
@@ -4608,8 +4809,12 @@
     "url": "https://www.wmc.org.uk/en/whats-on/2027/paranormalactivity",
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-06-05T22:12:18.829Z",
-    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1784116498/WMC%20Content/Whats%20On/2027/Donald%20Gordon%20Theatre/Paranormal%20Activity/MM_PA_UK_2026124_Cardiff_Digital_Updates1280x960?_a=BAAAV6DQ",
+    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1784116498/WMC%20Content/Whats%20On/2027/Donald%20Gordon%20Theatre/Paranormal%20Activity/MM_PA_UK_2026124_Cardiff_Digital_Updates1280x960?_a=BAAAV6DQ",
     "description": "Direct from a sold out West End run.\n\nJames and Lou move from Chicago to London to escape their past, but they soon discover that places aren’t haunted, people are...\n\nThis thrilling West End hit is inspired by the iconic, hugely popular film series, Paranormal Activity, with a brand-new story live on stage. Now embarking on its first ever UK and Ireland tour after a sell-out London season, this chilling production promises to keep you on the edge of your seat from start to finish. Hold your nerve...",
+    "ticketPriceFrom": 20,
+    "ticketPriceTo": 20,
+    "ticketCurrency": "GBP",
+    "ticketPriceLabel": "£20",
     "availability": "MODERATE AVAILABILITY",
     "availabilityRange": "31-60%",
     "availabilityEstimate": 46,
@@ -4669,9 +4874,15 @@
     "popularityScore": 39,
     "popularityLabel": "Moderate demand",
     "imageUrls": [
+      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1784116498/WMC%20Content/Whats%20On/2027/Donald%20Gordon%20Theatre/Paranormal%20Activity/MM_PA_UK_2026124_Cardiff_Digital_Updates1280x960?_a=BAAAV6DQ",
+      "http://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_630%2Cw_1200/f_auto/q_auto/v1784116498/WMC%20Content/Whats%20On/2027/Donald%20Gordon%20Theatre/Paranormal%20Activity/MM_PA_UK_2026124_Cardiff_Digital_Updates1280x960?_a=BAAAV6DQ",
+      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_512%2Cw_1024/f_auto/q_auto/v1784116498/WMC%20Content/Whats%20On/2027/Donald%20Gordon%20Theatre/Paranormal%20Activity/MM_PA_UK_2026124_Cardiff_Digital_Updates1280x960?_a=BAAAV6DQ",
       "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1784116498/WMC%20Content/Whats%20On/2027/Donald%20Gordon%20Theatre/Paranormal%20Activity/MM_PA_UK_2026124_Cardiff_Digital_Updates1280x960?_a=BAAAV6DQ"
     ],
-    "primaryCategory": "Theatre"
+    "eventStartDate": "2027-01-19 19:30:00",
+    "eventEndDate": "2027-01-23 22:00:00",
+    "subcategory": "Wales Millennium Centre > What's on > 2027 > Paranormal Activity",
+    "primaryCategory": "Musical Theatre"
   },
   {
     "title": "TRAINSPOTTING: THE MUSICAL",
@@ -4679,12 +4890,8 @@
     "url": "https://www.wmc.org.uk/en/whats-on/2027/trainspotting-the-musical",
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-06-05T22:12:18.829Z",
-    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1778236627/WMC%20Content/Whats%20On/2027/Donald%20Gordon%20Theatre/Trainspotting/260506_Trainspotting_Cardiff_1280x960?_a=BAAAV6DQ",
+    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1778236627/WMC%20Content/Whats%20On/2027/Donald%20Gordon%20Theatre/Trainspotting/260506_Trainspotting_Cardiff_1280x960?_a=BAAAV6DQ",
     "description": "Thirty years on from the film that changed everything, TRAINSPOTTING: THE MUSICAL has its world premiere.\n\nRenton, Sick Boy, Begbie, Spud, Tommy, and Kelly, the industrial drug-crazed working-class heroes, are back.\n\nIn 1996, CHOOSE LIFE sounded like a challenge. Thirty years on, the landscape has shifted, but the hunger hasn’t. Addiction hasn’t disappeared - it’s shifted. It’s quieter now, more embedded. Less needle, more screen. Less escape, more repetition. The same restless search for something to fill the space.\n\nThe musical highlights the world we see changing around us, the obscene concentration of wealth, economic and political power in the hands of so few people. It addresses the modern culture of powerlessness. Art the singing-and-dancing Trojan horse that delivers direction and relevance.\n\nThis isn’t nostalgia, it’s closer than that. The past isn’t revisited - it lingers. The musical doesn’t tidy it. It sits with it. Listens to it. And lets it sing. New songs, classic songs, a musical like never before. Not for the easily confronted. It’s funny, loud, dynamic, and brings a dark dangerous energy never experienced before on the West End stage.\n\n“I believe the musical has a bigger, loudly beating human heart than either the book or the film. People need to think about the world we’re living in, and we offer that inspection, but they also really need to sing their hearts out and laugh their heads off - it’s what being human is all about.” Irvine Welsh, April 2026\n\nThere are no clean answers here. Only incredible music and flashes of clarity, humour, and the uneasy sense of recognition.\n\nCHOOSE LIFE.\n\nWritten by Irvine Welsh with Music & Lyrics by Stephen McGuinness & Irvine Welsh and Directed & Developed by Caroline Jay Ranger.",
-    "ticketPriceFrom": 24,
-    "ticketPriceTo": 24,
-    "ticketCurrency": "GBP",
-    "ticketPriceLabel": "£24",
     "availability": "LIMITED AVAILABILITY",
     "availabilityRange": "61-90%",
     "availabilityEstimate": 61,
@@ -4751,14 +4958,8 @@
     "popularityScore": 52,
     "popularityLabel": "High demand",
     "imageUrls": [
-      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1778236627/WMC%20Content/Whats%20On/2027/Donald%20Gordon%20Theatre/Trainspotting/260506_Trainspotting_Cardiff_1280x960?_a=BAAAV6DQ",
-      "http://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_630%2Cw_1200/f_auto/q_auto/v1778236627/WMC%20Content/Whats%20On/2027/Donald%20Gordon%20Theatre/Trainspotting/260506_Trainspotting_Cardiff_1280x960?_a=BAAAV6DQ",
-      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_512%2Cw_1024/f_auto/q_auto/v1778236627/WMC%20Content/Whats%20On/2027/Donald%20Gordon%20Theatre/Trainspotting/260506_Trainspotting_Cardiff_1280x960?_a=BAAAV6DQ",
       "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1778236627/WMC%20Content/Whats%20On/2027/Donald%20Gordon%20Theatre/Trainspotting/260506_Trainspotting_Cardiff_1280x960?_a=BAAAV6DQ"
     ],
-    "eventStartDate": "2027-01-25 19:30:00",
-    "eventEndDate": "2027-01-30 23:00:00",
-    "subcategory": "Wales Millennium Centre > What's on > 2027 > Trainspotting: The Musical",
     "primaryCategory": "Musical Theatre"
   },
   {
@@ -4781,8 +4982,12 @@
     "url": "https://www.wmc.org.uk/en/whats-on/2027/the-full-monty-2027",
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-06-05T22:12:18.829Z",
-    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1780477839/WMC%20Content/Whats%20On/2027/Donald%20Gordon%20Theatre/The%20Full%20Monty/260601_FM_Cardiff_1280_x_960?_a=BAAAV6DQ",
+    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1780477839/WMC%20Content/Whats%20On/2027/Donald%20Gordon%20Theatre/The%20Full%20Monty/260601_FM_Cardiff_1280_x_960?_a=BAAAV6DQ",
     "description": "Sometimes you have to bare everything!\n\nCelebrating the 30th Anniversary of the iconic film that took British cinema by storm, The Everyman Theatre, Cheltenham and Buxton Opera House in association with Mark Goucher and David Pugh present The Full Monty, live on stage. Back by popular demand, the boys are returning with a major national tour!\n\nThere are no heroes in Simon Beaufoy’s heartfelt play, just a group of lads trying to regain their dignity and pride. This fast and funny play is still very much of our time, as again we are hit by a cost-of-living crisis. Gaz and his mates are down on their luck and feel they have been thrown on the scrap heap, but they are determined to fight back and bare a little more than they ever thought they would have to.\n\nAs in the 1997 smash hit film, this production is a rollercoaster ride of ups and downs, laughs and heartbreak. Book now to relive the music of the 90’s and have a great night out in the company of our group of lads as they work to put on the show of their lives.\n\nStarring Kevin Clifton (Strictly Come Dancing, Priscilla Queen of the Desert UK & Ireland Tour 2026) as Gaz, Stewart Wright (Doc Martin, The Upstart Crow–Apollo Theatre) as Dave, James Gaddas (Coronation Street, The Rocky Horror Picture Show UK Tour) as Gerald, Ben Onwukwe (The Full Monty UK Tour 2024, The Shawshank Redemption UK Tour) as Horse, Jon-Paul Bell (Hollyoaks, Masters of Air) as Guy and Zrey Sholapurkar (Lark Rise to Candleford–The Watermill Theatre, The History Boys UK Tour) as Lomper.",
+    "ticketPriceFrom": 22,
+    "ticketPriceTo": 22,
+    "ticketCurrency": "GBP",
+    "ticketPriceLabel": "£22",
     "availability": "MODERATE AVAILABILITY",
     "availabilityRange": "31-60%",
     "availabilityEstimate": 46,
@@ -4842,8 +5047,14 @@
     "popularityScore": 39,
     "popularityLabel": "Moderate demand",
     "imageUrls": [
+      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1780477839/WMC%20Content/Whats%20On/2027/Donald%20Gordon%20Theatre/The%20Full%20Monty/260601_FM_Cardiff_1280_x_960?_a=BAAAV6DQ",
+      "http://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_630%2Cw_1200/f_auto/q_auto/v1780477839/WMC%20Content/Whats%20On/2027/Donald%20Gordon%20Theatre/The%20Full%20Monty/260601_FM_Cardiff_1280_x_960?_a=BAAAV6DQ",
+      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_512%2Cw_1024/f_auto/q_auto/v1780477839/WMC%20Content/Whats%20On/2027/Donald%20Gordon%20Theatre/The%20Full%20Monty/260601_FM_Cardiff_1280_x_960?_a=BAAAV6DQ",
       "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1780477839/WMC%20Content/Whats%20On/2027/Donald%20Gordon%20Theatre/The%20Full%20Monty/260601_FM_Cardiff_1280_x_960?_a=BAAAV6DQ"
     ],
+    "eventStartDate": "2027-02-02 19:30:00",
+    "eventEndDate": "2027-02-06 23:00:00",
+    "subcategory": "Wales Millennium Centre > What's on > 2027 > The Full Monty",
     "primaryCategory": "Theatre"
   },
   {
@@ -4918,12 +5129,8 @@
     "url": "https://www.wmc.org.uk/en/whats-on/2027/blood-brothers",
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-06-05T22:12:18.829Z",
-    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1763984317/WMC%20Content/Whats%20On/2026/Donald%20Gordon%20Theatre/Blood%20Brothers/BB_Crdff_1280x960?_a=BAAAV6DQ",
+    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1763984317/WMC%20Content/Whats%20On/2026/Donald%20Gordon%20Theatre/Blood%20Brothers/BB_Crdff_1280x960?_a=BAAAV6DQ",
     "description": "Written by Willy Russell, the legendary BLOOD BROTHERS tells the captivating and moving tale of twins who, separated at birth, grow up on opposite sides of the tracks, only to meet again with fateful consequences.\n\nFew musicals have received quite such acclaim as the multi-award-winning BLOOD BROTHERS. The production ran for more than 10,000 performances in London’s West End and has been affectionately christened the ‘Standing Ovation Musical’ as inevitably it “brings the audience cheering to its feet and roaring its approval” (The Daily Mail).\n\nThe superb score includes Bright New Day, Marilyn Monroe and the emotionally charged hit Tell Me It’s Not True.",
-    "ticketPriceFrom": 19.5,
-    "ticketPriceTo": 19.5,
-    "ticketCurrency": "GBP",
-    "ticketPriceLabel": "£19.50",
     "availability": "MODERATE AVAILABILITY",
     "availabilityRange": "31-60%",
     "availabilityEstimate": 46,
@@ -4989,15 +5196,9 @@
     "popularityScore": 40,
     "popularityLabel": "Moderate demand",
     "imageUrls": [
-      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1763984317/WMC%20Content/Whats%20On/2026/Donald%20Gordon%20Theatre/Blood%20Brothers/BB_Crdff_1280x960?_a=BAAAV6DQ",
-      "http://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_630%2Cw_1200/f_auto/q_auto/v1763984317/WMC%20Content/Whats%20On/2026/Donald%20Gordon%20Theatre/Blood%20Brothers/BB_Crdff_1280x960?_a=BAAAV6DQ",
-      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_512%2Cw_1024/f_auto/q_auto/v1763984317/WMC%20Content/Whats%20On/2026/Donald%20Gordon%20Theatre/Blood%20Brothers/BB_Crdff_1280x960?_a=BAAAV6DQ",
       "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1763984317/WMC%20Content/Whats%20On/2026/Donald%20Gordon%20Theatre/Blood%20Brothers/BB_Crdff_1280x960?_a=BAAAV6DQ"
     ],
-    "eventStartDate": "2027-02-16 19:30:00",
-    "eventEndDate": "2027-02-20 23:00:00",
-    "subcategory": "Wales Millennium Centre > What's on > 2027 > Blood Brothers",
-    "primaryCategory": "Musical Theatre"
+    "primaryCategory": "Theatre"
   },
   {
     "title": "ANDREW BIRD - ON THE EDGE TOUR",
@@ -5020,6 +5221,10 @@
     "scrapedAt": "2026-06-18T18:03:05.630Z",
     "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1781619469/WMC%20Content/Whats%20On/2027/Donald%20Gordon%20Theatre/Chicago/CHICAGO-2026-06-CDF-60417SA-2250x1038-SafeArea-1?_a=BAAAV6DQ",
     "description": "CHICAGO, the \"sexiest musical ever\" (Metro) is back on Tour in 2027.\n\n“Murder, greed, corruption, exploitation, adultery and treachery…all those things we hold near and dear to our hearts”. So begins the international multi-award-winning musical, CHICAGO.\n\nSet amidst the razzle-dazzle decadence of the 1920s, CHICAGO is the story of Roxie Hart, a housewife and nightclub dancer who murders her on-the-side lover after he threatens to walk out on her. Desperate to avoid conviction, she dupes the public, the media and her rival cellmate, Velma Kelly, by hiring Chicago’s slickest criminal lawyer to transform her malicious crime into a barrage of sensational headlines, the likes of which might just as easily be ripped from today's tabloids.\n\nCreated by the musical theatre talents of John Kander, Fred Ebb and legendary choreographer Bob Fosse, CHICAGO’s sexy, sassy score with one show-stopping song after another includes “Razzle Dazzle”, “Cell Block Tango”, and “All That Jazz”. With 6 Tony Awards, 2 Olivier Awards, a Grammy® and thousands of standing ovations, CHICAGO truly is “SUPERB” (Daily Telegraph).\n\nDon't miss out, book now! It would be criminal to miss it...\n\n*Cast and performance schedule subject to change without notice.",
+    "ticketPriceFrom": 20,
+    "ticketPriceTo": 20,
+    "ticketCurrency": "GBP",
+    "ticketPriceLabel": "£20",
     "availability": "MODERATE AVAILABILITY",
     "availabilityRange": "31-60%",
     "availabilityEstimate": 31,
@@ -5088,7 +5293,7 @@
     "imageUrls": [
       "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1781619469/WMC%20Content/Whats%20On/2027/Donald%20Gordon%20Theatre/Chicago/CHICAGO-2026-06-CDF-60417SA-2250x1038-SafeArea-1?_a=BAAAV6DQ"
     ],
-    "primaryCategory": "Theatre"
+    "primaryCategory": "Musical Theatre"
   },
   {
     "title": "SIBELIUS 6 & 7",
@@ -5125,28 +5330,12 @@
     "url": "https://www.wmc.org.uk/en/whats-on/2027/rob-auton-jupiter",
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-07-17T12:15:00.222Z",
-    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1784043117/WMC%20Content/Whats%20On/2027/Cabaret%202027/Rob%20Auton/R_Auton_343?_a=BAAAV6DQ",
+    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1784043117/WMC%20Content/Whats%20On/2027/Cabaret%202027/Rob%20Auton/R_Auton_343?_a=BAAAV6DQ",
     "description": "This show is a story about a time when Rob Auton had a job as an estate agent on the planet Jupiter.\n\nIt is fiction. Following the success of his sell-out 2025-26 nationwide tour, multi-award-winning writer, performer, podcaster and actor Rob Auton is returning to stages across the UK in 2027 with his thirteenth hour JUPITER.\n\nOn screen Rob has appeared opposite Danny Dyer in Marching Powder, in Channel 4's hit comedy The Change, and in BBC's Starstruck, with further credits including Miracle Workers (TBS), The End of the F**ing World (Netflix/Channel 4), The Russell Howard Hour (Sky), Cold Feet (ITV) and Random Acts (Channel 4). His viral stand-up appearance on Stand-Up Central with Rob Delaney (Comedy Central)\n\nAlongside his screen work, Rob is a two-time British Podcast Awards Gold winner for The Rob Auton Daily Podcast.",
-    "subVenue": "Cabaret",
-    "ticketPriceFrom": 24,
-    "ticketPriceTo": 24,
-    "ticketCurrency": "GBP",
-    "ticketPriceLabel": "£24",
-    "availability": "UNKNOWN",
-    "availabilityRange": null,
-    "availabilityEstimate": null,
-    "popularityScore": null,
-    "popularityLabel": null,
     "imageUrls": [
-      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1784043117/WMC%20Content/Whats%20On/2027/Cabaret%202027/Rob%20Auton/R_Auton_343?_a=BAAAV6DQ",
-      "http://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_630%2Cw_1200/f_auto/q_auto/v1784043117/WMC%20Content/Whats%20On/2027/Cabaret%202027/Rob%20Auton/R_Auton_343?_a=BAAAV6DQ",
-      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_512%2Cw_1024/f_auto/q_auto/v1784043117/WMC%20Content/Whats%20On/2027/Cabaret%202027/Rob%20Auton/R_Auton_343?_a=BAAAV6DQ",
       "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1784043117/WMC%20Content/Whats%20On/2027/Cabaret%202027/Rob%20Auton/R_Auton_343?_a=BAAAV6DQ"
     ],
-    "eventStartDate": "2027-02-27 20:00:00",
-    "eventEndDate": "2027-02-27 23:00:00",
-    "subcategory": "Wales Millennium Centre > What's on > 2027 > Rob Auton  'JUPITER'",
-    "primaryCategory": "Comedy"
+    "primaryCategory": "Theatre"
   },
   {
     "title": "JESUS CHRIST SUPERSTAR",
@@ -5276,11 +5465,11 @@
   },
   {
     "title": "WELSH NATIONAL OPERA: THE ANONYMOUS LOVER",
-    "date": "Thursday, 4 March 2027 – Friday, 12 March 2027",
+    "date": "Friday, 12 March 2027",
     "url": "https://www.wmc.org.uk/en/whats-on/2027/welsh-national-opera-the-anonymous-lover",
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-06-05T22:12:18.829Z",
-    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1777977697/WMC%20Content/Whats%20On/2027/Weston%20Studio/WNO:%20The%20Anonymous%20Lover/WNO_AL_WMC_1280x960px?_a=BAAAV6DQ",
+    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1777977697/WMC%20Content/Whats%20On/2027/Weston%20Studio/WNO:%20The%20Anonymous%20Lover/WNO_AL_WMC_1280x960px?_a=BAAAV6DQ",
     "description": "Playful, witty and irresistibly charming, The Anonymous Lover is a sparkling romantic comedy about the risks and rewards of falling in love.\n\nLéontine, a wealthy widow, swears she’ll never love again after an unhappy marriage. When mysterious letters and thoughtful gifts begin arriving from a secret admirer, her resolve starts to waver. The sender is her friend Valcour, who hides his identity, fearing rejection because of his lower social standing. As Léontine searches for the truth, Valcour must decide whether to reveal himself or remain anonymous.\n\nRarely performed, The Anonymous Lover is the only surviving opera by French composer Joseph Bologne and is brought to life in a vibrant new staging, with the orchestra on stage in an energetic baroque-inspired world. Faithful to Bologne’s elegant score, it also introduces a fresh, contemporary voice that speaks directly to the audience - inviting you to look again, think differently, and decide for yourself what shapes the way we experience great art.\n\nwno.org.uk/anonlover\n\nNew text by Tife Kusoro\n\nConductor Frederick Brown\n\nMusical Supervisor Laurence Cumings\n\nDirector Omar Elerian  Leontine Nardus Williams",
     "availability": "MODERATE AVAILABILITY",
     "availabilityRange": "31-60%",
@@ -5318,20 +5507,10 @@
     "popularityScore": 24,
     "popularityLabel": "Low demand",
     "imageUrls": [
-      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1777977697/WMC%20Content/Whats%20On/2027/Weston%20Studio/WNO:%20The%20Anonymous%20Lover/WNO_AL_WMC_1280x960px?_a=BAAAV6DQ",
-      "http://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_630%2Cw_1200/f_auto/q_auto/v1777977697/WMC%20Content/Whats%20On/2027/Weston%20Studio/WNO:%20The%20Anonymous%20Lover/WNO_AL_WMC_1280x960px?_a=BAAAV6DQ",
-      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_512%2Cw_1024/f_auto/q_auto/v1777977697/WMC%20Content/Whats%20On/2027/Weston%20Studio/WNO:%20The%20Anonymous%20Lover/WNO_AL_WMC_1280x960px?_a=BAAAV6DQ",
       "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1777977697/WMC%20Content/Whats%20On/2027/Weston%20Studio/WNO:%20The%20Anonymous%20Lover/WNO_AL_WMC_1280x960px?_a=BAAAV6DQ"
     ],
-    "eventStartDate": "2027-03-04 19:30:00",
-    "eventEndDate": "2027-03-12 21:00:00",
-    "ticketPriceFrom": 30,
-    "ticketPriceTo": 30,
-    "ticketCurrency": "GBP",
-    "subcategory": "Wales Millennium Centre > What's on > 2027 > Welsh National Opera: The Anonymous Lover",
     "primaryCategory": "Theatre",
-    "genre": "Classical",
-    "ticketPriceLabel": "£30"
+    "genre": "Classical"
   },
   {
     "title": "FRIDAY NIGHT IS MUSIC NIGHT - MUSIC OF THE COAST",
@@ -5342,15 +5521,6 @@
     "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1781879858/WMC%20Content/Whats%20On/2027/BBC%20NOW/Friday%20Night%20is%20Music%20Night/thumbnail-05-March-27?_a=BAAAV6DQ",
     "subVenue": "Hoddinott Hall",
     "description": "SEASCAPES | ADVENTURE | ATMOSPHERE\n\nUnder the direction of David Brophy, this BBC Radio 3 Friday Night is Music Night celebrates Britain’s enduring relationship with the sea, blending light hearted charm with richly atmospheric music.\n\nFrom the overture to Sullivan’s irresistible H.M.S. Pinafore to Walton’s exuberant Portsmouth Point, the first half evokes coastal life in all its colour and variety. Soloist Gareth Brynmor John brings narrative to settings of John Ireland’s Sea Fever and Rebecca Clarke’s haunting The Seal Man, while Bax’s evocative tone poem Tintagel rises in romantic splendour, its waves surging against the Cornish cliffs.\n\nAfter the interval, our seafaring adventure continues with Korngold’s swashbuckling The Sea Hawk, alongside miniatures of seaside wit and nostalgia by Whitlock and Hedges. The concert culminates in Britten’s Four Sea Interludes, a timeless portrayal of the sea’s ever-changing moods.\n\nSullivan H.M.S Pinafore OvertureBinge Sailing By (3') Binge The Watermill (3') Walton Portsmouth Point (5’) Ireland Sea Fever  (3’)  Clarke The Seal Man (6’)  Bax Tintagel (12’) Interval (20') Korngold The Sea Hawk: OvertureHedges 4 Breton Sketches. III. Promenade A Dinard (3') Whitlock Spade and Bucket Polka (3') Whitlock Cyfres Wessex: The Blue Pool (4') Britten  Four Sea Interludes (16') Hedges Scenes from the Humber: IV Humber Keel Hornpipe",
-    "ticketPriceFrom": 17,
-    "ticketPriceTo": 17,
-    "ticketCurrency": "GBP",
-    "ticketPriceLabel": "£17",
-    "availability": "UNKNOWN",
-    "availabilityRange": null,
-    "availabilityEstimate": null,
-    "popularityScore": null,
-    "popularityLabel": null,
     "imageUrls": [
       "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1781879858/WMC%20Content/Whats%20On/2027/BBC%20NOW/Friday%20Night%20is%20Music%20Night/thumbnail-05-March-27?_a=BAAAV6DQ",
       "http://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_630%2Cw_1200/f_auto/q_auto/v1781879858/WMC%20Content/Whats%20On/2027/BBC%20NOW/Friday%20Night%20is%20Music%20Night/thumbnail-05-March-27?_a=BAAAV6DQ",
@@ -5359,8 +5529,12 @@
     ],
     "eventStartDate": "2027-03-05 19:30:00",
     "eventEndDate": "2027-03-05 21:00:00",
+    "ticketPriceFrom": 17,
+    "ticketPriceTo": 17,
+    "ticketCurrency": "GBP",
     "subcategory": "Wales Millennium Centre > What's on > 2027 > Friday Night is Music Night - Music of the Coast",
-    "primaryCategory": "Theatre"
+    "primaryCategory": "Theatre",
+    "ticketPriceLabel": "£17"
   },
   {
     "title": "DAN TIERNAN: QUARTZ AND ALL",
@@ -5368,12 +5542,28 @@
     "url": "https://www.wmc.org.uk/en/whats-on/2027/dan-tiernan-quartz-and-all",
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-07-17T09:55:49.425Z",
-    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1783173569/WMC%20Content/Whats%20On/2027/Cabaret%202027/Dan%20Tiernan/DanTiernan_QuartzNAll_600x600?_a=BAAAV6DQ",
+    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1783173569/WMC%20Content/Whats%20On/2027/Cabaret%202027/Dan%20Tiernan/DanTiernan_QuartzNAll_600x600?_a=BAAAV6DQ",
     "description": "Dan Tiernan is back at it again: and this time he’s got magic rocks in his pocket.\n\nWith a hat trick of sold-out Edinburgh Festival runs, Dan's a two-time Edinburgh Comedy Award nominee who has received countless five-star reviews. No wonder The Guardian has named him 'one of comedy’s most distinctive new voices'.\n\n‘Loud, inventive, visceral… it’s a blast’**** Times\n\nDan returns on tour armed with an amethyst, a bucketful of sage and a rose quartz the size of his impossibly large head.\n\nAs seen on Live at the Apollo, 8 Out of Ten Cats Does Countdown, The Last Leg, and QI.\n\nNOMINEE: Best Newcomer – Edinburgh Comedy Awards 2023\n\nNOMINEE: Best Comedy Show – Edinburgh Comedy Awards 2025\n\nNOMINEE: Most Outstanding Show – Melbourne Comedy Awards 2026",
+    "subVenue": "Cabaret",
+    "ticketPriceFrom": 19,
+    "ticketPriceTo": 19,
+    "ticketCurrency": "GBP",
+    "ticketPriceLabel": "£19",
+    "availability": "UNKNOWN",
+    "availabilityRange": null,
+    "availabilityEstimate": null,
+    "popularityScore": null,
+    "popularityLabel": null,
     "imageUrls": [
+      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1783173569/WMC%20Content/Whats%20On/2027/Cabaret%202027/Dan%20Tiernan/DanTiernan_QuartzNAll_600x600?_a=BAAAV6DQ",
+      "http://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_630%2Cw_1200/f_auto/q_auto/v1783173569/WMC%20Content/Whats%20On/2027/Cabaret%202027/Dan%20Tiernan/DanTiernan_QuartzNAll_600x600?_a=BAAAV6DQ",
+      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_512%2Cw_1024/f_auto/q_auto/v1783173569/WMC%20Content/Whats%20On/2027/Cabaret%202027/Dan%20Tiernan/DanTiernan_QuartzNAll_600x600?_a=BAAAV6DQ",
       "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1783173569/WMC%20Content/Whats%20On/2027/Cabaret%202027/Dan%20Tiernan/DanTiernan_QuartzNAll_600x600?_a=BAAAV6DQ"
     ],
-    "primaryCategory": "Theatre"
+    "eventStartDate": "2027-03-11 20:00:00",
+    "eventEndDate": "2027-03-11 22:00:00",
+    "subcategory": "Wales Millennium Centre > What's on > 2027 > Dan Tiernan: Quartz And All",
+    "primaryCategory": "Comedy"
   },
   {
     "title": "WELSH NATIONAL OPERA: JASON AND THE ARGONAUTS",
@@ -5381,13 +5571,8 @@
     "url": "https://www.wmc.org.uk/en/whats-on/2027/welsh-national-opera-jason-and-the-argonauts",
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-06-05T22:12:18.829Z",
-    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1777977709/WMC%20Content/Whats%20On/2027/Weston%20Studio/WNO:%20Jason%20and%20the%20Argonauts/WNO_J_WMC_1280x960px?_a=BAAAV6DQ",
+    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1777977709/WMC%20Content/Whats%20On/2027/Weston%20Studio/WNO:%20Jason%20and%20the%20Argonauts/WNO_J_WMC_1280x960px?_a=BAAAV6DQ",
     "description": "Get ready to embark on an adventure of magic and music with Jason and his fearless band of Argonauts in this thrilling retelling of a Greek classic.\n\nRaised among nature and music in a magical forest, Jason longs to be a hero. When he discovers that his Uncle Pelias has stolen his place as King, he rushes to reclaim the throne. But King Pelias has one condition: Jason must bring him the Golden Fleece.\n\nJoined by his team of Argonauts, they sail to Colchis, the home of the mystical fleece, but are met with dangerous dragons and sneaky sirens. Together they must be brave and clever and learn the true power of music. When faced with a huge challenge, will Jason make the right choice?\n\nThis action-packed production is a wonderful introduction to the world of opera for children, bringing to life the sounds of the orchestra and the power of the human voice. Filled with adventure, enchantment, and music, it’s an unforgettable experience for young audiences.\n\nRecommended for children 7-12.",
-    "subVenue": "Weston Studio",
-    "ticketPriceFrom": 20,
-    "ticketPriceTo": 20,
-    "ticketCurrency": "GBP",
-    "ticketPriceLabel": "£20",
     "availability": "GOOD AVAILABILITY",
     "availabilityRange": "0-30%",
     "availabilityEstimate": 15,
@@ -5417,14 +5602,8 @@
     "popularityScore": 8,
     "popularityLabel": "Very low demand",
     "imageUrls": [
-      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1777977709/WMC%20Content/Whats%20On/2027/Weston%20Studio/WNO:%20Jason%20and%20the%20Argonauts/WNO_J_WMC_1280x960px?_a=BAAAV6DQ",
-      "http://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_630%2Cw_1200/f_auto/q_auto/v1777977709/WMC%20Content/Whats%20On/2027/Weston%20Studio/WNO:%20Jason%20and%20the%20Argonauts/WNO_J_WMC_1280x960px?_a=BAAAV6DQ",
-      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_512%2Cw_1024/f_auto/q_auto/v1777977709/WMC%20Content/Whats%20On/2027/Weston%20Studio/WNO:%20Jason%20and%20the%20Argonauts/WNO_J_WMC_1280x960px?_a=BAAAV6DQ",
       "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1777977709/WMC%20Content/Whats%20On/2027/Weston%20Studio/WNO:%20Jason%20and%20the%20Argonauts/WNO_J_WMC_1280x960px?_a=BAAAV6DQ"
     ],
-    "eventStartDate": "2027-03-13 11:30:00",
-    "eventEndDate": "2027-03-13 16:00:00",
-    "subcategory": "Wales Millennium Centre > What's on > 2027 > Welsh National Opera: Jason and the Argonauts",
     "primaryCategory": "Theatre",
     "genre": "Classical"
   },
@@ -5437,6 +5616,15 @@
     "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1781710403/WMC%20Content/Whats%20On/2027/Cabaret%202027/Kemah%20Bob/Kemah_Bob_-_Thumb?_a=BAAAV6DQ",
     "subVenue": "Cabaret",
     "description": "Berk’s Nest, in association with Sophie Chapman Talent, presents Kemah Bob: Love ChildGiraffes. VHS porn. Ketamine-infused breast milk. Acclaimed stand-up Kemah Bob (The Guardian's 10 Best Comedy Shows of 2024) returns with her much anticipated second show.\n\nLove Child is an intimate yet rowdy, personal yet electric, high-energy stand-up show from the “chest-achingly funny” (★★★★ Skinny) Kemah Bob. Join her on a hilariously unhinged tour through what it’s like to be a woman with your dad’s lips, a chaotic childhood with questionable parenting, the very real science of epigenetic baggage, and her attempts at navigating the relentless pressure to be a Good Grown Up™.\n\nISH Edinburgh Comedy Award Best Newcomer nominee 2024.\n\nAs seen on QI, Richard Osman's House of Games, Jonathan Ross' Comedy Club, Comedy Central Live, Don't Hate The Playaz and Guessable. As heard on the Off Menu podcast.\n\nDirected by Alison Spittle.",
+    "ticketPriceFrom": 16,
+    "ticketPriceTo": 16,
+    "ticketCurrency": "GBP",
+    "ticketPriceLabel": "£16",
+    "availability": "UNKNOWN",
+    "availabilityRange": null,
+    "availabilityEstimate": null,
+    "popularityScore": null,
+    "popularityLabel": null,
     "imageUrls": [
       "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1781710403/WMC%20Content/Whats%20On/2027/Cabaret%202027/Kemah%20Bob/Kemah_Bob_-_Thumb?_a=BAAAV6DQ",
       "http://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_630%2Cw_1200/f_auto/q_auto/v1781710403/WMC%20Content/Whats%20On/2027/Cabaret%202027/Kemah%20Bob/Kemah_Bob_-_Thumb?_a=BAAAV6DQ",
@@ -5445,12 +5633,8 @@
     ],
     "eventStartDate": "2027-03-14 19:00:00",
     "eventEndDate": "2027-03-14 21:00:00",
-    "ticketPriceFrom": 16,
-    "ticketPriceTo": 16,
-    "ticketCurrency": "GBP",
     "subcategory": "Wales Millennium Centre > What's on > 2027 > Kemah Bob: Love Child",
-    "primaryCategory": "Theatre",
-    "ticketPriceLabel": "£16"
+    "primaryCategory": "Comedy"
   },
   {
     "title": "MATTHEW BOURNE'S CINDERELLA",
@@ -5544,8 +5728,12 @@
     "url": "https://www.wmc.org.uk/en/whats-on/2027/mrs-doubtfire",
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-06-05T22:12:18.829Z",
-    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1761744949/WMC%20Content/Whats%20On/2027/Donald%20Gordon%20Theatre/Mrs%20Doubtfire/MD_CARDIFFWMC_1280x960_WhatsOn?_a=BAAAV6DQ",
+    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1761744949/WMC%20Content/Whats%20On/2027/Donald%20Gordon%20Theatre/Mrs%20Doubtfire/MD_CARDIFFWMC_1280x960_WhatsOn?_a=BAAAV6DQ",
     "description": "Helloooo, poppets! Mrs Doubtfire, the West End's hit comedy musical based on the beloved film, is heading to Cardiff from 23 March 2027.\n\nThis ‘genuinely funny' (Time Out) show features all the iconic moments you love, plus fabulous new songs and dazzling dance numbers! Put it all together, and you've got a 'surefire hit' (The Telegraph, Daily Express) that can't be missed.\n\nOut-of-work actor Daniel (played by the critically acclaimed Gabriel Vick* (original London company), will do anything for his kids. After losing custody in a messy divorce, he creates the alter ego of Scottish nanny Euphegenia Doubtfire in a desperate attempt to stay in their lives. As his new character takes on a life of its own, Mrs Doubtfire teaches Daniel more than he bargained for about how to be a father.\n\nBOOK NOW, DEARS!",
+    "ticketPriceFrom": 22,
+    "ticketPriceTo": 22,
+    "ticketCurrency": "GBP",
+    "ticketPriceLabel": "£22",
     "availability": "MODERATE AVAILABILITY",
     "availabilityRange": "31-60%",
     "availabilityEstimate": 31,
@@ -5708,9 +5896,15 @@
     "popularityScore": 28,
     "popularityLabel": "Low demand",
     "imageUrls": [
+      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1761744949/WMC%20Content/Whats%20On/2027/Donald%20Gordon%20Theatre/Mrs%20Doubtfire/MD_CARDIFFWMC_1280x960_WhatsOn?_a=BAAAV6DQ",
+      "http://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_630%2Cw_1200/f_auto/q_auto/v1761744949/WMC%20Content/Whats%20On/2027/Donald%20Gordon%20Theatre/Mrs%20Doubtfire/MD_CARDIFFWMC_1280x960_WhatsOn?_a=BAAAV6DQ",
+      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_512%2Cw_1024/f_auto/q_auto/v1761744949/WMC%20Content/Whats%20On/2027/Donald%20Gordon%20Theatre/Mrs%20Doubtfire/MD_CARDIFFWMC_1280x960_WhatsOn?_a=BAAAV6DQ",
       "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1761744949/WMC%20Content/Whats%20On/2027/Donald%20Gordon%20Theatre/Mrs%20Doubtfire/MD_CARDIFFWMC_1280x960_WhatsOn?_a=BAAAV6DQ"
     ],
-    "primaryCategory": "Theatre"
+    "eventStartDate": "2027-03-23 19:30:00",
+    "eventEndDate": "2027-04-11 22:30:00",
+    "subcategory": "Wales Millennium Centre > What's on > 2027 > Mrs Doubtfire",
+    "primaryCategory": "Comedy"
   },
   {
     "title": "CELTIC BEETHOVEN",
@@ -5734,68 +5928,19 @@
     "scrapedAt": "2026-06-29T09:36:44.283Z",
     "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1782722783/PRIDE_AND_PRE_x2y2hx?_a=BAAAV6DQ",
     "description": "The five star comedy sensation from the West End\n\nPride and Prejudice* (*sort of)By Isobel McArthur after Jane Austen\n\nA triumph in the West End, where it won the Laurence Olivier Award for Best Comedy and the Evening Standard Award, Pride and Prejudice* (*sort of) is a unique and audacious retelling of Jane Austen’s most iconic love story.\n\nMen, money and microphones will be fought over in this irreverent but affectionate adaptation where the stakes couldn’t be higher when it comes to romance. This multi-award-winning production features a string of pop classics including Young Hearts Run Free, Will You Love Me Tomorrow and You’re So Vain.\n\nIT’S THE 1800S. IT’S PARTY TIME. LET THE RUTHLESS MATCHMAKING BEGIN.",
-    "availability": "GOOD AVAILABILITY",
-    "availabilityRange": "0-30%",
-    "availabilityEstimate": 15,
-    "seatingAggregate": {
-      "avgOccupancyPct": 15,
-      "minOccupancyPct": 15,
-      "maxOccupancyPct": 15,
-      "performancesWithData": 7,
-      "tierCounts": {
-        "GOOD AVAILABILITY": 7
-      }
-    },
-    "performances": [
-      {
-        "date": "7:30pm",
-        "availability": "GOOD AVAILABILITY",
-        "availabilityRange": "0-30%",
-        "availabilityEstimate": 15
-      },
-      {
-        "date": "7:30pm",
-        "availability": "GOOD AVAILABILITY",
-        "availabilityRange": "0-30%",
-        "availabilityEstimate": 15
-      },
-      {
-        "date": "2:30pm",
-        "availability": "GOOD AVAILABILITY",
-        "availabilityRange": "0-30%",
-        "availabilityEstimate": 15
-      },
-      {
-        "date": "7:30pm",
-        "availability": "GOOD AVAILABILITY",
-        "availabilityRange": "0-30%",
-        "availabilityEstimate": 15
-      },
-      {
-        "date": "7:30pm",
-        "availability": "GOOD AVAILABILITY",
-        "availabilityRange": "0-30%",
-        "availabilityEstimate": 15
-      },
-      {
-        "date": "2:30pm",
-        "availability": "GOOD AVAILABILITY",
-        "availabilityRange": "0-30%",
-        "availabilityEstimate": 15
-      },
-      {
-        "date": "7:30pm",
-        "availability": "GOOD AVAILABILITY",
-        "availabilityRange": "0-30%",
-        "availabilityEstimate": 15
-      }
-    ],
-    "popularityScore": 14,
-    "popularityLabel": "Very low demand",
+    "ticketPriceFrom": 22,
+    "ticketPriceTo": 22,
+    "ticketCurrency": "GBP",
+    "ticketPriceLabel": "£22",
+    "availability": "UNKNOWN",
+    "availabilityRange": null,
+    "availabilityEstimate": null,
+    "popularityScore": null,
+    "popularityLabel": null,
     "imageUrls": [
       "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1782722783/PRIDE_AND_PRE_x2y2hx?_a=BAAAV6DQ"
     ],
-    "primaryCategory": "Theatre"
+    "primaryCategory": "Comedy"
   },
   {
     "title": "RHAPSODY IN BLUE",
@@ -5832,12 +5977,8 @@
     "url": "https://www.wmc.org.uk/en/whats-on/2027/disney-princess-the-concert",
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-06-05T22:12:18.829Z",
-    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1779894449/WMC%20Content/Whats%20On/2027/Donald%20Gordon%20Theatre/Disney%20Princess%20-%20The%20Concert/Disney-PrincessConcert-Cardiff-1200x960?_a=BAAAV6DQ",
+    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1779894449/WMC%20Content/Whats%20On/2027/Donald%20Gordon%20Theatre/Disney%20Princess%20-%20The%20Concert/Disney-PrincessConcert-Cardiff-1200x960?_a=BAAAV6DQ",
     "description": "For generations, the music of Disney’s princesses has been the soundtrack to our lives. Now, these beloved songs come alive on stage with a host of acclaimed Broadway and West End stars in Disney Princess – The Concert.\n\nYour every dream will come true as larger-than-life animation and theatrical effects immerse the audience in pure Disney magic, while these powerhouse talents sing your favourite princess, hero and (yes!) villain songs, and share behind-the-scenes stories from their time on the stage and screen.\n\nWe invite you to relive your VHS glory days, dress up in your favourite royal attire, and share the joy of Disney with your loved ones at this internationally acclaimed concert experience. Be part of our world at Disney Princess – The Concert!\n\nDisney Princess – The Concert has played 20 countries on 5 continents since its premiere in 2021, including two US tours of more than 100 cities, and tours the UK and Ireland for the first time in 2027.\n\nThe show features iconic songs from more than 29 films, including: “How Far I’ll Go,” “A Whole New World,” “Just Around the Riverbend,” “Part of Your World,” “Almost There,” “Let It Go” and more!\n\nCast of Disney Broadway and West End talent to be announced in August.",
-    "ticketPriceFrom": 21.5,
-    "ticketPriceTo": 21.5,
-    "ticketCurrency": "GBP",
-    "ticketPriceLabel": "£21.50",
     "availability": "LIMITED AVAILABILITY",
     "availabilityRange": "61-90%",
     "availabilityEstimate": 76,
@@ -5853,15 +5994,9 @@
     "popularityScore": 49,
     "popularityLabel": "Moderate demand",
     "imageUrls": [
-      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1779894449/WMC%20Content/Whats%20On/2027/Donald%20Gordon%20Theatre/Disney%20Princess%20-%20The%20Concert/Disney-PrincessConcert-Cardiff-1200x960?_a=BAAAV6DQ",
-      "http://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_630%2Cw_1200/f_auto/q_auto/v1779894449/WMC%20Content/Whats%20On/2027/Donald%20Gordon%20Theatre/Disney%20Princess%20-%20The%20Concert/Disney-PrincessConcert-Cardiff-1200x960?_a=BAAAV6DQ",
-      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_512%2Cw_1024/f_auto/q_auto/v1779894449/WMC%20Content/Whats%20On/2027/Donald%20Gordon%20Theatre/Disney%20Princess%20-%20The%20Concert/Disney-PrincessConcert-Cardiff-1200x960?_a=BAAAV6DQ",
       "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1779894449/WMC%20Content/Whats%20On/2027/Donald%20Gordon%20Theatre/Disney%20Princess%20-%20The%20Concert/Disney-PrincessConcert-Cardiff-1200x960?_a=BAAAV6DQ"
     ],
-    "eventStartDate": "2027-04-18 14:00:00",
-    "eventEndDate": "2027-04-18 22:30:00",
-    "subcategory": "Wales Millennium Centre > What's on > 2027 > Disney Princess - The Concert",
-    "primaryCategory": "Musical Theatre"
+    "primaryCategory": "Theatre"
   },
   {
     "title": "JUST FOR ONE DAY: THE LIVE AID MUSICAL",
@@ -5871,6 +6006,70 @@
     "scrapedAt": "2026-06-05T22:12:18.829Z",
     "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1765878919/WMC%20Content/Whats%20On/2027/Donald%20Gordon%20Theatre/Just%20For%20One%20Day/Cardiff-1280x960?_a=BAAAV6DQ",
     "description": "Experience the most powerful night of music you’ll ever have at the theatre at Just For One Day: The Live Aid Musical, featuring the most iconic songs from Bob Dylan, David Bowie, The Who, U2, Queen, Madonna, Sting, Elton John, Paul McCartney, Diana Ross and more.\n\n40 years on from the iconic gig that re-wrote music history, relive the joy of Live Aid in a “completely new and delightful way!” (Pete Townshend of The Who).\n\nPerformed by an electrifying ensemble full of bonafide rockstars, Just For One Day: The Live Aid Musical is a “joyous and emotionally volcanic” (Daily Mail) night at the theatre.\n\nDon’t take our word for it, take Bob Geldof’s who says it’s “f***ing phenomenal”.\n\nExperience the most powerful night of music you’ll ever have at the theatre at Just For One Day: The Live Aid Musical, featuring the most iconic songs from Bob Dylan, David Bowie, The Who, U2, Queen, Madonna, Sting, Elton John, Paul McCartney, Diana Ross and more.\n\n40 years on from the iconic gig that re-wrote music history, relive the joy of Live Aid in a “completely new and delightful way!” (Pete Townshend of The Who).\n\nPerformed by an electrifying ensemble full of bonafide rockstars, Just For One Day: The Live Aid Musical is a “joyous and emotionally volcanic” (Daily Mail) night at the theatre.\n\nDon’t take our word for it, take Bob Geldof’s who says it’s “f***ing phenomenal”.\n\nThis Olivier-nominated musical rocks all over the UK and Ireland on its first tour from March 2027 after wowing audiences in two sell-out seasons in the West End. It will send you “out into the night with a grin on your face”(WhatsOnStage) in a state of “sheer euphoria” (Rolling Stone).\n\nBook now to join us rocking all over the world. A percentage of all ticket sales go directly to The Band Aid Charitable Trust, with 1.6 million already raised so far.",
+    "availability": "MODERATE AVAILABILITY",
+    "availabilityRange": "31-60%",
+    "availabilityEstimate": 46,
+    "seatingAggregate": {
+      "avgOccupancyPct": 46,
+      "minOccupancyPct": 46,
+      "maxOccupancyPct": 46,
+      "performancesWithData": 8,
+      "tierCounts": {
+        "MODERATE AVAILABILITY": 8
+      }
+    },
+    "performances": [
+      {
+        "date": "7:30pm",
+        "availability": "MODERATE AVAILABILITY",
+        "availabilityRange": "31-60%",
+        "availabilityEstimate": 46
+      },
+      {
+        "date": "2:30pm",
+        "availability": "MODERATE AVAILABILITY",
+        "availabilityRange": "31-60%",
+        "availabilityEstimate": 46
+      },
+      {
+        "date": "7:30pm",
+        "availability": "MODERATE AVAILABILITY",
+        "availabilityRange": "31-60%",
+        "availabilityEstimate": 46
+      },
+      {
+        "date": "2:30pm",
+        "availability": "MODERATE AVAILABILITY",
+        "availabilityRange": "31-60%",
+        "availabilityEstimate": 46
+      },
+      {
+        "date": "7:30pm",
+        "availability": "MODERATE AVAILABILITY",
+        "availabilityRange": "31-60%",
+        "availabilityEstimate": 46
+      },
+      {
+        "date": "7:30pm",
+        "availability": "MODERATE AVAILABILITY",
+        "availabilityRange": "31-60%",
+        "availabilityEstimate": 46
+      },
+      {
+        "date": "2:30pm",
+        "availability": "MODERATE AVAILABILITY",
+        "availabilityRange": "31-60%",
+        "availabilityEstimate": 46
+      },
+      {
+        "date": "7:30pm",
+        "availability": "MODERATE AVAILABILITY",
+        "availabilityRange": "31-60%",
+        "availabilityEstimate": 46
+      }
+    ],
+    "popularityScore": 42,
+    "popularityLabel": "Moderate demand",
     "imageUrls": [
       "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1765878919/WMC%20Content/Whats%20On/2027/Donald%20Gordon%20Theatre/Just%20For%20One%20Day/Cardiff-1280x960?_a=BAAAV6DQ"
     ],
@@ -5896,12 +6095,8 @@
     "url": "https://www.wmc.org.uk/en/whats-on/2027/the-curious-incident-of-the-dog-in-the-night-time",
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-06-05T22:12:18.829Z",
-    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1785427540/WMC%20Content/Whats%20On/2027/Donald%20Gordon%20Theatre/Curious%20Incident/Curious_WithCast_Cardiff_1280_x_960_July_2026?_a=BAAAV6DQ",
+    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1785427540/WMC%20Content/Whats%20On/2027/Donald%20Gordon%20Theatre/Curious%20Incident/Curious_WithCast_Cardiff_1280_x_960_July_2026?_a=BAAAV6DQ",
     "description": "The century's most popular murder mystery.\n\nThe internationally celebrated novel that captivated 10 million readers is coming in a brand-new staging more thrilling than ever.\n\nChris Boone is gifted with a brilliant mind for numbers but unsettled by the unpredictability of people and everyday life. When a neighbour’s dog is discovered killed, she finds herself under suspicion. Determined to prove her innocence, Chris becomes both detective and suspect, drawn into a mystery that grows darker and more complex with every clue she uncovers.\n\nWhat begins as the search for a culprit soon reveals secrets closer to home, forcing her to confront truths that will test her courage, her family, and her understanding of trust, independence, and the wider world.\n\nStarring Joe McFadden (The Shawshank Redemption - UK Tour; 2:22 A Ghost Story – Gielgud Theatre; Strictly Come Dancing winner 2017) and EastEnders favourite Charlie Brooks (Chitty Chitty Bang Bang - UK Tour; Ocean at the End of the Lane - National Theatre) as Chris’ parents - Ed and Judy.Inventive, gripping, and moving, The Curious Incident of the Dog in the Night-Time combines the intrigue of a whodunnit with a powerful coming-of-age story in an unforgettable theatrical event.",
-    "ticketPriceFrom": 19,
-    "ticketPriceTo": 19,
-    "ticketCurrency": "GBP",
-    "ticketPriceLabel": "£19",
     "availability": "MODERATE AVAILABILITY",
     "availabilityRange": "31-60%",
     "availabilityEstimate": 46,
@@ -5961,14 +6156,8 @@
     "popularityScore": 42,
     "popularityLabel": "Moderate demand",
     "imageUrls": [
-      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1785427540/WMC%20Content/Whats%20On/2027/Donald%20Gordon%20Theatre/Curious%20Incident/Curious_WithCast_Cardiff_1280_x_960_July_2026?_a=BAAAV6DQ",
-      "http://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_630%2Cw_1200/f_auto/q_auto/v1785427540/WMC%20Content/Whats%20On/2027/Donald%20Gordon%20Theatre/Curious%20Incident/Curious_WithCast_Cardiff_1280_x_960_July_2026?_a=BAAAV6DQ",
-      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_512%2Cw_1024/f_auto/q_auto/v1785427540/WMC%20Content/Whats%20On/2027/Donald%20Gordon%20Theatre/Curious%20Incident/Curious_WithCast_Cardiff_1280_x_960_July_2026?_a=BAAAV6DQ",
       "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1785427540/WMC%20Content/Whats%20On/2027/Donald%20Gordon%20Theatre/Curious%20Incident/Curious_WithCast_Cardiff_1280_x_960_July_2026?_a=BAAAV6DQ"
     ],
-    "eventStartDate": "2027-04-27 19:30:00",
-    "eventEndDate": "2027-05-01 22:30:00",
-    "subcategory": "Wales Millennium Centre > What's on > 2027 > The Curious Incident of the Dog in the Night-Time",
     "primaryCategory": "Theatre"
   },
   {
@@ -6080,10 +6269,6 @@
     "scrapedAt": "2026-06-05T22:12:18.829Z",
     "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1777976527/WMC%20Content/Whats%20On/2027/Donald%20Gordon%20Theatre/WNO:%20Hedd%20Wyn/WNO_HW_WMC_1280x960px?_a=BAAAV6DQ",
     "description": "Trawsfynydd, 2117.\n\n200 years after the death of Welsh poet Hedd Wyn, a group of pilgrims return to Trawsfynydd - now an abandoned exclusion zone following a catastrophic failure at the nearby nuclear power station - to reconnect with their Welsh heritage.\n\nExpecting a commemorative tour of Hedd Wyn’s ancestral home, they instead step into a fractured landscape where radiation has blurred time itself. Past, present and future collide and the ghosts of history and legend walk alongside the small utopian community that remains.\n\nGuided by the strange survivors of the disaster, the group venture deeper into their ancestry and the very heart of Welsh mythology, as conflicting visions for the future of Wales begin to emerge. and Hedd Wyn’s legacy is reshaped and distorted in pursuit of a dangerous new beginning.\n\nFrom the imagination of Gruff Rhys, with music by Stephen McNeff and directed by Steffan Donnelly, Hedd Wyn: Eisteddfod Atomig is a haunting new opera which explores how the poet’s story can be misrepresented, mythologised and reclaimed. It asks who gets to decide what his legacy means for Wales today?\n\nwno.org.uk/heddwyn\n\nComposer Stephen McNeff\n\nLibrettist Gruff Rhys\n\nConductor Iwan Teifion Davies\n\nDirector Steffan Donnelly\n\nCarlo / Hedd Wyn / Yr Arwr Steffan Lloyd Owen\n\nY Bon Pebr Paul Carey Jones\n\nY Fon Hon Rebecca Evans",
-    "ticketPriceFrom": 25,
-    "ticketPriceTo": 25,
-    "ticketCurrency": "GBP",
-    "ticketPriceLabel": "£25",
     "availability": "GOOD AVAILABILITY",
     "availabilityRange": "0-30%",
     "availabilityEstimate": 15,
@@ -6126,8 +6311,12 @@
     ],
     "eventStartDate": "2027-05-18 19:30:00",
     "eventEndDate": "2027-05-22 21:30:00",
+    "ticketPriceFrom": 25,
+    "ticketPriceTo": 25,
+    "ticketCurrency": "GBP",
     "subcategory": "Wales Millennium Centre > What's on > 2027 > Hedd Wyn: Eisteddfod Atomig",
-    "primaryCategory": "Theatre"
+    "primaryCategory": "Theatre",
+    "ticketPriceLabel": "£25"
   },
   {
     "title": "BBC NOW SURROUND SOUND",
@@ -6149,8 +6338,12 @@
     "url": "https://www.wmc.org.uk/en/whats-on/2027/cats",
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-06-05T22:12:18.829Z",
-    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1783934527/WMC%20Content/Whats%20On/2027/Donald%20Gordon%20Theatre/Cats/8500_73_CATS_MOON_Cardiff_WhatsOn_1200x900px?_a=BAAAV6DQ",
+    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1783934527/WMC%20Content/Whats%20On/2027/Donald%20Gordon%20Theatre/Cats/8500_73_CATS_MOON_Cardiff_WhatsOn_1200x900px?_a=BAAAV6DQ",
     "description": "A NEW DAY HAS BEGUN.\n\nA spectacular new production of Andrew Lloyd Webber’s multi award-winning musical CATS is coming to Wales Millennium Centre.\n\nFrom Euston station to Victoria Grove, the strays and rebels of London gather under the Jellicle moon in the hope they’ll be the chosen one. And each of them asks, because each of them dares, who will it be?\n\nBased on T.S. Eliot’s Old Possum’s Book of Practical Cats, and with a legendary score which inspired generations featuring, Old Deuteronomy, Macavity: The Mystery Cat, Jellicle Ball and the chart-topping hit Memory, this brand-new production of CATS, directed and choreographed by Drew McOnie (Brigadoon, Jesus Christ Superstar) arrives 25 May 2027 for 1 week only.\n\nMichael Harrison for Lloyd Webber Harrison Musicals presents this Regent’s Park Open Air Theatre production. By arrangement with LW Entertainment.",
+    "ticketPriceFrom": 19,
+    "ticketPriceTo": 19,
+    "ticketCurrency": "GBP",
+    "ticketPriceLabel": "£19",
     "availability": "MODERATE AVAILABILITY",
     "availabilityRange": "31-60%",
     "availabilityEstimate": 38,
@@ -6217,9 +6410,15 @@
     "popularityScore": 36,
     "popularityLabel": "Moderate demand",
     "imageUrls": [
+      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1783934527/WMC%20Content/Whats%20On/2027/Donald%20Gordon%20Theatre/Cats/8500_73_CATS_MOON_Cardiff_WhatsOn_1200x900px?_a=BAAAV6DQ",
+      "http://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_630%2Cw_1200/f_auto/q_auto/v1783934527/WMC%20Content/Whats%20On/2027/Donald%20Gordon%20Theatre/Cats/8500_73_CATS_MOON_Cardiff_WhatsOn_1200x900px?_a=BAAAV6DQ",
+      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_512%2Cw_1024/f_auto/q_auto/v1783934527/WMC%20Content/Whats%20On/2027/Donald%20Gordon%20Theatre/Cats/8500_73_CATS_MOON_Cardiff_WhatsOn_1200x900px?_a=BAAAV6DQ",
       "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1783934527/WMC%20Content/Whats%20On/2027/Donald%20Gordon%20Theatre/Cats/8500_73_CATS_MOON_Cardiff_WhatsOn_1200x900px?_a=BAAAV6DQ"
     ],
-    "primaryCategory": "Theatre"
+    "eventStartDate": "2027-05-25 19:30:00",
+    "eventEndDate": "2027-05-29 22:00:00",
+    "subcategory": "Wales Millennium Centre > What's on > 2027 > Cats",
+    "primaryCategory": "Musical Theatre"
   },
   {
     "title": "EVERYBODY'S TALKING ABOUT JAMIE",
@@ -6229,10 +6428,6 @@
     "scrapedAt": "2026-06-05T22:12:18.829Z",
     "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1773225252/WMC%20Content/Whats%20On/2027/Donald%20Gordon%20Theatre/Everybody%27s%20Talking%20About%20Jamie/260306_ETAJ_Cardiff_1280_x_960?_a=BAAAV6DQ",
     "description": "Following a record-breaking three-year West End residency, two sold-out UK & Ireland Tours and Amazon Studios award-winning film, the smash-hit and critically acclaimed musical Everybody’s Talking About Jamie RETURNS for the 10th Anniversary Tour with a brand-new song.\n\nJamie New (Ashcon Rahmani) is sixteen and lives on a council estate in Sheffield. Jamie doesn’t quite fit in. Jamie is terrified about the future. Jamie is going to be a sensation.\n\nSupported by his brilliant loving mum (Rebecca Trehearn) and surrounded by his friends, Jamie over comes prejudice, beats the bullies and steps out of the darkness, into the spotlight. This ‘Funny, outrageous, touching’ (Daily Telegraph), musical sensation is to be experienced by all the family and not to be missed!\n\nWith an original score of catchy pop tunes that will ‘blow the roof off the Theatre’ (Mail on Sunday) by lead singer-songwriter of The Feeling, Dan Gillespie Sells and writer Tom MacRae (Doctor Who), this ‘Sparkling coming-of-age musical’ (The Times) will have everybody talking about Jamie for years to come.\n\nSixteen: the edge of possibility. Time to make your dreams come true.",
-    "ticketPriceFrom": 20,
-    "ticketPriceTo": 20,
-    "ticketCurrency": "GBP",
-    "ticketPriceLabel": "£20",
     "availability": "GOOD AVAILABILITY",
     "availabilityRange": "0-30%",
     "availabilityEstimate": 15,
@@ -6299,8 +6494,12 @@
     ],
     "eventStartDate": "2027-06-01 19:30:00",
     "eventEndDate": "2027-06-05 23:00:00",
+    "ticketPriceFrom": 20,
+    "ticketPriceTo": 20,
+    "ticketCurrency": "GBP",
     "subcategory": "Wales Millennium Centre > What's on > 2027 > Everybody's Talking About Jamie",
-    "primaryCategory": "Musical Theatre"
+    "primaryCategory": "Theatre",
+    "ticketPriceLabel": "£20"
   },
   {
     "title": "PRETTY WOMAN",
@@ -6385,13 +6584,23 @@
     "url": "https://www.wmc.org.uk/en/whats-on/2027/beethoven-9",
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-06-29T12:30:37.749Z",
-    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1782306176/WMC%20Content/Whats%20On/2027/BBC%20NOW/Beethoven%209/thumbnail-10-june-27?_a=BAAAV6DQ",
+    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1782306176/WMC%20Content/Whats%20On/2027/BBC%20NOW/Beethoven%209/thumbnail-10-june-27?_a=BAAAV6DQ",
     "subVenue": "Hoddinott Hall",
     "description": "HERITAGE | UNITY | LEGACY\n\nA bold contemporary voice meets one of the greatest symphonic landmarks in an evening led by Principal Guest Conductor Jaime Martin, marking 200 years since the death of Beethoven.\n\nJames MacMillan’s Concerto for Orchestra – Ghosts, opens the programme: a continuous, through‑composed work alive with shifting memories, folk echoes and spectral allusions. Chamber groupings surface from the orchestral fabric before resolving in a serene, hymn‑like close. After the interval comes Beethoven’s monumental Symphony No. 9, a work that redefined the symphony itself. Its revolutionary choral finale unites orchestra, chorus and an outstanding quartet of soloists, Gweneth‑Ann Rand, Anna Stéphany, Ryan Vaughan Davies and Blaise Malaba, all former Cardiff Singer of the World performers, in music of immense power and uplifting joy.\n\nMacmillan Concerto for Orchestra (25') Interval (20') Beethoven Symphony No.9 (65')",
     "imageUrls": [
+      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1782306176/WMC%20Content/Whats%20On/2027/BBC%20NOW/Beethoven%209/thumbnail-10-june-27?_a=BAAAV6DQ",
+      "http://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_630%2Cw_1200/f_auto/q_auto/v1782306176/WMC%20Content/Whats%20On/2027/BBC%20NOW/Beethoven%209/thumbnail-10-june-27?_a=BAAAV6DQ",
+      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_512%2Cw_1024/f_auto/q_auto/v1782306176/WMC%20Content/Whats%20On/2027/BBC%20NOW/Beethoven%209/thumbnail-10-june-27?_a=BAAAV6DQ",
       "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1782306176/WMC%20Content/Whats%20On/2027/BBC%20NOW/Beethoven%209/thumbnail-10-june-27?_a=BAAAV6DQ"
     ],
-    "primaryCategory": "Theatre"
+    "eventStartDate": "2027-06-10 19:30:00",
+    "eventEndDate": "2027-06-10 21:30:00",
+    "ticketPriceFrom": 17,
+    "ticketPriceTo": 17,
+    "ticketCurrency": "GBP",
+    "subcategory": "Wales Millennium Centre > What's on > 2027 > Beethoven 9",
+    "primaryCategory": "Theatre",
+    "ticketPriceLabel": "£17"
   },
   {
     "title": "JOHANNES RADEBE: FINALLY HOME",
@@ -6401,6 +6610,10 @@
     "scrapedAt": "2026-06-29T09:36:44.283Z",
     "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1782387647/WMC%20Content/Whats%20On/2027/Donald%20Gordon%20Theatre/Johannes%20Radebe/ROYO_JOJO_2026002_FinallyHome_Blank_1280x960?_a=BAAAV6DQ",
     "description": "Johannes Radebe is back!\n\n2026 has been an extraordinary year for JoJo. He has become a British citizen, made his West End debut and started his dream role as presenter of Strictly Come Dancing. But one thing will never change: Johannes was born to dance.\n\nIn his brand-new dance spectacular Finally Home, you are invited to an unforgettable evening packed with dazzling choreography, show-stopping vocals, stunning costumes and the infectious energy that has made him one of the nation's most beloved stars.\n\nWith musical influences ranging from ballroom standards, South African rhythms and the biggest pop anthems, Finally Home is your chance to celebrate with JoJo at the biggest party in town.",
+    "ticketPriceFrom": 42,
+    "ticketPriceTo": 42,
+    "ticketCurrency": "GBP",
+    "ticketPriceLabel": "£42",
     "availability": "GOOD AVAILABILITY",
     "availabilityRange": "0-30%",
     "availabilityEstimate": 15,
@@ -6423,12 +6636,8 @@
     ],
     "eventStartDate": "2027-06-13 19:30:00",
     "eventEndDate": "2027-06-13 23:30:00",
-    "ticketPriceFrom": 42,
-    "ticketPriceTo": 42,
-    "ticketCurrency": "GBP",
     "subcategory": "Wales Millennium Centre > What's on > 2027 > Johannes Radebe: Finally Home",
-    "primaryCategory": "Theatre",
-    "ticketPriceLabel": "£42"
+    "primaryCategory": "Musical Theatre"
   },
   {
     "title": "HADESTOWN",
@@ -6514,27 +6723,12 @@
     "url": "https://www.wmc.org.uk/en/whats-on/2027/west-side-story",
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-06-29T12:30:37.749Z",
-    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1782307810/WMC%20Content/Whats%20On/2027/BBC%20NOW/West%20Side%20Story/thumbnail-01-july-27?_a=BAAAV6DQ",
+    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1782307810/WMC%20Content/Whats%20On/2027/BBC%20NOW/West%20Side%20Story/thumbnail-01-july-27?_a=BAAAV6DQ",
     "subVenue": "Hoddinott Hall",
     "description": "ELEGANCE | PULSE | PLAYFULNESS\n\nElegance, energy and irresistible rhythm shape this vibrant programme conducted by Samuel Lee.\n\nRavel’s Pavane pour une infante défunte opens the evening with poised melancholy, its flowing lines and refined orchestral colours offering a moment of quiet reflection.\n\nAt the heart of the concert is a world premiere: Salina Fisher’s Violin Concerto, written for and performed by Geneva Lewis. Drawing on Fisher’s distinctive lyrical voice and Lewis’s expressive virtuosity, the concerto blends clarity, urgency and luminous colour, placing the violin at the centre of an unfolding, contemporary sound world.\n\nAfter the interval, Poulenc’s playful Les Biches Suite sparkles with charm and wit, before the orchestra launches into Bernstein’s West Side Story: Symphonic Dances. Pulsing with jazz-inflected rhythms, sweeping melodies and explosive energy, it brings the programme to a thrilling, high-spirited close.",
-    "ticketPriceFrom": 17,
-    "ticketPriceTo": 17,
-    "ticketCurrency": "GBP",
-    "ticketPriceLabel": "£17",
-    "availability": "UNKNOWN",
-    "availabilityRange": null,
-    "availabilityEstimate": null,
-    "popularityScore": null,
-    "popularityLabel": null,
     "imageUrls": [
-      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1782307810/WMC%20Content/Whats%20On/2027/BBC%20NOW/West%20Side%20Story/thumbnail-01-july-27?_a=BAAAV6DQ",
-      "http://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_630%2Cw_1200/f_auto/q_auto/v1782307810/WMC%20Content/Whats%20On/2027/BBC%20NOW/West%20Side%20Story/thumbnail-01-july-27?_a=BAAAV6DQ",
-      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_512%2Cw_1024/f_auto/q_auto/v1782307810/WMC%20Content/Whats%20On/2027/BBC%20NOW/West%20Side%20Story/thumbnail-01-july-27?_a=BAAAV6DQ",
       "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1782307810/WMC%20Content/Whats%20On/2027/BBC%20NOW/West%20Side%20Story/thumbnail-01-july-27?_a=BAAAV6DQ"
     ],
-    "eventStartDate": "2027-07-01 19:30:00",
-    "eventEndDate": "2027-07-01 21:30:00",
-    "subcategory": "Wales Millennium Centre > What's on > 2027 > West Side Story",
     "primaryCategory": "Theatre"
   },
   {
@@ -6545,6 +6739,58 @@
     "scrapedAt": "2026-06-05T22:12:18.829Z",
     "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1779373146/WMC%20Content/Whats%20On/2027/Donald%20Gordon%20Theatre/It%27s%20A%20Sin/IAS004_Wales_WebAssets_V1_600_x_450?_a=BAAAV6DQ",
     "description": "Rambert’s new dance work It’s a Sin, inspired by the acclaimed series by Russell T Davies, directed and choreographed by Artistic Director Benoit Swan Pouffer.\n\nJoy as resistance. Love as survival.\n\nIn the heart of 80s London, Ritchie, Roscoe, Colin and Jill are chasing identity, connection and a life on their own terms. When day spills into night, they find a world of abandon, music and friendship, where bodies move freely and life feels limitless.\n\nBut as the AIDS crisis begins to unfold, their lives are irrevocably changed. Love, fear and defiance collide as they fight for each other in a world that is rapidly shifting around them — and increasingly hostile to their existence.\n\nBrought to life by Rambert’s extraordinary dancers, It’s a Sin weaves past and present into something raw, visceral and devastating — an epic story told through movement, asking who gets remembered, who gets left behind, and how we choose to live now.\n\nIt’s a Sin is made possible thanks to major support from the Colwinston Charitable Trust’s 30th Anniversary Fund. It’s a Sin has been supported by Incentivising Touring: Repayable Grants for Theatre and Dance, a pilot scheme developed by Arts Council England to support mid-large scale productions to tour to regional venues. It’s a Sin was amongst the 23 to receive a share of over £4.5 million across two investment rounds of the scheme, which creates the opportunity for more people to see high-quality shows close to where they live.\n\nPresented by Rambert and Factory International. Co-produced with Wales Millennium Centre (Cardiff), Capital Theatres (Edinburgh), Sadler’s Wells (London), and Les Théâtres de la Ville (Luxembourg).\n\nExecutive Producers: Russell T Davies, Pet Shop Boys, Glyn Fussell\n\nThis production is inspired by the television series “It’s a Sin” created by Russell T Davies and produced by Red Production Company",
+    "availability": "MODERATE AVAILABILITY",
+    "availabilityRange": "31-60%",
+    "availabilityEstimate": 46,
+    "seatingAggregate": {
+      "avgOccupancyPct": 46,
+      "minOccupancyPct": 46,
+      "maxOccupancyPct": 46,
+      "performancesWithData": 6,
+      "tierCounts": {
+        "MODERATE AVAILABILITY": 6
+      }
+    },
+    "performances": [
+      {
+        "date": "7:30pm",
+        "availability": "MODERATE AVAILABILITY",
+        "availabilityRange": "31-60%",
+        "availabilityEstimate": 46
+      },
+      {
+        "date": "7:30pm",
+        "availability": "MODERATE AVAILABILITY",
+        "availabilityRange": "31-60%",
+        "availabilityEstimate": 46
+      },
+      {
+        "date": "7:30pm",
+        "availability": "MODERATE AVAILABILITY",
+        "availabilityRange": "31-60%",
+        "availabilityEstimate": 46
+      },
+      {
+        "date": "7:30pm",
+        "availability": "MODERATE AVAILABILITY",
+        "availabilityRange": "31-60%",
+        "availabilityEstimate": 46
+      },
+      {
+        "date": "2:30pm",
+        "availability": "MODERATE AVAILABILITY",
+        "availabilityRange": "31-60%",
+        "availabilityEstimate": 46
+      },
+      {
+        "date": "7:30pm",
+        "availability": "MODERATE AVAILABILITY",
+        "availabilityRange": "31-60%",
+        "availabilityEstimate": 46
+      }
+    ],
+    "popularityScore": 45,
+    "popularityLabel": "Moderate demand",
     "imageUrls": [
       "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1779373146/WMC%20Content/Whats%20On/2027/Donald%20Gordon%20Theatre/It%27s%20A%20Sin/IAS004_Wales_WebAssets_V1_600_x_450?_a=BAAAV6DQ"
     ],
@@ -6619,7 +6865,7 @@
     "imageUrls": [
       "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1782986696/WMC%20Content/Whats%20On/2027/Donald%20Gordon%20Theatre/Hairspray/260522_Hairspray_Cardiff_1200_x_900?_a=BAAAV6DQ"
     ],
-    "primaryCategory": "Theatre"
+    "primaryCategory": "Musical Theatre"
   },
   {
     "title": "BACK TO THE FUTURE",
@@ -6627,7 +6873,7 @@
     "url": "https://www.wmc.org.uk/en/whats-on/2027/back-to-the-future",
     "venue": "Wales Millennium Centre",
     "scrapedAt": "2026-06-05T22:12:18.829Z",
-    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1770738934/WMC%20Content/Whats%20On/2027/Donald%20Gordon%20Theatre/Back%20To%20The%20Future/BTTF_Image_1280x960?_a=BAAAV6DQ",
+    "imageUrl": "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1770738934/WMC%20Content/Whats%20On/2027/Donald%20Gordon%20Theatre/Back%20To%20The%20Future/BTTF_Image_1280x960?_a=BAAAV6DQ",
     "description": "Great Scott, Cardiff– the DeLorean is coming your way!\n\nStrap in for the smash hit Back to the Future The Musical, landing at Wales Millennium Centre as part of its first ever UK tour with rising Australian star Axel Duffy returning as Marty McFly. Winner of Best New Musical at the Olivier Awards, WhatsOnStage Awards and Broadway World Awards, this “perfect musical escapism” (Metro) is ready to take you on an electrifying journey through time.\n\nBased on the iconic 1985 movie and brought to the stage by the film’s original creators Bob Gale and Robert Zemeckis, this multi-award-winning production is dazzling critics and thrilling audiences across the globe – and now it’s Cardiff’s turn to experience the ride of a lifetime.\n\nWhen teenager Marty McFly is accidentally sent back to 1955 in a time machine built by the eccentric Doc Brown, he disrupts the space-time continuum and must race against the clock to put things right – and get back to the future.\n\nDon’t miss this “high-voltage comedy” (Metro) and “feelgood triumph” (Telegraph), directed by Tony Award-winner John Rando and featuring a show-stopping DeLorean that “defies the laws of theatre” (Guardian).\n\nBack to the Future the Musical features original music by multi-Grammy winners Alan Silvestri (Avengers: Endgame) and Glen Ballard (Michael Jackson’s Man in the Mirror), alongside hit songs from the movie including The Power of Love, Johnny B. Goode, Earth Angel and Back in Time.\n\n“It’s a total blast” (Metro), and when this baby hits 88mph at Wales Millennium Centre, it will zap “the audience between the eyes and ears to a roar of delight” (Variety).\n\nBook your tickets yesterday.",
     "ticketPriceFrom": 22,
     "ticketPriceTo": 22,
@@ -6843,8 +7089,14 @@
     "popularityScore": 31,
     "popularityLabel": "Moderate demand",
     "imageUrls": [
+      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_270%2Cw_480/f_auto/q_auto/v1770738934/WMC%20Content/Whats%20On/2027/Donald%20Gordon%20Theatre/Back%20To%20The%20Future/BTTF_Image_1280x960?_a=BAAAV6DQ",
+      "http://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_630%2Cw_1200/f_auto/q_auto/v1770738934/WMC%20Content/Whats%20On/2027/Donald%20Gordon%20Theatre/Back%20To%20The%20Future/BTTF_Image_1280x960?_a=BAAAV6DQ",
+      "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_512%2Cw_1024/f_auto/q_auto/v1770738934/WMC%20Content/Whats%20On/2027/Donald%20Gordon%20Theatre/Back%20To%20The%20Future/BTTF_Image_1280x960?_a=BAAAV6DQ",
       "https://res.cloudinary.com/wales-millennium-centre/image/upload/c_fill%2Cg_auto%2Ch_480%2Cw_640/f_auto/q_auto/v1770738934/WMC%20Content/Whats%20On/2027/Donald%20Gordon%20Theatre/Back%20To%20The%20Future/BTTF_Image_1280x960?_a=BAAAV6DQ"
     ],
+    "eventStartDate": "2027-10-19 19:30:00",
+    "eventEndDate": "2027-11-13 22:30:00",
+    "subcategory": "Wales Millennium Centre > What's on > 2027 > Back To The Future",
     "primaryCategory": "Comedy"
   },
   {
@@ -6911,8 +7163,8 @@
       "avgOccupancyPct": 67,
       "maxOccupancyPct": 73,
       "minOccupancyPct": 61,
-      "totalAvailable": 684,
-      "totalOccupied": 1384,
+      "totalAvailable": 678,
+      "totalOccupied": 1390,
       "performancesWithData": 2
     },
     "popularityScore": 36,
@@ -6949,13 +7201,13 @@
     "availabilityEstimate": 91,
     "seatingAggregate": {
       "avgOccupancyPct": 91,
-      "maxOccupancyPct": 95,
+      "maxOccupancyPct": 96,
       "minOccupancyPct": 87,
-      "totalAvailable": 398,
-      "totalOccupied": 3880,
+      "totalAvailable": 400,
+      "totalOccupied": 3878,
       "performancesWithData": 4
     },
-    "popularityScore": 63,
+    "popularityScore": 64,
     "popularityLabel": "High demand",
     "description": "Book your tickets to  at New Theatre Cardiff at the official Trafalgar Tickets, New Theatre Cardiff box office.",
     "shortDescription": "Peppa Pig and friends are back in their brand new live stage show!  With a new arrival on the way the whole family are busy getting ready. With building and decorating work to be done, it’s an oinktastic makeover and Peppa Pig, Mummy Pig, Daddy Pig & George all need your help to get everything ready before the arrival of baby Evie! There’s so much to do – will they get it all finished in time?  Peppa Pig’s Big Family Show is packed full of music, adventure and surprises for little ones and is the perfect introduction to theatre.",
@@ -7094,8 +7346,8 @@
       "avgOccupancyPct": 74,
       "maxOccupancyPct": 74,
       "minOccupancyPct": 74,
-      "totalAvailable": 272,
-      "totalOccupied": 774,
+      "totalAvailable": 273,
+      "totalOccupied": 773,
       "performancesWithData": 1
     },
     "popularityScore": 52,
@@ -7166,13 +7418,13 @@
     "availabilityEstimate": 46,
     "seatingAggregate": {
       "avgOccupancyPct": 46,
-      "maxOccupancyPct": 84,
+      "maxOccupancyPct": 83,
       "minOccupancyPct": 27,
-      "totalAvailable": 3942,
-      "totalOccupied": 3380,
+      "totalAvailable": 3946,
+      "totalOccupied": 3376,
       "performancesWithData": 7
     },
-    "popularityScore": 45,
+    "popularityScore": 44,
     "popularityLabel": "Moderate demand",
     "description": "Book your tickets to  at New Theatre Cardiff at the official Trafalgar Tickets, New Theatre Cardiff box office.",
     "shortDescription": "Lord of the Dance, the global phenomenon that redefined Irish dance, is set to return to the United Kingdom in 2026 to celebrate its 30th Anniversary with an extraordinary new tour. This milestone event promises to be a grand celebration of the production’s legacy, captivating over 60 million fans in 60 countries since its debut in 1996. Since its inception, Lord of the Dance has transformed Irish dance into a global cultural phenomenon, setting new standards for creativity and theatrical productions. Michael Flatley’s visionary show has been celebrated as a \"showpiece extravaganza\" and continues to awe audiences worldwide with its captivating blend of dance, music, and storytelling. The 30th Anniversary Tour will feature brand-new choreography, stunning costumes, state-of-the-art special effects, and cutting-edge lighting, ensuring that the production continues to push boundaries and deliver an unforgettable experience. Hailed for its dazzling combination of precision dance, powerful music, pyrotechnics, and emotional storytelling, Lord of the Dance remains a true marvel of the theatrical world. The show features over 150,000 taps per performance, with the dancers’ energy and passion promising an electrifying experience.",
@@ -7538,8 +7790,8 @@
       "avgOccupancyPct": 76,
       "maxOccupancyPct": 76,
       "minOccupancyPct": 76,
-      "totalAvailable": 254,
-      "totalOccupied": 816,
+      "totalAvailable": 253,
+      "totalOccupied": 817,
       "performancesWithData": 1
     },
     "popularityScore": 39,
@@ -7618,8 +7870,8 @@
       "avgOccupancyPct": 95,
       "maxOccupancyPct": 98,
       "minOccupancyPct": 92,
-      "totalAvailable": 103,
-      "totalOccupied": 1965,
+      "totalAvailable": 101,
+      "totalOccupied": 1967,
       "performancesWithData": 2
     },
     "popularityScore": 72,
@@ -7790,8 +8042,8 @@
       "avgOccupancyPct": 86,
       "maxOccupancyPct": 94,
       "minOccupancyPct": 75,
-      "totalAvailable": 1219,
-      "totalOccupied": 7341,
+      "totalAvailable": 1220,
+      "totalOccupied": 7340,
       "performancesWithData": 8
     },
     "popularityScore": 69,
@@ -7933,8 +8185,8 @@
       "avgOccupancyPct": 99,
       "maxOccupancyPct": 99,
       "minOccupancyPct": 99,
-      "totalAvailable": 11,
-      "totalOccupied": 1033,
+      "totalAvailable": 7,
+      "totalOccupied": 1037,
       "performancesWithData": 1
     },
     "popularityScore": 74,
@@ -8326,13 +8578,13 @@
     "ticketPriceTo": 37,
     "availability": "LIMITED - SELLING FAST",
     "availabilityRange": "90-100%",
-    "availabilityEstimate": 94,
+    "availabilityEstimate": 95,
     "seatingAggregate": {
-      "avgOccupancyPct": 94,
-      "maxOccupancyPct": 94,
-      "minOccupancyPct": 94,
-      "totalAvailable": 57,
-      "totalOccupied": 978,
+      "avgOccupancyPct": 95,
+      "maxOccupancyPct": 95,
+      "minOccupancyPct": 95,
+      "totalAvailable": 55,
+      "totalOccupied": 980,
       "performancesWithData": 1
     },
     "popularityScore": 54,
@@ -8415,7 +8667,7 @@
       "totalOccupied": 589,
       "performancesWithData": 1
     },
-    "popularityScore": 31,
+    "popularityScore": 30,
     "popularityLabel": "Moderate demand",
     "description": "Book your tickets to  at New Theatre Cardiff at the official Trafalgar Tickets, New Theatre Cardiff box office.",
     "shortDescription": "Adam Rowe, host of the Have A Word Podcast and star of Live At The Apollo is back with his best ever hour of stand-up; Fashionism.   A show about trying to see everyone’s point of view, especially those you hate. And some other dead funny stuff too.",
@@ -8451,8 +8703,8 @@
       "avgOccupancyPct": 79,
       "maxOccupancyPct": 79,
       "minOccupancyPct": 79,
-      "totalAvailable": 220,
-      "totalOccupied": 814,
+      "totalAvailable": 217,
+      "totalOccupied": 817,
       "performancesWithData": 1
     },
     "popularityScore": 60,
@@ -8947,8 +9199,8 @@
       "avgOccupancyPct": 74,
       "maxOccupancyPct": 74,
       "minOccupancyPct": 74,
-      "totalAvailable": 271,
-      "totalOccupied": 763,
+      "totalAvailable": 273,
+      "totalOccupied": 761,
       "performancesWithData": 1
     },
     "popularityScore": 40,
@@ -9176,16 +9428,16 @@
     "ticketPriceTo": 36,
     "availability": "GOOD - SELLING FAST",
     "availabilityRange": "70-80%",
-    "availabilityEstimate": 77,
+    "availabilityEstimate": 79,
     "seatingAggregate": {
-      "avgOccupancyPct": 77,
-      "maxOccupancyPct": 77,
-      "minOccupancyPct": 77,
-      "totalAvailable": 238,
-      "totalOccupied": 796,
+      "avgOccupancyPct": 79,
+      "maxOccupancyPct": 79,
+      "minOccupancyPct": 79,
+      "totalAvailable": 220,
+      "totalOccupied": 814,
       "performancesWithData": 1
     },
-    "popularityScore": 42,
+    "popularityScore": 43,
     "popularityLabel": "Moderate demand",
     "description": "Book your tickets to  at New Theatre Cardiff at the official Trafalgar Tickets, New Theatre Cardiff box office.",
     "shortDescription": "Join BAFTA-winning actor, comedian, director, and writer Richard Ayoade for an evening of reflections as he shares insights from his latest book, Afterthoughts, or Some Pistachios Won't Open: Wisdom for the Unreflective. Partially recognisable for being in The IT Crowd, his acclaimed films Submarine and The Double, he has also hosted TV landfill like Travel Man and The Crystal Maze, and lent his nasal voice to The Boxtrolls, Early Man, Soul and The Bad Guys.  But you may well know him best for his role as ‘photographer’ in The Life and Death of Peter Sellers in which he delivered the iconic line: ‘Please, Mr Sellers, can I get a shot of you and your mum?’ Now, in the midst of some self-inflicted financial difficulty, he turns to the stage, inviting you to explore over 500 of his colossal notions. Thoughts like… Where’s the box to tick if you ARE a robot? If, when one door shuts, another door opens, there's something wrong with your doors. They shouldn't be doing that. TV detectives need a gimmick. Mine would be not caring who did it. Afterthoughts goes beyond rumination, past pondering, probing further than ever before. Drawing from a deeply private pool of questions—a reservoir so refreshing you may never need to think again. Age restriction: 16+ at the discretion of parent or guardian",
@@ -9322,13 +9574,13 @@
     "ticketPriceTo": 43.75,
     "availability": "GOOD - SELLING FAST",
     "availabilityRange": "40-50%",
-    "availabilityEstimate": 46,
+    "availabilityEstimate": 47,
     "seatingAggregate": {
-      "avgOccupancyPct": 46,
-      "maxOccupancyPct": 46,
-      "minOccupancyPct": 46,
-      "totalAvailable": 555,
-      "totalOccupied": 479,
+      "avgOccupancyPct": 47,
+      "maxOccupancyPct": 47,
+      "minOccupancyPct": 47,
+      "totalAvailable": 553,
+      "totalOccupied": 481,
       "performancesWithData": 1
     },
     "popularityScore": 37,
@@ -9402,8 +9654,8 @@
       "avgOccupancyPct": 99,
       "maxOccupancyPct": 99,
       "minOccupancyPct": 99,
-      "totalAvailable": 15,
-      "totalOccupied": 1019,
+      "totalAvailable": 13,
+      "totalOccupied": 1021,
       "performancesWithData": 1
     },
     "popularityScore": 75,
@@ -9581,16 +9833,16 @@
     "ticketPriceTo": 31,
     "availability": "LIMITED - SELLING FAST",
     "availabilityRange": "90-100%",
-    "availabilityEstimate": 96,
+    "availabilityEstimate": 97,
     "seatingAggregate": {
-      "avgOccupancyPct": 96,
-      "maxOccupancyPct": 96,
-      "minOccupancyPct": 96,
-      "totalAvailable": 40,
-      "totalOccupied": 994,
+      "avgOccupancyPct": 97,
+      "maxOccupancyPct": 97,
+      "minOccupancyPct": 97,
+      "totalAvailable": 31,
+      "totalOccupied": 1003,
       "performancesWithData": 1
     },
-    "popularityScore": 72,
+    "popularityScore": 73,
     "popularityLabel": "High demand",
     "description": "Book your tickets to  at New Theatre Cardiff at the official Trafalgar Tickets, New Theatre Cardiff box office.",
     "shortDescription": "Hey Jude! Get Back with The Beatles is a spectacular theatrical concert redefining how audiences experience The Beatles. More than just imitation, the show puts the music at its heart as it takes you on a Magical Mystery Tour through the band’s evolution - from the raw beginnings of Please Please Me and A Hard Day’s Night, to the artistry of Abbey Road and Let it Be. \n\nBlending faithful performances with state-of-the-art visuals, meticulous attention to detail, and world-class musicianship, Hey Jude! immerses audiences in sound and imagery that capture the band’s cultural impact. The result is more than just a tribute, it’s an authentic and boldly creative celebration of The Fab Four. \n\nGrab your tickets today, and journey down The Long and Winding Road through the back catalogue of the world’s greatest rock ’n’ roll band.  \n\nIt’s time to Get Back with The Beatles. Yesterday. Today. Forever. \n\nVIP ticket includes best seats in the house, plus signed programme and pre-show meet and greet. Please arrive at merch stand one hour before show start time.",
@@ -10419,8 +10671,8 @@
       "avgOccupancyPct": 54,
       "maxOccupancyPct": 54,
       "minOccupancyPct": 54,
-      "totalAvailable": 479,
-      "totalOccupied": 555,
+      "totalAvailable": 477,
+      "totalOccupied": 557,
       "performancesWithData": 1
     },
     "popularityScore": 35,
@@ -10708,8 +10960,8 @@
       "avgOccupancyPct": 80,
       "maxOccupancyPct": 80,
       "minOccupancyPct": 80,
-      "totalAvailable": 209,
-      "totalOccupied": 825,
+      "totalAvailable": 206,
+      "totalOccupied": 828,
       "performancesWithData": 1
     },
     "popularityScore": 50,
