@@ -2253,10 +2253,96 @@ async function ntScrapeEventDetail(context, eventUrl) {
   }
 }
 
+// ─── New Theatre listing pagination ───────────────────────────────────────────
+
+const NT_LISTING_URL = 'https://trafalgartickets.com/new-theatre-cardiff/en-GB/whats-on';
+const NT_EVENT_ANCHOR = 'a[href*="/new-theatre-cardiff/en-GB/event/"]';
+/** Safety cap on listing page navigations. */
+const NT_MAX_LISTING_PAGES = 40;
+
+/** How many event links the listing page currently renders. */
+async function ntCountListingEvents(page) {
+  return page.$$eval(NT_EVENT_ANCHOR, (els) => els.length).catch(() => 0);
+}
+
+/**
+ * Read the "Showing 10 of 121 events" counter rendered beside the Load more
+ * link. Returns null if the wording changes, in which case callers fall back
+ * to following the pagination links blindly.
+ */
+async function ntReadListingTotal(page) {
+  const m = (await page.content()).match(/Showing\s+(\d+)\s+of\s+(\d+)\s+events/i);
+  if (!m) return null;
+  const shown = Number(m[1]);
+  const total = Number(m[2]);
+  if (!shown || !total) return null;
+  return { shown, total };
+}
+
+/**
+ * Get every event onto the listing page.
+ *
+ * The listing is server-paginated: it renders a page of events plus an
+ * `<a href="?page=N" rel="next">Load more</a>` link, and each page renders
+ * *every* event up to that page (page=2 → 20 events), so navigating to the
+ * last page yields the whole listing in a single document.
+ *
+ * Prefer jumping straight there using the "Showing X of Y events" counter,
+ * and fall back to walking the rel="next" links when that counter or the
+ * cumulative behaviour is not there any more.
+ */
+async function ntLoadFullListing(page) {
+  let count = await ntCountListingEvents(page);
+  const counter = await ntReadListingTotal(page);
+
+  if (counter && counter.total > counter.shown) {
+    const lastPage = Math.ceil(counter.total / counter.shown);
+    if (lastPage > 1 && lastPage <= NT_MAX_LISTING_PAGES) {
+      await gotoAndSettle(page, `${NT_LISTING_URL}?page=${lastPage}`, NT_EVENT_ANCHOR);
+      await new Promise((r) => setTimeout(r, 1_500));
+      count = await ntCountListingEvents(page);
+      if (count >= counter.total) {
+        console.log(`  New Theatre: listing page ${lastPage} holds all ${count} events`);
+        return count;
+      }
+      // Pages are no longer cumulative — restart from the first page so the
+      // link walk below still collects everything it can.
+      console.log(
+        `  New Theatre: page ${lastPage} rendered ${count}/${counter.total} events, ` +
+        `walking Load more links instead`
+      );
+      await gotoAndSettle(page, NT_LISTING_URL, NT_EVENT_ANCHOR);
+      await new Promise((r) => setTimeout(r, 1_500));
+      count = await ntCountListingEvents(page);
+    }
+  }
+
+  let pages = 0;
+  for (let i = 0; i < NT_MAX_LISTING_PAGES; i++) {
+    const next = await page
+      .$eval('a[rel="next"], a[href*="?page="]:has-text("Load more")', (a) => a.getAttribute('href'))
+      .catch(() => null);
+    if (!next) break;
+    await gotoAndSettle(page, new URL(next, page.url()).href, NT_EVENT_ANCHOR);
+    await new Promise((r) => setTimeout(r, 1_500));
+    const after = await ntCountListingEvents(page);
+    if (after <= count) break; // pagination stopped yielding new rows
+    count = after;
+    pages++;
+  }
+
+  const total = (await ntReadListingTotal(page))?.total;
+  console.log(
+    `  New Theatre: listing loaded via ${pages} Load more link(s) — ` +
+    `${count}${total ? ` of ${total}` : ''} events`
+  );
+  return count;
+}
+
 async function scrapeNewTheatre(context) {
   console.log('Scraping New Theatre...');
   const page = await context.newPage();
-  await gotoAndSettle(page, 'https://trafalgartickets.com/new-theatre-cardiff/en-GB/whats-on', 'body');
+  await gotoAndSettle(page, NT_LISTING_URL, 'body');
   await new Promise((r) => setTimeout(r, 2_000));
 
   // Dismiss cookie banner if present
@@ -2269,31 +2355,13 @@ async function scrapeNewTheatre(context) {
     }
   } catch (_) {}
 
-  // Click "Load more" repeatedly until it disappears
-  let loadMoreClicks = 0;
-  while (true) {
-    try {
-      const loadMoreBtn = await page.$('button:has-text("Load more")');
-      if (!loadMoreBtn) break;
-      const isVisible = await loadMoreBtn.isVisible();
-      if (!isVisible) break;
-      await loadMoreBtn.scrollIntoViewIfNeeded();
-      await new Promise((r) => setTimeout(r, 500));
-      await loadMoreBtn.click({ timeout: 10_000 });
-      await new Promise((r) => setTimeout(r, 1_500));
-      loadMoreClicks++;
-      if (loadMoreClicks > 20) break;
-    } catch (_) {
-      break;
-    }
-  }
-  if (loadMoreClicks > 0) console.log(`  New Theatre: clicked Load More ${loadMoreClicks} times`);
+  await ntLoadFullListing(page);
 
   // ── Step 1: collect listing-page data (title, date, price, image, url) ──────
-  const domEvents = await page.evaluate(() => {
+  const domEvents = await page.evaluate((anchorSelector) => {
     const seen = new Set();
     const out = [];
-    const anchors = [...document.querySelectorAll('a[href*="/new-theatre-cardiff/en-GB/event/"]')];
+    const anchors = [...document.querySelectorAll(anchorSelector)];
     for (const a of anchors) {
       const href = a.getAttribute('href') || '';
       const url = (href.startsWith('http') ? href : `https://trafalgartickets.com${href}`).split('?')[0];
@@ -2347,7 +2415,7 @@ async function scrapeNewTheatre(context) {
       out.push(row);
     }
     return out;
-  });
+  }, NT_EVENT_ANCHOR);
 
   const html = await page.content();
   await page.close();

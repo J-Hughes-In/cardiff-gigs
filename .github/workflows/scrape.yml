@@ -35,5 +35,17 @@ jobs:
       - name: Install Playwright browsers
         run: npx playwright install chromium --with-deps
 
-      - name: Probe New Theatre listing
-        run: node debug/probe-new-theatre.js
+      - name: Verify New Theatre scrape
+        run: |
+          node scrape.js --venue "New Theatre"
+          node -e "
+            const a = require('./events.json');
+            const nt = a.filter(e => (e.venue||'').includes('New Theatre'));
+            const d = nt.map(e => e.eventStartDate||'').filter(Boolean).sort();
+            console.log('VERIFY New Theatre events:', nt.length);
+            console.log('VERIFY date range:', d[0], '->', d[d.length-1]);
+            console.log('VERIFY missing title:', nt.filter(e => !e.title).length);
+            console.log('VERIFY missing date:', nt.filter(e => !e.date).length);
+            console.log('VERIFY with availability:', nt.filter(e => e.availability).length);
+            console.log('VERIFY sample:', JSON.stringify(nt.slice(0,3).map(e => ({t:e.title, d:e.date, c:e.category})), null, 1));
+          "
