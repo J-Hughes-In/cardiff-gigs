@@ -15,6 +15,11 @@ on:
         required: false
         default: ''
 
+concurrency:
+  group: update-events
+  cancel-in-progress: false
+
+
 permissions:
   contents: write
 
@@ -35,17 +40,27 @@ jobs:
       - name: Install Playwright browsers
         run: npx playwright install chromium --with-deps
 
-      - name: Verify New Theatre scrape
+      - name: Run scraper
         run: |
-          node scrape.js --venue "New Theatre"
-          node -e "
-            const a = require('./events.json');
-            const nt = a.filter(e => (e.venue||'').includes('New Theatre'));
-            const d = nt.map(e => e.eventStartDate||'').filter(Boolean).sort();
-            console.log('VERIFY New Theatre events:', nt.length);
-            console.log('VERIFY date range:', d[0], '->', d[d.length-1]);
-            console.log('VERIFY missing title:', nt.filter(e => !e.title).length);
-            console.log('VERIFY missing date:', nt.filter(e => !e.date).length);
-            console.log('VERIFY with availability:', nt.filter(e => e.availability).length);
-            console.log('VERIFY sample:', JSON.stringify(nt.slice(0,3).map(e => ({t:e.title, d:e.date, c:e.category})), null, 1));
-          "
+          if [ -n "${{ inputs.venue }}" ]; then
+            node scrape.js --venue "${{ inputs.venue }}"
+          else
+            npm run scrape
+          fi
+
+      - name: Enrich comedian data
+        # Run once a day on the 08:00 UTC scheduled cron only.
+        # Skipped on manual dispatches and the 14:00/20:00 scheduled runs.
+        if: github.event_name == 'schedule' && startsWith(github.event.schedule, '7 19')
+        run: node comedians.js
+        continue-on-error: true
+
+      - name: Commit results
+        run: |
+          git config user.email "actions@github.com"
+          git config user.name "GitHub Actions"
+          git add events.json comedians.json comedian-review.json
+          git diff --staged --quiet && echo "No changes to commit" && exit 0
+          git commit -m "Update events $(date -u +%Y-%m-%d)"
+          git pull --rebase origin main
+          git push origin HEAD:main
