@@ -4310,6 +4310,46 @@ async function scrapeParadiseGarden(context) {
 }
 
 // ---------------------------------------------------------------------------
+// Per-venue result sanity check
+// ---------------------------------------------------------------------------
+
+/** Venues with fewer previous events than this are too small to judge. */
+const VENUE_DROP_MIN_BASELINE = 15;
+/** Warn when a venue returns less than this share of its previous count. */
+const VENUE_DROP_RATIO = 0.5;
+
+function countEventsByVenue(events) {
+  const counts = new Map();
+  for (const ev of events) {
+    const venue = String(ev.venue || '').trim();
+    if (!venue) continue;
+    counts.set(venue, (counts.get(venue) || 0) + 1);
+  }
+  return counts;
+}
+
+/**
+ * Log a GitHub Actions warning annotation for any venue whose fresh event
+ * count collapsed relative to the previous scrape. A broken listing page
+ * usually still yields its first page of results, so the scrape looks
+ * successful — this is the signal that it wasn't.
+ */
+function reportVenueCountDrops(previousEvents, freshEvents) {
+  const prevCounts = countEventsByVenue(previousEvents);
+  const freshCounts = countEventsByVenue(freshEvents);
+  for (const [venue, freshCount] of freshCounts) {
+    const prevCount = prevCounts.get(venue) || 0;
+    if (prevCount < VENUE_DROP_MIN_BASELINE) continue;
+    if (freshCount >= prevCount * VENUE_DROP_RATIO) continue;
+    console.log(
+      `::warning title=Venue event count dropped::${venue}: scraped ${freshCount} ` +
+      `events, down from ${prevCount} in the previous run. The listing page or its ` +
+      `pagination has probably changed — check the scraper before trusting this run.`
+    );
+  }
+}
+
+// ---------------------------------------------------------------------------
 // Venue registry — single source of truth for name → scraper mapping
 // ---------------------------------------------------------------------------
 
@@ -4418,6 +4458,12 @@ async function scrapeAll(selectedScrapers) {
       previousEvents = JSON.parse(fs.readFileSync('events.json', 'utf8'));
     } catch (_) {}
   }
+
+  // A scraper can "succeed" while returning only a fraction of a venue's
+  // listing — a site redesign that breaks pagination leaves the first page
+  // intact, so nothing throws and the rest of the venue is silently deleted
+  // from events.json. Make a large drop loud instead of invisible.
+  reportVenueCountDrops(previousEvents, dedupedFresh);
 
   // Only replace a venue's events if we actually got results back for it.
   // Failed scrapers (returned [] due to error) leave previous events untouched
