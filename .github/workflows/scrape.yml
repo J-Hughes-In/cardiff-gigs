@@ -15,11 +15,6 @@ on:
         required: false
         default: ''
 
-concurrency:
-  group: update-events
-  cancel-in-progress: false
-
-
 permissions:
   contents: write
 
