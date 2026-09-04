@@ -40,27 +40,5 @@ jobs:
       - name: Install Playwright browsers
         run: npx playwright install chromium --with-deps
 
-      - name: Run scraper
-        run: |
-          if [ -n "${{ inputs.venue }}" ]; then
-            node scrape.js --venue "${{ inputs.venue }}"
-          else
-            npm run scrape
-          fi
-
-      - name: Enrich comedian data
-        # Run once a day on the 08:00 UTC scheduled cron only.
-        # Skipped on manual dispatches and the 14:00/20:00 scheduled runs.
-        if: github.event_name == 'schedule' && startsWith(github.event.schedule, '7 19')
-        run: node comedians.js
-        continue-on-error: true
-
-      - name: Commit results
-        run: |
-          git config user.email "actions@github.com"
-          git config user.name "GitHub Actions"
-          git add events.json comedians.json comedian-review.json
-          git diff --staged --quiet && echo "No changes to commit" && exit 0
-          git commit -m "Update events $(date -u +%Y-%m-%d)"
-          git pull --rebase origin main
-          git push origin HEAD:main
+      - name: Probe New Theatre listing
+        run: node debug/probe-new-theatre.js
