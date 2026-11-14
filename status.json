@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-11-14T14:54:38.310Z",
+  "generatedAt": "2026-11-14T17:15:47.529Z",
   "run": {
     "mode": "full",
-    "durationMs": 3065777,
+    "durationMs": 2709570,
     "scrapersAttempted": 17,
     "scrapersTotal": 17
   },
   "totals": {
-    "previousEvents": 762,
-    "currentEvents": 761,
+    "previousEvents": 761,
+    "currentEvents": 760,
     "change": -1,
     "newEvents": 0
   },
@@ -36,9 +36,9 @@
       "currentCount": 10,
       "change": 0,
       "lastSuccess": null,
-      "consecutiveFailures": 7,
+      "consecutiveFailures": 8,
       "attempts": 1,
-      "durationMs": 45716,
+      "durationMs": 45832,
       "error": null
     },
     {
@@ -51,9 +51,9 @@
       "currentCount": 42,
       "change": 0,
       "lastSuccess": null,
-      "consecutiveFailures": 7,
+      "consecutiveFailures": 8,
       "attempts": 1,
-      "durationMs": 7100,
+      "durationMs": 7261,
       "error": null
     },
     {
@@ -66,9 +66,9 @@
       "currentCount": 19,
       "change": 0,
       "lastSuccess": null,
-      "consecutiveFailures": 7,
+      "consecutiveFailures": 8,
       "attempts": 1,
-      "durationMs": 5287,
+      "durationMs": 4990,
       "error": null
     },
     {
@@ -80,10 +80,10 @@
       "previousCount": 10,
       "currentCount": 10,
       "change": 0,
-      "lastSuccess": "2026-11-14T14:54:38.310Z",
+      "lastSuccess": "2026-11-14T17:15:47.529Z",
       "consecutiveFailures": 0,
       "attempts": 1,
-      "durationMs": 2973,
+      "durationMs": 2682,
       "error": null
     },
     {
@@ -95,10 +95,10 @@
       "previousCount": 24,
       "currentCount": 24,
       "change": 0,
-      "lastSuccess": "2026-11-14T14:54:38.310Z",
+      "lastSuccess": "2026-11-14T17:15:47.529Z",
       "consecutiveFailures": 0,
       "attempts": 1,
-      "durationMs": 2079,
+      "durationMs": 2328,
       "error": null
     },
     {
@@ -110,10 +110,10 @@
       "previousCount": 88,
       "currentCount": 88,
       "change": 0,
-      "lastSuccess": "2026-11-14T14:54:38.310Z",
+      "lastSuccess": "2026-11-14T17:15:47.529Z",
       "consecutiveFailures": 0,
       "attempts": 1,
-      "durationMs": 1100,
+      "durationMs": 1235,
       "error": null
     },
     {
@@ -125,10 +125,10 @@
       "previousCount": 66,
       "currentCount": 66,
       "change": 0,
-      "lastSuccess": "2026-11-14T14:54:38.310Z",
+      "lastSuccess": "2026-11-14T17:15:47.529Z",
       "consecutiveFailures": 0,
       "attempts": 1,
-      "durationMs": 13322,
+      "durationMs": 13291,
       "error": null
     },
     {
@@ -140,10 +140,10 @@
       "previousCount": 19,
       "currentCount": 19,
       "change": 0,
-      "lastSuccess": "2026-11-14T14:54:38.310Z",
+      "lastSuccess": "2026-11-14T17:15:47.529Z",
       "consecutiveFailures": 0,
       "attempts": 1,
-      "durationMs": 36892,
+      "durationMs": 38412,
       "error": null
     },
     {
@@ -155,10 +155,10 @@
       "previousCount": 117,
       "currentCount": 117,
       "change": 0,
-      "lastSuccess": "2026-11-14T14:54:38.310Z",
+      "lastSuccess": "2026-11-14T17:15:47.529Z",
       "consecutiveFailures": 0,
       "attempts": 1,
-      "durationMs": 666517,
+      "durationMs": 652806,
       "error": null
     },
     {
@@ -167,13 +167,13 @@
       "status": "ok",
       "dataFrom": "this-run",
       "eventsReturned": 11,
-      "previousCount": 12,
+      "previousCount": 11,
       "currentCount": 11,
-      "change": -1,
-      "lastSuccess": "2026-11-14T14:54:38.310Z",
+      "change": 0,
+      "lastSuccess": "2026-11-14T17:15:47.529Z",
       "consecutiveFailures": 0,
       "attempts": 1,
-      "durationMs": 3918,
+      "durationMs": 5442,
       "error": null
     },
     {
@@ -181,14 +181,14 @@
       "venue": "Sherman Theatre",
       "status": "ok",
       "dataFrom": "this-run",
-      "eventsReturned": 23,
+      "eventsReturned": 16,
       "previousCount": 16,
       "currentCount": 16,
       "change": 0,
-      "lastSuccess": "2026-11-14T14:54:38.310Z",
+      "lastSuccess": "2026-11-14T17:15:47.529Z",
       "consecutiveFailures": 0,
       "attempts": 1,
-      "durationMs": 489191,
+      "durationMs": 341844,
       "error": null
     },
     {
@@ -200,10 +200,10 @@
       "previousCount": 9,
       "currentCount": 9,
       "change": 0,
-      "lastSuccess": "2026-11-14T14:54:38.310Z",
+      "lastSuccess": "2026-11-14T17:15:47.529Z",
       "consecutiveFailures": 0,
       "attempts": 1,
-      "durationMs": 2970,
+      "durationMs": 3094,
       "error": null
     },
     {
@@ -215,10 +215,10 @@
       "previousCount": 20,
       "currentCount": 20,
       "change": 0,
-      "lastSuccess": "2026-11-14T14:54:38.310Z",
+      "lastSuccess": "2026-11-14T17:15:47.529Z",
       "consecutiveFailures": 0,
       "attempts": 1,
-      "durationMs": 1127,
+      "durationMs": 696,
       "error": null
     },
     {
@@ -226,14 +226,14 @@
       "venue": "The Globe Cardiff",
       "status": "ok",
       "dataFrom": "this-run",
-      "eventsReturned": 164,
+      "eventsReturned": 162,
       "previousCount": 79,
-      "currentCount": 79,
-      "change": 0,
-      "lastSuccess": "2026-11-14T14:54:38.310Z",
+      "currentCount": 78,
+      "change": -1,
+      "lastSuccess": "2026-11-14T17:15:47.529Z",
       "consecutiveFailures": 0,
       "attempts": 1,
-      "durationMs": 10266,
+      "durationMs": 7641,
       "error": null
     },
     {
@@ -245,10 +245,10 @@
       "previousCount": 55,
       "currentCount": 55,
       "change": 0,
-      "lastSuccess": "2026-11-14T14:54:38.310Z",
+      "lastSuccess": "2026-11-14T17:15:47.529Z",
       "consecutiveFailures": 0,
       "attempts": 1,
-      "durationMs": 4873,
+      "durationMs": 5492,
       "error": null
     },
     {
@@ -260,10 +260,10 @@
       "previousCount": 81,
       "currentCount": 81,
       "change": 0,
-      "lastSuccess": "2026-11-14T14:54:38.310Z",
+      "lastSuccess": "2026-11-14T17:15:47.529Z",
       "consecutiveFailures": 0,
       "attempts": 1,
-      "durationMs": 6855,
+      "durationMs": 30245,
       "error": null
     },
     {
@@ -275,10 +275,10 @@
       "previousCount": 95,
       "currentCount": 95,
       "change": 0,
-      "lastSuccess": "2026-11-14T14:54:38.310Z",
+      "lastSuccess": "2026-11-14T17:15:47.529Z",
       "consecutiveFailures": 0,
       "attempts": 1,
-      "durationMs": 489743,
+      "durationMs": 270349,
       "error": null
     }
   ]
