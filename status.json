@@ -1,27 +1,27 @@
 {
-  "generatedAt": "2026-11-19T01:49:17.883Z",
+  "generatedAt": "2026-11-19T13:37:34.130Z",
   "run": {
     "mode": "full",
-    "durationMs": 2674613,
+    "durationMs": 2594515,
     "scrapersAttempted": 17,
     "scrapersTotal": 17
   },
   "totals": {
-    "previousEvents": 756,
-    "currentEvents": 724,
-    "change": -32,
-    "newEvents": 13
+    "previousEvents": 724,
+    "currentEvents": 728,
+    "change": 4,
+    "newEvents": 8
   },
   "summary": {
     "ok": 14,
-    "degraded": 1,
-    "empty": 2,
+    "degraded": 0,
+    "empty": 3,
     "unknown": 0,
     "failed": 0,
     "notRun": 0
   },
   "alerts": [
-    "Fuel Rock Club (Fuel): degraded — event count fell from 42 to 12; last succeeded 2026-11-19T01:49:17.883Z",
+    "Wales Millennium Centre (WMC): empty; last succeeded 2026-11-19T01:49:17.883Z",
     "CultVR (CultVR): empty; last succeeded 2026-11-18T17:09:42.950Z",
     "Paradise Garden (Paradise Garden): empty; no recorded success"
   ],
@@ -36,9 +36,9 @@
       "currentCount": 3,
       "change": 0,
       "lastSuccess": "2026-11-18T17:09:42.950Z",
-      "consecutiveFailures": 3,
+      "consecutiveFailures": 4,
       "attempts": 1,
-      "durationMs": 45871,
+      "durationMs": 45824,
       "error": null
     },
     {
@@ -51,25 +51,25 @@
       "currentCount": 19,
       "change": 0,
       "lastSuccess": null,
-      "consecutiveFailures": 30,
+      "consecutiveFailures": 31,
       "attempts": 1,
-      "durationMs": 4987,
+      "durationMs": 5175,
       "error": null
     },
     {
-      "scraper": "Fuel",
-      "venue": "Fuel Rock Club",
-      "status": "degraded",
-      "dataFrom": "this-run",
-      "eventsReturned": 12,
-      "previousCount": 42,
-      "currentCount": 12,
-      "change": -30,
+      "scraper": "WMC",
+      "venue": "Wales Millennium Centre",
+      "status": "empty",
+      "dataFrom": "preserved-from-earlier-run",
+      "eventsReturned": 0,
+      "previousCount": 93,
+      "currentCount": 93,
+      "change": 0,
       "lastSuccess": "2026-11-19T01:49:17.883Z",
-      "consecutiveFailures": 0,
+      "consecutiveFailures": 1,
       "attempts": 1,
-      "durationMs": 6560,
-      "error": "event count fell from 42 to 12"
+      "durationMs": 238497,
+      "error": null
     },
     {
       "scraper": "Canopi",
@@ -80,10 +80,10 @@
       "previousCount": 10,
       "currentCount": 10,
       "change": 0,
-      "lastSuccess": "2026-11-19T01:49:17.883Z",
+      "lastSuccess": "2026-11-19T13:37:34.130Z",
       "consecutiveFailures": 0,
       "attempts": 1,
-      "durationMs": 2862,
+      "durationMs": 2950,
       "error": null
     },
     {
@@ -95,10 +95,10 @@
       "previousCount": 23,
       "currentCount": 23,
       "change": 0,
-      "lastSuccess": "2026-11-19T01:49:17.883Z",
+      "lastSuccess": "2026-11-19T13:37:34.130Z",
       "consecutiveFailures": 0,
       "attempts": 1,
-      "durationMs": 2218,
+      "durationMs": 2289,
       "error": null
     },
     {
@@ -106,14 +106,14 @@
       "venue": "Clwb Ifor Bach",
       "status": "ok",
       "dataFrom": "this-run",
-      "eventsReturned": 90,
+      "eventsReturned": 88,
       "previousCount": 89,
-      "currentCount": 89,
-      "change": 0,
-      "lastSuccess": "2026-11-19T01:49:17.883Z",
+      "currentCount": 87,
+      "change": -2,
+      "lastSuccess": "2026-11-19T13:37:34.130Z",
       "consecutiveFailures": 0,
       "attempts": 1,
-      "durationMs": 967,
+      "durationMs": 1499,
       "error": null
     },
     {
@@ -121,14 +121,29 @@
       "venue": "Depot Cardiff",
       "status": "ok",
       "dataFrom": "this-run",
-      "eventsReturned": 65,
-      "previousCount": 64,
-      "currentCount": 63,
-      "change": -1,
-      "lastSuccess": "2026-11-19T01:49:17.883Z",
+      "eventsReturned": 70,
+      "previousCount": 63,
+      "currentCount": 68,
+      "change": 5,
+      "lastSuccess": "2026-11-19T13:37:34.130Z",
       "consecutiveFailures": 0,
       "attempts": 1,
-      "durationMs": 13378,
+      "durationMs": 13919,
+      "error": null
+    },
+    {
+      "scraper": "Fuel",
+      "venue": "Fuel Rock Club",
+      "status": "ok",
+      "dataFrom": "this-run",
+      "eventsReturned": 12,
+      "previousCount": 12,
+      "currentCount": 12,
+      "change": 0,
+      "lastSuccess": "2026-11-19T13:37:34.130Z",
+      "consecutiveFailures": 0,
+      "attempts": 1,
+      "durationMs": 7145,
       "error": null
     },
     {
@@ -140,10 +155,10 @@
       "previousCount": 18,
       "currentCount": 18,
       "change": 0,
-      "lastSuccess": "2026-11-19T01:49:17.883Z",
+      "lastSuccess": "2026-11-19T13:37:34.130Z",
       "consecutiveFailures": 0,
       "attempts": 1,
-      "durationMs": 36099,
+      "durationMs": 37435,
       "error": null
     },
     {
@@ -151,14 +166,14 @@
       "venue": "New Theatre Cardiff",
       "status": "ok",
       "dataFrom": "this-run",
-      "eventsReturned": 121,
+      "eventsReturned": 122,
       "previousCount": 121,
-      "currentCount": 121,
-      "change": 0,
-      "lastSuccess": "2026-11-19T01:49:17.883Z",
+      "currentCount": 122,
+      "change": 1,
+      "lastSuccess": "2026-11-19T13:37:34.130Z",
       "consecutiveFailures": 0,
       "attempts": 1,
-      "durationMs": 649683,
+      "durationMs": 659315,
       "error": null
     },
     {
@@ -170,10 +185,10 @@
       "previousCount": 11,
       "currentCount": 11,
       "change": 0,
-      "lastSuccess": "2026-11-19T01:49:17.883Z",
+      "lastSuccess": "2026-11-19T13:37:34.130Z",
       "consecutiveFailures": 0,
       "attempts": 1,
-      "durationMs": 5963,
+      "durationMs": 4610,
       "error": null
     },
     {
@@ -185,10 +200,10 @@
       "previousCount": 16,
       "currentCount": 16,
       "change": 0,
-      "lastSuccess": "2026-11-19T01:49:17.883Z",
+      "lastSuccess": "2026-11-19T13:37:34.130Z",
       "consecutiveFailures": 0,
       "attempts": 1,
-      "durationMs": 349636,
+      "durationMs": 347001,
       "error": null
     },
     {
@@ -200,10 +215,10 @@
       "previousCount": 17,
       "currentCount": 17,
       "change": 0,
-      "lastSuccess": "2026-11-19T01:49:17.883Z",
+      "lastSuccess": "2026-11-19T13:37:34.130Z",
       "consecutiveFailures": 0,
       "attempts": 1,
-      "durationMs": 3653,
+      "durationMs": 3815,
       "error": null
     },
     {
@@ -215,10 +230,10 @@
       "previousCount": 20,
       "currentCount": 20,
       "change": 0,
-      "lastSuccess": "2026-11-19T01:49:17.883Z",
+      "lastSuccess": "2026-11-19T13:37:34.130Z",
       "consecutiveFailures": 0,
       "attempts": 1,
-      "durationMs": 821,
+      "durationMs": 879,
       "error": null
     },
     {
@@ -230,10 +245,10 @@
       "previousCount": 77,
       "currentCount": 77,
       "change": 0,
-      "lastSuccess": "2026-11-19T01:49:17.883Z",
+      "lastSuccess": "2026-11-19T13:37:34.130Z",
       "consecutiveFailures": 0,
       "attempts": 1,
-      "durationMs": 5873,
+      "durationMs": 4430,
       "error": null
     },
     {
@@ -242,13 +257,13 @@
       "status": "ok",
       "dataFrom": "this-run",
       "eventsReturned": 57,
-      "previousCount": 52,
+      "previousCount": 51,
       "currentCount": 51,
-      "change": -1,
-      "lastSuccess": "2026-11-19T01:49:17.883Z",
+      "change": 0,
+      "lastSuccess": "2026-11-19T13:37:34.130Z",
       "consecutiveFailures": 0,
       "attempts": 1,
-      "durationMs": 5806,
+      "durationMs": 7509,
       "error": null
     },
     {
@@ -260,25 +275,10 @@
       "previousCount": 81,
       "currentCount": 81,
       "change": 0,
-      "lastSuccess": "2026-11-19T01:49:17.883Z",
+      "lastSuccess": "2026-11-19T13:37:34.130Z",
       "consecutiveFailures": 0,
       "attempts": 1,
-      "durationMs": 7812,
-      "error": null
-    },
-    {
-      "scraper": "WMC",
-      "venue": "Wales Millennium Centre",
-      "status": "ok",
-      "dataFrom": "this-run",
-      "eventsReturned": 93,
-      "previousCount": 93,
-      "currentCount": 93,
-      "change": 0,
-      "lastSuccess": "2026-11-19T01:49:17.883Z",
-      "consecutiveFailures": 0,
-      "attempts": 1,
-      "durationMs": 246209,
+      "durationMs": 6748,
       "error": null
     }
   ]
