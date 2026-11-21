@@ -6357,14 +6357,14 @@
     ],
     "availability": "LIMITED - SELLING FAST",
     "availabilityRange": "80-90%",
-    "availabilityEstimate": 86,
+    "availabilityEstimate": 81,
     "seatingAggregate": {
-      "avgOccupancyPct": 86,
+      "avgOccupancyPct": 81,
       "maxOccupancyPct": 86,
-      "minOccupancyPct": 86,
-      "totalAvailable": 148,
-      "totalOccupied": 934,
-      "performancesWithData": 1
+      "minOccupancyPct": 76,
+      "totalAvailable": 412,
+      "totalOccupied": 1752,
+      "performancesWithData": 2
     },
     "popularityScore": 45,
     "popularityLabel": "Moderate demand",
@@ -6671,19 +6671,19 @@
       "https://trafalgartickets.com/new-theatre-cardiff/en-GB/event/pantomime/beauty-and-the-beast-tickets/opengraph-image?5b0acc77976c5b95",
       "https://images.ctfassets.net/le9bkneeoxws/1jTPVBizXbF66vdHZncBJC/597a9df52dac5e922c676545771bd766/1080x1080_Cardiff_B_TB_V2.jpg?w=2048&fm=webp&q=70"
     ],
-    "availability": "SOLD OUT - SELLING FAST",
+    "availability": "LIMITED - SELLING FAST",
     "availabilityRange": "80-90%",
-    "availabilityEstimate": 86,
+    "availabilityEstimate": 85,
     "seatingAggregate": {
-      "avgOccupancyPct": 86,
-      "maxOccupancyPct": 100,
+      "avgOccupancyPct": 85,
+      "maxOccupancyPct": 99,
       "minOccupancyPct": 63,
-      "totalAvailable": 938,
-      "totalOccupied": 5546,
+      "totalAvailable": 942,
+      "totalOccupied": 5542,
       "performancesWithData": 6
     },
-    "popularityScore": 80,
-    "popularityLabel": "Very high demand",
+    "popularityScore": 49,
+    "popularityLabel": "Moderate demand",
     "description": "Book your tickets to Beauty And The Beast at New Theatre Cardiff at the official Trafalgar Tickets, New Theatre Cardiff box office.",
     "shortDescription": "Get ready – a tale as old as time is coming to life! Step into the magic this Christmas as we present the enchanting family pantomime Beauty and the Beast.  Starring Presenter Gethin Jones as Filipe De Boeuf, TV, Film and Stage actor Steve Speirs as Monsieur Marzipan, Cardiff’s favourite Dame Mike Doyle as Betty Bonbon (Alriiight!). The hilarious Jack Ryan as Betty’s son Almonde, Tik Tok sensation and Cardiff’s own Jo Osmond as Madame Spite. West End performer Jade Davies as Belle, South Wales’s Harri Lloyd-Morgan as The Beast.  When a proud Prince is cursed to live as a fearsome Beast, only true love can break the spell before the last petal falls from a magical rose. But could Belle – a bright, book-loving village girl who dreams of adventure – be the heroine of his story?  Packed with laugh-out-loud comedy, dazzling costumes, show-stopping songs, and jaw-dropping magic that will delight the entire family, Beauty and the Beast is the family friendly fairy-tale which has all the ingredients for a truly memorable pantomime. Expect side-splitting jokes, audience participation galore, and plenty of festive sparkle as this classic story is reimagined with that unmistakable panto twist. Special effects by Burnt Toast FX.  Whether you’re a lifelong panto fan or experiencing the magic for the first time come and cheer on a hilarious cast of colourful characters as they discover that true beauty lies within!  Relaxed Performance:\nTue 15 Dec 2026 at 6.00pm. For full availability and assistance please call the box office on 0343 310 0041. A select number of tickets are available to book online. What is a relaxed performance?",
     "ticketPriceTo": 36,
@@ -6763,8 +6763,8 @@
       "avgOccupancyPct": 40,
       "maxOccupancyPct": 40,
       "minOccupancyPct": 40,
-      "totalAvailable": 624,
-      "totalOccupied": 410,
+      "totalAvailable": 625,
+      "totalOccupied": 409,
       "performancesWithData": 1
     },
     "popularityScore": 22,
@@ -7112,8 +7112,8 @@
       "avgOccupancyPct": 77,
       "maxOccupancyPct": 80,
       "minOccupancyPct": 75,
-      "totalAvailable": 741,
-      "totalOccupied": 2505,
+      "totalAvailable": 735,
+      "totalOccupied": 2511,
       "performancesWithData": 3
     },
     "popularityScore": 60,
@@ -7189,8 +7189,8 @@
       "avgOccupancyPct": 79,
       "maxOccupancyPct": 79,
       "minOccupancyPct": 79,
-      "totalAvailable": 218,
-      "totalOccupied": 816,
+      "totalAvailable": 216,
+      "totalOccupied": 818,
       "performancesWithData": 1
     },
     "popularityScore": 60,
@@ -7517,8 +7517,8 @@
       "avgOccupancyPct": 80,
       "maxOccupancyPct": 83,
       "minOccupancyPct": 78,
-      "totalAvailable": 851,
-      "totalOccupied": 3457,
+      "totalAvailable": 848,
+      "totalOccupied": 3460,
       "performancesWithData": 4
     },
     "popularityScore": 64,
@@ -7675,8 +7675,8 @@
       "avgOccupancyPct": 60,
       "maxOccupancyPct": 60,
       "minOccupancyPct": 60,
-      "totalAvailable": 412,
-      "totalOccupied": 622,
+      "totalAvailable": 410,
+      "totalOccupied": 624,
       "performancesWithData": 1
     },
     "popularityScore": 44,
@@ -7763,8 +7763,8 @@
       "avgOccupancyPct": 76,
       "maxOccupancyPct": 76,
       "minOccupancyPct": 76,
-      "totalAvailable": 248,
-      "totalOccupied": 786,
+      "totalAvailable": 246,
+      "totalOccupied": 788,
       "performancesWithData": 1
     },
     "popularityScore": 44,
@@ -7892,8 +7892,8 @@
       "avgOccupancyPct": 72,
       "maxOccupancyPct": 74,
       "minOccupancyPct": 71,
-      "totalAvailable": 904,
-      "totalOccupied": 2342,
+      "totalAvailable": 900,
+      "totalOccupied": 2346,
       "performancesWithData": 3
     },
     "popularityScore": 58,
@@ -7933,8 +7933,8 @@
       "avgOccupancyPct": 20,
       "maxOccupancyPct": 21,
       "minOccupancyPct": 18,
-      "totalAvailable": 1672,
-      "totalOccupied": 396,
+      "totalAvailable": 1666,
+      "totalOccupied": 402,
       "performancesWithData": 2
     },
     "popularityScore": 11,
@@ -7969,13 +7969,13 @@
     ],
     "availability": "LIMITED - SELLING FAST",
     "availabilityRange": "70-80%",
-    "availabilityEstimate": 76,
+    "availabilityEstimate": 77,
     "seatingAggregate": {
-      "avgOccupancyPct": 76,
+      "avgOccupancyPct": 77,
       "maxOccupancyPct": 86,
       "minOccupancyPct": 57,
-      "totalAvailable": 1569,
-      "totalOccupied": 5085,
+      "totalAvailable": 1561,
+      "totalOccupied": 5093,
       "performancesWithData": 6
     },
     "popularityScore": 68,
@@ -8100,8 +8100,8 @@
       "avgOccupancyPct": 69,
       "maxOccupancyPct": 69,
       "minOccupancyPct": 69,
-      "totalAvailable": 322,
-      "totalOccupied": 712,
+      "totalAvailable": 320,
+      "totalOccupied": 714,
       "performancesWithData": 1
     },
     "popularityScore": 50,
@@ -8325,8 +8325,8 @@
       "avgOccupancyPct": 43,
       "maxOccupancyPct": 43,
       "minOccupancyPct": 43,
-      "totalAvailable": 590,
-      "totalOccupied": 444,
+      "totalAvailable": 588,
+      "totalOccupied": 446,
       "performancesWithData": 1
     },
     "popularityScore": 35,
@@ -8443,8 +8443,8 @@
       "avgOccupancyPct": 34,
       "maxOccupancyPct": 34,
       "minOccupancyPct": 34,
-      "totalAvailable": 686,
-      "totalOccupied": 360,
+      "totalAvailable": 687,
+      "totalOccupied": 359,
       "performancesWithData": 1
     },
     "popularityScore": 21,
@@ -8487,8 +8487,8 @@
       "avgOccupancyPct": 13,
       "maxOccupancyPct": 15,
       "minOccupancyPct": 10,
-      "totalAvailable": 1807,
-      "totalOccupied": 261,
+      "totalAvailable": 1804,
+      "totalOccupied": 264,
       "performancesWithData": 2
     },
     "popularityScore": 9,
@@ -8594,8 +8594,8 @@
       "avgOccupancyPct": 74,
       "maxOccupancyPct": 74,
       "minOccupancyPct": 74,
-      "totalAvailable": 271,
-      "totalOccupied": 763,
+      "totalAvailable": 269,
+      "totalOccupied": 765,
       "performancesWithData": 1
     },
     "popularityScore": 61,
@@ -9205,8 +9205,8 @@
       "avgOccupancyPct": 69,
       "maxOccupancyPct": 78,
       "minOccupancyPct": 64,
-      "totalAvailable": 1663,
-      "totalOccupied": 3747,
+      "totalAvailable": 1661,
+      "totalOccupied": 3749,
       "performancesWithData": 5
     },
     "popularityScore": 66,
@@ -9367,16 +9367,16 @@
     ],
     "availability": "GOOD - SELLING FAST",
     "availabilityRange": "80-90%",
-    "availabilityEstimate": 83,
+    "availabilityEstimate": 84,
     "seatingAggregate": {
-      "avgOccupancyPct": 83,
-      "maxOccupancyPct": 83,
-      "minOccupancyPct": 83,
-      "totalAvailable": 172,
-      "totalOccupied": 862,
+      "avgOccupancyPct": 84,
+      "maxOccupancyPct": 84,
+      "minOccupancyPct": 84,
+      "totalAvailable": 168,
+      "totalOccupied": 866,
       "performancesWithData": 1
     },
-    "popularityScore": 67,
+    "popularityScore": 68,
     "popularityLabel": "High demand",
     "description": "Book your tickets to David The Medium: The Way Back Home Tour at New Theatre Cardiff at the official Trafalgar Tickets, New Theatre Cardiff box office.",
     "shortDescription": "Following the incredible success of his sold-out 2025 tour, David the Medium returns to the UK & Ireland for another unforgettable evening of live mediumship.  As a Psychic Medium, David connects with those who have departed the physical world and crossed over into the Afterlife. Through his ability to see, hear and feel their presence, David takes to the stage and allows the messages that come through to guide the evening, bringing messages of love, support, guidance, peace, clarity and validation to members of the audience.  Whether you experienced David’s sold-out tour in 2025 or are discovering his work for the first time, this is a special opportunity to witness his mediumship live and experience the connection, emotion and moments of validation that unfold on stage.  David the Medium is back! Come and experience an evening of connection, love and messages from the Other Side. VIP tickets include premium front-row seating, plus an exclusive post-show Meet & Greet with David, complete with a photo opportunity.\n\nFor entertainment purposes only. Purchasing a ticket does not guarantee a personal reading.  The show will be filmed. By purchasing a ticket and attending, you acknowledge and agree that you may be filmed or photographed and that footage, including any reading or interaction you have with David, may be edited and published online, including on YouTube and other platforms.",
@@ -9413,8 +9413,8 @@
       "avgOccupancyPct": 25,
       "maxOccupancyPct": 25,
       "minOccupancyPct": 25,
-      "totalAvailable": 779,
-      "totalOccupied": 255,
+      "totalAvailable": 777,
+      "totalOccupied": 257,
       "performancesWithData": 1
     },
     "popularityScore": 16,
@@ -9454,8 +9454,8 @@
       "avgOccupancyPct": 81,
       "maxOccupancyPct": 81,
       "minOccupancyPct": 81,
-      "totalAvailable": 193,
-      "totalOccupied": 841,
+      "totalAvailable": 195,
+      "totalOccupied": 839,
       "performancesWithData": 1
     },
     "popularityScore": 48,
@@ -9772,8 +9772,8 @@
       "avgOccupancyPct": 49,
       "maxOccupancyPct": 57,
       "minOccupancyPct": 42,
-      "totalAvailable": 1580,
-      "totalOccupied": 1526,
+      "totalAvailable": 1571,
+      "totalOccupied": 1535,
       "performancesWithData": 3
     },
     "popularityScore": 37,
@@ -10107,8 +10107,8 @@
       "avgOccupancyPct": 47,
       "maxOccupancyPct": 47,
       "minOccupancyPct": 47,
-      "totalAvailable": 551,
-      "totalOccupied": 483,
+      "totalAvailable": 549,
+      "totalOccupied": 485,
       "performancesWithData": 1
     },
     "popularityScore": 31,
@@ -10453,8 +10453,8 @@
       "avgOccupancyPct": 8,
       "maxOccupancyPct": 9,
       "minOccupancyPct": 6,
-      "totalAvailable": 2873,
-      "totalOccupied": 229,
+      "totalAvailable": 2875,
+      "totalOccupied": 227,
       "performancesWithData": 3
     },
     "popularityScore": 8,
@@ -10617,8 +10617,8 @@
       "avgOccupancyPct": 70,
       "maxOccupancyPct": 82,
       "minOccupancyPct": 61,
-      "totalAvailable": 1916,
-      "totalOccupied": 4576,
+      "totalAvailable": 1915,
+      "totalOccupied": 4577,
       "performancesWithData": 6
     },
     "popularityScore": 76,
@@ -10872,8 +10872,8 @@
       "avgOccupancyPct": 12,
       "maxOccupancyPct": 12,
       "minOccupancyPct": 12,
-      "totalAvailable": 905,
-      "totalOccupied": 129,
+      "totalAvailable": 907,
+      "totalOccupied": 127,
       "performancesWithData": 1
     },
     "popularityScore": 10,
@@ -11029,16 +11029,16 @@
     ],
     "availability": "GOOD - SELLING FAST",
     "availabilityRange": "60-70%",
-    "availabilityEstimate": 60,
+    "availabilityEstimate": 61,
     "seatingAggregate": {
-      "avgOccupancyPct": 60,
-      "maxOccupancyPct": 60,
-      "minOccupancyPct": 60,
-      "totalAvailable": 409,
-      "totalOccupied": 625,
+      "avgOccupancyPct": 61,
+      "maxOccupancyPct": 61,
+      "minOccupancyPct": 61,
+      "totalAvailable": 407,
+      "totalOccupied": 627,
       "performancesWithData": 1
     },
-    "popularityScore": 44,
+    "popularityScore": 45,
     "popularityLabel": "Moderate demand",
     "description": "Book your tickets to Elio Pace's Billy Joel Songbook at New Theatre Cardiff at the official Trafalgar Tickets, New Theatre Cardiff box office.",
     "shortDescription": "Celebrated singer-songwriter and pianist Elio Pace and his incredible band are taking their award-winning Billy Joel Songbook to a whole new level, launching an extraordinary 10-year project celebrating all of Billy Joel’s albums on their landmark anniversaries. The journey begins with Elio Pace’s Billy Joel Songbook: Celebrating 50 Years of The Stranger, marking the golden anniversary of Joel’s iconic breakthrough masterpiece. Widely regarded as one of the greatest albums of all time, The Stranger will be performed in its entirety, featuring timeless classics including Just The Way You Are, She’s Always A Woman and Vienna. Alongside the complete album in the first half of each show, fans can look forward to a second half packed with the hits they know and love. In an exciting twist, at every show audiences will be invited to submit requests for their favourite Billy Joel songs, which will be selected at random each night, so no two performances will ever be the same",
@@ -11341,20 +11341,6 @@
     "ticketPriceTo": 39,
     "subcategory": "Trafalgar Tickets > New Theatre Cardiff > What's On > Comedy > MC Hammersmith: Ice Ice Nepo Baby",
     "primaryCategory": "Comedy"
-  },
-  {
-    "title": "THE BLACK CHARADE | FELL OUT BOY | L1NKN.P4RK | DOOKIE",
-    "details": "FRIDAY 20TH NOVEMBER\n18:00 | 14+ (UNDER 16S TO BE ACCOMPANIED BY AN ADULT)",
-    "url": "https://www.tixr.com/groups/tramshed/events/the-black-charade-fell-out-boy-171684",
-    "venue": "Tramshed Cardiff",
-    "scrapedAt": "2026-05-28T11:32:08.295Z",
-    "imageUrl": "https://www.tramshedcardiff.com/wp-content/uploads/2026/01/Artwork-PR-Image-5.png",
-    "imageUrls": [
-      "https://www.tramshedcardiff.com/wp-content/uploads/2026/01/Artwork-PR-Image-5.png"
-    ],
-    "primaryCategory": "Music",
-    "description": "FRIDAY 20TH NOVEMBER\n18:00 | 14+ (UNDER 16S TO BE ACCOMPANIED BY AN ADULT)",
-    "date": "Friday, 20 November 2026"
   },
   {
     "title": "DUTTY MOONSHINE BIG BAND",
@@ -12078,23 +12064,6 @@
     "primaryCategory": "Music",
     "description": "FRIDAY 26TH NOVEMBER 2027\n19:00 | 14+ (UNDER 16S TO BE ACCOMPANIED BY AN ADULT)",
     "date": "Friday, 26 November 2027"
-  },
-  {
-    "title": "Boxxer presents PRICE V KOTASKOVA",
-    "date": "Friday, 20 November 2026",
-    "details": "Friday Doors: 17:30",
-    "url": "https://www.livenation.co.uk/event/boxxer-presents-price-v-kotaskova-cardiff-tickets-edp1704582",
-    "venue": "Utilita Arena Cardiff",
-    "scrapedAt": "2026-10-12T17:21:43.169Z",
-    "description": "Boxxer presents PRICE V KOTASKOVA | 2026-11-20T23:59:00Z | Utilita Arena Cardiff",
-    "shortDescription": "Buy tickets for Boxxer presents PRICE V KOTASKOVA at Utilita Arena Cardiff on Fri, 20 Nov 2026 at www.livenation.co.uk. Search for United Kingdom and international concert tickets, tour dates and venues in your area with the world's largest concert search engine.",
-    "imageUrl": "https://networksites.livenationinternational.com/networksites/assets/images/event-placeholder.jpg",
-    "imageUrls": [
-      "https://networksites.livenationinternational.com/networksites/assets/images/event-placeholder.jpg"
-    ],
-    "eventStartDate": "2026-11-20T23:59:00Z",
-    "eventEndDate": "2026-11-20",
-    "primaryCategory": "Music"
   },
   {
     "title": "Bloc Party & Interpol",
@@ -14013,24 +13982,6 @@
     "primaryCategory": "Music"
   },
   {
-    "title": "Wales v Ireland: Six Nations 2027",
-    "date": "Saturday, 20 February 2027",
-    "url": "https://depotcardiff.com/event/wales-v-ireland-six-nations-2027/",
-    "venue": "Depot Cardiff",
-    "scrapedAt": "2026-11-05T16:05:26.777Z",
-    "imageUrl": "https://depotcardiff.com/wp-content/uploads/2026/11/DSC_6363-Enhanced-NR-2.jpg",
-    "description": "Wales are home to Ireland. If you’re not at the Principality, be at DEPOT. The Six Nations comes home to Cardiff. Wales host Ireland at the Principality Stadium, and the city will be buzzing all day. Haven’t got a stadium ticket? The FanHub is the next best thing, with the full matchday atmosphere, big screens and street food a short walk from Cardiff Central. Kick-off 2:10pm Also showing: England v Italy, 4:40pm",
-    "shortDescription": "No stadium ticket? Watch Wales v Ireland live at DEPOT FanHub, ten minutes from Cardiff Central. England v Italy showing after. Book now.",
-    "imageUrls": [
-      "https://depotcardiff.com/wp-content/uploads/2026/11/DSC_6363-Enhanced-NR-2.jpg",
-      "https://depotcardiff.com/wp-content/uploads/2026/11/DSC_6363-Enhanced-NR-2.jpg.webp"
-    ],
-    "eventStartDate": "2027-02-20T12:00:00+00:00",
-    "eventEndDate": "2027-02-20T22:00:00+00:00",
-    "subcategory": "Wales v Ireland: Six Nations 2027",
-    "primaryCategory": "Music"
-  },
-  {
     "title": "Cage The Elephant",
     "date": "Monday, 22 February 2027",
     "url": "https://depotcardiff.com/event/cage-the-elephant/",
@@ -14708,20 +14659,6 @@
     "eventEndDate": "2027-11-06T23:00:00+00:00",
     "subcategory": "History Of Jungle",
     "primaryCategory": "Music"
-  },
-  {
-    "title": "Second Speed w. Azyr",
-    "date": "Friday, 20 November 2026",
-    "location": "The Great Hall",
-    "url": "https://www.cardiffstudents.com/ents/event/43637/",
-    "venue": "Cardiff SU",
-    "scrapedAt": "2026-09-01T18:30:50.538Z",
-    "imageUrl": "https://www.cardiffstudents.com/asset/Event/6013/AZYR-Full-line-up-1.jpg?thumbnail_width=100&thumbnail_height=100&resize_type=CropToFit",
-    "imageUrls": [
-      "https://www.cardiffstudents.com/asset/Event/6013/AZYR-Full-line-up-1.jpg?thumbnail_width=100&thumbnail_height=100&resize_type=CropToFit"
-    ],
-    "primaryCategory": "Music",
-    "description": "universe: second-speed-w-azyr-tickets-KWPB9R"
   },
   {
     "title": "Shed Seven",
@@ -17740,23 +17677,6 @@
     "genre": "Comedy"
   },
   {
-    "title": "VALLEY EVENTS: CULTURE FM 3",
-    "date": "Friday, 20 November 2026",
-    "description": "Culture.FM Vol.3 - showing off the best grime and alt rap in Cymru.  Headlined by the one and only @smxk3_tf. This is not one you’re going want to miss!",
-    "url": "https://www.thecanopi.org/events/culturefm-3",
-    "imageUrl": "http://static1.squarespace.com/static/679a358f3252176c7392f9e0/67a653a2ac578d0b3919ffa6/6aeb0facadeb095c12f98f64/1794919927149/Valley+Events+3.png?format=1500w",
-    "venue": "Canopi Cardiff",
-    "scrapedAt": "2026-11-04T12:54:31.129Z",
-    "shortDescription": "Culture.FM  Vol.3 - showing off the best grime and alt rap in Cymru.  Headlined by the one and only  @smxk3_tf . This is not one you’re going want to miss!",
-    "imageUrls": [
-      "http://static1.squarespace.com/static/679a358f3252176c7392f9e0/67a653a2ac578d0b3919ffa6/6aeb0facadeb095c12f98f64/1794919927149/Valley+Events+3.png?format=1500w",
-      "https://images.squarespace-cdn.com/content/v1/679a358f3252176c7392f9e0/1793790097563-Z3KSTDRAHL3NBAJNFZA8/Valley+Events+3.png"
-    ],
-    "eventStartDate": "2026-11-20T19:00:00+0000",
-    "eventEndDate": "2026-11-20T23:30:00+0000",
-    "primaryCategory": "Other"
-  },
-  {
     "title": "FILM - UNAUTHORISED ABSENCE",
     "date": "Thursday, 26 November 2026",
     "description": "Join us for a screening of Unauthorised Absence, a powerful film following a single mother’s fight to secure the support her autistic daughter needs. Instead, she faces fines, threats and mounting pressure from an education system that wasn't built for them.\n\nFollowing the screening, we’ll open up the space for conversation, reflection and shared experiences.",
@@ -18239,16 +18159,6 @@
     "ticketCurrency": "GBP",
     "ticketPriceLabel": "£11.00",
     "primaryCategory": "Musical Theatre"
-  },
-  {
-    "title": "Miss Jones",
-    "date": "Friday, 20 November 2026",
-    "eventStartDate": "2026-11-20",
-    "description": "",
-    "venue": "Stage & Stem",
-    "url": "https://stageandstem.com/book-a-table.html",
-    "scrapedAt": "2026-11-15T12:40:53.158Z",
-    "primaryCategory": "Other"
   },
   {
     "title": "👑 Buff Bingo Bottomless Drag Brunch",
