@@ -6182,6 +6182,20 @@
     "date": "Thursday, 13 May 2027"
   },
   {
+    "title": "THE STICKMEN PROJECT",
+    "details": "FRIDAY 14TH MAY\n19:00 | 14+ (UNDER 16’S ACCOMPANIED WITH AN ADULT 18)",
+    "url": "https://www.tixr.com/groups/theglobe/events/the-stickmen-project-216139",
+    "venue": "The Globe Cardiff",
+    "scrapedAt": "2026-11-26T14:29:35.705Z",
+    "imageUrl": "https://www.globecardiff.co.uk/wp-content/uploads/2023/11/globe-black-logo.png",
+    "imageUrls": [
+      "https://www.globecardiff.co.uk/wp-content/uploads/2023/11/globe-black-logo.png"
+    ],
+    "primaryCategory": "Music",
+    "description": "FRIDAY 14TH MAY\n19:00 | 14+ (UNDER 16’S ACCOMPANIED WITH AN ADULT 18)",
+    "date": "Friday, 14 May 2027"
+  },
+  {
     "title": "BC CAMPLIGHT",
     "details": "THURSDAY 27TH MAY\n19:00 | 14+ (UNDER 16’S ACCOMPANIED WITH AN ADULT 18)",
     "url": "https://www.tixr.com/groups/theglobe/events/bc-camplight-213640",
@@ -6368,6 +6382,20 @@
     "date": "Friday, 15 October 2027"
   },
   {
+    "title": "METALLICA RELOADED – UK METALLICA TRIBUTE BAND!",
+    "details": "FRIDAY 28TH JANUARY\n19:00 | 14+ (UNDER 16’S ACCOMPANIED WITH AN ADULT 18)",
+    "url": "https://www.tixr.com/groups/theglobe/events/metallica-reloaded-uk-metallica-tribute-band--212778",
+    "venue": "The Globe Cardiff",
+    "scrapedAt": "2026-11-26T14:29:35.705Z",
+    "imageUrl": "https://www.globecardiff.co.uk/wp-content/uploads/2023/11/globe-black-logo.png",
+    "imageUrls": [
+      "https://www.globecardiff.co.uk/wp-content/uploads/2023/11/globe-black-logo.png"
+    ],
+    "primaryCategory": "Music",
+    "description": "FRIDAY 28TH JANUARY\n19:00 | 14+ (UNDER 16’S ACCOMPANIED WITH AN ADULT 18)",
+    "date": "Thursday, 28 January 2027"
+  },
+  {
     "title": "The Amy Winehouse Band",
     "date": "Thursday, 26 November 2026",
     "url": "https://trafalgartickets.com/new-theatre-cardiff/en-GB/event/music/the-amy-winehouse-band-tickets",
@@ -6424,9 +6452,17 @@
       "https://trafalgartickets.com/new-theatre-cardiff/en-GB/event/music/welsh-of-the-west-end-tickets/opengraph-image?5b0acc77976c5b95",
       "https://images.ctfassets.net/le9bkneeoxws/1uc8TGi8pvLygJMsPqMp1N/ebeaeacaac12abaf1c0e9556535f95c5/600x600.jpg?w=2048&fm=webp&q=75"
     ],
-    "availability": "SOLD OUT",
-    "availabilityRange": "100%",
+    "availability": "SOLD OUT - SELLING FAST",
+    "availabilityRange": "100-100%",
     "availabilityEstimate": 100,
+    "seatingAggregate": {
+      "avgOccupancyPct": 100,
+      "maxOccupancyPct": 100,
+      "minOccupancyPct": 100,
+      "totalAvailable": 3,
+      "totalOccupied": 1059,
+      "performancesWithData": 1
+    },
     "popularityScore": 80,
     "popularityLabel": "Very high demand",
     "description": "Book your tickets to Welsh Of The West End  at New Theatre Cardiff at the official Trafalgar Tickets, New Theatre Cardiff box office.",
@@ -6466,8 +6502,8 @@
       "avgOccupancyPct": 85,
       "maxOccupancyPct": 87,
       "minOccupancyPct": 83,
-      "totalAvailable": 312,
-      "totalOccupied": 1765,
+      "totalAvailable": 308,
+      "totalOccupied": 1769,
       "performancesWithData": 2
     },
     "popularityScore": 43,
@@ -6510,8 +6546,8 @@
       "avgOccupancyPct": 87,
       "maxOccupancyPct": 99,
       "minOccupancyPct": 65,
-      "totalAvailable": 871,
-      "totalOccupied": 5613,
+      "totalAvailable": 846,
+      "totalOccupied": 5638,
       "performancesWithData": 6
     },
     "popularityScore": 49,
@@ -6639,8 +6675,8 @@
       "avgOccupancyPct": 54,
       "maxOccupancyPct": 54,
       "minOccupancyPct": 54,
-      "totalAvailable": 479,
-      "totalOccupied": 557,
+      "totalAvailable": 475,
+      "totalOccupied": 561,
       "performancesWithData": 1
     },
     "popularityScore": 28,
@@ -6678,13 +6714,13 @@
     ],
     "availability": "GOOD - SELLING FAST",
     "availabilityRange": "70-80%",
-    "availabilityEstimate": 75,
+    "availabilityEstimate": 76,
     "seatingAggregate": {
-      "avgOccupancyPct": 75,
-      "maxOccupancyPct": 75,
-      "minOccupancyPct": 75,
-      "totalAvailable": 261,
-      "totalOccupied": 773,
+      "avgOccupancyPct": 76,
+      "maxOccupancyPct": 76,
+      "minOccupancyPct": 76,
+      "totalAvailable": 251,
+      "totalOccupied": 783,
       "performancesWithData": 1
     },
     "popularityScore": 39,
@@ -6727,8 +6763,8 @@
       "avgOccupancyPct": 83,
       "maxOccupancyPct": 83,
       "minOccupancyPct": 83,
-      "totalAvailable": 188,
-      "totalOccupied": 894,
+      "totalAvailable": 183,
+      "totalOccupied": 899,
       "performancesWithData": 1
     },
     "popularityScore": 61,
@@ -6763,13 +6799,13 @@
     ],
     "availability": "GOOD - SELLING FAST",
     "availabilityRange": "50-60%",
-    "availabilityEstimate": 52,
+    "availabilityEstimate": 53,
     "seatingAggregate": {
-      "avgOccupancyPct": 52,
-      "maxOccupancyPct": 52,
-      "minOccupancyPct": 52,
-      "totalAvailable": 493,
-      "totalOccupied": 544,
+      "avgOccupancyPct": 53,
+      "maxOccupancyPct": 53,
+      "minOccupancyPct": 53,
+      "totalAvailable": 485,
+      "totalOccupied": 552,
       "performancesWithData": 1
     },
     "popularityScore": 37,
@@ -6900,8 +6936,8 @@
       "avgOccupancyPct": 54,
       "maxOccupancyPct": 54,
       "minOccupancyPct": 54,
-      "totalAvailable": 478,
-      "totalOccupied": 556,
+      "totalAvailable": 476,
+      "totalOccupied": 558,
       "performancesWithData": 1
     },
     "popularityScore": 28,
@@ -6942,10 +6978,10 @@
     "availabilityEstimate": 78,
     "seatingAggregate": {
       "avgOccupancyPct": 78,
-      "maxOccupancyPct": 80,
+      "maxOccupancyPct": 81,
       "minOccupancyPct": 74,
-      "totalAvailable": 714,
-      "totalOccupied": 2532,
+      "totalAvailable": 700,
+      "totalOccupied": 2546,
       "performancesWithData": 3
     },
     "popularityScore": 60,
@@ -7101,16 +7137,16 @@
     ],
     "availability": "GOOD - SELLING FAST",
     "availabilityRange": "60-70%",
-    "availabilityEstimate": 64,
+    "availabilityEstimate": 65,
     "seatingAggregate": {
-      "avgOccupancyPct": 64,
-      "maxOccupancyPct": 64,
-      "minOccupancyPct": 64,
-      "totalAvailable": 368,
-      "totalOccupied": 666,
+      "avgOccupancyPct": 65,
+      "maxOccupancyPct": 65,
+      "minOccupancyPct": 65,
+      "totalAvailable": 366,
+      "totalOccupied": 668,
       "performancesWithData": 1
     },
-    "popularityScore": 36,
+    "popularityScore": 37,
     "popularityLabel": "Moderate demand",
     "description": "Book your tickets to Showaddywaddy  at New Theatre Cardiff at the official Trafalgar Tickets, New Theatre Cardiff box office.",
     "shortDescription": "‘The Greatest Rock & Roll Band In The World’ is a bold statement, but Showaddywaddy has lived up to that title for the last 5 decades! Formed in Leicester in 1973 from an amalgamation of several local bands, Showaddywaddy have gone on to sell more than 20 million records and tour all four corners of the globe. Their live show is dynamic and uplifting, featuring all of their greatest hits, many of which reached number one in the pop charts across Europe. ‘Under The Moon of Love’, ‘Three Steps to Heaven’, ‘Hey Rock & Roll’, ‘When’, ‘Blue Moon’, ‘Pretty Little Angel Eyes’ and many, many more. So come and join the ‘Dancin’ Party’… ‘You’ve Got What It Takes’!",
@@ -7193,8 +7229,8 @@
       "avgOccupancyPct": 56,
       "maxOccupancyPct": 56,
       "minOccupancyPct": 56,
-      "totalAvailable": 458,
-      "totalOccupied": 576,
+      "totalAvailable": 453,
+      "totalOccupied": 581,
       "performancesWithData": 1
     },
     "popularityScore": 30,
@@ -7349,8 +7385,8 @@
       "avgOccupancyPct": 82,
       "maxOccupancyPct": 86,
       "minOccupancyPct": 79,
-      "totalAvailable": 794,
-      "totalOccupied": 3519,
+      "totalAvailable": 782,
+      "totalOccupied": 3531,
       "performancesWithData": 4
     },
     "popularityScore": 66,
@@ -7390,8 +7426,8 @@
       "avgOccupancyPct": 88,
       "maxOccupancyPct": 88,
       "minOccupancyPct": 88,
-      "totalAvailable": 126,
-      "totalOccupied": 908,
+      "totalAvailable": 124,
+      "totalOccupied": 910,
       "performancesWithData": 1
     },
     "popularityScore": 47,
@@ -7590,16 +7626,16 @@
     ],
     "availability": "GOOD - SELLING FAST",
     "availabilityRange": "70-80%",
-    "availabilityEstimate": 77,
+    "availabilityEstimate": 78,
     "seatingAggregate": {
-      "avgOccupancyPct": 77,
-      "maxOccupancyPct": 77,
-      "minOccupancyPct": 77,
-      "totalAvailable": 234,
-      "totalOccupied": 800,
+      "avgOccupancyPct": 78,
+      "maxOccupancyPct": 78,
+      "minOccupancyPct": 78,
+      "totalAvailable": 232,
+      "totalOccupied": 802,
       "performancesWithData": 1
     },
-    "popularityScore": 44,
+    "popularityScore": 45,
     "popularityLabel": "Moderate demand",
     "description": "Book your tickets to Scott Bennett: Stuff at New Theatre Cardiff at the official Trafalgar Tickets, New Theatre Cardiff box office.",
     "shortDescription": "As a society we love stuff, it’s a statement about who we are and who we want to be. But apparently, this message is at odds with the looming environmental crisis. We’re now struggling to balance these worlds, to focus on the things that bring us real connections and nourish the soul. Award-winning comedian and award-winning Product Designer, Scott Bennett is desperately trying to cleanse his life of stuff, but is this even possible anymore?  Tour support for Micky Flanagan, Rob Brydon Jason Manford, and John Bishop. The star of Live at the Apollo, The News Quiz, The Now Show, The Ultimate Choice and Chortle Best Club Comedian Nominee 2022.",
@@ -7636,8 +7672,8 @@
       "avgOccupancyPct": 80,
       "maxOccupancyPct": 80,
       "minOccupancyPct": 80,
-      "totalAvailable": 209,
-      "totalOccupied": 831,
+      "totalAvailable": 206,
+      "totalOccupied": 834,
       "performancesWithData": 1
     },
     "popularityScore": 43,
@@ -7724,8 +7760,8 @@
       "avgOccupancyPct": 75,
       "maxOccupancyPct": 79,
       "minOccupancyPct": 72,
-      "totalAvailable": 816,
-      "totalOccupied": 2430,
+      "totalAvailable": 811,
+      "totalOccupied": 2435,
       "performancesWithData": 3
     },
     "popularityScore": 61,
@@ -7798,8 +7834,8 @@
       "avgOccupancyPct": 80,
       "maxOccupancyPct": 88,
       "minOccupancyPct": 65,
-      "totalAvailable": 1338,
-      "totalOccupied": 5316,
+      "totalAvailable": 1327,
+      "totalOccupied": 5327,
       "performancesWithData": 6
     },
     "popularityScore": 69,
@@ -7834,19 +7870,19 @@
     ],
     "availability": "GOOD - SELLING FAST",
     "availabilityRange": "40-50%",
-    "availabilityEstimate": 40,
+    "availabilityEstimate": 42,
     "seatingAggregate": {
-      "avgOccupancyPct": 40,
-      "maxOccupancyPct": 40,
-      "minOccupancyPct": 40,
-      "totalAvailable": 616,
-      "totalOccupied": 418,
+      "avgOccupancyPct": 42,
+      "maxOccupancyPct": 42,
+      "minOccupancyPct": 42,
+      "totalAvailable": 596,
+      "totalOccupied": 438,
       "performancesWithData": 1
     },
-    "popularityScore": 32,
+    "popularityScore": 34,
     "popularityLabel": "Moderate demand",
     "description": "Book your tickets to Layton Live  at New Theatre Cardiff at the official Trafalgar Tickets, New Theatre Cardiff box office.",
-    "shortDescription": "Olivier Award winner, and Tony Award nominee, Layton Williams is taking to the stage for his nationwide tour.\n\nMarking the upcoming 20th anniversary of his stage debut, Layton will take you on a whistle stop musical tour of his journey from Billy Elliot to Titanique, via Cabaret, Hairspray, Everybody’s Talking About Jamie, the Bad Education classroom, and the Strictly ballroom floor.\n\nSupported by a company of fabulous artists, join Layton in a show which promises unforgettable stories, dazzling vocals and iconic dance routines.\n\nBook early to avoid disappointment for this strictly limited run of shows.",
+    "shortDescription": "Olivier Award winner, and Tony Award nominee, Layton Williams is taking to the stage for his nationwide tour.\n\nMarking the upcoming 20th anniversary of his stage debut, Layton will take you on a whistle stop musical tour of his journey from Billy Elliot to Titanique, via Cabaret, Hairspray, Everybody’s Talking About Jamie, the Bad Education classroom, and the Strictly ballroom floor.\n\nSupported by a company of fabulous artists, join Layton in a show which promises unforgettable stories, dazzling vocals and iconic dance routines.\n\nBook early to avoid disappointment for this strictly limited run of shows. Children's choir co-produced with Stagecoach.",
     "ticketPriceTo": 39,
     "subcategory": "Trafalgar Tickets > New Theatre Cardiff > What's On > Music > Layton Live",
     "primaryCategory": "Music",
@@ -8067,8 +8103,8 @@
       "avgOccupancyPct": 80,
       "maxOccupancyPct": 87,
       "minOccupancyPct": 75,
-      "totalAvailable": 870,
-      "totalOccupied": 3458,
+      "totalAvailable": 867,
+      "totalOccupied": 3461,
       "performancesWithData": 4
     },
     "popularityScore": 70,
@@ -8251,8 +8287,8 @@
       "avgOccupancyPct": 36,
       "maxOccupancyPct": 36,
       "minOccupancyPct": 36,
-      "totalAvailable": 671,
-      "totalOccupied": 375,
+      "totalAvailable": 669,
+      "totalOccupied": 377,
       "performancesWithData": 1
     },
     "popularityScore": 22,
@@ -8362,11 +8398,19 @@
       "https://trafalgartickets.com/new-theatre-cardiff/en-GB/event/play/buffy-revamped-tickets/opengraph-image?5b0acc77976c5b95",
       "https://images.ctfassets.net/le9bkneeoxws/7Al91DNeLjWVDPAdl8NwjO/3ed83f9740fe672a3c32e288a49dd627/600x600.jpg?w=2048&fm=webp&q=70"
     ],
-    "availability": "GOOD",
-    "availabilityRange": "20-50%",
-    "availabilityEstimate": 40,
-    "popularityScore": 33,
-    "popularityLabel": "Moderate demand",
+    "availability": "GOOD - SELLING FAST",
+    "availabilityRange": "0-10%",
+    "availabilityEstimate": 8,
+    "seatingAggregate": {
+      "avgOccupancyPct": 8,
+      "maxOccupancyPct": 8,
+      "minOccupancyPct": 8,
+      "totalAvailable": 948,
+      "totalOccupied": 86,
+      "performancesWithData": 1
+    },
+    "popularityScore": 7,
+    "popularityLabel": "Very low demand",
     "description": "Seventy minutes. Seven seasons. One Spike.",
     "shortDescription": "This fast-paced gem brings you the entire 144 episodes of the hit 90s TV show, Buffy the Vampire Slayer, as told through the eyes of the one person who knows it inside out… Spike. Buffy Revamped tours the UK following its award-winning Edinburgh Fringe premiere in 2022, having since played international seasons in Ireland, Australia, Canada and the USA alongside several sold-out UK national tours.   Funny, satirical and bursting with 90s pop-culture references, it’s the perfect parody for Buffy aficionados and those who never enrolled at Sunnydale High alike.   Created by comedian Brendan Murphy whose last show, FRIEND (The One with Gunther), won Best Play at the World Wide Comedy Awards.",
     "ticketPriceTo": 29.5,
@@ -8540,16 +8584,16 @@
     ],
     "availability": "GOOD - SELLING FAST",
     "availabilityRange": "50-60%",
-    "availabilityEstimate": 56,
+    "availabilityEstimate": 57,
     "seatingAggregate": {
-      "avgOccupancyPct": 56,
-      "maxOccupancyPct": 56,
-      "minOccupancyPct": 56,
-      "totalAvailable": 451,
-      "totalOccupied": 583,
+      "avgOccupancyPct": 57,
+      "maxOccupancyPct": 57,
+      "minOccupancyPct": 57,
+      "totalAvailable": 449,
+      "totalOccupied": 585,
       "performancesWithData": 1
     },
-    "popularityScore": 32,
+    "popularityScore": 33,
     "popularityLabel": "Moderate demand",
     "description": "Book your tickets to Troy Hawke: Never Stop, Never Change! at New Theatre Cardiff at the official Trafalgar Tickets, New Theatre Cardiff box office.",
     "shortDescription": "Following last year’s sellout world tour, Troy Hawke is back to his globe sweeping in 2027 with new show Never Stop, Never Change! Angry security guards, barked compliments and crossed wires abound as Troy navigates various conversational minefields, both online and in real life.  ‘I like the videos but how does it translate to the stage?’  COME AND FIND OUT FOR YOURSELF",
@@ -8858,8 +8902,8 @@
       "avgOccupancyPct": 70,
       "maxOccupancyPct": 70,
       "minOccupancyPct": 70,
-      "totalAvailable": 310,
-      "totalOccupied": 724,
+      "totalAvailable": 307,
+      "totalOccupied": 727,
       "performancesWithData": 1
     },
     "popularityScore": 55,
@@ -8981,8 +9025,8 @@
       "avgOccupancyPct": 65,
       "maxOccupancyPct": 68,
       "minOccupancyPct": 61,
-      "totalAvailable": 1917,
-      "totalOccupied": 3493,
+      "totalAvailable": 1915,
+      "totalOccupied": 3495,
       "performancesWithData": 5
     },
     "popularityScore": 57,
@@ -9017,13 +9061,13 @@
     ],
     "availability": "GOOD - SELLING FAST",
     "availabilityRange": "70-80%",
-    "availabilityEstimate": 74,
+    "availabilityEstimate": 75,
     "seatingAggregate": {
-      "avgOccupancyPct": 74,
-      "maxOccupancyPct": 74,
-      "minOccupancyPct": 74,
-      "totalAvailable": 267,
-      "totalOccupied": 767,
+      "avgOccupancyPct": 75,
+      "maxOccupancyPct": 75,
+      "minOccupancyPct": 75,
+      "totalAvailable": 262,
+      "totalOccupied": 772,
       "performancesWithData": 1
     },
     "popularityScore": 44,
@@ -9098,17 +9142,17 @@
       "https://images.ctfassets.net/le9bkneeoxws/2nb24Y8EcMaxamZqUEuDSt/d7db1ab386930011bb441f03591be472/600x600.png?w=2048&fm=webp&q=70"
     ],
     "availability": "GOOD - SELLING FAST",
-    "availabilityRange": "40-50%",
-    "availabilityEstimate": 49,
+    "availabilityRange": "50-60%",
+    "availabilityEstimate": 50,
     "seatingAggregate": {
-      "avgOccupancyPct": 49,
-      "maxOccupancyPct": 49,
-      "minOccupancyPct": 49,
-      "totalAvailable": 523,
-      "totalOccupied": 511,
+      "avgOccupancyPct": 50,
+      "maxOccupancyPct": 50,
+      "minOccupancyPct": 50,
+      "totalAvailable": 515,
+      "totalOccupied": 519,
       "performancesWithData": 1
     },
-    "popularityScore": 41,
+    "popularityScore": 42,
     "popularityLabel": "Moderate demand",
     "description": "Book your tickets to That'll Be The Day  at New Theatre Cardiff at the official Trafalgar Tickets, New Theatre Cardiff box office.",
     "shortDescription": "Step into a night of pure entertainment with That’ll Be The Day, as they return with a brand-new version of the beloved show. A feel-good experience unlike any other. bursting with electrifying performances, laugh-out-loud comedy sketches, and chart-topping favourites, the show brings decades of music to life in a vibrant blend of rock ‘n’ roll, pop, and nostalgia.  \n\nFeaturing hits from the 50s through to the 80s, every moment is crafted to have you singing along, smiling, and tapping your feet. It’s a joyful tribute to the songs and artistes that shaped generations and an uplifting celebration guaranteed to leave you wanting more.",
@@ -9214,8 +9258,8 @@
       "avgOccupancyPct": 82,
       "maxOccupancyPct": 82,
       "minOccupancyPct": 82,
-      "totalAvailable": 191,
-      "totalOccupied": 843,
+      "totalAvailable": 188,
+      "totalOccupied": 846,
       "performancesWithData": 1
     },
     "popularityScore": 49,
@@ -9486,16 +9530,16 @@
     ],
     "availability": "GOOD - SELLING FAST",
     "availabilityRange": "60-70%",
-    "availabilityEstimate": 66,
+    "availabilityEstimate": 67,
     "seatingAggregate": {
-      "avgOccupancyPct": 66,
-      "maxOccupancyPct": 66,
-      "minOccupancyPct": 66,
-      "totalAvailable": 347,
-      "totalOccupied": 687,
+      "avgOccupancyPct": 67,
+      "maxOccupancyPct": 67,
+      "minOccupancyPct": 67,
+      "totalAvailable": 345,
+      "totalOccupied": 689,
       "performancesWithData": 1
     },
-    "popularityScore": 57,
+    "popularityScore": 58,
     "popularityLabel": "High demand",
     "description": "Book your tickets to Rumours Of Fleetwood Mac: 50th Anniversary Tour  at New Theatre Cardiff at the official Trafalgar Tickets, New Theatre Cardiff box office.",
     "shortDescription": "Celebrating 50 years of the classic ‘Rumours’ album  Note for note, and in its entirety, plus all the greatest hits  Personally endorsed by Fleetwood Mac founding member, Mick Fleetwood, the Rumours of Fleetwood Mac show is the ultimate tribute to one of rock and roll’s most remarkable groups.  Channeling the spirit of Fleetwood Mac at their very best, Rumours of Fleetwood Mac offers a unique opportunity for fans, both old and new, to rediscover the songs and performances that have ensured Fleetwood Mac’s place as one of the most loved groups of all time.  “An extraordinary emotive performance of Fleetwood Mac” MICK FLEETWOOD  \"A stunning and incredibly accurate snapshot of the World’s first Super Group” SUNDAY TIMES  “They do Fleetwood Mac better than Fleetwood Mac.” MAIL ON SUNDAY",
@@ -9568,8 +9612,8 @@
       "avgOccupancyPct": 53,
       "maxOccupancyPct": 60,
       "minOccupancyPct": 46,
-      "totalAvailable": 1471,
-      "totalOccupied": 1635,
+      "totalAvailable": 1469,
+      "totalOccupied": 1637,
       "performancesWithData": 3
     },
     "popularityScore": 39,
@@ -9694,8 +9738,8 @@
       "avgOccupancyPct": 9,
       "maxOccupancyPct": 9,
       "minOccupancyPct": 9,
-      "totalAvailable": 940,
-      "totalOccupied": 94,
+      "totalAvailable": 938,
+      "totalOccupied": 96,
       "performancesWithData": 1
     },
     "popularityScore": 5,
@@ -9815,8 +9859,8 @@
       "avgOccupancyPct": 21,
       "maxOccupancyPct": 21,
       "minOccupancyPct": 21,
-      "totalAvailable": 822,
-      "totalOccupied": 218,
+      "totalAvailable": 821,
+      "totalOccupied": 219,
       "performancesWithData": 1
     },
     "popularityScore": 17,
@@ -10153,8 +10197,8 @@
       "avgOccupancyPct": 12,
       "maxOccupancyPct": 12,
       "minOccupancyPct": 12,
-      "totalAvailable": 910,
-      "totalOccupied": 124,
+      "totalAvailable": 908,
+      "totalOccupied": 126,
       "performancesWithData": 1
     },
     "popularityScore": 10,
@@ -10197,8 +10241,8 @@
       "avgOccupancyPct": 52,
       "maxOccupancyPct": 52,
       "minOccupancyPct": 52,
-      "totalAvailable": 498,
-      "totalOccupied": 536,
+      "totalAvailable": 493,
+      "totalOccupied": 541,
       "performancesWithData": 1
     },
     "popularityScore": 33,
@@ -10282,8 +10326,8 @@
       "avgOccupancyPct": 28,
       "maxOccupancyPct": 28,
       "minOccupancyPct": 28,
-      "totalAvailable": 742,
-      "totalOccupied": 292,
+      "totalAvailable": 740,
+      "totalOccupied": 294,
       "performancesWithData": 1
     },
     "popularityScore": 23,
@@ -10405,8 +10449,8 @@
       "avgOccupancyPct": 71,
       "maxOccupancyPct": 81,
       "minOccupancyPct": 61,
-      "totalAvailable": 1912,
-      "totalOccupied": 4580,
+      "totalAvailable": 1898,
+      "totalOccupied": 4594,
       "performancesWithData": 6
     },
     "popularityScore": 75,
@@ -10523,8 +10567,8 @@
       "avgOccupancyPct": 73,
       "maxOccupancyPct": 80,
       "minOccupancyPct": 68,
-      "totalAvailable": 1188,
-      "totalOccupied": 3140,
+      "totalAvailable": 1186,
+      "totalOccupied": 3142,
       "performancesWithData": 4
     },
     "popularityScore": 75,
@@ -10814,8 +10858,8 @@
       "avgOccupancyPct": 67,
       "maxOccupancyPct": 67,
       "minOccupancyPct": 67,
-      "totalAvailable": 339,
-      "totalOccupied": 695,
+      "totalAvailable": 337,
+      "totalOccupied": 697,
       "performancesWithData": 1
     },
     "popularityScore": 49,
@@ -11171,16 +11215,16 @@
     ],
     "availability": "GOOD - SELLING FAST",
     "availabilityRange": "30-40%",
-    "availabilityEstimate": 31,
+    "availabilityEstimate": 33,
     "seatingAggregate": {
-      "avgOccupancyPct": 31,
-      "maxOccupancyPct": 31,
-      "minOccupancyPct": 31,
-      "totalAvailable": 709,
-      "totalOccupied": 325,
+      "avgOccupancyPct": 33,
+      "maxOccupancyPct": 33,
+      "minOccupancyPct": 33,
+      "totalAvailable": 696,
+      "totalOccupied": 338,
       "performancesWithData": 1
     },
-    "popularityScore": 22,
+    "popularityScore": 23,
     "popularityLabel": "Low demand",
     "description": "Book your tickets to MC Hammersmith: Ice Ice Nepo Baby at New Theatre Cardiff at the official Trafalgar Tickets, New Theatre Cardiff box office.",
     "shortDescription": "Following phenomenal demand, a complete sell-out first leg and his debut US & Canada tour, west London’s multi-award-winning freestyle rapper (over half a billion views online) has added over 40 dates in 2028. When MC Hammersmith turned 18, his parents (MC Hammer and Vanilla Ice) shockingly revealed he was adopted. His two famous dads helped him ascend to the top of the rap game. He now embarks on a quest to find his biological family, the only way he knows how: by performing an evening of improvised hip hop comedy based on audience suggestions. Lightning-fast freestyle raps, explosively funny rhymes, and utterly captivating genealogical investigation. A completely different show every single time! With some new added surprises for this run of shows in 2028!",
@@ -11800,6 +11844,20 @@
     "date": "Saturday, 8 May 2027"
   },
   {
+    "title": "PEACHES",
+    "details": "SUNDAY 9TH MAY\n19:00 | 14+ (UNDER 16S TO BE ACCOMPANIED BY AN ADULT)",
+    "url": "https://5c1675b1.sibforms.com/serve/MUIFAGRyqq7KfM-g_ZRO1LHqXy6NBGDrm1-a-hGFMO3Fq9KK5sOSI0YVN4XNRfeEyDQLeh610t7TrCKZ9jTItMSQxDhyS74MsPl3tl6eCXeYlrETyl7nDUY9qj0WBMztbGIaz1t6guBum-mJfgUKVwa3-RJSnBafGhO32VD-nsSuXVHCu2G63-rUFVcm_myY2Y-D-fT4QPcmTuJz",
+    "venue": "Tramshed Cardiff",
+    "scrapedAt": "2026-11-26T14:29:35.705Z",
+    "imageUrl": "https://www.tramshedcardiff.com/wp-content/uploads/2026/11/Peaches-16x9-1.jpg",
+    "imageUrls": [
+      "https://www.tramshedcardiff.com/wp-content/uploads/2026/11/Peaches-16x9-1.jpg"
+    ],
+    "primaryCategory": "Music",
+    "description": "SUNDAY 9TH MAY\n19:00 | 14+ (UNDER 16S TO BE ACCOMPANIED BY AN ADULT)",
+    "date": "Sunday, 9 May 2027"
+  },
+  {
     "title": "COVER GIRL : TRIBUTE FESTIVAL",
     "details": "SATURDAY 15TH MAY\n15:30 | 18+",
     "url": "https://www.tixr.com/groups/tramshed/events/cover-girl-185703",
@@ -11857,7 +11915,7 @@
   },
   {
     "title": "PETER HOOK & THE LIGHT",
-    "details": "THURSDAY 18TH NOVEMBER\n23:00 | 14+ (UNDER 16S TO BE ACCOMPANIED BY AN ADULT)",
+    "details": "THURSDAY 18TH NOVEMBER\n19:00 | 14+ (UNDER 16S TO BE ACCOMPANIED BY AN ADULT)",
     "url": "https://www.tixr.com/groups/tramshed/events/peter-hook-the-light-205827?plt=b5cf3bdc-4f20-4047-908b-6e78a76bec51",
     "venue": "Tramshed Cardiff",
     "scrapedAt": "2026-11-25T14:46:10.910Z",
@@ -11866,7 +11924,7 @@
       "https://www.tramshedcardiff.com/wp-content/uploads/2026/11/Peter-Hook-Light-2027-Cardiff_FBEvent_Grey.png"
     ],
     "primaryCategory": "Music",
-    "description": "THURSDAY 18TH NOVEMBER\n23:00 | 14+ (UNDER 16S TO BE ACCOMPANIED BY AN ADULT)",
+    "description": "THURSDAY 18TH NOVEMBER\n19:00 | 14+ (UNDER 16S TO BE ACCOMPANIED BY AN ADULT)",
     "date": "Wednesday, 18 November 2026"
   },
   {
@@ -12169,9 +12227,9 @@
     "scrapedAt": "2026-06-15T14:59:23.397Z",
     "description": "Electric Callboy | 2027-01-27 | Utilita Arena Cardiff",
     "shortDescription": "Buy tickets for Electric Callboy at Utilita Arena Cardiff on Wed, 27 Jan 2027 at www.livenation.co.uk. Search for United Kingdom and international concert tickets, tour dates and venues in your area with the world's largest concert search engine.",
-    "imageUrl": "https://dynamicmedia.livenationinternational.com/i/k/d/736ba656-b594-4333-8ab3-d9abc893fa26.jpg",
+    "imageUrl": "https://dynamicmedia.livenationinternational.com/r/h/n/ca5b895f-5428-4e02-a0c0-1ec7713b5f97.jpg",
     "imageUrls": [
-      "https://dynamicmedia.livenationinternational.com/i/k/d/736ba656-b594-4333-8ab3-d9abc893fa26.jpg"
+      "https://dynamicmedia.livenationinternational.com/r/h/n/ca5b895f-5428-4e02-a0c0-1ec7713b5f97.jpg"
     ],
     "eventStartDate": "2027-01-27",
     "eventEndDate": "2027-01-27",
@@ -12271,9 +12329,9 @@
     "scrapedAt": "2026-05-28T11:32:08.295Z",
     "description": "Nothing But Thieves: The Stray Dogs World Tour | 2027-02-08T23:59:00Z | Utilita Arena Cardiff",
     "shortDescription": "Buy tickets for Nothing But Thieves: The Stray Dogs World Tour at Utilita Arena Cardiff on Mon, 08 Feb 2027 at www.livenation.co.uk. Search for United Kingdom and international concert tickets, tour dates and venues in your area with the world's largest concert search engine.",
-    "imageUrl": "https://dynamicmedia.livenationinternational.com/l/b/h/94219d73-7345-4413-945e-b3babe44299c.jpg",
+    "imageUrl": "https://dynamicmedia.livenationinternational.com/q/s/y/96b4462a-715c-4e40-93e5-6bea849bc004.jpg",
     "imageUrls": [
-      "https://dynamicmedia.livenationinternational.com/l/b/h/94219d73-7345-4413-945e-b3babe44299c.jpg"
+      "https://dynamicmedia.livenationinternational.com/q/s/y/96b4462a-715c-4e40-93e5-6bea849bc004.jpg"
     ],
     "eventStartDate": "2027-02-08T23:59:00Z",
     "eventEndDate": "2027-02-08",
@@ -12560,9 +12618,9 @@
     "scrapedAt": "2026-08-03T11:24:34.670Z",
     "description": "Megadeth: Breakout: Hibernation Of The Nations Europe Tour 2027 | 2027-03-15T23:59:00Z | Utilita Arena Cardiff",
     "shortDescription": "Buy tickets for Megadeth: Breakout: Hibernation Of The Nations Europe Tour 2027 at Utilita Arena Cardiff on Mon, 15 Mar 2027 at www.livenation.co.uk. Search for United Kingdom and international concert tickets, tour dates and venues in your area with the world's largest concert search engine.",
-    "imageUrl": "https://dynamicmedia.livenationinternational.com/h/c/g/2388d2bd-f328-45f1-87c9-91ca8a0cedef.jpg",
+    "imageUrl": "https://dynamicmedia.livenationinternational.com/t/b/x/0d659dc9-930c-4815-9639-33593ec17fe3.jpg",
     "imageUrls": [
-      "https://dynamicmedia.livenationinternational.com/h/c/g/2388d2bd-f328-45f1-87c9-91ca8a0cedef.jpg"
+      "https://dynamicmedia.livenationinternational.com/t/b/x/0d659dc9-930c-4815-9639-33593ec17fe3.jpg"
     ],
     "eventStartDate": "2027-03-15T23:59:00Z",
     "eventEndDate": "2027-03-15",
@@ -13942,7 +14000,7 @@
     "venue": "Depot Cardiff",
     "scrapedAt": "2026-11-23T22:37:02.207Z",
     "imageUrl": "https://depotcardiff.com/wp-content/uploads/2026/11/manics-1920x1080-1.jpg",
-    "description": "MANIC STREET PREACHERS Generation Terrorists 35th Anniversary Show With special guests The Libertines, The Cardigans and The Tubs, plus DJ Elis James For one night only, Manic Street Preachers will play their debut album Generation Terrorists in full at Blackweir Fields on Saturday 19 June 2027. It&#8217;s the first time they&#8217;ve ever played the record from start to finish, and the only place in the UK you&#8217;ll see it. Released in February 1992, Generation Terrorists was an 18-track manifesto that put the band on magazine covers, radio playlists and TV screens without them giving an inch. Motorcycle Emptiness, You Love Us, Repeat, Love&#8217;s Sweet Exile, Slash &#8216;n&#8217; Burn, Little Baby Nothing. Thirty-five years on, they&#8217;re coming home to Cardiff to play the lot, along with songs that have never been played live and others they haven&#8217;t touched in decades. &#8220;Those songs might seem old, yet they&#8217;re all so young and energetic, passionate, even naive,&#8221; say the band. &#8220;Playing it in Cardiff, a city where we&#8217;ve played so many venues, from Chapter Arts Centre to the Millennium Stadium, and experiencing those feelings again will be just incredible. It&#8217;s going to be a blast. See you there.&#8221; The band have hand-picked the support themselves, with The Libertines, The Cardigans and The Tubs joining them on the bill, and Elis James on the decks throughout the day. Expect leopard print, heavy eyeliner, monumental guitar solos, spray-painted shirts and the ever-present possibility of fabulous disaster. Manic Street Preachers join Alex Warren, Shania Twain, MUSE and Fontaines DC on the Blackweir 2027 line-up, with more still to be announced. 🎟️ TICKETS Presale: Thursday 26 November, 10am. Friday 27 November, 10am SIGN-UP FOR PRESALE ACCESS",
+    "description": "MANIC STREET PREACHERS Generation Terrorists 35th Anniversary Show With special guests The Libertines, The Cardigans and The Tubs, plus DJ Elis James For one night only, Manic Street Preachers will play their debut album Generation Terrorists in full at Blackweir Fields on Saturday 19 June 2027. It&#8217;s the first time they&#8217;ve ever played the record from start to finish, and the only place in the UK you&#8217;ll see it. Released in February 1992, Generation Terrorists was an 18-track manifesto that put the band on magazine covers, radio playlists and TV screens without them giving an inch. Motorcycle Emptiness, You Love Us, Repeat, Love&#8217;s Sweet Exile, Slash &#8216;n&#8217; Burn, Little Baby Nothing. Thirty-five years on, they&#8217;re coming home to Cardiff to play the lot, along with songs that have never been played live and others they haven&#8217;t touched in decades. &#8220;Those songs might seem old, yet they&#8217;re all so young and energetic, passionate, even naive,&#8221; say the band. &#8220;Playing it in Cardiff, a city where we&#8217;ve played so many venues, from Chapter Arts Centre to the Millennium Stadium, and experiencing those feelings again will be just incredible. It&#8217;s going to be a blast. See you there.&#8221; The band have hand-picked the support themselves, with The Libertines, The Cardigans and The Tubs joining them on the bill, and Elis James on the decks throughout the day. Expect leopard print, heavy eyeliner, monumental guitar solos, spray-painted shirts and the ever-present possibility of fabulous disaster. Manic Street Preachers join Alex Warren, Shania Twain, MUSE and Fontaines DC on the Blackweir 2027 line-up, with more still to be announced. 🎟️ TICKETS Presale: Thursday 26 November, 10am. Friday 27 November, 10am",
     "shortDescription": "Manic Street Preachers' UK-exclusive Generation Terrorists 35th anniversary show with The Libertines, The Cardigans and The Tubs.",
     "imageUrls": [
       "https://depotcardiff.com/wp-content/uploads/2026/11/manics-1920x1080-1.jpg",
@@ -14152,6 +14210,24 @@
     "eventStartDate": "2027-07-10T17:00:00+01:00",
     "eventEndDate": "2027-07-10T22:30:00+01:00",
     "subcategory": "Bananarama at Cardiff Castle",
+    "primaryCategory": "Theatre"
+  },
+  {
+    "title": "Royal Blood at Cardiff Castle",
+    "date": "Friday, 16 July 2027",
+    "url": "https://depotcardiff.com/event/royal-blood-at-cardiff-castle/",
+    "venue": "Depot Cardiff",
+    "scrapedAt": "2026-11-26T14:29:35.705Z",
+    "imageUrl": "https://depotcardiff.com/wp-content/uploads/2026/11/00cd8132_RB_20267859-copy-1.jpg",
+    "description": "Royal Blood headline DEPOT Live at Cardiff Castle on Friday 16 July 2027, bringing the full force of their new album &#8216;Dead Company&#8217; to one of the most striking stages in the UK. It&#8217;s the only Welsh date of their 2027 outdoor summer shows. Since their debut became one of the fastest-selling rock records of the century, Mike Kerr and Ben Thatcher have taken four consecutive albums to Number One in the UK, passed 2.8 billion streams and grown into an arena-filling, festival-headlining force that has toured the world many times over. That&#8217;s a lot of noise for two people. After stepping away in summer 2024 to recharge, the pair came back with a simple brief: make the fastest, heaviest Royal Blood record yet. Self-produced and recorded raw, &#8216;Dead Company&#8217; follows 2023&#8217;s chart-topping &#8216;Back to the Water Below&#8217; and is ten tracks of all-in rock, led by the single &#8216;Ten Over Ten&#8217;. Classic Rock called it &#8220;the best that Royal Blood have ever sounded&#8221;, and NME summed it up as &#8220;Brighton riff lords flex their massive muscles&#8221;. Joining them are two special guests. SOFT PLAY, the punk duo of Isaac Holman and Laurie Vincent (formerly known as Slaves), bring the uncompromising sound and explosive live shows that have seen them tour with Foo Fighters, The Prodigy and Biffy Clyro. Garage-punk quintet Bad Nerves play ferociously fast, distorted pop songs, and their second album &#8216;Still Nervous&#8217; won fans including Billie Joe Armstrong and Iggy Pop. Presale: Thursday 3 December 2026, 10am General sale: Friday 4 December 2026, 10am SIGN-UP FOR PRESALE ACCESS",
+    "shortDescription": "Royal Blood bring their new album Dead Company to Cariff Castle, with special guests Soft Play and Bad Nerves.",
+    "imageUrls": [
+      "https://depotcardiff.com/wp-content/uploads/2026/11/00cd8132_RB_20267859-copy-1.jpg",
+      "https://depotcardiff.com/wp-content/uploads/2026/11/00cd8132_RB_20267859-copy-1.jpg.webp"
+    ],
+    "eventStartDate": "2027-07-16T17:00:00+01:00",
+    "eventEndDate": "2027-07-16T22:30:00+01:00",
+    "subcategory": "Royal Blood at Cardiff Castle",
     "primaryCategory": "Theatre"
   },
   {
@@ -15062,40 +15138,6 @@
     "ticketPriceLabel": "£18.6"
   },
   {
-    "title": "FAT DOG @ DEPOT",
-    "date": "Tuesday, 24 November 2026",
-    "details": "+ GANS + SILVERWINGKILLER • 7.00pm • £25 • 14+ (Under 16's accompanied by an adult)",
-    "url": "https://clwbiforbach.seetickets.com/event/fat-dog/depot/3628740",
-    "venue": "Clwb Ifor Bach",
-    "scrapedAt": "2026-06-06T11:56:22.276Z",
-    "imageUrl": "https://clwb.net/wp-content/uploads/2026/05/FatDog_DepotCardiff_24112026-320x160.jpg",
-    "imageUrls": [
-      "https://clwb.net/wp-content/uploads/2026/05/FatDog_DepotCardiff_24112026-320x160.jpg"
-    ],
-    "primaryCategory": "Music",
-    "description": "+ GANS + SILVERWINGKILLER • 7.00pm • £25 • 14+ (Under 16's accompanied by an adult)",
-    "ticketPriceFrom": 25,
-    "ticketCurrency": "GBP",
-    "ticketPriceLabel": "£25"
-  },
-  {
-    "title": "HELD",
-    "date": "Tuesday, 24 November 2026",
-    "details": "+ ANTARCTICA • 7.30pm • £15 • 14+ (Under 16s Accompanied By An Adult)",
-    "url": "https://clwbiforbach.seetickets.com/event/held/clwb-ifor-bach/3672950",
-    "venue": "Clwb Ifor Bach",
-    "scrapedAt": "2026-07-01T17:05:36.802Z",
-    "imageUrl": "https://clwb.net/wp-content/uploads/2026/07/Held-website-320x160.jpg",
-    "imageUrls": [
-      "https://clwb.net/wp-content/uploads/2026/07/Held-website-320x160.jpg"
-    ],
-    "primaryCategory": "Music",
-    "description": "+ ANTARCTICA • 7.30pm • £15 • 14+ (Under 16s Accompanied By An Adult)",
-    "ticketPriceFrom": 15,
-    "ticketCurrency": "GBP",
-    "ticketPriceLabel": "£15"
-  },
-  {
     "title": "CORTO.ALTO @ THE GLOBE",
     "date": "Thursday, 26 November 2026",
     "details": "7.00pm • £23 • 14+ (Under 16s Accompanied By An Adult)",
@@ -15168,23 +15210,6 @@
     "ticketPriceFrom": 17,
     "ticketCurrency": "GBP",
     "ticketPriceLabel": "£17"
-  },
-  {
-    "title": "WRKHOUSE",
-    "date": "Friday, 27 November 2026",
-    "details": "7.30pm • £13 • 18+",
-    "url": "https://clwbiforbach.seetickets.com/event/wrkhouse/clwb-ifor-bach/3726496",
-    "venue": "Clwb Ifor Bach",
-    "scrapedAt": "2026-11-13T11:05:38.034Z",
-    "imageUrl": "https://clwb.net/wp-content/uploads/2026/09/WRKHOUSE-320x160.jpg",
-    "imageUrls": [
-      "https://clwb.net/wp-content/uploads/2026/09/WRKHOUSE-320x160.jpg"
-    ],
-    "primaryCategory": "Music",
-    "description": "7.30pm • £13 • 18+",
-    "ticketPriceFrom": 13,
-    "ticketCurrency": "GBP",
-    "ticketPriceLabel": "£13"
   },
   {
     "title": "PARTY GIRL",
@@ -16253,6 +16278,23 @@
     "ticketPriceLabel": "£14"
   },
   {
+    "title": "COWBOIS RHOS BOTWNNOG @ THE GATE",
+    "date": "Friday, 5 March 2027",
+    "details": "7.00pm • £20 • 14+",
+    "url": "https://www.seetickets.com/event/cowbois-rhos-botwnnog/the-gate/3762002",
+    "venue": "Clwb Ifor Bach",
+    "scrapedAt": "2026-11-26T14:29:35.705Z",
+    "imageUrl": "https://clwb.net/wp-content/uploads/2026/11/COWBOIS-320x160.jpg",
+    "imageUrls": [
+      "https://clwb.net/wp-content/uploads/2026/11/COWBOIS-320x160.jpg"
+    ],
+    "primaryCategory": "Music",
+    "description": "7.00pm • £20 • 14+",
+    "ticketPriceFrom": 20,
+    "ticketCurrency": "GBP",
+    "ticketPriceLabel": "£20"
+  },
+  {
     "title": "BUSTER SHUFFLE",
     "date": "Saturday, 6 March 2027",
     "details": "7.00pm • £15 • 18+",
@@ -16720,12 +16762,12 @@
     "scrapedAt": "2026-11-13T11:05:38.034Z",
     "imageUrl": "https://dice-media.imgix.net/attachments/2026-11-24/848a5a07-b06f-4675-bc6d-a72b84b24fe3.jpg?rect=0%2C1181%2C5906%2C3544",
     "description": "Rising from the ashes, Noizzefest will return to Cardiff’s legendary Womanby Street for our fourth edition in 2027. Bringing together some of the most exciting talent in the underground scene. Once again we will be hosting 18 bands across 3 stages, both rooms in Clwb Ifor Bach alongside Fuel Rock Club. Taking place on Saturday, April 24th, 2027.\n\nWe are excited to announce our headliner for Noizzefest 2027, Lake Malice. The duo have been on an unstoppable rise since their formation in 2021, culminating in this year's debut full length record, ‘I Wanna Know If It's Real'. And now Noizze welcomes them to bring their contagious energy to Cardiff for one night in April.\n\nAlongside Lake Malice, we welcome the wall of noise in a duo that is Kulk, who released one of the underground's albums of the year. In addition, The Sound Of Modesty, Skin Failure, Phantom Lane & Break Fifty join the lineup alongside the previously announced bands: Ronker, Beyond Extinction, Dye, Breichiau Hir, AARONSON, Sans Froid & De Lour.\n\nThe final 5 bands will be announced in the New Year, as well as full stage splits & times.\n\nTickets are on sale now via DICE for £34 + booking fees.\n\nIf you have any accessibility questions, please email us at business@noizze.co.uk\n\nWe are proud to again be partnering with TJP Tours/TJP Merchandise.\n\nPoster Design by Laurence Crow.",
-    "shortDescription": "We’ll get you out more. We bring the best live events to people around the world. See what concerts, tours, and festivals are happening in your area.",
+    "shortDescription": "Rising from the ashes, Noizzefest will return to Cardiff’s legendary Womanby Street for our fourth edition in 2027. Bringing together some of the most exciti...",
     "imageUrls": [
       "https://dice-media.imgix.net/attachments/2026-11-24/848a5a07-b06f-4675-bc6d-a72b84b24fe3.jpg?rect=0%2C1181%2C5906%2C3544",
       "https://dice-media.imgix.net/attachments/2026-11-24/848a5a07-b06f-4675-bc6d-a72b84b24fe3.jpg?rect=1329%2C0%2C3248%2C5906",
       "https://dice-media.imgix.net/attachments/2026-11-24/848a5a07-b06f-4675-bc6d-a72b84b24fe3.jpg?rect=0%2C0%2C5906%2C5906",
-      "https://dice.fm/static/images/dice-fan-social.png",
+      "https://dice-media.imgix.net/attachments/2026-11-24/848a5a07-b06f-4675-bc6d-a72b84b24fe3.jpg?rect=0%2C1181%2C5906%2C3544&w=1300&h=630&auto=compress",
       "https://clwb.net/wp-content/uploads/2026/09/Noizzefest-website-320x160.jpg"
     ],
     "eventStartDate": "2027-04-24T13:00:00+01:00",
@@ -17224,26 +17266,6 @@
     "genre": "Events, Football"
   },
   {
-    "title": "Pinocchio (In Welsh)",
-    "date": "Tuesday, 26 January 2027 – Saturday, 2 January 2027",
-    "description": "A new version by Jennifer Lunn Welsh translation by Hanna Jarman",
-    "category": "Christmas",
-    "url": "https://www.shermantheatre.co.uk/event/pinocchio-2-copy/",
-    "imageUrl": "https://www.shermantheatre.co.uk/wp-content/uploads/2025/12/3-Pinocchio-at-the-Sherman-Theatre.-Photo-by-Mark-Douet-3Q9A6103.jpg",
-    "venue": "Sherman Theatre",
-    "scrapedAt": "2026-09-12T22:15:06.852Z",
-    "details": "23 Nov 2026 - 2 Jan 2027",
-    "imageUrls": [
-      "https://www.shermantheatre.co.uk/wp-content/uploads/2025/12/3-Pinocchio-at-the-Sherman-Theatre.-Photo-by-Mark-Douet-3Q9A6103.jpg"
-    ],
-    "subcategory": "Pinocchio (In Welsh)",
-    "ticketPriceFrom": 10,
-    "ticketCurrency": "GBP",
-    "ticketPriceLabel": "£10",
-    "primaryCategory": "Other",
-    "genre": "Christmas"
-  },
-  {
     "title": "Pinocchio (In English)",
     "date": "Tuesday, 26 January 2027 – Saturday, 2 January 2027",
     "description": "A new version by Jennifer Lunn Welsh translation by Hanna Jarman",
@@ -17284,24 +17306,24 @@
     "genre": "Christmas"
   },
   {
-    "title": "Andy Zaltzman: 2026 – The Certifiable History",
-    "date": "Friday, 29 January 2027",
-    "description": "Following his sell-out The Zaltgeist tour show, Andy will assess the state of our world-renowned planet at the conclusion of another furiously odd year, in his unique comedic style.",
-    "category": "Comedy",
-    "url": "https://www.shermantheatre.co.uk/event/andy-zaltzman-2026-the-certifiable-history/",
-    "imageUrl": "https://www.shermantheatre.co.uk/wp-content/uploads/2026/10/AZ_2426_1365-1272x954.jpg",
+    "title": "Pinocchio (In Welsh)",
+    "date": "Tuesday, 26 January 2027 – Saturday, 2 January 2027",
+    "description": "A new version by Jennifer Lunn Welsh translation by Hanna Jarman",
+    "category": "Christmas",
+    "url": "https://www.shermantheatre.co.uk/event/pinocchio-2-copy/",
+    "imageUrl": "https://www.shermantheatre.co.uk/wp-content/uploads/2025/12/3-Pinocchio-at-the-Sherman-Theatre.-Photo-by-Mark-Douet-3Q9A6103.jpg",
     "venue": "Sherman Theatre",
-    "scrapedAt": "2026-10-24T14:44:01.175Z",
-    "details": "29 Jan 2027",
+    "scrapedAt": "2026-09-12T22:15:06.852Z",
+    "details": "23 Nov 2026 - 2 Jan 2027",
     "imageUrls": [
-      "https://www.shermantheatre.co.uk/wp-content/uploads/2026/10/AZ_2426_1365-1272x954.jpg"
+      "https://www.shermantheatre.co.uk/wp-content/uploads/2025/12/3-Pinocchio-at-the-Sherman-Theatre.-Photo-by-Mark-Douet-3Q9A6103.jpg"
     ],
-    "subcategory": "Andy Zaltzman: 2026 &#8211; The Certifiable History",
-    "ticketPriceFrom": 25,
+    "subcategory": "Pinocchio (In Welsh)",
+    "ticketPriceFrom": 10,
     "ticketCurrency": "GBP",
-    "ticketPriceLabel": "£25",
-    "primaryCategory": "Comedy",
-    "genre": "Comedy"
+    "ticketPriceLabel": "£10",
+    "primaryCategory": "Other",
+    "genre": "Christmas"
   },
   {
     "title": "Monument",
@@ -17322,6 +17344,26 @@
     "ticketPriceLabel": "£20",
     "primaryCategory": "Other",
     "genre": "Made at Sherman"
+  },
+  {
+    "title": "Andy Zaltzman: 2026 – The Certifiable History",
+    "date": "Friday, 29 January 2027",
+    "description": "Following his sell-out The Zaltgeist tour show, Andy will assess the state of our world-renowned planet at the conclusion of another furiously odd year, in his unique comedic style.",
+    "category": "Comedy",
+    "url": "https://www.shermantheatre.co.uk/event/andy-zaltzman-2026-the-certifiable-history/",
+    "imageUrl": "https://www.shermantheatre.co.uk/wp-content/uploads/2026/10/AZ_2426_1365-1272x954.jpg",
+    "venue": "Sherman Theatre",
+    "scrapedAt": "2026-10-24T14:44:01.175Z",
+    "details": "29 Jan 2027",
+    "imageUrls": [
+      "https://www.shermantheatre.co.uk/wp-content/uploads/2026/10/AZ_2426_1365-1272x954.jpg"
+    ],
+    "subcategory": "Andy Zaltzman: 2026 &#8211; The Certifiable History",
+    "ticketPriceFrom": 25,
+    "ticketCurrency": "GBP",
+    "ticketPriceLabel": "£25",
+    "primaryCategory": "Comedy",
+    "genre": "Comedy"
   },
   {
     "title": "Jack Skipper: Nothing Heavy",
@@ -17402,6 +17444,24 @@
     "ticketPriceLabel": "£19.50",
     "primaryCategory": "Theatre",
     "genre": "Drama"
+  },
+  {
+    "title": "Shôn Dale Jones: The Office of Eternal Optimism",
+    "date": "Wednesday, 10 March 2027",
+    "description": "A funny, heart-warming, brand new show from Shôn Dale-Jones about the pursuit of optimism that will leave you a little more determined to feel hopeful - a joyous mix of theatre, storytelling, and stand-up comedy from this BBC award-winning writer.",
+    "category": "Comedy",
+    "url": "https://www.shermantheatre.co.uk/event/shon-dale-jones-the-office-of-eternal-optimism/",
+    "imageUrl": "",
+    "venue": "Sherman Theatre",
+    "scrapedAt": "2026-11-26T14:29:35.705Z",
+    "details": "9 & 10 Mar 2027",
+    "subcategory": "Shôn Dale Jones: The Office of Eternal Optimism",
+    "ticketPriceFrom": 16,
+    "ticketPriceTo": 20,
+    "ticketCurrency": "GBP",
+    "ticketPriceLabel": "£16–£20",
+    "primaryCategory": "Comedy",
+    "genre": "Comedy"
   },
   {
     "title": "Macbeth",
